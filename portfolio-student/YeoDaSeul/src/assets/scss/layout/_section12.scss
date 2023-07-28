@@ -1,0 +1,536 @@
+#section12 {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 1% 0;
+    display: flex;
+    justify-content: space-around;
+    .sec12__left {
+        font-family: 'Fredoka';
+            text-align: center;
+            width: 45%;
+            .title {
+                h2 {
+                    font-size: 4vw;
+                    color: #fff;
+                    font-weight: bold;
+                    margin-bottom: 1%;
+                }
+                p {
+                    font-size: 2vw;
+                    color: #79FA66;
+                    font-weight: bold;
+                    margin-bottom: 1%;
+                }
+                a {
+                    font-size: 2vw;
+                    color: #79FA66;
+                    font-weight: bold;
+                    &:hover {
+                        color: #fff;
+                        transition: all 0.3s;
+                    }
+                }
+            }
+            .myPic {
+                position: relative;
+                margin-top: 5%;
+                .arrow__left {
+                    position: absolute;
+                    left: 3vw;
+                    top: 0vw;
+                    a {
+                        img {
+                            position: absolute;
+                            width: 5vw;
+                            left: -4vw;
+                            top: -7vw;
+                            transform: rotate(-30deg);
+                        }
+                    }
+                    img {
+                        transform: rotate(-10deg);
+                        width: 8vw;
+                    }
+
+                }
+                .arrow__right {
+                    position: absolute;
+                    right: 2vw;
+                    top: 0vw;
+                    a {
+                        img {
+                            position: absolute;
+                            width: 5vw;
+                            right: -4vw;
+                            top: -7vw;
+                            transform: scaleX(-1) rotate(-30deg);
+                        }
+                    }
+                    img {
+                        transform: scaleX(-1) rotate(-10deg);
+                        width: 8vw;
+                    }
+                }
+                .yellowBg {
+                    position: absolute;
+                    width: 23vw;
+                    height:29vw;
+                    left: 11vw;
+                    bottom: 0.3vw;
+                    border-radius: 48% 48% 0 0;
+                    content: '';
+                    background-color: #FFC859;
+                }
+                img {
+                  width: 23vw;
+                  position: relative;
+                  z-index: 1000;
+                }
+            }
+    }
+    .sec12__right {
+      font-family: 'Fredoka';
+            text-align: center;
+            width: 45%;
+            .title {
+                h2 {
+                    font-size: 4vw;
+                    color: #79FA66;
+                    font-weight: bold;
+                    margin-bottom: 1%;
+                }
+                div {
+                    font-size: 1.8vw;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: #fff;
+                    line-height: 1.5;
+                }
+            }
+            .send {
+                margin-top: 11%;
+                form {
+                    div {
+                        input {
+                            font-family: 'Fredoka';
+                            border-radius: 10px;
+                            border: none;
+                            outline: none;
+                            display: block;
+                            width: 40vw;
+                            margin: 0 auto;
+                            margin-bottom: 3%;
+                            padding: 1% 2vw;
+                            height: 3.5vw;
+                            font-size: 1.1vw;
+                            box-sizing: border-box;
+                            background: #FFC859;
+                            border: 0;
+                            font-weight: bold;
+                            color: #ffffff;
+                            &::placeholder {
+                                color: #fff;
+                            }
+                        }
+                        textarea {
+                            resize: none;
+                            font-family: 'Fredoka';
+                            border-radius: 10px;
+                            border: none;
+                            outline: none;
+                            display: block;
+                            width: 40vw;
+                            margin: 0 auto;
+                            margin-bottom: 2%;
+                            padding: 2% 2vw;
+                            height: 13vw;
+                            font-size: 1.1vw;
+                            box-sizing: border-box;
+                            background: #FFC859;
+                            border: 0;
+                            font-weight: bold;
+                            color: #ffffff;
+                            &::placeholder {
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .btn {
+                        text-align: right;
+                        padding: 1% 3%;
+                        .button {
+                            width: 10vw;
+                            height: 3vw;
+                            --color: #fff;
+                            --color-hover: var(--color);
+                            --background: #FFC859;
+                            --background-hover: var(--background);
+                            --hover-back: #d5fa66;
+                            --hover-front: #79FA66;
+                            padding: 1% 9%;
+                            border-radius: 30px;
+                            line-height: 1.5;
+                            font-size: 1vw;
+                            font-weight: 600;
+                            border: none;
+                            outline: none;
+                            position: relative;
+                            overflow: hidden;
+                            cursor: pointer;
+                            color: var(--c, var(--color));
+                            background: var(--b, var(--background));
+                            transition: color .2s linear var(--c-d, .2s), background .3s linear var(--b-d, .2s);
+                            &:not(.simple) {
+                                &:before,
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    background: var(--pb, var(--hover-back));
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    height: 200%;
+                                    border-radius: var(--br, 40%);
+                                    transform: translateY(var(--y, 50%));
+                                    transition: transform var(--d, .4s) ease-in var(--d-d, 0s), border-radius .5s ease var(--br-d, .08s);
+                        
+                                }
+                                &:after {
+                                    --pb: var(--hover-front);
+                                    --d: .44s;
+                                }
+                            }
+                            div {
+                                z-index: 1;
+                                position: relative;
+                                display: flex;
+                                span {
+                                    display: block;
+                                    backface-visibility: hidden;
+                                    transform: translateZ(0);
+                                    animation: var(--name, none) .7s linear forwards .18s;
+                                }
+                            }
+                            &.in {
+                                --name: move;
+                                &:not(.out) {
+                                    --c: var(--color-hover);
+                                    --b: var(--background-hover);
+                                    &:before,
+                                    &:after {
+                                        --y: 0;
+                                        --br: 5%;
+                                    }
+                                    &:after {
+                                        --br: 10%;
+                                        --d-d: .02s;
+                                    }
+                                }
+                                &.out {
+                                    --name: move-out;
+                                    &:before {
+                                        --d-d: .06s;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        @keyframes move {
+                            30%,
+                            36% {
+                                transform: translateY(calc(-6px * var(--move))) translateZ(0) rotate(calc(-13deg * var(--rotate) * var(--part)));
+                            }
+                            50% {
+                                transform: translateY(calc(3px * var(--move))) translateZ(0) rotate(calc(6deg * var(--rotate) * var(--part)));
+                            }
+                            70% {
+                                transform: translateY(calc(-2px * var(--move))) translateZ(0) rotate(calc(-3deg * var(--rotate) * var(--part)));
+                            }
+                        }
+                        
+                        @keyframes move-out {
+                            30%,
+                            36% {
+                                transform: translateY(calc(6px * var(--move))) translateZ(0) rotate(calc(13deg * var(--rotate) * var(--part)));
+                            }
+                            50% {
+                                transform: translateY(calc(-3px * var(--move))) translateZ(0) rotate(calc(-6deg * var(--rotate) * var(--part)));
+                            }
+                            70% {
+                                transform: translateY(calc(2px * var(--move))) translateZ(0) rotate(calc(3deg * var(--rotate) * var(--part)));
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+@media (max-width: 800px){
+  #section12 {
+    width: 100vw;
+    height: 105vh;
+    overflow: hidden;
+    padding: 15% 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    .sec12__left {
+        font-family: 'Fredoka';
+        text-align: center;
+        width: 100%;
+        .title {
+            h2 {
+                font-size: 5vw;
+                color: #fff;
+                font-weight: bold;
+                margin-bottom: 1%;
+            }
+            p {
+                font-size: 3vw;
+                color: #79FA66;
+                font-weight: bold;
+                margin-bottom: 1%;
+            }
+            a {
+                font-size: 3vw;
+                color: #79FA66;
+                font-weight: bold;
+                &:hover {
+                    color: #fff;
+                    transition: all 0.3s;
+                }
+            }
+        }
+        .myPic {
+            position: relative;
+            margin-top: 3%;
+            .arrow__left {
+                position: absolute;
+                left: 12vw;
+                top: 0vw;
+                a {
+                    img {
+                        position: absolute;
+                        width: 8vw;
+                        left: -4vw;
+                        top: -9vw;
+                        transform: rotate(-30deg);
+                    }
+                }
+                img {
+                    transform: rotate(-10deg);
+                    width: 10vw;
+                }
+
+            }
+            .arrow__right {
+                position: absolute;
+                right: 10vw;
+                top: 0vw;
+                a {
+                    img {
+                        position: absolute;
+                        width: 8vw;
+                        right: -4vw;
+                        top: -9vw;
+                        transform: scaleX(-1) rotate(-30deg);
+                    }
+                }
+                img {
+                    transform: scaleX(-1) rotate(-10deg);
+                    width:10vw;
+                }
+            }
+            .yellowBg {
+                position: absolute;
+                width: 35vw;
+                height: 40vw;
+                left: 30vw;
+                bottom: 1vw;
+                content: '';
+                background-color: #FFC859;
+            }
+            img {
+                width: 35vw;
+            }
+        }
+    }
+    .sec12__right {
+        font-family: 'Fredoka';
+        text-align: center;
+        width: 100%;
+        margin-top: 3%;
+        .title {
+            h2 {
+                font-size: 8vw;
+                color: #79FA66;
+                font-weight: bold;
+                margin-bottom: 1%;
+            }
+            div {
+                font-size: 3vw;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #fff;
+                line-height: 1.5;
+            }
+        }
+        .send {
+            margin-top: 5%;
+            form {
+                div {
+                    input {
+                        font-family: 'Fredoka';
+                        border-radius: 10px;
+                        border: none;
+                        outline: none;
+                        display: block;
+                        width: 50vw;
+                        margin: 0 auto;
+                        margin-bottom: 3%;
+                        padding: 1% 2vw;
+                        height: 5vw;
+                        font-size: 1.5vw;
+                        box-sizing: border-box;
+                        background: #FFC859;
+                        border: 0;
+                        font-weight: bold;
+                        color: #ffffff;
+                        &::placeholder {
+                            color: #fff;
+                        }
+                    }
+                    textarea {
+                        resize: none;
+                        font-family: 'Fredoka';
+                        border-radius: 10px;
+                        border: none;
+                        outline: none;
+                        display: block;
+                        width: 50vw;
+                        margin: 0 auto;
+                        margin-bottom: 2%;
+                        padding: 2% 2vw;
+                        height: 15vw;
+                        font-size: 1.1vw;
+                        box-sizing: border-box;
+                        background: #FFC859;
+                        border: 0;
+                        font-weight: bold;
+                        color: #ffffff;
+                        &::placeholder {
+                            color: #fff;
+                        }
+                    }
+                }
+                .btn {
+                    text-align: center;
+                    .button {
+                        width: 20vw;
+                        height: 5vw;
+                        --color: #fff;
+                        --color-hover: var(--color);
+                        --background: #FFC859;
+                        --background-hover: var(--background);
+                        --hover-back: #d5fa66;
+                        --hover-front: #79FA66;
+                        padding: 1% 9%;
+                        border-radius: 1s0px;
+                        line-height: 1.5;
+                        font-size: 2vw;
+                        font-weight: 600;
+                        border: none;
+                        outline: none;
+                        position: relative;
+                        overflow: hidden;
+                        cursor: pointer;
+                        color: var(--c, var(--color));
+                        background: var(--b, var(--background));
+                        transition: color .2s linear var(--c-d, .2s), background .3s linear var(--b-d, .2s);
+                        &:not(.simple) {
+                            &:before,
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                background: var(--pb, var(--hover-back));
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                height: 200%;
+                                border-radius: var(--br, 40%);
+                                transform: translateY(var(--y, 50%));
+                                transition: transform var(--d, .4s) ease-in var(--d-d, 0s), border-radius .5s ease var(--br-d, .08s);
+                    
+                            }
+                            &:after {
+                                --pb: var(--hover-front);
+                                --d: .44s;
+                            }
+                        }
+                        div {
+                            z-index: 1;
+                            position: relative;
+                            display: flex;
+                            span {
+                                display: block;
+                                backface-visibility: hidden;
+                                transform: translateZ(0);
+                                animation: var(--name, none) .7s linear forwards .18s;
+                            }
+                        }
+                        &.in {
+                            --name: move;
+                            &:not(.out) {
+                                --c: var(--color-hover);
+                                --b: var(--background-hover);
+                                &:before,
+                                &:after {
+                                    --y: 0;
+                                    --br: 5%;
+                                }
+                                &:after {
+                                    --br: 10%;
+                                    --d-d: .02s;
+                                }
+                            }
+                            &.out {
+                                --name: move-out;
+                                &:before {
+                                    --d-d: .06s;
+                                }
+                            }
+                        }
+                    }
+                    
+                    @keyframes move {
+                        30%,
+                        36% {
+                            transform: translateY(calc(-6px * var(--move))) translateZ(0) rotate(calc(-13deg * var(--rotate) * var(--part)));
+                        }
+                        50% {
+                            transform: translateY(calc(3px * var(--move))) translateZ(0) rotate(calc(6deg * var(--rotate) * var(--part)));
+                        }
+                        70% {
+                            transform: translateY(calc(-2px * var(--move))) translateZ(0) rotate(calc(-3deg * var(--rotate) * var(--part)));
+                        }
+                    }
+                    
+                    @keyframes move-out {
+                        30%,
+                        36% {
+                            transform: translateY(calc(6px * var(--move))) translateZ(0) rotate(calc(13deg * var(--rotate) * var(--part)));
+                        }
+                        50% {
+                            transform: translateY(calc(-3px * var(--move))) translateZ(0) rotate(calc(-6deg * var(--rotate) * var(--part)));
+                        }
+                        70% {
+                            transform: translateY(calc(2px * var(--move))) translateZ(0) rotate(calc(3deg * var(--rotate) * var(--part)));
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+}
