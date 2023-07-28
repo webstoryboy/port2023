@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 사이트 만들기 프로젝트 😜</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/portfolio</span>
+                <h1 class="title">포트폴리오 사이트 만들기 - vite</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">05</span>
+                            <div class="title">포트폴리오 사이트 만들기 : 스킬 영역</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        이번 섹션은 자신의 스킬을 나타내는 섹션을 구성하는 부분입니다. 
+                        포트폴리오에서 자신의 스킬을 표현하는 방법은 중요하고 효과적인 커뮤니케이션을 위해 핵심적입니다
+                    </p>
+                    <p>
+                        자기의 능력을 보여주는 방법은 여러가지가 있겠지만,
+                        키워드 또는 아이콘을 이용하여 보여주는 방법이 제일 많이 쓰이긴 합니다. 
+                        스킬을 표현할 때에는 간결하고 명확한 언어로 스킬에 대한 내용을 표현하면 좋습니다.
+                        또한 스킬을 실제로 어떻게 활용하는지 시각적으로 증명하는 것도 효과적입니다.
+                    </p>
+
+                    <div class="index">
+                        <h3>인덱스</h3>
+                        <h4>1. 포트폴리오 사이트 만들기 : VITE SITE</h4>
+                        <ul>
+                            <li>1. 셋팅하기
+                                <ul>
+                                    <li>1_1. vite 설치하기</li>
+                                    <li>1_2. vite 폴더 정리하기</li>
+                                    <li>1_3. gsap/lenis 설치하기</li>
+                                    <li>1_4. git 연동하기</li>
+                                </ul>
+                            </li>
+                            <li>2. 레이아웃
+                                <ul>
+                                    <li>2.1 레이아웃 구조 만들기</li>
+                                    <li>2.2 메인 레이아웃 구조 만들기</li>
+                                    <li>2.3 CSS 셋팅하기</li>
+                                    <li>2.4 JavaScript 셋팅하기</li>
+                                </ul>
+                            </li>
+                            <li>3. 헤더 영역
+                                <ul>
+                                    <li>3.1 헤더 구조 잡기</li>
+                                    <li>3.2 헤더 디자인 설정</li>
+                                    <li>3.3 반응형 작업하기</li>
+                                    <li>3.4 메뉴 자바스크립트 설정</li>
+                                </ul>
+                            </li>
+                            <li>4. 인트로 영역
+                                <ul>
+                                    <li>4.1 인트로 구조 잡기</li>
+                                    <li>4.2 인트로 디자인 설정</li>
+                                    <li>4.3 반응형 작업하기</li>
+                                </ul>
+                            </li>
+                            <li>5. 스킬 영역
+                                <ul>
+                                    <li>5.1 스킬 구조 잡기</li>
+                                    <li>5.2 스킬 디자인 설정</li>
+                                    <li>5.3 반응형 작업하기</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //index -->
+
+                    <h3>5. 스킬 영역</h3>
+                    <div id="a51">
+                        <h4>5.1 스킬 구조 잡기</h4>
+                        <p>
+                            포트폴리오에서 자기의 실력을 뽐내는 것은 중요합니다. 
+                            내가 어느 정도 할 수 있고, 얼마나 알고 있는 지는 면접에서도 중요한 요건이 됩니다. 
+                            나는 아직 신입이고 잘 하지는 못하지만,
+                            자신감을 갖고 자기의 능력을 자랑해보세요! 
+                            저는 스킬보다는 나의 의지, 생각 등을 표현하였습니다. 
+                            이번 섹션은 <code>position: sticky;</code> 속성을 이용하여 제목을 고정시켰습니다.
+                        </p>
+<pre><code class="language-html">&lt;section id="skill" role="region"&gt;
+    &lt;div class="skill__inner"&gt;
+        &lt;h2 class="skill__title"&gt;Challenge &lt;em&gt;나의 도전&lt;/em&gt;&lt;/h2&gt;
+        &lt;div class="skill__desc"&gt;
+            &lt;div&gt;
+                &lt;span&gt;1.&lt;/span&gt;
+                &lt;h3&gt;꿈을 설계하고 디자인하다.&lt;/h3&gt;
+                &lt;p&gt;
+                    나는 공간을 만드는 것을 좋아한다. 
+                    어려을 때부터 나만의 공간을 만드는 것을 좋아했고 나만의 다락방을 좋아했다. 
+                    단 한 사람이라도 내가 만든 공간 속에서 영감을 받거나 마음이 움직였으면 좋겠다.
+                    나만의 공간을 마음것 만들 수 있다는 건 코딩에 엄청난 매력인거 같다. 
+                    그 한구석에 나만의 꿈을 설계하고, 개발을 하며 앞으로도 살고 싶다.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;span&gt;2.&lt;/span&gt;
+                &lt;h3&gt;열심히 할수록 기회는 따른다.&lt;/h3&gt;
+                &lt;p&gt;
+                    운이 좋은 사람은 없다. 단지 운을 만들 뿐이다. 
+                    운을 만들기 위해서는 내가 좋아하는 일이나 내가 하고 싶은 일에 몰두하면 된다.
+                    몰두 하다보면 길이 보이고 방향이 보이게 된다. 
+                    운이란 고된 노동과 노력을 통해 스스로 만들어 내는 것이다.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;span&gt;3.&lt;/span&gt;
+                &lt;h3&gt;나에게 정직하다.&lt;/h3&gt;
+                &lt;p&gt;
+                    정직은 다른 사람보다 나에게 큰 의미를 부여해야 한다. 
+                    자신이 정직하지 않으면 진정으로 원하는 일을 열정적으로 밀고 나갈 수 없다. 
+                    마음에서 우러나오는 일을 해야 정직해지며 삶을 더 즐길 줄 알게 된다.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- //skill --&gt;
+</code></pre>
+                    </div>
+
+                    <div id="a52" class="mt80">
+                        <h4>5.2 스킬 디자인 설정</h4>
+                        <p>
+                            <code>position: sticky;</code>를 설정하여 <code>top: 70px;</code>에서 멈추도록 설정하였습니다.
+                        </p>
+<pre><code class="language-css">.skill__inner {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.skill__title {
+    position: sticky;
+    top: 70px;
+    left: 0;
+    width: 48%;
+    height: 5vw;
+    font-size: 4vw;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: var(--black100);
+    border-bottom: 0.4vw solid var(--black100);
+    font-family: var(--mainKor-font);
+    font-weight: 900;
+}
+.skill__title em {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.skill__desc {
+    width: 50%;
+    margin-top: 30vh;
+}
+.skill__desc span {
+    font-size: 5vw;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--black100);
+    line-height: 1.3;
+    font-weight: 900;
+    font-family: var(--mainNum-font);
+}
+.skill__desc h3 {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-underline-position: under;
+    font-family: var(--mainKor-font);
+    margin-bottom: 4px;
+}
+.skill__desc p {
+    padding-bottom: 30vh;
+    font-family: var(--mainKor-font);
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+</code></pre>
+                    </div>
+
+                    <div id="a53" class="mt80">
+                        <h4>5.3 반응형 작업하기</h4>
+                        <p>
+                            <code>position: sticky;</code>를 설정하여 <code>top: 70px;</code>에서 멈추도록 설정하였습니다.
+                        </p>
+<pre><code class="language-css">@media (max-width: 800px) {
+    .skill__inner {
+        flex-direction: column;
+    }
+    .skill__title {
+        width: 100%;
+        margin-bottom: 10vw;
+        font-size: 30px;
+        height: auto;
+        background: #f3ede8;
+        top: 68px;
+        border-bottom: 2px solid var(--black100);
+    }
+    .skill__desc span {
+        font-size: 20vw;
+    }
+    .skill__desc {
+        width: 100%;
+    }
+}
+</code></pre>
+                    </div>
+                    
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            깃에 올려주고 마무리 하겠습니다.
+                        </p>
+<pre><code class="language-js">git add .
+git commit -m "🤓 스킬 완료"
+git push -u origin main
+</code></pre>
+                        <p>
+                            스킬 영역까지 마무리 하였습니다. 
+                            스킬 영역은 자신있게 표현하는게 좋습니다. 
+                            또한 자기 사진을 많이 넣고 표현하면 긍정적인 효과를 줄 수 있습니다. 
+                            오늘도 수고하셨습니다! 🤭
+                        </p>
+                    </div>
+
+                    <hr>
+                    <!-- 광고영역 -->
+                    <!-- //광고영역 -->
+
+                    <div class="right_refer">
+                        <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <ul class="refer5">
+                        <li><a href="main01.html">1. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 셋팅하기</a></li>
+                        <li><a href="main02.html">2. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 레이아웃</a></li>
+                        <li><a href="main03.html">3. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 헤더 영역</a></li>
+                        <li><a href="main04.html">4. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 인트로 영역</a></li>
+                        <li><a href="main05.html">5. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 스킬 영역</a></li>
+                        <li><a href="main06.html">6. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 사이트 영역</a></li>
+                        <li><a href="main07.html">7. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 포트폴리오 영역</a></li>
+                        <li><a href="main08.html">8. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 연락처 영역</a></li>
+                        <li><a href="main09.html">9. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 푸터 영역</a></li>
+                        <li><a href="main10.html">10. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 마무리</a></li>
+                    </ul>
+                   
+                    
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 사이트 만들기 프로젝트 😜</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/portfolio</span>
+                <h1 class="title">포트폴리오 사이트 만들기 - vite</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">03</span>
+                            <div class="title">포트폴리오 사이트 만들기 : 헤더 영역</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        각각의 섹션을 하나씩 작업해보겠습니다. 
+                        반응형도 동시에 작업하고, 스크립트도 한번에 마무리 하겠습니다. 
+                        지금까지 잘 하셨다면 이제부터는 코딩영역이라 쉽습니다. 
+                        그럼 바로 시작해보겠습니다. 
+                    </p>
+
+                    <!-- 광고 영역 -->
+                    <!-- //광고 영역 -->  
+
+                    <div class="index">
+                        <h3>인덱스</h3>
+                        <h4>1. 포트폴리오 사이트 만들기 : VITE SITE</h4>
+                        <ul>
+                            <li>1. 셋팅하기
+                                <ul>
+                                    <li>1_1. vite 설치하기</li>
+                                    <li>1_2. vite 폴더 정리하기</li>
+                                    <li>1_3. gsap/lenis 설치하기</li>
+                                    <li>1_4. git 연동하기</li>
+                                </ul>
+                            </li>
+                            <li>2. 레이아웃
+                                <ul>
+                                    <li>2.1 레이아웃 구조 만들기</li>
+                                    <li>2.2 메인 레이아웃 구조 만들기</li>
+                                    <li>2.3 CSS 셋팅하기</li>
+                                    <li>2.4 JavaScript 셋팅하기</li>
+                                </ul>
+                            </li>
+                            <li>3. 헤더 영역
+                                <ul>
+                                    <li>3.1 헤더 구조 잡기</li>
+                                    <li>3.2 헤더 디자인 설정</li>
+                                    <li>3.3 반응형 작업하기</li>
+                                    <li>3.4 메뉴 자바스크립트 설정</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //index -->
+
+                    <h3>3. 헤더 영역</h3>
+                    <div id="a31">
+                        <h4>3.1 헤더 구조 잡기</h4>
+                        <p>
+                            화면 크기가 줄어들면 media query를 이용하여 모바일용 메뉴도 만들었습니다. 
+                            <code>aria-controls</code>와 <code>aria-expanded</code> 속성은 웹 접근성을 위한 속성입니다. 
+                            aria-controls는 연관된 요소를 지정하고, aria-expanded는 토글 상태를 나타냅니다.
+                        </p>
+                        <p>
+                            이렇게 헤더의 구조는 로고, 네비게이션 메뉴, 모바일용 토글 버튼으로 구성되어 있으며, 
+                            웹 페이지의 탐색을 위한 중요한 부분을 담고 있습니다. 
+                            각 요소들의 클래스 이름을 활용하여 CSS 스타일을 적용하거나 JavaScript를 통해 동작을 추가할 수 있습니다.
+                        </p>
+<pre><code class="language-html">&lt;header id="header" role="heading"&gt;
+    &lt;div class="header__inner"&gt;
+        &lt;div class="header__logo"&gt;
+            &lt;a href="#"&gt;portfolio&lt;em&gt;developer&lt;/em&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;nav class="header__nav" role="navigation" aria-label="메인 메뉴"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#intro"&gt;intro&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#skill"&gt;skill&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#site"&gt;site&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#portfolio"&gt;portfolio&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;div class="header__nav__mobile" id="headerToggle" aria-controls="primary-menu" aria-expanded="false" role="button" tabindex="0"&gt;
+            &lt;span&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+&lt;!-- //header --&gt;
+</code></pre>   
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>&lt;header&gt; : role="heading" 속성을 설정하였습니다.
+                                <li>&lt;nav&gt; : role="navigation" 속성을 추가하고, aria-label 속성을 통해 메인 메뉴를 설명하는 텍스트를 제공하였습니다. 이를 통해 스크린 리더 사용자에게 해당 네비게이션 요소의 목적을 이해할 수 있도록 합니다.</li>
+                                <li>&lt;div class="header__nav__mobile"&gt; : role="button"과 tabindex="0" 속성을 추가하여 해당 요소가 버튼 역할을 하고 키보드 포커스를 받을 수 있도록 했습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="a32" class="mt80">
+                        <h4>3.2 헤더 디자인 설정</h4>
+                        <p>
+                            헤더 영역은 <code>position: fixed;</code>를 사용하여 위에 고정시키고, 
+                            백그라운드 속성에 <code>backdrop-filter: blur(15px)</code> 효과를 주었습니다. 
+                        </p>
+<pre><code class="language-css">#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: rgba(116, 99, 99, 0.1);
+    backdrop-filter: blur(15px);
+}
+.header__logo {
+    font-size: 1.625rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.header__logo em {
+    display: block;
+    font-size: 10px;
+    color: var(--black200);
+}
+.header__nav li {
+    display: inline-block;  
+}
+.header__nav li a {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 14px;
+    position: relative;
+}
+.header__nav li a::before {
+    content: "";
+    width: calc(100% - 28px);
+    height: 1px;
+    background-color: var(--black);
+    position: absolute;
+    left: 14px;
+    bottom: 10px;
+    transform: scaleX(0);
+    transition: all 0.3s;
+}
+.header__nav li a:hover::before {
+    transform: scaleX(1);
+}
+.header__nav__mobile {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+}
+.header__nav__mobile span {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--black);
+    position: relative;
+    margin-top: 19px;
+}
+.header__nav__mobile span::before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: var(--black);
+    position: absolute;
+    right: 0;
+    top: 6px;
+    transition: width 0.3s;
+}
+.header__nav__mobile span::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    transition: width 0.3s;
+}
+</code></pre>
+                    </div>
+
+                    <div id="a33" class="mt80">
+                        <h4>3.3 헤더 디자인 설정</h4>
+                        <p>
+                            화면 크기가 800px 보다 작으면 메뉴가 없어지고 햄버거 메뉴가 나오도록 설정했습니다. 
+                        </p>
+<pre><code class="language-css">@media (max-width: 800px) {
+    .header__nav {
+        display: none;
+    }
+    .header__nav.show {
+        display: block;
+    }
+    .header__nav.show ul {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 68px;
+        background: rgba(116, 99, 99, 0.1);
+        backdrop-filter: blur(15px);
+        z-index: 10000;
+    }
+    .header__nav.show li {
+        display: block;
+        text-align: right;
+    }
+    .header__nav.show li a {
+        display: inline-block;
+        padding: 10px;
+    }
+    .header__nav.show + .header__nav__mobile span::before {
+        width: 20px;
+    }
+    .header__nav.show + .header__nav__mobile span::after {
+        width: 20px;
+    }
+    .header__nav__mobile {
+        display: block;
+    }
+}
+</code></pre>
+                    </div>
+
+                    <div id="a34" class="mt80">
+                        <h4>3.4 메뉴 자바스크립트 설정</h4>
+                        <p>
+                            미리 만들어 놨던 <code>menu.js</code>에 작업하겠습니다. 
+                        </p>
+<pre><code class="language-js">const headerToggle = document.getElementById("headerToggle");
+const headerNav = document.querySelector(".header__nav");
+
+if (headerToggle) {
+    headerToggle.addEventListener("click", () => {
+    headerNav.classList.toggle("show");
+    headerToggle.getAttribute("aria-expanded") === "true"
+        ? headerToggle.setAttribute("aria-expanded", "false")
+        : headerToggle.setAttribute("aria-expanded", "true");
+    });
+}
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>const headerToggle = document.getElementById("headerToggle"); : HTML 문서에서 ID가 "headerToggle"인 요소를 변수 headerToggle에 할당합니다. 이는 모바일 토글 버튼 요소를 가리키게 됩니다.</li>
+                                <li>const headerNav = document.querySelector(".header__nav"); : HTML 문서에서 클래스가 "header__nav"인 요소를 변수 headerNav에 할당합니다. 이는 네비게이션 메뉴 요소를 가리키게 됩니다.</li>
+                                <li>if (headerToggle) { ... } : headerToggle이 존재하는 경우에만 이후 코드 블록을 실행합니다. 이렇게 함으로써 해당 요소가 HTML 문서에 존재하지 않을 경우 오류를 방지합니다.</li>
+                                <li>headerToggle.addEventListener("click", () => { ... }); : 모바일 토글 버튼이 클릭되었을 때의 동작을 정의하는 이벤트 리스너를 추가합니다.</li>
+                                <li>headerNav.classList.toggle("show"); : 네비게이션 메뉴 요소의 클래스에 "show"를 토글링(toggle)합니다. "show" 클래스가 없으면 추가하고 있으면 제거합니다. 이를 통해 클릭할 때마다 네비게이션 메뉴가 보이거나 숨겨지게 됩니다.</li>
+                                <li>headerToggle.getAttribute("aria-expanded") === "true" ? ... : ...; : 토글 버튼의 aria-expanded 속성 값을 확인하여 현재 상태를 판단합니다. aria-expanded 속성은 웹 접근성을 위해 사용되는 속성으로, 펼쳐진 상태인지 아닌지를 나타냅니다.</li>
+                                <li>headerToggle.setAttribute("aria-expanded", "false") 또는 headerToggle.setAttribute("aria-expanded", "true") : 토글 버튼의 aria-expanded 속성 값을 변경합니다. 현재 aria-expanded 값이 "true"이면 "false"로, "false"이면 "true"로 변경됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            깃에 올려주고 마무리 하겠습니다.
+                        </p>
+<pre><code class="language-js">git add .
+git commit -m "😜 헤더 완료"
+git push -u origin main
+</code></pre>
+                        <p>
+                            정말 수고하셨습니다! 헤더 영역을 반응형으로 만들고 자바스크립트를 사용하여 기능을 추가한 것은 대단한 성과입니다. 코딩은 이해하는 것이 중요하며, 이해가 안 되는 부분은 검색하거나 도움을 받으면서 노력하는 것이 매우 중요합니다. 한 가지 언어나 기술을 완전히 이해하는 데에는 시간이 걸리지만, 끝까지 포기하지 않고 조금씩 노력하면 점점 능숙해질 수 있습니다.
+                        </p>
+                        <p>
+                            자기것이 될 때까지 반복해서 공부하고 이해하는 것이 매우 중요한데, 이러한 자세는 프로그래밍을 비롯한 어떤 분야에서도 적용됩니다. 특히 프로그래밍은 새로운 개념과 도구들이 빠르게 등장하기 때문에 끊임없이 학습과 발전이 필요합니다.
+                        </p>
+                        <p>
+                            만약 어떤 부분이 이해되지 않아도 걱정하지 마세요. 항상 다시 돌아와서 노력하고 탐구하면서 더 많이 배울 수 있을 것입니다. 이해가 안 되더라도 다음 단계로 넘어가면서 새로운 것을 배워보는 것도 중요합니다. 지금까지의 노력과 끈기에 대해 칭찬해드리며, 계속해서 성장하고 발전하는 여정을 응원하겠습니다! 더 많은 도전과 성공을 기대합니다! 😊👏
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>😘 이런 에러가 난다면...</h3>
+                        <p>
+                            만약 이런 에러가 난다면. 현재 내 폴더 위치를 잘 확인해보세요!
+                            <code>webstoryboy@Webstoryboyui-MacBookPro vite-site % </code>  현재 폴더를 vite-site에서 작업을 해야합니다.
+                        </p>
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023 % git add .
+warning: adding embedded git repository: Desktop/port2023/vite-site
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint:   git submodule add <url> Desktop/port2023/vite-site
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint:   git rm --cached Desktop/port2023/vite-site
+hint: 
+hint: See "git help submodule" for more information.
+</code></pre>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <ul class="refer5">
+                        <li><a href="main01.html">1. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 셋팅하기</a></li>
+                        <li><a href="main02.html">2. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 레이아웃</a></li>
+                        <li><a href="main03.html">3. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 헤더 영역</a></li>
+                        <li><a href="main04.html">4. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 인트로 영역</a></li>
+                        <li><a href="main05.html">5. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 스킬 영역</a></li>
+                        <li><a href="main06.html">6. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 사이트 영역</a></li>
+                        <li><a href="main07.html">7. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 포트폴리오 영역</a></li>
+                        <li><a href="main08.html">8. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 연락처 영역</a></li>
+                        <li><a href="main09.html">9. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 푸터 영역</a></li>
+                        <li><a href="main10.html">10. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 마무리</a></li>
+                    </ul>
+                   
+                    
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

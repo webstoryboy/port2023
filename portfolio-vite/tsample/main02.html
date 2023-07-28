@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 사이트 만들기 프로젝트 😜</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/portfolio</span>
+                <h1 class="title">포트폴리오 사이트 만들기 - Vite</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 07. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">02</span>
+                            <div class="title">포트폴리오 사이트 만들기 : 레이아웃</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        기본 셋팅을 완성하였으면, 이제 본격적으로 HTML/CSS 코딩을 시작해보겠습니다.
+                        vite를 통해 작업하기 때문에 기존에 기초 코딩 방식하고는 조금 틀릴 수 있습니다. 
+                        빌드와 배포라는 과정을 통해 사이트를 조금 더 최적화 시키고 가볍게 만들어 조금더 빠르고 동적인 사이트를 만들 수 있습니다. 
+                        그럼 갈 길이 머니까 바로 시작해볼까요? 🥱
+                    </p>
+
+                    <!-- 광고 영역 -->
+                    <!-- //광고 영역 -->  
+
+                    <div class="index">
+                        <h3>인덱스</h3>
+                        <h4>1. 포트폴리오 사이트 만들기 : VITE SITE</h4>
+                        <ul>
+                            <li>1. 셋팅하기
+                                <ul>
+                                    <li>1_1. vite 설치하기</li>
+                                    <li>1_2. vite 폴더 정리하기</li>
+                                    <li>1_3. gsap/lenis 설치하기</li>
+                                    <li>1_4. git 연동하기</li>
+                                </ul>
+                            </li>
+                            <li>2. 레이아웃
+                                <ul>
+                                    <li>2.1 레이아웃 구조 만들기</li>
+                                    <li>2.2 메인 레이아웃 구조 만들기</li>
+                                    <li>2.3 CSS 셋팅하기</li>
+                                    <li>2.4 JavaScript 셋팅하기</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3>2. 레이아웃</h3>
+                    <div id="a21">
+                        <h4>2-1. 레이아웃 구조 만들기</h4>
+                        <p>
+                            전체적인 구조는 이런식으로 만듭니다. 
+                            우선 사이트에 대한 정보를 제공하기 위해서 <code>meta</code> 정보를 설정하고
+                            전체적인 구조는 3단 구조로 되어 있습니다. 
+                            웹 표준을 준수하기 위해서 <code>skip</code> 메뉴를 설정하고,
+                            <code>header</code>, <code>main</code>, <code>Footer</code> 구조로 작업합니다. 
+                            여기에 <code>role</code>이라는 속성을 추가하였습니다. 
+                        </p>
+                        <p>
+                            role 속성은 웹 페이지의 접근성을 향상시키기 위해 사용되는 HTML 속성입니다. 
+                            이 속성은 특정 요소가 어떤 역할을 수행하는지를 정의하는 데 사용됩니다. 
+                            웹 페이지를 스크린 리더(Screen Reader) 등의 보조 기술을 사용하는 사용자들이 더 쉽게 이해하고 탐색할 수 있도록 도와줍니다.
+                            여기서 잠깐 개념 파악을 하고 넘어가겠습니다. 
+                        </p>
+                        <div class="sampleBasic">
+                            <h5>웹 표준(Web Standards)</h5>
+                            <p>
+                                웹 표준은 웹 기술을 개발하고 구현하는 데 사용되는 권장 사항과 지침의 모음입니다. 웹 표준은 웹 페이지의 구조, 디자인, 콘텐츠, 상호 작용 등을 설명하는데 사용되는 표준화된 규칙입니다. 웹 표준을 준수하는 것은 웹 브라우저 간의 호환성을 향상시키고, 다양한 플랫폼 및 기기에서 웹 페이지를 일관되게 표현하는 데 도움을 줍니다
+                            </p>
+                        </div>
+                        <div class="sampleBasic">
+                            <h5>웹 접근성(Web Accessibility)</h5>
+                            <p>
+                                웹 접근성은 모든 사용자들이 웹 콘텐츠에 동등하게 접근하고 이용할 수 있도록 만드는 데 중점을 둡니다. 장애를 가진 사용자, 노년층, 모바일 기기 사용자 등 다양한 사용자들이 웹 페이지와 웹 애플리케이션을 쉽게 이용하고 정보에 접근할 수 있도록 하는 것이 목표입니다.
+                            </p>
+                        </div>
+                        <div class="sampleBasic">
+                            <h5>WAI-ARIA</h5>
+                            <p>
+                                WAI-ARIA(웹 접근성을 위한 인터랙티브 웹 애플리케이션)는 Web Accessibility Initiative - Accessible Rich Internet Applications의 약자로서, 웹 접근성을 향상시키기 위한 기술 규격입니다.
+                                WAI-ARIA는 주로 동적이거나 인터랙티브한 웹 애플리케이션에 대한 접근성을 개선하는 데 사용됩니다. 기존의 HTML과 CSS로는 표현하기 어려운 사용자 인터페이스 요소들과 동작을 접근성을 고려하여 보완할 수 있도록 지원합니다.
+                            </p>
+                            <ul class="list">
+                                <li>역할(Role) : ARIA는 role 속성을 통해 HTML 요소가 어떤 역할을 수행하는지 지정할 수 있습니다. 예를 들어, 일반적으로 div 요소는 구체적인 역할이 없지만, role="button"을 추가하여 버튼 역할을 가지게 할 수 있습니다.</li>
+                                <li>상태(State) : ARIA는 aria-* 속성을 통해 요소의 상태를 나타낼 수 있습니다. 예를 들어, aria-expanded 속성을 사용하여 접힘 상태를 표시하거나, aria-checked 속성을 사용하여 체크박스나 라디오 버튼의 선택 상태를 나타낼 수 있습니다.</li>
+                                <li>속성(Property) : ARIA는 aria-* 속성을 통해 추가 정보를 제공할 수 있습니다. 예를 들어, aria-label 속성을 사용하여 요소의 이름을 명시할 수 있으며, 스크린 리더 사용자에게 요소에 대한 설명을 제공할 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <p>
+                            CSS와 javascript파일을 연동하였습니다. 
+                            JavaScript 파일은 <code>module</code> 방식으로 사용하였습니다. 
+                            처음에 어렵고 낳설지만 자주 사용하면 편하고 좋습니다. 
+                            또한 다음에 배울 리액트나 뷰에서도 이 방식을 사용하기 때문에 기본적인 사용법을 알아두면 좋습니다. 
+                        </p>
+                        <div class="sampleBasic">
+                            <p>
+                                <i>자바스크립트 모듈 방식은 코드를 모듈 단위로 구성하여 재사용성을 높이고 코드를 조직화하는 방법을 말합니다.</i>
+                                ES6(ES2015)부터 자바스크립트는 공식적으로 모듈 시스템을 지원하기 시작했습니다.
+                                기존의 자바스크립트는 전역 스코프를 공유하므로 여러 개의 스크립트 파일이 로드되는 경우, 변수명 충돌과 의존성 관리 등의 문제가 발생할 수 있습니다. 
+                                모듈 방식은 이러한 문제들을 해결하고자 자바스크립트 코드를 독립적인 모듈로 분리하여 관리합니다.
+                            </p>
+                        </div>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다."/&gt;
+    &lt;meta name="keyword" content="포트폴리오, 리액트, 뷰, 넥스트, 웹스토리보이, portfolio, react.js, vue.js, next.js, webstoryboy" /&gt;
+    &lt;title&gt;포트폴리오 사이트 만들기 😇 Vite-Site&lt;/title&gt;
+
+    &lt;link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" /&gt;
+    &lt;link rel="stylesheet" href="assets/css/style.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="skip"&gt;
+
+    &lt;/div&gt;
+    &lt;!-- //skip --&gt;
+
+    &lt;header id="header" role="heading"&gt;
+        header
+    &lt;/header&gt;
+    &lt;!-- //header --&gt;
+
+    &lt;main id="main" role="main"&gt;
+        main
+    &lt;/main&gt;
+    &lt;!-- //main --&gt;
+
+    &lt;footer id="footer" role="contentinfo"&gt;
+        footer
+    &lt;/footer&gt;
+    &lt;!-- //footer --&gt;
+    
+    &lt;script type="module" src="assets/js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>&lt;!DOCTYPE html&gt; : 이 문서가 HTML5로 작성되었음을 선언하는 선언문입니다.</li>
+                                <li>&lt;html lang="ko"&gt; : HTML 문서의 최상위 요소로, 문서의 기본 언어를 한국어(ko)로 지정합니다.</li>
+                                <li>&lt;head&gt; : 문서의 메타데이터를 포함하는 부분입니다. 여기서는 문자 인코딩, 뷰포트 설정, 저자, 설명, 키워드 등의 정보를 포함하고 있습니다.</li>
+                                <li>&lt;meta charset="UTF-8"&gt; : 문서의 문자 인코딩을 UTF-8로 지정합니다.</li>
+                                <li>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; : 뷰포트 설정으로, 반응형 웹 디자인을 위해 화면의 크기에 맞게 조절할 수 있도록 합니다.</li>
+                                <li>&lt;meta name="author" content="..." /&gt; : 문서의 저자를 지정합니다.</li>
+                                <li>&lt;meta name="description" content="..." /&gt; : 문서의 설명을 지정합니다.</li>
+                                <li>&lt;meta name="keyword" content="..." /&gt; : 문서와 관련된 키워드들을 지정합니다.</li>
+                                <li>&lt;title&gt;...&lt;/title&gt; : 문서의 제목을 지정합니다. 브라우저의 탭에 표시되는 문서 제목입니다.</li>
+                                <li>&lt;link rel="icon" type="image/svg+xml" href="..." /&gt; : 문서의 파비콘(브라우저 탭에 나타나는 아이콘)을 지정합니다.</li>
+                                <li>&lt;link rel="stylesheet" href="..."&gt; : 외부 CSS 파일인 style.css를 문서에 연결합니다. 이를 통해 문서의 스타일을 지정할 수 있습니다.</li>
+                                <li>&lt;body&gt; : 실제 웹 페이지의 내용을 포함하는 부분입니다.</li>
+                                <li>&lt;div id="skip"&gt; : 스킵 링크를 정의하는 요소입니다. 웹 접근성을 향상시키기 위해 화면에서 보이지 않지만 보조 기기를 통해 바로 메인 콘텐츠로 이동할 수 있도록 도와줍니다.</li>
+                                <li>&lt;header id="header" role="heading"&gt; : 웹 페이지의 헤더를 정의하는 요소입니다. role="heading" 속성을 통해 헤더라는 역할을 가지고 있다고 선언합니다.</li>
+                                <li>&lt;main id="main" role="main"&gt; : 웹 페이지의 주요 콘텐츠를 정의하는 요소입니다. role="main" 속성을 통해 주요 콘텐츠 역할을 가지고 있다고 선언합니다.</li>
+                                <li>&lt;footer id="footer" role="contentinfo"&gt; : 웹 페이지의 푸터를 정의하는 요소입니다. role="contentinfo" 속성을 통해 콘텐츠 정보를 가지고 있다고 선언합니다.</li>
+                                <li>&lt;script type="module" src="..."&gt;&lt;/script&gt; : 모듈 방식으로 작성된 JavaScript 파일인 main.js를 가져오는 스크립트 태그입니다. type="module" 속성을 사용하여 이 스크립트가 모듈 형식임을 선언합니다. 이렇게 함으로써 main.js에서 ES6 모듈 시스템을 사용하여 변수, 함수, 클래스 등을 정의하고 내보내고 가져올 수 있게 됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="a22" class="mt80">
+                        <h4>2-2. 메인 레이아웃 구조 만들기</h4>
+                        <p>
+                            이번에는 메인 영역만 레이아웃을 잡아보겠습니다.
+                        </p>
+<pre><code class="language-html">&lt;main id="main" role="main"&gt;
+    &lt;section id="intro"&gt;
+        intro
+    &lt;/section&gt;
+    &lt;!-- //intro --&gt;
+
+    &lt;section id="skill"&gt;
+        skill
+    &lt;/section&gt; 
+    &lt;!-- //skill --&gt;
+
+    &lt;section id="site"&gt;
+        site
+    &lt;/section&gt;
+    &lt;!-- //site --&gt;
+
+    &lt;section id="port"&gt;
+        port
+    &lt;/section&gt;
+    &lt;!-- //port --&gt;
+
+    &lt;section id="contact"&gt;
+        contact
+    &lt;/section&gt;
+    &lt;!-- //contact --&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;
+</code></pre>
+                        <p>
+                            스킵 메뉴도 추가하겠습니다.
+                            메인 페이지는 이렇게 7개의 섹션으로 구성되어 있습니다. 
+                        </p>
+<pre><code class="language-html">&lt;div id="skip"&gt;
+    &lt;a href="#header"&gt;헤더 영역 바로가기&lt;/a&gt;
+    &lt;a href="#intro"&gt;소개 영역 바로가기&lt;/a&gt;
+    &lt;a href="#skill"&gt;스킬 영역 바로가기&lt;/a&gt;
+    &lt;a href="#site"&gt;사이트 영역 바로가기&lt;/a&gt;
+    &lt;a href="#port"&gt;포트폴리오 영역 바로가기&lt;/a&gt;
+    &lt;a href="#contact"&gt;연락처 영역 바로가기&lt;/a&gt;
+    &lt;a href="#footer"&gt;푸터 영역 바로가기&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- //skip --&gt;
+</code></pre>
+                    </div>
+
+                    <div id="a23" class="mt80">
+                        <h4>2-3. CSS 셋팅하기</h4>
+                        <p>
+                            css도 세분화하여 섹션별로 작업하였고, 셋팅과 관련된 부분도 따로 분리하였습니다. 
+                        </p>
+                        <div class="folder">
+                            <ul>
+                                <li class="icon1">css
+                                    <ul>
+                                        <li class="icon1">section
+                                            <ul>
+                                                <li class="icon2 m0">header.css</li>
+                                                <li class="icon2 m0">intro.css</li>
+                                                <li class="icon2 m0">skill.css</li>
+                                                <li class="icon2 m0">site.css</li>
+                                                <li class="icon2 m0">port.css</li>
+                                                <li class="icon2 m0">contact.css</li>
+                                                <li class="icon2 m0">footer.css</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1">setting
+                                            <ul>
+                                                <li class="icon2 m0">fonts.css</li>
+                                                <li class="icon2 m0">vars.css</li>
+                                                <li class="icon2 m0">reset.css</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon2 m0">style.css</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            <code>style.css</code> 에는 모든 CSS를 연동하여 관리합니다.
+                        </p>
+<pre><code class="language-css">@charset "UTF-8";
+
+/* setting */
+@import url(setting/fonts.css);
+@import url(setting/vars.css);
+@import url(setting/reset.css);
+
+/* section */
+@import url(section/header.css);
+@import url(section/intro.css);
+@import url(section/skill.css);
+@import url(section/site.css);
+@import url(section/port.css);
+@import url(section/contact.css);
+@import url(section/footer.css);
+</code></pre>
+                        <p>
+                            <code>fonts.css</code> 파일을 설정하겠습니다. 
+                            구글폰트와 폰트어썸 사이트에서 웹 폰트를 가지고 와서 설정했습니다. 
+                            영어 폰트는 <code>Montserrat</code>를 사용하고, 
+                            한글 폰트는 <code>nanumSquareNeo</code>를 사용했습니다. 
+                            숫자를 많이 사용하기 때문에 숫자 폰트도 <code>gmarket</code>을 설정했습니다. 
+                        </p>
+<pre><code class="language-css">@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css");
+@import url("https://websfont.github.io/gmarket/gmarket.css");
+
+.mont {
+    font-family: "Montserrat";
+}
+.nanum {
+    font-family: "nanumSquareNeo";
+}
+.gmarket {
+    font-family: "gmarket";
+}
+</code></pre>
+                        <p>
+                            <code>vars.css</code> 파일을 설정하겠습니다. 
+                            CSS 변수를 이용하여 작업을 하였기 때문에 변수 파일만 따로 관리하겠습니다. 
+                        </p>
+<pre><code class="language-css">:root {
+    --mainEng-font: "Montserrat";
+    --mainKor-font: "nanumSquareNeo";
+    --mainNum-font: "gmarket";
+  
+    --mainBg-color: #f3ede8;
+    --subBg100: #cdc0b1;
+    --subBg200: #afa395;
+    --subBg300: #81887c;
+    --subBg400: #afa7a2;
+    --subBg500: #a6afa2;
+  
+    --white: #fff;
+    --black: #000;
+    --black100: #2b2b2b;
+    --black200: #434343;
+    --black300: #686868;
+    --black400: #e0e0e0;
+  
+    /* 기본 폰트 설정 */
+    font-family: var(--mainEng-font), var(--mainKor-font);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    /* 폰트를 부드럽게 렌더링하기 위한 속성  */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* 아이폰 가로 모드에서 글씨 확대 금지 */
+    -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+body {
+    color: var(--black100);
+    background-color: var(--mainBg-color);
+}
+</code></pre>
+                        <p>
+                            <code>reset.css</code> 파일을 설정하겠습니다. 
+                            초기화가 필요한 속성들만 정리하였습니다. 
+                        </p>
+<pre><code class="language-css">/* border-box 초기화 */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 공백 초기화 */
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-family: var(--mainEng-font), var(--mainKor-font), "Apple SD Gothic Neo",
+    "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+}
+
+/* 링크 초기화 */
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 스타일 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+em,
+address {
+    font-style: normal;
+}
+
+strong {
+    font-weight: normal;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+/* 스킵메뉴 */
+#skip a {
+    position: absolute;
+    left: 10px;
+    top: -92px;
+    z-index: 100000;
+    font-size: 1rem;
+    padding: 10px 30px;
+    color: var(--white);
+    background: var(--black);
+}
+#skip a:focus,
+#skip a:active {
+    top: 10px;
+}
+</code></pre>
+                        <p>
+                            나머지 CSS 파일은 기본 값만 설정하겠습니다.
+                        </p>
+<pre><code class="language-css">#contact {
+    
+}</code></pre>
+<pre><code class="language-css">#footer {
+    
+}</code></pre>
+<pre><code class="language-css">#header {
+    
+}</code></pre>
+<pre><code class="language-css">#footer {
+    
+}</code></pre>
+<pre><code class="language-css">#intro {
+    
+}</code></pre>
+<pre><code class="language-css">#port {
+    
+}</code></pre>
+<pre><code class="language-css">#site {
+    
+}</code></pre>
+<pre><code class="language-css">#skill {
+    
+}</code></pre>
+                    </div>
+
+                    <div id="a24" class="mt80">
+                        <h4>2-4. JavaScript 셋팅하기</h4>
+                        <p>
+                            자바스크립트는 제일 마지막에 작업을 할 것이지만 미리 셋팅을 해놓겠습니다.
+                        </p>
+                        <div class="folder">
+                            <ul>
+                                <li class="icon1">js
+                                    <ul>
+                                        <li class="icon2 m0">link.js</li>
+                                        <li class="icon2 m0">main.js</li>
+                                        <li class="icon2 m0">menu.js</li>
+                                        <li class="icon2 m0">port.js</li>
+                                        <li class="icon2 m0">smooth.js</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            <code>main.js</code>에는 다음과 같이 셋팅하겠습니다.
+                        </p>
+<pre><code class="language-js">import { menu } from "./menu.js";
+import { port } from "./port.js";
+import { link } from "./link.js";
+import { smooth } from "./smooth.js";
+
+window.addEventListener("load", function () {
+    smooth();
+    link();
+    menu();
+    port();
+});
+</code></pre>
+                        <p>
+                            <code>link.js</code>를 작성하겠습니다.
+                        </p>
+<pre><code class="language-js">export function link() {
+    console.log(link)
+}
+</code></pre>
+                        <p>
+                            <code>menu.js</code>를 작성하겠습니다.
+                        </p>
+<pre><code class="language-js">export function menu() {
+    console.log(menu)
+}
+</code></pre>
+                        <p>
+                            <code>port.js</code>를 작성하겠습니다.
+                        </p>
+<pre><code class="language-js">export function port() {
+    console.log(port)
+}
+</code></pre>
+                        <p>
+                            <code>smooth.js</code>를 작성하겠습니다.
+                        </p>
+<pre><code class="language-js">export function smooth() {
+    console.log(smooth)
+}
+</code></pre>
+                        <p>
+                            자바스크립트 모듈 기능을 이용하여 작업하였습니다. 
+                            기존과 다른 점이 있다면 import와 export를 사용하는 점입니다. 
+                            console.log가 제대로 작동하면 셋팅이 완료된 것입니다. 
+                            브라우저에서 <code>f12</code>를 누르고 console 탭을 클릭하면 확인할 수 있습니다.
+                            스크립트도 잘 작동하는 것을 확인할 수 있습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/v5.png" alt="GitHub">
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            깃에 올려주고 마무리 하겠습니다.
+                        </p>
+<pre><code class="language-js">git add .
+git commit -m "🥳 레이아웃 완성"
+git push -u origin main
+</code></pre>
+                        <p>
+                            여기까지 잘 따라하셨다면 모든 준비가 끝났습니다. 
+                            이제 한 섹션씩 작업하면 완성이 됩니다. 
+                            여기서 주의하실 점은 CSS에서 <code>import</code> 시키는 경우 순서가 중요합니다. 
+                            가장 먼저 font를 불러오고, 그 다음 vars를 불러오고 reset을 불러와야 합니다. 
+                            순석가 바뀌면 불러오지 못할 수 있습니다. 
+                            또한 자바스크립트 모듈 기능을 사용하려면, <code>type="module"</code>이 설정되어 있어야 합니다. 
+                            그럼 오늘도 수고하셨습니다. 😁
+                        </p>
+                    </div>
+
+                    <hr>
+                    <!-- 광고영역 -->
+                    <!-- //광고영역 -->
+                    <div class="right_refer">
+                        <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <ul class="refer5">
+                        <li><a href="main01.html">1. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 셋팅하기</a></li>
+                        <li><a href="main02.html">2. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 레이아웃</a></li>
+                        <li><a href="main03.html">3. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 헤더 영역</a></li>
+                        <li><a href="main04.html">4. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 인트로 영역</a></li>
+                        <li><a href="main05.html">5. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 스킬 영역</a></li>
+                        <li><a href="main06.html">6. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 사이트 영역</a></li>
+                        <li><a href="main07.html">7. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 포트폴리오 영역</a></li>
+                        <li><a href="main08.html">8. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 연락처 영역</a></li>
+                        <li><a href="main09.html">9. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 푸터 영역</a></li>
+                        <li><a href="main10.html">10. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 마무리</a></li>
+                    </ul>
+                   
+                    
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

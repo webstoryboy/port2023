@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 사이트 만들기 프로젝트 😜</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/portfolio</span>
+                <h1 class="title">포트폴리오 사이트 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">10</span>
+                            <div class="title">포트폴리오 사이트 만들기 : 마무리</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        이제 정말 마무리 단계에 접어들었습니다.
+                        스크롤 할 때 스므스 효과를 주면 조금더 고급지게 만들 수 있습니다. 
+                        물론 웹사이트를 만들 때 자주 사용되는 탭 메뉴, 이미지 슬라이드, 로딩 처리 등을 구현하지 않은 부분이 여전히 많습니다.
+                        이런 부분도 다 알려드리고 싶지만, 너무 많은 내용을 한 번에 전달하기보다는 조금씩 천천히 반복적으로 학습하는 것이 가장 중요합니다. 
+                    </p>
+                    <p>
+                        잘하는 것보다 오래동안 꾸준히 하는게 더 중요하더라구요! 
+                        흥미를 느끼면서 오랜 기간 동안 노력한다면, 능숙하게 웹 개발을 할 수 있을 것입니다.
+                        포기하지 않고 최선을 다하면 여러분들도 훌륭한 개발자가 될 수 있습니다.
+                        그럼 마지막까지 열심히 마무리 해봅시다! 🚀
+                    </p>
+
+                    <!-- 광고 영역 -->
+                    <!-- //광고 영역 -->  
+
+                    <div class="index">
+                        <h3>인덱스</h3>
+                        <h4>1. 포트폴리오 사이트 만들기 : HTML/CSS SITE</h4>
+                        <ul>
+                            <li>1. 셋팅하기
+                                <ul>
+                                    <li><a href="#11">1_1. vite 알아보기</a></li>
+                                    <li><a href="#12">1_2. vite 설치하기</a></li>
+                                    <li><a href="#13">1_3. vite 폴더 정리하기</a></li>
+                                    <li><a href="#14">1_4. gsap/lenis 연동하기</a></li>
+                                    <li><a href="#15">1_5. git 셋팅하기</a></li>
+                                    <li><a href="#16">1-6. git 연동하기</a></li>
+                                </ul>
+                            </li>
+                            <li>2. 레이아웃
+                                <ul>
+                                    <li><a href="#21">2.1 레이아웃 구조 만들기</a></li>
+                                    <li><a href="#22">2.2 메인 레이아웃 구조 만들기</a></li>
+                                    <li><a href="#23">2.3 CSS 셋팅하기</a></li>
+                                    <li><a href="#24">2.4 JavaScript 셋팅하기</a></li>
+                                </ul>
+                            </li>
+                            <li>3. 헤더 영역
+                                <ul>
+                                    <li><a href="#31">3.1 헤더 구조 잡기</a></li>
+                                    <li><a href="#32">3.2 헤더 디자인 설정</a></li>
+                                    <li><a href="#33">3.3 반응형 작업하기</a></li>
+                                    <li><a href="#34">3.4 메뉴 자바스크립트 설정</a></li>
+                                </ul>
+                            </li>
+                            <li>4. 인트로 영역
+                                <ul>
+                                    <li><a href="#41">4.1 인트로 구조 잡기</a></li>
+                                    <li><a href="#42">4.2 인트로 디자인 설정</a></li>
+                                    <li><a href="#43">4.3 반응형 작업하기</a></li>
+                                </ul>
+                            </li>
+                            <li>5. 스킬 영역
+                                <ul>
+                                    <li><a href="#a51">5.1 스킬 구조 잡기</a></li>
+                                    <li><a href="#a52">5.2 스킬 디자인 설정</a></li>
+                                    <li><a href="#a53">5.3 반응형 작업하기</a></li>
+                                </ul>
+                            </li>
+                            <li>6. 사이트 영역
+                                <ul>
+                                    <li><a href="#a61">6.1 사이트 구조 잡기</a></li>
+                                    <li><a href="#a62">6.2 사이트 디자인 설정</a></li>
+                                    <li><a href="#a63">6.3 반응형 작업하기</a></li>
+                                </ul>
+                            </li>
+                            <li>7. 포트폴리오 영역
+                                <ul>
+                                    <li><a href="#a71">7.1 사이트 구조 잡기</a></li>
+                                    <li><a href="#a72">7.2 사이트 디자인 설정</a></li>
+                                    <li><a href="#a73">7.3 반응형 작업하기</a></li>
+                                    <li><a href="#a74">7.4 스크립트 작업하기</a></li>
+                                </ul>
+                            </li>
+                            <li>8. 연락처 영역
+                                <ul>
+                                    <li><a href="#a81">8.1 연락처 구조 잡기</a></li>
+                                    <li><a href="#a82">8.2 연락처 디자인 설정</a></li>
+                                    <li><a href="#a83">8.3 반응형 작업하기</a></li>
+                                </ul>
+                            </li>
+                            <li>9. 푸터 영역
+                                <ul>
+                                    <li><a href="#a91">9.1 푸터 구조 잡기</a></li>
+                                    <li><a href="#a92">9.2 푸터 디자인 설정</a></li>
+                                    <li><a href="#a93">9.3 반응형 작업하기</a></li>
+                                </ul>
+                            </li>
+                            <li>10. 마무리
+                                <ul>
+                                    <li><a href="#a101">10.1 스무스 효과주기</a></li>
+                                    <li><a href="#a102">10.2 빌드하고 github에 올리기</a></li>
+                                    <li><a href="#a103">10.3 netlify에 배포하기</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //index -->
+
+                    <h3>10. 마무리</h3>
+                    <div id="a101">
+                        <h4 data-num="01">10.1 스무스 효과주기</h4>
+                        <p>
+                            셋팅에서 lenis를 설치하였기 때문에 바로 작업하면 됩니다. 
+                            소스는 사이트 웹 문성에 잘 나왔기 때문에 복사해서 사용하겠습니다.
+                            <code>main.js</code>에서 수정하겠습니다.
+                        </p>
+                        <p>
+                            <code>Lenis</code>를 import 하고
+                            브라우저가 다 로드 했을 때 스므스 효과를 실행합니다. 
+                            메뉴와 포트폴리오 스크립트는 작동할 수 있도록 실행함수를 설정하면 됩니다. 
+                            이렇게 설정하고 <code>console.log</code>를 확인하면 수시로 움직이는 걸 확인할 수 있습니다. 
+                        </p>
+<pre><code class="language-js">import { menu } from "./menu.js";
+import { port } from "./port.js";
+
+import Lenis from "@studio-freight/lenis";
+
+window.addEventListener("load", function () {
+    // 스므스 효과
+    const lenis = new Lenis({
+        duration: 1,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    lenis.on("scroll", (e) => {
+        console.log(e);
+    });
+    
+    menu();
+    port();
+});
+    
+
+</code></pre>
+                        <p>
+                            이런 부분이 보이면 제대로 작동하고 있는 겁니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/s6.png" alt="GitHub">
+                        </div>
+                    </div>
+
+                    <div id="a102">
+                        <h4 data-num="02">10.2 빌드하고 github에 올리기</h4>
+                        <p>
+                            배포하는 방법은 여러가지가 있지만 우선 첫 시간에 배웠던 git에 모든 소스를 올려야 합니다. 
+                            그전에 우리가 작업한 파일을 조금 더 가볍게 만들기 위해서 번들링 작업을 해야 합니다. 
+                            소스에 빈칸이 없고 한줄로 만드는 효과 보신적 있나요? 
+                            이렇게 하면 소스 용량도 줄어들고 가벼워집니다. 
+                            이런 부분은 webpack을 통해서 작업하지만 vite는 이런 부분을 매우 잘 해줍니다. 
+                            그래서 먼저 빌드를 통해 소스를 간단 명료하게 만들어주겠습니다.
+                        </p>
+<pre><code class="language-js">npm run build</code></pre>
+                        <p>
+                            이렇게 작업하면 모든 파일과 이미지들이 최적화가 되고 
+                            <code>public</code> 폴더에 정리가 됩니다. 
+                            폴더를 한번 확인해주세요!
+                        </p>
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port-html % npm run build
+
+> port-html@0.0.0 build
+> vite build
+
+vite v4.4.6 building for production...
+✓ 12 modules transformed.
+
+(!) outDir /Users/webstoryboy/Desktop/port2023/port-html/public is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+../public/assets/arrow-02f0d4f8.svg     0.55 kB │ gzip:  0.30 kB
+../public/index.html                   17.01 kB │ gzip:  3.21 kB
+../public/assets/port04-ef9aecf4.jpg   30.12 kB
+../public/assets/port10-4c5d4fcc.jpg   34.32 kB
+../public/assets/port01-34d74104.jpg   39.33 kB
+../public/assets/port08-bbe12b4c.jpg   48.32 kB
+../public/assets/port07-40dbfcb8.jpg   51.29 kB
+../public/assets/port06-472f3011.jpg   63.29 kB
+../public/assets/port09-123694cb.jpg   69.42 kB
+../public/assets/port02-b2fe3a4d.jpg  110.01 kB
+../public/assets/port05-dbf9854b.jpg  137.93 kB
+../public/assets/port03-0d0fe7e4.jpg  170.52 kB
+../public/assets/index-20c8a04a.css    14.43 kB │ gzip:  3.27 kB
+../public/assets/index-8a934387.js    123.28 kB │ gzip: 47.58 kB
+✓ built in 406ms</code></pre>
+                        <p>
+                            그리고 다음과 같이 업로드 하면 파일이 업로드가 됩니다. 
+                            파일은 저랑 틀리게 나올 수도 있습니다.
+                        </p>
+<pre><code class="language-js">git add . 
+git commit -m "😇 1차 완성본"
+git push -u origin main
+</code></pre>
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port-html % git add . 
+git commit -m "😇 1차 완성본"
+git push -u origin main
+[main 2a386d6] 😇 1차 완성본
+    30 files changed, 1492 insertions(+), 1 deletion(-)
+    create mode 100644 src/assets/css/section/contact.css
+    create mode 100644 src/assets/css/section/footer.css
+    create mode 100644 src/assets/css/section/header.css
+    create mode 100644 src/assets/css/section/intro.css
+    create mode 100644 src/assets/css/section/lenis.css
+    create mode 100644 src/assets/css/section/port.css
+    create mode 100644 src/assets/css/section/site.css
+    create mode 100644 src/assets/css/section/skill.css
+    create mode 100644 src/assets/css/setting/fonts.css
+    create mode 100644 src/assets/css/setting/reset.css
+    create mode 100644 src/assets/css/setting/vars.css
+    create mode 100644 src/assets/css/style.css
+    create mode 100644 src/assets/img/arrow.svg
+    create mode 100644 src/assets/img/port01.jpg
+    create mode 100644 src/assets/img/port02.jpg
+    create mode 100644 src/assets/img/port03.jpg
+    create mode 100644 src/assets/img/port04.jpg
+    create mode 100644 src/assets/img/port05.jpg
+    create mode 100644 src/assets/img/port06.jpg
+    create mode 100644 src/assets/img/port07.jpg
+    create mode 100644 src/assets/img/port08.jpg
+    create mode 100644 src/assets/img/port09.jpg
+    create mode 100644 src/assets/img/port10.jpg
+    create mode 100644 src/assets/img/readme.png
+    create mode 100644 src/assets/js/main.js
+    create mode 100644 src/assets/js/menu.js
+    create mode 100644 src/assets/js/port.js
+Enumerating objects: 44, done.
+Counting objects: 100% (44/44), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (39/39), 834.18 KiB | 36.27 MiB/s, done.
+Total 39 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/webstoryboy/port2023-html.git
+    db7b82b..2a386d6  main -> main
+branch 'main' set up to track 'origin/main'.
+</code></pre>   
+                        <p>
+                            이번엔 public 폴더까지 모두 올라온 것을 확인 할 수 있습니다. 
+                            README.md 파일은 여러분들이 정리 잘 해서 올리면 됩니다. 
+                            아니면 나중에 제꺼 한번 참고해보세요! 
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/s7.png" alt="GitHub" style="width: 100%;">
+                        </div>
+                    </div>
+
+                    <div id="a103">
+                        <h4 data-num="02">10.3 netlify에 배포하기</h4>
+                        <p>
+                            github에 무사히 올렸다면 <i><a href="https://www.netlify.com/">www.netlify.com</a></i> 사이트에 회원가입을 하겠습니다. 
+                            웬만하면 github 아이디로 로그인하면 좋습니다. 바로 연동이 되니까 github 아이디로 로그인 하겠습니다.
+                            로그인을 했다면 해당 부분을 클릭하면 됩니다. 
+                            기존에 만들었던 사이트 들이 있어서 보이는 모습이 틀릴 수 있지만 거의 비슷할 겁니다.
+                            첫번재 메뉴를 클릭하고 github을 클릭하면 내 저장소로 이동합니다. 
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/s8.png" alt="GitHub" style="width: 100%;">
+                        </div>
+
+                        <p>
+                            우리가 만들었던 저장소를 선택하면 됩니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/s9.png" alt="GitHub" style="width: 100%;">
+                        </div>
+
+                        <p>
+                            마지막으로 빌드 이름만 <code>public</code>으로 변경합니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/s10.png" alt="GitHub" style="width: 100%;">
+                        </div>
+
+                        <p>
+                            완성이 되면 주소가 나옵니다. 
+                            주소가 너무 길기 때문에 domain setting에 option으로 들어가서 수정을 합니다.
+                            저는 <i><a href="https://port2023-html.netlify.app">https://port2023-html.netlify.app</a></i> 이렇게 수정했습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/s11.png" alt="GitHub" style="width: 100%;">
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            드뎌 사이트를 다 완성했습니다.
+                            vite를 이용하여 사이트 빌드부터 배포까지 완성을 하였습니다. 
+                            완성한 사이트는 주소와 함께 공유해주세요! 🤩
+                            궁금하신 부분이나 안되는 부분은 댓글로 남겨주시면 답글 달아드리겠습니다. 
+                            이제 지금까지 만든 사이트를 다음 시간에는 리액트로 만드는 시간을 가져보겠습니다. 
+                            다음 시간에 뵐게요!
+                        </p>
+                    </div>
+
+                    <hr>
+                    <!-- 광고영역 -->
+                    <!-- //광고영역 -->
+
+                    <div class="right_refer">
+                        <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <ul class="refer5">
+                        <li><a href="main01.html">1. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 셋팅하기</a></li>
+                        <li><a href="main02.html">2. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 레이아웃</a></li>
+                        <li><a href="main03.html">3. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 헤더 영역</a></li>
+                        <li><a href="main04.html">4. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 인트로 영역</a></li>
+                        <li><a href="main05.html">5. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 스킬 영역</a></li>
+                        <li><a href="main06.html">6. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 사이트 영역</a></li>
+                        <li><a href="main07.html">7. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 포트폴리오 영역</a></li>
+                        <li><a href="main08.html">8. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 연락처 영역</a></li>
+                        <li><a href="main09.html">9. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 푸터 영역</a></li>
+                        <li><a href="main10.html">10. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 마무리</a></li>
+                    </ul>
+                   
+                    
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

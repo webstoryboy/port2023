@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 사이트 만들기 프로젝트 😜</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/portfolio</span>
+                <h1 class="title">포트폴리오 사이트 만들기 - vite</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">07</span>
+                            <div class="title">포트폴리오 사이트 만들기 : 포트폴리오 영역</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        이번 섹션은 가로 모드 느낌을 나게 연출하겠습니다. 
+                        GSAP 라이브러리를 활용하여 작업하겠습니다. 
+                        자바스크립트를 작업하여 연출할 수 있지만, 비효율적이고, 애니메이션 효과가 라이브러리보다 훨씬 좋지 않습니다. 
+                        좋은 기능들은 갔다 쓰는게 더 효율적일 수 있습니다. 
+                        GSPA를 처음 듣거나 할 줄 모르다면 <i><a href="https://www.youtube.com/watch?v=_rAAY_Zp4FI&list=PL4UVBBIc6giL8-6jvrClimg0cFL-Muqiq">gsap</a></i> 강의를 한번 듣고 오는 것을 추천합니다. 
+                        그럼 시작해보겠습니다.
+                    </p>
+
+                    <div class="index">
+                        <h3>인덱스</h3>
+                        <h4>1. 포트폴리오 사이트 만들기 : VITE SITE</h4>
+                        <ul>
+                            <li>1. 셋팅하기
+                                <ul>
+                                    <li>1_1. vite 설치하기</li>
+                                    <li>1_2. vite 폴더 정리하기</li>
+                                    <li>1_3. gsap/lenis 설치하기</li>
+                                    <li>1_4. git 연동하기</li>
+                                </ul>
+                            </li>
+                            <li>2. 레이아웃
+                                <ul>
+                                    <li>2.1 레이아웃 구조 만들기</li>
+                                    <li>2.2 메인 레이아웃 구조 만들기</li>
+                                    <li>2.3 CSS 셋팅하기</li>
+                                    <li>2.4 JavaScript 셋팅하기</li>
+                                </ul>
+                            </li>
+                            <li>3. 헤더 영역
+                                <ul>
+                                    <li>3.1 헤더 구조 잡기</li>
+                                    <li>3.2 헤더 디자인 설정</li>
+                                    <li>3.3 반응형 작업하기</li>
+                                    <li>3.4 메뉴 자바스크립트 설정</li>
+                                </ul>
+                            </li>
+                            <li>4. 인트로 영역
+                                <ul>
+                                    <li>4.1 인트로 구조 잡기</li>
+                                    <li>4.2 인트로 디자인 설정</li>
+                                    <li>4.3 반응형 작업하기</li>
+                                </ul>
+                            </li>
+                            <li>5. 스킬 영역
+                                <ul>
+                                    <li>5.1 스킬 구조 잡기</li>
+                                    <li>5.2 스킬 디자인 설정</li>
+                                    <li>5.3 반응형 작업하기</li>
+                                </ul>
+                            </li>
+                            <li>6. 사이트 영역
+                                <ul>
+                                    <li>6.1 사이트 구조 잡기</li>
+                                    <li>6.2 사이트 디자인 설정</li>
+                                    <li>6.3 반응형 작업하기</li>
+                                </ul>
+                            </li>
+                            <li>7. 포트폴리오 영역
+                                <ul>
+                                    <li>7.1 사이트 구조 잡기</li>
+                                    <li>7.2 사이트 디자인 설정</li>
+                                    <li>7.3 반응형 작업하기</li>
+                                    <li>7.4 스크립트 작업하기</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //index -->
+
+                    <h3>7. 포트폴리오 영역</h3>
+                    <div id="a71">
+                        <h4>7.1 사이트 구조 잡기</h4>
+                        <p>
+                            <code>port__wrap</code> 안에 <code>port__item</code> 박스가 10개 있는 구조입니다.
+                            우선 가로모드를 작업하기 전에 CSS 구성부터 완벽하게 작업해야 스크립트에서 실수없이 완성할 수 있습니다. 
+                        </p>
+<pre><code class="language-html">&lt;section id="port"&gt;
+    &lt;div class="port__inner"&gt;
+        &lt;div class="port__title"&gt;portfolio &lt;em&gt;포폴 작업물&lt;/em&gt;&lt;/div&gt;
+        &lt;div class="port__wrap"&gt;
+        &lt;div class="port__item p1"&gt;
+            &lt;span class="num"&gt;01.&lt;/span&gt;
+            &lt;img src="assets/img/port01.jpg" alt="포트폴리오" /&gt;
+            &lt;h3&gt;재밌는 포트폴리오&lt;/h3&gt;
+            &lt;p&gt;
+                발랄한 느낌의 포트폴리오 사이트입니다. 스크롤을 통해 작업물을
+                보여주는 스토리가 담긴 포트폴리오입니다. 중간 중간에 재밌는
+                애니메이션과 효과들이 인상적이네요!
+            &lt;/p&gt;
+            &lt;a href="#"&gt;사이트 보기&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="port__item p2"&gt;
+            &lt;span class="num"&gt;02.&lt;/span&gt;
+            &lt;img src="assets/img/port02.jpg" alt="포트폴리오" /&gt;
+            &lt;h3&gt;재밌는 포트폴리오&lt;/h3&gt;
+            &lt;p&gt;
+                발랄한 느낌의 포트폴리오 사이트입니다. 스크롤을 통해 작업물을
+                보여주는 스토리가 담긴 포트폴리오입니다. 중간 중간에 재밌는
+                애니메이션과 효과들이 인상적이네요!
+            &lt;/p&gt;
+            &lt;a href="#"&gt;사이트 보기&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="port__item p3"&gt;
+            &lt;span class="num"&gt;03.&lt;/span&gt;
+            &lt;img src="assets/img/port03.jpg" alt="포트폴리오" /&gt;
+            &lt;h3&gt;재밌는 포트폴리오&lt;/h3&gt;
+            &lt;p&gt;
+                발랄한 느낌의 포트폴리오 사이트입니다. 스크롤을 통해 작업물을
+                보여주는 스토리가 담긴 포트폴리오입니다. 중간 중간에 재밌는
+                애니메이션과 효과들이 인상적이네요!
+            &lt;/p&gt;
+            &lt;a href="#"&gt;사이트 보기&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="port__item p4"&gt;
+            &lt;span class="num"&gt;04.&lt;/span&gt;
+            &lt;img src="assets/img/port04.jpg" alt="포트폴리오" /&gt;
+            &lt;h3&gt;재밌는 포트폴리오&lt;/h3&gt;
+            &lt;p&gt;
+                발랄한 느낌의 포트폴리오 사이트입니다. 스크롤을 통해 작업물을
+                보여주는 스토리가 담긴 포트폴리오입니다. 중간 중간에 재밌는
+                애니메이션과 효과들이 인상적이네요!
+            &lt;/p&gt;
+            &lt;a href="#"&gt;사이트 보기&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="port__item p5"&gt;
+            &lt;span class="num"&gt;05.&lt;/span&gt;
+            &lt;img src="assets/img/port05.jpg" alt="포트폴리오" /&gt;
+            &lt;h3&gt;재밌는 포트폴리오&lt;/h3&gt;
+            &lt;p&gt;
+                발랄한 느낌의 포트폴리오 사이트입니다. 스크롤을 통해 작업물을
+                보여주는 스토리가 담긴 포트폴리오입니다. 중간 중간에 재밌는
+                애니메이션과 효과들이 인상적이네요!
+            &lt;/p&gt;
+            &lt;a href="#"&gt;사이트 보기&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="port__item p6"&gt;
+            &lt;span class="num"&gt;06.&lt;/span&gt;
+            &lt;img src="assets/img/port06.jpg" alt="포트폴리오" /&gt;
+            &lt;h3&gt;재밌는 포트폴리오&lt;/h3&gt;
+            &lt;p&gt;
+                발랄한 느낌의 포트폴리오 사이트입니다. 스크롤을 통해 작업물을
+                보여주는 스토리가 담긴 포트폴리오입니다. 중간 중간에 재밌는
+                애니메이션과 효과들이 인상적이네요!
+            &lt;/p&gt;
+            &lt;a href="#"&gt;사이트 보기&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="port__item p7"&gt;
+            &lt;span class="num"&gt;07.&lt;/span&gt;
+            &lt;img src="assets/img/port07.jpg" alt="포트폴리오" /&gt;
+            &lt;h3&gt;재밌는 포트폴리오&lt;/h3&gt;
+            &lt;p&gt;
+                발랄한 느낌의 포트폴리오 사이트입니다. 스크롤을 통해 작업물을
+                보여주는 스토리가 담긴 포트폴리오입니다. 중간 중간에 재밌는
+                애니메이션과 효과들이 인상적이네요!
+            &lt;/p&gt;
+            &lt;a href="#"&gt;사이트 보기&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="port__item p8"&gt;
+            &lt;span class="num"&gt;08.&lt;/span&gt;
+            &lt;img src="assets/img/port08.jpg" alt="포트폴리오" /&gt;
+            &lt;h3&gt;재밌는 포트폴리오&lt;/h3&gt;
+            &lt;p&gt;
+                발랄한 느낌의 포트폴리오 사이트입니다. 스크롤을 통해 작업물을
+                보여주는 스토리가 담긴 포트폴리오입니다. 중간 중간에 재밌는
+                애니메이션과 효과들이 인상적이네요!
+            &lt;/p&gt;
+            &lt;a href="#"&gt;사이트 보기&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="port__item p9"&gt;
+            &lt;span class="num"&gt;09.&lt;/span&gt;
+            &lt;img src="assets/img/port09.jpg" alt="포트폴리오" /&gt;
+            &lt;h3&gt;재밌는 포트폴리오&lt;/h3&gt;
+            &lt;p&gt;
+                발랄한 느낌의 포트폴리오 사이트입니다. 스크롤을 통해 작업물을
+                보여주는 스토리가 담긴 포트폴리오입니다. 중간 중간에 재밌는
+                애니메이션과 효과들이 인상적이네요!
+            &lt;/p&gt;
+            &lt;a href="#"&gt;사이트 보기&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="port__item p10"&gt;
+            &lt;span class="num"&gt;10.&lt;/span&gt;
+            &lt;img src="assets/img/port10.jpg" alt="포트폴리오" /&gt;
+            &lt;h3&gt;재밌는 포트폴리오&lt;/h3&gt;
+            &lt;p&gt;
+                발랄한 느낌의 포트폴리오 사이트입니다. 스크롤을 통해 작업물을
+                보여주는 스토리가 담긴 포트폴리오입니다. 중간 중간에 재밌는
+                애니메이션과 효과들이 인상적이네요!
+            &lt;/p&gt;
+            &lt;a href="#"&gt;사이트 보기&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- //port --&gt;
+</code></pre>
+                    </div>
+
+                    <div>
+                        <h4 data-num="02">7.2 사이트 디자인 설정</h4>
+                        <p>
+                            <code>port__item</code> 박스를 가로롤 정렬하기 위해 <code>display: flex</code>를 사용했습니다.
+                            <code>.port__wrap</code>를 가로로 유지하기 위하여 <code>width: 7000px;</code>을 설정했습니다.
+                        </p>
+<pre><code class="language-css">#port {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 200px;
+}
+.port__inner {
+    padding: 16px;
+}
+.port__title {
+    width: 100%;
+    height: 5vw;
+    font-size: 4vw;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: var(--black100);
+    border-bottom: 0.4vw solid var(--black100);
+    font-family: "nanumSquareNeo";
+    font-weight: 900;
+    z-index: 2000;
+    margin-bottom: 16px;
+}
+.port__title em {
+    font-size: 20px;
+    font-weight: 400;
+}
+.port__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 7000px;
+}
+.port__item {
+    width: 500px;
+    height: 700px;
+    background-color: var(--subBg100);
+    padding: 40px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.port__item.p1 {
+    background-color: var(--subBg100);
+}
+.port__item.p2 {
+    background-color: var(--subBg200);
+}
+.port__item.p3 {
+    background-color: var(--subBg300);
+}
+.port__item.p4 {
+    background-color: var(--subBg400);
+}
+.port__item.p5 {
+    background-color: var(--subBg500);
+}
+.port__item.p6 {
+    background-color: var(--subBg100);
+}
+.port__item.p7 {
+    background-color: var(--subBg200);
+}
+.port__item.p8 {
+    background-color: var(--subBg300);
+}
+.port__item.p9 {
+    background-color: var(--subBg400);
+}
+.port__item.p10 {
+    background-color: var(--subBg500);
+}
+.port__item img {
+    width: 100%;
+    border-radius: 5px;
+    filter: saturate(0%);
+    transition: all 0.3s;
+}
+.port__item img:hover {
+    filter: saturate(100%);
+}
+.port__item .num {
+    font-size: 22px;
+    font-family: "gmarket";
+}
+.port__item h3 {
+    font-size: 24px;
+    text-align: center;
+    padding: 15px 0 15px;
+    font-weight: 700;
+    color: var(--black100);
+    border-bottom: 1px solid rgb(95, 89, 83);
+    font-family: "nanumSquareNeo";
+    margin-bottom: 20px;
+}
+.port__item p {
+    font-family: "nanumSquareNeo";
+}
+.port__item a {
+    font-family: "nanumSquareNeo";
+    text-align: center;
+    border: 1px solid var(--black100);
+    display: block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+.port__item a:hover {
+    background-color: var(--black100);
+    color: #fff;
+}
+</code></pre>
+                    </div>
+
+                    <div>
+                        <h4 data-num="03">7.3 반응형 작업하기</h4>
+<pre><code class="language-css">@media (max-width: 800px) {
+    .port__title {
+        width: 100%;
+        font-size: 30px;
+        height: auto;
+        background: #f3ede8;
+        top: 70px;
+        border-bottom: 2px solid var(--black100);
+        z-index: 1000;
+    }
+    .port__title em {
+        font-size: 16px;
+    }
+    .port__item {
+        width: 400px;
+        padding: 40px 20px;
+        height: auto;
+    }
+}
+</code></pre>
+                    </div>
+
+                    <div>
+                        <h4 data-num="03">7.4 스크립트 작업하기</h4>
+                        <p>
+                            ScrollTrigger를 사용하기 위해서는 import를 시켜야 합니다. 
+                            <code>port__item</code> 속성이 여러개 있기 때문에 다중 선택을 해야 합니다. 
+                            <code>gsap.utils.toArray</code> 속성을 사용하여 다중 선택을 하고 
+                            gsap.to 속성을 이용하여 이동시켜 줍니다. 
+                            <code>trigger</code> 속성은 움직이는 시점을 설정하고, start와 end를 통해 애니메이션을 컨틀롤 할 수 있습니다. 
+                        </p>
+<pre><code class="language-js">import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+export function port() {
+    gsap.registerPlugin(ScrollTrigger);
+    const horSection = gsap.utils.toArray(".port__item");
+
+    gsap.to(horSection, {
+        xPercent: -120 * (horSection.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#port",
+            start: "top 56px",
+            end: "+=3000",
+            pin: true,
+            scrub: 1,
+            markers: false,
+            invalidateOnRefresh: true,
+            anticipatePin: 1,
+        },
+    });
+}
+</code></pre>
+                        <ul class="list">
+                            <li>import ScrollTrigger from "gsap/ScrollTrigger"; : GSAP의 ScrollTrigger 모듈을 가져옵니다. ScrollTrigger는 GSAP의 플러그인으로 스크롤에 반응하는 애니메이션을 쉽게 구현할 수 있도록 도와줍니다.</li>
+                            <li>gsap.registerPlugin(ScrollTrigger); : ScrollTrigger를 GSAP에 등록합니다. 이를 통해 ScrollTrigger를 사용하여 애니메이션을 정의할 수 있습니다.</li>
+                            <li>const horSection = gsap.utils.toArray(".port__item"); : 클래스 이름이 "port__item"인 모든 요소들을 선택하여 배열 horSection에 저장합니다.</li>
+                            <li>gsap.to(horSection, {...}); : GSAP의 to 메서드를 사용하여 요소들에 애니메이션을 적용합니다.</li>
+                            <li>xPercent: -120 * (horSection.length - 1),: 요소들을 가로 방향으로 배치하기 위해 xPercent 속성을 사용합니다. 스크롤되면 120% 만큼 이동하도록 설정합니다.
+                            <li>ease: "none", : 애니메이션의 이징(easing)을 "none"으로 설정하여 일정한 속도로 애니메이션이 진행되도록 합니다.</li>
+                            <li>scrollTrigger: {...}: ScrollTrigger를 이용하여 스크롤에 따라 애니메이션을 제어하는 옵션들을 설정합니다.</li>
+                            <li>trigger: "#port": 애니메이션을 시작할 트리거 요소로, #port를 선택합니다.</li>
+                            <li>start: "top 56px": 트리거 요소의 상단에서 56px 아래에서 애니메이션이 시작됩니다.</li>
+                            <li>end: "+=3000": 트리거 요소의 아래에서 3000px 아래에서 애니메이션이 끝납니다.</li>
+                            <li>pin: true,: 애니메이션이 스크롤 범위 동안 고정되도록 합니다.</li>
+                            <li>scrub: 1,: 스크롤 시 애니메이션 속도에 비례하여 애니메이션이 진행됩니다.</li>
+                            <li>markers: false,: 디버깅을 위한 마커를 표시하지 않습니다.</li>
+                            <li>invalidateOnRefresh: true,: 페이지 리프레시 시 ScrollTrigger 캐시를 재설정합니다.</li>
+                            <li>anticipatePin: 1,: 고정된 상태로 애니메이션이 시작되기 전에 스크롤 위치에 따라 약간의 애니메이션 효과를 부여합니다.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            포트폴리오 사이트에 하이라이트 부분을 완성하였습니다. 
+                            vite를 사용하여 작업하고 있기 때문에 사이트를 확인하려면 
+                            터니널에서 <code>npm run dev</code>로 작업하셔야 제대로 된 화면을 확인할 수 있습니다. 
+                            이점 꼭 잊지 마세요!. 라이브 서버로 보시면 안됩니다. 
+                            ScrollTrigger를 통해 가로모드를 완성하였습니다. 
+                            이부분이 어렵고 이해가 안되면 GSAP 영상을 보시면 쉽게 느껴질 것입니다. 
+                            오늘도 수고하셨습니다. 그럼 다음 섹션에서 뵙겠습니다. 😫
+                        </p>
+                    </div>
+
+                    <hr>
+                    <!-- 광고영역 -->
+                    <!-- //광고영역 -->
+
+                    <div class="right_refer">
+                        <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <ul class="refer5">
+                        <li><a href="main01.html">1. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 셋팅하기</a></li>
+                        <li><a href="main02.html">2. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 레이아웃</a></li>
+                        <li><a href="main03.html">3. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 헤더 영역</a></li>
+                        <li><a href="main04.html">4. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 인트로 영역</a></li>
+                        <li><a href="main05.html">5. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 스킬 영역</a></li>
+                        <li><a href="main06.html">6. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 사이트 영역</a></li>
+                        <li><a href="main07.html">7. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 포트폴리오 영역</a></li>
+                        <li><a href="main08.html">8. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 연락처 영역</a></li>
+                        <li><a href="main09.html">9. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 푸터 영역</a></li>
+                        <li><a href="main10.html">10. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 마무리</a></li>
+                    </ul>
+                   
+                    
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

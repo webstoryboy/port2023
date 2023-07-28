@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 사이트 만들기 프로젝트 😜</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/portfolio</span>
+                <h1 class="title">포트폴리오 사이트 만들기 - vite</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">04</span>
+                            <div class="title">포트폴리오 사이트 만들기 : 인트로 영역</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        이번 섹션은 웹 페이지의 인트로(소개) 섹션을 구성하는 부분입니다. 
+                        "Port developer"라는 텍스트를 강조하여 표시하여 개발자 포트폴리오라는 느낌을 주었습니다.
+                        가로로 놓인 줄들로 꾸며진 배경은 깔끔하고 세련된 느낌을 주도록 하였습니다.
+                        또한 "Talent is found at the end of the effort"라는 메세지를 부여하여 노력에 대한 중요성을 강조하였습니다. 
+                        배경 이미지는 꾸밈 요소로 사용되었기 때문에, 웹 접근성을 위해 "aria-hidden" 속성을 사용하였습니다.
+                    </p>
+
+                    <!-- 광고 영역 -->
+                    <!-- //광고 영역 -->  
+
+                    <div class="index">
+                        <h3>인덱스</h3>
+                        <h4>1. 포트폴리오 사이트 만들기 : VITE SITE</h4>
+                        <ul>
+                            <li>1. 셋팅하기
+                                <ul>
+                                    <li>1_1. vite 설치하기</li>
+                                    <li>1_2. vite 폴더 정리하기</li>
+                                    <li>1_3. gsap/lenis 설치하기</li>
+                                    <li>1_4. git 연동하기</li>
+                                </ul>
+                            </li>
+                            <li>2. 레이아웃
+                                <ul>
+                                    <li>2.1 레이아웃 구조 만들기</li>
+                                    <li>2.2 메인 레이아웃 구조 만들기</li>
+                                    <li>2.3 CSS 셋팅하기</li>
+                                    <li>2.4 JavaScript 셋팅하기</li>
+                                </ul>
+                            </li>
+                            <li>3. 헤더 영역
+                                <ul>
+                                    <li>3.1 헤더 구조 잡기</li>
+                                    <li>3.2 헤더 디자인 설정</li>
+                                    <li>3.3 반응형 작업하기</li>
+                                    <li>3.4 메뉴 자바스크립트 설정</li>
+                                </ul>
+                            </li>
+                            <li>4. 인트로 영역
+                                <ul>
+                                    <li>4.1 인트로 구조 잡기</li>
+                                    <li>4.2 인트로 디자인 설정</li>
+                                    <li>4.3 반응형 작업하기</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //index -->
+
+                    <h3>4. 인트로 영역</h3>
+                    <div id="a41">
+                        <h4>4.1 인트로 구조 잡기</h4>
+                        <p>
+                            라인 효과를 주기 위해 <code>span</code>을 사용했습니다. 
+                            의미가 있는 요소가 아니기 때문에 <code>aria-hidden</code> 속성을 사용하였습니다. 
+                            이미지를 나타내는 부분도 백그라운드로 이미지를 넣었기 때문에 의미 전달을 할 수 없어 <code>aria-hidden</code>를 사용하였습니다. 
+                        </p>
+<pre><code class="language-html">&lt;section id="intro" role="region"&gt;
+    &lt;div class="intro__inner"&gt;
+        &lt;h1 class="intro__title"&gt;port developer&lt;/h1&gt;
+        &lt;div class="intro__lines" aria-hidden="true"&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="intro__text"&gt;
+            &lt;div class="text"&gt;
+                &lt;div&gt;talent is&lt;/div&gt;
+                &lt;div&gt;found at the end of the&lt;/div&gt;
+                &lt;div&gt;effort&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="img"&gt;
+                &lt;img src="assets/img/about.jpg" alt="어바웃" /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="intro__lines bottom" aria-hidden="true"&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- //intro --&gt;
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>&lt;div class="intro__lines"&gt;와 &lt;div class="intro__lines bottom"&gt; : 이 두 개의 &lt;div&gt; 요소들은 CSS 스타일링을 위한 장식적인 역할을 하므로, aria-hidden="true" 속성을 추가하여 스크린 리더에게 이 요소들을 읽지 않도록 설정합니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="a42" class="mt80">
+                        <h4>4.2 인트로 구조 잡기</h4>
+                        <div class="sampleBasic">
+                            <p>
+                                CSS 작업을 할 때 단위 선택은 매우 중요합니다. 
+                                하지만 단위를 선택하는 것은 절대적인 규칙이 딱히 없기 때문에 개발자들이 많은 시행착오를 겪는 경우가 종종 있습니다.
+                                일반적으로 px, vw, rem을 사용하여 크기를 지정할 수 있습니다. 
+                                각각의 특징과 사용 사례에 대해 간단히 설명드리겠습니다.
+                            </p>
+                            <ul class="list">
+                                <li>px (픽셀): px은 절대적인 단위로, 고정 크기를 나타냅니다. 즉, 브라우저의 크기나 디바이스의 해상도에 관계없이 항상 동일한 크기로 표시됩니다. px은 주로 글꼴 크기와 같이 크기가 고정되어야 하는 요소에 사용됩니다.</li>
+                                <li>vw (뷰포트 너비의 비율): vw는 뷰포트 너비의 비율을 나타내는 상대적인 단위입니다. 뷰포트란 사용자의 화면에 표시되는 영역을 말합니다. 예를 들어 1vw는 뷰포트 너비의 1%를 의미합니다. vw은 반응형 디자인에서 주로 사용되며, 화면 크기에 따라 요소의 크기가 자동으로 조정되는 효과를 얻을 수 있습니다.</li>
+                                <li>rem (루트 글꼴 크기의 비율): rem은 루트(html) 요소의 글꼴 크기를 기준으로한 상대적인 단위입니다. 예를 들어, 1rem은 루트 요소의 글꼴 크기와 동일하게 설정됩니다. rem은 주로 반응형 디자인에서 사용되며, 루트 요소의 글꼴 크기를 조정하여 모든 요소의 크기가 자동으로 조정되도록 만들 수 있습니다.</li>
+                            </ul>
+                            <p>
+                                이러한 단위를 적절하게 조합하여 사용하면 유연하고 반응형인 웹 페이지를 개발할 수 있습니다. 
+                                예를 들어, 글꼴 크기와 같이 고정 크기가 필요한 요소는 px를 사용하고, 
+                                반응형인 요소는 vw 또는 rem을 사용하는 방식으로 접근할 수 있습니다.
+                            </p>
+                            <p>
+                                또한, 코딩 스타일과 개발 환경에 따라 선호하는 단위가 다를 수 있으므로, 
+                                개발자들이 자신만의 규칙과 패턴을 만들어 사용하는 것이 바람직합니다. 
+                                이러한 경험과 시행착오를 통해 더욱 효율적인 개발 방법을 발견할 수 있고, 
+                                결국 개발자 개개인의 창의성과 능력이 발휘될 수 있는 분야입니다. 
+                                따라서, <i>맘대로 사용하고 실험하며 개인적인 코딩 스타일을 만들어가는 것이 중요하고 유익합니다.</i>
+                            </p>
+                        </div>   
+<pre><code class="language-css">#intro {
+    height: 100vh;
+}
+.intro__inner {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: start;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.intro__title {
+    font-size: 10vw;
+    text-transform: uppercase;
+    text-indent: -0.5vw;
+    line-height: 1;
+    letter-spacing: -0.3vw;
+    font-weight: 800;
+    white-space: nowrap;
+}
+.intro__lines {
+    width: 100%;
+}
+.intro__lines .line {
+    display: block;
+    width: 100%;
+    background-color: var(--black);
+    margin-bottom: 0.5vw;
+}
+.intro__lines .line:nth-child(1) {
+    height: 1px;
+}
+.intro__lines .line:nth-child(2) {
+    height: 2px;
+}
+.intro__lines .line:nth-child(3) {
+    height: 5px;
+}
+.intro__lines .line:nth-child(4) {
+    height: 9px;
+}
+.intro__lines .line:nth-child(5) {
+    height: 13px;
+}
+.intro__lines .line:nth-child(6) {
+    height: 17px;
+}
+.intro__lines .line:nth-child(7) {
+    height: 25px;
+}
+.intro__lines.bottom .line {
+    display: block;
+    width: 100%;
+    background-color: var(--black);
+    margin-top: 0.5vw;
+    display: none;
+}
+.intro__lines.bottom .line:nth-child(1) {
+    height: 25px;
+}
+.intro__lines.bottom .line:nth-child(2) {
+    height: 17px;
+}
+.intro__lines.bottom .line:nth-child(3) {
+    height: 13px;
+}
+.intro__lines.bottom .line:nth-child(4) {
+    height: 9px;
+}
+.intro__lines.bottom .line:nth-child(5) {
+    height: 5px;
+}
+.intro__lines.bottom .line:nth-child(6) {
+    height: 2px;
+}
+.intro__lines.bottom .line:nth-child(7) {
+    height: 1px;
+}
+.intro__text {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--black);
+    position: relative;
+}
+.intro__text .text {
+    color: var(--white);
+    text-align: center;
+    font-size: 3vw;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline;
+    position: relative;
+    z-index: 100;
+    font-weight: 700;
+    letter-spacing: -0.1vw;
+    transition: all 0.3s;
+    cursor: all-scroll;
+}
+.intro__text .img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    overflow: hidden;
+    filter: grayscale(100%);
+    transition: all 0.3s;
+}
+.intro__text .text:hover {
+    opacity: 0;
+}
+.intro__text .text:hover + .img {
+    filter: grayscale(0);
+}
+</code></pre>
+                    </div>
+
+                    <div id="a43" class="mt80">
+                        <h4>4.3 반응형 작업하기</h4>
+                        <p>
+                            반응형 작업시 라인을 밑에도 생기게 작업했습니다. 
+                            피시 화면과 다르게 작업하여 모바일 느낌이 나도록 작업했습니다.
+                        </p>
+<pre><code class="language-css">@media (max-width: 800px) {
+    .intro__title {
+        display: none;
+    }
+    .intro__lines.bottom .line {
+        display: block;
+    }
+    .intro__inner {
+        justify-content: center;
+    }
+    .intro__text .text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro__text {
+        padding: 0 16px;
+    }
+    .intro__text .img {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+</code></pre>
+                    </div>
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            깃에 올려주고 마무리 하겠습니다.
+                        </p>
+<pre><code class="language-js">git add .
+git commit -m "🧐 인트로 완료"
+git push -u origin main
+</code></pre>
+                        <p>
+                            포트폴리오 페이지의 핵심이 되는 인트로 페이지를 완성하였습니다. 
+                            라인과 글씨의 조화를 통해 메인다운 느낌을 주도록 하였습니다. 
+                            모바일 화면에서도 이질감을 덜 주기 위하여 디자인을 변경하고, 
+                            모든 디바이스에서 잘 나올 수 있도록 작업하였습니다. 
+                        </p>
+                        <p>
+                            인트로 페이지는 웹사이트의 첫 인상을 결정짓는 매우 중요한 부분입니다. 
+                            여러분들도 포트폴리오 만들때 폰트에 많이 신경을 쓰시면 좀 더 열정적인 포폴을 연출할 수 있습니다. 
+                            여러분들의 노력과 열정이 담긴 멋진 인트로 페이지를 만들어 보면서, 
+                            더욱 향상된 개발자로 성장해나가길 기대합니다! 수고하셨습니다! 😊🚀
+                        </p>
+                    </div>
+
+                    <hr>
+                    <!-- 광고영역 -->
+                    <!-- //광고영역 -->
+
+                    <div class="right_refer">
+                        <a href="https://port2023-html.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-html" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <ul class="refer5">
+                        <li><a href="main01.html">1. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 셋팅하기</a></li>
+                        <li><a href="main02.html">2. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 레이아웃</a></li>
+                        <li><a href="main03.html">3. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 헤더 영역</a></li>
+                        <li><a href="main04.html">4. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 인트로 영역</a></li>
+                        <li><a href="main05.html">5. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 스킬 영역</a></li>
+                        <li><a href="main06.html">6. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 사이트 영역</a></li>
+                        <li><a href="main07.html">7. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 포트폴리오 영역</a></li>
+                        <li><a href="main08.html">8. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 연락처 영역</a></li>
+                        <li><a href="main09.html">9. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 푸터 영역</a></li>
+                        <li><a href="main10.html">10. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 마무리</a></li>
+                    </ul>
+                   
+                    
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+
