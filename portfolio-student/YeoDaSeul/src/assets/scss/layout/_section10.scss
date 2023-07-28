@@ -1,0 +1,888 @@
+#section10 {
+  width: 100%;
+  height: 800vh;
+  overflow: hidden;
+  position: relative;
+  .sec10__bgImg {
+    position: absolute;
+    left: 15vw;
+    top: 0;
+    z-index: 1;
+    img {
+      width:70vw;
+    }
+  }
+  .sec10__cont {
+    position: relative;
+    z-index: 10;
+    .card {
+      position: relative;
+      padding: 10% 3%;
+      display: flex;
+      .bgCard {
+          width: 30vw;
+          height: 40vw;
+          background-color: #fff;
+          border-radius: 30px;
+          box-shadow: 10px 20px 10px rgba(58, 16, 42, 0.479);
+          transform: rotate(-10deg);
+          margin-top: 5%;
+      }
+
+      &:nth-child(even){
+          justify-content: right;
+          .clickMe {
+              position: absolute;
+              left: 22vw;
+              top: 15vw;
+              display: block;
+              p {
+                  font-family: 'PPMonumentExtended-Black';
+                  color: #fff;
+                  font-size: 4vw;
+              }
+              img {
+                  left: 15vw;
+                  transform: rotate(-40deg) scale(1);
+                  top: 5vw;
+                  width: 12vw;
+              }
+          }
+      }
+      &:nth-child(even) .bgCard {
+          transform: rotate(10deg);
+      }
+      
+      .clickMe {
+          position: absolute;
+          left: 45vw;
+          top: 15vw;
+          display: block;
+          p {
+              font-family: 'PPMonumentExtended-Black';
+              color: #fff;
+              font-size: 4vw;
+          }
+          img {
+              position: absolute;
+              top: 5vw;
+              width: 12vw;
+              transform: scaleX(-1) rotate(-40deg);
+              
+          }
+      }
+
+
+      .cardCont {
+          cursor: pointer;
+          position: absolute;
+          z-index: 3;
+          width: 30vw;
+          height: 40vw;
+          border-radius: 30px;
+
+          // 카드 앞면
+          .cardFront {
+              overflow: hidden;
+              background-color: #fff;
+              border-radius: 30px;
+              box-shadow: 10px 10px 20px 10px rgba(58, 16, 42, 0.479);
+              // display: none;
+              .front__inner {
+                  padding: 7%;
+                  .front__head {
+                      img {
+                          width: 26vw;
+                      }
+                  }
+                  .front__body {
+                      margin-top: 15%;
+                      h2 {
+                          font-size: 3vw;
+                          position: relative;
+                          z-index: 10;
+                      }
+                      .number {
+                          position: absolute;
+                          right: 1vw;
+                          bottom: 0vw;
+                          font-family: 'PPAgrandir-WideLight';
+                          color: #a17ff63c;
+                          font-size: 10vw;
+                          z-index: 1
+                      }
+                  }
+              }
+          }
+
+          // 카드 뒷면
+          .cardBack {
+              background-color: #fff;
+              border-radius: 30px;
+              box-shadow: 10px 10px 20px 10px rgba(58, 16, 42, 0.479);
+              .back__inner {
+                  padding: 10% 7%;
+                  h2 {
+                      color: #C56BB4;
+                      font-size: 3vw;
+                      text-align: center;
+                  }
+                  .desc {
+                      margin-top: 10%;
+                      font-size: 1.15vw;
+                      line-height: 1.5;
+                  }
+                  .link {
+                      position: absolute;
+                      left: 6vw;
+                      bottom: 5vw;
+                      span {
+                          font-family: 'Gowun Dodum';
+                          font-size: 1.15vw;
+                          border: 1px solid #000;
+                          padding: 3% 2vw;
+                          margin-right: 1vw;
+                          transition: all 0.3s;
+                          &:hover {
+                                  background-color: #C56BB4;
+                                  color: #fff;
+                                  transition: all 0.3s;
+                          }
+                      }
+                  }
+              }
+          }
+
+          .cardFront, .cardBack {
+              backface-visibility: hidden;
+              position:absolute;
+              width:30vw;
+              height:40vw;
+          }
+      }
+      .cardCont.odd {
+          margin-left: 5%;
+      }
+      .cardCont.even {
+          margin-right: 5%;
+          .cardFront {
+              .front__inner {
+                  padding: 7%;
+                  .front__body {
+                      margin-top: 15%;
+                      h2 {
+                          position: relative;
+                          font-size: 3vw;
+                          text-align: right;
+                          z-index: 10;
+                      }
+                      .number {
+                          position: absolute;
+                          left: 1vw;
+                          bottom: 0vw;
+                          font-family: 'PPAgrandir-WideLight';
+                          color: #ffc9645a;
+                          font-size: 10vw;
+                          z-index: 1
+                      }
+                  }
+              }
+          }
+          .cardBack {
+              .back__inner {
+                  padding: 10% 7%;
+                  h2 {
+                      color: #F8E02C;
+                      font-size: 3vw;
+                      text-align: center;
+                  }
+                  .desc {
+                      margin-top: 10%;
+                      font-size: 1.15vw;
+                      line-height: 1.5;
+                  }
+                  .link {
+                      position: absolute;
+                      left: 6vw;
+                      bottom: 5vw;
+                      span {
+
+                          font-family: 'Gowun Dodum';
+                          font-size: 1.15vw;
+                          border: 1px solid #000;
+                          padding: 3% 2vw;
+                          margin-right: 1vw;
+                          transition: all 0.3s;
+                          &:hover {
+                              background-color: #F8E02C;
+                              color: #000;
+                              transition: all 0.3s;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+    }
+  }
+  
+}
+@media(max-width: 1600px){
+  #section10 {
+    width: 100%;
+    height: 900vh;
+    overflow: hidden;
+    position: relative;
+    .sec10__bgImg {
+      position: absolute;
+      left: 15vw;
+      top: 0;
+      z-index: 1;
+      img {
+        width:70vw;
+      }
+    }
+    .sec10__cont {
+      position: relative;
+      z-index: 10;
+      .card {
+        position: relative;
+        padding: 10% 3%;
+        display: flex;
+        .bgCard {
+            width: 30vw;
+            height: 40vw;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 10px 20px 10px rgba(58, 16, 42, 0.479);
+            transform: rotate(-10deg);
+            margin-top: 5%;
+        }
+  
+        &:nth-child(even){
+            justify-content: right;
+            .clickMe {
+                position: absolute;
+                left: 22vw;
+                top: 15vw;
+                display: block;
+                p {
+                    font-family: 'PPMonumentExtended-Black';
+                    color: #fff;
+                    font-size: 4vw;
+                }
+                img {
+                    left: 15vw;
+                    transform: rotate(-40deg) scale(1);
+                    top: 5vw;
+                    width: 12vw;
+                }
+            }
+        }
+        &:nth-child(even) .bgCard {
+            transform: rotate(10deg);
+        }
+        
+        .clickMe {
+            position: absolute;
+            left: 45vw;
+            top: 15vw;
+            display: block;
+            p {
+                font-family: 'PPMonumentExtended-Black';
+                color: #fff;
+                font-size: 4vw;
+            }
+            img {
+                position: absolute;
+                top: 5vw;
+                width: 12vw;
+                transform: scaleX(-1) rotate(-40deg);
+                
+            }
+        }
+  
+  
+        .cardCont {
+            cursor: pointer;
+            position: absolute;
+            z-index: 3;
+            width: 30vw;
+            height: 40vw;
+            border-radius: 30px;
+  
+            // 카드 앞면
+            .cardFront {
+                overflow: hidden;
+                background-color: #fff;
+                border-radius: 30px;
+                box-shadow: 10px 10px 20px 10px rgba(58, 16, 42, 0.479);
+                // display: none;
+                .front__inner {
+                    padding: 7%;
+                    .front__head {
+                        img {
+                            width: 26vw;
+                        }
+                    }
+                    .front__body {
+                        margin-top: 15%;
+                        h2 {
+                            font-size: 3vw;
+                            position: relative;
+                            z-index: 10;
+                        }
+                        .number {
+                            position: absolute;
+                            right: 1vw;
+                            bottom: 0vw;
+                            font-family: 'PPAgrandir-WideLight';
+                            color: #a17ff63c;
+                            font-size: 10vw;
+                            z-index: 1
+                        }
+                    }
+                }
+            }
+  
+            // 카드 뒷면
+            .cardBack {
+                background-color: #fff;
+                border-radius: 30px;
+                box-shadow: 10px 10px 20px 10px rgba(58, 16, 42, 0.479);
+                .back__inner {
+                    padding: 10% 7%;
+                    h2 {
+                        color: #C56BB4;
+                        font-size: 3vw;
+                        text-align: center;
+                    }
+                    .desc {
+                        margin-top: 10%;
+                        font-size: 1.15vw;
+                        line-height: 1.5;
+                    }
+                    .link {
+                        position: absolute;
+                        left: 6vw;
+                        bottom: 5vw;
+                        span {
+                            font-family: 'Gowun Dodum';
+                            font-size: 1.15vw;
+                            border: 1px solid #000;
+                            padding: 3% 2vw;
+                            margin-right: 1vw;
+                            transition: all 0.3s;
+                            &:hover {
+                                    background-color: #C56BB4;
+                                    color: #fff;
+                                    transition: all 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+  
+            .cardFront, .cardBack {
+                backface-visibility: hidden;
+                position:absolute;
+                width:30vw;
+                height:40vw;
+            }
+        }
+        .cardCont.odd {
+            margin-left: 5%;
+        }
+        .cardCont.even {
+            margin-right: 5%;
+            .cardFront {
+                .front__inner {
+                    padding: 7%;
+                    .front__body {
+                        margin-top: 15%;
+                        h2 {
+                            position: relative;
+                            font-size: 3vw;
+                            text-align: right;
+                            z-index: 10;
+                        }
+                        .number {
+                            position: absolute;
+                            left: 1vw;
+                            bottom: 0vw;
+                            font-family: 'PPAgrandir-WideLight';
+                            color: #ffc9645a;
+                            font-size: 10vw;
+                            z-index: 1
+                        }
+                    }
+                }
+            }
+            .cardBack {
+                .back__inner {
+                    padding: 10% 7%;
+                    h2 {
+                        color: #F8E02C;
+                        font-size: 3vw;
+                        text-align: center;
+                    }
+                    .desc {
+                        margin-top: 10%;
+                        font-size: 1.15vw;
+                        line-height: 1.5;
+                    }
+                    .link {
+                        position: absolute;
+                        left: 6vw;
+                        bottom: 5vw;
+                        span {
+  
+                            font-family: 'Gowun Dodum';
+                            font-size: 1.15vw;
+                            border: 1px solid #000;
+                            padding: 3% 2vw;
+                            margin-right: 1vw;
+                            transition: all 0.3s;
+                            &:hover {
+                                background-color: #F8E02C;
+                                color: #000;
+                                transition: all 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+      }
+    }
+   
+  }
+}
+@media(max-width: 1200px){
+  #section10 {
+    width: 100%;
+    height: 500vh;
+    overflow: hidden;
+    position: relative;
+    .sec10__bgImg {
+      position: absolute;
+      left: 15vw;
+      top: 0;
+      z-index: 1;
+      img {
+        width:70vw;
+      }
+    }
+    .sec10__cont {
+      position: relative;
+      z-index: 10;
+      .card {
+        position: relative;
+        padding: 10% 3%;
+        display: flex;
+        .bgCard {
+            width: 30vw;
+            height: 40vw;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 10px 20px 10px rgba(58, 16, 42, 0.479);
+            transform: rotate(-10deg);
+            margin-top: 5%;
+        }
+  
+        &:nth-child(even){
+            justify-content: right;
+            .clickMe {
+                position: absolute;
+                left: 22vw;
+                top: 15vw;
+                display: block;
+                p {
+                    font-family: 'PPMonumentExtended-Black';
+                    color: #fff;
+                    font-size: 4vw;
+                }
+                img {
+                    left: 15vw;
+                    transform: rotate(-40deg) scale(1);
+                    top: 5vw;
+                    width: 12vw;
+                }
+            }
+        }
+        &:nth-child(even) .bgCard {
+            transform: rotate(10deg);
+        }
+        
+        .clickMe {
+            position: absolute;
+            left: 45vw;
+            top: 15vw;
+            display: block;
+            p {
+                font-family: 'PPMonumentExtended-Black';
+                color: #fff;
+                font-size: 4vw;
+            }
+            img {
+                position: absolute;
+                top: 5vw;
+                width: 12vw;
+                transform: scaleX(-1) rotate(-40deg);
+                
+            }
+        }
+  
+  
+        .cardCont {
+            cursor: pointer;
+            position: absolute;
+            z-index: 3;
+            width: 30vw;
+            height: 40vw;
+            border-radius: 30px;
+  
+            // 카드 앞면
+            .cardFront {
+                overflow: hidden;
+                background-color: #fff;
+                border-radius: 30px;
+                box-shadow: 10px 10px 20px 10px rgba(58, 16, 42, 0.479);
+                // display: none;
+                .front__inner {
+                    padding: 7%;
+                    .front__head {
+                        img {
+                            width: 26vw;
+                        }
+                    }
+                    .front__body {
+                        margin-top: 15%;
+                        h2 {
+                            font-size: 3vw;
+                            position: relative;
+                            z-index: 10;
+                        }
+                        .number {
+                            position: absolute;
+                            right: 1vw;
+                            bottom: 0vw;
+                            font-family: 'PPAgrandir-WideLight';
+                            color: #a17ff63c;
+                            font-size: 10vw;
+                            z-index: 1
+                        }
+                    }
+                }
+            }
+  
+            // 카드 뒷면
+            .cardBack {
+                background-color: #fff;
+                border-radius: 30px;
+                box-shadow: 10px 10px 20px 10px rgba(58, 16, 42, 0.479);
+                .back__inner {
+                    padding: 10% 7%;
+                    h2 {
+                        color: #C56BB4;
+                        font-size: 3vw;
+                        text-align: center;
+                    }
+                    .desc {
+                        margin-top: 10%;
+                        font-size: 1.15vw;
+                        line-height: 1.5;
+                    }
+                    .link {
+                        position: absolute;
+                        left: 6vw;
+                        bottom: 5vw;
+                        span {
+                            font-family: 'Gowun Dodum';
+                            font-size: 1.15vw;
+                            border: 1px solid #000;
+                            padding: 3% 2vw;
+                            margin-right: 1vw;
+                            transition: all 0.3s;
+                            &:hover {
+                                    background-color: #C56BB4;
+                                    color: #fff;
+                                    transition: all 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+  
+            .cardFront, .cardBack {
+                backface-visibility: hidden;
+                position:absolute;
+                width:30vw;
+                height:40vw;
+            }
+        }
+        .cardCont.odd {
+            margin-left: 5%;
+        }
+        .cardCont.even {
+            margin-right: 5%;
+            .cardFront {
+                .front__inner {
+                    padding: 7%;
+                    .front__body {
+                        margin-top: 15%;
+                        h2 {
+                            position: relative;
+                            font-size: 3vw;
+                            text-align: right;
+                            z-index: 10;
+                        }
+                        .number {
+                            position: absolute;
+                            left: 1vw;
+                            bottom: 0vw;
+                            font-family: 'PPAgrandir-WideLight';
+                            color: #ffc9645a;
+                            font-size: 10vw;
+                            z-index: 1
+                        }
+                    }
+                }
+            }
+            .cardBack {
+                .back__inner {
+                    padding: 10% 7%;
+                    h2 {
+                        color: #F8E02C;
+                        font-size: 3vw;
+                        text-align: center;
+                    }
+                    .desc {
+                        margin-top: 10%;
+                        font-size: 1.15vw;
+                        line-height: 1.5;
+                    }
+                    .link {
+                        position: absolute;
+                        left: 6vw;
+                        bottom: 5vw;
+                        span {
+  
+                            font-family: 'Gowun Dodum';
+                            font-size: 1.15vw;
+                            border: 1px solid #000;
+                            padding: 3% 2vw;
+                            margin-right: 1vw;
+                            transition: all 0.3s;
+                            &:hover {
+                                background-color: #F8E02C;
+                                color: #000;
+                                transition: all 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 800px){
+  #section10 {
+    width: 100%;
+    height: 550vh;
+    overflow: hidden;
+    position: relative;
+    .sec10__bgImg {
+      position: absolute;
+      left: 15vw;
+      top: 0;
+      z-index: 1;
+      img {
+        width:70vw;
+        height: 380vh;
+      }
+    }
+    .sec10__cont {
+      position: relative;
+      z-index: 10;
+      .card {
+        position: relative;
+        padding: 45% 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .bgCard {
+          display: none;
+        }
+  
+        &:nth-child(even){
+          justify-content: right;
+          .clickMe {
+            display: none;
+          }
+        }
+        &:nth-child(even) .bgCard {
+            display: none;
+        }
+        
+        .clickMe {
+          display: none;
+        }
+  
+  
+        .cardCont {
+          cursor: pointer;
+          position: absolute;
+          z-index: 3;
+          width: 30vw;
+          height: 40vw;
+          border-radius: 30px;
+
+          // 카드 앞면
+          .cardFront {
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px 10px rgba(58, 16, 42, 0.479);
+            // display: none;
+            .front__inner {
+              padding: 7%;
+              .front__head {
+                img {
+                  width: 43vw;
+                }
+              }
+              .front__body {
+                margin-top: 15%;
+                h2 {
+                    font-size: 5.5vw;
+                    position: relative;
+                    z-index: 10;
+                }
+                .number {
+                    position: absolute;
+                    right: 1vw;
+                    bottom: 0vw;
+                    font-family: 'PPAgrandir-WideLight';
+                    color: #a17ff63c;
+                    font-size: 20vw;
+                    z-index: 1
+                }
+              }
+            }
+          }
+
+          // 카드 뒷면
+          .cardBack {
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px 10px rgba(58, 16, 42, 0.479);
+            .back__inner {
+              padding: 10% 7%;
+              h2 {
+                color: #C56BB4;
+                font-size: 5vw;
+                text-align: center;
+              }
+              .desc {
+                margin-top: 10%;
+                font-size: 2.5vw;
+                line-height: 1.5;
+              }
+              .link {
+                position: absolute;
+                left: 9vw;
+                bottom: 5vw;
+                span {
+                  font-family: 'Gowun Dodum';
+                  font-size: 2.5vw;
+                  border: 1px solid #000;
+                  padding: 3% 2vw;
+                  margin-right: 1vw;
+                  transition: all 0.3s;
+                  &:hover {
+                    background-color: #C56BB4;
+                    color: #fff;
+                    transition: all 0.3s;
+                  }
+                }
+              }
+            }
+          }
+
+          .cardFront, .cardBack {
+            backface-visibility: hidden;
+            position:absolute;
+            width:50vw;
+            height:70vw;
+          }
+        }
+        .cardCont.odd {
+          margin-right: 23%;
+        }
+        .cardCont.even {
+            margin-right: 40%;
+            .cardFront {
+              .front__inner {
+                padding: 7%;
+                .front__body {
+                  margin-top: 15%;
+                  h2 {
+                    position: relative;
+                    font-size: 5.5vw;
+                    text-align: right;
+                    z-index: 10;
+                  }
+                  .number {
+                    position: absolute;
+                    left: 1vw;
+                    bottom: 0vw;
+                    font-family: 'PPAgrandir-WideLight';
+                    color: #ffc9645a;
+                    font-size: 20vw;
+                    z-index: 1
+                  }
+                }
+              }
+            }
+            .cardBack {
+              .back__inner {
+                padding: 10% 7%;
+                h2 {
+                  color: #F8E02C;
+                  font-size: 5vw;
+                  text-align: center;
+                }
+                .desc {
+                  margin-top: 10%;
+                  font-size: 2.5vw;
+                  line-height: 1.5;
+                }
+                .link {
+                  position: absolute;
+                  left: 9vw;
+                  bottom: 5vw;
+                  span {
+                    font-family: 'Gowun Dodum';
+                    font-size: 2.5vw;
+                    border: 1px solid #000;
+                    padding: 3% 2vw;
+                    margin-right: 1vw;
+                    transition: all 0.3s;
+                    &:hover {
+                      background-color: #F8E02C;
+                      color: #000;
+                      transition: all 0.3s;
+                    }
+                  }
+                }
+              }
+            }
+        }
+      }
+    }
+    
+  }
+}

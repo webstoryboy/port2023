@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+
+.fredoka {
+    font-family: 'Fredoka';
+}
+
+.gowun {
+    font-family: 'Gowun Dodum';
+}
+
+.OKChan {
+    font-family: 'OKChan';
+}
+.pp {
+    font-family: 'PPMonumentExtended-Black';
+}
+.road {
+    font-family: 'Road_Rage';
+}
+.OKDdung {
+    font-family: 'OKDdung';
+}
+@font-face {
+    font-family: 'OKChan';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/ok/OKChan.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/ok/OKChan.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/ok/OKChan.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/ok/OKChan.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/ok/OKChan.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'PPMonumentExtended-Black';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/fonts/PPMonumentExtended-Black.woff') format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'PPAgrandir-WideLight';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/fonts/PPAgrandir-WideLight.woff') format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Road_Rage';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/fonts/Road_Rage.woff') format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: "OKDdung";
+    font-weight: normal;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/ok/OKDdung.eot");
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/ok/OKDdung.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/ok/OKDdung.woff2") format("woff2"),
+      url("https://cdn.jsdelivr.net/gh/webfontworld/ok/OKDdung.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/ok/OKDdung.ttf") format("truetype");
+    font-display: swap;
+  }

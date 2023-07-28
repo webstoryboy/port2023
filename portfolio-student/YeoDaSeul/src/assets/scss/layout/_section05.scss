@@ -1,0 +1,220 @@
+#section05{
+    position: relative;
+    overflow-x: hidden;
+    height: 200vh;
+    width: 100%;
+
+    .sec05__bgImg {
+      img {
+        position: absolute;
+        left: 0;
+        top: -10vw;
+        z-index: 1000;
+      }
+    }
+    .sec05__sticker {
+      padding: 15vw 0;
+      position: relative;
+      z-index: 1000;
+      .s1 {
+        position: absolute;
+        top: 10vw;
+        left: -10vw;
+        width: 25vw;
+      }
+      .s2 {
+        position: absolute;
+        top: 5vw;
+        left: 30vw;
+        width: 20vw;
+      }
+      .s3 {
+        position: absolute;
+        top: 10vw;
+        right: -10vw;
+        width: 32vw;
+      }
+    }
+    .sec05__textAni {
+      font-family: 'PPMonumentExtended-Black';
+
+      .skills__text {
+        white-space: nowrap;
+        display: flex;
+        .infinite__item {
+          font-weight: 800;
+          text-transform: uppercase;
+          font-size: 4.5vw;
+          white-space: nowrap;
+          padding-right: 1vw;
+          transform: translateX(-1000px);
+        }
+      }
+      .skills__text02 {
+        white-space: nowrap;
+        display: flex;
+        .infinite__item {
+          font-weight: 800;
+          text-transform: uppercase;
+          font-size: 4.5vw;
+          white-space: nowrap;
+          padding-right: 1vw;
+          transform: translateX(-1000px);
+        }
+      }
+  }
+}
+
+@media(max-width: 1600px){
+  #section05{
+    position: relative;
+    overflow-x: hidden;
+    height: 200vh;
+    width: 100%;
+
+    .sec05__bgImg {
+      img {
+        position: absolute;
+        left: 0;
+        top: -10vw;
+        z-index: 1000;
+      }
+    }
+    .sec05__sticker {
+      padding: 15vw 0;
+      position: relative;
+      z-index: 1000;
+      .s1 {
+        position: absolute;
+        top: 15vw;
+        left: -10vw;
+        width: 25vw;
+      }
+      .s2 {
+        position: absolute;
+        top:12vw;
+        left: 30vw;
+        width: 20vw;
+      }
+      .s3 {
+        position: absolute;
+        top: 13vw;
+        right: -10vw;
+        width: 32vw;
+      }
+    }
+    .sec05__textAni {
+      font-family: 'PPMonumentExtended-Black';
+
+      .skills__text {
+        white-space: nowrap;
+        display: flex;
+        .infinite__item {
+          font-weight: 800;
+          text-transform: uppercase;
+          font-size: 4.5vw;
+          white-space: nowrap;
+          padding-right: 1vw;
+          transform: translateX(-1000px);
+        }
+      }
+      .skills__text02 {
+        white-space: nowrap;
+        display: flex;
+        .infinite__item {
+          font-weight: 800;
+          text-transform: uppercase;
+          font-size: 4.5vw;
+          white-space: nowrap;
+          padding-right: 1vw;
+          transform: translateX(-1000px);
+        }
+      }
+      
+    }
+  }
+}
+@media(max-width: 800px){
+  #section05{
+    position: relative;
+    overflow-x: hidden;
+    height: 80vh;
+    width: 100%;
+
+    .sec05__bgImg {
+      img {
+        position: absolute;
+        left: 0;
+        top: -10vw;
+        z-index: 1000;
+        width: 100vw;
+      }
+    }
+    .sec05__sticker {
+      padding: 15vw 0;
+      position: relative;
+      z-index: 1000;
+      .s1 {
+        position: absolute;
+        top: 1vw;
+        left: -10vw;
+        width: 25vw;
+      }
+      .s2 {
+        position: absolute;
+        top: 15vw;
+        left: 30vw;
+        width: 20vw;
+      }
+      .s3 {
+        position: absolute;
+        top: 10vw;
+        right: -10vw;
+        width: 32vw;
+      }
+    }
+    .sec05__textAni {
+      font-family: 'PPMonumentExtended-Black';
+
+      .skills__text {
+        white-space: nowrap;
+        display: flex;
+        animation: textLoop 10s linear infinite;
+        
+        .infinite__item {
+          font-weight: 800;
+          text-transform: uppercase;
+          font-size: 4.5vw;
+          white-space: nowrap;
+          padding-right: 1vw;
+          transform: translateX(-1000px);
+        }
+      }
+      .skills__text02 {
+        white-space: nowrap;
+        display: flex;
+        animation: textLoop2 10s linear infinite;
+      }
+    }
+  }
+}
+@keyframes textLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes textLoop2 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
