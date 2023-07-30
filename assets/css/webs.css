@@ -1347,6 +1347,24 @@ code.hljs {
 .index > ul > li > ul {
   padding-left: 20px;
 }
+.index2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.index2 > h3 {
+  width: 100%;
+}
+.index2 > div {
+  width: 25%;
+}
+.index2 > div > ul > li {
+  padding-left: 15px;
+}
+.index2 > div > ul > li > ul {
+  padding-left: 20px;
+}
+
+
 .sampleImg {
   border: 5px solid #ccc;
   margin-bottom: 20px;
@@ -1360,7 +1378,7 @@ code.hljs {
   z-index: -10;
 }
 .sampleBasic p {
-  margin-bottom: 0;
+  margin-bottom: 3px;
 }
 .sampleFolder {
   background-color: #282936;

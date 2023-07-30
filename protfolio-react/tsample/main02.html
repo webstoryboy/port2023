@@ -1,528 +1,565 @@
+
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>포트폴리오 사이트 만들기 프로젝트 🥳</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 사이트 만들기 프로젝트 😜</title>
 
-    <link rel="stylesheet" href="../../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../../assets/css/reset.css" />
-    <link rel="stylesheet" href="../../assets/css/webs.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
 
-    <link rel="shortcut icon" href="../../assets/ico/favicon.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="../../assets/ico/favicon.png"
-    />
-    <link rel="icon" href="../../assets/ico/favicon.png" />
-    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48" />
-    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64" />
-    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128" />
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
 
-    <meta name="acthor" content="웹스토리보이" />
-    <meta
-      name="description"
-      content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다."
-    />
-    <meta
-      name="keywords"
-      content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy"
-    />
-    <meta name="robots" content="all" />
-  </head>
-  <body>
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
     <div id="skip">
-      <a href="#header">헤더 영역 바로가기</a>
-      <a href="#main">컨텐츠 영역 바로가기</a>
-      <a href="#footer">푸터 영역 바로가기</a>
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
     </div>
     <!-- //skip -->
 
     <header id="header">
-      <div class="header__inner">
-        <div class="left">
-          <a href="../index.html" class="star"
-            ><span class="ir">메인으로</span></a
-          >
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>
-          <a href="../index.html">WEBSTORYBOY</a>
-        </h1>
-        <div class="right">
-          <ul>
-            <li><a href="#">검색</a></li>
-          </ul>
-        </div>
-        <nav class="nav">
-          <ul>
-            <li>
-              <a href="#"><span>레퍼런스</span></a>
-            </li>
-            <li>
-              <a href="#"><span>튜토리얼</span></a>
-            </li>
-            <li>
-              <a href="#"><span>게시판</span></a>
-            </li>
-            <li>
-              <a href="#"><span>블로그</span></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
     </header>
     <!-- //header -->
 
     <main id="main">
-      <section id="blog" class="nanumSquareNeo">
-        <div class="blog__title">
-          <span class="cate">Tutorial/portfolio</span>
-          <h1 class="title">리액트 포트폴리오 사이트 만들기</h1>
-          <div class="meta">
-            <span class="author">by @webs</span>
-            <span class="date">2023. 08. 01.</span>
-          </div>
-        </div>
-        <div class="blog__inner container">
-          <div id="youtube" class="blog__contents__intro">
-            <div class="desc">
-              <div class="left">
-                <span class="num">02</span>
-                <div class="title">
-                  포트폴리오 사이트 만들기 : 리액트 : 라우팅 및 컴퍼넌트 설정
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/portfolio</span>
+                <h1 class="title">포트폴리오 사이트 만들기 - React</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
                 </div>
-                <span class="difficulty">난이도 <span>중간</span></span>
-              </div>
-              <div class="right">
-                <div class="btn">소스 다운로드</div>
-                <a
-                  href="https://port2023-react.netlify.app"
-                  target="_blank"
-                  class="sampleBtn"
-                  >완성 화면</a
-                >
-                <a
-                  href="https://github.com/webstoryboy/port2023-react"
-                  target="_blank"
-                  class="sampleBtn"
-                  >완성 코드</a
-                >
-                <a
-                  href="https://www.youtube.com/webstoryboy"
-                  target="_blank"
-                  class="sampleBtn"
-                  >유튜브</a
-                >
-              </div>
             </div>
-          </div>
-          <!-- //blog__contents__intro -->
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">02</span>
+                            <div class="title">포트폴리오 사이트 만들기 : 라우팅 및 컴퍼넌트</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-react.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-react" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
 
-          <div class="blog__contents tutorial">
-            <h2>소개</h2>
-            <p>
-              안녕하세요! 웹스토리보이입니다. 이번에는 리액트 작업을 위한
-              기본적인 설정을 시작하겠습니다. 페이지가 하나밖엔 없지만 페이지
-              셋팅을 할 거구요! 컴퍼넌트를 설정하여 페이지 구성을 할 것입니다.
-              또한 CSS를 SCSS로 변경하여 사용하도록 해보겠습니다. 처음하시는
-              분들은 많이 어색할 수 있지만, 몇 번 따라하다보면 익숙해지고
-              쉬어집니다. 그럼 시작해 보겠습니다.🧐
-            </p>
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                      안녕하세요! 웹스토리보이입니다. 
+                      이번에는 리액트 작업을 위한 기본적인 설정을 시작하겠습니다. 
+                      페이지가 하나밖엔 없지만 페이지 셋팅을 할 거구요! 
+                      컴퍼넌트를 설정하여 페이지 구성을 할 것입니다. 
+                      또한 CSS를 SCSS로 변경하여 사용하도록 해보겠습니다. 
+                      처음하시는 분들은 많이 어색할 수 있지만, 몇 번 따라하다보면 익숙해지고 쉬어집니다. 그럼 시작해 보겠습니다.🧐
+                    </p>
 
-            <!-- 광고 영역 -->
-            <!-- //광고 영역 -->
+                    <h3>인덱스</h3>
+                    <div class="index2">
+                        <div>
+                            <h4>1. 포트폴리오 사이트 만들기 : VITE SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. vite 설치하기</li>
+                                        <li>1_2. vite 폴더 정리하기</li>
+                                        <li>1_3. gsap/lenis 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 레이아웃
+                                    <ul>
+                                        <li>2.1 레이아웃 구조 만들기</li>
+                                        <li>2.2 메인 레이아웃 구조 만들기</li>
+                                        <li>2.3 CSS 셋팅하기</li>
+                                        <li>2.4 JavaScript 셋팅하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 헤더 영역
+                                    <ul>
+                                        <li>3.1 헤더 구조 잡기</li>
+                                        <li>3.2 헤더 디자인 설정</li>
+                                        <li>3.3 반응형 작업하기</li>
+                                        <li>3.4 메뉴 자바스크립트 설정</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 영역
+                                    <ul>
+                                        <li>4.1 인트로 구조 잡기</li>
+                                        <li>4.2 인트로 디자인 설정</li>
+                                        <li>4.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 스킬 영역
+                                    <ul>
+                                        <li>5.1 스킬 구조 잡기</li>
+                                        <li>5.2 스킬 디자인 설정</li>
+                                        <li>5.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이트 영역
+                                    <ul>
+                                        <li>6.1 사이트 구조 잡기</li>
+                                        <li>6.2 사이트 디자인 설정</li>
+                                        <li>6.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>7. 포트폴리오 영역
+                                    <ul>
+                                        <li>7.1 사이트 구조 잡기</li>
+                                        <li>7.2 사이트 디자인 설정</li>
+                                        <li>7.3 반응형 작업하기</li>
+                                        <li>7.4 스크립트 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>8. 연락처 영역
+                                    <ul>
+                                        <li>8.1 연락처 구조 잡기</li>
+                                        <li>8.2 연락처 디자인 설정</li>
+                                        <li>8.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>9. 푸터 영역
+                                    <ul>
+                                        <li>9.1 푸터 구조 잡기</li>
+                                        <li>9.2 푸터 디자인 설정</li>
+                                        <li>9.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>10. 마무리
+                                    <ul>
+                                        <li>10.1 스무스 효과주기</li>
+                                        <li>10.2 링크 연결하기</li>
+                                        <li>10.3 netlify에 배포하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>2. 포트폴리오 사이트 만들기 : REACT SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. React 설치하기</li>
+                                        <li>1_2. React 폴더 정리하기</li>
+                                        <li>1_3. 라이브러리 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 라우팅 및 컴퍼넌트
+                                    <ul>
+                                        <li>2_1. 라우팅 설정하기</li>
+                                        <li>2_2. 컴퍼넌트 설정하기</li>
+                                        <li>2_3. SCSS 설정하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //index -->
 
-            <div class="index">
-              <h3>인덱스</h3>
-              <h4>1. 포트폴리오 사이트 만들기 : REACT SITE</h4>
-              <ul>
-                <li>
-                  1. 셋팅하기
-                  <ul>
-                    <li>1_1. React 알아보기</li>
-                    <li>1_2. React 설치하기</li>
-                    <li>1_3. React 폴더 정리하기</li>
-                    <li>1_4. 라이브러리 설치하기</li>
-                    <li>1_5. git 셋팅하기</li>
-                  </ul>
-                </li>
-                <li>
-                  2. 라우팅 및 컴퍼넌트
-                  <ul>
-                    <li>2_1. 라우팅 설정하기</li>
-                    <li>2_2. 컴퍼넌트 설정하기</li>
-                    <li>2_3. SCSS 설정하기</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+                    <h3>2. 라우팅 및 컴퍼넌트</h3>
+                    <div id="b21">
+                        <h4>2_1. 라우팅 설정하기</h4>
+                        <p>
+                            <code>react-router-dom</code>은 React.js 기반의 웹 애플리케이션에서 라우팅(주소)을 관리하기 위한 라이브러리입니다. 
+                            리액트는 한 페이지로 구성된 SPA이기 때문에 주소 페이지가 없습니다. 
+                            해당 컴퍼넌트만 불러오기 때문에 이때 페이지가 있는 것처럼 해주기 위해서 리액트용 주소를 처리해주는 방식으로 이 라이브러리를 사용합니다.
+                        </p>
 
-            <h3>2. 라우팅 및 컴퍼넌트</h3>
-            <div id="a21">
-              <h4 data-num="01">2_1. 라우팅 설정하기</h4>
-              <p>
-                react-router-dom은 React.js 기반의 웹 애플리케이션에서 라우팅을
-                관리하기 위한 라이브러리입니다. React 애플리케이션을 단일 페이지
-                애플리케이션(SPA)으로 만들 때, 여러 페이지 간의 전환과 URL 기반
-                라우팅을 구현하는 데 사용됩니다. 이를 통해 사용자가 웹
-                애플리케이션을 사용하는 동안 새로운 페이지를 로드하지 않고도
-                다른 컴포넌트를 렌더링하여 사용자 경험을 향상시킬 수 있습니다.
-                즉 리액트는 한페이지로 구성된 SPA이기 때문에 주소 페이지가
-                없습니다. 해당 컴퍼넌트만 불러오기 때문에 이때 페이지가 있는
-                것처럼 해주기 위해서 리액트용 주소를 처리해주는 방식입니다.
-              </p>
-              <p><code>App.js</code> 페이지를 다음과 같이 작업합니다.</p>
-              <pre><code class="language-js">import React from "react";
+                        <div class="sampleBasic">
+                            <p>
+                                <i>SPA(단일 페이지 애플리케이션)는 웹 애플리케이션의 설계 패턴 중 하나로</i>, 
+                                하나의 HTML 페이지를 기반으로 동적으로 콘텐츠를 변경하여 사용자와 상호작용하는 웹 애플리케이션을 구현하는 방법입니다. 
+                                SPA는 전통적인 다중 페이지 애플리케이션(MPA, Multi-Page Application)과는 다른 웹 애플리케이션 구조를 가지고 있습니다.
+                            </p>
+                            <ul class="list">
+                                <li>단일 페이지 : SPA는 하나의 HTML 페이지로 시작하고, 페이지 전환 시에도 새로운 HTML을 서버로부터 불러오지 않습니다. 대신, 필요한 데이터와 콘텐츠를 비동기적으로 불러와서 동적으로 페이지를 업데이트합니다. 이로 인해 초기 로딩 속도가 빨라지고, 사용자 경험이 향상됩니다.
+                                <li>동적 로딩 : SPA는 초기에 필요한 모든 리소스(스크립트, 스타일시트 등)를 불러온 후, 필요한 데이터만을 요청하여 동적으로 페이지를 구성합니다. 이는 필요한 리소스를 미리 불러와 사용자가 다른 페이지로 이동할 때 렌더링 지연을 최소화하고, 부분적인 페이지 업데이트를 수행할 수 있게 합니다.
+                                <li>클라이언트 측 렌더링 : SPA는 주로 클라이언트 측에서 페이지를 렌더링합니다. 서버 측에서는 데이터만을 전달하며, 클라이언트에서 페이지의 구조와 렌더링을 처리합니다. 이로 인해 서버 부하가 줄어들고, 클라이언트 측에서 유연한 UI를 구성할 수 있습니다.
+                                <li>상태 관리 : SPA는 클라이언트 측에서 상태를 관리하기 쉽습니다. 주로 리액트와 같은 라이브러리나 프레임워크를 사용하여 상태 관리를 용이하게 처리할 수 있습니다.
+                                <li>빠른 UIUX : SPA는 페이지 전환 시 화면이 깜박이지 않고, 새로운 페이지가 빠르게 로딩되는 등 사용자 경험이 좋습니다.
+                                <li>루트 URL : SPA는 주로 루트 URL 하나로 시작하며, 이후 URL의 경로에 따라 다른 컴포넌트나 뷰를 렌더링합니다. 이로 인해 라우팅(Routing)이 중요한 역할을 합니다.
+                                <li>모바일 앱과 유사한 경험: SPA는 네이티브 모바일 앱과 유사한 사용자 경험을 제공할 수 있습니다. 이를 통해 웹 앱을 모바일 환경에서도 자연스럽게 사용할 수 있습니다.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p>
+                            <code>App.js</code> 는 다음과 같이 설정합니다.
+<pre><code class="language-js">import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import HomeView from "./views/HomeView";
 
 const App = () =&gt; {
     return (
-        &lt;BrowserRouter&gt;
-            &lt;Routes&gt;
-                &lt;Route path="/" element={&lt;HomeView /&gt;} /&gt;
-            &lt;/Routes&gt;
-        &lt;/BrowserRouter&gt;
+    &lt;BrowserRouter&gt;
+        &lt;Routes&gt;
+            &lt;Route path="/" element={&lt;HomeView /&gt;} /&gt;
+        &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
     );
 };
 
 export default App;
 </code></pre>
-              <ul class="list">
-                <li>
-                  <i>import React from "react";</i> : React를 불러오는 구문으로,
-                  React 컴포넌트를 사용하기 위해 필요합니다.
-                </li>
+                        </p>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>import React from "react"; : 이 부분은 리액트를 사용하기 위해 리액트 라이브러리를 불러오고 있습니다. 이렇게 하면 리액트의 기능과 컴포넌트를 사용할 수 있습니다.</li>
+                                <li>import { BrowserRouter, Route, Routes } from "react-router-dom"; : 이 부분은 react-router-dom에서 필요한 모듈들을 불러오고 있습니다. BrowserRouter, Route, Routes는 라우팅을 구현하는 데 필요한 컴포넌트들입니다.</li>
+                                <li>import HomeView from "./views/HomeView"; : HomeView라는 이름으로, "./views/HomeView" 경로에 있는 컴포넌트를 불러오고 있습니다. 이는 HomeView 컴포넌트가 해당 경로에 있는 파일에서 정의되어 있다는 것을 의미합니다.</li>
+                                <li>const App = () => { ... }; : 이는 화살표 함수(arrow function)로 정의된 함수형 컴포넌트입니다. 이 함수형 컴포넌트는 리액트 애플리케이션의 최상위 컴포넌트로, 라우팅 설정을 포함하고 있습니다.</li>
+                                <li>&lt;BrowserRouter&gt; : BrowserRouter는 라우팅을 적용하기 위한 컴포넌트입니다. 애플리케이션의 최상위 컴포넌트인 App 컴포넌트를 감싸서 라우팅 설정을 적용할 수 있도록 합니다.</li>
+                                <li>&lt;Routes&gt; : Routes는 라우트들을 정의하는 컨테이너입니다. 각각의 &lt;Route&gt; 컴포넌트들을 &lt;Routes&gt; 컴포넌트 내부에 정의하여 경로와 컴포넌트를 매핑합니다.</li>
+                                <li>&lt;Route path="/" element={&lt;HomeView /&gt;} /&gt; : 이 부분은 "/" 경로에 해당하는 &lt;HomeView&gt; 컴포넌트를 렌더링하도록 설정하는 것입니다. path 속성에는 경로를 지정하고, element 속성에는 해당 경로에 렌더링할 컴포넌트를 JSX 문법으로 전달합니다.</li>
+                            </ul>
+                        </div>
+                        <div class="sampleBasic">
+                            <p>
+                                리액트(React) <i>컴포넌트는 리액트 라이브러리를 통해 사용자 인터페이스(UI)를 구성하는 데 사용되는 기본적인 블록</i>입니다. 
+                                컴포넌트는 UI를 작은 재사용 가능한 조각들로 나누어 관리함으로써 코드의 가독성과 유지보수성을 높이는 데 도움을 줍니다. 
+                                리액트 컴포넌트는 클래스형 컴포넌트와 함수형 컴포넌트 두 가지 형태로 정의할 수 있습니다.
+                            </p>
+                            <ul class="list">
+                                <li>클래스형 컴포넌트 (Class Components) : ES6 클래스로 정의, React.Component를 상속, render() 메서드를 사용하여 UI를 정의, 내부적으로 상태(state)를 가질 수 있음, 생명주기 메서드를 활용하여 컴포넌트의 생성, 갱신, 소멸과 관련된 작업을 처리할 수 있습니다.</li>
+                                <li>함수형 컴포넌트 (Functional Components) : JavaScript 함수로 정의, 리액트 16.8 버전 이후에는 훅(hook) 기능이 도입되면서 주로 함수형 컴포넌트가 사용, return 문을 사용하여 UI를 정의, 내부적으로 상태(state)를 가질 수 있음, 상태(state)를 직접 사용할 수 없지만, useState와 같은 훅을 사용하여 상태를 관리할 수 있음, 생명주기 메서드를 사용하지 않습니다.</li>
+                            </ul>
+                            <p>
+                                리액트 컴포넌트는 작은 부분들로 쪼개어 사용되며, 이들을 조합하여 복잡한 UI를 구성합니다. 
+                                컴포넌트 간에는 데이터를 전달하기 위해 <code>props</code>를 사용하며, 자체적인 상태를 관리하기 위해 <code>state</code>를 사용합니다. 
+                                <code>props</code>는 부모 컴포넌트에서 자식 컴포넌트로 전달되는 읽기 전용 데이터이고, <code>state</code>는 컴포넌트 내부에서 변경 가능한 데이터입니다.
+                            </p>
+                            <p>
+                                리액트의 가장 큰 장점 중 하나는 <i>컴포넌트들을 재사용 가능하게 구성하여 개발 생산성을 높일 수 있다는 점</i>입니다. 
+                                또한, 가상 DOM(Virtual DOM)을 활용하여 성능을 최적화하고, 상태 변경에 따른 효율적인 렌더링을 수행합니다.
+                            </p>
+                            <p>
+                                <i>컴포넌트는 리액트 애플리케이션의 기본 단위이며, UI를 구성하는 주된 방법 중 하나</i>입니다. 
+                                적절하게 컴포넌트를 설계하고 조합함으로써 모던하고 재사용 가능한 UI를 개발할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
 
-                <li>
-                  <i
-                    >import { BrowserRouter, Route, Routes } from
-                    "react-router-dom";</i
-                  >
-                  : react-router-dom에서 BrowserRouter, Route, Routes 컴포넌트를
-                  불러옵니다. 이들은 React 애플리케이션에서 라우팅을 설정하는 데
-                  사용됩니다.
-                </li>
+                    <div id="b22" class="mt80">
+                        <h4>2_2. 컴퍼넌트 설정하기</h4>
+                        <p>
+                            페이지가 한페이지이지만 섹션은 7개 구성되어 있기 때문에 컴퍼넌트로 작업을 할 것입니다. 
+                            구조는 7개이지만 크게 봤을 때에는 3단 header, main, foooter로 이루어져 있기 때문에
+                            <code>main</code> 컴퍼넌트를 만들겠습니다. 
+                            여기에 스킵메뉴를 설정하기 위해 추가적으로 컴퍼넌트를 만들었습니다. 
+                        </p>
+                        <p>
+                            폴더를 구조를 보면 페이지는 <code>views</code>에 표현이 되고,
+                            컴퍼넌트는 섹션을 구분화시키고 것이고, assets은 기존과 같이 이미지와 css파일을 설정합니다. 
+                            constants는 데이터를 보관하는 부분이고 utils은 기타 자바스크립트 파일입니다. 
+                            이렇게 세분화하고 시작하겟습니다. 
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">src
+                                    <ul>
+                                        <li class="icon1">assets</li>
+                                        <li class="icon1">components
+                                            <ul>
+                                                <li class="icon2 m0">Contacts.jsx</li>
+                                                <li class="icon2 m0">Footer.jsx</li>
+                                                <li class="icon2 m0">Header.jsx</li>
+                                                <li class="icon2 m0">Intro.jsx</li>
+                                                <li class="icon2 m0">Main.jsx</li>
+                                                <li class="icon2 m0">Port.jsx</li>
+                                                <li class="icon2 m0">Site.jsx</li>
+                                                <li class="icon2 m0">Skill.jsx</li>
+                                                <li class="icon2 m0">Skip.jsx</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1">constants</li>
+                                        <li class="icon1">utils</li>
+                                        <li class="icon1">views
+                                            <ul>
+                                                <li class="icon2 m0">HomeView.jsx</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
 
-                <li>
-                  <i>import HomeView from "./views/HomeView";</i> : HomeView
-                  컴포넌트를 불러옵니다. 이 컴포넌트는 루트 경로("/")에 해당하는
-                  페이지를 표시하는 데 사용됩니다.
-                </li>
-
-                <li>
-                  <i>const App = () => { ... }</i> : App 함수형 컴포넌트를
-                  정의합니다. 이 컴포넌트는 React 애플리케이션의 진입점 역할을
-                  합니다.
-                </li>
-
-                <li>
-                  <i>&lt;BrowserRouter&gt;</i> : 라우팅을 설정하기 위한 최상위
-                  컴포넌트인 BrowserRouter를 사용합니다. 이 컴포넌트는 웹
-                  브라우저의 주소 표시줄과 상태를 동기화하여 현재 URL과 일치하는
-                  컴포넌트를 렌더링합니다.
-                </li>
-
-                <li>
-                  <i>&lt;Routes&gt;</i> : 라우트들을 정의하는 컨테이너인
-                  Routes를 사용합니다. 이 컴포넌트는 다양한 &lt;/Route&gt;
-                  컴포넌트들을 포함하고 있습니다.
-                </li>
-
-                <li>
-                  <i>&lt;Route path="/" element={&lt;HomeView /&gt;} /&gt;</i> :
-                  / 경로에 해당하는 페이지를 HomeView 컴포넌트로 매핑합니다. 즉,
-                  루트 경로(/)에 접속하면 HomeView 컴포넌트가 렌더링되도록
-                  설정합니다.
-                </li>
-                <li>
-                  <i>export default App;</i> : App 컴포넌트를 외부에서 사용할 수
-                  있도록 내보내기(exports)합니다.
-                </li>
-              </ul>
-            </div>
-
-            <div id="a22" class="mt80">
-              <h4 data-num="02">2_2. 컴퍼넌트 설정하기</h4>
-              <p>
-                <i
-                  >리액트(React) 컴포넌트는 사용자 인터페이스를 구축하기 위한
-                  재사용 가능한 블록입니다.</i
-                >
-                컴포넌트 기반 접근 방식을 통해 UI를 작성하며, 각 컴포넌트는
-                독립적으로 동작하고 상태(state)와 프로퍼티(props)를 가집니다.
-                이러한 컴포넌트들을 조합하여 인터페이스를 구현할 수 있습니다.
-                컴포넌트를 사용하는 이유는 다음과 같습니다.
-              </p>
-              <ul class="list">
-                <li>
-                  리액트 컴포넌트는 작고 독립적이며, 다른 컴포넌트와 조합하여
-                  재사용이 가능합니다. 이로 인해 유지보수가 쉽고 효율적이며,
-                  코드의 재사용성과 가독성이 높아집니다.
-                </li>
-                <li>
-                  리액트 애플리케이션은 여러 개의 컴포넌트들로 이루어져 있으며,
-                  각 컴포넌트는 기능에 따라 분리됩니다. 이렇게 분리된
-                  컴포넌트들은 상위 컴포넌트로부터 상태나 데이터를 전달받고,
-                  하위 컴포넌트로 데이터를 전달합니다.
-                </li>
-                <li>
-                  리액트는 가상 DOM을 사용하여 성능을 최적화합니다. 가상 DOM은
-                  실제 DOM과 동기화되어 있으며, 상태 변화에 따른 최소한의
-                  변경만을 적용하여 DOM 조작을 최소화합니다.
-                </li>
-                <li>
-                  리액트 컴포넌트를 사용하여 웹 애플리케이션을 개발하면, UI의
-                  재사용성과 유지보수성이 증가하며, 코드의 구조와 가독성이
-                  향상됩니다
-                </li>
-              </ul>
-              <p>
-                다음과 같이 폴더 정리를 한번 더 해보겠습니다. scss 파일과 img
-                파일은 assets에 정리를 하고, <code>components</code>,
-                <code>utils</code>, <code>views</code> 폴더를 만들겠습니다.
-              </p>
-              <div class="folder">
-                <ul>
-                  <li class="icon1">node_modules</li>
-                  <li class="icon1">
-                    public
-                    <ul>
-                      <li class="icon1">assets</li>
-                      <li class="icon2 m0">index.html</li>
-                    </ul>
-                  </li>
-                  <li class="icon1">
-                    src
-                    <ul>
-                      <li class="icon1 m0">assets</li>
-                      <li class="icon1 m0">components</li>
-                      <li class="icon1 m0">utils</li>
-                      <li class="icon1 m0">views</li>
-                      <li class="icon2 m0">App.js</li>
-                      <li class="icon2 m0">index.js</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-              <p>
-                <code>components</code> 폴더에는 다음과 같이 구성합니다. 이전
-                사이트에서 구성해던 섹션이 컴퍼넌트화 된거라고 생각하면 됩니다.
-              </p>
-              <div class="folder">
-                <ul>
-                  <li class="icon1">
-                    components
-                    <ul>
-                      <li class="icon2 m0">ContactSection.jsx</li>
-                      <li class="icon2 m0">FooterSection.jsx</li>
-                      <li class="icon2 m0">HeaderSection.jsx</li>
-                      <li class="icon2 m0">IntroSection.jsx</li>
-                      <li class="icon2 m0">PortSection.jsx</li>
-                      <li class="icon2 m0">SiteSection.jsx</li>
-                      <li class="icon2 m0">SkillSection.jsx</li>
-                      <li class="icon2 m0">Skip.jsx</li>
-                      <li class="icon2 m0">Main.jsx</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <p>
-                7개의 섹션에는 다음과 같이 기본 코딩을 합니다. 리액트에서
-                익명함수를 설정하고 모든 함수는 export 시켜줘야 합니다. 나머지
-                6개 섹션도 컴포넌트 이름을 함수 이름과 동일하게 작업해야 합니다.
-                또한 컴퍼넌트를 만들 때 첫 글자는 대문자입니다.
-                <code>ContactSection.jsx</code>
-                <code>FooterSection.jsx</code>
-                <code>HeaderSection.jsx</code>
-                <code>IntroSection.jsx</code>
-                <code>PortSection.jsx</code>
-                <code>SiteSection.jsx</code>
-                <code>SkillSection.jsx</code>
-              </p>
-              <pre><code class="language-js">import React from "react";
-
-const ContactSection = () =&gt; {
-    return &lt;div&gt;ContactSection&lt;/div&gt;;
-};
-
-export default ContactSection;
-</code></pre>
-              <p><code>skip.jsx</code> 메뉴는 다음과 같이 작성합니다.</p>
-              <pre><code class="language-js">import React from "react";
-
-const Skip = () =&gt; {
-    return (
-        &lt;div id="skip"&gt;
-            &lt;a href="#header"&gt;헤더 영역&lt;/a&gt;
-            &lt;a href="#intro"&gt;소개 영역&lt;/a&gt;
-            &lt;a href="#skill"&gt;스킬 영역&lt;/a&gt;
-            &lt;a href="#site"&gt;사이트 영역&lt;/a&gt;
-            &lt;a href="#port"&gt;포트폴리오 영역&lt;/a&gt;
-            &lt;a href="#contact"&gt;연락처 영역&lt;/a&gt;
-            &lt;a href="#footer"&gt;푸터 영역&lt;/a&gt;
-        &lt;/div&gt;
-    );
-};
-
-export default Skip; 
-</code></pre>
-              <p>
-                <code>main.jsx</code>에는 다음과 같이 작업해줍니다. 단순히 main
-                태그로 감싸주기 위함입니다. Main 컴포넌트를 사용하면 해당
-                컴포넌트로 감싼 내용을 main 태그로 래핑하여 페이지의 주요
-                콘텐츠를 표시할 수 있습니다. 이와 같이 컴포넌트를 정의하고
-                내보내는 방식으로, 리액트에서 재사용 가능한 컴포넌트를 만들 수
-                있습니다.
-              </p>
-              <pre><code class="language-js">import React from "react";
-
-const Main = ({ children }) =&gt; {
-    return (
-        &lt;main id="main" role="main"&gt;
-            {children}
-        &lt;/main&gt;
-    );
-};
-
-export default Main;</code></pre>
-
-              <p>
-                <code>view</code> 폴더는 페이지라고 생각하면 됩니다. 현재
-                메인페이지밖에 없어서 하나만 구성했습니다.
-                <code>utils</code> 폴더는 작업할 때 설정하겠습니다.
-              </p>
-              <div class="folder">
-                <ul>
-                  <li class="icon1">
-                    view
-                    <ul>
-                      <li class="icon2 m0">HoveView.jsx</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <p>
-                <code>HomeView.jsx</code> 페이지는 메인 페이지이기 때문에 다음과
-                같이 설정합니다. 각 컨퍼넌트를 불러오고 한 페이지를 구성하는
-                역할을 합니다.
-              </p>
-              <pre><code class="language-js">import React from "react";
-import HeaderSection from "../components/HeaderSection";
-import IntroSection from "../components/IntroSection";
-import SkillSection from "../components/SkillSection";
-import SiteSection from "../components/SiteSection";
-import PortSection from "../components/PortSection";
-import ContactSection from "../components/ContactSection";
-import FooterSection from "../components/FooterSection";
+                        <p>
+                            페이지를 나타내는 <code>HomeView.jsx</code>에는 다음과 같이 작성하겠습니다.
+                            이렇게 HomeView 컴포넌트를 사용하여 홈 페이지의 UI를 구성합니다. 
+                            각 컴포넌트들은 기능별로 분리되어 관리되므로, 코드의 가독성과 유지보수성이 좋아집니다. 
+                            이렇게 구성된 컴포넌트들을 조합하여 리액트 애플리케이션을 구축할 수 있습니다.
+                        </p>
+<pre><code class="language-js">import React from "react";
+import Header from "../components/Header";
+import Intro from "../components/Intro";
+import Skill from "../components/Skill";
+import Site from "../components/Site";
+import Port from "../components/Port";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import Skip from "../components/Skip";
 import Main from "../components/Main";
 
 const HomeView = () =&gt; {
     return (
-        &lt;&gt;
-            &lt;Skip /&gt;
-            &lt;HeaderSection /&gt;
-            &lt;Main&gt;
-                &lt;IntroSection /&gt;
-                &lt;SkillSection /&gt;
-                &lt;SiteSection /&gt;
-                &lt;PortSection /&gt;
-                &lt;ContactSection /&gt;
-            &lt;/Main&gt;
-            &lt;FooterSection /&gt;
-        &lt;/&gt;
+    &lt;&gt;
+        &lt;Skip /&gt;
+        &lt;Header /&gt;
+        &lt;Main&gt;
+            &lt;Intro /&gt;
+            &lt;Skill /&gt;
+            &lt;Site /&gt;
+            &lt;Port /&gt;
+            &lt;Contact /&gt;
+        &lt;/Main&gt;
+        &lt;Footer /&gt;
+    &lt;/&gt;
     );
 };
-export default HomeView;</code></pre>
-            </div>
 
-            <div id="a23" class="mt80">
-              <h4 data-num="03">2_3. SCSS 설정하기</h4>
-              <p>
-                SCSS(Scalable and Cascading Style Sheets)는 CSS의 확장 문법으로,
-                <i
-                  >더 유연하고 가독성이 높은 CSS 코드를 작성할 수 있도록 해주는
-                  스타일 시트 언어입니다</i
-                >. SCSS는 Sass라는 CSS 전처리기의 하위 집합으로서, Sass의 기능과
-                문법을 확장한 것입니다. SCSS는 .scss 확장자를 가지며, 일반적인
-                CSS와 거의 동일한 문법을 사용할 수 있습니다. SCSS의 주요 특징과
-                기능은 다음과 같습니다.
-              </p>
-              <ul class="list">
-                <li>
-                  변수(Variables) : SCSS는 $ 기호를 사용하여 변수를 선언하고
-                  사용할 수 있습니다. 이를 통해 색상, 폰트, 여백 등의 값들을
-                  변수로 정의하여 재사용할 수 있습니다.
-                </li>
-                <li>
-                  중첩(Nesting) : SCSS는 CSS 규칙을 중첩해서 작성할 수 있습니다.
-                  이를 통해 HTML의 계층 구조에 맞게 CSS를 구조화하고 가독성을
-                  높일 수 있습니다.
-                </li>
-                <li>
-                  믹스인(Mixins) : SCSS는 @mixin 디렉티브를 사용하여 재사용
-                  가능한 스타일 선언을 만들 수 있습니다. 이는 코드의 반복을
-                  줄이고 유지보수를 편리하게 만듭니다.
-                </li>
-                <li>
-                  상속(Extend) : SCSS는 @extend 디렉티브를 사용하여 하나의
-                  스타일 선언을 다른 스타일에 상속할 수 있습니다. 이는 중복
-                  코드를 최소화하고 스타일을 모듈화하는데 도움을 줍니다.
-                </li>
-                <li>
-                  연산(Operations) : SCSS는 숫자, 색상 등의 값을 연산할 수 있는
-                  기능을 제공합니다. 이로 인해 코드 작성이 더욱 편리해집니다.
-                </li>
-                <li>
-                  조건문(Conditional statements)과 반복문(Loops) : SCSS는 @if,
-                  @else, @for, @each 등의 제어문을 사용하여 동적으로 스타일을
-                  생성할 수 있습니다.
-                </li>
-              </ul>
-              <p>
-                기존 CSS 셋팅과 동일하게 작업할 것이며, SCSS에서는 mixin.scss를
-                추가하겠습니다.
-              </p>
-              <div class="folder">
-                <ul>
-                  <li class="icon1">
-                    css
-                    <ul>
-                      <li class="icon1">
-                        section
-                        <ul>
-                          <li class="icon2 m0">header.scss</li>
-                          <li class="icon2 m0">intro.scss</li>
-                          <li class="icon2 m0">skill.scss</li>
-                          <li class="icon2 m0">site.scss</li>
-                          <li class="icon2 m0">port.scss</li>
-                          <li class="icon2 m0">contact.scss</li>
-                          <li class="icon2 m0">footer.scss</li>
-                        </ul>
-                      </li>
-                      <li class="icon1">
-                        setting
-                        <ul>
-                          <li class="icon2 m0">fonts.scss</li>
-                          <li class="icon2 m0">vars.scss</li>
-                          <li class="icon2 m0">reset.scss</li>
-                          <li class="icon2 m0">mixin.scss</li>
-                        </ul>
-                      </li>
-                      <li class="icon2 m0">style.scss</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <p>
-                <code>style.scss</code>는 이렇게 코딩을 하겠습니다. 기존
-                style.css와 동일합니다.
-              </p>
-              <pre><code class="language-scss">@charset "UTF-8";
+export default HomeView;</code></pre>
+
+                        <p>
+                            <code>Contacts.js</code> 파일에는 다음과 같이 기본 소스만 넣어주겠습니다. 
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Contact = () =&gt; {
+    return &lt;div&gt;Contact&lt;/div&gt;;
+};
+
+export default Contact;
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>import React from "react"; : 이 부분은 리액트를 사용하기 위해 리액트 라이브러리를 불러오고 있습니다. 이렇게 하면 리액트의 기능과 컴포넌트를 사용할 수 있습니다.
+                                <li>const Contact = () => { ... }; : Contact라는 이름의 상수(const)를 선언하고, 이는 화살표 함수(arrow function)로 정의된 함수형 컴포넌트입니다. Contact 컴포넌트는 간단한 화면 요소를 렌더링하는 데 사용됩니다.
+                                <li>return &lt;div&gtContact&lt;/div&gt;; : 함수의 본문(body)에 JSX 문법을 사용하여 UI를 정의하고 있습니다. JSX 문법은 리액트에서 UI를 구성하는 간편한 방법으로, HTML과 유사한 형태로 작성할 수 있습니다. 이 경우 &lt;div&gt; 태그로 감싸진 "Contact" 텍스트를 반환하여 화면에 렌더링합니다. 
+                                <li>export default Contact; : Contact 컴포넌트를 외부에서 재사용할 수 있도록 내보내기(export) 설정을 하고 있습니다. 이렇게 다른 파일에서 해당 컴포넌트를 불러와 사용할 수 있습니다.</li>
+                            </ul>
+                        </div>
+
+                        <div class="sampleBasic">
+                            <p>
+                                JSX(JavaScript XML)는 리액트(React)에서 사용되는 자바스크립트의 확장 문법으로, 
+                                UI를 구성하기 위해 XML과 유사한 형태로 작성하는 것을 가능하게 해주는 문법입니다. 
+                                JSX를 사용하면 리액트 컴포넌트의 렌더링을 더 직관적이고 가독성 좋게 작성할 수 있습니다. 
+                                JSX는 리액트 컴포넌트의 중요한 특징 중 하나이며, 일반 자바스크립트 코드와 결합하여 사용됩니다.
+                                즉 자바스크립트와 HTML을 같이 편하게 쓰기 위한 방법입니다.
+                            </p>
+                            <ul class="list">
+                                <li>XML과 유사한 문법 : JSX는 XML과 비슷한 형태를 가지고 있으며, 태그와 속성 등을 사용하여 컴포넌트의 UI를 정의합니다.</li>
+                                <li>JSX 표현식 : JSX 내부에서는 중괄호({})를 사용하여 자바스크립트 표현식을 삽입할 수 있습니다. 이를 통해 동적으로 데이터를 렌더링하거나 연산을 수행할 수 있습니다.</li>
+                                <li>컴포넌트 사용 : JSX에서는 컴포넌트를 직접 사용할 수 있습니다. 다른 컴포넌트를 JSX 내에서 태그 형태로 작성하여 해당 컴포넌트를 렌더링할 수 있습니다.</li>
+                                <li>속성(Props) 사용 : JSX에서는 HTML 태그에 속성(attribute)을 추가하여 컴포넌트에 데이터를 전달할 수 있습니다. 이러한 데이터는 컴포넌트 내에서 props 객체로 접근할 수 있습니다.</li>
+                                <li>닫는 태그 : 일반적인 HTML 태그와 마찬가지로 닫는 태그를 사용하여 요소를 닫아야 합니다. 하지만 빈 요소를 표현할 때는 XML에서 사용하는 방식과 같이 /를 사용하여 닫는 태그를 생략할 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <p>
+                            <code>Footer.js</code> 파일에는 다음과 같이 기본 소스만 넣어주겠습니다. 
+                            주의 할 점이 컴퍼넌트를 만들 때에는 첫 글자를 대문자로 설정하는 것이 규칙입니다.
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Footer = () =&gt; {
+    return &lt;div&gt;Footer&lt;/div&gt;;
+};
+
+export default Footer;
+</code></pre>
+                        <p>
+                            <code>Header.js</code> 파일에는 다음과 같이 기본 소스만 넣어주겠습니다. 
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Header = () =&gt; {
+    return &lt;div&gt;Header&lt;/div&gt;;
+};
+
+export default Header;
+</code></pre>
+                        <p>
+                            <code>Intro.js</code> 파일에는 다음과 같이 기본 소스만 넣어주겠습니다. 
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Intro = () =&gt; {
+    return &lt;div&gt;Intro&lt;/div&gt;;
+};
+
+export default Intro;
+</code></pre>
+                        <p>
+                            <code>Port.js</code> 파일에는 다음과 같이 기본 소스만 넣어주겠습니다. 
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Port = () =&gt; {
+    return &lt;div&gt;Port&lt;/div&gt;;
+};
+
+export default Port;
+</code></pre>
+                        <p>
+                            <code>Site.js</code> 파일에는 다음과 같이 기본 소스만 넣어주겠습니다. 
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Site = () =&gt; {
+    return &lt;div&gt;Site&lt;/div&gt;;
+};
+
+export default Site;
+</code></pre>
+                        <p>
+                            <code>Skill.js</code> 파일에는 다음과 같이 기본 소스만 넣어주겠습니다. 
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Skill = () =&gt; {
+    return &lt;div&gt;Skill&lt;/div&gt;;
+};
+
+export default Skill;
+</code></pre>
+                        <p>
+                            <code>Skip.js</code> 파일에는 다음과 같이 기본 소스만 넣어주겠습니다. 
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Skip = () =&gt; {
+    return &lt;div&gt;Skip&lt;/div&gt;;
+};
+
+export default Skip;
+</code></pre>
+                        <p>
+                            <code>Main.js</code> 파일에는 다음과 같이 작성합니다.
+                            Main 컴포넌트는 자식 컴포넌트들을 렌더링하는 래퍼(wrapper) 역할을 합니다. 
+                            Main 컴포넌트는 children prop을 받아와서 해당 자식 컴포넌트들을 &lt;main&gt; 태그로 감싸서 반환합니다. 
+                            이로써 Main 컴포넌트를 사용하면 여러 개의 컴포넌트를 하나의 &lt;main&gt; 영역으로 묶을 수 있습니다.
+                            여기까지 잘 따라 했다면 브라우저에는 각 섹션의 이름이 나오면 성공한 것입니다.
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Main = ({ children }) =&gt; {
+    return (
+    &lt;main id="main" role="main"&gt;
+        {children}
+    &lt;/main&gt;
+    );
+};
+
+export default Main;
+</code></pre>
+                    </div>
+
+                    <div id="b23" class="mt80">
+                        <h4>2_3. SCSS 설정하기</h4>
+                        <div class="sampleBasic">
+                            <p>
+                                SCSS는 CSS의 확장 버전으로, CSS의 단점을 보완하고 개발자들에게 더 <i>편리한 방식으로 스타일 시트를 작성할 수 있도록 도와주는 전처리기(preprocessor)</i>입니다. 
+                                SCSS는 SASS(Syntactically Awesome Style Sheets)라는 원래 버전의 상위집합(superset)으로, CSS와 거의 동일한 구문을 사용하면서도 추가적인 기능과 유용한 문법을 제공합니다. 
+                            </p>
+                            <ul class="list">
+                                <li>변수(Variables) : $ 기호를 사용하여 변수를 선언하고, 변수를 이용하여 스타일 값을 저장하고 재사용할 수 있습니다. 이를 통해 스타일 시트를 유지보수하기 쉽고 가독성이 좋게 만들어 줍니다.</li>
+                                <li>중첩(Nesting) : 스타일 규칙을 중첩하여 DOM 트리의 구조와 일치시킬 수 있습니다. 이를 통해 스타일 시트의 계층 구조를 명확하게 표현할 수 있으며, 중첩된 요소의 스타일을 쉽게 찾고 수정할 수 있습니다.</li>
+                                <li>믹스인(Mixins) : @mixin 지시어를 사용하여 스타일 규칙들을 정의하고, @include 지시어를 사용하여 해당 믹스인을 적용할 수 있습니다. 이를 통해 스타일 규칙들을 재사용하거나, 여러 스타일 규칙들을 하나로 묶어 사용할 수 있습니다.</li>
+                                <li>상속(Inheritance) : @extend 지시어를 사용하여 스타일 규칙을 상속할 수 있습니다. 이를 통해 비슷한 스타일들을 그룹화하고 관리할 수 있으며, 스타일 코드의 중복을 줄일 수 있습니다.</li>
+                                <li>조건문(Conditionals) : @if, @else if, @else와 같은 조건문을 사용하여 특정 조건에 따라 다른 스타일 규칙을 적용할 수 있습니다.</li>
+                                <li>반복문(Loops) : @for, @each, @while과 같은 반복문을 사용하여 스타일 규칙을 반복해서 생성할 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <p>
+                            이번에는 scss를 이용해서 작업해보겠습니다. 
+                            <code>npm run sass</code>를 통해서 scss가 설치되어 있어야 합니다. 
+                            SCSS 파일을 설정하고 import 할 때 앞에 언더스코어(_)를 붙이는 것은 SCSS의 부분 파일 또는 믹스인 파일을 의미합니다. 
+                            이렇게 파일명 앞에 언더스코어를 붙이면 해당 파일이 부분 파일이거나 믹스인 파일임을 나타내고, 이러한 파일들은 별도로 컴파일되지 않고 다른 SCSS 파일에서 @import 지시어를 통해 불러올 수 있습니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">assets
+                                    <ul>
+                                        <li class="icon1">img</li>
+                                        <li class="icon1">scss
+                                            <ul>
+                                                <li class="icon1">section
+                                                    <ul>
+                                                        <li class="icon2 m0">_contact.scss</li>
+                                                        <li class="icon2 m0">_footer.scss</li>
+                                                        <li class="icon2 m0">_header.scss</li>
+                                                        <li class="icon2 m0">_intro.scss</li>
+                                                        <li class="icon2 m0">_port.scss</li>
+                                                        <li class="icon2 m0">_site.scss</li>
+                                                        <li class="icon2 m0">_skill.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon1">setting
+                                                    <ul>
+                                                        <li class="icon2 m0">_fonts.scss</li>
+                                                        <li class="icon2 m0">_mixin.scss</li>
+                                                        <li class="icon2 m0">_reset.scss</li>
+                                                        <li class="icon2 m0">_vars.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon2 m0">style.css</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            <code>style.scss</code>을 설정하겠습니다.
+                            CSS 코드를 모듈화하고, 스타일 시트를 섹션별로 분리하여 관리할 수 있습니다. 
+                            이는 코드의 가독성과 유지보수성을 높여주는 방법입니다
+                        </p>
+<pre><code class="language-scss">@charset "UTF-8";
 
 // setting
 @import "setting/fonts";
@@ -539,8 +576,11 @@ export default HomeView;</code></pre>
 @import "section/contact";
 @import "section/footer";
 </code></pre>
-              <p><code>fonts.scss</code>를 셋팅하겠습니다.</p>
-              <pre><code class="language-scss">@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+                        <p>
+                            <code>_fonts.scss</code>을 설정하겠습니다.
+                        </p>
+<pre><code class="language-scss">@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css");
 @import url("https://websfont.github.io/gmarket/gmarket.css");
 
@@ -552,243 +592,266 @@ export default HomeView;</code></pre>
 }
 .gmarket {
     font-family: "gmarket";
-}   
+}
 </code></pre>
-              <p>
-                <code>vars.scss</code>를 셋팅하겠습니다. 기존과 달라진 부분의
-                거의 없습니다. 주석표시와 미디어 쿼리를 root 안에
-                작업하였습니다. 디테일한 사용법은 섹션 작업할 때 좀 더
-                알아보겠습니다.
-              </p>
-              <pre><code class="language-scss">:root {
+                        <p>
+                            <code>_vars.scss</code>을 설정하겠습니다.
+                        </p>
+<pre><code class="language-scss">:root {
     --mainEng-font: "Montserrat";
     --mainKor-font: "nanumSquareNeo";
     --mainNum-font: "gmarket";
-
+  
     --mainBg-color: #f3ede8;
     --subBg100: #cdc0b1;
     --subBg200: #afa395;
     --subBg300: #81887c;
     --subBg400: #afa7a2;
     --subBg500: #a6afa2;
-
+  
     --white: #fff;
     --black: #000;
     --black100: #2b2b2b;
     --black200: #434343;
     --black300: #686868;
     --black400: #e0e0e0;
-
-    // 기본 폰트 설정
+  
     font-family: var(--mainEng-font), var(--mainKor-font);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
-
-    // 폰트를 부드럽게 렌더링하기 위한 속성
+  
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    // 아이폰 가로 모드에서 글씨 확대 금지
     -webkit-text-size-adjust: 100%;
-
+  
     @media (max-width: 800px) {
-        :root {
-            font-size: 14px;
-            line-height: 1.4;
-        }
+        font-size: 14px;
+        line-height: 1.4;
     }
 }
-
+  
 body {
     background-color: var(--mainBg-color);
-}          
+}
 </code></pre>
+                        <p>
+                            <code>_reset.scss</code>을 설정하겠습니다.
+                        </p>
+<pre><code class="language-scss">// border-box 초기화
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// 공백 초기화
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+// 폰트 초기화 
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-family: var(--mainEng-font), var(--mainKor-font), "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+}
+
+// 링크 초기화
+a,
+a:hover,
+a:focus {
+color: inherit;
+    text-decoration: none;
+}
+
+// 스타일 초기화
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+em,
+address {
+    font-style: normal;
+}
+
+strong {
+    font-weight: normal;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+// 스킵메뉴
+#skip a {
+    position: absolute;
+    left: 10px;
+    top: -92px;
+    z-index: 100000;
+    font-size: 1rem;
+    padding: 10px 30px;
+    color: var(--white);
+    background: var(--black);
+}
+#skip a:focus,
+#skip a:active {
+    top: 10px;
+}
+</code></pre>
+                        <p>
+                            <code>_mixin.scss</code>을 설정하겠습니다.
+                            @mixin을 사용하여 스타일 규칙들을 묶어 믹스인으로 만들면, 해당 믹스인을 다른 스타일 규칙에서 @include 지시어를 사용하여 쉽게 불러와서 재사용할 수 있습니다.
+                            간단하게 자주 사용하는 규칙을 믹스인으로 만들겠습니다.
+                        </p>
+<pre><code class="language-scss">// 가운데 정렬
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+// 양쪽 정렬
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// 중앙 정렬
+@mixin position-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 상단 고정
+@mixin position-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}   
+</code></pre>   
+                        <p>
+                            scss 설정도 완료가 되었습니다. 하지만 적용은 되지 않습니다. 
+                            <code>index.js</code>에서 CSS를 연동하여야 합니다.
+                            <code>import "./assets/scss/style.scss";</code> 이 코드를 추가해주세요!
+                        </p>
+<pre><code class="language-js">import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./assets/scss/style.scss";
+...
+</code></pre>
+                    </div>
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            이제 모든 코딩 준비가 되었습니다. 
+                            그럼 깃에 올립시다.
+                        </p>
+<pre><code class="language-js">git add .
+git commit -m "🥳 컴퍼넌트완료"
+git push -u origin main
+</code></pre>
+                        <p>
+                            처음 배우는 개념들이 있으면 혼란스러울 수 있습니다. 
+                            하지만 몇 번 따라하면서 익히면 재미가 있습니다. 
+                            포기하지 말고 끝까지 잘 따라해주시면 감사하겠습니다. 
+                            그럼 이번 리액트도 끝까지 완성해봅시다.!
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://port2023-react.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-react" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <ul class="refer5">
+                        <li><a href="https://webstoryboy.co.kr/1934">1. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1935">2. 포트폴리오 사이트 만들기 : React-Site : 레이아웃</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1936">3. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1937">4. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1938">5. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1939">6. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1940">7. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1941">8. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1942">9. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1943">10. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                    </ul>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
             </div>
-
-            <div class="mt80">
-              <h3>3. 마무리</h3>
-              <p>
-                잘 정리하셨나요? 컴포넌트는 웹 애플리케이션을 구성하는 작은
-                조각들로, 각 컴포넌트는 독립적으로 작동하며 필요에 따라 재사용할
-                수 있습니다. 컴포넌트를 사용하면 UI를 구성하는 데 있어서
-                논리적이고 구조적으로 접근할 수 있으며, 코드를 더욱 간결하고
-                가독성 좋게 작성할 수 있습니다.
-              </p>
-              <p>
-                SCSS는 CSS의 확장 문법으로, CSS의 기능을 확장하여 더욱 유연하고
-                편리한 스타일 시트를 작성할 수 있습니다. SCSS를 사용하면 변수,
-                중첩, 믹스인, 상속 등의 기능을 사용하여 스타일을 구성할 수
-                있으며, 코드의 반복을 줄이고 유지보수를 용이하게 만들 수
-                있습니다. 또한, SCSS를 사용하면 CSS에 없는 조건문과 반복문을
-                사용하여 동적인 스타일을 생성할 수 있습니다.
-              </p>
-              <p>
-                처음에는 새로운 개념들이 추가되어 혼란스러울 수 있지만,
-                익숙해지면 더 쉽게 사용할 수 있습니다. 코드 작성에 익숙해지기
-                위해서는 계속해서 연습하고 참고 자료를 활용하면 좋습니다. 기존
-                개념과 새로운 개념을 조합하여 더 효율적이고 유연한 웹
-                애플리케이션을 구축할 수 있습니다. 오늘도 수고하셨습니다!
-                계속해서 열심히 학습하고 개발하시면 더 나은 개발자로 성장하실 수
-                있을 것입니다. 궁금한 점이나 도움이 필요하면 언제든지
-                댓글주세요! 🤭
-              </p>
-            </div>
-
-            <hr />
-            <!-- 광고영역 -->
-            <!-- //광고영역 -->
-
-            <div class="right_refer">
-              <a
-                href="https://port2023-react.netlify.app"
-                target="_blank"
-                class="sampleBtn"
-                >완성 화면</a
-              >
-              <a
-                href="https://github.com/webstoryboy/port2023-react"
-                target="_blank"
-                class="sampleBtn"
-                >소스 보기</a
-              >
-              <a
-                href="https://www.youtube.com/webstoryboy"
-                target="_blank"
-                class="sampleBtn"
-                >유튜브</a
-              >
-            </div>
-
-            <h3>HTML/CSS-Site</h3>
-            <ul class="refer5">
-              <li>
-                <a href="main01.html"
-                  >1. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 셋팅하기</a
-                >
-              </li>
-              <li>
-                <a href="main02.html"
-                  >2. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 레이아웃</a
-                >
-              </li>
-              <li>
-                <a href="main03.html"
-                  >3. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 헤더 영역</a
-                >
-              </li>
-              <li>
-                <a href="main04.html"
-                  >4. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 인트로 영역</a
-                >
-              </li>
-              <li>
-                <a href="main05.html"
-                  >5. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 스킬 영역</a
-                >
-              </li>
-              <li>
-                <a href="main06.html"
-                  >6. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 사이트 영역</a
-                >
-              </li>
-              <li>
-                <a href="main07.html"
-                  >7. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 포트폴리오
-                  영역</a
-                >
-              </li>
-              <li>
-                <a href="main08.html"
-                  >8. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 연락처 영역</a
-                >
-              </li>
-              <li>
-                <a href="main09.html"
-                  >9. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 푸터 영역</a
-                >
-              </li>
-              <li>
-                <a href="main10.html"
-                  >10. 포트폴리오 사이트 만들기 : HTML/CSS-Site : 마무리</a
-                >
-              </li>
-            </ul>
-            <h3>React-Site</h3>
-            <ul class="refer5">
-              <li>
-                <a href="main01.html"
-                  >1. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a
-                >
-              </li>
-              <li>
-                <a href="main02.html"
-                  >2. 포트폴리오 사이트 만들기 : React-Site : 라우팅 및
-                  컴퍼넌트</a
-                >
-              </li>
-              <li>
-                <a href="main03.html"
-                  >3. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a
-                >
-              </li>
-              <li>
-                <a href="main04.html"
-                  >4. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a
-                >
-              </li>
-              <li>
-                <a href="main05.html"
-                  >5. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a
-                >
-              </li>
-              <li>
-                <a href="main06.html"
-                  >6. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a
-                >
-              </li>
-              <li>
-                <a href="main07.html"
-                  >7. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a
-                >
-              </li>
-              <li>
-                <a href="main08.html"
-                  >8. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a
-                >
-              </li>
-              <li>
-                <a href="main09.html"
-                  >9. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a
-                >
-              </li>
-              <li>
-                <a href="main10.html"
-                  >10. 포트폴리오 사이트 만들기 : React-Site : 마무리</a
-                >
-              </li>
-            </ul>
-          </div>
-          <!-- //blog__contents -->
-
-          <aside class="blog__aside">
-            <button class="blog__aside__btn"><span></span></button>
-            <div class="blog__aside__chapter"></div>
-          </aside>
-        </div>
-      </section>
-      <!-- //blog -->
+        </section>
+        <!-- //blog -->
     </main>
     <!-- //main -->
 
-    <footer id="footer"></footer>
+    <footer id="footer">
+
+    </footer>
     <!-- //footer -->
 
     <script src="../../assets/js/jquery-3.6.0.js"></script>
     <script src="../../assets/js/jquery-ui.js"></script>
     <script src="../../assets/js/highlight.min.js"></script>
     <script src="../../assets/js/webs.js"></script>
-  </body>
+</body>
 </html>
+

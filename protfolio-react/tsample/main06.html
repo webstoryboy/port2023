@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 사이트 만들기 프로젝트 😜</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/portfolio</span>
+                <h1 class="title">포트폴리오 사이트 만들기 - React</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">06</span>
+                            <div class="title">포트폴리오 사이트 만들기 : 사이트 영역</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-react.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-react" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다. 
+                        이번에는 사이트 영역을 작업하겠습니다. 
+                        크게 어려운 점이 없으니 잘 따라해주세요!
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index2">
+                        <div>
+                            <h4>1. 포트폴리오 사이트 만들기 : VITE SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. vite 설치하기</li>
+                                        <li>1_2. vite 폴더 정리하기</li>
+                                        <li>1_3. gsap/lenis 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 레이아웃
+                                    <ul>
+                                        <li>2.1 레이아웃 구조 만들기</li>
+                                        <li>2.2 메인 레이아웃 구조 만들기</li>
+                                        <li>2.3 CSS 셋팅하기</li>
+                                        <li>2.4 JavaScript 셋팅하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 헤더 영역
+                                    <ul>
+                                        <li>3.1 헤더 구조 잡기</li>
+                                        <li>3.2 헤더 디자인 설정</li>
+                                        <li>3.3 반응형 작업하기</li>
+                                        <li>3.4 메뉴 자바스크립트 설정</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 영역
+                                    <ul>
+                                        <li>4.1 인트로 구조 잡기</li>
+                                        <li>4.2 인트로 디자인 설정</li>
+                                        <li>4.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 스킬 영역
+                                    <ul>
+                                        <li>5.1 스킬 구조 잡기</li>
+                                        <li>5.2 스킬 디자인 설정</li>
+                                        <li>5.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이트 영역
+                                    <ul>
+                                        <li>6.1 사이트 구조 잡기</li>
+                                        <li>6.2 사이트 디자인 설정</li>
+                                        <li>6.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>7. 포트폴리오 영역
+                                    <ul>
+                                        <li>7.1 사이트 구조 잡기</li>
+                                        <li>7.2 사이트 디자인 설정</li>
+                                        <li>7.3 반응형 작업하기</li>
+                                        <li>7.4 스크립트 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>8. 연락처 영역
+                                    <ul>
+                                        <li>8.1 연락처 구조 잡기</li>
+                                        <li>8.2 연락처 디자인 설정</li>
+                                        <li>8.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>9. 푸터 영역
+                                    <ul>
+                                        <li>9.1 푸터 구조 잡기</li>
+                                        <li>9.2 푸터 디자인 설정</li>
+                                        <li>9.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>10. 마무리
+                                    <ul>
+                                        <li>10.1 스무스 효과주기</li>
+                                        <li>10.2 링크 연결하기</li>
+                                        <li>10.3 netlify에 배포하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>2. 포트폴리오 사이트 만들기 : REACT SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. React 설치하기</li>
+                                        <li>1_2. React 폴더 정리하기</li>
+                                        <li>1_3. 라이브러리 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 라우팅 및 컴퍼넌트
+                                    <ul>
+                                        <li>2_1. 라우팅 설정하기</li>
+                                        <li>2_2. 컴퍼넌트 설정하기</li>
+                                        <li>2_3. SCSS 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 헤더 영역
+                                    <ul>
+                                        <li>3_1. 헤더 구조잡기</li>
+                                        <li>3_2. 헤더 디자인 설정</li>
+                                        <li>3_3. 헤더 데이터 작업</li>
+                                        <li>3_4. 헤더 토글 메뉴 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 영역
+                                    <ul>
+                                        <li>4_1. 인트로 구조잡기</li>
+                                        <li>4_2. 인트로 디자인 설정</li>
+                                        <li>4_3. 인트로 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>5. 스킬 영역
+                                    <ul>
+                                        <li>5_1. 스킬 구조잡기</li>
+                                        <li>5_2. 스킬 디자인 설정</li>
+                                        <li>5_3. 스킬 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이트 영역
+                                    <ul>
+                                        <li>6_1. 사이트 구조잡기</li>
+                                        <li>6_2. 사이트 디자인 설정</li>
+                                        <li>6_3. 사이트 데이터 작업</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //index -->
+
+                    <h3>6. 사이트 영역</h3>
+                    <div id="b61">
+                        <h4>6_1. 사이트 구조잡기</h4>
+                        <p>
+                            기존 소스를 리액트 소스로 변경해보겠습니다.
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Site = () =&gt; {
+    return (
+        &lt;section id="site"&gt;
+            &lt;div className="site__inner"&gt;
+                &lt;h2 className="site__title"&gt;Site coding &lt;em&gt;나의 작업물&lt;/em&gt;&lt;/h2&gt;
+                &lt;div className="site__wrap"&gt;
+                    &lt;article className="site__item s1"&gt;
+                        &lt;span className="num"&gt;1.&lt;/span&gt;
+                        &lt;div className="text"&gt;
+                            &lt;div&gt;make&lt;/div&gt;
+                            &lt;div&gt;site compliant with&lt;/div&gt;
+                            &lt;div&gt;webstandard&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h3 className="title"&gt;웹 표준을 준수한 사이트 제작&lt;/h3&gt;
+                        &lt;div className="btn"&gt;
+                            &lt;a href="https://github.com/webstoryboy/port2023-vite"&gt;code&lt;/a&gt;
+                            &lt;a href="https://port2023-vite.netlify.app/"&gt;view&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;div className="info"&gt;
+                            &lt;span&gt;site coding&lt;/span&gt;
+                            &lt;span&gt;production period : two days&lt;/span&gt;
+                            &lt;span&gt;use stack : html5/css3, CSS Variable, Vite&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/article&gt;
+                    &lt;article className="site__item s2"&gt;
+                        &lt;span className="num"&gt;2.&lt;/span&gt;
+                        &lt;div className="text"&gt;
+                            &lt;div&gt;Make&lt;/div&gt;
+                            &lt;div&gt;site compliant with&lt;/div&gt;
+                            &lt;div&gt;react.js&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h3 className="title"&gt;리액트를 이용한 사이트 제작&lt;/h3&gt;
+                        &lt;div className="btn"&gt;
+                            &lt;a href="https://github.com/webstoryboy/port2023-react"&gt;code&lt;/a&gt;
+                            &lt;a href="https://port2023-react.netlify.app/"&gt;view&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;div className="info"&gt;
+                            &lt;span&gt;site coding&lt;/span&gt;
+                            &lt;span&gt;production period : two days&lt;/span&gt;
+                            &lt;span&gt;use stack : HTML5/CSS3, CSS Variable, Vite&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/article&gt;
+                    &lt;article className="site__item s3"&gt;
+                        &lt;span className="num"&gt;3.&lt;/span&gt;
+                        &lt;div className="text"&gt;
+                            &lt;div&gt;Make&lt;/div&gt;
+                            &lt;div&gt;site compliant with&lt;/div&gt;
+                            &lt;div&gt;vue.js&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h3 className="title"&gt;뷰를 이용한 사이트 제작&lt;/h3&gt;
+                        &lt;div className="btn"&gt;
+                            &lt;a href="https://github.com/webstoryboy/port2023-vue"&gt;code&lt;/a&gt;
+                            &lt;a href="https://port2023-vue.netlify.app/"&gt;view&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;div className="info"&gt;
+                            &lt;span&gt;site coding&lt;/span&gt;
+                            &lt;span&gt;production period : two days&lt;/span&gt;
+                            &lt;span&gt;use stack : vue.js, CSS Variable, vite&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/article&gt;
+                    &lt;article className="site__item s4"&gt;
+                        &lt;span className="num"&gt;4.&lt;/span&gt;
+                        &lt;div className="text"&gt;
+                            &lt;div&gt;Make&lt;/div&gt;
+                            &lt;div&gt;site compliant with&lt;/div&gt;
+                            &lt;div&gt;next.js&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h3&gt;넥스트를 이용한 사이트 제작&lt;/h3&gt;
+                        &lt;div className="btn"&gt;
+                            &lt;a href="https://github.com/webstoryboy/port2023-next"&gt;code&lt;/a&gt;
+                            &lt;a href="https://port2023-next.netlify.app/"&gt;view&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;div className="info"&gt;
+                            &lt;span&gt;site coding&lt;/span&gt;
+                            &lt;span&gt;production period : two days&lt;/span&gt;
+                            &lt;span&gt;use stack : next.js, CSS Variable, Vite&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/article&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    );
+};
+
+export default Site;
+</code></pre>
+                    </div>
+
+                    <div id="b62" class="mt80">
+                        <h4>6_2. 사이트 디자인 설정</h4>
+                        <p>
+                            CSS로 SCSS로 변형하여 작업하였습니다.
+                        </p>
+<pre><code class="language-css">.site__inner {
+    padding: 16px;
+}
+.site__title {
+    position: sticky;
+    top: 70px;
+    left: 0;
+    width: 70%;
+    height: 5vw;
+    font-size: 4vw;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: var(--black100);
+    border-bottom: 0.4vw solid var(--black100);
+    font-family: "nanumSquareNeo";
+    font-weight: 900;
+    margin-bottom: 16px;
+  
+    @media (max-width: 800px) {
+        width: 100%;
+        margin-bottom: 10vw;
+        font-size: 30px;
+        height: auto;
+        background: #f3ede8;
+        top: 70px;
+        border-bottom: 2px solid var(--black100);
+        z-index: 1000;
+    }
+  
+    em {
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+.site__wrap {
+    .site__item {
+        background-color: var(--mainBg-color);
+        height: 70vh;
+        @include flex-center;
+        flex-direction: column;
+        position: sticky;
+        left: 0;
+  
+        &.s1 {
+            background-color: var(--subBg100);
+            top: 180px;
+
+            @media (max-width: 800px) {
+                top: 140px;
+            }
+        }
+  
+        &.s2 {
+            background-color: var(--subBg200);
+            top: 190px;
+
+            @media (max-width: 800px) {
+                top: 160px;
+            }
+        }
+  
+        &.s3 {
+            background-color: var(--subBg300);
+            top: 200px;
+
+            @media (max-width: 800px) {
+                top: 180px;
+            }
+        }
+  
+        &.s4 {
+            background-color: var(--subBg400);
+            top: 210px;
+
+            @media (max-width: 800px) {
+                top: 200px;
+            }
+        }
+  
+        .num {
+            font-size: 5vw;
+            line-height: 1;
+            font-family: "gmarket";
+            position: absolute;
+            left: 1vw;
+            top: 1vw;
+            font-weight: 900;
+
+            @media (max-width: 800px) {
+                font-size: 80px;
+                left: 20px;
+                top: 20px;
+            }
+        }
+  
+        .text {
+            text-align: center;
+    
+            div {
+                font-size: 3vw;
+                line-height: 1;
+                font-weight: 900;
+                text-transform: uppercase;
+                text-decoration: underline;
+                font-family: "Montserrat";
+                position: relative;
+                z-index: 100;
+                font-weight: 700;
+                letter-spacing: -0.1vw;
+        
+                @media (max-width: 800px) {
+                    font-size: 26px;
+                }
+            }
+  
+            .btn a {
+                font-size: 30px;
+            }
+        }   
+        h3 {
+            font-family: "nanumSquareNeo";
+            display: inline-block;
+            margin-top: 1vw;
+    
+            @media (max-width: 800px) {
+                font-size: 16px;
+            }
+        }
+  
+        .btn a {
+            display: inline-block;
+            font-family: "Montserrat";
+            background-color: transparent;
+            color: var(--black200);
+            margin: 10px 3px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: underline;
+            text-underline-position: under;
+    
+            &:hover {
+                color: var(--black);
+            }
+        }
+  
+        .info {
+            position: absolute;
+            left: 0;
+            bottom: 3%;
+            border-top: 1px solid var(--black);
+            border-bottom: 1px solid var(--black);
+            font-family: "Montserrat";
+            width: 98%;
+            margin-left: 1%;
+            display: flex;
+            justify-content: space-between;
+    
+            @media (max-width: 800px) {
+                flex-direction: column;
+                width: 90%;
+                margin-left: 5%;
+                padding: 5px 0;
+            }
+    
+            span {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-family: "nanumSquareNeo";
+                padding: 3px 0;
+            }
+        }
+    }
+}
+</code></pre>
+                    </div>
+
+                    <div id="b63" class="mt80">
+                        <h4>6_3. 사이트 데이터 작업</h4>
+                        <p>
+                            핵심 데이터는 따로 작업하였습니다.
+                        </p>
+<pre><code class="language-js">export const siteText = [
+    {
+        text: ["make", "site compliant with", "webstandard"],
+        title: "비트를 이용한 사이트 제작",
+        code: "https://github.com/webstoryboy/port2023-vite",
+        view: "https://port2023-vite.netlify.app",
+        info: [
+            "site coding",
+            "production period : two days",
+            "use stack : HTML5/CSS3, CSS Variable, Vite",
+        ],
+    },
+    {
+        text: ["make", "site compliant with", "react.js"],
+        title: "리액트를 이용한 사이트 제작",
+        code: "https://github.com/webstoryboy/port2023-react",
+        view: "https://port2023-react.netlify.app",
+        info: [
+            "site coding",
+            "production period : two days",
+            "use stack : HTML5/CSS3, CSS Variable, Vite",
+        ],
+    },
+    {
+        text: ["make", "site compliant with", "vue.js"],
+        title: "뷰를 이용한 사이트 제작",
+        code: "https://github.com/webstoryboy/port2023-vue",
+        view: "https://port2023-vue.netlify.app",
+        info: [
+            "site coding",
+            "production period : two days",
+            "use stack : HTML5/CSS3, Scss Variable, vue",
+        ],
+    },
+    {
+        text: ["make", "site compliant with", "next.js"],
+        title: "넥스트를 이용한 사이트 제작",
+        code: "https://github.com/webstoryboy/port2023-next",
+        view: "https://port2023-next.netlify.app",
+        info: [
+            "site coding",
+            "production period : two days",
+            "use stack : HTML5/CSS3, Scss Variable, next.js",
+        ],
+    },
+];
+</code></pre> 
+                        <p>
+                            해당 부분만 변경해주었습니다.
+                        </p>
+<pre><code class="language-js">const Site = () =&gt; {
+    return (
+        &lt;section id="site"&gt;
+            &lt;div className="site__inner"&gt;
+                &lt;h2 className="site__title"&gt;Site coding &lt;em&gt;나의 작업물&lt;/em&gt;&lt;/h2&gt;
+                &lt;div className="site__wrap"&gt;
+                    {siteText.map((site, index) =&gt; (
+                        &lt;article className={`site__item s${index + 1}`} key={index}&gt;
+                            &lt;span className="num"&gt;{index + 1}.&lt;/span&gt;
+                            &lt;div className="text"&gt;
+                                &lt;div&gt;{site.text[0]}&lt;/div&gt;
+                                &lt;div&gt;{site.text[1]}&lt;/div&gt;
+                                &lt;div&gt;{site.text[2]}&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;h3 className="title"&gt;웹 표준을 준수한 사이트 제작&lt;/h3&gt;
+                            &lt;div className="btn"&gt;
+                                &lt;a href={site.code}&gt;code&lt;/a&gt;
+                                &lt;a href={site.view}&gt;view&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div className="info"&gt;
+                                &lt;span&gt;{site.info[0]}&lt;/span&gt;
+                                &lt;span&gt;{site.info[1]}&lt;/span&gt;
+                                &lt;span&gt;{site.info[2]}&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/article&gt;
+                    ))}
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    );
+};
+</code></pre>
+                        
+
+                    </div>
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            이제 깃헙에 올리겠습니다.
+                        </p>
+<pre><code class="language-js">git add .
+git commit -m "🤪 사이트 완료"
+git push -u origin main
+</code></pre>
+                        <p>
+                            사이트 페이지도 완료가 되었습니다. 
+                            데이터 작업을 하기 때문에 수정하기도 편하고 가독성도 좋아졌습니다. 
+                            여러분들도 이렇게 코딩을 해보면 좋을 거 같습니다. 
+                            수고하셨습니다. 
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://port2023-react.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-react" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <ul class="refer5">
+                        <li><a href="https://webstoryboy.co.kr/1934">1. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1935">2. 포트폴리오 사이트 만들기 : React-Site : 라우팅 및 컴퍼넌트</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1936">3. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1937">4. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1938">5. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1939">6. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1940">7. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1941">8. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1942">9. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1943">10. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                    </ul>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
