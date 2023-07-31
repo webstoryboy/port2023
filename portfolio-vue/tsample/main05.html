@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 사이트 만들기 프로젝트 😳</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/portfolio</span>
+                <h1 class="title">포트폴리오 사이트 만들기 - Vue</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">05</span>
+                            <div class="title">포트폴리오 사이트 만들기 : 스킬 영역</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-vue.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-vue" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        오늘은 인트로 컴퍼넌트를 작업해보겠습니다. 
+                        소스를 직접 치고 만드는 것이 아니라, 기존에 소스를 활용해서 만드는 것이기 때문에
+                        비교적 빨리 만들 수 있을겁니다. 
+                        그럼 오늘도 시작해볼까요!! 🥶
+                    </p>
+
+                    <h3>포트폴리오 사이트 만들기</h3>
+                    <div class="index2">
+                        <div>
+                            <h4>VITE SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. vite 설치하기</li>
+                                        <li>1_2. vite 폴더 정리하기</li>
+                                        <li>1_3. gsap/lenis 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 레이아웃
+                                    <ul>
+                                        <li>2.1 레이아웃 구조 만들기</li>
+                                        <li>2.2 메인 레이아웃 구조 만들기</li>
+                                        <li>2.3 CSS 셋팅하기</li>
+                                        <li>2.4 JavaScript 셋팅하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 헤더 영역
+                                    <ul>
+                                        <li>3.1 헤더 구조 잡기</li>
+                                        <li>3.2 헤더 디자인 설정</li>
+                                        <li>3.3 반응형 작업하기</li>
+                                        <li>3.4 메뉴 자바스크립트 설정</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 영역
+                                    <ul>
+                                        <li>4.1 인트로 구조 잡기</li>
+                                        <li>4.2 인트로 디자인 설정</li>
+                                        <li>4.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 스킬 영역
+                                    <ul>
+                                        <li>5.1 스킬 구조 잡기</li>
+                                        <li>5.2 스킬 디자인 설정</li>
+                                        <li>5.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이트 영역
+                                    <ul>
+                                        <li>6.1 사이트 구조 잡기</li>
+                                        <li>6.2 사이트 디자인 설정</li>
+                                        <li>6.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>7. 포트폴리오 영역
+                                    <ul>
+                                        <li>7.1 사이트 구조 잡기</li>
+                                        <li>7.2 사이트 디자인 설정</li>
+                                        <li>7.3 반응형 작업하기</li>
+                                        <li>7.4 스크립트 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>8. 연락처 영역
+                                    <ul>
+                                        <li>8.1 연락처 구조 잡기</li>
+                                        <li>8.2 연락처 디자인 설정</li>
+                                        <li>8.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>9. 푸터 영역
+                                    <ul>
+                                        <li>9.1 푸터 구조 잡기</li>
+                                        <li>9.2 푸터 디자인 설정</li>
+                                        <li>9.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>10. 마무리
+                                    <ul>
+                                        <li>10.1 스무스 효과주기</li>
+                                        <li>10.2 링크 연결하기</li>
+                                        <li>10.3 netlify에 배포하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>REACT SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. React 설치하기</li>
+                                        <li>1_2. React 폴더 정리하기</li>
+                                        <li>1_3. 라이브러리 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 라우팅 및 컴퍼넌트
+                                    <ul>
+                                        <li>2_1. 라우팅 설정하기</li>
+                                        <li>2_2. 컴퍼넌트 설정하기</li>
+                                        <li>2_3. SCSS 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 헤더 영역
+                                    <ul>
+                                        <li>3_1. 헤더 구조잡기</li>
+                                        <li>3_2. 헤더 디자인 설정</li>
+                                        <li>3_3. 헤더 데이터 작업</li>
+                                        <li>3_4. 헤더 토글 메뉴 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 영역
+                                    <ul>
+                                        <li>4_1. 인트로 구조잡기</li>
+                                        <li>4_2. 인트로 디자인 설정</li>
+                                        <li>4_3. 인트로 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>5. 스킬 영역
+                                    <ul>
+                                        <li>5_1. 스킬 구조잡기</li>
+                                        <li>5_2. 스킬 디자인 설정</li>
+                                        <li>5_3. 스킬 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이트 영역
+                                    <ul>
+                                        <li>6_1. 사이트 구조잡기</li>
+                                        <li>6_2. 사이트 디자인 설정</li>
+                                        <li>6_3. 사이트 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>7. 포트폴리오 영역
+                                    <ul>
+                                        <li>7_1. 포트폴리오 구조잡기</li>
+                                        <li>7_2. 포트폴리오 디자인 설정</li>
+                                        <li>7_3. 포트폴리오 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>8. 연락처 영역
+                                    <ul>
+                                        <li>8_1. 연락처 구조잡기</li>
+                                        <li>8_2. 연락처 디자인 설정</li>
+                                        <li>8_3. 연락처 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>9. 푸터 영역
+                                    <ul>
+                                        <li>9_1. 푸터 구조잡기</li>
+                                        <li>9_2. 푸터 디자인 설정</li>
+                                        <li>9_3. 푸터 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>10. 마무리
+                                    <ul>
+                                        <li>10_1. 데이터 통합하기</li>
+                                        <li>10_2. 스무스 효과 넣어주기</li>
+                                        <li>10_3. 가로모드 구현하기</li>
+                                        <li>10_4. netlify에 배포하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>VUE SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. Vue 설치하기</li>
+                                        <li>1_2. Vue 폴더 정리하기</li>
+                                        <li>1_3. 라이브러리 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 라우팅 및 컴퍼넌트
+                                    <ul>
+                                        <li>2_1. 라우팅 설정하기</li>
+                                        <li>2_2. 컴퍼넌트 설정하기</li>
+                                        <li>2_3. SCSS 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 헤더 영역
+                                    <ul>
+                                        <li>3_1. 헤더 구조잡기</li>
+                                        <li>3_2. 헤더 디자인 설정</li>
+                                        <li>3_3. 헤더 데이터 작업</li>
+                                        <li>3_4. 헤더 토글 메뉴 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 영역
+                                    <ul>
+                                        <li>4_1. 인트로 구조잡기</li>
+                                        <li>4_2. 인트로 디자인 설정</li>
+                                        <li>4_3. 인트로 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>5. 스킬 영역
+                                    <ul>
+                                        <li>5_1. 스킬 구조잡기</li>
+                                        <li>5_2. 스킬 디자인 설정</li>
+                                        <li>5_3. 스킬 데이터 작업</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //index -->
+
+                    <h3>5. 스킬 영역</h3>
+                    <div id="v51">
+                        <h4>5_1. 스킬 구조잡기</h4>
+                        <p>
+                            기존 소스를 뷰 소스로 변경해보겠습니다.
+                        </p>
+<pre><code class="language-html">&lt;template&gt;
+    &lt;section id="skill"&gt;
+        &lt;div class="skill__inner"&gt;
+            &lt;h2 class="skill__title"&gt;Challenge &lt;em&gt;나의 도전&lt;/em&gt;&lt;/h2&gt;
+            &lt;div class="skill__desc"&gt;
+                &lt;div&gt;
+                    &lt;span&gt;1.&lt;/span&gt;
+                    &lt;h3&gt;꿈을 설계하고 디자인하다.&lt;/h3&gt;
+                    &lt;p&gt;
+                        나는 공간을 만드는 것을 좋아한다. 
+                        어려을 때부터 나만의 공간을 만드는 것을 좋아했고 나만의 다락방을 좋아했다. 
+                        단 한 사람이라도 내가 만든 공간 속에서 영감을 받거나 마음이 움직였으면 좋겠다.
+                        나만의 공간을 마음것 만들 수 있다는 건 코딩에 엄청난 매력인거 같다. 
+                        그 한구석에 나만의 꿈을 설계하고, 개발을 하며 앞으로도 살고 싶다.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;span&gt;2.&lt;/span&gt;
+                    &lt;h3&gt;열심히 할수록 기회는 따른다.&lt;/h3&gt;
+                    &lt;p&gt;
+                        운이 좋은 사람은 없다. 단지 운을 만들 뿐이다. 
+                        운을 만들기 위해서는 내가 좋아하는 일이나 내가 하고 싶은 일에 몰두하면 된다.
+                        몰두 하다보면 길이 보이고 방향이 보이게 된다. 
+                        운이란 고된 노동과 노력을 통해 스스로 만들어 내는 것이다.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;span&gt;3.&lt;/span&gt;
+                    &lt;h3&gt;나에게 정직하다.&lt;/h3&gt;
+                    &lt;p&gt;
+                        정직은 다른 사람보다 나에게 큰 의미를 부여해야 한다. 
+                        자신이 정직하지 않으면 진정으로 원하는 일을 열정적으로 밀고 나갈 수 없다. 
+                        마음에서 우러나오는 일을 해야 정직해지며 삶을 더 즐길 줄 알게 된다.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/template&gt; 
+</code></pre>
+                    </div>
+
+                    <div id="v52" class="mt80">
+                        <h4>5_2. 스킬 디자인 설정</h4>
+                        <p>
+                            CSS를 SCSS로 변형하여 작업하였습니다.
+                        </p>
+<pre><code class="language-html">&lt;style lang="scss" scoped&gt;
+.skill__inner {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+}
+.skill__title {
+    position: sticky;
+    top: 70px;
+    left: 0;
+    width: 48%;
+    height: 5vw;
+    font-size: 4vw;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: var(--black100);
+    border-bottom: 0.4vw solid var(--black100);
+    font-family: "nanumSquareNeo";
+    font-weight: 900;
+    
+    @media (max-width: 800px) {
+        width: 100%;
+        margin-bottom: 10vw;
+        font-size: 30px;
+        height: auto;
+        background: #f3ede8;
+        top: 68px;
+        border-bottom: 2px solid #2b2b2b;
+    }
+    
+    em {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+}
+.skill__desc {
+    width: 50%;
+    margin-top: 30vh;
+    
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+    
+    span {
+        font-size: 5vw;
+        line-height: 1;
+        text-transform: uppercase;
+        color: var(--black100);
+        line-height: 1.3;
+        font-weight: 900;
+        font-family: "gmarket";
+    
+        @media (max-width: 800px) {
+            font-size: 20vw;
+        }
+    }
+    h3 {
+        font-size: 1.5rem;
+        text-decoration: underline;
+        text-underline-position: under;
+        font-family: "nanumSquareNeo";
+        margin-bottom: 4px;
+    }
+    p {
+        padding-bottom: 30vh;
+        font-family: "nanumSquareNeo";
+        font-weight: 300;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        word-break: keep-all;
+    }
+}
+&lt;/style&gt;
+</code></pre>
+                    </div>
+
+                    <div id="v53" class="mt80">
+                        <h4>5_3. 스킬 데이터 작업</h4>
+                        <p>
+                            핵심 데이터는 따로 작업하였습니다.
+                        </p>
+<pre><code class="language-js">export const skillText = [
+    {
+      title: "꿈을 설계하고 디자인하다.",
+      desc: "나는 공간을 만드는 것을 좋아한다. 어려을 때부터 나만의 공간을 만드는 것을 좋아했고 나만의 다락방을 좋아했다. 단 한 사람이라도 내가 만든 공간 속에서 영감을 받거나 마음이 움직였으면 좋겠다. 나만의 공간을 마음것 만들 수 있다는 건 코딩에 엄청난 매력인거 같다. 그 한구석에 나만의 꿈을 설계하고, 개발을 하며 앞으로도 살고 싶다.",
+    },
+    {
+      title: "열심히 할수록 기회는 따른다.",
+      desc: "운이 좋은 사람은 없다. 단지 운을 만들 뿐이다. 운을 만들기 위해서는 내가 좋아하는 일이나 내가 하고 싶은 일에 몰두하면 된다. 몰두 하다보면 길이 보이고 방향이 보이게 된다. 운이란 고된 노동과 노력을 통해 스스로 만들어 내는 것이다.",
+    },
+    {
+      title: "나에게 정직하다.",
+      desc: "정직은 다른 사람보다 나에게 큰 의미를 부여해야 한다. 자신이 정직하지 않으면 진정으로 원하는 일을 열정적으로 밀고 나갈 수 없다. 마음에서 우러나오는 일을 해야 정직해지며 삶을 더 즐길 줄 알게 된다.",
+    },
+];
+</code></pre> 
+                        <p>
+                            해당 부분만 변경해주었습니다.
+                        </p>
+<pre><code class="language-html">&lt;script setup&gt;
+import { skillText } from "@/constants/index";
+&lt;/script&gt;
+
+&lt;template&gt;
+    &lt;section id="skill"&gt;
+        &lt;div class="skill__inner"&gt;
+            &lt;h2 class="skill__title"&gt;Challenge &lt;em&gt;나의 도전&lt;/em&gt;&lt;/h2&gt;
+            &lt;div class="skill__desc"&gt;
+                &lt;div v-for="(text, key) in skillText" :key="key"&gt;
+                    &lt;span&gt;{{ key + 1 }}.&lt;/span&gt;
+                    &lt;h3&gt;{{ text.title }}&lt;/h3&gt;
+                    &lt;p&gt;{{ text.desc }}&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/template&gt; 
+</code></pre>
+                        
+
+                    </div>
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            스킬 섹션도 가볍게 성공했습니다. 
+                            수고하셨습니다. 🤥
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://port2023-vue.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-vue" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <ul class="refer5">
+                        <li><a href="https://webstoryboy.co.kr/1944">1. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1945">2. 포트폴리오 사이트 만들기 : Vue-Site : 레이아웃</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1946">3. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1947">4. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1948">5. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1949">6. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1950">7. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1951">8. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1952">9. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1953">10. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                    </ul>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+
