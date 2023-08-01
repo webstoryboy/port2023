@@ -1,0 +1,1178 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 사이트 만들기 프로젝트 😳</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/portfolio</span>
+                <h1 class="title">포트폴리오 사이트 만들기 - Next</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">02</span>
+                            <div class="title">포트폴리오 사이트 만들기 : 라우팅 및 컴퍼넌트</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-next.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        next.js를 작업하기 전에 기본 셋팅을 완성하겠습니다. 
+                        기존 프레이워크랑 차이점이 무엇인지 알아보고, 좋은 점이 무엇이 있는지 알아보겠습니다. 
+                        그럼 바로 시작해보겠습니다.
+                    </p>
+
+                    <h3>포트폴리오 사이트 만들기</h3>
+                    <div class="index2">
+                        <div>
+                            <h4>VITE SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. vite 설치하기</li>
+                                        <li>1_2. vite 폴더 정리하기</li>
+                                        <li>1_3. gsap/lenis 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 레이아웃
+                                    <ul>
+                                        <li>2.1 레이아웃 구조 만들기</li>
+                                        <li>2.2 메인 레이아웃 구조 만들기</li>
+                                        <li>2.3 CSS 셋팅하기</li>
+                                        <li>2.4 JavaScript 셋팅하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 헤더 영역
+                                    <ul>
+                                        <li>3.1 헤더 구조 잡기</li>
+                                        <li>3.2 헤더 디자인 설정</li>
+                                        <li>3.3 반응형 작업하기</li>
+                                        <li>3.4 메뉴 자바스크립트 설정</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 영역
+                                    <ul>
+                                        <li>4.1 인트로 구조 잡기</li>
+                                        <li>4.2 인트로 디자인 설정</li>
+                                        <li>4.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 스킬 영역
+                                    <ul>
+                                        <li>5.1 스킬 구조 잡기</li>
+                                        <li>5.2 스킬 디자인 설정</li>
+                                        <li>5.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이트 영역
+                                    <ul>
+                                        <li>6.1 사이트 구조 잡기</li>
+                                        <li>6.2 사이트 디자인 설정</li>
+                                        <li>6.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>7. 포트폴리오 영역
+                                    <ul>
+                                        <li>7.1 사이트 구조 잡기</li>
+                                        <li>7.2 사이트 디자인 설정</li>
+                                        <li>7.3 반응형 작업하기</li>
+                                        <li>7.4 스크립트 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>8. 연락처 영역
+                                    <ul>
+                                        <li>8.1 연락처 구조 잡기</li>
+                                        <li>8.2 연락처 디자인 설정</li>
+                                        <li>8.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>9. 푸터 영역
+                                    <ul>
+                                        <li>9.1 푸터 구조 잡기</li>
+                                        <li>9.2 푸터 디자인 설정</li>
+                                        <li>9.3 반응형 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>10. 마무리
+                                    <ul>
+                                        <li>10.1 스무스 효과주기</li>
+                                        <li>10.2 링크 연결하기</li>
+                                        <li>10.3 netlify에 배포하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>REACT SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. React 설치하기</li>
+                                        <li>1_2. React 폴더 정리하기</li>
+                                        <li>1_3. 라이브러리 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 라우팅 및 컴퍼넌트
+                                    <ul>
+                                        <li>2_1. 라우팅 설정하기</li>
+                                        <li>2_2. 컴퍼넌트 설정하기</li>
+                                        <li>2_3. SCSS 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 헤더 영역
+                                    <ul>
+                                        <li>3_1. 헤더 구조잡기</li>
+                                        <li>3_2. 헤더 디자인 설정</li>
+                                        <li>3_3. 헤더 데이터 작업</li>
+                                        <li>3_4. 헤더 토글 메뉴 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 영역
+                                    <ul>
+                                        <li>4_1. 인트로 구조잡기</li>
+                                        <li>4_2. 인트로 디자인 설정</li>
+                                        <li>4_3. 인트로 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>5. 스킬 영역
+                                    <ul>
+                                        <li>5_1. 스킬 구조잡기</li>
+                                        <li>5_2. 스킬 디자인 설정</li>
+                                        <li>5_3. 스킬 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이트 영역
+                                    <ul>
+                                        <li>6_1. 사이트 구조잡기</li>
+                                        <li>6_2. 사이트 디자인 설정</li>
+                                        <li>6_3. 사이트 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>7. 포트폴리오 영역
+                                    <ul>
+                                        <li>7_1. 포트폴리오 구조잡기</li>
+                                        <li>7_2. 포트폴리오 디자인 설정</li>
+                                        <li>7_3. 포트폴리오 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>8. 연락처 영역
+                                    <ul>
+                                        <li>8_1. 연락처 구조잡기</li>
+                                        <li>8_2. 연락처 디자인 설정</li>
+                                        <li>8_3. 연락처 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>9. 푸터 영역
+                                    <ul>
+                                        <li>9_1. 푸터 구조잡기</li>
+                                        <li>9_2. 푸터 디자인 설정</li>
+                                        <li>9_3. 푸터 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>10. 마무리
+                                    <ul>
+                                        <li>10_1. 데이터 통합하기</li>
+                                        <li>10_2. 스무스 효과 넣어주기</li>
+                                        <li>10_3. 가로모드 구현하기</li>
+                                        <li>10_4. netlify에 배포하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>VUE SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. Vue 설치하기</li>
+                                        <li>1_2. Vue 폴더 정리하기</li>
+                                        <li>1_3. 라이브러리 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 라우팅 및 컴퍼넌트
+                                    <ul>
+                                        <li>2_1. 라우팅 설정하기</li>
+                                        <li>2_2. 컴퍼넌트 설정하기</li>
+                                        <li>2_3. SCSS 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 헤더 영역
+                                    <ul>
+                                        <li>3_1. 헤더 구조잡기</li>
+                                        <li>3_2. 헤더 디자인 설정</li>
+                                        <li>3_3. 헤더 데이터 작업</li>
+                                        <li>3_4. 헤더 토글 메뉴 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 영역
+                                    <ul>
+                                        <li>4_1. 인트로 구조잡기</li>
+                                        <li>4_2. 인트로 디자인 설정</li>
+                                        <li>4_3. 인트로 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>5. 스킬 영역
+                                    <ul>
+                                        <li>5_1. 스킬 구조잡기</li>
+                                        <li>5_2. 스킬 디자인 설정</li>
+                                        <li>5_3. 스킬 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이트 영역
+                                    <ul>
+                                        <li>6_1. 사이트 구조잡기</li>
+                                        <li>6_2. 사이트 디자인 설정</li>
+                                        <li>6_3. 사이트 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>7. 포트폴리오 영역
+                                    <ul>
+                                        <li>7_1. 포트폴리오 구조잡기</li>
+                                        <li>7_2. 포트폴리오 디자인 설정</li>
+                                        <li>7_3. 포트폴리오 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>8. 연락처 영역
+                                    <ul>
+                                        <li>8_1. 연락처 구조잡기</li>
+                                        <li>8_2. 연락처 디자인 설정</li>
+                                        <li>8_3. 연락처 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>9. 푸터 영역
+                                    <ul>
+                                        <li>9_1. 푸터 구조잡기</li>
+                                        <li>9_2. 푸터 디자인 설정</li>
+                                        <li>9_3. 푸터 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>10. 마무리
+                                    <ul>
+                                        <li>10_1. 스무스 효과 넣어주기</li>
+                                        <li>10_2. 가로모드 구현하기</li>
+                                        <li>10_3. 링크 클릭 구현하기</li>
+                                        <li>10_4. netlify에 배포하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>NEXT SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. Next 설치하기</li>
+                                        <li>1_2. Next 폴더 정리하기</li>
+                                        <li>1_3. 라이브러리 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. 라우팅 및 컴퍼넌트
+                                    <ul>
+                                        <li>2_1. 라우팅 설정하기</li>
+                                        <li>2_2. 컴퍼넌트 설정하기</li>
+                                        <li>2_3. SCSS 설정하기</li>
+                                        <li>2_4. Script 설정하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //index -->
+
+                    <h3>2. 라우팅 및 컴퍼넌트</h3>
+                    <div id="n21">
+                        <h4>1_1. 라우팅 설정하기</h4>
+                        <p>
+                            next.js는 라우팅을 설정할 필요하가 없습니다. 
+                            <code>app</code> 폴더 자체가 주소를 나타냅니다. 
+                            우리 예제에는 페이지가 하나밖에 없어서 쓸 일은 없지만 기본이기 때문에 살짝 언급합니다.
+                        </p>
+                        <p>
+                            Next.js에서의 라우팅은 pages 폴더 내에 생성된 파일과 폴더의 구조를 기반으로 이루어집니다. 
+                            일반적으로 pages 폴더에는 각 페이지에 대한 컴포넌트 파일이 생성됩니다. 
+                            이 파일들의 위치와 파일 이름이 라우팅 경로와 일치하도록 구성하는 것으로 자동으로 라우팅 매핑이 이루어집니다.
+                        </p>
+                        <p>
+                            <code>about</code> 폴더를 만들고 파일을 만드면 페이지가 완성됩니다. 
+                            이번 튜토에서는 쓸 일이 없지만 다음 강의에서는 써보겠습니다. 
+                            한번 테스트해보세요!
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">.next</li> 
+                                <li class="icon1">node_modules</li> 
+                                <li class="icon1">public
+                                    <ul>
+                                        <li class="icon2 m0">favicon.svg</li>
+                                    </ul>
+                                </li>
+                                <li class="icon1">src
+                                    <ul>
+                                        <li class="icon1">app
+                                            <ul>
+                                                <li class="icon1 m0">about
+                                                    <ul>
+                                                        <li class="icon2 m0">about.jsx</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li class="icon2 m0">layout.js</li>
+                                                <li class="icon2 m0">page.js</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1 m0">assets</li>
+                                        <li class="icon1 m0">components</li>
+                                        <li class="icon1 m0">constants</li>
+                                        <li class="icon1 m0">utils</li>
+                                    </ul>
+                                </li>
+                                <li class="icon2 m0">.gitignore</li> 
+                                <li class="icon2 m0">jsconfig.json</li> 
+                                <li class="icon2 m0">next.config.js</li> 
+                                <li class="icon2 m0">package-lock.json</li> 
+                                <li class="icon2 m0">package.json</li> 
+                                <li class="icon2 m0">README.md</li> 
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="n22" class="mt80">
+                        <h4>2_2. 컴퍼넌트 설정하기</h4>
+                        <p>
+                            기본 폴더 구조는 다음과 같이 작업하겠습니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">src
+                                    <ul>
+                                        <li class="icon1">app
+                                            <ul>
+                                                <li class="icon2 m0">layout.js</li>
+                                                <li class="icon2 m0">page.js</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1 m0">assets</li>
+                                        <li class="icon1 m0">components
+                                            <ul>
+                                                <li class="icon2 m0">Contact.jsx</li>
+                                                <li class="icon2 m0">Footer.jsx</li>
+                                                <li class="icon2 m0">Header.jsx</li>
+                                                <li class="icon2 m0">Intro.jsx</li>
+                                                <li class="icon2 m0">Port.jsx</li>
+                                                <li class="icon2 m0">Site.jsx</li>
+                                                <li class="icon2 m0">Skill.jsx</li>
+                                                <li class="icon2 m0">Skip.jsx</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1 m0">constants</li>
+                                        <li class="icon1 m0">utils</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            <code>app</code> 의 <code>page.js</code> 파일은 다음과 같이 작성하겠습니다.
+                        </p>
+<pre><code class="language-js">import React from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Intro from "@/components/Intro";
+import Skill from "@/components/Skill";
+import Site from "@/components/Site";
+import Port from "@/components/Port";
+import Contact from "@/components/Contact";
+import Skip from "@/components/Skip";
+
+export default function Home() {
+    return (
+        &lt;&gt;
+            &lt;Skip /&gt;
+            &lt;Header /&gt;
+            &lt;main id="main" role="main"&gt;
+                &lt;Intro /&gt;
+                &lt;Skill /&gt;
+                &lt;Site /&gt;
+                &lt;Port /&gt;
+                &lt;Contact /&gt;
+            &lt;/main&gt;
+            &lt;Footer /&gt;
+        &lt;/&gt;
+    );
+}
+</code></pre>
+                        
+                        <p>
+                            <code>components</code> 의 <code>Contact.jsx</code> 파일은 다음과 같이 작성하겠습니다.
+                            <code>Footer.jsx</code>, <code>Header.jsx</code>, <code>Intro.jsx</code>
+                            <code>Port.jsx</code>, <code>Site.jsx</code>, <code>Skill.jsx</code>, <code>Skip.jsx</code> 파일들도 
+                            이렇게 작업을 하겠습니다.
+                        </p>
+<pre><code class="language-js">import React from "react";
+
+const Contact = () => {
+    return (
+        &lt;div&gt;Contact&lt;/div&gt;
+    )
+}
+
+export default Contact;
+</code></pre>
+                    </div>
+                    
+                    <div id="n23" class="mt80">
+                        <h4>2_3. SCSS 설정하기</h4>
+                        <p>
+                            Next.js에서 module.css 기능은 CSS 모듈을 지원하는 기능을 말합니다. 
+                            이를 통해 각각의 컴포넌트에 대해 고유한 CSS 스코프를 생성하여 CSS 클래스 이름이 겹치는 문제를 방지하고, 
+                            CSS 스타일을 더욱 모듈화하고 재사용할 수 있게 해줍니다.
+                            이렇게 작업하면 고유한 CSS 네임명이 생겨서 겹치는 문제를 방지할 수 있지만, 
+                            우리는 기존에 scss를 사용했기 때문에 이 방법을 사용하진 않겠습니다. 
+                            그냥 이런 방법도 있구나! 정도 아시면 될 것 같습니다.
+                            다음에 다른 튜토리얼에서 사용할 기회가 있을 거 같습니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">src
+                                    <ul>
+                                        <li class="icon1">app</li>
+                                        <li class="icon1 m0">assets
+                                            <ul>
+                                                <li class="icon1">section
+                                                    <ul>
+                                                        <li class="icon2 m0">_contact.scss</li>
+                                                        <li class="icon2 m0">_footer.scss</li>
+                                                        <li class="icon2 m0">_header.scss</li>
+                                                        <li class="icon2 m0">_intro.scss</li>
+                                                        <li class="icon2 m0">_port.scss</li>
+                                                        <li class="icon2 m0">_site.scss</li>
+                                                        <li class="icon2 m0">_skill.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon1">setting
+                                                    <ul>
+                                                        <li class="icon2 m0">_fonts.scss</li>
+                                                        <li class="icon2 m0">_mixin.scss</li>
+                                                        <li class="icon2 m0">_reset.scss</li>
+                                                        <li class="icon2 m0">_vars.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon2 m0">style.scss</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1 m0">components</li>
+                                        <li class="icon1 m0">constants</li>
+                                        <li class="icon1 m0">utils</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <p>
+                            <code>app</code> 폴더 <code>layout.js</code>에 다음 소스를 추가하겠습니다.
+                        </p>
+<pre><code class="language-css">import "@/assets/scss/style.scss";</code></pre>
+                        <p>
+                            <code>style.scss</code>는 다음과 같이 작업하겠습니다.
+                        </p>
+<pre><code class="language-scss">@charset "UTF-8";
+
+// setting
+@import "setting/fonts";
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+
+// section
+@import "section/header";
+@import "section/intro";
+@import "section/skill";
+@import "section/site";
+@import "section/port";
+@import "section/contact";
+@import "section/footer";</code></pre>
+                        <p>
+                            <code>_font.scss</code>는 다음과 같이 작업하겠습니다.
+                        </p>
+<pre><code class="language-scss">@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css");
+@import url("https://websfont.github.io/gmarket/gmarket.css");
+
+.mont {
+    font-family: "Montserrat";
+}
+.nanum {
+    font-family: "nanumSquareNeo";
+}
+.gmarket {
+    font-family: "gmarket";
+}
+</code></pre>
+                        <p>
+                            <code>_vars.scss</code>는 다음과 같이 작업하겠습니다.
+                        </p>
+<pre><code class="language-scss">:root {
+    --mainEng-font: "Montserrat";
+    --mainKor-font: "nanumSquareNeo";
+    --mainNum-font: "gmarket";
+  
+    --mainBg-color: #f3ede8;
+    --subBg100: #cdc0b1;
+    --subBg200: #afa395;
+    --subBg300: #81887c;
+    --subBg400: #afa7a2;
+    --subBg500: #a6afa2;
+  
+    --white: #fff;
+    --black: #000;
+    --black100: #2b2b2b;
+    --black200: #434343;
+    --black300: #686868;
+    --black400: #e0e0e0;
+  
+    font-family: var(--mainEng-font), var(--mainKor-font);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  
+    @media (max-width: 800px) {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+  
+body {
+    background-color: var(--mainBg-color);
+}
+</code></pre>
+
+                        <p>
+                            <code>_reset.scss</code>는 다음과 같이 작업하겠습니다.
+                        </p>
+<pre><code class="language-scss">// border-box 초기화
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// 공백 초기화
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+    
+// 폰트 초기화
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-family: var(--mainEng-font), var(--mainKor-font), "Apple SD Gothic Neo",
+    "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+}
+
+// 링크 초기화
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+    
+// 스타일 초기화
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+em,
+address {
+    font-style: normal;
+}
+
+strong {
+    font-weight: normal;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+    
+// 스킵메뉴
+#skip a {
+    position: absolute;
+    left: 10px;
+    top: -92px;
+    z-index: 100000;
+    font-size: 1rem;
+    padding: 10px 30px;
+    color: var(--white);
+    background: var(--black);
+}
+#skip a:focus,
+#skip a:active {
+    top: 10px;
+}    
+</code></pre>
+
+                        <p>
+                            <code>_mixin.scss</code>는 다음과 같이 작업하겠습니다.
+                        </p>
+<pre><code class="language-scss">// 가운데 정렬
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// 양쪽 정렬
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// 중앙 정렬
+@mixin position-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 상단 고정
+@mixin position-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+</code></pre>
+                    </div>
+
+                    <div id="n24" class="mt80">
+                        <h4>2_4. Script 설정하기</h4>
+                        <p>
+                            스크리트 셋팅도 기존의 리액트와 비슷합니다. 
+                            그럼 한번 해볼가요?
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">src
+                                    <ul>
+                                        <li class="icon1">app
+                                            <ul>
+                                                <li class="icon2 m0">layout.js</li>
+                                                <li class="icon2 m0">page.js</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1 m0">assets</li>
+                                        <li class="icon1 m0">components</li>
+                                        <li class="icon1 m0">constants
+                                            <ul>
+                                                <li class="icon2 m0">index.js</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1 m0">utils
+                                            <ul>
+                                                <li class="icon2 m0">lenis.js</li>
+                                                <li class="icon2 m0">link.js</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            <code>constants</code> 폴더 <code>layout.js</code>에 다음 소스를 추가하겠습니다.
+                        </p>
+<pre><code class="language-js">import port01 from "../assets/img/port01.jpg";
+import port02 from "../assets/img/port02.jpg";
+import port03 from "../assets/img/port03.jpg";
+import port04 from "../assets/img/port04.jpg";
+import port05 from "../assets/img/port05.jpg";
+import port06 from "../assets/img/port06.jpg";
+import port07 from "../assets/img/port07.jpg";
+import port08 from "../assets/img/port08.jpg";
+import port09 from "../assets/img/port09.jpg";
+import port10 from "../assets/img/port10.jpg";
+
+export const headerNav = [
+    {
+        title: "intro",
+        url: "#intro",
+    },
+    {
+        title: "skill",
+        url: "#skill",
+    },
+    {
+        title: "site",
+        url: "#site",
+    },
+    {
+        title: "portfolio",
+        url: "#port",
+    },
+    {
+        title: "contact",
+        url: "#contact",
+    },
+];
+
+export const introText = {
+    title: "port developer",
+    desc: ["talent is", "found at the end of the", "effort"],
+};
+
+export const skillText = [
+    {
+        title: "꿈을 설계하고 디자인하다.",
+        desc: "나는 공간을 만드는 것을 좋아한다. 어려을 때부터 나만의 공간을 만드는 것을 좋아했고 나만의 다락방을 좋아했다. 단 한 사람이라도 내가 만든 공간 속에서 영감을 받거나 마음이 움직였으면 좋겠다. 나만의 공간을 마음것 만들 수 있다는 건 코딩에 엄청난 매력인거 같다. 그 한구석에 나만의 꿈을 설계하고, 개발을 하며 앞으로도 살고 싶다.",
+    },
+    {
+        title: "열심히 할수록 기회는 따른다.",
+        desc: "운이 좋은 사람은 없다. 단지 운을 만들 뿐이다. 운을 만들기 위해서는 내가 좋아하는 일이나 내가 하고 싶은 일에 몰두하면 된다. 몰두 하다보면 길이 보이고 방향이 보이게 된다. 운이란 고된 노동과 노력을 통해 스스로 만들어 내는 것이다.",
+    },
+    {
+        title: "나에게 정직하다.",
+        desc: "정직은 다른 사람보다 나에게 큰 의미를 부여해야 한다. 자신이 정직하지 않으면 진정으로 원하는 일을 열정적으로 밀고 나갈 수 없다. 마음에서 우러나오는 일을 해야 정직해지며 삶을 더 즐길 줄 알게 된다.",
+    },
+];
+
+export const siteText = [
+    {
+        text: ["make", "site compliant with", "webstandard"],
+        title: "웹 표준을 준수한 사이트 제작",
+        code: "https://github.com/webstoryboy/port2023-vite",
+        view: "https://port2023-vite.netlify.app",
+        info: [
+            "site coding",
+            "production period : two days",
+            "use stack : HTML5/CSS3, CSS Variable, Vite",
+        ],
+    },
+    {
+        text: ["make", "site compliant with", "react.js"],
+        title: "리액트를 이용한 사이트 제작",
+        code: "https://github.com/webstoryboy/port2023-react",
+        view: "https://port2023-react.netlify.app",
+        info: [
+            "site coding",
+            "production period : two days",
+            "use stack : HTML5/CSS3, CSS Variable, Vite",
+        ],
+    },
+    {
+        text: ["make", "site compliant with", "vue.js"],
+        title: "뷰를 이용한 사이트 제작",
+        code: "https://github.com/webstoryboy/port2023-vue",
+        view: "https://port2023-vue.netlify.app",
+        info: [
+            "site coding",
+            "production period : two days",
+            "use stack : HTML5/CSS3, Scss Variable, vue",
+        ],
+    },
+    {
+        text: ["make", "site compliant with", "next.js"],
+        title: "넥스트를 이용한 사이트 제작",
+        code: "https://github.com/webstoryboy/port2023-next",
+        view: "https://port2023-next.netlify.app",
+        info: [
+            "site coding",
+            "production period : two days",
+            "use stack : HTML5/CSS3, Scss Variable, next.js",
+        ],
+    },
+];
+
+export const portText = [
+    {
+        num: "01",
+        title: "어워드에도 올라간 포트폴리오",
+        desc: "라마 디자인을 통해 자신의 스킬을 가장 멋지게 표현한 포트폴리오입니다. 가로 모드와 세로 모드는 매우 인상적이며 특히 리액트와 비트를 이용하여 제작한 것은 더욱 놀랍습니다. 이 사이트는 awwwards.com에도 인정받아 올라간 포트폴리오입니다. 확실히 그의 뛰어난 디자인 스킬과 기술력이 빛을 발휘한 결과물인 것 같습니다.",
+        img: port01,
+        code: "https://github.com/kimsangjunv1/-React-Portfolio",
+        view: "https://portfoliosj-react.netlify.app",
+        name: "김상* 포트폴리오",
+    },
+    {
+        num: "02",
+        title: "빛나는 밤에 포트폴리오",
+        desc: "이 사이트는 정말 인상적인 포트폴리오입니다. 특히 스무스한 효과와 가로 모드드 높은 퀄리티를 자랑합니다. 디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다. GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하는데, 부족함이 없으며, 세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다. ",
+        img: port02,
+        code: "https://github.com/seolhee313/PORTFOLIO-REACT",
+        view: "https://portfolio-313.web.app/",
+        name: "천설* 포트폴리오",
+    },
+    {
+        num: "03",
+        title: "열정이 넘치는 포트폴리오",
+        desc: "이 사이트는 정말 인상적인 포트폴리오입니다. 특히 스무스한 효과와 가로 모드드 높은 퀄리티를 자랑합니다. 디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다. GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하는데, 부족함이 없으며, 세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다. ",
+        img: port03,
+        code: "https://github.com/seolhee313/PORTFOLIO-REACT",
+        view: "https://portfolio-313.web.app/",
+        name: "천설* 포트폴리오",
+    },
+    {
+        num: "04",
+        title: "모던한 포트폴리오",
+        desc: "블랙 컨셉과 애니메이션이 돋보이는 포트폴리오 사이트입니다. GSAP를 통한 애니메이션과 NEXT.js를 통해 제작된 포트폴리오입니다. pin 애니메이션을 통한 포폴 작업물의 표현 능력이 돋보이는 사이트입니다.",
+        img: port04,
+        code: "https://github.com/dlgnsrb227/portfolio-next",
+        view: "https://hoongportfolio-next.netlify.app/",
+        name: "이훈* 포트폴리오",
+    },
+    {
+        num: "05",
+        title: "가로모드의 정석 포트폴리오",
+        desc: "이 포트폴리오는 가로모드를 통해 눈에 띄는 애니메이션 효과를 가진 멋진 작품들이 펼쳐집니다. 세션 간의 부드러운 전환과 흥미로운 움직임이 사용자들에게 색다른 경험을 선사합니다. 사이트에는 탁월한 디자인과 창의적인 애니메이션들이 어우러져, 사용자들에게 인상적인 시각적인 효과를 줍니다. 애니메이션은 적절히 사용되어 사이트를 더욱 생동감 있게 만들어주는 포트폴리오입니다.",
+        img: port05,
+        code: "/",
+        view: "https://junseungpark.github.io/portfolio/index3.html",
+        name: "박준* 포트폴리오",
+    },
+    {
+        num: "06",
+        title: "화려함의 정석 포트폴리오",
+        desc: "화려하고 세련된 디자인과 다채로운 색상이 사용된 포트폴리오는 사용자를 홀릴 듯한 시각적인 매력을 지니고 있습니다. 포트폴리오 내의 각 작품들은 디테일한 디자인과 탁월한 시각적 표현력을 갖추고 있어, 주인공의 뛰어난 예술적 감각을 느낄 수 있습니다. 화려한 애니메이션 효과와 부드러운 전환은 사이트를 더욱 생동감 있게 만들어주며, 사용자들에게 색다른 경험을 선사합니다.",
+        img: port06,
+        code: "/",
+        view: "https://webstoryboy.github.io/port2023/portfolio-student/DavidYang/index.html",
+        name: "포트폴리오",
+    },
+    {
+        num: "07",
+        title: "패럴랙스 정석 포트폴리오",
+        desc: "마치 예술작품을 감상하는 듯한 환상적인 경험을 선사하는 포트폴리오입니다. 패럴랙스 스크롤링을 활용하여 구성된 사이트는 사용자들에게 독특하고 멋진 시각적 효과를 제공합니다. 배경과 움직이는 요소들이 조화롭게 어우러져, 사이트 전반에 걸쳐 깊이와 입체감을 느낄 수 있습니다. 스크롤에 따라 움직이는 요소들은 마치 세계를 탐험하는 듯한 느낌을 주며, 사용자들을 끌어들이는 매력적인 요소로 작용합니다.",
+        img: port07,
+        code: "/",
+        view: "https://webstoryboy.github.io/port2023/portfolio-student/TaeyongLee/index.html",
+        name: "포트폴리오",
+    },
+    {
+        num: "08",
+        title: "트랜지션 포트폴리오",
+        desc: "화면 전환과 요소들의 흐름이 순조롭고 매끄러운 작품들로 가득한 포트폴리오 사이트입니다. 페이지 간의 트랜지션은 마치 이야기를 풀어내는 듯한 흥미진진한 경험을 선사합니다. 트랜지션 효과의 적절한 활용은 작품들을 보다 동적이고 생동감 있게 만들어줍니다. 각 페이지의 이동이 자연스럽고 사용자들이 원활하게 사이트를 탐색할 수 있도록 배려된 구성은 개발자의 디자인 능력을 잘 보여주는 특징입니다.",
+        img: port08,
+        code: "/",
+        view: "https://webstoryboy.github.io/port2023/portfolio-student/HyunroKim/index.html",
+        name: "포트폴리오",
+    },
+    {
+        num: "09",
+        title: "스크롤의 정석 포트폴리오",
+        desc: "스크롤링을 활용하여 훌륭한 사용자 경험을 선사하는 포트폴리오 사이트입니다. 스크롤을 내리면서 작품들이 순차적으로 나타나고 효과적으로 전환되는 것은 마치 예술적인 이야기를 읽어나가는 듯한 느낌을 주며 사용자를 매료시킵니다. 스크롤의 움직임을 통해 작품들이 서서히 드러나고, 각 페이지 간의 전환은 자연스럽고 부드럽습니다. 이러한 트랜지션과 애니메이션들이 작품들의 내용과 테마를 더욱 강조해줍니다.",
+        img: port09,
+        code: "/",
+        view: "https://webstoryboy.github.io/port2023/portfolio-student/ChoJaeHyung/index.html",
+        name: "포트폴리오",
+    },
+    {
+        num: "10",
+        title: "모던함의 정석 포트폴리오",
+        desc: "현대적이고 세련된 디자인으로 가득한 포트폴리오 사이트입니다. 모던한 느낌과 세심한 디테일이 조화를 이루며, 사용자에게 신선하고 품격 있는 경험을 제공합니다. 사이트의 디자인은 깔끔하고 단정하면서도 특유의 감성과 풍부한 표현력이 느껴집니다. 간결한 레이아웃과 모던한 색상 선택은 주인공의 디자인 감각을 잘 보여주는 특징입니다.",
+        img: port10,
+        code: "/",
+        view: "https://webstoryboy.github.io/port2023/portfolio-student/JooHyeji/index.html",
+        name: "포트폴리오",
+    },
+];
+
+export const contactText = [
+    {
+        link: "https://open.kakao.com/o/gM7YLzwf",
+        title: "KAKAO : webstupids",
+    },
+    {
+        link: "mailto:webstoryboy@naver.com",
+        title: "mail : webstoryboy@naver.com",
+    },
+];
+
+export const footerText = [
+    {
+        title: "youtube",
+        desc: "유튜브에 오시면 더 많은 강의를 볼 수 있습니다.",
+        link: "https://www.youtube.com/@Webstoryboy",
+    },
+    {
+        title: "github",
+        desc: "깃헙에 오시면 더 많은 소스를 볼 수 있습니다.",
+        link: "https://github.com/webstoryboy",
+    },
+    {
+        title: "blog",
+        desc: "블러그에 오시면 더 많은 정보를 볼 수 있습니다.",
+        link: "https://webstoryboy.co.kr",
+    },
+    {
+        title: "gsap",
+        desc: "GSAP에 오시면 더 많은 강의를 볼 수 있습니다.",
+        link: "https://www.youtube.com/playlist?list=PL4UVBBIc6giL8-6jvrClimg0cFL-Muqiq",
+    },
+    {
+        title: "react",
+        desc: "리액트로 만든 사이트를 같이 만들어 봅니다.",
+        link: "https://github.com/webstoryboy/port2023-react",
+    },
+    {
+        title: "vue",
+        desc: "뷰로 만든 사이트를 같이 만들어 봅니다.",
+        link: "https://github.com/webstoryboy/port2023-vue",
+    },
+    {
+        title: "next",
+        desc: "넥스트로 만든 사이트를 같이 만들어 봅니다.",
+        link: "https://github.com/webstoryboy/port2023-next",
+    },
+];</code></pre>
+                        <p>
+                            <code>utils</code> 폴더 <code>lenis.js</code>에 다음 소스를 추가하겠습니다.
+                        </p>
+<pre><code class="language-js">const lenis = () => {
+    console.log(lenis);
+}
+export default lenis;
+</code></pre>
+                        <p>
+                            <code>utils</code> 폴더 <code>link.js</code>에 다음 소스를 추가하겠습니다.
+                        </p>
+<pre><code class="language-js">const link = () => {
+    console.log(link)
+}
+export default link;
+</code></pre>
+
+                        <p>
+                            이제 작동이 되는지 확인을 해보겠습니다. 
+                            <code>app</code> 폴더에 <code>page.js</code>에 다음과 같이 설정하겠습니다. 
+                            잠깐 설명을 했었는데 next.js는 SSR 방식이기 때문에
+                            effect 효과를 주기 위해서는 CSR로 변경해야 합니다. 
+                            그래서 <code>use client</code>를 설정하였고, <code>useEffect</code>를 사용하기 위해 설정했습니다. 
+                        </p>
+<pre><code class="language-js">"use client";
+import React, { useEffect } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Intro from "@/components/Intro";
+import Skill from "@/components/Skill";
+import Site from "@/components/Site";
+import Port from "@/components/Port";
+import Contact from "@/components/Contact";
+import Skip from "@/components/Skip";
+import lenis from "@/utils/lenis";
+import link from "@/utils/link";
+
+export default function Home() {
+    useEffect(() =&gt; {
+        lenis();
+        link();
+    }, []);
+
+    return (
+        &lt;&gt;
+            &lt;Skip /&gt;
+            &lt;Header /&gt;
+            &lt;main id="main" role="main"&gt;
+                &lt;Intro /&gt;
+                &lt;Skill /&gt;
+                &lt;Site /&gt;
+                &lt;Port /&gt;
+                &lt;Contact /&gt;
+            &lt;/main&gt;
+            &lt;Footer /&gt;
+        &lt;/&gt;
+    );
+}
+</code></pre>
+                        <p>
+                            console.log를 확인해보면 다음과 같은 메세지를 확인할 수 있습니다. 
+                            여기까지 성공했으면 기본 셋팅은 완료가 됐습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/n6.png" alt="next.js">
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            마지막 튜토리얼 넥스트 셋팅을 완료했습니다. 
+                            리액트의 단점을 보완한 버전이라고 생각하면 편할거 같습니다. 
+                            기존에 썼던 단점이나 불편한 점을 보완해서 새롭게 탄생한 버전 같은 느낌이네요! 
+                            SEO뿐만 아니라 SSR, CSR 개념을 알아두어야 넥스트를 하는 의미가 있습니다. 
+                            그럼 오늘도 수고하셨습니다. 🤭
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://port2023-next.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <ul class="refer5">
+                        <li><a href="https://webstoryboy.co.kr/1944">1. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1945">2. 포트폴리오 사이트 만들기 : Next-Site : 레이아웃</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1946">3. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1947">4. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1948">5. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1949">6. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1950">7. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1951">8. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1952">9. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1953">10. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
+                    </ul>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

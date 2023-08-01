@@ -1387,6 +1387,11 @@ code.hljs {
 .sampleBasic p {
   margin-bottom: 3px;
 }
+.sampleBasic h5 {
+  text-decoration: underline;
+  text-underline-position: under;
+  margin-top: 10px;
+}
 .sampleFolder {
   background-color: #282936;
   display: block;

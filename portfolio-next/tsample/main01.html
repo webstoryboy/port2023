@@ -61,7 +61,7 @@
         <section id="blog" class="nanumSquareNeo">
             <div class="blog__title">
                 <span class="cate">Tutorial/portfolio</span>
-                <h1 class="title">포트폴리오 사이트 만들기 - Vue</h1>
+                <h1 class="title">포트폴리오 사이트 만들기 - Next</h1>
                 <div class="meta">
                     <span class="author">by @webs</span>
                     <span class="date">2023. 08. 01.</span>
@@ -77,8 +77,8 @@
                         </div>
                         <div class="right">
                             <div class="btn">소스 다운로드</div>
-                            <a href="https://port2023-vue.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
-                            <a href="https://github.com/webstoryboy/port2023-vue" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://port2023-next.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">완성 코드</a>
                             <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
                         </div>
                     </div>
@@ -276,90 +276,186 @@
                                         <li>1_4. git 연동하기</li>
                                     </ul>
                                 </li>
+                                <li>2. 라우팅 및 컴퍼넌트
+                                    <ul>
+                                        <li>2_1. 라우팅 설정하기</li>
+                                        <li>2_2. 컴퍼넌트 설정하기</li>
+                                        <li>2_3. SCSS 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 헤더 영역
+                                    <ul>
+                                        <li>3_1. 헤더 구조잡기</li>
+                                        <li>3_2. 헤더 디자인 설정</li>
+                                        <li>3_3. 헤더 데이터 작업</li>
+                                        <li>3_4. 헤더 토글 메뉴 작업하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 영역
+                                    <ul>
+                                        <li>4_1. 인트로 구조잡기</li>
+                                        <li>4_2. 인트로 디자인 설정</li>
+                                        <li>4_3. 인트로 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>5. 스킬 영역
+                                    <ul>
+                                        <li>5_1. 스킬 구조잡기</li>
+                                        <li>5_2. 스킬 디자인 설정</li>
+                                        <li>5_3. 스킬 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이트 영역
+                                    <ul>
+                                        <li>6_1. 사이트 구조잡기</li>
+                                        <li>6_2. 사이트 디자인 설정</li>
+                                        <li>6_3. 사이트 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>7. 포트폴리오 영역
+                                    <ul>
+                                        <li>7_1. 포트폴리오 구조잡기</li>
+                                        <li>7_2. 포트폴리오 디자인 설정</li>
+                                        <li>7_3. 포트폴리오 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>8. 연락처 영역
+                                    <ul>
+                                        <li>8_1. 연락처 구조잡기</li>
+                                        <li>8_2. 연락처 디자인 설정</li>
+                                        <li>8_3. 연락처 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>9. 푸터 영역
+                                    <ul>
+                                        <li>9_1. 푸터 구조잡기</li>
+                                        <li>9_2. 푸터 디자인 설정</li>
+                                        <li>9_3. 푸터 데이터 작업</li>
+                                    </ul>
+                                </li>
+                                <li>10. 마무리
+                                    <ul>
+                                        <li>10_1. 스무스 효과 넣어주기</li>
+                                        <li>10_2. 가로모드 구현하기</li>
+                                        <li>10_3. 링크 클릭 구현하기</li>
+                                        <li>10_4. netlify에 배포하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>NEXT SITE</h4>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. Next 설치하기</li>
+                                        <li>1_2. Next 폴더 정리하기</li>
+                                        <li>1_3. 라이브러리 설치하기</li>
+                                        <li>1_4. git 연동하기</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <!-- //index -->
 
                     <h3>1. 셋팅하기</h3>
-                    <div id="v11">
-                        <h4>1_1. Vue 설치하기</h4>
-                        <p>뷰를 설치하고 작업을 해보기 전에 간단하게 뷰가 뭐하는 건지 잠깐 알아보고 가겠습니다.</p>
+                    <div id="n11">
+                        <h4>1_1. Next 설치하기</h4>
+                        <p>next.js를 설치하고 작업을 해보기 전에 간단하게 next.js가 뭐하는 건지 잠깐 알아보고 가겠습니다.</p>
                         <div class="sampleBasic">
                             <p>
-                                Vue.js는 현대적이고 직관적인 웹 애플리케이션 프레임워크로서, <i>사용자 인터페이스를 개발하기 위해 사용되는 자바스크립트 프레임워크입니다.</i>
-                                표준 HTML, CSS 및 JavaScript를 기반으로 구축되며, 단순한 것 부터 복잡한 것 까지 사용자 인터페이스를 효율적으로 개발할 수 있는 컴포넌트 기반 프로그래밍 모델을 제공합니다.
+                                Next.js는 <i>React 기반의 JavaScript 프레임워크로서</i>, 서버 사이드 렌더링(SSR)과 정적 사이트 생성(Static Site Generation)을 지원하여 웹 애플리케이션을 빠르고 SEO 친화적으로 만들 수 있도록 도와주는 도구입니다. 
+                                Next.js는 개발자들이 React를 사용하여 프로젝트를 구축하고, 더 효율적으로 성능을 최적화하는데 도움을 줍니다.
                             </p>
                             <ul class="list">
-                                <li>반응형 데이터 바인딩 : Vue.js는 데이터와 UI를 매우 간편하게 바인딩할 수 있습니다. 데이터의 변경이 자동으로 UI에 반영되어 화면과 상태가 항상 일치하도록 해 줍니다. 이로 인해 개발자는 직접 DOM 조작을 하지 않고도 데이터 상태 변화를 처리할 수 있어 개발 생산성을 높일 수 있습니다.</li>
-                                <li>컴포넌트 기반 아키텍처 : Vue.js는 컴포넌트 기반으로 구조화합니다. 즉, 작고 재사용 가능한 컴포넌트들로 구성되며, 각 컴포넌트는 자체적인 데이터와 로직을 갖습니다. 이러한 접근 방식은 코드의 가독성과 유지보수성을 높이고 개발을 단순화합니다.</li>
-                                <li>디렉티브 : Vue.js는 디렉티브(Directive)를 통해 HTML 요소의 동작을 확장할 수 있습니다. v-bind, v-if, v-for, v-on 등과 같은 디렉티브를 사용하여 템플릿과 데이터 간의 상호작용을 정의할 수 있습니다.</li>
-                                <li>이벤트 핸들링 : Vue.js는 이벤트 핸들링을 쉽게 구현할 수 있도록 지원합니다. 사용자 입력에 따른 이벤트 처리 뿐만 아니라 커스텀 이벤트도 쉽게 정의하고 사용할 수 있습니다.</li>
-                                <li>가상 DOM(Virtual DOM) : Vue.js는 가상 DOM을 사용하여 화면 갱신 성능을 최적화합니다. 변경된 부분만 실제 DOM에 적용하여 불필요한 렌더링을 방지하고 앱의 성능을 향상시킵니다.</li>
-                                <li>단방향 데이터 흐름 : Vue.js는 단방향 데이터 흐름을 따릅니다. 즉, 데이터는 항상 상위 컴포넌트에서 하위 컴포넌트로 흐르며, 하위 컴포넌트에서 직접 상위 컴포넌트의 데이터를 수정할 수 없습니다. 이로써 데이터의 흐름이 예측 가능하고 디버깅이 용이해집니다.</li>
+                                <li>서버 사이드 렌더링(SSR): Next.js는 서버 사이드 렌더링을 기본적으로 지원합니다. 이는 웹 페이지를 서버에서 렌더링하여 클라이언트에게 전달하므로 초기 로딩 속도가 개선되고, 검색 엔진 최적화(SEO)에 유리합니다.</li>
+                                <li>정적 사이트 생성(Static Site Generation): Next.js는 정적 사이트 생성을 지원하여 사전에 페이지를 렌더링하여 정적 파일로 생성할 수 있습니다. 이를 통해 빠른 페이지 로딩과 서버 비용 절감이 가능합니다.</li>
+                                <li>Hot Module Replacement(HMR): 개발 모드에서 코드 변경을 감지하여 자동으로 페이지를 리로드하거나 수정된 부분만 빠르게 갱신하여 개발 효율성을 높여줍니다.</li>
+                                <li>데이터 사전 가져오기(Prefetching): Next.js는 데이터 사전 가져오기를 지원하여 미리 필요한 데이터를 가져와 페이지가 렌더링될 때 데이터가 준비되도록 합니다.</li>
+                                <li>동적 라우팅(Dynamic Routing): 파일 시스템 기반의 라우팅을 지원하여 동적으로 라우팅되는 페이지를 쉽게 구현할 수 있습니다.</li>
                             </ul>
+                            <p>
+                                Next.js는 SSR과 정적 사이트 생성의 장점을 조합하여 빠른 로딩 속도와 SEO 최적화를 동시에 이뤄낼 수 있습니다. 
+                                또한, 높은 생산성과 개발 편의성을 제공하며, React 개발자들에게 강력한 도구로 평가되고 있습니다.
+                            </p>
                         </div>
                         <p>
-                            간단한 개념을 이해했으면 바로 시작해보겠습니다. 
+                            그럼 시작해보겠습니다. 
                             기존에 작업했던 <code>port2023</code> 폴더에 작업을 하겠습니다. 
-                            현재 이 폴더에는 <code>vite-site</code>, <code>react-site</code>가 있습니다. 
-                            그럼 터미널을 열고 <code>npm init vue@latest</code> 라고 작성하겠습니다. 
+                            현재 이 폴더에는 <code>vite-site</code>, <code>react-site</code>, <code>vue-site</code>가 있습니다. 
+                            그럼 터미널을 열고 <code>npx create-next-app@latest</code> 라고 작성하겠습니다. 
                             <i>여기서 주의할 점은 꼭 port2023 폴더에서 설정해야 합니다.</i>
                         </p>
-<pre><code class="language-js">$ npm init vue@latest</code></pre>
+<pre><code class="language-js">$ npx create-next-app@latest</code></pre>
                         <p>
-                            성공을 하면 아래와 같은 메세지가 뜨고 <code>cd vue-site</code>를 작성후 폴더 이동 후 <code>npm install</code>를 작성하면 됩니다.
-                            뷰를 시작하기 위해서는 <code>npm run dev</code>를 작성하면 시작이 됩니다.
+                            성공을 하면 아래와 같은 메세지가 뜹니다.
+                            <code>TypeScript</code> no, <code>ESLint</code> no, <code>Tailwind</code> no,
+                            <code>directory</code> yes, <code>Router</code> yes, <code>alias</code> yes,
+                            <code>configured</code>은 @를 선택합니다.
                         </p>
-<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023 % npm init vue@latest
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023 % npx create-next-app@latest
+✔ What is your project named? … next-site
+✔ Would you like to use TypeScript? … No / Yes
+✔ Would you like to use ESLint? … No / Yes
+✔ Would you like to use Tailwind CSS? … No / Yes
+✔ Would you like to use `src/` directory? … No / Yes
+✔ Would you like to use App Router? (recommended) … No / Yes
+✔ Would you like to customize the default import alias? … No / Yes
+✔ What import alias would you like configured? … @ / *
+Creating a new Next.js app in /Users/webstoryboy/Desktop/port2023/next-site.
 
-Vue.js - The Progressive JavaScript Framework
+Using npm.
 
-✔ Project name: … vue-site
-✔ Add TypeScript? … No / Yes
-✔ Add JSX Support? … No / Yes
-✔ Add Vue Router for Single Page Application development? … No / Yes
-✔ Add Pinia for state management? … No / Yes
-✔ Add Vitest for Unit Testing? … No / Yes
-✔ Add an End-to-End Testing Solution? › No
-✔ Add ESLint for code quality? … No / Yes
+Initializing project with template: app 
 
-Scaffolding project in /Users/webstoryboy/Desktop/port2023/vue-site...
+Installing dependencies:
+- react
+- react-dom
+- next
 
-Done. Now run:
+added 23 packages, and audited 24 packages in 6s
 
-    cd vue-site
-    npm install
-    npm run dev
+4 packages are looking for funding
+    run `npm fund` for details
 
-webstoryboy@Webstoryboyui-MacBookPro port2023 % </code></pre>
-
-                        <p>
-                            뷰 버전이 업데이트되면서 VITE와 통합이 되었습니다. 
-                            성공을 잘 했으면 다음과 같은 화면이 나옵니다.
-                            VITE는 처음 사이트 만들때 해봤으니까 대충 뭔지는 알겠죠?!
-                        </p>
-<pre><code class="language-js">VITE v4.4.7  ready in 266 ms
-
-➜  Local:   http://localhost:5173/
-➜  Network: use --host to expose
-➜  press h to show help
+found 0 vulnerabilities
+Success! Created next-site at /Users/webstoryboy/Desktop/port2023/next-site
 </code></pre>
+                        <p>
+                            설치된 폴더로 이동하기 위해 <code>cd next-site</code>를 작성하고 <code>npm run dev</code>라고 치면 실행이 됩니다. 
+                            로컬 주소가 나오고 CTRL을 누르고 클릭하면 브라우저에서 열립니다.
+                        </p>
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023 % cd next-site
+webstoryboy@Webstoryboyui-MacBookPro next-site % npm run dev
+
+> next-site@0.1.0 dev
+> next dev
+
+- ready started server on 0.0.0.0:3000, url: http://localhost:3000
+- event compiled client and server successfully in 110 ms (20 modules)
+- wait compiling...
+- event compiled client and server successfully in 75 ms (20 modules)
+</code></pre>
+                        <p>
+                            이런 화면이 나오면 성공한 것입니다. 축하드립니다.😶‍🌫️
+                        </p>
                         <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/portfolio-vue/tsample/img/v1.png" alt="vue" />
+                            <img src="img/n1.png" alt="next.js" />
                         </div>
                     </div>
 
-                    <div id="v12" class="mt80">
-                        <h4>1_2. Vue 폴더 정리하기</h4>
+                    <div id="n12" class="mt80">
+                        <h4>1_2. Next 폴더 정리하기</h4>
                         <p>
-                            이제 폴더를 정리하고 작업할 준비를 해볼까요?
-                            폴더는 다음과 같이 정리하겠습니다.
-                            나머지 파일은 다 지우겠습니다.
+                            리액트 기반으로 되어 있기 때문에 리액트와 많이 비슷합니다.
+                            리액트에 대해서 잘 알고 있다면 조금 더 수월할 수 있습니다. 
+                            폴더 셋팅은 다음과 같이 하겠습니다. 
                         </p>
                         <div class="sampleFolder">
                             <ul>
-                                <li class="icon1">node_modules</li>
+                                <li class="icon1">.next</li> 
+                                <li class="icon1">node_modules</li> 
                                 <li class="icon1">public
                                     <ul>
                                         <li class="icon2 m0">favicon.svg</li>
@@ -367,38 +463,65 @@ webstoryboy@Webstoryboyui-MacBookPro port2023 % </code></pre>
                                 </li>
                                 <li class="icon1">src
                                     <ul>
-                                        <li class="icon1">assets</li>
-                                        <li class="icon1">components</li>
-                                        <li class="icon1">router</li>
-                                        <li class="icon1">views</li>
-                                        <li class="icon2 m0">App.vue</li>
-                                        <li class="icon2 m0">main.js</li>
+                                        <li class="icon1">app
+                                            <ul>
+                                                <li class="icon2 m0">layout.js</li>
+                                                <li class="icon2 m0">page.js</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1 m0">assets</li>
+                                        <li class="icon1 m0">components</li>
+                                        <li class="icon1 m0">constants</li>
+                                        <li class="icon1 m0">utils</li>
                                     </ul>
                                 </li>
-                                <li class="icon2 m0">.gitignore</li>
-                                <li class="icon2 m0">package-lock.josn</li>
-                                <li class="icon2 m0">package.josn</li>
-                                <li class="icon2 m0">README.md</li>
-                                <li class="icon2 m0">vite.config.js</li> 
+                                <li class="icon2 m0">.gitignore</li> 
+                                <li class="icon2 m0">jsconfig.json</li> 
+                                <li class="icon2 m0">next.config.js</li> 
+                                <li class="icon2 m0">package-lock.json</li> 
+                                <li class="icon2 m0">package.json</li> 
+                                <li class="icon2 m0">README.md</li> 
                             </ul>
                         </div>
                         <div class="sampleBasic">
                             <ul class="list">
-                                <li>node_modules: 이 폴더에는 프로젝트에 필요한 의존성 패키지들이 저장됩니다. Vue.js 프로젝트에서는 npm(Node Package Manager)이나 yarn과 같은 패키지 매니저를 통해 필요한 라이브러리를 설치하면 이 폴더가 생성됩니다. 보통 개발자가 직접 관리하지 않습니다.</li>
-                                <li>public: 정적 파일들이 위치하는 폴더입니다. 이곳에 위치한 파일들은 빌드 시 번들링되지 않고 그대로 유지됩니다. 주로 index.html과 같은 메인 HTML 파일, 그리고 favicon과 같은 애플리케이션 아이콘 등이 이 폴더에 위치합니다.</li>
-                                <li>favicon.svg: 웹사이트의 브라우저 탭에 나타나는 아이콘으로, 브라우저의 북마크와 탭에서 사용됩니다. Vue.js 프로젝트에서는 일반적으로 public 폴더에 위치합니다.</li>
-                                <li>src: 프로젝트의 소스 코드들이 위치하는 폴더입니다. Vue.js 애플리케이션의 대부분의 개발 작업은 이 폴더 안에서 이루어집니다.</li>
-                                <li>assets: 프로젝트에서 사용되는 이미지, 폰트 등의 정적 에셋들이 위치하는 폴더입니다. 이 폴더 안에 있는 파일들은 빌드 시 번들링되어 최종 애플리케이션에 포함됩니다.</li>
-                                <li>components: Vue.js의 컴포넌트들이 위치하는 폴더입니다. 컴포넌트는 재사용 가능한 UI 요소를 의미하며, 각 컴포넌트는 자체적인 데이터와 로직을 가지고 있습니다.</li>
-                                <li>router: Vue.js 애플리케이션에서 라우팅을 관리하는 파일들이 위치하는 폴더입니다. 라우팅은 URL에 따라 다른 컴포넌트를 표시하는 기능을 제공합니다.</li>
-                                <li>views: Vue.js 애플리케이션의 페이지 뷰들이 위치하는 폴더입니다. 각각의 페이지는 하나 이상의 컴포넌트로 구성됩니다.</li>
-                                <li>App.vue: Vue.js 애플리케이션의 루트 컴포넌트로서, 보통 다른 컴포넌트들을 렌더링하는 역할을 합니다. 주로 앱 전체의 레이아웃을 정의하고, 라우터를 설정하고, 전역적으로 사용되는 상태를 관리하는 등의 작업을 수행합니다.</li>
-                                <li>main.js: Vue.js 애플리케이션의 진입점입니다. 여기서 Vue 인스턴스를 생성하고, 필요한 플러그인을 등록하고, 라우터와 스토어를 연결하는 등의 초기화 작업을 수행합니다.</li>
-                                <li>.gitignore: Git 저장소에 올릴 때 무시할 파일들을 지정하는 설정 파일입니다. 보통 node_modules와 빌드된 파일들과 같이 저장소에 포함하지 않을 파일들을 여기에 명시합니다.</li>
-                                <li>package-lock.json: npm 패키지 관리자를 사용할 때, 패키지 의존성의 정확한 버전과 의존성 트리를 저장하는 파일입니다. 일반적으로 이 파일은 자동으로 생성되며, 개발자가 직접 수정할 필요가 없습니다.</li>
-                                <li>package.json: 프로젝트의 메타데이터와 의존성 정보가 포함된 파일입니다. 프로젝트의 이름, 버전, 개발자 정보, 스크립트 등이 이 파일에 정의됩니다.</li>
-                                <li>README.md: 프로젝트에 대한 설명이 담긴 파일로, 보통 GitHub 등의 코드 저장소에 프로젝트를 공개할 때 프로젝트 정보와 사용법 등을 기재합니다.</li>
-                                <li>vite.config.js: Vite.js 빌드 시스템의 설정 파일입니다. Vite는 Vue.js 애플리케이션을 빌드하기 위한 개발 서버와 빠른 빌드 기능을 제공합니다. 이 파일에서는 Vite 빌드 설정을 수정할 수 있습니다.</li>
+                                <li>.next: Next.js가 빌드된 결과물을 담고 있는 폴더입니다. 이 폴더는 빌드 시 자동으로 생성되며, 서버 사이드 렌더링과 정적 사이트 생성에 사용되는 파일들이 포함됩니다.</li>
+                                <li>node_modules: Node.js의 패키지들이 설치되는 폴더입니다. Next.js와 프로젝트에서 사용하는 모든 종속성들이 이곳에 저장됩니다.</li>
+                                <li>public: 정적 파일들을 담는 폴더입니다. 이 폴더 내의 파일들은 빌드 시에 그대로 복사되어 프로젝트 루트에 배포됩니다. 예를 들어, 이미지 파일이나 favicon 등을 이 폴더에 저장하면 웹 애플리케이션에서 접근할 수 있습니다.</li>
+                                <li>favicon.svg: 웹 페이지의 파비콘(favicon) 이미지를 나타내는 파일입니다. 웹 브라우저 탭에 나타나는 작은 아이콘을 설정할 수 있습니다.</li>
+                                <li>src: 소스 코드가 저장되는 폴더입니다. 이 폴더 내에 주로 React 컴포넌트, 페이지, 스타일 등의 코드를 작성합니다.</li>
+                                <li>app: Next.js 애플리케이션의 기본 페이지를 정의하는 폴더입니다. app.js 파일을 통해 공통적인 레이아웃을 적용하거나 글로벌 스타일을 설정할 수 있습니다.</li>
+                                <li>layout.js: 애플리케이션의 페이지 레이아웃을 정의하는 파일입니다. 각 페이지에 적용되는 레이아웃을 설정할 수 있습니다.</li>
+                                <li>page.js: 페이지 컴포넌트를 정의하는 파일입니다. 각 페이지에 해당하는 컴포넌트를 작성하여 라우팅할 수 있습니다.</li>
+                                <li>assets: 애플리케이션에서 사용하는 리소스 파일들이 담기는 폴더입니다. 이미지, 폰트 등을 여기에 저장할 수 있습니다.</li>
+                                <li>components: 컴포넌트들을 담는 폴더입니다. 재사용 가능한 컴포넌트들을 작성하여 여기에 저장할 수 있습니다.</li>
+                                <li>constants: 상수들을 정의하는 폴더입니다. 예를 들어 API 엔드포인트나 설정값 등을 여기에 저장할 수 있습니다.</li>
+                                <li>utils: 유틸리티 함수들을 담는 폴더입니다. 애플리케이션 전반에서 사용되는 유틸리티 함수를 작성하여 여기에 저장할 수 있습니다.</li>
+                                <li>.gitignore: Git으로 버전 관리하지 않을 파일들을 정의하는 파일입니다.</li>
+                                <li>jsconfig.json: JavaScript 프로젝트 설정 파일로서, 프로젝트의 최상위 폴더를 기준으로 상대 경로를 쉽게 사용할 수 있게 해줍니다.</li>
+                                <li>next.config.js: Next.js의 설정 파일입니다. 웹팩 설정과 라우팅 설정 등을 이곳에서 조정할 수 있습니다.</li>
+                                <li>package-lock.json: npm 패키지의 의존성을 고정시켜 프로젝트의 다른 개발 환경에서도 동일한 패키지 버전을 사용할 수 있도록 합니다.</li>
+                                <li>package.json: 프로젝트의 정보와 npm 패키지의 의존성을 정의하는 파일입니다.</li>
+                                <li>README.md: 프로젝트에 대한 설명과 사용 방법 등을 담은 마크다운 파일입니다.</li>
+                            </ul>
+                        </div>
+                        <div class="sampleBasic">
+                            <p>
+                                <i>서버 사이드 렌더링(SSR, Server Side Rendering)</i>과 <i>클라이언트 사이드 렌더링(CSR, Client Side Rendering)</i>은 웹 애플리케이션에서 웹 페이지를 어떻게 렌더링하는지에 대한 두 가지 주요 접근 방식입니다.
+                            </p>
+                            <h5>서버 사이드 렌더링 (SSR, Server Side Rendering)</h5>
+                            <ul class="list">
+                                <li>SSR은 웹 페이지의 렌더링을 서버 측에서 처리하는 방식입니다. 클라이언트가 페이지를 요청할 때, 서버에서 해당 페이지를 미리 완성된 형태의 HTML로 렌더링하여 클라이언트에게 전달합니다.</li>
+                                <li>클라이언트가 서버로 요청을 보내면 서버는 데이터를 가져오고 해당 데이터를 포함하여 HTML 페이지를 완성합니다. 이후 클라이언트에게 렌더링된 페이지가 전달되어 브라우저에 표시됩니다.</li>
+                                <li>SSR은 초기 로딩 속도가 빠르고, SEO에 유리한 방식입니다. 브라우저에서 페이지를 렌더링하지 않고, 완전한 형태의 HTML 페이지가 전달되므로 웹 크롤러가 페이지 내용을 쉽게 수집할 수 있습니다.</li>
+                                <li>단점으로는 서버 자원을 사용하고 렌더링 시간이 더 오래 걸릴 수 있으며, 동적으로 변하는 콘텐츠의 경우에는 추가적인 서버 요청이 필요할 수 있습니다.</li>
+                            </ul>
+                            <h5>클라이언트 사이드 렌더링 (CSR, Client Side Rendering)</h5>
+                            <ul class="list">
+                                <li>CSR은 웹 페이지의 렌더링을 클라이언트 측에서 처리하는 방식입니다. 초기 요청 시에는 빈 페이지가 전달되고, 클라이언트에서 자바스크립트를 사용하여 동적으로 페이지를 생성합니다.</li>
+                                <li>브라우저에서 페이지를 렌더링하는 방식이므로, 초기 로딩 속도가 느리지만, 페이지 렌더링 이후에는 데이터 요청 없이 빠르게 페이지 전환과 상호작용이 가능합니다.</li>
+                                <li>CSR은 서버에 부담을 덜 주고, 웹 애플리케이션 로딩 이후에는 클라이언트에서 빠르게 동작합니다.</li>
+                                <li>단점으로는 초기 로딩 속도가 느릴 수 있고, 검색 엔진 최적화(SEO)에 불리할 수 있습니다. 초기에는 빈 페이지가 로딩되기 때문에 웹 크롤러가 페이지 내용을 수집하지 못할 수 있습니다.</li>
                             </ul>
                         </div>
                         <p>
@@ -412,46 +535,35 @@ webstoryboy@Webstoryboyui-MacBookPro port2023 % </code></pre>
 
                         
                         <p>
-                            <code>src</code>에 <code>App.vue</code>는 다음과 작성합니다.
+                            <code>src</code> &gt; <code>App</code> &gt; <code>layout.js</code>는 다음과 작성합니다.
+                            메인 페이지의 레이아웃을 구성합니다.
                         </p>
-<pre><code class="language-html">&lt;template&gt;
-    app.vue
-&lt;/template&gt;
+<pre><code class="language-js">export const metadata = {
+    title: "포트폴리오 사이트 만들기 🥺 Next-Site",
+    description: "한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.",
+    keywords: ["포트폴리오", "리액트", "뷰", "넥스트", "웹스토리보이", "portfolio", "react.js", "vue.js", "next.js", "webstoryboy"],
+};
+  
+export default function RootLayout({ children }) {
+    return (
+        &lt;html lang="ko"&gt;
+            &lt;link rel="icon" type="image/svg+xml" href="favicon.svg" /&gt;
+            &lt;body&gt;{children}&lt;/body&gt;
+        &lt;/html&gt;
+    );
+}
+  
 </code></pre>
                         
                         <p>
-                            <code>src</code>에 <code>main.js</code>는 다음과 작성합니다.
+                            <code>src</code> &gt; <code>App</code> &gt; <code>page.js</code>는 다음과 작성합니다.
+                            메인 페이지를 나타냅니다. 
                         </p>
-<pre><code class="language-js">import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-
-const app = createApp(App)
-
-app.use(router)
-
-app.mount('#app')
-</code></pre>
-
-                        <p>
-                            <code>index.html</code>을 다음과 작성합니다.
-                        </p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다."/&gt;
-    &lt;meta name="keyword" content="포트폴리오, 리액트, 뷰, 넥스트, 웹스토리보이, portfolio, react.js, vue.js, next.js, webstoryboy" /&gt;
-    &lt;title&gt;포트폴리오 사이트 만들기 😘 Vue-Site&lt;/title&gt;
-
-    &lt;link rel="icon" type="image/svg+xml" href="favicon.svg" /&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div id="app"&gt;&lt;/div&gt;
-    &lt;script type="module" src="/src/main.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt; 
+<pre><code class="language-js">export default function Home() {
+    return (
+        &lt;div&gt;next.js&lt;/div&gt;
+    )
+}
 </code></pre>
 
                         <p>
@@ -475,10 +587,10 @@ app.mount('#app')
 깊이 배우기 보다는 다양한 방법을 사용하여 흐름과 감각을 익히기 위한 튜토리얼입니다. 
 
 ## 완성작 보기 
-미리보기 : 
+미리보기 : https://port2023-next.netlify.app/
 
 ## 사용 스택
-- vue(https://ko.vuejs.org/) 를 사용하여 사이트를 번들링하고 관리합니다.
+- next(https://nextjs.org/) 를 사용하여 사이트를 번들링하고 관리합니다.
 - gsap(https://greensock.com/gsap) 를 이용하여 패럴랙스 효과를 줍니다.
 - lenis(https://lenis.studiofreight.com/) 를 이용하여 스므스 효과를 구현합니다.
 - netlify(https://www.netlify.com/) 를 통해 사이트를 배포합니다.
@@ -486,7 +598,7 @@ app.mount('#app')
 - HTML, CSS 기반으로 웹사이트의 기본 레이아웃 설계하고, 웹 표준 및 웹 접근성을 준수하여 작업합니다. [ARIA(Accessible Rich Internet Applications)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
 ## 프로젝트 실행
-- vue를 설치합니다. `npm init vue@latest`
+- next를 설치합니다. `npx create-next-app@latest`
 - sass를 설치합니다. `npm install sass`
 - gsap를 설치합니다. `npm install gsap`
 - lenis를 설치합니다. `npm install @studio-freight/lenis`
@@ -548,24 +660,22 @@ $ npm install @studio-freight/lenis</code></pre>
                             </ul>
                         </div>
 <pre><code class="language-js">{
-    "name": "vue-site",
-    "version": "0.0.0",
+    "name": "next-site",
+    "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
     },
     "dependencies": {
         "@studio-freight/lenis": "^1.0.19",
         "gsap": "^3.12.2",
-        "sass": "^1.64.1",
-        "vue": "^3.3.4",
-        "vue-router": "^4.2.4"
-    },
-    "devDependencies": {
-        "@vitejs/plugin-vue": "^4.2.3",
-        "vite": "^4.4.6"
+        "next": "13.4.12",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "sass": "^1.64.1"
     }
 }</code></pre>
                     </div>
@@ -577,28 +687,28 @@ $ npm install @studio-freight/lenis</code></pre>
                             github 사이트에서 새로운 저장소를 만들겠습니다.
                         </p>
                         <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/portfolio-vue/tsample/img/v2.png" alt="vue" />
+                            <img src="img/n2.png" alt="next" />
                         </div>
 
                         <p>이런식으로 페이지가 완성되면 소스를 업로드 하겠습니다.</p>
                         <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/portfolio-vue/tsample/img/v3.png" alt="vue" />
+                            <img src="img/n3.png" alt="next" />
                         </div>
                         <p>
                             순서대로 터미널에 하나씩 입력하면 반영이 됩니다. 
-                            주의할 점은 현재 내가 있는 폴더가 <code>port2023-react</code>인지를 꼭 확인해주세요! 
+                            주의할 점은 현재 내가 있는 폴더가 <code>port2023-next</code>인지를 꼭 확인해주세요! 
                             다른 폴더에 셋팅하면 에러가 발생합니다.
                         </p>
                         <pre><code class="language-js">git init
 git add README.md
-git commit -m "🥹 뷰 첫 커밋 완료"
+git commit -m "🥹 넥스트 첫 커밋 완료"
 git branch -M main
-git remote add origin https://github.com/webstoryboy/port2023-vue.git
+git remote add origin https://github.com/webstoryboy/port2023-next.git
 git push -u origin main</code></pre>
 
                         <p>이렇게 하면 파일 하나만 업로드 된 것을 확인할 수 있습니다.</p>
                         <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/portfolio-vue/tsample/img/v4.png" alt="vue" />
+                            <img src="img/n4.png" alt="next" />
                         </div>
 
                         <p>
@@ -606,57 +716,46 @@ git push -u origin main</code></pre>
                             필요할 때마다 이렇게 올리시면 됩니다.
                         </p>
 <pre><code class="language-js">git add .
-git commit -m "😤 뷰 첫 커밋 완료"
+git commit -m "😤 넥스트 첫 커밋 완료"
 git push -u origin main</code></pre>
 
                         <p>잘 올라간걸 확인할 수 있습니다.</p>
                         <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/portfolio-vue/tsample/img/v5.png" alt="vue" />
+                            <img src="img/n5.png" alt="next" />
                         </div>
-
-                        <p>
-                            이번에는 <code>vscode</code>라는 폴더가 생겼습니다. 
-                            이런 파일을 올리고 싶지 않다면 <code>.gitignore</code>에서 .vscode를 추가하면 됩니다.
-                            리액트에서 브런치를 설정하고 싶은 분들은 자유롭게 하시면 됩니다.
-                        </p>
-                        
                     </div>
 
                     <div>
                         <h3>3. 마무리</h3>
                         <p>
-                            세번째 셋팅입니다. 
-                            점점 익숙해지고 쉬어지죠?
-                            새로 배우는 언어는 처음에 어렵고 이해하기 힘들지만,
-                            조금씩 반복적으로 하나씩 해보면 별거 없습니다. 
-                            아마 여러분들은 에러도 많이 발생하고 따라오기가 쉽지 않을거라고 생각이 들지만,
-                            검색하고, 하나씩 고치고 따라하다 보면 실력을 상승되어 있을 겁니다. 
-                            안되는 만큼 실력이 많이 늡니다. 
-                            그러니 포기하지 말고 끝까지 잘 따라오시길 바랍니다. 
-                            수고하셨습니다. 😎
+                            마지막 튜토리얼 넥스트 셋팅을 완료했습니다. 
+                            리액트의 단점을 보완한 버전이라고 생각하면 편할거 같습니다. 
+                            기존에 썼던 단점이나 불편한 점을 보완해서 새롭게 탄생한 버전 같은 느낌이네요! 
+                            SEO뿐만 아니라 SSR, CSR 개념을 알아두어야 넥스트를 하는 의미가 있습니다. 
+                            그럼 오늘도 수고하셨습니다. 🤭
                         </p>
                     </div>
 
                     <hr>
 
                     <div class="right_refer">
-                        <a href="https://port2023-vue.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
-                        <a href="https://github.com/webstoryboy/port2023-vue" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://port2023-next.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">소스 보기</a>
                         <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
                     </div>
 
                     <h3>예제 목록</h3>
                     <ul class="refer5">
-                        <li><a href="https://webstoryboy.co.kr/1944">1. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1945">2. 포트폴리오 사이트 만들기 : Vue-Site : 레이아웃</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1946">3. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1947">4. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1948">5. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1949">6. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1950">7. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1951">8. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1952">9. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1953">10. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1944">1. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1945">2. 포트폴리오 사이트 만들기 : Next-Site : 레이아웃</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1946">3. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1947">4. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1948">5. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1949">6. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1950">7. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1951">8. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1952">9. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                        <li><a href="https://webstoryboy.co.kr/1953">10. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
                     </ul>
                 </div>
                 <!-- //blog__contents -->
