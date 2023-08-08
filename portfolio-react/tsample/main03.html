@@ -79,7 +79,7 @@
                             <div class="btn">소스 다운로드</div>
                             <a href="https://port2023-react.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
                             <a href="https://github.com/webstoryboy/port2023-react" target="_blank" class="sampleBtn">완성 코드</a>
-                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                     <h3>인덱스</h3>
                     <div class="index2">
                         <div>
-                            <h4>1. 포트폴리오 사이트 만들기 : VITE SITE</h4>
+                            <h4>VITE SITE</h4>
                             <ul>
                                 <li>1. 셋팅하기
                                     <ul>
@@ -177,7 +177,7 @@
                             </ul>
                         </div>
                         <div>
-                            <h4>2. 포트폴리오 사이트 만들기 : REACT SITE</h4>
+                            <h4>REACT SITE</h4>
                             <ul>
                                 <li>1. 셋팅하기
                                     <ul>
@@ -209,7 +209,7 @@
 
                     <h3>3. 헤더 영역</h3>
                     <div id="b31">
-                        <h4>3_1. 헤더 구조잡기</h4>
+                        <h4>3.1 헤더 구조잡기</h4>
                         <p>
                             우선 기본 HTML구조를 리액트 구조에 맞추어서 작업을 해야 합니다. 
                             &lt;a href="#"&gt;은 &lt;a href="/"&gt;로 변경해야 경고가 없어집니다.
@@ -220,25 +220,32 @@
 
 const Header = () =&gt; {
     return (
-    &lt;header id="header" role="banner"&gt;
-        &lt;div className="header__inner"&gt;
-            &lt;div className="header__logo"&gt;
-                &lt;a href="/"&gt;portfolio&lt;em&gt;vite&lt;/em&gt;&lt;/a&gt;
+        &lt;header id="header" role="banner"&gt;
+            &lt;div className="header__inner"&gt;
+                &lt;div className="header__logo"&gt;
+                    &lt;a href="/"&gt;portfolio&lt;em&gt;vite&lt;/em&gt;&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;nav className="header__nav" role="navigation" aria-label="메인 메뉴"&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#intro"&gt;intro&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#skill"&gt;skill&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#site"&gt;site&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#port"&gt;portfolio&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#contact"&gt;contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+                &lt;div 
+                    className="header__nav__mobile" 
+                    id="headerToggle" 
+                    aria-controls="primary-menu" 
+                    aria-expanded="false" 
+                    role="button" 
+                    tabindex="0"
+                &gt;
+                    &lt;span&gt;&lt;/span&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
-            &lt;nav className="header__nav" role="navigation" aria-label="메인 메뉴"&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href="#intro"&gt;intro&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#skill"&gt;skill&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#site"&gt;site&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#port"&gt;portfolio&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#contact"&gt;contact&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/nav&gt;
-            &lt;div className="header__nav__mobile" id="headerToggle" aria-controls="primary-menu" aria-expanded="false" role="button" tabindex="0"&gt;
-                &lt;span&gt;&lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/header&gt;
+        &lt;/header&gt;
     );
 };
 
@@ -247,7 +254,7 @@ export default Header;
                     </div>
 
                     <div id="b32" class="mt80">
-                        <h4>3_2. 헤더 디자인 설정</h4>
+                        <h4>3.2 헤더 디자인 설정</h4>
                         <p>
                             기존에 CSS 방식보다는 어려울 수 있지만 사용하다 보면 더 편함을 느낄 수 있습니다. 
                             반응형도 따로 작업하지 않고 해당 영역에 동시에 작업을 하였습니다.
@@ -256,54 +263,27 @@ export default Header;
     @include position-fixed;
     z-index: 10000;
 }
-
 .header__inner {
     @include flex-between;
-    padding: 1rem;
-    background: rgba(116, 99, 99, 0.1);
+    background-color: rgba(116, 99, 99, 0.1);
     backdrop-filter: blur(15px);
+    padding: 1rem;
 
     .header__logo {
-        font-size: 1.625rem;
+        font-size: 0.9rem;
         text-align: center;
         text-transform: uppercase;
         line-height: 1;
 
         em {
-            display: block;
             font-size: 10px;
+            display: block;
             color: var(--black200);
         }
     }
-
     .header__nav {
-        li {
-            display: inline-block;
 
-            a {
-                text-transform: uppercase;
-                font-size: 14px;
-                padding: 14px;
-                position: relative;
-
-                &::before {
-                    content: "";
-                    width: calc(100% - 28px);
-                    height: 1px;
-                    background-color: var(--black);
-                    position: absolute;
-                    left: 14px;
-                    bottom: 10px;
-                    transform: scaleX(0);
-                    transition: all 0.3s;
-                }
-
-                &:hover::before {
-                    transform: scaleX(1);
-                }
-            }
-        }
-        @media (max-width: 800px) {
+        @media (max-width: 800px){
             display: none;
 
             &.show {
@@ -314,13 +294,16 @@ export default Header;
                     position: absolute;
                     right: 0;
                     top: 68px;
-                    background: rgba(116, 99, 99, 0.1);
+                    background-color: rgba(116,99,99,0.1);
                     backdrop-filter: blur(15px);
                     z-index: 10000;
+                    min-width: 150px;
+                    padding: 20px 0;
 
                     li {
                         display: block;
                         text-align: right;
+
                         a {
                             display: inline-block;
                             padding: 10px;
@@ -335,22 +318,51 @@ export default Header;
                 width: 20px;
             }
         }
+        
+        li {
+            display: inline;
+    
+            a {
+                text-transform: uppercase;
+                font-size: 14px;
+                padding: 14px;
+                position: relative;
+    
+                &::before {
+                    content: '';
+                    width: calc(100% - 28px);
+                    height: 1px;
+                    background-color: var(--black);
+                    position: absolute;
+                    left: 14px;
+                    bottom: 10px;
+                    transform: scaleX(0);
+                    transition: all 0.3s;
+                }
+                &:hover::before {
+                    transform: scaleX(1);
+                }
+            }
+        }
     }
-
+    
     .header__nav__mobile {
+        display: none;
         width: 40px;
         height: 40px;
-        @include flex-center;
         cursor: pointer;
-        display: none;
+
+        @media (max-width: 800px){
+            display: block;
+        }
 
         span {
             display: block;
             width: 40px;
             height: 2px;
             background-color: var(--black);
-            position: relative;
             margin-top: 19px;
+            position: relative;
 
             &::before {
                 content: "";
@@ -362,7 +374,6 @@ export default Header;
                 top: 6px;
                 transition: width 0.3s;
             }
-
             &::after {
                 content: "";
                 width: 40px;
@@ -374,23 +385,19 @@ export default Header;
                 transition: width 0.3s;
             }
         }
-
-        @media (max-width: 800px) {
-            display: block;
-        }
     }
-}
+} 
 </code></pre>
                     </div>
 
                     <div id="b33" class="mt80">
-                        <h4>3_3. 헤더 데이터 작업</h4>
+                        <h4>3.3 헤더 데이터 작업</h4>
                         <p>
                             리액트에서 데이터를 따로 작업하는 이유는 코드를 더 구조적이고 관리하기 쉽게 만들기 위해서입니다. 
                             데이터를 따로 작업하여 관리함으로써 코드의 가독성과 유지보수성을 향상시킬 수 있습니다.
                             규모가 작은 사이트를 라면 불편할 수도 있는 작업이지만 규모가 커질 수록 관리하기가 쉬어집니다. 
                         </p>
-<pre><code class="language-js">export const headerNav = [
+<pre><code class="language-js">const headerNav = [
     {
         title: "intro",
         url: "#intro",
@@ -414,7 +421,7 @@ export default Header;
 ];
 </code></pre> 
                         <p>
-                            반복적으로 처리되는 부분을 map() 메서드를 통해 작업해보겠습니다.
+                            반복적으로 처리되는 부분을 <code>map()</code> 메서드를 통해 작업해보겠습니다.
                             map()은 JavaScript의 배열 메서드 중 하나로, 배열의 각 요소를 변환하여 새로운 배열을 반환하는 함수입니다. 
                             React에서도 map()을 많이 활용하여 배열 데이터를 가지고 JSX를 생성하거나 처리하는 데 사용됩니다.
                         </p>
@@ -434,7 +441,14 @@ export default Header;
                         ))}
                     &lt;/ul&gt;
                 &lt;/nav&gt;
-                &lt;div className="header__nav__mobile" id="headerToggle" aria-controls="primary-menu" aria-expanded="false" role="button" tabIndex="0"&gt;
+                &lt;div 
+                    className="header__nav__mobile" 
+                    id="headerToggle" 
+                    aria-controls="primary-menu" 
+                    aria-expanded="false" 
+                    role="button" 
+                    tabIndex="0"
+                &gt;
                     &lt;span&gt;&lt;/span&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -471,7 +485,7 @@ const nameList = names.map((name, index) => {
                     </div>
 
                     <div id="b34" class="mt80">
-                        <h4>3_4. 헤더 토글 메뉴 작업하기</h4>
+                        <h4>3.4 헤더 토글 메뉴 작업하기</h4>
                         <p>
                             반응형이 되었을 때 메뉴를 클릭하면 서브 메뉴가 나오도록 작업하겠습니다. 
                             자바스크립트에서 썼던 방법을 써도 되지만, 
@@ -479,7 +493,28 @@ const nameList = names.map((name, index) => {
                         </p>
 <pre><code class="language-js">import React, { useState } from "react";
 
-import { headerNav } from "../constants";
+const headerNav = [
+    {
+        title: "intro",
+        url: "#intro"
+    },
+    {
+        title: "skill",
+        url: "#skill"
+    },
+    {
+        title: "site",
+        url: "#site"
+    },
+    {
+        title: "portfolio",
+        url: "#port"
+    },
+    {
+        title: "contact",
+        url: "#contact"
+    }
+];
 
 const Header = () =&gt; {
     const [show, setShow] = useState(false);
@@ -508,9 +543,9 @@ const Header = () =&gt; {
                     id="headerToggle"
                     aria-controls="primary-menu"
                     aria-expanded={show ? "true" : "false"}
-                    onClick={toggleMenu}
                     role="button" 
                     tabIndex="0"
+                    onClick={toggleMenu}
                 &gt;
                     &lt;span&gt;&lt;/span&gt;
                 &lt;/div&gt;
@@ -569,23 +604,57 @@ git push -u origin main
 
                     <div class="right_refer">
                         <a href="https://port2023-react.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
-                        <a href="https://github.com/webstoryboy/port2023-react" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
-                    <ul class="refer5">
-                        <li><a href="https://webstoryboy.co.kr/1934">1. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1935">2. 포트폴리오 사이트 만들기 : React-Site : 라우팅 및 컴퍼넌트</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1936">3. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1937">4. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1938">5. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1939">6. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1940">7. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1941">8. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1942">9. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1943">10. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
-                    </ul>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1934">11. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1935">12. 포트폴리오 사이트 만들기 : React-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1936">13. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1937">14. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1938">15. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1939">16. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1940">17. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1941">18. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1942">19. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1943">20. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                        </ul>
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1944">21. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1945">22. 포트폴리오 사이트 만들기 : Vue-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1946">23. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1947">24. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1948">25. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1949">26. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1950">27. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1951">28. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1952">29. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1953">30. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1954">31. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1955">32. 포트폴리오 사이트 만들기 : Next-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1956">33. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1957">34. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1958">35. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1959">36. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1960">37. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1961">38. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1962">39. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1963">40. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- //blog__contents -->
 

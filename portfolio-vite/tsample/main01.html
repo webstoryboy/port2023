@@ -79,7 +79,7 @@
                             <div class="btn">소스 다운로드</div>
                             <a href="https://port2023-vite.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
                             <a href="https://github.com/webstoryboy/port2023-vite" target="_blank" class="sampleBtn">완성 코드</a>
-                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
                     </div>
 
                     <div id="a11" class="mt80">
-                        <h4>1-1. Vite 설치하기</h4>
+                        <h4>1.1 Vite 설치하기</h4>
                         <p>
                             <code>port2023 폴더</code>를 만들고 vscode 프로그램에서 열도록 하겠습니다.
                             폴더이름은 편한게 만들어주세요!
@@ -158,31 +158,32 @@
                         <p>
                             vite 버전을 설치하거냐? 물으면 <code>y</code>를 작성하고 프로젝트 이름과 프레임워크는 <code>Vanilla</code>를 선택하고
                             언어는 <code>JavaScript</code>를 선택하면 설치 완료입니다.
+                            프로젝트 제목은 <code>port2023-vite</code>로 작성하고, <code>Vanilla</code>와 <code>JavaScript</code>를 선택합니다.
                         </p>
 <pre><code class="language-js">$ npm create vite@latest</code></pre>
 <pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023 % npm create vite@latest
-✔ Project name: … vite-site
+✔ Project name: … port2023-vite
 ✔ Select a framework: &gt; Vanilla
 ✔ Select a variant: &gt; JavaScript
 
-Scaffolding project in /Users/webstoryboy/Desktop/port2023/vite-site...
+Scaffolding project in /Users/webstoryboy/Desktop/port2023/port2023-vite...
 
 Done. Now run:
 
-    cd vite-site
+    cd port2023-vite
     npm install
     npm run dev
 
 webstoryboy@Webstoryboyui-MacBookPro port2023 % 
 </code></pre>
                         <p>
-                            폴더가 만들어 졌으니 이동을 해야 합니다. <code>cd vite-site</code>을 작성하면 폴더 이동이 됩니다. 
+                            폴더가 만들어 졌으니 이동을 해야 합니다. <code>cd port2023-vite</code>을 작성하면 폴더 이동이 됩니다. 
                             <code>npm install</code>를 작성하면 부가적인 파일들이 생성됩니다. 
                             그리고 <code>npm run dev</code>를 작성하면 실행됩니다. 
                             Local의 주소를 복사하여 브라우저에서 열어도 되고, ctrl+클릭을 하시면 열립니다.
                         </p>
-<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023 % cd port-html
-webstoryboy@Webstoryboyui-MacBookPro port-html % npm install
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023 % cd port2023-vite
+webstoryboy@Webstoryboyui-MacBookPro port2023-vite % npm install
 
 added 9 packages, and audited 10 packages in 6s
 
@@ -190,9 +191,9 @@ added 9 packages, and audited 10 packages in 6s
   run `npm fund` for details
 
 found 0 vulnerabilities
-webstoryboy@Webstoryboyui-MacBookPro port-html % npm run dev
+webstoryboy@Webstoryboyui-MacBookPro port2023-vite % npm run dev
 
-> port-html@0.0.0 dev
+> port2023-vite@0.0.0 dev
 > vite
 
 VITE v4.4.6  ready in 212 ms
@@ -216,7 +217,7 @@ VITE v4.4.6  ready in 212 ms
                     </div>
 
                     <div id="a12" class="mt80">
-                        <h4>1-2. vite 폴더 정리하기</h4>
+                        <h4>1.2 vite 폴더 정리하기</h4>
                         <p>
                             폴더는 다음과 같이 정리합니다. 
                             쓸데 없는 파일을 제거하고  <code>src</code> 폴더를 만듭니다. 
@@ -394,14 +395,14 @@ export default {
                     </div>
 
                     <div id="a13" class="mt80">
-                        <h4>1_3. gsap/lenis 설치하기</h4>
+                        <h4>1.3 gsap/lenis 설치하기</h4>
                         <p>
                             터미널에 다음과 같이 작업합니다.
                             <code>npm install gsap</code>를 작성하면 파일이 자동으로 설치됩니다.
                             GSAP는 JavaScript 기반의 강력한 웹 애니메이션 라이브러리입니다. 
                             GSAP는 웹 개발자들이 웹 사이트나 웹 애플리케이션에 동적인 애니메이션을 쉽게 구현할 수 있도록 도와줍니다.
                         </p>
-<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port-html % npm install gsap
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023-vite % npm install gsap
 
 added 1 package, and audited 11 packages in 5s
 
@@ -431,7 +432,7 @@ found 0 vulnerabilities
                             <code>npm install @studio-freight/lenis</code>를 작성하면 파일이 자동으로 설치됩니다.
                             lenis는 스무스 효과를 주기 위한 라이브러리 파일입니다.
                         </p>
-<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port-html % npm install @studio-freight/lenis
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023-vite % npm install @studio-freight/lenis
 
 added 1 package, and audited 12 packages in 2s
 
@@ -446,7 +447,7 @@ found 0 vulnerabilities
                             만약 저랑 똑같이 했는데 에러가 나거나 설치가 안된다면 버전을 꼭 확인해야 합니다. 
                         </p>
 <pre><code class="language-js">{
-    "name": "port-html",
+    "name": "port2023-vite",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -467,7 +468,7 @@ found 0 vulnerabilities
                     </div>
 
                     <div id="a14" class="mt80">
-                        <h4>1_4. git 연동하기</h4>
+                        <h4>1.4 git 연동하기</h4>
                         <p>
                             여기까지 잘 따라하셨다면, 이제는 여러분들이 작업한 파일을 github이라는 사이트에 올려서 관리 할 것입니다. 
                             <i><a href="https://github.com/">GitHub</a></i>는 프로그래머들이 소스 코드를 호스팅하고 버전 관리를 할 수 있는 웹 기반 호스팅 서비스입니다.
@@ -532,13 +533,13 @@ git push -u origin main
                             혹시나 에러 메세지가 나오는 분들은 현재 내 폴더 기준으로 작업했는지 확인을 해보셔야 합니다. 
                             이렇게 하고 git 사이트를 가서 리플래시를 한번 해보겠습니다.
                         </p>
-<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro vite-site % git init
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023-vite % git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/webstoryboy/port2023-vite.git
 git push -u origin main
-Initialized empty Git repository in /Users/webstoryboy/Desktop/port2023/vite-site/.git/
+Initialized empty Git repository in /Users/webstoryboy/Desktop/port2023/port2023-vite/.git/
 [main (root-commit) 9b06d42] first commit
     1 file changed, 33 insertions(+)
     create mode 100644 README.md
@@ -568,8 +569,8 @@ branch 'main' set up to track 'origin/main'.
 git commit -m "😇 커밋 성공"    //메세지 작성
 git push -u origin main   //깃에 올린다.
 </code></pre>
-<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro vite-site % git add .
-webstoryboy@Webstoryboyui-MacBookPro vite-site % git commit -m "😇 커밋 성공"
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023-vite % git add .
+webstoryboy@Webstoryboyui-MacBookPro port2023-vite % git commit -m "😇 커밋 성공"
 [main 49d2369] 😇 커밋 성공
     9 files changed, 641 insertions(+), 2 deletions(-)
     create mode 100644 .gitignore
@@ -580,7 +581,7 @@ webstoryboy@Webstoryboyui-MacBookPro vite-site % git commit -m "😇 커밋 성�
     create mode 100644 src/assets/js/main.js
     create mode 100644 src/index.html
     create mode 100644 vite.config.js
-webstoryboy@Webstoryboyui-MacBookPro vite-site % git push -u origin main
+webstoryboy@Webstoryboyui-MacBookPro port2023-vite % git push -u origin main
 Enumerating objects: 18, done.
 Counting objects: 100% (18/18), done.
 Delta compression using up to 10 threads
@@ -620,31 +621,59 @@ branch 'main' set up to track 'origin/main'.
 
                     <div class="right_refer">
                         <a href="https://port2023-vite.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
-                        <a href="https://github.com/webstoryboy/port2023-vite" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
-                    <ul class="refer5">
-                        <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
-                    </ul>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1934">11. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1935">12. 포트폴리오 사이트 만들기 : React-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1936">13. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1937">14. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1938">15. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1939">16. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1940">17. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1941">18. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1942">19. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1943">20. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                        </ul>
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1944">21. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1945">22. 포트폴리오 사이트 만들기 : Vue-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1946">23. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1947">24. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1948">25. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1949">26. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1950">27. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1951">28. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1952">29. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1953">30. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1954">31. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1955">32. 포트폴리오 사이트 만들기 : Next-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1956">33. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1957">34. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1958">35. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1959">36. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1960">37. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1961">38. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1962">39. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1963">40. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- //blog__contents -->
-
-                <aside class="blog__aside">
-                    <button class="blog__aside__btn"><span></span></button>
-                    <div class="blog__aside__chapter">
-                    </div>
-                </aside>
             </div>
         </section>
         <!-- //blog -->

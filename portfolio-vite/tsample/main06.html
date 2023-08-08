@@ -79,7 +79,7 @@
                             <div class="btn">소스 다운로드</div>
                             <a href="https://port2023-vite.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
                             <a href="https://github.com/webstoryboy/port2023-vite" target="_blank" class="sampleBtn">완성 코드</a>
-                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                             4개의 사이트를 <code>position: sticky;</code>를 이용하여 고정시키는 효과를 연출하였습니다.
                             4개의 사이트는 <code>article</code> 속성으로 변경하여 콘텐츠의 성격을 명확히 표현하였습니다.
                         </p>
-<pre><code class="language-html">&lt;section id="site" role="region"&gt;
+<pre><code class="language-html">&lt;section id="site"&gt;
     &lt;div class="site__inner"&gt;
         &lt;h2 class="site__title"&gt;Site coding &lt;em&gt;나의 작업물&lt;/em&gt;&lt;/h2&gt;
         &lt;div class="site__wrap"&gt;
@@ -253,20 +253,20 @@
     width: 70%;
     height: 5vw;
     font-size: 4vw;
+    font-weight: 900;
     line-height: 1.6;
+    font-family: var(--mainKor-font);
     text-transform: uppercase;
     color: var(--black100);
     border-bottom: 0.4vw solid var(--black100);
-    font-family: var(--mainKor-font);
-    font-weight: 900;
-    margin-bottom: 16px;
+    margin-bottom: 100px;
 }
 .site__title em {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
+    line-height: 2;
 }
 .site__item {
-    background-color: var(--mainBg-color);
     height: 70vh;
     display: flex;
     align-items: center;
@@ -281,57 +281,47 @@
 }
 .site__item.s2 {
     background-color: var(--subBg200);
-    top: 190px;
+    top: 200px;
 }
 .site__item.s3 {
     background-color: var(--subBg300);
-    top: 200px;
+    top: 220px;
 }
 .site__item.s4 {
     background-color: var(--subBg400);
-    top: 210px;
+    top: 240px;
 }
 .site__item .num {
     font-size: 5vw;
     line-height: 1;
+    font-weight: 900;
     font-family: var(--mainNum-font);
     position: absolute;
     left: 1vw;
     top: 1vw;
-    font-weight: 900;
 }
 .site__item .text {
     text-align: center;
     margin-bottom: 1rem;
 }
-.site__item .text div {
+.site__item .text > div {
     font-size: 3vw;
     line-height: 1;
     font-weight: 900;
     text-transform: uppercase;
     text-decoration: underline;
     font-family: var(--mainEng-font);
-    position: relative;
-    z-index: 100;
-    font-weight: 700;
-    letter-spacing: -0.1vw;
 }
 .site__item .title {
-    font-family: var(--mainNum-font);
-    display: inline-block;
-    margin-top: 1vw;
+    font-family: var(--mainKor-font);
+    margin-bottom: 1rem;
 }
 .site__item .btn a {
-    display: inline-block;
-    font-family: var(--mainEng-font);
-    background-color: transparent;
-    color: var(--black200);
-    margin-top: 10px;
+    text-decoration: underline;
     text-transform: uppercase;
+    color: var(--black200);
     font-size: 1rem;
     transition: all 0.3s;
-    text-decoration: underline;
-    text-underline-position: under;
 }
 .site__item .btn a:hover {
     color: var(--black);
@@ -340,19 +330,18 @@
     position: absolute;
     left: 0;
     bottom: 3%;
-    border-top: 1px solid var(--black);
-    border-bottom: 1px solid var(--black);
-    font-family: var(--mainEng-font);
     width: 98%;
     margin-left: 1%;
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
     display: flex;
     justify-content: space-between;
 }
 .site__item .info span {
-    font-size: 12px;
-    text-transform: uppercase;
     font-family: var(--mainKor-font);
+    font-size: 12px;
     padding: 3px 0;
+    text-transform: uppercase;
 }
 </code></pre>
                     </div>
@@ -363,19 +352,15 @@
                             반응형 작업도 특별하게 할 건 없습니다. 
                             모바일에 맞추어 폰트 사이즈만 한 단계 낮추어 줬습니다.
                         </p>
-<pre><code class="language-css">@media (max-width: 800px) {
+<pre><code class="language-css">@media (max-width: 800px){
     .site__title {
         width: 100%;
         margin-bottom: 10vw;
         font-size: 30px;
         height: auto;
-        background: #f3ede8;
         top: 68px;
-        border-bottom: 2px solid var(--black100);
         z-index: 1000;
-    }
-    .site__title em {
-        font-size: 16px;
+        background-color: var(--mainBg-color);
     }
     .site__item.s1 {
         top: 140px;
@@ -394,7 +379,7 @@
         left: 20px;
         top: 20px;
     }
-    .site__item .text div {
+    .site__item .text > div {
         font-size: 26px;
     }
     .site__item .info {
@@ -428,31 +413,59 @@ git push -u origin main
 
                     <div class="right_refer">
                         <a href="https://port2023-vite.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
-                        <a href="https://github.com/webstoryboy/port2023-vite" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
-                    <ul class="refer5">
-                        <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
-                    </ul>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1934">11. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1935">12. 포트폴리오 사이트 만들기 : React-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1936">13. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1937">14. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1938">15. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1939">16. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1940">17. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1941">18. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1942">19. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1943">20. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                        </ul>
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1944">21. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1945">22. 포트폴리오 사이트 만들기 : Vue-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1946">23. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1947">24. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1948">25. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1949">26. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1950">27. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1951">28. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1952">29. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1953">30. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1954">31. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1955">32. 포트폴리오 사이트 만들기 : Next-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1956">33. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1957">34. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1958">35. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1959">36. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1960">37. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1961">38. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1962">39. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1963">40. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- //blog__contents -->
-
-                <aside class="blog__aside">
-                    <button class="blog__aside__btn"><span></span></button>
-                    <div class="blog__aside__chapter">
-                    </div>
-                </aside>
             </div>
         </section>
         <!-- //blog -->

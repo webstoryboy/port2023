@@ -79,7 +79,7 @@
                             <div class="btn">소스 다운로드</div>
                             <a href="https://port2023-next.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
                             <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">완성 코드</a>
-                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
                 </div>
@@ -357,7 +357,7 @@
 
                     <h3>2. 라우팅 및 컴퍼넌트</h3>
                     <div id="n21">
-                        <h4>1_1. 라우팅 설정하기</h4>
+                        <h4>1.1 라우팅 설정하기</h4>
                         <p>
                             next.js는 라우팅을 설정할 필요하가 없습니다. 
                             <code>app</code> 폴더 자체가 주소를 나타냅니다. 
@@ -414,7 +414,7 @@
                     </div>
 
                     <div id="n22" class="mt80">
-                        <h4>2_2. 컴퍼넌트 설정하기</h4>
+                        <h4>2.1 컴퍼넌트 설정하기</h4>
                         <p>
                             기본 폴더 구조는 다음과 같이 작업하겠습니다.
                         </p>
@@ -497,7 +497,7 @@ export default Contact;
                     </div>
                     
                     <div id="n23" class="mt80">
-                        <h4>2_3. SCSS 설정하기</h4>
+                        <h4>2.3 SCSS 설정하기</h4>
                         <p>
                             Next.js에서 module.css 기능은 CSS 모듈을 지원하는 기능을 말합니다. 
                             이를 통해 각각의 컴포넌트에 대해 고유한 CSS 스코프를 생성하여 CSS 클래스 이름이 겹치는 문제를 방지하고, 
@@ -771,7 +771,7 @@ img {
                     </div>
 
                     <div id="n24" class="mt80">
-                        <h4>2_4. Script 설정하기</h4>
+                        <h4>2.4 Script 설정하기</h4>
                         <p>
                             스크리트 셋팅도 기존의 리액트와 비슷합니다. 
                             그럼 한번 해볼가요?
@@ -806,7 +806,8 @@ img {
                         <p>
                             <code>constants</code> 폴더 <code>layout.js</code>에 다음 소스를 추가하겠습니다.
                         </p>
-<pre><code class="language-js">import port01 from "../assets/img/port01.jpg";
+<pre><code class="language-js">import about from "../assets/img/about.jpg";
+import port01 from "../assets/img/port01.jpg";
 import port02 from "../assets/img/port02.jpg";
 import port03 from "../assets/img/port03.jpg";
 import port04 from "../assets/img/port04.jpg";
@@ -817,53 +818,55 @@ import port08 from "../assets/img/port08.jpg";
 import port09 from "../assets/img/port09.jpg";
 import port10 from "../assets/img/port10.jpg";
 
+
 export const headerNav = [
     {
         title: "intro",
-        url: "#intro",
+        url: "#intro"
     },
     {
         title: "skill",
-        url: "#skill",
+        url: "#skill"
     },
     {
         title: "site",
-        url: "#site",
+        url: "#site"
     },
     {
         title: "portfolio",
-        url: "#port",
+        url: "#port"
     },
     {
         title: "contact",
-        url: "#contact",
-    },
+        url: "#contact"
+    }
 ];
 
 export const introText = {
     title: "port developer",
     desc: ["talent is", "found at the end of the", "effort"],
-};
+    img: about
+}
 
 export const skillText = [
     {
         title: "꿈을 설계하고 디자인하다.",
-        desc: "나는 공간을 만드는 것을 좋아한다. 어려을 때부터 나만의 공간을 만드는 것을 좋아했고 나만의 다락방을 좋아했다. 단 한 사람이라도 내가 만든 공간 속에서 영감을 받거나 마음이 움직였으면 좋겠다. 나만의 공간을 마음것 만들 수 있다는 건 코딩에 엄청난 매력인거 같다. 그 한구석에 나만의 꿈을 설계하고, 개발을 하며 앞으로도 살고 싶다.",
+        desc: "나는 공간을 만드는 것을 좋아한다. 어려을 때부터 나만의 공간을 만드는 것을 좋아했고 나만의 다락방을 좋아했다. 단 한 사람이라도 내가 만든 공간 속에서 영감을 받거나 마음이 움직였으면 좋겠다. 나만의 공간을 마음것 만들 수 있다는 건 코딩에 엄청난 매력인거 같다. 그 한구석에 나만의 꿈을 설계하고, 개발을 하며 앞으로도 살고 싶다."
     },
     {
         title: "열심히 할수록 기회는 따른다.",
-        desc: "운이 좋은 사람은 없다. 단지 운을 만들 뿐이다. 운을 만들기 위해서는 내가 좋아하는 일이나 내가 하고 싶은 일에 몰두하면 된다. 몰두 하다보면 길이 보이고 방향이 보이게 된다. 운이란 고된 노동과 노력을 통해 스스로 만들어 내는 것이다.",
+        desc: "운이 좋은 사람은 없다. 단지 운을 만들 뿐이다. 운을 만들기 위해서는 내가 좋아하는 일이나 내가 하고 싶은 일에 몰두하면 된다. 몰두 하다보면 길이 보이고 방향이 보이게 된다. 운이란 고된 노동과 노력을 통해 스스로 만들어 내는 것이다."
     },
     {
         title: "나에게 정직하다.",
-        desc: "정직은 다른 사람보다 나에게 큰 의미를 부여해야 한다. 자신이 정직하지 않으면 진정으로 원하는 일을 열정적으로 밀고 나갈 수 없다. 마음에서 우러나오는 일을 해야 정직해지며 삶을 더 즐길 줄 알게 된다.",
-    },
-];
+        desc: "정직은 다른 사람보다 나에게 큰 의미를 부여해야 한다. 자신이 정직하지 않으면 진정으로 원하는 일을 열정적으로 밀고 나갈 수 없다. 마음에서 우러나오는 일을 해야 정직해지며 삶을 더 즐길 줄 알게 된다."
+    }
+]
 
 export const siteText = [
     {
         text: ["make", "site compliant with", "webstandard"],
-        title: "웹 표준을 준수한 사이트 제작",
+        title: "비트를 이용한 사이트 제작",
         code: "https://github.com/webstoryboy/port2023-vite",
         view: "https://port2023-vite.netlify.app",
         info: [
@@ -880,7 +883,7 @@ export const siteText = [
         info: [
             "site coding",
             "production period : two days",
-            "use stack : HTML5/CSS3, CSS Variable, Vite",
+            "use stack : HTML5/CSS3, CSS Variable, react",
         ],
     },
     {
@@ -1133,23 +1136,57 @@ export default function Home() {
 
                     <div class="right_refer">
                         <a href="https://port2023-next.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
-                        <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
-                    <ul class="refer5">
-                        <li><a href="https://webstoryboy.co.kr/1944">1. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1945">2. 포트폴리오 사이트 만들기 : Next-Site : 레이아웃</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1946">3. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1947">4. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1948">5. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1949">6. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1950">7. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1951">8. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1952">9. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1953">10. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
-                    </ul>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1934">11. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1935">12. 포트폴리오 사이트 만들기 : React-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1936">13. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1937">14. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1938">15. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1939">16. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1940">17. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1941">18. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1942">19. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1943">20. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                        </ul>
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1944">21. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1945">22. 포트폴리오 사이트 만들기 : Vue-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1946">23. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1947">24. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1948">25. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1949">26. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1950">27. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1951">28. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1952">29. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1953">30. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1954">31. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1955">32. 포트폴리오 사이트 만들기 : Next-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1956">33. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1957">34. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1958">35. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1959">36. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1960">37. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1961">38. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1962">39. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1963">40. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- //blog__contents -->
 

@@ -1296,7 +1296,20 @@ code.hljs {
 .refer4 li:hover a {
   color: #fff;
 }
-
+.refer5_wrap {
+  display: flex;
+}
+.refer5_wrap > ul {
+  width: 50%;
+}
+@media (max-width: 800px){
+  .refer5_wrap {
+    flex-direction: column;
+  }
+  .refer5_wrap > ul {
+    width: 100%;
+  }
+}
 .refer5 {
   padding-left: 0 !important;
 }

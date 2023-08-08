@@ -79,7 +79,7 @@
                             <div class="btn">소스 다운로드</div>
                             <a href="https://port2023-vite.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
                             <a href="https://github.com/webstoryboy/port2023-vite" target="_blank" class="sampleBtn">완성 코드</a>
-                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
                             <code>port__wrap</code> 안에 <code>port__item</code> 박스가 10개 있는 구조입니다.
                             우선 가로모드를 작업하기 전에 CSS 구성부터 완벽하게 작업해야 스크립트에서 실수없이 완성할 수 있습니다. 
                         </p>
-<pre><code class="language-html">&lt;section id="port" role="region"&gt; 
+<pre><code class="language-html">&lt;section id="port"&gt; 
     &lt;div class="port__inner"&gt;
         &lt;div class="port__title"&gt;
             portfolio &lt;em&gt;포폴 작업물&lt;/em&gt;
@@ -326,8 +326,8 @@
                         </p>
 <pre><code class="language-css">#port {
     width: 100%;
-    /* overflow: hidden; */
-    margin-top: 200px;
+    margin-top: 30vh;
+    overflow: hidden;
 }
 .port__inner {
     padding: 16px;
@@ -336,18 +336,19 @@
     width: 100%;
     height: 5vw;
     font-size: 4vw;
+    font-weight: 900;
     line-height: 1.6;
+    font-family: var(--mainKor-font);
     text-transform: uppercase;
     color: var(--black100);
     border-bottom: 0.4vw solid var(--black100);
-    font-family: var(--mainKor-font);
-    font-weight: 900;
-    z-index: 2000;
     margin-bottom: 16px;
+    text-indent: -0.26vw;
 }
 .port__title em {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
+    line-height: 2;
 }
 .port__wrap {
     display: flex;
@@ -356,10 +357,9 @@
 }
 .port__item {
     width: 500px;
-    height: 700px;
+    height: 70vh;
     background-color: var(--subBg100);
-    padding: 40px;
-    overflow: hidden;
+    padding: 2.5rem;
     margin-right: 20px;
 }
 .port__item.p1 {
@@ -392,68 +392,64 @@
 .port__item.p10 {
     background-color: var(--subBg500);
 }
-.port__item img {
-    width: 100%;
+.port__item .num {
+    font-size: 2rem;
+    font-family: var(--mainNum-font);
+}
+.port__item .img {
+    display: block;
+    margin-top: -20px;
+    transition: margin-top 0.3s;
+}
+.port__item:hover .img {
+    margin-top: 0;
+}
+.port__item .img img {
     border-radius: 5px;
     filter: saturate(0%);
     transition: all 0.3s;
-    margin-top: -20px;
 }
-.port__item:hover img {
-    filter: saturate(100%);
-    margin-top: 0px;
-}
-.port__item .num {
-    font-size: 32px;
-    font-family: var(--mainNum-font);
+.port__item .img:hover img {
+    filter: saturate(100%)
 }
 .port__item .title {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
-    padding: 18px 0 15px;
+    padding: 0.8rem 0;
     font-weight: 700;
     color: var(--black100);
-    border-bottom: 1px solid var(--black300);
-    font-family: var(--mainKor-font);
-    margin-bottom: 20px;
+    border-bottom: 2px solid var(--black100);
+    margin-bottom: 1rem;
 }
 .port__item .desc {
-    font-family: var(--mainKor-font);
+    font-size: 1rem;
 }
 .port__item .site {
-    font-family: var(--mainKor-font);
-    text-align: center;
     border: 1px solid var(--black100);
     display: block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    transition: all 0.3s;
-}
-.port__item a:hover {
-    background-color: var(--black100);
-    color: var(--white);
+    text-align: center;
+    padding: 0.625rem 1.5rem;
+    margin-top: 1.5rem;
 }
 </code></pre>
                     </div>
 
                     <div id="a73" class="mt80">
                         <h4>7.3 반응형 작업하기</h4>
-<pre><code class="language-css">@media (max-width: 800px) {
+<pre><code class="language-css">@media (max-width: 800px){
     .port__title {
         width: 100%;
+        margin-bottom: 16px;
         font-size: 30px;
         height: auto;
-        background: var(--mainBg-color);
-        top: 70px;
-        border-bottom: 2px solid var(--black100);
+        top: 68px;
         z-index: 1000;
-    }
-    .port__title em {
-        font-size: 16px;
+        background-color: var(--mainBg-color);
+
     }
     .port__item {
         width: 400px;
-        padding: 40px 20px;
+        padding: 40px 30px;
         height: auto;
     }
 }
@@ -537,31 +533,59 @@ git push -u origin main
 
                     <div class="right_refer">
                         <a href="https://port2023-vite.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
-                        <a href="https://github.com/webstoryboy/port2023-vite" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
-                    <ul class="refer5">
-                        <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
-                    </ul>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1934">11. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1935">12. 포트폴리오 사이트 만들기 : React-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1936">13. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1937">14. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1938">15. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1939">16. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1940">17. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1941">18. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1942">19. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1943">20. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                        </ul>
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1944">21. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1945">22. 포트폴리오 사이트 만들기 : Vue-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1946">23. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1947">24. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1948">25. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1949">26. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1950">27. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1951">28. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1952">29. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1953">30. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1954">31. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1955">32. 포트폴리오 사이트 만들기 : Next-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1956">33. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1957">34. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1958">35. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1959">36. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1960">37. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1961">38. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1962">39. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1963">40. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- //blog__contents -->
-
-                <aside class="blog__aside">
-                    <button class="blog__aside__btn"><span></span></button>
-                    <div class="blog__aside__chapter">
-                    </div>
-                </aside>
             </div>
         </section>
         <!-- //blog -->

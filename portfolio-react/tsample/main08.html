@@ -79,7 +79,7 @@
                             <div class="btn">소스 다운로드</div>
                             <a href="https://port2023-react.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
                             <a href="https://github.com/webstoryboy/port2023-react" target="_blank" class="sampleBtn">완성 코드</a>
-                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                     <h3>인덱스</h3>
                     <div class="index2">
                         <div>
-                            <h4>1. 포트폴리오 사이트 만들기 : VITE SITE</h4>
+                            <h4>VITE SITE</h4>
                             <ul>
                                 <li>1. 셋팅하기
                                     <ul>
@@ -175,7 +175,7 @@
                             </ul>
                         </div>
                         <div>
-                            <h4>2. 포트폴리오 사이트 만들기 : REACT SITE</h4>
+                            <h4>REACT SITE</h4>
                             <ul>
                                 <li>1. 셋팅하기
                                     <ul>
@@ -242,7 +242,7 @@
 
                     <h3>8. 연락처 영역</h3>
                     <div id="b81">
-                        <h4>8_1. 연락처 구조잡기</h4>
+                        <h4>8.1 연락처 구조잡기</h4>
                         <p>
                             기존 소스를 리액트 소스로 변경해보겠습니다.
                         </p>
@@ -291,12 +291,12 @@ export default Contact;
                     </div>
 
                     <div id="b82" class="mt80">
-                        <h4>8_2. 연락처 디자인 설정</h4>
+                        <h4>8.2 연락처 디자인 설정</h4>
                         <p>
                             CSS로 SCSS로 변형하여 작업하였습니다.
                         </p>
 <pre><code class="language-css">#contact {
-    height: 100vh;  
+    height: 100vh;
 }
 .contact__inner {
     width: 100%;
@@ -307,124 +307,117 @@ export default Contact;
     justify-content: flex-end;
     flex-direction: column;
 
-    @media (max-width: 800px) {
+    @media (max-width: 800px){ 
         justify-content: center;
     }
-}
-.contact__title {
-    font-size: 10vw;
-    text-transform: uppercase;
-    text-indent: -0.5vw;
-    line-height: 1;
-    letter-spacing: -0.3vw;
-    font-family: var(--mainEng-font);
-    font-weight: 800;
-    white-space: nowrap;
 
-    @media (max-width: 800px) {
-        display: none;
-    }
-}
-
-.contact__text {
-    width: 100%;
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--black);
-    position: relative;
-
-    .text {
-        color: #fff;
-        text-align: center;
-        font-size: 3vw;
-        line-height: 1;
-        font-weight: 900;
+    .contact__title {
+        font-size: 10vw;
         text-transform: uppercase;
-        text-decoration: underline;
-        font-family: var(--mainEng-font);
-        position: relative;
-        z-index: 100;
-        font-weight: 700;
-        letter-spacing: -0.1vw;
-        transition: all 0.3s;
-        cursor: all-scroll;
+        line-height: 1;
+        font-weight: 800;
+        white-space: nowrap;
+        text-indent: -0.5vw;
+        letter-spacing: -0.3vw;
 
-        @media (max-width: 800px) {
-            font-size: 24px;
-            word-break: break-all;
-            padding: 0 16px;
+        @media (max-width: 800px){ 
+            display: none;
         }
     }
-}
-
-.contact__lines {
-    width: 100%;
-
-    .line {
-        display: block;
+    .contact__text {
         width: 100%;
+        height: 40vh;
         background-color: var(--black);
-        margin-bottom: 0.5vw;
-        display: none;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
 
-        @media (max-width: 800px) {
-            display: block;
-        }
+        .text {
+            font-size: 3vw;
+            line-height: 1;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+            transition: all 0.3s;
+            cursor: all-scroll;
 
-        &:nth-child(1) {
-            height: 1px;
-        }
-        &:nth-child(2) {
-            height: 2px;
-        }
-        &:nth-child(3) {
-            height: 5px;
-        }
-        &:nth-child(4) {
-            height: 9px;
-        }
-        &:nth-child(5) {
-            height: 13px;
-        }
-        &:nth-child(6) {
-            height: 17px;
-        }
-        &:nth-child(7) {
-            height: 25px;
+            @media (max-width: 800px){ 
+                font-size: 24px;
+                padding: 0 16px;
+                word-break: break-all;
+            }
         }
     }
+    .contact__lines {
+        width: 100%;
 
-    &.bottom {
         .line {
             display: block;
             width: 100%;
+            height: 1px;
             background-color: var(--black);
-            margin-top: 0.5vw;
-            display: block;
+            margin-bottom: 0.5vw;
 
-            &:nth-child(1) {
+            &:nth-child(1){
                 height: 25px;
             }
-            &:nth-child(2) {
+            &:nth-child(2){
                 height: 17px;
             }
-            &:nth-child(3) {
+            &:nth-child(3){
                 height: 13px;
             }
-            &:nth-child(4) {
+            &:nth-child(4){
                 height: 9px;
             }
-            &:nth-child(5) {
+            &:nth-child(5){
                 height: 5px;
             }
-            &:nth-child(6) {
+            &:nth-child(6){
                 height: 2px;
             }
-            &:nth-child(7) {
+            &:nth-child(7){
                 height: 1px;
+            }
+        }
+
+        &.top {
+            .line {
+                margin-top: 0.5vw;
+                margin-bottom: 0;
+                display: none;
+
+                @media (max-width: 800px){ 
+                    display: block;
+                }
+
+                &:nth-child(1){
+                    height: 1px;
+                }
+                &:nth-child(2){
+                    height: 2px;
+                }
+                &:nth-child(3){
+                    height: 5px;
+                }
+                &:nth-child(4){
+                    height: 9px;
+                }
+                &:nth-child(5){
+                    height: 13px;
+                }
+                &:nth-child(6){
+                    height: 17px;
+                }
+                &:nth-child(7){
+                    height: 25px;
+                }
             }
         }
     }
@@ -433,11 +426,11 @@ export default Contact;
                     </div>
 
                     <div id="b83" class="mt80">
-                        <h4>8_3. 연락처 데이터 작업</h4>
+                        <h4>8.3 연락처 데이터 작업</h4>
                         <p>
                             핵심 데이터는 따로 작업하였습니다.
                         </p>
-<pre><code class="language-js">export const contactText = [
+<pre><code class="language-js">const contactText = [
     {
         link: "https://open.kakao.com/o/gM7YLzwf",
         title: "KAKAO : webstupids",
@@ -453,12 +446,12 @@ export default Contact;
                         </p>
 <pre><code class="language-js">&lt;div className="contact__text"&gt;
     &lt;div className="text"&gt;
-        {contactText.map((contact, index) =&gt; (
-            &lt;div key={index}&gt;
+        {contactText.map((contact, key) =&gt; (
+            &lt;div key={key}&gt;
                 &lt;a
                     href={contact.link}
-                    target="_blank"
                     rel="noopener noreferrer"
+                    target="_blank"
                 &gt;
                     {contact.title}
                 &lt;/a&gt;
@@ -491,23 +484,57 @@ git push -u origin main
 
                     <div class="right_refer">
                         <a href="https://port2023-react.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
-                        <a href="https://github.com/webstoryboy/port2023-react" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
-                    <ul class="refer5">
-                        <li><a href="https://webstoryboy.co.kr/1934">1. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1935">2. 포트폴리오 사이트 만들기 : React-Site : 라우팅 및 컴퍼넌트</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1936">3. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1937">4. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1938">5. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1939">6. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1940">7. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1941">8. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1942">9. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1943">10. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
-                    </ul>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1934">11. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1935">12. 포트폴리오 사이트 만들기 : React-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1936">13. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1937">14. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1938">15. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1939">16. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1940">17. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1941">18. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1942">19. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1943">20. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                        </ul>
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1944">21. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1945">22. 포트폴리오 사이트 만들기 : Vue-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1946">23. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1947">24. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1948">25. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1949">26. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1950">27. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1951">28. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1952">29. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1953">30. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1954">31. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1955">32. 포트폴리오 사이트 만들기 : Next-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1956">33. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1957">34. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1958">35. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1959">36. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1960">37. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1961">38. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1962">39. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1963">40. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- //blog__contents -->
 

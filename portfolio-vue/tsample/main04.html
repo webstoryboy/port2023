@@ -79,7 +79,7 @@
                             <div class="btn">소스 다운로드</div>
                             <a href="https://port2023-vue.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
                             <a href="https://github.com/webstoryboy/port2023-vue" target="_blank" class="sampleBtn">완성 코드</a>
-                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
                 </div>
@@ -294,14 +294,16 @@
 
                     <h3>4. 인트로 영역</h3>
                     <div id="v41">
-                        <h4>4_1. 인트로 구조잡기</h4>
+                        <h4>4.1 인트로 구조잡기</h4>
                         <p>
                             기본 코드부터 가져오겠습니다.
                         </p>
 <pre><code class="language-html">&lt;template&gt;
     &lt;section id="intro"&gt;
         &lt;div class="intro__inner"&gt;
-            &lt;h1 class="intro__title"&gt;port developer&lt;/h1&gt;
+            &lt;h2 class="intro__title"&gt;
+                port developer
+            &lt;/h2&gt;
             &lt;div class="intro__lines" aria-hidden="true"&gt;
                 &lt;span class="line"&gt;&lt;/span&gt;
                 &lt;span class="line"&gt;&lt;/span&gt;
@@ -337,7 +339,7 @@
                     </div>
 
                     <div id="v42" class="mt80">
-                        <h4>4_2. 인트로 디자인 설정</h4>
+                        <h4>4.2 인트로 디자인 설정</h4>
                         <p>
                             CSS로 SCSS로 변형하여 작업하였습니다.
                             <code>lang="scss"</code>는 scss를 쓰기 위한 표시이며, 
@@ -346,160 +348,161 @@
                             scoped 속성을 추가하면 해당 컴포넌트에만 스타일이 적용되게 됩니다.
                         </p>
 <pre><code class="language-html">&lt;style lang="scss" scoped&gt;
-    @import "@/assets/scss/_mixin.scss";
-
     #intro {
         height: 100vh;
     }
     .intro__inner {
         width: 100%;
         height: 100%;
-        padding: 16px;
         display: flex;
         align-items: flex-start;
         justify-content: flex-end;
         flex-direction: column;
-
-        @media (max-width: 800px) {
+        padding: 16px;
+    
+        @media (max-width: 800px){
             justify-content: center;
         }
-        
+    
         .intro__title {
             font-size: 10vw;
             text-transform: uppercase;
-            text-indent: -0.5vw;
             line-height: 1;
-            letter-spacing: -0.3vw;
             font-weight: 800;
             white-space: nowrap;
-
-            @media (max-width: 800px) {
+            text-indent: -0.5vw;
+            letter-spacing: -0.3vw;
+    
+            @media (max-width: 320px){ 
                 display: none;
             }
         }
-
         .intro__text {
             width: 100%;
             height: 40vh;
-            @include flex-center;
-            flex-direction: column;
             background-color: var(--black);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             position: relative;
-        
+    
             .text {
-                color: var(--white);
-                text-align: center;
                 font-size: 3vw;
                 line-height: 1;
                 font-weight: 900;
                 text-transform: uppercase;
                 text-decoration: underline;
+                text-align: center;
                 position: relative;
                 z-index: 100;
-                font-weight: 700;
-                letter-spacing: -0.1vw;
                 transition: all 0.3s;
                 cursor: all-scroll;
-                padding: 0 16px;
-
-                @media (max-width: 800px) {
+    
+                @media (max-width: 800px){ 
                     font-size: 24px;
-                    margin-top: 180px;
-                }
-        
-                &:hover {
-                    opacity: 0;
-                }
-                &:hover + .img {
-                    filter: grayscale(0);
                 }
             }
             .img {
-                @include position-center;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
                 width: 30vh;
                 height: 30vh;
                 border-radius: 50%;
                 overflow: hidden;
                 filter: grayscale(100%);
-                transition: filter 0.3s;
+                transition: all 0.3s;
+    
+                @media (max-width: 320px){ 
+                    width: 20vh;
+                    height: 20vh;
+                }
+            }
+    
+            &:hover .text {
+                opacity: 0;
+            }
+            &:hover .img {
+                filter: grayscale(0);
             }
         }
-    }
-        
-    .intro__lines {
-        width: 100%;
-        
-        .line {
-            display: block;
+        .intro__lines {
             width: 100%;
-            background-color: var(--black);
-            margin-bottom: 0.5vw;
-        
-            &:nth-child(1) {
-                height: 1px;
-            }
-            &:nth-child(2) {
-                height: 2px;
-            }
-            &:nth-child(3) {
-                height: 5px;
-            }
-            &:nth-child(4) {
-                height: 9px;
-            }
-            &:nth-child(5) {
-                height: 13px;
-            }
-            &:nth-child(6) {
-                height: 17px;
-            }
-            &:nth-child(7) {
-                height: 25px;
-            }
-        }
-        
-        &.bottom {
+    
             .line {
                 display: block;
                 width: 100%;
+                height: 1px;
                 background-color: var(--black);
-                margin-top: 0.5vw;
-                display: none;
-
-                @media (max-width: 800px) {
-                    display: block;
+                margin-bottom: 0.5vw;
+    
+                &:nth-child(1){
+                    height: 1px;
                 }
-        
-                &:nth-child(1) {
-                    height: 25px;
-                }
-                &:nth-child(2) {
-                    height: 17px;
-                }
-                &:nth-child(3) {
-                    height: 13px;
-                }
-                &:nth-child(4) {
-                    height: 9px;
-                }
-                &:nth-child(5) {
-                    height: 5px;
-                }
-                &:nth-child(6) {
+                &:nth-child(2){
                     height: 2px;
                 }
-                &:nth-child(7) {
-                    height: 1px;
+                &:nth-child(3){
+                    height: 5px;
+                }
+                &:nth-child(4){
+                    height: 9px;
+                }
+                &:nth-child(5){
+                    height: 13px;
+                }
+                &:nth-child(6){
+                    height: 17px;
+                }
+                &:nth-child(7){
+                    height: 25px;
+                }
+            }
+    
+            &.bottom {
+                .line {
+                    margin-top: 0.5vw;
+                    margin-bottom: 0;
+                    display: none;
+    
+                    @media (max-width: 800px){ 
+                        display: block;
+                    }
+    
+                    &:nth-child(1){
+                        height: 25px;
+                    }
+                    &:nth-child(2){
+                        height: 17px;
+                    }
+                    &:nth-child(3){
+                        height: 13px;
+                    }
+                    &:nth-child(4){
+                        height: 9px;
+                    }
+                    &:nth-child(5){
+                        height: 5px;
+                    }
+                    &:nth-child(6){
+                        height: 2px;
+                    }
+                    &:nth-child(7){
+                        height: 1px;
+                    }
                 }
             }
         }
-    }  
+    }
 &lt;/style&gt;
 </code></pre>
                     </div>
 
                     <div id="v43" class="mt80">
-                        <h4>4_3. 인트로 데이터 작업</h4>
+                        <h4>4.3 인트로 데이터 작업</h4>
                         <p>
                             핵심 데이터는 따로 작업하였습니다.
                         </p>
@@ -518,7 +521,9 @@ import { introText } from "@/constants/index";
 &lt;template&gt;
     &lt;section id="intro"&gt;
         &lt;div class="intro__inner"&gt;
-            &lt;h1 class="intro__title"&gt;{{ introText.title }}&lt;/h1&gt;
+            &lt;h2 class="intro__title"&gt;
+                {{ introText.title }}
+            &lt;/h2&gt;
             &lt;div class="intro__lines" aria-hidden="true"&gt;
                 &lt;span class="line"&gt;&lt;/span&gt;
                 &lt;span class="line"&gt;&lt;/span&gt;
@@ -563,6 +568,7 @@ import { introText } from "@/constants/index";
                             익숙함이 실력 향상의 기본입니다. 
                             많이 해보고 많이 실패해봐야 좋은 사이트를 만들수 있습니다. 
                             수고하셨습니다. 😳😳
+                            깃헙에 올리는 것도 계속해주세요!!
                         </p>
                     </div>
 
@@ -570,23 +576,57 @@ import { introText } from "@/constants/index";
 
                     <div class="right_refer">
                         <a href="https://port2023-vue.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
-                        <a href="https://github.com/webstoryboy/port2023-vue" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
-                    <ul class="refer5">
-                        <li><a href="https://webstoryboy.co.kr/1944">1. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1945">2. 포트폴리오 사이트 만들기 : Vue-Site : 레이아웃</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1946">3. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1947">4. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1948">5. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1949">6. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1950">7. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1951">8. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1952">9. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1953">10. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
-                    </ul>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1934">11. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1935">12. 포트폴리오 사이트 만들기 : React-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1936">13. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1937">14. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1938">15. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1939">16. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1940">17. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1941">18. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1942">19. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1943">20. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                        </ul>
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1944">21. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1945">22. 포트폴리오 사이트 만들기 : Vue-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1946">23. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1947">24. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1948">25. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1949">26. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1950">27. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1951">28. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1952">29. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1953">30. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1954">31. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1955">32. 포트폴리오 사이트 만들기 : Next-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1956">33. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1957">34. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1958">35. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1959">36. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1960">37. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1961">38. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1962">39. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1963">40. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- //blog__contents -->
 

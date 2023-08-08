@@ -79,7 +79,7 @@
                             <div class="btn">소스 다운로드</div>
                             <a href="https://port2023-next.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
                             <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">완성 코드</a>
-                            <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
                 </div>
@@ -392,182 +392,292 @@
 
                     <h3>7. 포트폴리오 영역</h3>
                     <div id="n71">
-                        <h4>7_1. 포트폴리오 구조잡기</h4>
+                        <h4>7.1 포트폴리오 구조잡기</h4>
                         <p>
                             기존 소스를 리액트 소스로 변경해보겠습니다.
                         </p>
 <pre><code class="language-js">import React from "react";
-
-    import { siteText } from "../constants";
     
-    const Site = () =&gt; {
-      return (
-        &lt;section id="site"&gt;
-            &lt;div className="site__inner"&gt;
-                &lt;h2 className="site__title"&gt;Site coding &lt;em&gt;나의 작업물&lt;/em&gt;&lt;/h2&gt;
-                &lt;div className="site__wrap"&gt;
-                    {siteText.map((site, index) =&gt; (
-                        &lt;div className={`site__item s${index + 1}`} key={index}&gt;
-                            &lt;span className="num"&gt;{index + 1}.&lt;/span&gt;
-                            &lt;div className="text"&gt;
-                                &lt;div&gt;{site.text[0]}&lt;/div&gt;
-                                &lt;div&gt;{site.text[1]}&lt;/div&gt;
-                                &lt;div&gt;{site.text[2]}&lt;/div&gt;
-                            &lt;/div&gt;
-                            &lt;h3 className="title"&gt;웹 표준을 준수한 사이트 제작&lt;/h3&gt;
-                            &lt;div className="btn"&gt;
-                                &lt;a href={site.code}&gt;code&lt;/a&gt;
-                                &lt;a href={site.view}&gt;view&lt;/a&gt;
-                            &lt;/div&gt;
-                            &lt;div className="info"&gt;
-                                &lt;span&gt;{site.info[0]}&lt;/span&gt;
-                                &lt;span&gt;{site.info[1]}&lt;/span&gt;
-                                &lt;span&gt;{site.info[2]}&lt;/span&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                    ))}
+const Port = () =&gt; {
+    return (
+        &lt;section id="port"&gt;
+            &lt;div class="port__inner"&gt;
+                &lt;h2 class="port__title"&gt;
+                    portfolio &lt;em&gt;포폴 작업물&lt;/em&gt;
+                &lt;/h2&gt;
+                &lt;div class="port__wrap"&gt;
+                    &lt;article class="port__item p1"&gt;
+                        &lt;span class="num"&gt;01.&lt;/span&gt;
+                        &lt;a href="https://github.com/kimsangjunv1/-React-Portfolio" target="_blank" class="img"&gt;
+                            &lt;img src="assets/img/port01.jpg" alt="김상준 포트폴리오" /&gt;
+                        &lt;/a&gt;
+                        &lt;h3 class="title"&gt;어워드에도 올라간 포트폴리오&lt;/h3&gt;
+                        &lt;p class="desc"&gt;
+                            라마 디자인을 통해 자신의 스킬을 가장 멋지게 표현한 포트폴리오입니다.
+                            가로 모드와 세로 모드는 매우 인상적이며 특히 리액트와 비트를 이용하여 제작한 것은 더욱 놀랍습니다.
+                            이 사이트는 awwwards.com에도 인정받아 올라간 포트폴리오입니다. 
+                            확실히 그의 뛰어난 디자인 스킬과 기술력이 빛을 발휘한 결과물인 것 같습니다.
+                        &lt;/p&gt;
+                        &lt;a href="https://portfoliosj-react.netlify.app/" target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                    &lt;/article&gt;
+                    &lt;article class="port__item p2"&gt;
+                        &lt;span class="num"&gt;02.&lt;/span&gt;
+                        &lt;a href="https://github.com/seolhee313/PORTFOLIO-REACT" class="img" target="_blank"&gt;
+                            &lt;img src="assets/img/port02.jpg" alt="천설희 포트폴리오" /&gt;
+                        &lt;/a&gt;
+                        &lt;h3 class="title"&gt;빛나는 밤에 포트폴리오&lt;/h3&gt;
+                        &lt;p class="desc"&gt;
+                            이 사이트는 정말 인상적인 포트폴리오입니다. 
+                            특히 스무스한 효과와 가로 모드드 높은 퀄리티를 자랑합니다. 
+                            디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
+                            GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하는데, 부족함이 없으며,
+                            세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다. 
+                        &lt;/p&gt;
+                        &lt;a href="https://portfolio-313.web.app/" target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                    &lt;/article&gt;
+                    &lt;article class="port__item p3"&gt;
+                        &lt;span class="num"&gt;03.&lt;/span&gt;
+                        &lt;a href="https://github.com/YeoDaSeul4355/portfolio" class="img" target="_blank"&gt;
+                            &lt;img src="assets/img/port03.jpg" alt="여다슬 포트폴리오" /&gt;
+                        &lt;/a&gt;
+                        &lt;h3 class="title"&gt;열정이 넘치는 포트폴리오&lt;/h3&gt;
+                        &lt;p class="desc"&gt;
+                            깔끔하고 발랄한 느낌이 묻어나는 장난꾸러기 같은 사이트입니다.
+                            배치와 색상 선택이 조화롭고 사용자를 환영하는 분위기를 조성하고 있습니다. 
+                            또한, 가로 모드에서의 디자인도 매우 멋집니다.
+                            GSAP와 React.js를 이용한 부드러운 효과들이 사이트에서 눈에 띄며, 페이지 전환과 요소의 움직임이 매끄러운 포트폴리오입니다.
+                        &lt;/p&gt;
+                        &lt;a href="https://portfolio-jjul.web.app/" target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                    &lt;/article&gt;
+                    &lt;article class="port__item p4"&gt;
+                        &lt;span class="num"&gt;04.&lt;/span&gt;
+                        &lt;a href="https://github.com/dlgnsrb227/portfolio-next" class="img" target="_blank"&gt;
+                            &lt;img src="assets/img/port04.jpg" alt="이훈규 포트폴리오" /&gt;
+                        &lt;/a&gt;
+                        &lt;h3 class="title"&gt;모던한 포트폴리오&lt;/h3&gt;
+                        &lt;p class="desc"&gt;
+                            블랙 컨셉과 애니메이션이 돋보이는 포트폴리오 사이트입니다.
+                            GSAP를 통한 애니메이션과 NEXT.js를 통해 제작된 포트폴리오입니다.
+                            pin 애니메이션을 통한 포폴 작업물의 표현 능력이 돋보이는 사이트입니다.
+                        &lt;/p&gt;
+                        &lt;a href="https://hoongportfolio-next.netlify.app/" target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                    &lt;/article&gt;
+                    &lt;article class="port__item p5"&gt;
+                        &lt;span class="num"&gt;05.&lt;/span&gt;
+                        &lt;a href="/" class="img" target="_blank"&gt;
+                            &lt;img src="assets/img/port05.jpg" alt="박준승 포트폴리오" /&gt;
+                        &lt;/a&gt;
+                        &lt;h3 class="title"&gt;가로모드의 정석 포트폴리오&lt;/h3&gt;
+                        &lt;p class="desc"&gt;
+                            이 포트폴리오는 가로모드를 통해 눈에 띄는 애니메이션 효과를 가진 멋진 작품들이 펼쳐집니다. 
+                            세션 간의 부드러운 전환과 흥미로운 움직임이 사용자들에게 색다른 경험을 선사합니다.
+                            사이트에는 탁월한 디자인과 창의적인 애니메이션들이 어우러져, 사용자들에게 인상적인 시각적인 효과를 줍니다. 
+                            애니메이션은 적절히 사용되어 사이트를 더욱 생동감 있게 만들어주는 포트폴리오입니다.
+                        &lt;/p&gt;
+                        &lt;a href="https://junseungpark.github.io/portfolio/index3.html" target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                    &lt;/article&gt;
+                    &lt;article class="port__item p6"&gt;
+                        &lt;span class="num"&gt;06.&lt;/span&gt;
+                        &lt;a href="/" class="img" target="_blank"&gt;
+                            &lt;img src="assets/img/port06.jpg" alt="포트폴리오" /&gt;
+                        &lt;/a&gt;
+                        &lt;h3 class="title"&gt;화려함의 정석 포트폴리오&lt;/h3&gt;
+                        &lt;p class="desc"&gt;
+                            화려하고 세련된 디자인과 다채로운 색상이 사용된 포트폴리오는 사용자를 홀릴 듯한 시각적인 매력을 지니고 있습니다.
+                            포트폴리오 내의 각 작품들은 디테일한 디자인과 탁월한 시각적 표현력을 갖추고 있어, 주인공의 뛰어난 예술적 감각을 느낄 수 있습니다. 
+                            화려한 애니메이션 효과와 부드러운 전환은 사이트를 더욱 생동감 있게 만들어주며, 사용자들에게 색다른 경험을 선사합니다.
+                        &lt;/p&gt;
+                        &lt;a href="https://webstoryboy.github.io/port2023/portfolio-student/DavidYang/index.html" target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                    &lt;/article&gt;
+                    &lt;article class="port__item p7"&gt;
+                        &lt;span class="num"&gt;07.&lt;/span&gt;
+                        &lt;a href="/" class="img" target="_blank"&gt;
+                            &lt;img src="assets/img/port07.jpg" alt="포트폴리오" /&gt;
+                        &lt;/a&gt;
+                        &lt;h3 class="title"&gt;패럴랙스 정석 포트폴리오&lt;/h3&gt;
+                        &lt;p class="desc"&gt;
+                            마치 예술작품을 감상하는 듯한 환상적인 경험을 선사하는 포트폴리오입니다. 
+                            패럴랙스 스크롤링을 활용하여 구성된 사이트는 사용자들에게 독특하고 멋진 시각적 효과를 제공합니다.
+                            배경과 움직이는 요소들이 조화롭게 어우러져, 사이트 전반에 걸쳐 깊이와 입체감을 느낄 수 있습니다. 
+                            스크롤에 따라 움직이는 요소들은 마치 세계를 탐험하는 듯한 느낌을 주며, 사용자들을 끌어들이는 매력적인 요소로 작용합니다.
+                        &lt;/p&gt;
+                        &lt;a href="https://webstoryboy.github.io/port2023/portfolio-student/TaeyongLee/index.html" target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                    &lt;/article&gt;
+                    &lt;article class="port__item p8"&gt;
+                        &lt;span class="num"&gt;08.&lt;/span&gt;
+                        &lt;a href="/" class="img" target="_blank"&gt;
+                            &lt;img src="assets/img/port08.jpg" alt="김현로 포트폴리오" /&gt;
+                        &lt;/a&gt;
+                        &lt;h3 class="title"&gt;트랜지션 포트폴리오&lt;/h3&gt;
+                        &lt;p class="desc"&gt;
+                            화면 전환과 요소들의 흐름이 순조롭고 매끄러운 작품들로 가득한 포트폴리오 사이트입니다. 
+                            페이지 간의 트랜지션은 마치 이야기를 풀어내는 듯한 흥미진진한 경험을 선사합니다.
+        
+                            트랜지션 효과의 적절한 활용은 작품들을 보다 동적이고 생동감 있게 만들어줍니다. 
+                            각 페이지의 이동이 자연스럽고 사용자들이 원활하게 사이트를 탐색할 수 있도록 배려된 구성은 
+                            개발자의 디자인 능력을 잘 보여주는 특징입니다.
+                        &lt;/p&gt;
+                        &lt;a href="https://webstoryboy.github.io/port2023/portfolio-student/HyunroKim/index.html" target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                    &lt;/article&gt;
+                    &lt;article class="port__item p9"&gt;
+                        &lt;span class="num"&gt;09.&lt;/span&gt;
+                        &lt;a href="/" class="img" target="_blank"&gt;
+                            &lt;img src="assets/img/port09.jpg" alt="포트폴리오" /&gt;
+                        &lt;/a&gt;
+                        &lt;h3 class="title"&gt;스크롤의 정석 포트폴리오&lt;/h3&gt;
+                        &lt;p class="desc"&gt;
+                            스크롤링을 활용하여 훌륭한 사용자 경험을 선사하는 포트폴리오 사이트입니다.
+                            스크롤을 내리면서 작품들이 순차적으로 나타나고 효과적으로 전환되는 것은 마치 예술적인 이야기를 읽어나가는 듯한 느낌을 주며 사용자를 매료시킵니다.
+                            스크롤의 움직임을 통해 작품들이 서서히 드러나고, 각 페이지 간의 전환은 자연스럽고 부드럽습니다. 
+                            이러한 트랜지션과 애니메이션들이 작품들의 내용과 테마를 더욱 강조해줍니다.
+                        &lt;/p&gt;
+                        &lt;a href="https://webstoryboy.github.io/port2023/portfolio-student/ChoJaeHyung/index.html" target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                    &lt;/article&gt;
+                    &lt;article class="port__item p10"&gt;
+                        &lt;span class="num"&gt;10.&lt;/span&gt;
+                        &lt;a href="/" class="img" target="_blank"&gt; 
+                            &lt;img src="assets/img/port10.jpg" alt="포트폴리오" /&gt;
+                        &lt;/a&gt;
+                        &lt;h3 class="title"&gt;모던함의 정석 포트폴리오&lt;/h3&gt;
+                        &lt;p class="desc"&gt;
+                            현대적이고 세련된 디자인으로 가득한 포트폴리오 사이트입니다.
+                            모던한 느낌과 세심한 디테일이 조화를 이루며, 사용자에게 신선하고 품격 있는 경험을 제공합니다.
+                            사이트의 디자인은 깔끔하고 단정하면서도 특유의 감성과 풍부한 표현력이 느껴집니다. 
+                            간결한 레이아웃과 모던한 색상 선택은 주인공의 디자인 감각을 잘 보여주는 특징입니다.
+                        &lt;/p&gt;
+                        &lt;a href="https://webstoryboy.github.io/port2023/portfolio-student/JooHyeji/index.html" target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                    &lt;/article&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/section&gt;
-      )
-    }
+    )
+}
     
-    export default Site
+export default Site
 </code></pre>
                     </div>
 
                     <div id="n72" class="mt80">
-                        <h4>7_2. 포트폴리오 디자인 설정</h4>
+                        <h4>7.2 포트폴리오 디자인 설정</h4>
                         <p>
                             CSS로 SCSS로 변형하여 작업하였습니다.
                         </p>
-<pre><code class="language-css">#port {
+<pre><code class="language-scss">#port {
     width: 100%;
-    //   overflow: hidden;
-    margin-top: 200px;
+    margin-top: 30vh;
+    // overflow: hidden;
 }
 .port__inner {
     padding: 16px;
-}
-.port__title {
-    width: 100%;
-    height: 5vw;
-    font-size: 4vw;
-    line-height: 1.6;
-    text-transform: uppercase;
-    color: var(--black100);
-    border-bottom: 0.4vw solid var(--black100);
-    font-family: "nanumSquareNeo";
-    font-weight: 900;
-    z-index: 2000;
-    margin-bottom: 16px;
-  
-    @media (max-width: 800px) {
-        width: 100%;
-        font-size: 30px;
-        height: auto;
-        background: #f3ede8;
-        top: 70px;
-        border-bottom: 2px solid var(--black100);
-        z-index: 1000;
-    }
-  
-    em {
-        font-size: 20px;
-        font-weight: 400;
-    }
-}
-  
-.port__wrap {
-    display: flex;
-    flex-wrap: wrap;
-    width: 7000px;
-  
-    .port__item {
-        width: 500px;
-        height: 700px;
-        background-color: var(--subBg100);
-        padding: 40px;
-        overflow: hidden;
-        margin-right: 20px;
 
-        @media (max-width: 800px) {
-            width: 400px;
-            padding: 40px 20px;
-            height: auto;
+    .port__title {
+        width: 100%;
+        height: 5vw;
+        font-size: 4vw;
+        font-weight: 900;
+        line-height: 1.6;
+        font-family: var(--mainKor-font);
+        text-transform: uppercase;
+        color: var(--black100);
+        border-bottom: 0.4vw solid var(--black100);
+        margin-bottom: 16px;
+        text-indent: -0.26vw;
+
+        em {
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 2;
         }
-  
-        &.p1 {
+    }
+    .port__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 7000px;
+
+        .port__item {
+            width: 500px;
+            height: 70vh;
             background-color: var(--subBg100);
-        }
-        &.p2 {
-            background-color: var(--subBg200);
-        }
-        &.p3 {
-            background-color: var(--subBg300);
-        }
-        &.p4 {
-            background-color: var(--subBg400);
-        }
-        &.p5 {
-            background-color: var(--subBg500);
-        }
-        &.p6 {
-            background-color: var(--subBg100);
-        }
-        &.p7 {
-            background-color: var(--subBg200);
-        }
-        &.p8 {
-            background-color: var(--subBg300);
-        }
-        &.p9 {
-            background-color: var(--subBg400);
-        }
-        &.p10 {
-            background-color: var(--subBg500);
-        }
-        img {
-            width: 100%;
-            border-radius: 5px;
-            filter: saturate(0%);
-            transition: all 0.3s;
-            margin-top: -20px;
-    
-            &:hover {
-                filter: saturate(100%);
-                margin-top: 0px;
+            padding: 2.5rem;
+            margin-right: 20px;
+
+            &.p1 {
+                background-color: var(--subBg100);
             }
-        }
-        .num {
-            font-size: 32px;
-            font-family: var(--mainNum-font);
-        }
-        .title {
-            font-size: 24px;
-            text-align: center;
-            padding: 18px 0 15px;
-            font-weight: 700;
-            color: var(--black100);
-            border-bottom: 1px solid var(--black300);
-            font-family: var(--mainKor-font);
-            margin-bottom: 20px;
-        }
-        .desc {
-            font-family: "nanumSquareNeo";
-        }
-        .site {
-            font-family: var(--mainKor-font);
-            text-align: center;
-            border: 1px solid var(--black100);
-            display: block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            transition: all 0.3s;
-  
-            &:hover {
-                background-color: var(--black100);
-                color: var(--white);
+            &.p2 {
+                background-color: var(--subBg200);
+            }
+            &.p3 {
+                background-color: var(--subBg300);
+            }
+            &.p4 {
+                background-color: var(--subBg400);
+            }
+            &.p5 {
+                background-color: var(--subBg500);
+            }
+            &.p6 {
+                background-color: var(--subBg100);
+            }
+            &.p7 {
+                background-color: var(--subBg200);
+            }
+            &.p8 {
+                background-color: var(--subBg300);
+            }
+            &.p9 {
+                background-color: var(--subBg400);
+            }
+            &.p10 {
+                background-color: var(--subBg500);
+            }
+            .num {
+                font-size: 2rem;
+                font-family: var(--mainNum-font);
+            }
+            .img {
+                display: block;
+                margin-top: -20px;
+                transition: margin-top 0.3s;
+
+                img {
+                    border-radius: 5px;
+                    filter: saturate(0%);
+                    transition: all 0.3s;
+                }
+                
+                &:hover {
+                    margin-top: 0;
+
+                    img {
+                        filter: saturate(100%);
+                    }
+                }
+            }
+            .title {
+                font-size: 1.5rem;
+                text-align: center;
+                padding: 0.8rem 0;
+                font-weight: 700;
+                color: var(--black100);
+                border-bottom: 2px solid var(--black100);
+                margin-bottom: 1rem;
+            }
+            .desc {
+                font-size: 1rem;
+            }
+            .site {
+                border: 1px solid var(--black100);
+                display: block;
+                text-align: center;
+                padding: 0.625rem 1.5rem;
+                margin-top: 1.5rem;
+                transition: all 0.2s;
+
+                &:hover {
+                    background-color: var(--black100);
+                    color: var(--white);
+                }
             }
         }
     }
@@ -576,39 +686,33 @@
                     </div>
 
                     <div id="n73" class="mt80">
-                        <h4>7_3. 포트폴리오 데이터 작업</h4>
+                        <h4>7.3 포트폴리오 데이터 작업</h4>
                         <p>
                             데이터를 import하고 작업하였습니다.
                         </p>
 <pre><code class="language-js">import React from "react";
+import Image from "next/image";
 
-import { siteText } from "../constants";
+import { portText } from "@/constants";
 
-const Site = () =&gt; {
+const Port = () =&gt; {
     return (
-        &lt;section id="site"&gt;
-            &lt;div className="site__inner"&gt;
-                &lt;h2 className="site__title"&gt;Site coding &lt;em&gt;나의 작업물&lt;/em&gt;&lt;/h2&gt;
-                &lt;div className="site__wrap"&gt;
-                    {siteText.map((site, index) =&gt; (
-                        &lt;div className={`site__item s${index + 1}`} key={index}&gt;
-                            &lt;span className="num"&gt;{index + 1}.&lt;/span&gt;
-                            &lt;div className="text"&gt;
-                                &lt;div&gt;{site.text[0]}&lt;/div&gt;
-                                &lt;div&gt;{site.text[1]}&lt;/div&gt;
-                                &lt;div&gt;{site.text[2]}&lt;/div&gt;
-                            &lt;/div&gt;
-                            &lt;h3 className="title"&gt;웹 표준을 준수한 사이트 제작&lt;/h3&gt;
-                            &lt;div className="btn"&gt;
-                                &lt;a href={site.code}&gt;code&lt;/a&gt;
-                                &lt;a href={site.view}&gt;view&lt;/a&gt;
-                            &lt;/div&gt;
-                            &lt;div className="info"&gt;
-                                &lt;span&gt;{site.info[0]}&lt;/span&gt;
-                                &lt;span&gt;{site.info[1]}&lt;/span&gt;
-                                &lt;span&gt;{site.info[2]}&lt;/span&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
+        &lt;section id="port"&gt;
+            &lt;div class="port__inner"&gt;
+                &lt;h2 class="port__title"&gt;
+                    portfolio &lt;em&gt;포폴 작업물&lt;/em&gt;
+                &lt;/h2&gt;
+                &lt;div class="port__wrap"&gt;
+                    {portText.map((port, key) =&gt; (
+                        &lt;article class={`port__item p${key+1}`} key={key}&gt;
+                            &lt;span class="num"&gt;{port.num}.&lt;/span&gt;
+                            &lt;a href={port.code} target="_blank" class="img"&gt;
+                                &lt;Image src={port.img} alt={port.name} width={420} height={262} /&gt;
+                            &lt;/a&gt;
+                            &lt;h3 class="title"&gt;{port.title}&lt;/h3&gt;
+                            &lt;p class="desc"&gt;{port.desc}&lt;/p&gt;
+                            &lt;a href={port.view} target="_blank" class="site"&gt;사이트 보기&lt;/a&gt;
+                        &lt;/article&gt;
                     ))}
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -616,7 +720,7 @@ const Site = () =&gt; {
     )
 }
 
-export default Site
+export default Port;
 </code></pre>
                         
 
@@ -634,23 +738,57 @@ export default Site
 
                     <div class="right_refer">
                         <a href="https://port2023-next.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
-                        <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/webstoryboy" target="_blank" class="sampleBtn">유튜브</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
-                    <ul class="refer5">
-                        <li><a href="https://webstoryboy.co.kr/1944">1. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1945">2. 포트폴리오 사이트 만들기 : Next-Site : 레이아웃</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1946">3. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1947">4. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1948">5. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1949">6. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1950">7. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1951">8. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1952">9. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
-                        <li><a href="https://webstoryboy.co.kr/1953">10. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
-                    </ul>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1934">11. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1935">12. 포트폴리오 사이트 만들기 : React-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1936">13. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1937">14. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1938">15. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1939">16. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1940">17. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1941">18. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1942">19. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1943">20. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                        </ul>
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1944">21. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1945">22. 포트폴리오 사이트 만들기 : Vue-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1946">23. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1947">24. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1948">25. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1949">26. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1950">27. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1951">28. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1952">29. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1953">30. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1954">31. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1955">32. 포트폴리오 사이트 만들기 : Next-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1956">33. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1957">34. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1958">35. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1959">36. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1960">37. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1961">38. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1962">39. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1963">40. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- //blog__contents -->
 
