@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 배우기 😳</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/JavaScript</span>
+                <h1 class="title">자바스크립트 배우기 - 변수</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc rightX">
+                        <div class="left">
+                            <span class="num">01</span>
+                            <div class="title">자바스크립트 배우기 : 데이터 저장하기</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-next.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 튜토리얼은 하나의 웹사이트를 여러 가지 프레임워크를 사용하여 만드는 방법에 대해 소개합니다. 
+                        웹 개발자들은 종종 다양한 프레임워크를 이용하여 작업하게 됩니다. 
+                        이 과정에서 여러 가지 프레임워크들을 어떻게 적용하는지 알아보고, 각 프레임워크들의 장단점을 비교 분석하며 학습하게 됩니다.
+                    </p>
+                    <p>
+                        
+                    </p>
+
+                    <h3>자바스크립트 배우기</h3>
+                    <div class="index">
+                        <h4>JavaScript Basic</h4>
+                        <ul>
+                            <li>1. 데이터 저장하기</li>
+                            <li>2. 데이터 불러오기</li>
+                            <li>3. 데이터 실행하기</li>
+                            <li>4. 데이터 제어하기</li>
+                        </ul>
+                    </div>
+
+                    <hr>
+                    
+                    <div id="n11">
+                        <h4>1.1 Next 설치하기</h4>
+                        <p>next.js를 설치하고 작업을 해보기 전에 간단하게 next.js가 뭐하는 건지 잠깐 알아보고 가겠습니다.</p>
+                        <div class="sampleBasic">
+                            <p>
+                                Next.js는 <i>React 기반의 JavaScript 프레임워크로서</i>, 서버 사이드 렌더링(SSR)과 정적 사이트 생성(Static Site Generation)을 지원하여 웹 애플리케이션을 빠르고 SEO 친화적으로 만들 수 있도록 도와주는 도구입니다. 
+                                Next.js는 개발자들이 React를 사용하여 프로젝트를 구축하고, 더 효율적으로 성능을 최적화하는데 도움을 줍니다.
+                            </p>
+                            <ul class="list">
+                                <li>서버 사이드 렌더링(SSR): Next.js는 서버 사이드 렌더링을 기본적으로 지원합니다. 이는 웹 페이지를 서버에서 렌더링하여 클라이언트에게 전달하므로 초기 로딩 속도가 개선되고, 검색 엔진 최적화(SEO)에 유리합니다.</li>
+                                <li>정적 사이트 생성(Static Site Generation): Next.js는 정적 사이트 생성을 지원하여 사전에 페이지를 렌더링하여 정적 파일로 생성할 수 있습니다. 이를 통해 빠른 페이지 로딩과 서버 비용 절감이 가능합니다.</li>
+                                <li>Hot Module Replacement(HMR): 개발 모드에서 코드 변경을 감지하여 자동으로 페이지를 리로드하거나 수정된 부분만 빠르게 갱신하여 개발 효율성을 높여줍니다.</li>
+                                <li>데이터 사전 가져오기(Prefetching): Next.js는 데이터 사전 가져오기를 지원하여 미리 필요한 데이터를 가져와 페이지가 렌더링될 때 데이터가 준비되도록 합니다.</li>
+                                <li>동적 라우팅(Dynamic Routing): 파일 시스템 기반의 라우팅을 지원하여 동적으로 라우팅되는 페이지를 쉽게 구현할 수 있습니다.</li>
+                            </ul>
+                            <p>
+                                Next.js는 SSR과 정적 사이트 생성의 장점을 조합하여 빠른 로딩 속도와 SEO 최적화를 동시에 이뤄낼 수 있습니다. 
+                                또한, 높은 생산성과 개발 편의성을 제공하며, React 개발자들에게 강력한 도구로 평가되고 있습니다.
+                            </p>
+                        </div>
+                        <p>
+                            그럼 시작해보겠습니다. 
+                            기존에 작업했던 <code>port2023</code> 폴더에 작업을 하겠습니다. 
+                            현재 이 폴더에는 <code>port2023-vite</code>, <code>port2023-react</code>, <code>port2023-vue</code>가 있습니다. 
+                            그럼 터미널을 열고 <code>npx create-next-app@latest</code> 라고 작성하겠습니다. 
+                            <i>여기서 주의할 점은 꼭 port2023 폴더에서 설정해야 합니다.</i>
+                        </p>
+<pre><code class="language-js">$ npx create-next-app@latest</code></pre>
+                        <p>
+                            성공을 하면 아래와 같은 메세지가 뜹니다.
+                            <code>TypeScript</code> no, <code>ESLint</code> no, <code>Tailwind</code> no,
+                            <code>directory</code> yes, <code>Router</code> yes, <code>alias</code> yes,
+                            <code>configured</code>은 @를 선택합니다.
+                        </p>
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023 % npx create-next-app@latest
+✔ What is your project named? … port2023-next
+✔ Would you like to use TypeScript? … No / Yes
+✔ Would you like to use ESLint? … No / Yes
+✔ Would you like to use Tailwind CSS? … No / Yes
+✔ Would you like to use `src/` directory? … No / Yes
+✔ Would you like to use App Router? (recommended) … No / Yes
+✔ Would you like to customize the default import alias? … No / Yes
+✔ What import alias would you like configured? … @ / *
+Creating a new Next.js app in /Users/webstoryboy/Desktop/port2023/port2023-next.
+
+Using npm.
+
+Initializing project with template: app 
+
+Installing dependencies:
+- react
+- react-dom
+- next
+
+added 23 packages, and audited 24 packages in 6s
+
+4 packages are looking for funding
+    run `npm fund` for details
+
+found 0 vulnerabilities
+Success! Created port2023-next at /Users/webstoryboy/Desktop/port2023/port2023-next
+</code></pre>
+                        <p>
+                            설치된 폴더로 이동하기 위해 <code>cd port2023-next</code>를 작성하고 <code>npm run dev</code>라고 치면 실행이 됩니다. 
+                            로컬 주소가 나오고 CTRL을 누르고 클릭하면 브라우저에서 열립니다.
+                        </p>
+<pre><code class="language-js">webstoryboy@Webstoryboyui-MacBookPro port2023 % cd port2023-next
+webstoryboy@Webstoryboyui-MacBookPro port2023-next % npm run dev
+
+> port2023-next@0.1.0 dev
+> next dev
+
+- ready started server on 0.0.0.0:3000, url: http://localhost:3000
+- event compiled client and server successfully in 110 ms (20 modules)
+- wait compiling...
+- event compiled client and server successfully in 75 ms (20 modules)
+</code></pre>
+                        <p>
+                            이런 화면이 나오면 성공한 것입니다. 축하드립니다.😶‍🌫️
+                        </p>
+                        <div class="sampleImg">
+                            <img src="https://webstoryboy.github.io/port2023/portfolio-next/tsample/img/n1.png" alt="next.js" />
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            마지막 튜토리얼 넥스트 셋팅을 완료했습니다. 
+                            리액트의 단점을 보완한 버전이라고 생각하면 편할거 같습니다. 
+                            기존에 썼던 단점이나 불편한 점을 보완해서 새롭게 탄생한 버전 같은 느낌이네요! 
+                            SEO뿐만 아니라 SSR, CSR 개념을 알아두어야 넥스트를 하는 의미가 있습니다. 
+                            그럼 오늘도 수고하셨습니다. 🤭
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://port2023-next.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1925">2. 포트폴리오 사이트 만들기 : Vite-Site : 레이아웃 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1926">3. 포트폴리오 사이트 만들기 : Vite-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1927">4. 포트폴리오 사이트 만들기 : Vite-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1928">5. 포트폴리오 사이트 만들기 : Vite-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1929">6. 포트폴리오 사이트 만들기 : Vite-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1930">7. 포트폴리오 사이트 만들기 : Vite-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1931">8. 포트폴리오 사이트 만들기 : Vite-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1932">9. 포트폴리오 사이트 만들기 : Vite-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1933">10. 포트폴리오 사이트 만들기 : Vite-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1934">11. 포트폴리오 사이트 만들기 : React-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1935">12. 포트폴리오 사이트 만들기 : React-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1936">13. 포트폴리오 사이트 만들기 : React-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1937">14. 포트폴리오 사이트 만들기 : React-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1938">15. 포트폴리오 사이트 만들기 : React-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1939">16. 포트폴리오 사이트 만들기 : React-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1940">17. 포트폴리오 사이트 만들기 : React-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1941">18. 포트폴리오 사이트 만들기 : React-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1942">19. 포트폴리오 사이트 만들기 : React-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1943">20. 포트폴리오 사이트 만들기 : React-Site : 마무리</a></li>
+                        </ul>
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1944">21. 포트폴리오 사이트 만들기 : Vue-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1945">22. 포트폴리오 사이트 만들기 : Vue-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1946">23. 포트폴리오 사이트 만들기 : Vue-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1947">24. 포트폴리오 사이트 만들기 : Vue-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1948">25. 포트폴리오 사이트 만들기 : Vue-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1949">26. 포트폴리오 사이트 만들기 : Vue-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1950">27. 포트폴리오 사이트 만들기 : Vue-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1951">28. 포트폴리오 사이트 만들기 : Vue-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1952">29. 포트폴리오 사이트 만들기 : Vue-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1953">30. 포트폴리오 사이트 만들기 : Vue-Site : 마무리</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1954">31. 포트폴리오 사이트 만들기 : Next-Site : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1955">32. 포트폴리오 사이트 만들기 : Next-Site : 컨퍼넌트 설정</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1956">33. 포트폴리오 사이트 만들기 : Next-Site : 헤더 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1957">34. 포트폴리오 사이트 만들기 : Next-Site : 인트로 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1958">35. 포트폴리오 사이트 만들기 : Next-Site : 스킬 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1959">36. 포트폴리오 사이트 만들기 : Next-Site : 사이트 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1960">37. 포트폴리오 사이트 만들기 : Next-Site : 포트폴리오 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1961">38. 포트폴리오 사이트 만들기 : Next-Site : 연락처 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1962">39. 포트폴리오 사이트 만들기 : Next-Site : 푸터 영역</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1963">40. 포트폴리오 사이트 만들기 : Next-Site : 마무리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+
