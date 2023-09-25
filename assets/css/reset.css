@@ -97,6 +97,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* 리스트 스타일 유형 */
+ul.list {
+    margin-bottom: 5px;
+}
 ul.list li,
 ol.list li,
 dl.list li {

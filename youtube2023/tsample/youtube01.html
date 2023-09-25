@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 유튜브 사이트 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">나만의 유튜브 사이트 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 09. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">01</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 셋팅하기</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://youtube2023.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/youtube2023" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 강의는 <i>React</i> 프레임워크와 <i>YouTube API</i>를 이용하여 자신만의 간단한 영상 사이트를 만듭니다. 
+                        React의 기본 개념을 이해하고, 컴포넌트를 구조화하고 상태를 관리하는 방법을 학습합니다. 
+                        YouTube Data API를 활용하여 외부 데이터를 가져오는 방법을 익히고, 
+                        API 응답을 처리하여 사용자에게 의미 있는 정보를 제공하는 방법을 이해합니다.
+                        이로써 자신만의 유튜브 사이트를 만들게 됩니다. 
+                        그럼 한번 시작해볼까요? 🥳
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index3">
+                        <ul>
+                            <li>1. 셋팅하기
+                                <ul>
+                                    <li>1_1. Node.js 설치</li>
+                                    <li>1_2. Vscode 설치</li>
+                                    <li>1_3. React.js 설치</li>
+                                    <li>1_4. 폴더 정리하기</li>
+                                    <li>1_5. 필요한 파일 설치하기</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+
+                    <h3>1_1. 코딩 플랫폼 만들기</h3>
+                    <p>
+                        이 강의는 자신만의 유튜브 사이트를 제작하는 것을 목표로 합니다. 
+                        주제는 개인의 관심 분야를 선택하면 됩니다. 
+                        제 경우에는 코딩이 주제로 선정되었습니다. 
+                        이제 자체 코딩 유투브 사이트를 구축해보도록 하겠습니다.
+                        여러분들도 저랑 똑같이 하지 말고 나름대로 계획한 사이트를 저랑 같이 구축해보아요! 😝
+                    </p>
+                    
+                    <h3>1_2. 개발 환경 설정</h3>
+                    <div id="a121">
+                        <h4>1_2_1. Node.js 설치</h4>
+                        <p>
+                            우선 개발환경부터 셋팅을 하겠습니다. 
+                            리액트라는 프레임워크를 사용하기 위해서는 Node.js가 설치되어 있어야 합니다. 
+                            <a class="sampleLine" href="https://nodejs.org/ko" target="_blank">https://nodejs.org/ko</a> 여기에서 다운을 받습니다. 
+                            현재 버전보다는 안정적인 버전을 다운 받는게 좋습니다. 
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube01.png" alt="youtube2023" />
+                        </div>
+                        <div class="sampleBasic">
+                            <p>
+                                Node.js는 서버 사이드에서 JavaScript 코드를 실행할 수 있는 오픈 소스 런타임 환경입니다. 
+                                기존에는 브라우저 내에서만 실행되는 JavaScript를 서버에서 실행할 수 있도록 만든 것으로, 
+                                이를 통해 웹 애플리케이션 개발에서 서버 측 작업을 효율적으로 수행할 수 있게 되었습니다.
+                            </p>
+                            <p>
+                                조금 더 쉽게 설명하면, Node.js는 컴퓨터에서 실행되는 프로그램 중 하나로, 
+                                JavaScript를 사용하여 이 프로그램을 만들고 실행할 수 있게 해줍니다. 
+                                JavaScript는 주로 웹 브라우저에서 사용되지만, 
+                                <i>Node.js를 통해 이제는 컴퓨터 자체에서도 사용할 수 있게 되었습니다.</i>
+                            </p>
+                            <p>
+                                결국 Node.js는 JavaScript를 이용해서 컴퓨터에서 다양한 일을 처리할 수 있게 해주는 도구입니다.
+                                리액트를 사용하기 위해서는 node.js가 설치되어 있어야 합니다. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="a122" class="mt80">
+                        <h4>1_2_2. Vscode 설치</h4>
+                        <p>
+                            Visual Studio Code는 개발자들이 코드를 작성하고 프로젝트를 관리하는 데에 사용되는 무료 개발 도구입니다.
+                            이번에는 VSCode를 설치하겠습니다. 
+                            <a class="sampleLine" href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a> 여기에서 다운을 받습니다. 
+                            다운로드 버튼을 누르고 설치합니다. 
+                        </p>
+
+                        <div class="sampleImg">
+                            <img src="img/youtube02.png" alt="youtube2023" />
+                        </div>
+                    </div>
+
+                    <div id="a123" class="mt80">
+                        <h4>1_2_3. React.js 설치</h4>
+                        <p>
+                            이번에는 바탕화면에 youtube2023 폴더를 만들고 vscode에 드래그해서 열겠습니다. 
+                            왼쪽 메뉴에 youtube2023 타이틀이 보입니다. 
+                            메뉴에서 Terminal > New Terminal을 선택하면 
+                            오른쪽 화면에 터미널이 열립니다. 
+                        </p>
+                        <p>
+                            다음과 같은 명령어를 입력하면 리액트가 설치됩니다. <code>.</code> 대신에 이름을 넣어야 하지만
+                            현재 이미 폴더 이름을 만들었기 때문에 생략하기 위함입니다.
+                        </p>
+<pre><code class="language-js">$ npx create-react-app .</code></pre>
+                        <div class="sampleImg">
+                            <img src="img/youtube03.png" alt="youtube2023" />
+                        </div>
+                        <p>
+                            설치가 완료되면 다음과 같음 메세지를 볼 수 있습니다. 
+                            그리고 왼쪽 영역에는 여러가기 파일이 생성된 것을 확인 할 수 있습니다. 
+                        </p>
+<pre><code class="language-js">Success! Created youtube2023 at /Users/webstoryboyhwang/Desktop/youtube2023
+Inside that directory, you can run several commands:
+
+    npm start
+    Starts the development server.
+
+    npm run build
+    Bundles the app into static files for production.
+
+    npm test
+    Starts the test runner.
+
+    npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+    cd /Users/webstoryboyhwang/Desktop/youtube2023
+    npm start
+
+Happy hacking!
+webstoryboyhwang@Webstoryboys-MacBook-Pro youtube2023 % </code></pre>
+                        <div class="sampleImg">
+                            <img src="img/youtube04.png" alt="youtube2023" />
+                        </div>
+                    </div>
+
+                    <div id="a124" class="mt80">
+                        <h4>1_2_4. 폴더 정리하기</h4>
+                        <p>
+                            그럼 폴더를 정리해보겠습니다. 
+                            폴더는 다음과 같이 셋팅하겠습니다. 
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">node_modules</li>
+                                <li class="icon1">public
+                                    <ul>
+                                        <li class="icon2 m0">favicon.svg</li>
+                                        <li class="icon2 m0">index.html</li>
+                                        <li class="icon2 m0">robots.txt</li>
+                                    </ul>
+                                </li>
+                                <li class="icon1">src
+                                    <ul>
+                                        <li class="icon1">assets</li>
+                                        <li class="icon2 m0">App.js</li>
+                                        <li class="icon2 m0">index.js</li>
+                                    </ul>
+                                </li>
+                                <li class="icon2 m0">.gitignore</li>
+                                <li class="icon2 m0">package-lock.josn</li>
+                                <li class="icon2 m0">package.josn</li>
+                                <li class="icon2 m0">README.md</li>
+                            </ul>
+                        </div>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>node_modules: 이 폴더는 프로젝트에서 사용하는 외부 라이브러리와 패키지들이 저장되는 곳입니다. 개발에 필요한 도구와 코드를 더 쉽게 관리할 수 있게 도와줍니다.</li>
+                                <li>public: 이 폴더는 프로젝트의 공용 파일들이 저장되는 곳입니다. 주로 HTML 파일과 이미지 같은 정적인 파일들이 이곳에 위치하며, 이 파일들은 웹 브라우저에서 직접 접근할 수 있습니다.</li>
+                                <li>favicon.svg: 웹 사이트의 아이콘을 나타내는 이미지 파일입니다. 웹 브라우저 탭에 표시되는 작은 아이콘을 설정할 수 있습니다.</li>
+                                <li>index.html: React 애플리케이션의 진입점인 HTML 파일입니다. 브라우저에서 앱을 로드할 때 사용됩니다.</li>
+                                <li>robots.txt 파일은 웹 사이트의 검색 엔진 크롤러에게 어떤 페이지를 검색할 수 있고 어떤 페이지를 검색하지 말아야 하는지에 대한 지침을 제공하는 텍스트 파일입니다</li>
+                                <li>src: 이 폴더는 실제로 프로젝트의 소스 코드가 저장되는 곳입니다. 여기서 작성한 코드가 애플리케이션의 동작을 정의합니다.</li>
+                                <li>assets: 이미지나 폰트 등의 정적인 자원 파일들을 저장하는 폴더입니다.</li>
+                                <li>App.js: React 애플리케이션의 주요 컴포넌트인 App 컴포넌트의 코드가 들어있는 파일입니다. 이 파일에서 애플리케이션의 구조와 기능을 정의할 수 있습니다.</li>
+                                <li>index.js: React 애플리케이션의 진입점인 JavaScript 파일입니다. 이 파일에서 React 앱을 DOM에 렌더링하는 역할을 합니다.</li>
+                                <li>.gitignore: Git 버전 관리에서 제외할 파일이나 폴더를 설정하는 파일입니다. node_modules와 같이 불필요한 파일들을 Git에 올리지 않도록 할 때 유용합니다.</li>
+                                <li>package-lock.json: 패키지 의존성을 관리하기 위한 자동 생성된 파일입니다. 이 파일은 패키지들의 버전 및 의존 관계를 정확하게 유지하기 위해 사용됩니다.</li>
+                                <li>package.json: 프로젝트 설정과 의존성 정보를 담고 있는 파일입니다. 프로젝트의 이름, 버전, 필요한 라이브러리 등을 정의할 수 있습니다.</li>
+                                <li>README.md: 프로젝트에 대한 설명과 사용 방법을 기술하는 마크다운 파일입니다. 다른 개발자들이 프로젝트를 이해하고 사용하는데 도움이 되는 정보를 작성할 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <p>
+                            <code>public</code>에 <code>favicon.svg</code>에 소스 파일을 넣습니다. 
+                            따로 있는 분들은 안하셔도 됩니다.
+                        </p>
+<pre><code class="language-html">&lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289L21.7071 11.2929C22.0976 11.6834 22.0976 12.3166 21.7071 12.7071L15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071C13.9024 18.3166 13.9024 17.6834 14.2929 17.2929L18.5858 13H3C2.44772 13 2 12.5523 2 12C2 11.4477 2.44772 11 3 11H18.5858L14.2929 6.70711C13.9024 6.31658 13.9024 5.68342 14.2929 5.29289Z" fill="black"/&gt;
+&lt;/svg&gt;    
+</code></pre>
+                        <p>
+                            <code>public</code>에 <code>index.html</code>을 다음과 작성합니다.
+                            <code>root</code>에 모든 리액트 파일이 컴파일되어 들어가게 됩니다. 
+                        </p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="유튜브 API를 이용하여 나만의 사이트를 만드는 튜토리얼입니다."/&gt;
+    &lt;meta name="keyword" content="포트폴리오, 리액트, react, react.js, 코딩 사이트, 사이트 만들기, 리덕스" /&gt;
+    &lt;link rel="icon" type="image/svg+xml" href="favicon.svg" /&gt;
+    &lt;title&gt;나만의 유튜브 코딩 사이트 만들기 🧐&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="root"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+                        <p>
+                            <code>public</code>에 <code>robots.txt</code>을 다음과 작성합니다.
+                        </p>
+<pre><code class="language-html"># https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+</code></pre>
+                        <p>
+                            기본적으로 robots.txt 파일은 각각의 크롤러(user-agent)에 대한 지침을 제공합니다. 아래는 기본적인 구조의 예시입니다. 
+                            robots.txt 파일은 규칙을 제시하기만 하고, 크롤러가 이를 따를지는 크롤러 자체의 정책에 따릅니다.
+                            이 파일은 보안에 대한 것이 아니므로, 중요한 정보가 있는 경로는 다른 방법으로 보호해야 합니다.
+                            웹 사이트 주소 뒤에 /robots.txt를 붙여 접근하면 파일을 열람할 수 있습니다.
+                        </p>
+<pre><code class="language-html">User-agent: [크롤러 이름]
+Disallow: [클롤하지 말아야 할 경로]
+Allow: [특정 경로에서만 크롤링 허용]
+</code></pre>
+
+                        <p>
+                            <code>src</code>에 <code>App.js</code>을 다음과 작성합니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+
+const App = () =&gt; {
+    return (
+        &lt;div&gt;App&lt;/div&gt;
+    )
+}
+
+export default App
+</code></pre>
+
+                        <p>
+                            <code>src</code>에 <code>index.js</code>을 다음과 작성합니다.
+                        </p>
+<pre><code class="language-js">import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+    &lt;React.StrictMode&gt;
+        &lt;App /&gt;
+    &lt;/React.StrictMode&gt;
+);
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>import React from "react";: React 라이브러리를 가져옵니다. 이는 React 컴포넌트를 작성하고 사용하는 데 필요합니다.</li>
+                                <li>import ReactDOM from "react-dom/client";: React의 DOM 렌더링을 위한 ReactDOM 라이브러리를 가져옵니다. 이때 react-dom/client를 사용하여 createRoot 메서드를 사용할 것임을 명시합니다.</li>
+                                <li>import App from "./App";: App 컴포넌트를 가져옵니다. 이 컴포넌트가 애플리케이션의 주요 구조와 내용을 정의할 것입니다.</li>
+                                <li>const root = ReactDOM.createRoot(document.getElementById("root"));: createRoot 메서드를 사용하여 "root"라는 id를 가진 HTML 엘리먼트를 찾아서, React 애플리케이션을 이 엘리먼트에 렌더링할 준비를 합니다.</li>
+                                <li>root.render(...): createRoot를 통해 생성한 root 객체에 대해 render 메서드를 호출하여 React 애플리케이션을 렌더링합니다. &lt;React.StrictMode&gt;는 개발 모드에서 애플리케이션을 더 엄격하게 검사하고 경고를 표시하는 기능을 활성화합니다. &lt;App /&gt;은 App 컴포넌트를 렌더링합니다.</li>
+                            </ul>
+                        </div>
+                        
+                        <p>
+                            <code>README.md</code>을 작성하겠습니다.
+                            이 부분은 여러분들이 필요한 내용을 적으면 됩니다. 똑같이 하지 않아도 됩니다.
+                        </p>
+<pre><code class="language-html"># 나만의 유튜브 사이트 만들기
+
+이 강의는 React 프레임워크와 YouTube API를 이용하여 자신만의 간단한 영상 사이트를 만듭니다. React의 기본 개념을 이해하고, 컴포넌트를 구조화하고 상태를 관리하는 방법을 학습하며, 
+YouTube Data API를 활용하여 외부 데이터를 가져오는 방법을 익히고, API 응답을 처리하여 사용자에게 의미 있는 정보를 제공하는 방법을 이해합니다.
+
+## 완성작 보기
+미리보기 : 
+
+## 사용스택
+- node.js를 설치하고 사용합니다. 
+- react를 사용하여 사이트를 완성합니다. 
+- netlify를 통해 사이트를 배포합니다.
+- git을 사용하여 파일을 관리합니다.
+
+## 프로젝트 실행
+- react를 설치합니다. `npx create-react-app 타이틀`
+- react-router-dom을 설치합니다. `npm install react-router-dom`
+- axios를 설치합니다. `npm install axios`
+- react-icons을 설치합니다. `npm install react-icons`
+- react-player를 설치합니다. `npm install react-player`
+- sass를 설치합니다. `npm install sass`
+- react-helmet-async를 설치합니다. `react-helmet-async`
+- swiper를 설치합니다. `npm install swiper`
+</code></pre>
+
+                        <p>
+                            이렇게 하면 기본적인 설정은 끝났습니다. 
+                            이제 마지막으로 필요한 라이브러리 파일을 설치하겠습니다. 
+                        </p>
+                    </div>
+                    
+                    <div id="a125" class="mt80">
+                        <h4>1_2_5. 필요한 파일 설치하기</h4>
+                        <p>
+                            이번에는 사이트에 필요한 <i>라이브러리</i>를 설치하겠습니다.
+                        </p>
+<pre><code class="language-js">$ npm install react-router-dom
+$ npm install axios
+$ npm install react-icons
+$ npm install react-player
+$ npm install sass
+$ npm install react-helmet-async
+$ npm install swiper
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>react-router-dom: React 애플리케이션 내에서 라우팅 및 페이지 네비게이션을 관리하는 데 사용되는 라이브러리입니다. 다양한 페이지 간 전환과 브라우저 주소에 따른 컴포넌트 렌더링을 처리할 수 있습니다.</li>
+                                <li>axios: HTTP 요청을 처리하기 위한 라이브러리로, 서버와의 데이터 통신을 더 쉽고 간결하게 만들어줍니다.</li>
+                                <li>react-icons: 다양한 아이콘 세트를 제공하여 React 애플리케이션에서 아이콘을 쉽게 사용할 수 있도록 도와줍니다.</li>
+                                <li>react-player: 비디오 및 오디오 재생 컴포넌트를 제공하는 라이브러리로, YouTube 및 Vimeo와 같은 플랫폼에서 동영상을 플레이할 수 있는 기능을 제공합니다.</li>
+                                <li>sass: CSS의 확장된 문법인 SASS(Syntactically Awesome Style Sheets)를 사용하여 스타일링을 할 수 있는 라이브러리입니다. 더 간결하고 유지보수가 용이한 CSS 작성을 지원합니다.</li>
+                                <li>react-helmet-async : 사이트의 헤드 태그(head tag)를 동적으로 조작하는 데 사용됩니다. 이를 통해 SEO 및 메타데이터 관리를 용이하게 할 수 있습니다.</li>
+                                <li>swiper: Swiper는 터치 슬라이드 및 스와이프 기능을 갖춘 이미지 및 콘텐츠 슬라이더 라이브러리입니다. React 애플리케이션에서 갤러리나 캐러셀 형식의 컴포넌트를 만들 때 유용합니다.</li>
+                            </ul>
+                        </div>
+                        <p>
+                            물론 이렇게 한번에 설치도 가능합니다. 
+                        </p>
+<pre><code class="language-js">npm install react-router-dom axios react-icons react-player sass react-helmet-async swiper
+</code></pre>
+                        <p>
+                            설치가 완료되면 <code>package.json</code>파일에 다음과 같이 변경됩니다. 
+                            버전 번호와 및 종류를 확인할 수 있습니다.
+                        </p>
+<pre><code class="language-js">{
+    "name": "youtube2026",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.17.0",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "axios": "^1.5.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-helmet-async": "^1.3.0",
+        "react-icons": "^4.11.0",
+        "react-player": "^2.13.0",
+        "react-router-dom": "^6.16.0",
+        "react-scripts": "5.0.1",
+        "sass": "^1.67.0",
+        "swiper": "^10.2.0",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
+</code></pre>
+                    </div>
+
+                    <div>
+                        <h3>마무리</h3>
+                        <p>
+                            잘 되시나요? 아마 안되는 분들이 많을거라고 생각이 듭니다.
+                            디테일한 부분은 동영상을 참고해주세요! 
+                            github 셋팅은 컴퓨터 환경에 따라 에러가 많이 발생할 수 있습니다. 
+                            검색을 통해 스스로 확인하고 고치는 습관이 중요합니다. 
+                            전체적인 맥락은 제가 설명드렸으니 안되는 분들은 하나씩 다시해보면 해결 할 수 있을겁니다. 
+                            그래도 안되는 분들은 댓글 달아주세요!
+                            수고하셨습니다. 😁
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://port2023-react.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1964">1. 나만의 유튜브 사이트 만들기 : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : CSS 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1966">3. 나만의 유튜브 사이트 만들기 : 페이지 및 컴퍼넌트 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1967">4. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1968">5. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1969">6. 나만의 유튜브 사이트 만들기 : 메인 콘텐츠 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1970">7. 나만의 유튜브 사이트 만들기 : 추천 개발자 콘텐츠 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1971">8. 나만의 유튜브 사이트 만들기 : 나머지 페이지 콘텐츠 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1972">9. 나만의 유튜브 사이트 만들기 : 페이지 로딩 작업 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1973">10. 나만의 유튜브 사이트 만들기 : 서치 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1974">11. 나만의 유튜브 사이트 만들기 : 비디오 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1975">12. 나만의 유튜브 사이트 만들기 : 채널 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1976">13. 나만의 유튜브 사이트 만들기 : 마무리 및 배포하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

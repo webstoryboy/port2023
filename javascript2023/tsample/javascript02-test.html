@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 테스트 😒</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/JavaScript</span>
+                <h1 class="title">자바스크립트 테스트</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc rightX">
+                        <div class="left">
+                            <span class="num">01</span>
+                            <div class="title">자바스크립트 테스트 : 데이터 저장하기</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-next.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        자바스크립트 데이터 저장하기를 제대로 배웠다면 테스트를 한번 해봐야 겠죠! 
+                        80점 이상 나왔다면 잘 이해하고 있는 겁니다. 
+                        만약 그 점수가 나오지 않았다면 한번 더 공부해주세요! 🥳
+                    </p>
+
+                    <hr>
+
+                    <h3>1. 데이터 불러오기</h3>
+                    <div id="v01">
+                        <p>
+                            01. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const arr = [100, 200, "javascript"];
+
+        console.log(arr[0], arr[1], arr[2]);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v02">
+                        <p>
+                            02. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+        for(let i=0; i&lt;arr.length; i++){
+                console.log(arr[i]);
+        }
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v03">
+                        <p>
+                            03. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+        arr.forEach(el => console.log(el));
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v04">
+                        <p>
+                            04. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const arr = [100, 200, 300, 400, 500];
+
+        for(let element of arr){
+                console.log(element);
+        }    
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v05">
+                        <p>
+                            05. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const arr = [100, 200];
+
+        for(let element in arr){
+            console.log(element + " : " + arr[element]);
+        }
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v06">
+                        <p>
+                            06. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const arr = [100, 200, 300, 800, 900];
+
+        arr.map(function(element, index){
+                console.log(index);
+        });
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v07">
+                        <p>
+                            07. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+        const arrNum = arr.filter((el) => {
+                return el >= 300;
+        });
+
+        console.log(arrNum);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v08">
+                        <p>
+                            08. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const arr1 = [100, 200, 300];
+        const arr2 = [400, 500, 600];
+
+        console.log(arr1);                  
+        console.log(...arr1);              
+        console.log(arr1 + arr2);         
+        console.log(...arr1, ...arr2);     
+        console.log(...arr1, 400);       
+        console.log(...arr1.slice(0,2));
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v09">
+                        <p>
+                            09. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        function addNum(a, b, c) {
+                return a + b + c;
+        }
+        const num = [100, 250, 350];
+        const sum = addNum(...num);
+
+        console.log(sum); 
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v10">
+                        <p>
+                            10. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const [a, b, c] = [100, 200, 300];
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v11">
+                        <p>
+                            11. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const arr = [100, 200, 300];
+        const [x, y, z] = arr;
+
+        console.log(x);
+        console.log(y);
+        console.log(z);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v12">
+                        <p>
+                            12. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const num = [100, 200, 300, 400, 500, 600];
+        const [num1, num2, ...rest] = num;
+
+        console.log(num1);
+        console.log(num2);
+        console.log(...rest);
+        console.log(rest);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v13">
+                        <p>
+                            13. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const obj = {
+                a: 100,
+                b: 200,
+                c:"javascript"
+        }
+        console.log(obj.a);
+        console.log(obj.b);
+        console.log(obj.c);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v14">
+                        <p>
+                            14. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const obj = {
+                a: 100,
+                b: 200,
+                c:"javascript"
+        }
+        console.log(Object.keys(obj));
+        console.log(Object.values(obj));
+        console.log(Object.entries(obj));
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v15">
+                        <p>
+                            15. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const obj1 = { 
+                a: 100, 
+                b: 200, 
+                c: "javascript" 
+        };
+        const obj2 = { 
+                d: 300, 
+                e: 400, 
+                f: "jquery" 
+        };
+        const obj3 = Object.assign(obj1, obj2);
+
+        console.log(obj3);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v16">
+                        <p>
+                            16. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const obj = {
+                a: 100,
+                b: 200,
+                c:"javascript"
+        }
+
+        console.log(obj.hasOwnProperty("a"));
+        console.log(obj.hasOwnProperty("b"));
+        console.log(obj.hasOwnProperty("c"));
+        console.log(obj.hasOwnProperty("d"));
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v17">
+                        <p>
+                            17. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const obj = {
+                a: 100,
+                b: 200,
+                c:"javascript"
+        }
+        
+        console.log("a" in obj);
+        console.log("b" in obj);
+        console.log("c" in obj);
+        console.log("d" in obj);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v18">
+                        <p>
+                            18. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+        }
+        for(let el in obj){
+                console.log(el + " : " + obj[el]);
+        }
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v19">
+                        <p>
+                            19. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const obj1 = {
+                a: 100,
+                b: 200,
+                c: "javascript",
+        }
+        const obj2 = {
+                d: 300,
+                e: 400,
+                f: "jquery",
+        }
+        const obj3 = {...obj1, ...obj2}
+        const obj4 = {...obj1, d: "jquery"}
+        const obj5 = {...obj1, b: 300}
+
+        console.log(obj3); 
+        console.log(obj4); 
+        console.log(obj5); 
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v20">
+                        <p>
+                            20. 다음을 보고 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const obj1 = {
+                a: 100,
+                b: 200,
+                c: "javascript",
+        }
+        const { a, b, c } = obj1;
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        const { a: x, b: y, c: z } = obj1;
+
+        console.log(x);
+        console.log(y);
+        console.log(z);
+
+        const obj2 = {
+                d: 100,
+                e: 200,
+                f: "javascript",
+        }
+
+        const { d, e, f, g = "jquery"} = obj2;
+
+        console.log(g);
+
+        const obj3 = {
+                x1: 100,
+                y1: {a1: 100, b1: 200},
+                z1: "javascript",
+        }
+        const { x1, y1: {a1, b1}, z1} = obj3;
+
+        console.log(x1);
+        console.log(a1);
+        console.log(b1);
+        console.log(z1);
+}   
+</code></pre>
+                    </div>
+
+                   
+                    
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            수고하셨습니다. 
+                            만약 점수가 80점을 넘기지 못했다면 다시 공부하셔야 합니다. 😝
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://port2023-next.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
+

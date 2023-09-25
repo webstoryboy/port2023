@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 유튜브 사이트 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">나만의 유튜브 사이트 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 09. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">05</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://youtube2023.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/youtube2023" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이번에는 페이지 별로 SEO 기능을 추가해보겠습니다. 
+                        리액트를 싱글 페이지를 기본으로 하기 때문에 페이지가 없습니다. 
+                        페이지가 있는 것첨럼 타이틀과 설명을 추가할 것입니다. 
+                        그럼 시작해볼까요? 🫡
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index3">
+                        <ul>
+                            <li>1. 셋팅하기
+                                <ul>
+                                    <li>1_1. Node.js 설치</li>
+                                    <li>1_2. Vscode 설치</li>
+                                    <li>1_3. React.js 설치</li>
+                                    <li>1_4. 폴더 정리하기</li>
+                                    <li>1_5. 필요한 파일 설치하기</li>
+                                </ul>
+                            </li>
+                            <li>2. CSS 셋팅하기
+                                <ul>
+                                    <li>2_1. SCSS 설정하기</li>
+                                    <li>2_2. style.scss 설정하기</li>
+                                    <li>2_3. fonts.scss 설정하기</li>
+                                    <li>2_4. vars.scss 설정하기</li>
+                                    <li>2_5. reset.scss 설정하기</li>
+                                    <li>2_6. mixin.scss 설정하기</li>
+                                    <li>2_7. common.scss 설정하기</li>
+                                </ul>
+                            </li>
+                            <li>3. 페이지 및 컴퍼넌트 만들기
+                                <ul>
+                                    <li>3_1. 페이지 만들기</li>
+                                    <li>3_2. 컴퍼넌트 만들기</li>
+                                </ul>
+                            </li>
+                            <li>4. 섹션 컴퍼넌트 만들기
+                                <ul>
+                                    <li>4_1. Main 컨퍼넌트 만들기</li>
+                                    <li>4_2. Header 컨퍼넌트 만들기</li>
+                                    <li>4_3. Header 컨퍼넌트 데이터화 하기</li>
+                                    <li>4_4. Footer 컨퍼넌트 만들기</li>
+                                </ul>
+                            </li>
+                            <li>5. 페이지 SEO 작업 
+                                <ul>
+                                    <li>5_1. App.js 재구성</li>
+                                    <li>5_2. main 컴퍼넌트 재구성</li>
+                                    <li>5_3. 모든 페이지 재구성</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+
+                    <h3>5. 페이지 SEO 작업 </h3>
+                    <div>
+                        <p>
+                            리액트의 단점을 극복하기 위한 방법으로 페이지 별로 페이지에 대한 설명이나 타이틀을 다시 작업해주겠습니다. 
+                            모든 페이지가 왼쪽 메뉴를 기준으로 변하기 때문에 main 영역만 컴퍼넌트를 통해 테이터를 불러올 것입니다. 
+                        </p>
+                        <p>
+                            또한 React Suspense 기능을 사용하여 페이지 이동시에도 끊기지 않고, 비동기 데이터를 좀 더 효율적으로 관리해보겠습니다.
+                        </p>
+    
+                        <div class="sampleBasic">
+                            <p>
+                                React.Suspense는 React에서 비동기적으로 데이터나 컴포넌트를 불러오는 과정에서 대기 상태를 처리하기 위한 컴포넌트입니다. 이 컴포넌트를 사용하면 데이터나 컴포넌트가 로딩되기를 기다릴 수 있으며, 로딩 중에는 대체 컨텐츠(로딩 스피너 또는 로딩 메시지)를 표시할 수 있습니다. React.Suspense를 사용하면 코드 스플리팅, 데이터 로딩, 서버 사이드 렌더링과 같은 시나리오에서 사용자 경험을 향상시키는 데 도움이 됩니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>5_1. App.js 재구성</h4>
+                        <p>
+                            기존에 파일을 다음과 같이 재구성합니다. 
+                            컴포넌트를 비동기적으로 로드하고 Suspense 컴포넌트를 사용하여 로딩 중에 대기 상태를 처리하고 있습니다.
+                        </p>
+<pre><code class="language-js">import React, { Suspense, lazy } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from './components/section/Main';
+
+const Home = lazy(() =&gt; import('./pages/Home'));
+const Today = lazy(() =&gt; import('./pages/Today'));
+const Developer = lazy(() =&gt; import('./pages/Developer'));
+const Webd = lazy(() =&gt; import('./pages/Webd'));
+const Website = lazy(() =&gt; import('./pages/Website'));
+const Gsap = lazy(() =&gt; import('./pages/Gsap'));
+const Port = lazy(() =&gt; import('./pages/Port'));
+const Youtube = lazy(() =&gt; import('./pages/Youtube'));
+const Channel = lazy(() =&gt; import('./pages/Channel'));
+const Video = lazy(() =&gt; import('./pages/Video'));
+const Search = lazy(() =&gt; import('./pages/Search'));
+const Not = lazy(() =&gt; import('./pages/Not'));
+
+const App = () =&gt; {
+    return (
+        &lt;BrowserRouter&gt;
+            &lt;Suspense fallback={&lt;Main /&gt;}&gt;
+                &lt;Routes&gt;
+                    &lt;Route path='/' element={&lt;Home /&gt;} /&gt;
+                    &lt;Route path="/today" element={&lt;Today /&gt;} /&gt;
+                    &lt;Route path="/developer" element={&lt;Developer /&gt;} /&gt;
+                    &lt;Route path="/webd" element={&lt;Webd /&gt;} /&gt;
+                    &lt;Route path="/website" element={&lt;Website /&gt;} /&gt;
+                    &lt;Route path="/gsap" element={&lt;Gsap /&gt;} /&gt;
+                    &lt;Route path="/port" element={&lt;Port /&gt;} /&gt;
+                    &lt;Route path="/youtube" element={&lt;Youtube /&gt;} /&gt;
+                    &lt;Route path='/channel/:channelId' element={&lt;Channel /&gt;} /&gt;
+                    &lt;Route path='/video/:videoId' element={&lt;Video /&gt;} /&gt;
+                    &lt;Route path='/search/:searchId' element={&lt;Search /&gt;} /&gt;
+                    &lt;Route path="*" element={&lt;Not /&gt;} /&gt;
+                &lt;/Routes&gt;
+            &lt;/Suspense&gt;
+        &lt;/BrowserRouter&gt;
+    );
+}
+
+export default App;
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>BrowserRouter: React Router에서 사용되는 브라우저 라우터 컴포넌트입니다. 브라우저 히스토리 API를 사용하여 라우팅을 처리합니다.</li>
+                                <li>Suspense: Suspense 컴포넌트는 비동기적으로 로드되는 컴포넌트의 로딩 상태를 관리하는 데 사용됩니다. 여기서는 fallback 속성을 사용하여 로딩 중에 &lt;Main /&gt; 컴포넌트를 표시합니다.</li>
+                                <li>Routes: Routes 컴포넌트는 각 경로에 대한 라우트를 정의하고, 해당 경로에 접근할 때 렌더링될 컴포넌트를 결정합니다.</li>
+                                <li>Route: Route 컴포넌트는 특정 경로에 대한 라우팅 규칙을 설정하며, element 속성을 통해 해당 경로에 접근할 때 렌더링될 컴포넌트를 지정합니다.</li>
+                                <li>lazy(): lazy() 함수는 코드 스플리팅을 위해 사용되며, 비동기적으로 컴포넌트를 로드합니다. 컴포넌트가 필요할 때 비동기적으로 불러와서 번들 크기를 줄일 수 있습니다.</li>
+                                <li>fallback: fallback 속성은 Suspense 컴포넌트에서 로딩 중에 표시할 컴포넌트를 지정합니다. 여기서는 &lt;Main /&gt; 컴포넌트가 로딩 중에 보여집니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>5_2. main 컴퍼넌트 재구성</h4>
+                        <p>
+                            <code>main</code>이라는 컴퍼넌트를 모든 페이지에서 사용하기 때문에 여기에 타이틀과 설명을 추가하는 SEO 잡업을 하였습니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+
+import Header from './Header'
+import Footer from './Footer'
+
+const Main = ( props ) =&gt; {
+    return (
+        &lt;HelmetProvider&gt;
+            &lt;Helmet 
+                titleTemplate="%s | Webs Youtube" 
+                defaultTitle="Webs Youtube" 
+                defer={false}
+            &gt;
+                {props.title && &lt;title&gt;{props.title}&lt;/title&gt;}
+                &lt;meta name="description" content={props.description} /&gt;
+            &lt;/Helmet&gt;
+
+            &lt;Header /&gt;
+            &lt;main id="main" role="main"&gt;
+                {props.children}
+            &lt;/main&gt;
+            &lt;Footer /&gt;
+        &lt;/HelmetProvider&gt;
+    )
+}
+
+export default Main
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li>HelmetProvider: react-helmet-async의 HelmetProvider 컴포넌트를 사용하여 Helmet 컴포넌트를 초기화합니다. Helmet은 페이지의 헤드 태그에 메타 데이터와 타이틀을 동적으로 추가하거나 변경하는 데 사용됩니다.</li>
+                                <li>Helmet: Helmet 컴포넌트를 사용하여 페이지의 메타 데이터와 타이틀을 설정합니다. 이 컴포넌트를 사용하면 서버 사이드 렌더링(SSR) 및 동적 페이지 제목 설정과 같은 작업을 쉽게 수행할 수 있습니다. 주로 title, meta, link, script 등의 태그를 동적으로 조작하는 데 사용됩니다.</li>
+                                <li>titleTemplate: 페이지 타이틀의 템플릿을 설정합니다. %s는 나중에 실제 타이틀로 대체됩니다.</li>
+                                <li>defaultTitle: 기본 타이틀을 설정합니다. 페이지 타이틀이 없는 경우 사용됩니다.</li>
+                                <li>defer: true로 설정하면 렌더링 전까지 &lt;Helmet&gt; 컴포넌트가 기다립니다.</li>
+                                <li>&lt;title&gt;과 &lt;meta&gt; 태그: props로 전달된 title과 description 값을 사용하여 페이지의 타이틀과 메타 설명을 설정합니다. props.title과 props.description이 없는 경우, 기본값으로 "Webs Youtube"가 타이틀로 설정됩니다.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="mt80">
+                        <h4>5_3. 모든 페이지 재구성</h4>
+                        <p>
+                            이제 나머지 페이지도 <code>main</code> 컴퍼넌트를 불러오고 페이지 별로 타이틀과 설명을 추가하면 됩니다.
+                            그럼 페이지가 변경되면 타이틀이 변경되는 것을 확인할 수 있습니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Channel = () =&gt; {
+    return (
+        &lt;Main 
+            title = "유튜브 채널"
+            description="유튜브 채널페이지입니다."&gt;
+            Channel
+        &lt;/Main&gt;
+    )
+}
+
+export default Channel
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Developer = () =&gt; {
+    return (
+        &lt;Main 
+            title = "추천 개발자"
+            description="오늘의 추천 개발자 유튜버입니다."&gt;
+            Developer
+        &lt;/Main&gt;
+    )
+}
+
+export default Developer
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Gsap = () =&gt; {
+    return (
+        &lt;Main 
+            title = "GSAP 사이트"
+            description="GSAP 사이트 튜토리얼 강의입니다."&gt;
+            Gsap
+        &lt;/Main&gt;
+    )
+}
+
+export default Gsap
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Home = () =&gt; {
+    return (
+        &lt;Main 
+            title = "웹스토리보이 유튜브"
+            description="웹스토리보이 유튜버에 오신 것을 환영합니다."&gt;
+            Home
+        &lt;/Main&gt;
+    )
+}
+
+export default Home
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Not = () =&gt; {
+    return (
+        &lt;Main 
+            title = "잘못된 페이지"
+            description="접근이 잘못된 페이지입니다."&gt;
+            Not
+        &lt;/Main&gt;
+    )
+}
+
+export default Not
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Port = () =&gt; {
+    return (
+        &lt;Main 
+            title = "포트폴리오 사이트"
+            description="포트폴리오 사이트 튜토리얼 강의입니다."&gt;
+            Port
+        &lt;/Main&gt;
+    )
+}
+
+export default Port
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Search = () =&gt; {
+    return (
+        &lt;Main 
+            title = "유투브 검색"
+            description="유튜브 검색 결과 페이지입니다."&gt;
+            Search
+        &lt;/Main&gt;
+    )
+}
+
+export default Search
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Today = () =&gt; {
+    return (
+        &lt;Main 
+            title = "추천 영상"
+            description="오늘의 추천 유튜브 영상입니다."&gt;
+            Today
+        &lt;/Main&gt;
+    )
+}
+
+export default Today
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Video = () =&gt; {
+    return (
+        &lt;Main 
+            title = "유튜브 비디오 영상"
+            description="유튜브 비디오 영상을 볼 수 있습니다."&gt;
+            Video
+        &lt;/Main&gt;
+    )
+}
+
+export default Video
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Webd = () =&gt; {
+    return (
+        &lt;Main 
+            title = "웹디자인 기능사"
+            description="웹디자인 기능사 튜토리얼 강의입니다."&gt;
+            Webd
+        &lt;/Main&gt;
+    )
+}
+
+export default Webd
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Website = () =&gt; {
+    return (
+        &lt;Main 
+            title = "웹표준 사이트"
+            description="웹표준 사이트 튜토리얼 강의입니다."&gt;
+            Website
+        &lt;/Main&gt;
+    )
+}
+
+export default Website
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Youtube = () =&gt; {
+    return (
+        &lt;Main 
+            title = "유튜브 사이트"
+            description="유튜브 사이트 튜토리얼 강의입니다."&gt;
+            Youtube
+        &lt;/Main&gt;
+    )
+}
+
+export default Youtube
+</code></pre>
+                    </div>
+
+                   
+                    <div>
+                        <h3>마무리</h3>
+                        <p>
+                            리액트의 단점이라고 꼽히는 SEO에 대해 약간의 대처를 하였습니다. 
+                            모든 페이지에 대해 메타 태그를 동적으로 설정하였고,
+                            main 컴퍼넌트와 비동기 방식으로 불러오기 위해 리액트 Suspense 기능을 사용하였습니다. 
+                            이 부분을 이용하여 화면 전환간 끊김 현상을 줄일 수 있고 ux를 조금 더 개선할 수 있습니다. 
+                            그럼 오늘도 수고하셨습니다. 🤭
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://port2023-react.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1964">1. 나만의 유튜브 사이트 만들기 : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : CSS 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1966">3. 나만의 유튜브 사이트 만들기 : 페이지 및 컴퍼넌트 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1967">4. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1968">5. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1969">6. 나만의 유튜브 사이트 만들기 : 메인 콘텐츠 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1970">7. 나만의 유튜브 사이트 만들기 : 추천 개발자 콘텐츠 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1971">8. 나만의 유튜브 사이트 만들기 : 나머지 페이지 콘텐츠 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1972">9. 나만의 유튜브 사이트 만들기 : 페이지 로딩 작업 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1973">10. 나만의 유튜브 사이트 만들기 : 서치 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1974">11. 나만의 유튜브 사이트 만들기 : 비디오 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1975">12. 나만의 유튜브 사이트 만들기 : 채널 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1976">13. 나만의 유튜브 사이트 만들기 : 마무리 및 배포하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+
