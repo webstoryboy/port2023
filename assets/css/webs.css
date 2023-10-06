@@ -1446,6 +1446,9 @@ code.hljs {
   text-underline-position: under;
   margin-top: 10px;
 }
+.sampleIcon::before {
+  content: '🥳 : ';
+}
 .sampleFolder {
   background-color: #282936;
   display: block;

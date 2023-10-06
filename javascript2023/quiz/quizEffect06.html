@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>퀴즈 이펙트06</title>
 
-    <link rel="stylesheet" href="assets/css/quiz.css">
+    <link rel="stylesheet" href="css/quiz.css">
 </head>
-<body>
+<body class="fixed">
     <header id="header">
         <h1>
             <a href="../index.html">Quiz</a>
@@ -42,40 +42,38 @@
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizCheck = document.querySelector(".quiz__check");
 
-        // 변수 설정
-        let currentIndex = 0;   // 현재 문제
-        let quizInfo = [];      // 모든 퀴즈 정보 
-        let score = 0;          // 현재 점수
+        // 문제 정보
+        let quizInfo = [];
+        let quizScore = 0;
 
         // 문제 가져오기
         const fetchQuiz = () => {
             fetch("https://webstoryboy.github.io/webs2024/json/gineungsaJC2011_05.json")
-                .then(res => res.json())
-                .then(items => {
-                    quizInfo = items.map((item, index) => {
-                        const formattedQuiz = {
-                            infoDate: "2011년 5회",
-                            infoType: item.subject,
-                            infoQuestion: item.question,
-                            infoDesc: item.desc,
-                            infoAnswer: item.correct_answer
-                        }
-                        // 보기 가져오기
-                        const choices = [...item.incorrect_answers, item.correct_answer];
-                        
-                        // 보기 랜덤 섞기
-                        for (let i = choices.length - 1; i > 0; i--) {
-                            const j = Math.floor(Math.random() * (i + 1));
-                            [choices[i], choices[j]] = [choices[j], choices[i]];
-                        }
+            .then(res => res.json())
+            .then(items => {
+                quizInfo = items.map((item, idex) => {
+                    const formattedQuiz = {
+                        infoDate: "2011년 5회",
+                        infoType: item.subject,
+                        infoQuestion: item.question,
+                        infoDesc: item.desc,
+                        infoAnswer: item.correct_answer
+                    }
+                    // 보기 가져오기 
+                    const choices = [...item.incorrect_answers, item.correct_answer];
 
-                        formattedQuiz.infoChoice = choices;
-                        return formattedQuiz;
-                    });
+                    // 보기 랜덤 섞기
+                    for (let i = choices.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [choices[i], choices[j]] = [choices[j], choices[i]];
+                    }
 
-                    console.log(quizInfo);
-                    updataQuiz();
-                })
+                    formattedQuiz.infoChoice = choices;
+                    return formattedQuiz;
+                });
+                console.log(quizInfo);
+                updataQuiz();
+            })
         }
 
         // 문제 출력
@@ -118,45 +116,43 @@
             quizWrap.innerHTML = quizArray.join("");
         }
 
-        // 정답 확인 
+        // 정답 확인
         quizCheck.addEventListener("click", () => {
             const quizElements = document.querySelectorAll(".quiz");
 
             quizElements.forEach((quizElement, index) => {
-                const selectedChoice = quizElement.querySelector(`input[name="choice-${index}"]:checked`);
-                const answerElement = quizElement.querySelector(".quiz__answer");
-                const descElement = quizElement.querySelector(".quiz__desc");
+                const selectedChoice = quizElement.querySelector(`input[name="choice-${index}"]:checked`);  //체크한 정답
+                const quizAnswer = quizElement.querySelector(".quiz__answer");
+                const quizDesc = quizElement.querySelector(".quiz__desc");
 
-                if (selectedChoice) {
+                if(selectedChoice){
                     const userAnswer = selectedChoice.value;
-                    const correctAnswer = answerElement.textContent;
+                    const correctAnswer = quizAnswer.textContent;
 
-                    if (userAnswer === correctAnswer) {
-                        // 정답인 경우
-                        console.log("정답입니다.")
+                    if(userAnswer === correctAnswer){
+                        console.log("정답입니다.");
                         quizElement.classList.add("good");
-                        score++
+                        quizDesc.classList.remove("none");
+                        quizScore++;
                     } else {
-                        // 오답인 경우
-                        console.log("오답입니다.")
+                        console.log("오답입니다.");
                         quizElement.classList.add("bad");
+                        quizAnswer.classList.remove("none");
+                        quizDesc.classList.remove("none");
                     }
-
-                    // 정답과 설명 표시
-                    answerElement.classList.remove("none");
-                    descElement.classList.remove("none");
                 }
             });
 
-            score = score / quizInfo.length
+            alert("총 맞은 갯수는 : " + quizScore + "개 입니다.");
+        });
 
-            alert(`총 점수: ${score}`);
-        })
-        
         // 페이지가 로드된 후 실행
         document.addEventListener("DOMContentLoaded", () => {
             fetchQuiz();
         });
+
     </script>
+
+    
 </body>
 </html>
