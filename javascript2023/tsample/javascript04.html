@@ -149,10 +149,17 @@
                                     <li><a href="#a08">08. 배열 : 데이터 불러오기 : for in</a></li>
                                     <li><a href="#a09">09. 배열 : 데이터 불러오기 : map()</a></li>
                                     <li><a href="#a10">10. 배열 : 데이터 불러오기 : filter()</a></li>
-                                    <li><a href="#a11">11. 객체 : 데이터 불러오기</a></li>
-                                    <li><a href="#a12">12. 객체 : 데이터 불러오기 : Object</a></li>
-                                    <li><a href="#a13">13. 객체 : 데이터 불러오기 : for in</a></li>
-                                    <li><a href="#a14">14. 객체 : 데이터 불러오기 : hasOwnProperty()</a></li>
+                                    <li><a href="#a11">11. 배열 : 데이터 불러오기 : 배열 펄침 연산자</a></li>
+                                    <li><a href="#a12">12. 배열 : 데이터 불러오기 : 배열 구조 분해 할당</a></li>
+                                    <li><a href="#a13">13. 객체 : 데이터 불러오기</a></li>
+                                    <li><a href="#a14">14. 객체 : 데이터 불러오기 : Object.keys()</a></li>
+                                    <li><a href="#a15">15. 객체 : 데이터 불러오기 : Object.values()</a></li>
+                                    <li><a href="#a16">16. 객체 : 데이터 불러오기 : Object.entries()</a></li>
+                                    <li><a href="#a17">17. 객체 : 데이터 불러오기 : Object.assign()</a></li>
+                                    <li><a href="#a18">18. 객체 : 데이터 불러오기 : hasOwnProperty()</a></li>
+                                    <li><a href="#a19">19. 객체 : 데이터 불러오기 : for in</a></li>
+                                    <li><a href="#a20">20. 객체 : 데이터 불러오기 : 객체 펼침 연산자</a></li>
+                                    <li><a href="#a21">21. 객체 : 데이터 불러오기 : 객체 구조 분해 할당</a></li>
                                 </ul>
                             </li>
                             <li>3. 데이터 실행하기
@@ -166,7 +173,16 @@
                                     <li><a href="#w07">07. 화살표 함수 : 익명 함수</a></li>
                                     <li><a href="#w08">08. 화살표 함수 : 매개변수 함수</a></li>
                                     <li><a href="#w09">09. 화살표 함수 : 리턴값 함수</a></li>
-                                    <li><a href="#w10">10. 화살표 함수 : 매개변수 + 리턴값 함수</a></li>
+                                    <li><a href="#w10">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 함수</a></li>
+                                    <li><a href="#w11">11. 함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
+                                    <li><a href="#w12">12. 함수 유형 : 함수와 변수를 이용한 형태</a></li>
+                                    <li><a href="#w13">13. 함수 유형 : 함수와 배열 이용한 형태</a></li>
+                                    <li><a href="#w14">14. 함수 유형 : 함수와 객체 이용한 형태</a></li>
+                                    <li><a href="#w15">15. 함수 유형 : 함수와 객체 및 배열을 이용한 형태</a></li>
+                                    <li><a href="#w16">16. 함수 유형 : 객체 안에 함수를 이용한 형태</a></li>
+                                    <li><a href="#w17">17. 함수 유형 : 객체 생성자 함수</a></li>
+                                    <li><a href="#w18">18. 함수 유형 : 프로토타입 함수</a></li>
+                                    <li><a href="#w19">19. 함수 유형 : 객체 리터럴 함수</a></li>
                                 </ul>
                             </li>
                             <li>4. 데이터 제어하기
@@ -176,9 +192,9 @@
                                     <li><a href="#b03">03. 중첩 if문</a></li>
                                     <li><a href="#b04">04. if문 생략 & 삼항 연산자</a></li>
                                     <li><a href="#b05">05. switch문</a></li>
-                                    <li><a href="#b06">06. for문 </a></li>
-                                    <li><a href="#b07">07. while문</a></li>
-                                    <li><a href="#b08">08. do while문</a></li>
+                                    <li><a href="#b07">06. while문</a></li>
+                                    <li><a href="#b08">07. do while문</a></li>
+                                    <li><a href="#b06">08. for문</a></li>
                                     <li><a href="#b09">09. break문</a></li>
                                     <li><a href="#b10">10. continue문</a></li>
                                 </ul>
@@ -188,33 +204,412 @@
 
                     
                     
-                    <h3>3. 데이터 실행하기</h3>
-                    <div id="w01">
-                        <h4>01. 함수 : 선언적 함수</h4>
+                    <h3>3. 데이터 제어하기</h3>
+                    <div id="b01">
+                        <h4>01. if문</h4>
                         <p>
-                            선언적 함수(Declaration function)는 function 키워드를 사용하여 정의된 함수입니다.
+                            if문은 조건에 따라, 조건이 참(true)이면 특정 코드를 실행하는 제어문입니다. 
+                            if문은 프로그램의 흐름을 제어하고 조건에 따라 다른 동작을 수행하는 데 사용됩니다.
                         </p>
 <pre><code class="language-js">{
+        if(조건){
+                document.write("실행되었습니다.(true)");
+        } else {
+                document.write("실행되었습니다.(false)");
+        }
+
+        // true : true, "문자열", 1, 2, "1", "2", [], {}
+        // false : fasle, 0, null, undefined ""(빈문자열)
 }   
 </code></pre>
                         <div class="sampleBasic">
-                            <p>
-                                <code>func</code>인 함수를 정의하고, 함수를 호출하여 함수 내부에서 변수 <code>x</code>를 선언하고 값을 출력하는 간단한 예제입니다.
+                            <p class="sampleIcon">
+                                조건이 true이면 "실행되었습니다.(true)" 실행되고, 조건이 false이면 "실행되었습니다.(false)"가 출력되는 예제입니다.
                             </p>
                             <ul class="list">
-                                <li>function func() { ... } : 이 부분은 "func"라는 이름의 함수를 정의하는 부분입니다. 함수 정의는 function 키워드로 시작하며, 함수 이름 "func"가 나온 후에는 소괄호 ()로 감싸인 매개변수 목록이 올 수 있습니다. 이 예시에서는 매개변수가 없는 함수를 정의하고 있습니다. 중괄호 {} 내부에는 함수의 실행 코드가 위치합니다.</li>
-                                <li>let x = 100; : 함수 내부에서 x라는 변수를 선언하고 값 100을 할당하고 있습니다. 이 변수는 함수 내부에서만 유효한 지역 변수입니다. 함수 내부에서 선언된 변수는 외부에서 접근할 수 없습니다.</li>
-                                <li>console.log(x);: 함수 내부에서 선언한 변수 x의 값을 출력하고 있습니다. console.log() 함수는 브라우저 콘솔에 메시지를 출력하는 함수입니다. 따라서 이 코드는 함수가 호출되었을 때, 변수 x의 값인 100이 출력됩니다.</li>
-                                <li>func();: 정의한 함수 func를 호출하고 있습니다. 함수 호출은 함수 이름 뒤에 소괄호 ()를 붙여서 이루어집니다. 함수 내부 코드가 실행되고, console.log(x);에 의해 변수 x의 값인 100이 콘솔에 출력됩니다.</li>
+                                <li>조건에 true, "문자열", 1, 2, "1", "2", [], {}가 들어가면 true를 의미합니다.</li>
+                                <li>조건에 fasle, 0, null, undefined ""(빈문자열)이 들어가면 false를 의미합니다.</li>
                             </ul>
                         </div>
-                        <div class="sampleResult">
-                            <details>
-                                <summary>결과 확인하기</summary>
-                                <div>
-                                    100
-                                </div>
-                            </details>
+                    </div>
+
+
+
+                    <div id="b02" class="mt80">
+                        <h4>02. 다중 if문</h4>
+                        <p>
+                            다중 if 문은 여러 개의 조건을 순차적으로 검사하고, 해당하는 조건이 참일 때에만 해당 코드 블록을 실행하는 구조입니다. 
+                            이를 통해 여러 가지 경우에 따라 다른 동작을 수행할 수 있습니다.
+                        </p>
+<pre><code class="language-js">{
+        const num = 100;
+
+        if(num == 90){
+                document.write("실행되었습니다.(num = 90)");
+        } else if(num == 95){
+                document.write("실행되었습니다.(num = 95)");
+        } else if(num == 100){
+                document.write("실행되었습니다.(num = 100)");
+        } else if(num == 105){
+                document.write("실행되었습니다.(num = 105)");
+        } else {
+                document.write("실행되었습니다.");
+        }
+
+        // 실행되었습니다.(num = 100)
+}   
+</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                조건문을 사용하여 num 변수의 값에 따라 다른 메시지를 출력하는 예제입니다. 
+                            </p>
+                            <ul class="list">
+                                <li><i>num 변수 선언과 초기화</i> → num이라는 변수를 선언하고 초기값으로 100을 할당합니다.</li>
+                                <li>첫 번째 if 문: num이 90과 같은지 확인합니다. 만약 num이 90과 같다면 "실행되었습니다.(num = 90)"을 출력하고 다음 조건은 검사하지 않고 종료됩니다.</li>
+                                <li>두 번째 else if 문: num이 95와 같은지 확인합니다. num이 95와 같다면 "실행되었습니다.(num = 95)"을 출력하고 다음 조건은 검사하지 않고 종료됩니다.</li>
+                                <li>세 번째 else if 문: num이 100과 같은지 확인합니다. num이 100과 같다면 "실행되었습니다.(num = 100)"을 출력하고 다음 조건은 검사하지 않고 종료됩니다. 이 경우에 해당하므로 이 부분이 실행됩니다.</li>
+                                <li>네 번째 else if 문: num이 105와 같은지 확인합니다. num이 105와 같다면 "실행되었습니다.(num = 105)"을 출력하고 다음 조건은 검사하지 않고 종료됩니다.</li>
+                                <li>else 문: 위의 모든 조건이 만족되지 않을 때 실행되며, "실행되었습니다."를 출력합니다. 이 부분은 실행되지 않습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div id="b03" class="mt80">
+                        <h4>03. 중첩 if문</h4>
+                        <p>
+                            중첩 if문은 하나의 if문 또는 조건문 안에 다른 if문 또는 조건문이 포함된 구조를 가리킵니다. 
+                            중첩 if문은 복잡한 조건을 다룰 때 사용되며, 특정 조건이 다른 조건에 종속되는 경우에 유용합니다.
+                        </p>
+<pre><code class="language-js">{
+    const num = 100;
+
+    if(num == 100){
+            document.write("실행되었습니다.1");
+            if(num == 100){
+                    document.write("실행되었습니다.2");
+                    if(num == 100){
+                            document.write("실행되었습니다.3");
+                    }
+            }
+    } else {
+            document.write("실행되었습니다.4");
+    }
+
+    // 실행되었습니다.1
+    // 실행되었습니다.2
+    // 실행되었습니다.3
+}   
+</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                중첩된 if 문을 사용하여 num 변수의 값을 여러 번 검사하고 다른 메시지를 출력하는 예제입니다.
+                            </p>
+                            <ul class="list">
+                                <li><i>num 변수 선언과 초기화:</i> → num 변수를 선언하고 초기값으로 100을 할당합니다.</li>
+                                <li><i>첫 번째 if 문 </i> →  num 변수의 값을 100과 비교하고, 값이 동일하면 "실행되었습니다.1"을 출력합니다.</li>
+                                <li><i>두 번째 중첩된 if 문 </i> → 두 번째 if 문은 첫 번째 if 문 내에 중첩되어 있습니다. 이 if 문은 또 다시 num 변수의 값을 100과 비교하고, 값이 동일하면 "실행되었습니다.2"를 출력합니다.</li>
+                                <li><i>세 번째 중첩된 if 문 </i> → 세 번째 if 문은 두 번째 if 문 내에 중첩되어 있습니다. 이 if 문은 다시 한 번 num 변수의 값을 100과 비교하고, 값이 동일하면 "실행되었습니다.3"을 출력합니다.</li>
+                                <li><i>else 블록: </i> → 만약 첫 번째 if 문의 조건이 거짓이라면 (즉, num이 100이 아닌 경우), else 블록이 실행되고 "실행되었습니다.4"를 출력합니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div id="b04" class="mt80">
+                        <h4>04. if문 생략 & 삼항 연산자</h4>
+                        <p>
+                            if문 생략 방법과 삼항 연산자에 대한 예제입니다. 
+                            삼항 연산자는 조건에 따라 두 가지 값을 선택하는 데 유용하며, 코드를 간결하게 작성하는 데 도움이 됩니다.
+                        </p>
+<pre><code class="language-js">{
+        const num = 100;
+
+        // if(num == 100){
+        //          document.write("true");
+        // }
+        
+        // 01 약식으로 표현
+        if(num == 100) document.write("true");
+
+        // if(num == 100){
+        //          document.write("true");
+        // } else {
+        //          document.write("false");
+        // }
+
+        // 02 약식으로 표현
+        if(num == 100) document.write("true");
+        else document.write("false");
+
+        // 03 삼항 연산자(조건식 연산자)
+        (num == 100) ? document.write("true") : document.write("false");
+}   
+</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                if문과 삼항 연산자를 사용하여 num 변수의 값을 확인하고 다른 메시지를 출력하는 방법을 간결하게 표현한 예제입니다.
+                            </p>
+                            <ul class="list">
+                                <li>01 → 이 부분은 약식으로 표현된 것으로, if 문이 한 줄로 간결하게 작성되었습니다. 여전히 num 변수의 값이 100과 동일한지를 확인하고, 참인 경우에만 "실행되었습니다.(true)"를 출력합니다.</li>
+                                <li>02 → 이 부분은 약식으로 표현된 if-else 문으로, if 문과 else 문을 한 줄로 간결하게 작성합니다.</li>
+                                <li>03 → 삼항 연산자를 사용하여 num 변수의 값이 100과 동일한지를 확인하고, 참인 경우 "true"를 출력하고 그렇지 않으면 "false"를 출력합니다.</li>
+                            </ul>
+                        </div>
+
+                        <h4>++ if문과 삼항연산자 ++</h4>
+                        <div class="sampleBasic">
+                            <p>
+                                <i>if문과 삼항 연산자는 조건을 평가하고 다른 동작을 수행하는 데 사용되는</i> JavaScript의 두 가지 다른 접근 방식입니다.
+                                주의해야 할 점은 if문과 삼항 연산자 모두 조건을 기반으로 동작을 결정하는 데 사용되지만, 
+                                어떤 상황에서 더 적합한지는 코드의 복잡성과 가독성에 따라 다를 수 있습니다. 
+                                간단한 값을 반환하거나 변수에 값을 할당할 때는 삼항 연산자를 사용하는 것이 코드를 간결하게 만들 수 있지만, 
+                                복잡한 조건 분기를 다뤄야 하는 경우 if문이 더 적합할 수 있습니다
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <div id="b05" class="mt80">
+                        <h4>05. switch문</h4>
+                        <p>
+                            switch 문은 JavaScript에서 다중 조건 분기를 처리하는 데 사용되는 조건문입니다. 
+                            switch 문은 특정 변수 또는 표현식의 값에 따라 다른 코드 블록을 실행할 때 유용합니다
+                        </p>
+<pre><code class="language-js">{
+        const num = 100;
+
+        switch(num){
+                case 90: 
+                        document.write("실행되었습니다.(90)");
+                        break;
+                case 95:
+                        document.write("실행되었습니다.(95)");
+                        break;
+                case 100:
+                        document.write("실행되었습니다.(100)");
+                        break;
+                case 105:
+                        document.write("실행되었습니다.(105)");
+                        break;
+                default:
+                        document.write("실행되었습니다.");
+        }
+
+        // 실행되었습니다.(100)
+}   
+</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                switch 문을 사용하여 num 변수의 값을 비교하고 해당하는 case에 따라 다른 메시지를 출력하는 예제입니다.
+                            </p>
+                            <ul class="list">
+                                <li><i>num 변수 선언과 초기화</i> → num 변수를 선언하고 초기값으로 100을 할당합니다.</li>
+                                <li><i>switch 문</i> → switch 문은 num 변수의 값을 확인하고, 해당하는 case로 분기합니다.</li>
+                                <li><i>첫 번째 case 문 (90)</i> → num이 90과 일치하지 않으므로 해당 코드 블록은 실행되지 않습니다.</li>
+                                <li><i>두 번째 case 문 (95)</i> → num이 95와 일치하지 않으므로 해당 코드 블록은 실행되지 않습니다.</li>
+                                <li><i>세 번째 case 문 (100)</i> → num이 100과 일치하므로 해당 코드 블록이 실행되고 "실행되었습니다.(100)"이 출력됩니다.</li>
+                                <li><i>네 번째 case 문 (105)</i> → num이 105와 일치하지 않으므로 해당 코드 블록은 실행되지 않습니다.</li>
+                                <li><i>default 문</i> → 어떤 case 문과도 일치하지 않을 때 실행되며, "실행되었습니다."가 출력됩니다.</li>
+                            </ul>
+                        </div>
+
+                        <h4>++ if문과 switch문 ++</h4>
+                        <div class="sampleBasic">
+                            <p>
+                                if 문은 단일 조건을 다룰 때 사용하고, 
+                                switch 문은 여러 값 중 하나와 일치하는 경우에 다른 동작을 선택하는 데 사용합니다.
+                                결론적으로 언제 어떤 문을 사용할지는 코드의 목적과 복잡성에 따라 다릅니다. 
+                                if문은 단순한 조건부 실행에 유용하며, switch문은 값에 따라 다른 동작을 선택해야 할 때 효과적입니다.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <div id="b06" class="mt80">
+                        <h4>06. while문</h4>
+                        <p>
+                            while문은 JavaScript에서 반복 작업을 수행하는 데 사용되는 반복문 중 하나입니다. 
+                            while 문은 주어진 조건이 참인 동안 특정 코드 블록을 반복해서 실행합니다.
+                        </p>
+<pre><code class="language-js">{
+        let num = 1;
+
+        while(num&lt;=10){
+                document.write(num);
+                num++;
+        }
+
+        // 1 2 3 4 5 6 7 8 9 10
+}   
+</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                while 문을 사용하여 변수 num이 1에서 10까지의 숫자를 출력하는 예제입니다.
+                            </p>
+                            <ul class="list">
+                                <li><i>let num = 1;</i> → 코드는 변수 num을 선언하고 초기값으로 1을 할당합니다. 이 변수는 반복문에서 사용됩니다.</li>
+                                <li><i>while (num &lt;= 10) {</i> → while 문을 시작합니다. 조건으로 num이 10 이하인 동안 (num &lt;= 10) 반복문을 실행하라고 지정합니다. 즉, 조건이 참인 동안 반복됩니다.</li>
+                                <li><i>document.write(num);</i> → 현재 num 변수의 값을 웹 페이지에 출력합니다. 초기값은 1이므로 처음에는 "1"이 출력됩니다.</li>
+                                <li><i>num++;</i> → num 변수를 1씩 증가시킵니다. 이것은 반복문이 한 번 실행될 때마다 num의 값을 1씩 증가시킵니다.</li>
+                                <li>다음으로 조건을 검사합니다. num이 10보다 작거나 같으면 반복문이 계속 실행됩니다.</li>
+                                <li><i>document.write(num);</i> → num의 현재 값이 출력되고, 다시 num++으로 num이 증가됩니다.</li>
+                                <li>이 프로세스가 반복되고, num이 10 이하인 동안에는 계속해서 숫자가 출력됩니다.</li>
+                                <li>num이 11이 되면 조건이 거짓이 되고 while 반복문이 종료됩니다.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+
+                    <div id="b07" class="mt80">
+                        <h4>07. do while문</h4>
+                        <p>
+                            do...while문은 JavaScript에서 반복 작업을 수행하는 데 사용되는 반복문 중 하나입니다. 
+                            do...while 문은 while 문과 유사하지만, 조건 검사를 반복 코드 실행 이후에 수행하므로 최소한 한 번은 코드 블록을 실행합니다
+                        </p>
+<pre><code class="language-js">{
+        let num = 1;
+        do {
+                document.write(num);
+                num++;
+        } while(num&lt;=10);
+
+        // 1 2 3 4 5 6 7 8 9 10
+}   
+</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                do...while 반복문을 사용하여 변수 num이 1부터 10까지의 숫자를 웹 페이지에 출력하는 예제입니다.
+                            </p>
+                            <ul class="list">
+                                <li><i>let num = 1;</i> → 코드는 변수 num을 선언하고 초기값으로 1을 할당합니다. 이 변수는 반복문에서 사용됩니다.</li>
+                                <li><i>do {</i> → do...while 반복문을 시작합니다. 이 부분은 무조건 한 번 실행됩니다.</li>
+                                <li><i>document.write(num);</i> → num 변수의 값을 웹 페이지에 출력합니다. 초기값은 1이므로 먼저 "1"이 출력됩니다.</li>
+                                <li><i>num++;</i> → num 변수를 1씩 증가시킵니다. 이것은 반복문이 한 번 실행될 때마다 num의 값을 1씩 증가시킵니다.</li>
+                                <li><i>while (num &lt;= 10);</i> → 조건 검사 부분입니다. while 키워드 뒤에 따라오는 조건은 코드 블록 실행 이후에 검사됩니다. num이 10 이하인 동안 반복문을 계속 실행하라고 지정합니다.</li>
+                                <li>이제 반복문이 처음부터 다시 실행됩니다. num이 2가 되고 "2"가 출력됩니다. 그런 다음 num이 3, 4, 5, ..., 10까지 증가하면서 각 숫자가 출력됩니다.</li>
+                                <li>num이 11이 되면 조건이 false가 되고 반복문이 종료됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div id="b08" class="mt80">
+                        <h4>08. for문</h4>
+                        <p>
+                            for문은 JavaScript에서 반복 작업을 수행하는 데 사용되는 제어문 중 하나입니다. 
+                            for문은 반복 횟수를 지정하거나 배열과 같은 자료구조의 요소를 반복하여 접근할 때 유용합니다. 
+                        </p>
+<pre><code class="language-js">{
+        for( let i=1; i&lt;=10; i++ ){
+                document.write(i);
+        }
+
+        // 1 2 3 4 5 6 7 8 9 10
+}   
+</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                for문을 사용하여 변수 i가 1부터 10까지의 숫자를 웹 페이지에 출력하는 예제입니다. 
+                                for문은 초기화, 조건, 증감을 한 줄에 표현하여 반복 작업을 수행하는데 매우 효율적입니다. 
+                            </p>
+                            <ul class="list">
+                                <li><i>for (let i = 1; i &lt;= 10; i++) {</i> → for 반복문을 시작합니다. 이 부분은 반복문의 초기화, 조건, 증감 부분을 한 줄에 표현합니다.</li>
+                                <li><i>let i = 1;</i> → 변수 i를 선언하고 초기값으로 1을 할당합니다. 이 변수는 반복문에서 사용됩니다.</li>
+                                <li><i>i &lt;= 10;</i> → 조건으로, i가 10 이하인 동안 반복문을 실행하라고 지정합니다.</li>
+                                <li><i>i++</i> → 반복문이 한 번 실행될 때마다 i 값을 1씩 증가시킵니다.</li>
+                                <li><i>{</i> → 반복문의 시작을 나타내는 중괄호를 엽니다.</li>
+                                <li><i>document.write(i);</i> → 현재 i 변수의 값을 웹 페이지에 출력합니다. 초기값은 1이므로 먼저 "1"이 출력됩니다.</li>
+                                <li><i>}</i> → 반복문의 끝을 나타내는 중괄호를 닫습니다.</li>
+                                <li>이제 반복문이 처음부터 다시 실행됩니다. i가 2가 되고 "2"가 출력됩니다. 그런 다음 i가 3, 4, 5, ..., 10까지 증가하면서 각 숫자가 출력됩니다.</li>
+                                <li>i가 11이 되면 조건이 false가 되고 반복문이 종료됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div id="b09" class="mt80">
+                        <h4>09. break문</h4>
+                        <p>
+                            break문은 JavaScript에서 반복문(for, while, do...while) 또는 switch 문에서 사용되며, 해당 반복문을 종료하거나 switch 문의 실행을 중단하는 데 사용됩니다
+                        </p>
+<pre><code class="language-js">{
+        for(let i=1; i&lt;10; i++){
+                if( i == 5 ){
+                        break;
+                }
+                document.write(i);
+        }
+
+        // 1 2 3 4
+}   
+</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                for 반복문을 사용하여 1부터 9까지의 숫자를 출력하고 break를 설정한 예제입니다.
+                            </p>
+                            <ul class="list">
+                                <li><i>for (let i = 1; i &lt; 10; i++) {</i> → for 반복문을 시작합니다. 이 부분은 반복문의 초기화, 조건, 증감 부분을 한 줄에 표현합니다.</li>
+                                <li><i>let i = 1;</i> → 변수 i를 선언하고 초기값으로 1을 할당합니다. 이 변수는 반복문에서 사용됩니다.</li>
+                                <li><i>i &lt; 10;</i> → 조건으로, i가 10보다 작은 동안 반복문을 실행하라고 지정합니다.</li>
+                                <li><i>i++</i> → 반복문이 한 번 실행될 때마다 i 값을 1씩 증가시킵니다.</li>
+                                <li><i>{</i> → 반복문의 시작을 나타내는 중괄호를 엽니다.</li>
+                                <li><i>if (i == 5) {</i> → 조건문을 시작합니다. 현재 반복 회차에서 i가 5와 같은지를 검사합니다.</li>
+                                <li><i>break;</i> → 만약 i가 5와 같다면 break 문을 사용하여 현재 반복문을 즉시 종료합니다.</li>
+                                <li><i>}</i> → 조건문의 끝을 나타내는 중괄호를 닫습니다.</li>
+                                <li><i>document.write(i);</i> → 현재 i 변수의 값을 웹 페이지에 출력합니다.</li>
+                                <li>이제 반복문이 처음부터 다시 실행됩니다. i가 2가 되고 "2"가 출력됩니다. 그런 다음 i가 3, 4까지 증가하면서 각 숫자가 출력됩니다.</li>
+                                <li>i가 5가 되면 조건문에서 break 문을 만나게 되고, 반복문이 즉시 종료됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div id="b10" class="mt80">
+                        <h4>10. continue문</h4>
+                        <p>
+                            continue문은 JavaScript에서 반복문(for, while, do...while) 내에서 사용되며, 
+                            반복문의 현재 회차를 중지하고 다음 회차로 건너뛰는 데 사용됩니다. 
+                            continue문은 반복문의 일부 코드를 실행하지 않고 다음 반복 회차로 넘어가게 합니다.
+                        </p>
+<pre><code class="language-js">{
+        for(let i=1; i&lt;10; i++){
+                if( i == 5 ){
+                        continue;
+                }
+                document.write(i);
+        }
+
+        // 1 2 3 4 6 7 8 9 
+}   
+</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                for 반복문을 사용하여 1부터 9까지의 숫자를 출력하고 continue를 설정한 예제입니다.
+                            </p>
+                            <ul class="list">
+                                <li><i>for (let i = 1; i &lt; 10; i++) {</i> → for 반복문을 시작합니다. 이 부분은 반복문의 초기화, 조건, 증감 부분을 한 줄에 표현합니다.</li>
+                                <li><i>let i = 1;</i> → 변수 i를 선언하고 초기값으로 1을 할당합니다. 이 변수는 반복문에서 사용됩니다.</li>
+                                <li><i>i &lt; 10;</i> → 조건으로, i가 10보다 작은 동안 반복문을 실행하라고 지정합니다.</li>
+                                <li><i>i++</i> → 반복문이 한 번 실행될 때마다 i 값을 1씩 증가시킵니다.</li>
+                                <li><i>{</i> → 반복문의 시작을 나타내는 중괄호를 엽니다.</li>
+                                <li><i>if (i == 5) {</i> → 조건문을 시작합니다. 현재 반복 회차에서 i가 5와 같은지를 검사합니다.</li>
+                                <li><i>continue;</i> → 만약 i가 5와 같다면 continue 문을 사용하여 현재 반복 회차를 중지하고 다음 회차로 넘어갑니다.</li>
+                                <li><i>}</i> → 조건문의 끝을 나타내는 중괄호를 닫습니다.</li>
+                                <li><i>document.write(i);</i> → 현재 i 변수의 값을 웹 페이지에 출력합니다.</li>
+                                <li>이제 반복문이 처음부터 다시 실행됩니다. i가 2가 되고 "2"가 출력됩니다. 그런 다음 i가 3, 4까지 증가하면서 각 숫자가 출력됩니다.</li>
+                                <li>i가 5가 되면 조건문에서 continue 문을 만나게 되고, 현재 회차는 중지되고 다음 회차로 넘어갑니다.</li>
+                                <li>반복문은 6부터 9까지의 숫자를 출력하고, i가 10이 되면 조건이 거짓이 되어 반복문이 종료됩니다.</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -224,14 +619,7 @@
                     <div>
                         <h3>3. 마무리</h3>
                         <p>
-                            자바스크립트에서 데이터를 다루는 방법에 대해서 알아봤습니니다.
-                            데이터를 저장하고 조작하는 것은 프로그래밍의 핵심 중 하나이며, 
-                            다양한 데이터 구조와 기법을 활용하여 프로그램을 더 효율적으로 작성할 수 있습니다. 
-
-                            자바스크립트에서 데이터를 다루는 방법은 크게 변수, 배열, 객체로 나눌 수 있습니다. 
-                            이러한 데이터 저장 방식을 통해 우리는 정보를 구조화하고 유용한 형태로 사용할 수 있습니다. 
-                            이런 데이터 조작 능력을 효과적으로 익히면, 자바스크립트 프로그래밍이 더욱 흥미로워질 것입니다. 
-                            그럼 오늘도 수고하셨습니다. 😊
+                            
                         </p>
                     </div>
 
