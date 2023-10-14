@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 유튜브 사이트 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">나만의 유튜브 사이트 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 09. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">08</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 컴퍼넌트 비동기 작업</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/webs-youtube" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 강의는 <i>React</i> 프레임워크와 <i>YouTube API</i>를 이용하여 자신만의 간단한 영상 사이트를 만들어보겠습니다.
+                        React의 기본 개념을 이해하고, 컴포넌트를 구조화하고 상태를 관리하는 방법을 학습하게 될 것입니다. 
+                        또한 YouTube Data API를 활용하여 외부 데이터를 가져오는 방법을 익히고, 
+                        API 응답을 처리하여 사용자에게 의미 있는 정보를 제공하는 방법을 이해하게 됩니다.
+                        이로써 자신만의 유튜브 사이트를 만들고, 활용해보는 것을 목표로 합니다.
+                        그럼 한번 시작해볼까요? 🥳
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index2">
+                        <div>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. Node.js 설치</li>
+                                        <li>1_2. Vscode 설치</li>
+                                        <li>1_3. React.js 설치</li>
+                                    </ul>
+                                </li>
+                                <li>2. 라이브러리 설치하기
+                                    <ul>
+                                        <li>2_1. 폴더 정리하기</li>
+                                        <li>2_2. 라이브러리 설치하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. Git 연동하기
+                                    <ul>
+                                        <li>3_1. 저장소 만들기</li>
+                                        <li>3_2. 모든 파일 올리기</li>
+                                        <li>3_3. 깃 상태 확인하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. SCSS 셋팅하기
+                                    <ul>
+                                        <li>4_1. SCSS 설정하기</li>
+                                        <li>4_2. style.scss 설정하기</li>
+                                        <li>4_3. fonts.scss 설정하기</li>
+                                        <li>4_4. vars.scss 설정하기</li>
+                                        <li>4_5. reset.scss 설정하기</li>
+                                        <li>4_6. mixin.scss 설정하기</li>
+                                        <li>4_7. common.scss 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 페이지 만들기
+                                    <ul>
+                                        <li>5_1. 페이지 만들기</li>
+                                        <li>5_2. 페이지 컴퍼넌트 만들기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 섹션 컴퍼넌트 구조화하기
+                                    <ul>
+                                        <li>6_1. 전체 레이아웃 만들기</li>
+                                        <li>6_2. 섹션 컴퍼넌트 만들기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>7. 헤더 영역 완성하기
+                                    <ul>
+                                        <li>7_1. 헤더 영역 코딩하기</li>
+                                        <li>7_2. 헤더 영역 데이터 작업</li>
+                                        <li>7_3. 반복문과 map()</li>
+                                        <li>7_4. 메뉴 활성화하기</li>
+                                    </ul>
+                                </li>
+                                <li>8. 컴퍼넌트 비동기 작업
+                                    <ul>
+                                        <li>8_1. 컴퍼넌트 props 사용하기</li>
+                                        <li>8_2. React.Suspense 사용하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>8. 컴퍼넌트 비동기 작업</h3>
+                    <div>
+                        <h4>8_1. 컴퍼넌트 props 사용하기</h4>
+
+                        <p>
+                            메인 페이지의 props를 이용하여 메뉴를 클릭할 때마다 해당 콘텐츠가 보이도록 하겠습니다. 
+                            이럴 때 props를 이용하여 데이터를 전달하고 컨트롤 할 수 있습니다.
+                        </p>
+                       
+<pre><code class="language-js">import React from 'react'
+
+const Main = ( props ) =&gt; {
+    return (
+        &lt;main id="main" role="main"&gt;
+            {props.children}
+        &lt;/main&gt;
+    )
+}
+
+export default Main</code></pre>
+    
+                        <div class="sampleBasic">
+                            <p>
+                                React에서 "props"는 "properties"의 줄임말로, 컴포넌트 간에 데이터를 전달하고 컴포넌트를 구성하는 데 사용되는 매개변수와 같은 역할을 합니다. 
+                                Props는 React 컴포넌트 간에 데이터를 전달하거나 컴포넌트의 동작을 제어하기 위해 사용됩니다.
+                            </p>
+                            <p>
+                                <i>props.children</i>을 사용하면 부모 컴포넌트가 자식 요소를 포함한 컴포넌트를 작성할 때 렌더링 구조를 더 유연하게 만들 수 있습니다. 이를 통해 동적으로 자식 요소를 추가하거나 조작할 수 있으며, 컴포넌트 간에 재사용 가능한 레이아웃 및 컨테이너 컴포넌트를 작성할 때 유용합니다.
+                            </p>
+                        </div>
+
+                        <p>
+                            이렇게 하면 메뉴를 누를 때마다 메인 영역이 변경되는 것을 확인할 수 있습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-11.png" alt="youtube2023" />
+                        </div>
+                    </div>
+                    
+                    <div class="mt80">
+                        <h4>8_2. React.Suspense 사용하기</h4>
+                        <div class="sampleBasic">
+                            <p>
+                                React.Suspense는 React에서 <i>비동기적으로 데이터나 컴포넌트를 불러오는 과정에서 대기 상태를 처리하기 위한 컴포넌트</i>입니다. 이 컴포넌트를 사용하면 데이터나 컴포넌트가 로딩되기를 기다릴 수 있으며, 로딩 중에는 대체 컨텐츠(로딩 스피너 또는 로딩 메시지)를 표시할 수 있습니다. React.Suspense를 사용하면 코드 스플리팅, 데이터 로딩, 서버 사이드 렌더링과 같은 시나리오에서 사용자 경험을 향상시키는 데 도움이 됩니다.
+                            </p>
+                        </div>
+                        <p>
+                            우리 사이트의 모든 페이지는 왼쪽에 메뉴가 있고 오른쪽에 데이터가 로딩되기 때문에 이 방식을 사용할 것입니다. 
+                            이 방법을 사용하기 위해서는 <code>app.js</code>를 다시 재 작업 해주겠습니다.
+                            기존 컴퍼넌트 방법이 변경되고 <code>header</code>와 <code>footer</code>는 <code>Main</code> 컴퍼넌트로 넘겨주겠습니다.
+                        </p>
+<pre><code class="language-js">import React, { Suspense, lazy } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from './components/section/Main';
+
+const Home = lazy(() =&gt; import('./pages/Home'));
+const Today = lazy(() =&gt; import('./pages/Today'));
+const Developer = lazy(() =&gt; import('./pages/Developer'));
+const Webd = lazy(() =&gt; import('./pages/Webd'));
+const Website = lazy(() =&gt; import('./pages/Website'));
+const Gsap = lazy(() =&gt; import('./pages/Gsap'));
+const Port = lazy(() =&gt; import('./pages/Port'));
+const Youtube = lazy(() =&gt; import('./pages/Youtube'));
+const Channel = lazy(() =&gt; import('./pages/Channel'));
+const Video = lazy(() =&gt; import('./pages/Video'));
+const Search = lazy(() =&gt; import('./pages/Search'));
+const Not = lazy(() =&gt; import('./pages/Not'));
+
+const App = () =&gt; {
+    return (
+        &lt;BrowserRouter&gt;
+            &lt;Suspense fallback={&lt;Main /&gt;}&gt;
+                &lt;Routes&gt;
+                    &lt;Route path='/' element={&lt;Home /&gt;} /&gt;
+                    &lt;Route path="/today" element={&lt;Today /&gt;} /&gt;
+                    &lt;Route path="/developer" element={&lt;Developer /&gt;} /&gt;
+                    &lt;Route path="/webd" element={&lt;Webd /&gt;} /&gt;
+                    &lt;Route path="/website" element={&lt;Website /&gt;} /&gt;
+                    &lt;Route path="/gsap" element={&lt;Gsap /&gt;} /&gt;
+                    &lt;Route path="/port" element={&lt;Port /&gt;} /&gt;
+                    &lt;Route path="/youtube" element={&lt;Youtube /&gt;} /&gt;
+                    &lt;Route path='/channel/:channelId' element={&lt;Channel /&gt;} /&gt;
+                    &lt;Route path='/video/:videoId' element={&lt;Video /&gt;} /&gt;
+                    &lt;Route path='/search/:searchId' element={&lt;Search /&gt;} /&gt;
+                    &lt;Route path="*" element={&lt;Not /&gt;} /&gt;
+                &lt;/Routes&gt;
+            &lt;/Suspense&gt;
+        &lt;/BrowserRouter&gt;
+    );
+}
+
+export default App;
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li><i>BrowserRouter</i> : React Router에서 사용되는 브라우저 라우터 컴포넌트입니다. 브라우저 히스토리 API를 사용하여 라우팅을 처리합니다.</li>
+                                <li><i>Suspense</i> : Suspense 컴포넌트는 비동기적으로 로드되는 컴포넌트의 로딩 상태를 관리하는 데 사용됩니다. 여기서는 fallback 속성을 사용하여 로딩 중에 &lt;Main /&gt; 컴포넌트를 표시합니다.</li>
+                                <li><i>Routes</i> : Routes 컴포넌트는 각 경로에 대한 라우트를 정의하고, 해당 경로에 접근할 때 렌더링될 컴포넌트를 결정합니다.</li>
+                                <li><i>Route</i> : Route 컴포넌트는 특정 경로에 대한 라우팅 규칙을 설정하며, element 속성을 통해 해당 경로에 접근할 때 렌더링될 컴포넌트를 지정합니다.</li>
+                                <li><i>lazy()</i> : lazy() 함수는 코드 스플리팅을 위해 사용되며, 비동기적으로 컴포넌트를 로드합니다. 컴포넌트가 필요할 때 비동기적으로 불러와서 번들 크기를 줄일 수 있습니다.</li>
+                                <li><i>fallback</i> : fallback 속성은 Suspense 컴포넌트에서 로딩 중에 표시할 컴포넌트를 지정합니다. 여기서는 &lt;Main /&gt; 컴포넌트가 로딩 중에 보여집니다.</li>
+                            </ul>
+                        </div>
+
+                        <p>
+                            <code>Main.js</code>를 수정하겠습니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+
+import Header from './Header'
+import Footer from './Footer'
+
+const Main = ( props ) =&gt; {
+    return (
+        &lt;&gt;
+            &lt;Header /&gt;
+            &lt;main id="main" role="main"&gt;
+                {props.children}
+            &lt;/main&gt;
+            &lt;Footer /&gt;
+        &lt;/&gt;
+    )
+}
+
+export default Main
+</code></pre>
+                        <div class="sampleBasic">
+                            <p>
+                                <code>&lt;></code> 및 <code>&lt;/></code>는 React에서 Fragments(프래그먼트)를 생성하기 위한 단축 구문입니다. 
+                                Fragment는 React 컴포넌트의 반환 값으로 여러 요소를 래핑하고, 이러한 요소가 부모 요소 하나로 묶이지 않도록 허용하는 데 사용됩니다.
+                                React 컴포넌트는 루트 요소에서 시작해야 하기 때문에 여러 요소를 반환하려면 불필요한 부모 요소를 추가하게 됩니다. 
+                                이러한 상황에서 Fragment를 사용하면 불필요한 부모 요소 없이 여러 요소를 그룹화할 수 있습니다.
+                            </p>
+                        </div>
+                        <p>
+                            이제 모든 페이지도 다 변경해주어야 합니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+
+const Channel = () => {
+    return (
+        &lt;main&gt;
+            Channel
+        &lt;/main&gt;
+    )
+}
+
+export default Channel
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Developer = () => {
+    return (
+        &lt;main&gt;
+            Developer
+        &lt;/main&gt;
+    )
+}
+
+export default Developer
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Gsap = () => {
+    return (
+        &lt;main&gt;
+            Gsap
+        &lt;/main&gt;
+    )
+}
+
+export default Gsap
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Home = () => {
+    return (
+        &lt;main&gt;
+            Home
+        &lt;/main&gt;
+    )
+}
+
+export default Home
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Not = () => {
+    return (
+        &lt;main&gt;
+            Not
+        &lt;/main&gt;
+    )
+}
+
+export default Not
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Port = () => {
+    return (
+        &lt;main&gt;
+            Port
+        &lt;/main&gt;
+    )
+}
+
+export default Port
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Search = () => {
+    return (
+        &lt;main&gt;
+            Search
+        &lt;/main&gt;
+    )
+}
+
+export default Search
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Today = () => {
+    return (
+        &lt;main&gt;
+            Today
+        &lt;/main&gt;
+    )
+}
+
+export default Today
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Video = () => {
+    return (
+        &lt;main&gt;
+            Video
+        &lt;/main&gt;
+    )
+}
+
+export default Video
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Wedd = () => {
+    return (
+        &lt;main&gt;
+            Wedd
+        &lt;/main&gt;
+    )
+}
+
+export default Wedd
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Website = () => {
+    return (
+        &lt;main&gt;
+            Website
+        &lt;/main&gt;
+    )
+}
+
+export default Website
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Youtube = () => {
+    return (
+        &lt;main&gt;
+            Youtube
+        &lt;/main&gt;
+    )
+}
+
+export default Youtube
+</code></pre>
+
+                    </div>
+
+                    <div>
+                        <h3>마무리</h3>
+                        <h4>git 올리기</h4>
+                        <p>
+                            터미널에서 다음과 같이 작성하겠습니다.
+                            새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
+                        </p>
+<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+        modified:   src/App.js
+        modified:   src/components/section/Main.jsx
+        modified:   src/pages/Channel.jsx
+        modified:   src/pages/Developer.jsx
+        modified:   src/pages/Gsap.jsx
+        modified:   src/pages/Home.jsx
+        modified:   src/pages/Not.jsx
+        modified:   src/pages/Port.jsx
+        modified:   src/pages/Search.jsx
+        modified:   src/pages/Today.jsx
+        modified:   src/pages/Video.jsx
+        modified:   src/pages/Webd.jsx
+        modified:   src/pages/Website.jsx
+        modified:   src/pages/Youtube.jsx
+
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "컴퍼넌트 비동기 작업"
+[main 813080f] 컴퍼넌트 비동기 작업
+    14 files changed, 108 insertions(+), 71 deletions(-)
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
+Enumerating objects: 39, done.
+Counting objects: 100% (39/39), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (20/20), 2.05 KiB | 2.05 MiB/s, done.
+Total 20 (delta 13), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (13/13), completed with 3 local objects.
+To https://github.com/webstoryboy/webs-youtube.git
+    436eb77..813080f  main -> main
+branch 'main' set up to track 'origin/main'.
+</code></pre>
+                        <p>
+                            모든 페이지 구성이 비슷하기 때문에 메인 콘텐츠만 비동기 방식을 사용하여 데이터를 로드할 수 있도록 설정했습니다. 
+                            이렇게 하면 사이트 전환시 또는 메뉴 선택시 깜박임이나 전체 소스를 다시 다운 받는 경우를 막을 수 있습니다. 
+                            표면적으로 티는 잘 나지 않지만 사이트 규모가 커지고, 데이터 전송이 많을 때 조금 더 효율적으로 쓰기 위함입니다.
+                            수고하셨습니다 🤩
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1964">1. 나만의 유튜브 사이트 만들기 : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : 라이브러리 설치하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">3. 나만의 유튜브 사이트 만들기 : Git 연동하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">4. 나만의 유튜브 사이트 만들기 : SCSS 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">5. 나만의 유튜브 사이트 만들기 : 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">6. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 구조화하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">7. 나만의 유튜브 사이트 만들기 : 헤더 영역 완성하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">8. 나만의 유튜브 사이트 만들기 : 컴퍼넌트 비동기 작업</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

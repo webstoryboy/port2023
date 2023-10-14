@@ -1,0 +1,915 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 유튜브 사이트 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">나만의 유튜브 사이트 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 09. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">10</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 메인 콘텐츠 작업</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/webs-youtube" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 강의는 <i>React</i> 프레임워크와 <i>YouTube API</i>를 이용하여 자신만의 간단한 영상 사이트를 만들어보겠습니다.
+                        React의 기본 개념을 이해하고, 컴포넌트를 구조화하고 상태를 관리하는 방법을 학습하게 될 것입니다. 
+                        또한 YouTube Data API를 활용하여 외부 데이터를 가져오는 방법을 익히고, 
+                        API 응답을 처리하여 사용자에게 의미 있는 정보를 제공하는 방법을 이해하게 됩니다.
+                        이로써 자신만의 유튜브 사이트를 만들고, 활용해보는 것을 목표로 합니다.
+                        그럼 한번 시작해볼까요? 🥳
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index2">
+                        <div>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. Node.js 설치</li>
+                                        <li>1_2. Vscode 설치</li>
+                                        <li>1_3. React.js 설치</li>
+                                    </ul>
+                                </li>
+                                <li>2. 라이브러리 설치하기
+                                    <ul>
+                                        <li>2_1. 폴더 정리하기</li>
+                                        <li>2_2. 라이브러리 설치하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. Git 연동하기
+                                    <ul>
+                                        <li>3_1. 저장소 만들기</li>
+                                        <li>3_2. 모든 파일 올리기</li>
+                                        <li>3_3. 깃 상태 확인하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. SCSS 셋팅하기
+                                    <ul>
+                                        <li>4_1. SCSS 설정하기</li>
+                                        <li>4_2. style.scss 설정하기</li>
+                                        <li>4_3. fonts.scss 설정하기</li>
+                                        <li>4_4. vars.scss 설정하기</li>
+                                        <li>4_5. reset.scss 설정하기</li>
+                                        <li>4_6. mixin.scss 설정하기</li>
+                                        <li>4_7. common.scss 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 페이지 만들기
+                                    <ul>
+                                        <li>5_1. 페이지 만들기</li>
+                                        <li>5_2. 페이지 컴퍼넌트 만들기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 섹션 컴퍼넌트 구조화하기
+                                    <ul>
+                                        <li>6_1. 전체 레이아웃 만들기</li>
+                                        <li>6_2. 섹션 컴퍼넌트 만들기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>7. 헤더 영역 완성하기
+                                    <ul>
+                                        <li>7_1. 헤더 영역 코딩하기</li>
+                                        <li>7_2. 헤더 영역 데이터 작업</li>
+                                        <li>7_3. 반복문과 map()</li>
+                                        <li>7_4. 메뉴 활성화하기</li>
+                                    </ul>
+                                </li>
+                                <li>8. 컴퍼넌트 비동기 작업
+                                    <ul>
+                                        <li>8_1. 컴퍼넌트 props 사용하기</li>
+                                        <li>8_2. React.Suspense 사용하기</li>
+                                    </ul>
+                                </li>
+                                <li>9. 페이지 SEO 작업
+                                    <ul>
+                                        <li>9_1. 메인 페이지 SEO 설정하기</li>
+                                        <li>9_2. 모든 페이지 SEO 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>10. 메인 콘텐츠 작업
+                                    <ul>
+                                        <li>10_1. 검색 컴퍼넌트 작업하기</li>
+                                        <li>10_2. 메인 컴퍼넌트 작업하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>10. 메인 콘텐츠 작업</h3>
+                    <div>
+                        <h4>10_1. 검색 컴퍼넌트 작업하기</h4>
+                        <p>
+                            메인 페이지에 검색 영역을 작업해보겠습니다. 
+                            <code>components</code> > <code>section</code> > <code>Main.jsx</code> 수정하겠습니다.
+                            검색 영역 역시 모든 페이지에 들어가기 때문에 <code>main</code> 컴퍼넌트에 넣어주겠습니다.
+                            <code>main</code> 태그 안에 추가 하였습니다.
+                            import를 추가하여 연동까지 완료했습니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+
+import Header from './Header'
+import Footer from './Footer'
+import Search from './Search'  // 추가
+
+const Main = ( props ) =&gt; {
+    return (
+        &lt;HelmetProvider&gt;
+            &lt;Helmet 
+                titleTemplate="%s | Webs Youtube" 
+                defaultTitle="Webs Youtube" 
+                defer={false}
+            &gt;
+                {props.title && &lt;title&gt;{props.title}&lt;/title&gt;}
+                &lt;meta name="description" content={props.description} /&gt;
+            &lt;/Helmet&gt;
+
+            &lt;Header /&gt;
+            &lt;main id="main" role="main"&gt;
+                &lt;Search /&gt;   
+                {props.children}
+            &lt;/main&gt;
+            &lt;Footer /&gt;
+        &lt;/HelmetProvider&gt;
+    )
+}
+
+export default Main
+</code></pre>
+                        
+                        <p>
+                            <code>Search.jsx</code> 컴퍼넌트를 추가하고 다음과 같이 작업하겠습니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">components
+                                    <ul>
+                                        <li class="icon1">section
+                                            <ul>
+                                                <li class="icon2 m0">Footer.jsx</li>
+                                                <li class="icon2 m0">Header.jsx</li>
+                                                <li class="icon2 m0">Main.jsx</li>
+                                                <li class="icon2 m0">Search.jsx</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+<pre><code class="language-js">import React from 'react'
+
+const Search = () =&gt; {
+    return (
+        &lt;div id='search'&gt;
+            &lt;div className='search__inner'&gt;
+                &lt;label htmlFor='searchInput'&gt;
+                    &lt;span className='ir'&gt;검색&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;input 
+                    type='search' 
+                    id='searchInput' 
+                    placeholder='검색어를 입력해주세요' 
+                    autoComplete='off' 
+                    className='search__input' 
+                /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    )
+}
+export default Search</code></pre>
+
+                        <p>
+                            <code>_search.scss</code> 파일도 추가하고 <code>style.scss</code> 에도 추가해야 합니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">assets
+                                    <ul>
+                                        <li class="icon1">fonts</li>
+                                        <li class="icon1">img</li>
+                                        <li class="icon1">scss
+                                            <ul>
+                                                <li class="icon1">section
+                                                    <ul>
+                                                        <li class="icon2 m0">_layout.scss</li>
+                                                        <li class="icon2 m0">_header.scss</li>
+                                                        <li class="icon2 m0">_search.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon1">setting
+                                                    <ul>
+                                                        <li class="icon2 m0">_common.scss</li>
+                                                        <li class="icon2 m0">_fonts.scss</li>
+                                                        <li class="icon2 m0">_mixin.scss</li>
+                                                        <li class="icon2 m0">_reset.scss</li>
+                                                        <li class="icon2 m0">_vars.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon2 m0">style.scss</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+<pre><code class="language-scss">@charset "UTF-8";
+
+// setting
+@import "setting/fonts";
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+@import "setting/common";
+
+// section
+@import "section/layout";
+@import "section/header";
+@import "section/search";   // 추가
+</code></pre>
+<pre><code class="language-scss">.search__inner {
+    padding: 17px 40px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #161616;
+    height: 81px;
+
+    label {
+        position: absolute;
+        left: 53px; 
+        top: 28px;
+        width: 24px;
+        height: 24px;
+        background-image: url(../../img/icon/search.svg);
+        background-size: cover;
+    }
+    input {
+        background-color: #111;
+        border: 1px solid #161616;
+        border-radius: 40px;
+        font-size: 16px;
+        padding: 14px 45px;
+        width: 100%;
+        color: #fff;
+    }
+}</code></pre>
+
+                        <p>
+                            나머지 기타 부분도 수정하겠습니다. 
+                            <code>scss</code> > <code>section</code> > <code>_layout.scss</code>를 수정하겠습니다.
+                        </p>
+<pre><code class="language-scss">#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    z-index: 10000;
+    border-right: 1px solid var(--black200);
+}
+#main {
+    max-width: 2000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: 260px;
+}
+#footer {
+    margin-top: 100px;
+    background-color: var(--black200);
+    border-top: 1px solid var(--black200);
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--black400);
+    padding: 20px;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+
+    a {
+        padding: 10px 20px;
+    }
+}
+</code></pre>
+                        <p> 
+                            푸터 부분은 간단하기 때문에 바로 처리하겠습니다.
+                            <code>components</code> > <code>section</code> > <code>Footer.jsx</code>에서 수정하겠습니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+
+const Footer = () =&gt; {
+    return (
+        &lt;footer id='footer' role="contentinfo"&gt; 
+            &lt;a href="mailto:webstoryboy@naver.com" rel="noopener noreferrer"&gt;
+                webstoryboy@naver.com
+            &lt;/a&gt;
+        &lt;/footer&gt;
+    )
+}
+
+export default Footer
+</code></pre>   
+                        <p>
+                            완성된 화면입니다. 푸터까지 확인해주세요!
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-13.png" alt="youtube2023" />
+                        </div>
+
+                        
+                    </div>
+                    
+                    <div class="mt80">
+                        <h4>10_2. 메인 컴퍼넌트 작업하기</h4>
+                        <p>
+                            메인 콘텐츠에는 추천 영상, 추천 개발자, 웹디자인 기능사, 웹표준 사이트, GSAP, 포트폴리오, 유튜브 코딩 등 7가지 컴퍼넌트로 구성되어 있습니다. 
+                            이 컴퍼넌트들을 클릭하면 해당 페이지도 이동되는 구조입니다. 
+                            그럼 하나씩 작업해보겠습니다. 
+                        </p>
+                        <p>
+                            <code>components</code> > <code>pages</code> > <code>Home.jsx</code> 페이지를 수정하겠습니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+import Today from '../components/contents/Today'
+import Developer from '../components/contents/Developer'
+import Webd from '../components/contents/Webd'
+import Website from '../components/contents/Website'
+import Gsap from '../components/contents/Gsap'
+import Portfolio from '../components/contents/Portfolio'
+import Youtube from '../components/contents/Youtube'
+
+const Home = () => {
+    return (
+        &lt;Main 
+            title = "웹스토리보이 유튜브"
+            description="웹스토리보이 유튜버 사이트에 오신 것을 환영합니다."&gt;
+            
+            &lt;Today /&gt;
+            &lt;Developer /&gt;
+            &lt;Webd /&gt;
+            &lt;Website /&gt;
+            &lt;Gsap /&gt;
+            &lt;Portfolio /&gt;
+            &lt;Youtube /&gt;
+        &lt;/Main&gt;
+    )
+}
+
+export default Home
+</code></pre>
+                        <p>
+                            컴퍼넌트를 만들었기 때문에 폴더도 만들고 각 컴퍼넌트도 만들어 주겠습니다. 
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">components
+                                    <ul>
+                                        <li class="icon1">contents
+                                            <ul>
+                                                <li class="icon2 m0">Developer.jsx</li>
+                                                <li class="icon2 m0">Gsap.jsx</li>
+                                                <li class="icon2 m0">Portfolio.jsx</li>
+                                                <li class="icon2 m0">Today.jsx</li>
+                                                <li class="icon2 m0">Webd.jsx</li>
+                                                <li class="icon2 m0">Website.jsx</li>
+                                                <li class="icon2 m0">Youtube.jsx</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+<pre><code class="language-js">import React from 'react'
+
+const Developer = () => {
+    return (
+        &lt;div&gt;Developer&lt;/div&gt;
+    )
+}
+
+export default Developer
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Gsap = () => {
+    return (
+        &lt;div&gt;Gsap&lt;/div&gt;
+    )
+}
+
+export default Gsap
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Portfolio = () => {
+    return (
+        &lt;div&gt;Portfolio&lt;/div&gt;
+    )
+}
+
+export default Portfolio
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Today = () => {
+    return (
+        &lt;div&gt;Today&lt;/div&gt;
+    )
+}
+
+export default Today
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Webd = () => {
+    return (
+        &lt;div&gt;Webd&lt;/div&gt;
+    )
+}
+
+export default Webd
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Website = () => {
+    return (
+        &lt;div&gt;Webd&lt;/div&gt;
+    )
+}
+
+export default Website
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Youtube = () => {
+    return (
+        &lt;div&gt;Webd&lt;/div&gt;
+    )
+}
+
+export default Youtube
+</code></pre>
+
+                    </div>
+
+
+
+                    <div>
+                        <h3>마무리</h3>
+                        <h4>git 올리기</h4>
+                        <p>
+                            터미널에서 다음과 같이 작성하겠습니다.
+                            새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
+                        </p>
+<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+        new file:   src/assets/img/gsap/gsap01.jpg
+        new file:   src/assets/img/gsap/gsap02.jpg
+        new file:   src/assets/img/gsap/gsap03.jpg
+        new file:   src/assets/img/gsap/gsap04.jpg
+        new file:   src/assets/img/gsap/gsap05.jpg
+        new file:   src/assets/img/gsap/gsap06.jpg
+        new file:   src/assets/img/gsap/gsap07.jpg
+        new file:   src/assets/img/gsap/gsap08.jpg
+        new file:   src/assets/img/gsap/gsap09.jpg
+        new file:   src/assets/img/gsap/gsap10.jpg
+        new file:   src/assets/img/gsap/gsap11.jpg
+        new file:   src/assets/img/gsap/gsap12.jpg
+        new file:   src/assets/img/gsap/gsap13.jpg
+        new file:   src/assets/img/gsap/gsap14.jpg
+        new file:   src/assets/img/gsap/gsap15.jpg
+        new file:   src/assets/img/icon/play.svg
+        new file:   src/assets/img/icon/search.svg
+        new file:   src/assets/img/port/port-next01.jpg
+        new file:   src/assets/img/port/port-next02.jpg
+        new file:   src/assets/img/port/port-next03.jpg
+        new file:   src/assets/img/port/port-next04.jpg
+        new file:   src/assets/img/port/port-next05.jpg
+        new file:   src/assets/img/port/port-next06.jpg
+        new file:   src/assets/img/port/port-next07.jpg
+        new file:   src/assets/img/port/port-next08.jpg
+        new file:   src/assets/img/port/port-next09.jpg
+        new file:   src/assets/img/port/port-next10.jpg
+        new file:   src/assets/img/port/port-react01.jpg
+        new file:   src/assets/img/port/port-react02.jpg
+        new file:   src/assets/img/port/port-react03.jpg
+        new file:   src/assets/img/port/port-react04.jpg
+        new file:   src/assets/img/port/port-react05.jpg
+        new file:   src/assets/img/port/port-react06.jpg
+        new file:   src/assets/img/port/port-react07.jpg
+        new file:   src/assets/img/port/port-react08.jpg
+        new file:   src/assets/img/port/port-react09.jpg
+        new file:   src/assets/img/port/port-react10.jpg
+        new file:   src/assets/img/port/port-vite01.jpg
+        new file:   src/assets/img/port/port-vite02.jpg
+        new file:   src/assets/img/port/port-vite03.jpg
+        new file:   src/assets/img/port/port-vite04.jpg
+        new file:   src/assets/img/port/port-vite05.jpg
+        new file:   src/assets/img/port/port-vite06.jpg
+        new file:   src/assets/img/port/port-vite07.jpg
+        new file:   src/assets/img/port/port-vite08.jpg
+        new file:   src/assets/img/port/port-vite09.jpg
+        new file:   src/assets/img/port/port-vite10.jpg
+        new file:   src/assets/img/port/port-vue01.jpg
+        new file:   src/assets/img/port/port-vue02.jpg
+        new file:   src/assets/img/port/port-vue03.jpg
+        new file:   src/assets/img/port/port-vue04.jpg
+        new file:   src/assets/img/port/port-vue05.jpg
+        new file:   src/assets/img/port/port-vue06.jpg
+        new file:   src/assets/img/port/port-vue07.jpg
+        new file:   src/assets/img/port/port-vue08.jpg
+        new file:   src/assets/img/port/port-vue09.jpg
+        new file:   src/assets/img/port/port-vue10.jpg
+        new file:   src/assets/img/site/site01.jpg
+        new file:   src/assets/img/site/site02.jpg
+        new file:   src/assets/img/site/site03.jpg
+        new file:   src/assets/img/site/site04.jpg
+        new file:   src/assets/img/site/site05.jpg
+        new file:   src/assets/img/site/site06.jpg
+        new file:   src/assets/img/site/site07.jpg
+        new file:   src/assets/img/site/site08.jpg
+        new file:   src/assets/img/site/site09.jpg
+        new file:   src/assets/img/site/site10.jpg
+        new file:   src/assets/img/site/site11.jpg
+        new file:   src/assets/img/site/site12.jpg
+        new file:   src/assets/img/site/site13.jpg
+        new file:   src/assets/img/site/site14.jpg
+        new file:   src/assets/img/site/site15.jpg
+        new file:   src/assets/img/site/site16.jpg
+        new file:   src/assets/img/site/site17.jpg
+        new file:   src/assets/img/site/site18.jpg
+        new file:   src/assets/img/site/site19.jpg
+        new file:   src/assets/img/site/site20.jpg
+        new file:   src/assets/img/site/site21.jpg
+        new file:   src/assets/img/site/site22.jpg
+        new file:   src/assets/img/site/site23.jpg
+        new file:   src/assets/img/site/site24.jpg
+        new file:   src/assets/img/site/site25.jpg
+        new file:   src/assets/img/today/todayView01.jpg
+        new file:   src/assets/img/today/todayView02.jpg
+        new file:   src/assets/img/today/todayView03.jpg
+        new file:   src/assets/img/today/todayView04.jpg
+        new file:   src/assets/img/today/todayView05.jpg
+        new file:   src/assets/img/today/todayView06.jpg
+        new file:   src/assets/img/today/todayView07.jpg
+        new file:   src/assets/img/today/todayView08.jpg
+        new file:   src/assets/img/webd/webd01.jpg
+        new file:   src/assets/img/webd/webd02.jpg
+        new file:   src/assets/img/webd/webd03.jpg
+        new file:   src/assets/img/webd/webd04.jpg
+        new file:   src/assets/img/webd/webd05.jpg
+        new file:   src/assets/img/webd/webd06.jpg
+        new file:   src/assets/img/webd/webd07.jpg
+        new file:   src/assets/img/webd/webd08.jpg
+        new file:   src/assets/img/webd/webd09.jpg
+        new file:   src/assets/img/webd/webd10.jpg
+        new file:   src/assets/img/webd/webd11.jpg
+        new file:   src/assets/img/webd/webd12.jpg
+        new file:   src/assets/img/webd/webd13.jpg
+        new file:   src/assets/img/webd/webd14.jpg
+        new file:   src/assets/img/webd/webd15.jpg
+        new file:   src/assets/img/webd/webd16.jpg
+        new file:   src/assets/img/webd/webd17.jpg
+        new file:   src/assets/img/webd/webd18.jpg
+        new file:   src/assets/img/webd/webd19.jpg
+        new file:   src/assets/img/webd/webd20.jpg
+        new file:   src/assets/img/webd/webd21.jpg
+        new file:   src/assets/img/webd/webd22.jpg
+        new file:   src/assets/img/webd/webd23.jpg
+        new file:   src/assets/img/webd/webd24.jpg
+        new file:   src/assets/img/webd/webd25.jpg
+        new file:   src/assets/img/webd/webd26.jpg
+        new file:   src/assets/img/webd/webd27.jpg
+        new file:   src/assets/img/webd/webd28.jpg
+        new file:   src/assets/img/webd/webd29.jpg
+        new file:   src/assets/img/webd/webd30.jpg
+        new file:   src/assets/img/webd/webd31.jpg
+        new file:   src/assets/img/webd/webd32.jpg
+        new file:   src/assets/img/webd/webd33.jpg
+        new file:   src/assets/img/webd/webd34.jpg
+        new file:   src/assets/img/webd/webd35.jpg
+        new file:   src/assets/img/webd/webd36.jpg
+        new file:   src/assets/img/webd/webd37.jpg
+        new file:   src/assets/img/webd/webd38.jpg
+        new file:   src/assets/img/webd/webd39.jpg
+        new file:   src/assets/img/youtube/youtube01.jpg
+        new file:   src/assets/img/youtube/youtube02.jpg
+        new file:   src/assets/img/youtube/youtube03.jpg
+        new file:   src/assets/img/youtube/youtube04.jpg
+        new file:   src/assets/img/youtube/youtube05.jpg
+        modified:   src/assets/scss/section/_layout.scss
+        new file:   src/assets/scss/section/_search.scss
+        modified:   src/assets/scss/setting/_vars.scss
+        modified:   src/assets/scss/style.scss
+        new file:   src/components/contents/Developer.jsx
+        new file:   src/components/contents/Gsap.jsx
+        new file:   src/components/contents/Portfolio.jsx
+        new file:   src/components/contents/Today.jsx
+        new file:   src/components/contents/Webd.jsx
+        new file:   src/components/contents/Website.jsx
+        new file:   src/components/contents/Youtube.jsx
+        modified:   src/components/section/Footer.jsx
+        modified:   src/components/section/Main.jsx
+        new file:   src/components/section/Search.jsx
+        modified:   src/pages/Home.jsx
+
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "메인 콘텐츠 작업"
+[main 0126fe6] 메인 콘텐츠 작업
+    149 files changed, 153 insertions(+), 9 deletions(-)
+    create mode 100644 src/assets/img/gsap/gsap01.jpg
+    create mode 100644 src/assets/img/gsap/gsap02.jpg
+    create mode 100644 src/assets/img/gsap/gsap03.jpg
+    create mode 100644 src/assets/img/gsap/gsap04.jpg
+    create mode 100644 src/assets/img/gsap/gsap05.jpg
+    create mode 100644 src/assets/img/gsap/gsap06.jpg
+    create mode 100644 src/assets/img/gsap/gsap07.jpg
+    create mode 100644 src/assets/img/gsap/gsap08.jpg
+    create mode 100644 src/assets/img/gsap/gsap09.jpg
+    create mode 100644 src/assets/img/gsap/gsap10.jpg
+    create mode 100644 src/assets/img/gsap/gsap11.jpg
+    create mode 100644 src/assets/img/gsap/gsap12.jpg
+    create mode 100644 src/assets/img/gsap/gsap13.jpg
+    create mode 100644 src/assets/img/gsap/gsap14.jpg
+    create mode 100644 src/assets/img/gsap/gsap15.jpg
+    create mode 100644 src/assets/img/icon/play.svg
+    create mode 100644 src/assets/img/icon/search.svg
+    create mode 100644 src/assets/img/port/port-next01.jpg
+    create mode 100644 src/assets/img/port/port-next02.jpg
+    create mode 100644 src/assets/img/port/port-next03.jpg
+    create mode 100644 src/assets/img/port/port-next04.jpg
+    create mode 100644 src/assets/img/port/port-next05.jpg
+    create mode 100644 src/assets/img/port/port-next06.jpg
+    create mode 100644 src/assets/img/port/port-next07.jpg
+    create mode 100644 src/assets/img/port/port-next08.jpg
+    create mode 100644 src/assets/img/port/port-next09.jpg
+    create mode 100644 src/assets/img/port/port-next10.jpg
+    create mode 100644 src/assets/img/port/port-react01.jpg
+    create mode 100644 src/assets/img/port/port-react02.jpg
+    create mode 100644 src/assets/img/port/port-react03.jpg
+    create mode 100644 src/assets/img/port/port-react04.jpg
+    create mode 100644 src/assets/img/port/port-react05.jpg
+    create mode 100644 src/assets/img/port/port-react06.jpg
+    create mode 100644 src/assets/img/port/port-react07.jpg
+    create mode 100644 src/assets/img/port/port-react08.jpg
+    create mode 100644 src/assets/img/port/port-react09.jpg
+    create mode 100644 src/assets/img/port/port-react10.jpg
+    create mode 100644 src/assets/img/port/port-vite01.jpg
+    create mode 100644 src/assets/img/port/port-vite02.jpg
+    create mode 100644 src/assets/img/port/port-vite03.jpg
+    create mode 100644 src/assets/img/port/port-vite04.jpg
+    create mode 100644 src/assets/img/port/port-vite05.jpg
+    create mode 100644 src/assets/img/port/port-vite06.jpg
+    create mode 100644 src/assets/img/port/port-vite07.jpg
+    create mode 100644 src/assets/img/port/port-vite08.jpg
+    create mode 100644 src/assets/img/port/port-vite09.jpg
+    create mode 100644 src/assets/img/port/port-vite10.jpg
+    create mode 100644 src/assets/img/port/port-vue01.jpg
+    create mode 100644 src/assets/img/port/port-vue02.jpg
+    create mode 100644 src/assets/img/port/port-vue03.jpg
+    create mode 100644 src/assets/img/port/port-vue04.jpg
+    create mode 100644 src/assets/img/port/port-vue05.jpg
+    create mode 100644 src/assets/img/port/port-vue06.jpg
+    create mode 100644 src/assets/img/port/port-vue07.jpg
+    create mode 100644 src/assets/img/port/port-vue08.jpg
+    create mode 100644 src/assets/img/port/port-vue09.jpg
+    create mode 100644 src/assets/img/port/port-vue10.jpg
+    create mode 100644 src/assets/img/site/site01.jpg
+    create mode 100644 src/assets/img/site/site02.jpg
+    create mode 100644 src/assets/img/site/site03.jpg
+    create mode 100644 src/assets/img/site/site04.jpg
+    create mode 100644 src/assets/img/site/site05.jpg
+    create mode 100644 src/assets/img/site/site06.jpg
+    create mode 100644 src/assets/img/site/site07.jpg
+    create mode 100644 src/assets/img/site/site08.jpg
+    create mode 100644 src/assets/img/site/site09.jpg
+    create mode 100644 src/assets/img/site/site10.jpg
+    create mode 100644 src/assets/img/site/site11.jpg
+    create mode 100644 src/assets/img/site/site12.jpg
+    create mode 100644 src/assets/img/site/site13.jpg
+    create mode 100644 src/assets/img/site/site14.jpg
+    create mode 100644 src/assets/img/site/site15.jpg
+    create mode 100644 src/assets/img/site/site16.jpg
+    create mode 100644 src/assets/img/site/site17.jpg
+    create mode 100644 src/assets/img/site/site18.jpg
+    create mode 100644 src/assets/img/site/site19.jpg
+    create mode 100644 src/assets/img/site/site20.jpg
+    create mode 100644 src/assets/img/site/site21.jpg
+    create mode 100644 src/assets/img/site/site22.jpg
+    create mode 100644 src/assets/img/site/site23.jpg
+    create mode 100644 src/assets/img/site/site24.jpg
+    create mode 100644 src/assets/img/site/site25.jpg
+    create mode 100644 src/assets/img/today/todayView01.jpg
+    create mode 100644 src/assets/img/today/todayView02.jpg
+    create mode 100644 src/assets/img/today/todayView03.jpg
+    create mode 100644 src/assets/img/today/todayView04.jpg
+    create mode 100644 src/assets/img/today/todayView05.jpg
+    create mode 100644 src/assets/img/today/todayView06.jpg
+    create mode 100644 src/assets/img/today/todayView07.jpg
+    create mode 100644 src/assets/img/today/todayView08.jpg
+    create mode 100644 src/assets/img/webd/webd01.jpg
+    create mode 100644 src/assets/img/webd/webd02.jpg
+    create mode 100644 src/assets/img/webd/webd03.jpg
+    create mode 100644 src/assets/img/webd/webd04.jpg
+    create mode 100644 src/assets/img/webd/webd05.jpg
+    create mode 100644 src/assets/img/webd/webd06.jpg
+    create mode 100644 src/assets/img/webd/webd07.jpg
+    create mode 100644 src/assets/img/webd/webd08.jpg
+    create mode 100644 src/assets/img/webd/webd09.jpg
+    create mode 100644 src/assets/img/webd/webd10.jpg
+    create mode 100644 src/assets/img/webd/webd11.jpg
+    create mode 100644 src/assets/img/webd/webd12.jpg
+    create mode 100644 src/assets/img/webd/webd13.jpg
+    create mode 100644 src/assets/img/webd/webd14.jpg
+    create mode 100644 src/assets/img/webd/webd15.jpg
+    create mode 100644 src/assets/img/webd/webd16.jpg
+    create mode 100644 src/assets/img/webd/webd17.jpg
+    create mode 100644 src/assets/img/webd/webd18.jpg
+    create mode 100644 src/assets/img/webd/webd19.jpg
+    create mode 100644 src/assets/img/webd/webd20.jpg
+    create mode 100644 src/assets/img/webd/webd21.jpg
+    create mode 100644 src/assets/img/webd/webd22.jpg
+    create mode 100644 src/assets/img/webd/webd23.jpg
+    create mode 100644 src/assets/img/webd/webd24.jpg
+    create mode 100644 src/assets/img/webd/webd25.jpg
+    create mode 100644 src/assets/img/webd/webd26.jpg
+    create mode 100644 src/assets/img/webd/webd27.jpg
+    create mode 100644 src/assets/img/webd/webd28.jpg
+    create mode 100644 src/assets/img/webd/webd29.jpg
+    create mode 100644 src/assets/img/webd/webd30.jpg
+    create mode 100644 src/assets/img/webd/webd31.jpg
+    create mode 100644 src/assets/img/webd/webd32.jpg
+    create mode 100644 src/assets/img/webd/webd33.jpg
+    create mode 100644 src/assets/img/webd/webd34.jpg
+    create mode 100644 src/assets/img/webd/webd35.jpg
+    create mode 100644 src/assets/img/webd/webd36.jpg
+    create mode 100644 src/assets/img/webd/webd37.jpg
+    create mode 100644 src/assets/img/webd/webd38.jpg
+    create mode 100644 src/assets/img/webd/webd39.jpg
+    create mode 100644 src/assets/img/youtube/youtube01.jpg
+    create mode 100644 src/assets/img/youtube/youtube02.jpg
+    create mode 100644 src/assets/img/youtube/youtube03.jpg
+    create mode 100644 src/assets/img/youtube/youtube04.jpg
+    create mode 100644 src/assets/img/youtube/youtube05.jpg
+    create mode 100644 src/assets/scss/section/_search.scss
+    create mode 100644 src/components/contents/Developer.jsx
+    create mode 100644 src/components/contents/Gsap.jsx
+    create mode 100644 src/components/contents/Portfolio.jsx
+    create mode 100644 src/components/contents/Today.jsx
+    create mode 100644 src/components/contents/Webd.jsx
+    create mode 100644 src/components/contents/Website.jsx
+    create mode 100644 src/components/contents/Youtube.jsx
+    create mode 100644 src/components/section/Search.jsx
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
+Enumerating objects: 177, done.
+Counting objects: 100% (177/177), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (162/162), done.
+Writing objects: 100% (162/162), 20.82 MiB | 9.92 MiB/s, done.
+Total 162 (delta 62), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (62/62), completed with 6 local objects.
+To https://github.com/webstoryboy/webs-youtube.git
+    4276736..0126fe6  main -> main
+</code></pre>
+                        <p>
+                           메인 콘텐츠 및 페이지 작업을 위한 셋팅이 완료되었습니다. 
+                           이미지도 다운 받으셔서 업로드 해주면 다음에 작업할 때 편합니다. 
+                           오늘도 수고하셨습니다. 😘
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1964">1. 나만의 유튜브 사이트 만들기 : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : 라이브러리 설치하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">3. 나만의 유튜브 사이트 만들기 : Git 연동하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">4. 나만의 유튜브 사이트 만들기 : SCSS 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">5. 나만의 유튜브 사이트 만들기 : 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">6. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 구조화하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">7. 나만의 유튜브 사이트 만들기 : 헤더 영역 완성하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">8. 나만의 유튜브 사이트 만들기 : 컴퍼넌트 비동기 작업</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">9. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">10. 나만의 유튜브 사이트 만들기 : 메인 콘텐츠 작업</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

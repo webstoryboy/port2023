@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 테스트 😒</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/JavaScript</span>
+                <h1 class="title">자바스크립트 테스트</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 08. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc rightX">
+                        <div class="left">
+                            <span class="num">01</span>
+                            <div class="title">자바스크립트 테스트 : 데이터 저장하기</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://port2023-next.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/port2023-next" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        자바스크립트 데이터 저장하기를 제대로 배웠다면 테스트를 한번 해봐야 겠죠! 
+                        80점 이상 나왔다면 잘 이해하고 있는 겁니다. 
+                        만약 그 점수가 나오지 않았다면 한번 더 공부해주세요! 🥳
+                    </p>
+
+                    <hr>
+
+                    <h3>1. 데이터 저장하기</h3>
+                    <div id="v01">
+                        <p>
+                            01. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const info = {
+                num: 18,
+                str: "함수가 실행되었습니다.",
+                result: () => {
+                        console.log(`${info.num}. ${info.str}`);
+                }
+        }
+        info.result();
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v02">
+                        <p>
+                            02. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        function Func(num, str){
+                this.num = num;
+                this.str = str;
+        }
+
+        Func.prototype.result = function(){
+                console.log(`${this.num}. ${this.str}`);
+        }
+
+        const info1 = new Func(21, "함수가 실행되었습니다.");
+        const info2 = new Func(22, "함수가 실행되었습니다.");
+
+        info1.result();
+        info2.result();
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v03">
+                        <p>
+                            03. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        (() => {
+                document.write("26. 함수가 실행되었습니다.");
+        })();
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v04">
+                        <p>
+                            04. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        function func(index){
+                console.log("함수가 실행되었습니다." + index);
+        }
+        function callback(num){
+                for( let i=1; i&lt;=1; i++){
+                        num(i);
+                }
+        }
+        callback(func);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v05">
+                        <p>
+                            05. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const func1 = (str = "28. 함수가 실행되었습니다.") => {
+                document.write(str);
+        }
+        func1();
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v06">
+                        <p>
+                            06. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        function func1(num){
+                if(num &lt; 1) return;
+
+                document.write("30. 함수가 실행되었습니다.");
+                func1(num - 1);   
+        }
+        func1(8);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v07">
+                        <p>
+                            07. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        function func3(num){
+                document.write(num + ". 함수가 실행되었습니다.");
+        }
+        function func4(callback){
+                for(let i=33; i&lt;=38; i++){
+                        callback(i);
+                }
+        }
+        func4(func3);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v08">
+                        <p>
+                            08. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        function func3( ){
+                setTimeout(( ) => {
+                        document.write("41. 함수가 실행되었습니다.");
+                }, 1000);  
+        }
+        function func4( ){
+                document.write("42. 함수가 실행되었습니다.");
+        }
+
+        func3( );
+        func4( );
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v09">
+                        <p>
+                            09. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        let data = false;
+
+        const func = new Promise((resolve, reject) => {
+                if(data){
+                        resolve("45. 함수가 실행되었습니다.");
+                } else {
+                        reject("45. 함수가 실행되지 않았습니다.");
+                }
+        });
+
+        func
+                .then(
+                        result => document.write(result)
+                )
+                .catch(
+                        error => document.write(error)
+                )
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v10">
+                        <p>
+                            10. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        function func(num, name, word){
+                this.num = num;
+                this.name = name;
+                this.word = word;
+        }
+
+        func.prototype.result = function(){
+                console.log(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.");
+        }
+
+        const info1 = new func("1", "함수", "실행");
+        const info2 = new func("2", "자바스크립트", "실행");
+        const info3 = new func("3", "제이쿼리", "실행");
+
+        info1.result();
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v11">
+                        <p>
+                            11. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        const arr = [100, 200, 300, 400, 500];
+
+        const text1 = arr.join("*");
+        const text2 = arr.join("-");
+        const text3 = arr.join("");
+        const text4 = arr.join(" ");
+
+        console.log(text1);
+        console.log(text2);
+        console.log(text3);
+        console.log(text4);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v12">
+                        <p>
+                            12. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        function func(){
+                let i = 10, j = 10, k = 30;
+                i /= j;
+                j -= i;
+                k %= j;
+
+                console.log(i);
+                console.log(j);
+                console.log(k);
+        }
+        func();
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v13">
+                        <p>
+                            13. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        let k = 0;
+        let temp;
+        for(let i=0; i&lt;=3; i++){
+                temp = k;
+                k++;
+                console.log(temp + "번");
+        }
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v14">
+                        <p>
+                            14. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        let num1 = 3;
+        let num2 = 7;
+        if(++num1 &lt; 5 || ++num2 > 8){
+                console.log(num1);
+        }
+        console.log(num2)
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v15">
+                        <p>
+                            15. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        let num = [1, 5, 1, 2, 7, 5];
+
+        for(let i=0; i&lt;6; i++){
+                if((i+1) % 2 == 0){
+                        console.log(num[i]);
+                }
+        }
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v16">
+                        <p>
+                            16. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        for(let i=9; i>=0; i--){
+                switch(num[i] % 2){
+                        case 1:
+                            console.log(num[i]);
+                            break;
+                        default:
+                            console.log("*");
+                }
+        }
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v17">
+                        <p>
+                            17. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        let cnt = 0;
+        let sum = 0;
+        for(let i=0; i&lt;=7; i++){
+                if(i%2 == 1){
+                        cnt++;
+                        sum = sum + i;
+                }
+        }
+        console.log(cnt + ", "+sum);
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v18">
+                        <p>
+                            18. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        let data = [70, 80, 75, 60, 90];
+        let best = 1;
+        let score = 0;
+
+        for(let i=0; i&lt;data.length; i++){
+                if(data[i]>80) {
+                        best++;
+                }
+                if(score &lt; data[i]) {
+                        score = data[i];
+                }
+        }
+
+        console.log(best, score)
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v19">
+                        <p>
+                            19. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        let a, b, result;
+        a = 7, b = 4
+        result = a & b;
+
+        console.log(result)
+}   
+</code></pre>
+                    </div>
+
+                    <div id="v20">
+                        <p>
+                            20. 다음의 결괏값을 작성하시오!
+                        </p>
+<pre><code class="language-js">{
+        function solution(a, b, c){
+                let answer="YES", max;
+                let tot = a + b + c;
+
+                if(a > b) max = a;
+                else max = b;
+                if(c > max) max = c;
+                if(tot-max &lt;= max) answer = "NO"; 
+                
+                return answer;
+        }
+
+        console.log(solution(13, 33, 17));
+}   
+</code></pre>
+                    </div>
+
+                    
+
+                    <div>
+                        <h3>3. 마무리</h3>
+                        <p>
+                            수고하셨습니다. 
+                            만약 점수가 80점을 넘기지 못했다면 다시 공부하셔야 합니다. 😝
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://port2023-next.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1924">1. 포트폴리오 사이트 만들기 : Vite-Site : 셋팅하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
+

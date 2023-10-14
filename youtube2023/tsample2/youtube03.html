@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 유튜브 사이트 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">나만의 유튜브 사이트 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 09. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">03</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : Git 연동하기</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/webs-youtube" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 강의는 <i>React</i> 프레임워크와 <i>YouTube API</i>를 이용하여 자신만의 간단한 영상 사이트를 만들어보겠습니다.
+                        React의 기본 개념을 이해하고, 컴포넌트를 구조화하고 상태를 관리하는 방법을 학습하게 될 것입니다. 
+                        또한 YouTube Data API를 활용하여 외부 데이터를 가져오는 방법을 익히고, 
+                        API 응답을 처리하여 사용자에게 의미 있는 정보를 제공하는 방법을 이해하게 됩니다.
+                        이로써 자신만의 유튜브 사이트를 만들고, 활용해보는 것을 목표로 합니다.
+                        그럼 한번 시작해볼까요? 🥳
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index3">
+                        <ul>
+                            <li>1. 셋팅하기
+                                <ul>
+                                    <li>1_1. Node.js 설치</li>
+                                    <li>1_2. Vscode 설치</li>
+                                    <li>1_3. React.js 설치</li>
+                                </ul>
+                            </li>
+                            <li>2. 라이브러리 설치하기
+                                <ul>
+                                    <li>2_1. 폴더 정리하기</li>
+                                    <li>2_2. 라이브러리 설치하기</li>
+                                </ul>
+                            </li>
+                            <li>3. Git 연동하기
+                                <ul>
+                                    <li>3_1. 저장소 만들기</li>
+                                    <li>3_2. 모든 파일 올리기</li>
+                                    <li>3_3. 깃 상태 확인하기</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <h3>3. Git 연동하기</h3>
+                    <div>
+                        <h4>3_1. 저장소 만들기</h4>
+                        <p>
+                            이번에는 작업한 파일을 git에 연동하겠습니다. 
+                            <a class="sampleLine" href="https://github.com/" target="_blank">https://github.com/</a> 여기에서 회원가입을 하거나 로그인을 하겠습니다.
+                            새로운 저장소를 만들겠습니다. 
+                            그럼 다음과 같이 나옵니다.
+                            저장소 이름을 적고 <code>create repository</code> 버튼을 누르겠습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-3.png" alt="youtube2023" />
+                        </div>
+                        <p>
+                            저장소를 만들면 다음과 같은 화면이 나옵니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-4.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            다음의 명령어를 vscode 터미널에 작업하겠습니다.
+                        </p>
+<pre><code class="language-html">git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/webstoryboy/webs-youtube.git
+git push -u origin main
+</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                Git을 사용하여 GitHub에 새로운 Git 저장소를 생성하고, README 파일을 추가한 후 초기 커밋을 만들어 원격 저장소에 푸시하는 과정을 나타냅니다.
+                            </p>
+                            <ul class="list">
+                                <li><i>git init</i> : Git 저장소를 초기화하는 명령어로, 빈 디렉토리나 프로젝트 루트 디렉토리에서 실행하여 Git을 사용할 수 있는 저장소를 생성합니다. 만약 Git 저장소가 이미 초기화되어 있다면 git init을 다시 실행할 필요는 없습니다.</li>
+                                <li><i>git add README.md</i> : 현재 디렉토리에 있는 README.md 파일을 Git의 스테이징 영역에 추가합니다. 이렇게 스테이징 영역에 추가된 파일은 다음 커밋에 포함됩니다.</li>
+                                <li><i>git commit -m "first commit"</i> : 스테이징 영역에 추가된 파일들을 커밋으로 만들고, 커밋 메시지 "first commit"을 추가합니다. 이 커밋은 현재 로컬 브랜치에 저장됩니다.</li>
+                                <li><i>git branch -M main</i> : 로컬 Git 저장소의 기본 브랜치 이름을 main으로 변경합니다. 이 명령어는 로컬 브랜치 이름을 변경하는 것입니다.</li>
+                                <li><i>git remote add origin https://github.com/webstoryboy/webs-youtube.git</i>: 원격 리포지토리(이 경우 GitHub 리포지토리)와 로컬 Git 저장소를 연결합니다. origin은 원격 리포지토리의 별명으로 사용됩니다.</li>
+                                <li><i>git push -u origin main</i> : 현재 브랜치의 커밋을 원격 리포지토리로 푸시합니다. -u 플래그는 로컬 브랜치를 원격 브랜치와 연결하며, main 브랜치를 origin 리포지토리의 main 브랜치와 연결합니다.</li>
+                            </ul>
+                        </div>
+
+                        <p>
+                            새로고침을 하면 파일이 업로드 된 것을 확인 할 수 있습니다.
+                            단 하나의 파일만 업로드가 된 것을 확인 할 수 있습니다. 
+                            이제는 모든 파일을 다시 올려보겠습니다. 
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-5.png" alt="youtube2023" />
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>3_2. 모든 파일 올리기</h4>
+                        <p>
+                            <code>git add .</code>의 점은 모든 파일을 다 올리겠다는 뜻입니다. 
+                            그리고 메세지를 작성하고 푸시를 하여 모든 파일을 다 올렸습니다.
+                        </p>
+<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "첫 셋팅 파일"
+[main 15f3c28] 첫 셋팅 파일
+    9 files changed, 18147 insertions(+)
+    create mode 100644 .gitignore
+    create mode 100644 git
+    create mode 100644 package-lock.json
+    create mode 100644 package.json
+    create mode 100644 public/favicon.svg
+    create mode 100644 public/index.html
+    create mode 100644 public/robots.txt
+    create mode 100644 src/App.js
+    create mode 100644 src/index.js
+
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main     
+    Enumerating objects: 14, done.
+    Counting objects: 100% (14/14), done.
+    Delta compression using up to 10 threads
+    Compressing objects: 100% (12/12), done.
+    Writing objects: 100% (13/13), 156.33 KiB | 12.03 MiB/s, done.
+    Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
+    To https://github.com/webstoryboy/webs-youtube.git
+       107126e..15f3c28  main -> main
+    branch 'main' set up to track 'origin/main'.
+    webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % 
+</code></pre>
+                        <p>
+                            모든 파일이 다 올라간 것을 확인할 수 있습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-6.png" alt="youtube2023" />
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>3_3. 깃 상태 확인하기</h4>
+                        <p>
+                            깃에 파일을 올리고 <code>git status</code>를 작성하면 현재 파일 상태를 확인 할 수 있습니다.
+                            새로운 파일이나 수정된 파일을 올릴지 말지 상태를 확인할 수 있습니다.
+                        </p>
+<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+    (use "git restore --staged &lt;file&lt;..." to unstage)
+        new file:   src/assets/fonts/nanumSquareNeo-Black.woff
+        new file:   src/assets/fonts/nanumSquareNeo-Black.woff2
+        new file:   src/assets/fonts/nanumSquareNeo-Bold.woff
+        new file:   src/assets/fonts/nanumSquareNeo-Bold.woff2
+        new file:   src/assets/fonts/nanumSquareNeo-ExtraBold.woff
+        new file:   src/assets/fonts/nanumSquareNeo-ExtraBold.woff2
+        new file:   src/assets/fonts/nanumSquareNeo-Light.woff
+        new file:   src/assets/fonts/nanumSquareNeo-Light.woff2
+        new file:   src/assets/fonts/nanumSquareNeo-Regular.woff
+        new file:   src/assets/fonts/nanumSquareNeo-Regular.woff2
+        new file:   src/assets/fonts/nexonLv1-Bold.woff
+        new file:   src/assets/fonts/nexonLv1-Bold.woff2
+        new file:   src/assets/fonts/nexonLv1-Light.woff
+        new file:   src/assets/fonts/nexonLv1-Light.woff2
+        new file:   src/assets/fonts/nexonLv1-Regular.woff
+        new file:   src/assets/fonts/nexonLv1-Regular.woff2
+        new file:   src/assets/scss/setting/_common.scss
+        new file:   src/assets/scss/setting/_fonts.scss
+        renamed:    git -> src/assets/scss/setting/_mixin.scss
+        new file:   src/assets/scss/setting/_reset.scss
+        new file:   src/assets/scss/setting/_vars.scss
+        new file:   src/assets/scss/style.scss
+        modified:   src/index.js
+
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % 
+</code></pre>
+                    </div>
+
+                   
+
+                    <div>
+                        <h3>마무리</h3>
+                        <p>
+                            간단하게 깃 사용방법에 대해서 알아봤습니다. 
+                            모든 파일을 깃을 통해 컨트롤 하기 때문에 조금은 어려울 수 있지만, 
+                            자주 사용하면 편해질 것입니다. 
+                            오늘도 수고하셨습니다. 😊
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1964">1. 나만의 유튜브 사이트 만들기 : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : 라이브러리 설치하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 유튜브 사이트 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">나만의 유튜브 사이트 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 09. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">09</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/webs-youtube" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 강의는 <i>React</i> 프레임워크와 <i>YouTube API</i>를 이용하여 자신만의 간단한 영상 사이트를 만들어보겠습니다.
+                        React의 기본 개념을 이해하고, 컴포넌트를 구조화하고 상태를 관리하는 방법을 학습하게 될 것입니다. 
+                        또한 YouTube Data API를 활용하여 외부 데이터를 가져오는 방법을 익히고, 
+                        API 응답을 처리하여 사용자에게 의미 있는 정보를 제공하는 방법을 이해하게 됩니다.
+                        이로써 자신만의 유튜브 사이트를 만들고, 활용해보는 것을 목표로 합니다.
+                        그럼 한번 시작해볼까요? 🥳
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index2">
+                        <div>
+                            <ul>
+                                <li>1. 셋팅하기
+                                    <ul>
+                                        <li>1_1. Node.js 설치</li>
+                                        <li>1_2. Vscode 설치</li>
+                                        <li>1_3. React.js 설치</li>
+                                    </ul>
+                                </li>
+                                <li>2. 라이브러리 설치하기
+                                    <ul>
+                                        <li>2_1. 폴더 정리하기</li>
+                                        <li>2_2. 라이브러리 설치하기</li>
+                                    </ul>
+                                </li>
+                                <li>3. Git 연동하기
+                                    <ul>
+                                        <li>3_1. 저장소 만들기</li>
+                                        <li>3_2. 모든 파일 올리기</li>
+                                        <li>3_3. 깃 상태 확인하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. SCSS 셋팅하기
+                                    <ul>
+                                        <li>4_1. SCSS 설정하기</li>
+                                        <li>4_2. style.scss 설정하기</li>
+                                        <li>4_3. fonts.scss 설정하기</li>
+                                        <li>4_4. vars.scss 설정하기</li>
+                                        <li>4_5. reset.scss 설정하기</li>
+                                        <li>4_6. mixin.scss 설정하기</li>
+                                        <li>4_7. common.scss 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 페이지 만들기
+                                    <ul>
+                                        <li>5_1. 페이지 만들기</li>
+                                        <li>5_2. 페이지 컴퍼넌트 만들기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 섹션 컴퍼넌트 구조화하기
+                                    <ul>
+                                        <li>6_1. 전체 레이아웃 만들기</li>
+                                        <li>6_2. 섹션 컴퍼넌트 만들기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>7. 헤더 영역 완성하기
+                                    <ul>
+                                        <li>7_1. 헤더 영역 코딩하기</li>
+                                        <li>7_2. 헤더 영역 데이터 작업</li>
+                                        <li>7_3. 반복문과 map()</li>
+                                        <li>7_4. 메뉴 활성화하기</li>
+                                    </ul>
+                                </li>
+                                <li>8. 컴퍼넌트 비동기 작업
+                                    <ul>
+                                        <li>8_1. 컴퍼넌트 props 사용하기</li>
+                                        <li>8_2. React.Suspense 사용하기</li>
+                                    </ul>
+                                </li>
+                                <li>9. 페이지 SEO 작업
+                                    <ul>
+                                        <li>9_1. 메인 페이지 SEO 설정하기</li>
+                                        <li>9_2. 모든 페이지 SEO 설정하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>9. 페이지 SEO 작업</h3>
+                    <div>
+                        <h4>9_1. 메인 페이지 SEO 설정하기</h4>
+                        <p>
+                            리액트는 싱글 페이지로 구성되어 있기 때문에 SEO에 대한 노출이 약한 편입니다. 
+                            그래서 리액트의 단점을 극복하기 위한 방법으로 페이지 별로 페이지에 대한 설명이나 타이틀을 작업해주겠습니다. 
+                            이 작업을 하기 위해서는 <code>react-helmet-async</code> 라이브러리가 설치되어 있어야 합니다. 
+                        </p>
+                        <div class="sampleBasic">
+                            <p>SEO는 "Search Engine Optimization"의 약어로, <i>검색 엔진 최적화</i>를 의미합니다. SEO는 웹사이트나 웹 페이지를 검색 엔진(예: Google, Bing, Yahoo)에서 높은 순위로 표시되도록 최적화하는 프로세스와 전략을 나타냅니다. 이를 통해 웹사이트가 검색 결과 페이지(SERP)에서 더 높은 순위에 나타나고, 더 많은 유기적(자연적) 트래픽을 확보하려는 목적으로 사용됩니다</p>
+                        </div>
+                        <p>
+                            <code>main</code>이라는 컴퍼넌트를 모든 페이지에서 사용하기 때문에 여기에 타이틀과 설명을 추가하는 SEO 잡업을 하였습니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+
+import Header from './Header'
+import Footer from './Footer'
+
+const Main = ( props ) =&gt; {
+    return (
+        &lt;HelmetProvider&gt;
+            &lt;Helmet 
+                titleTemplate="%s | Webs Youtube" 
+                defaultTitle="Webs Youtube" 
+                defer={false}
+            &gt;
+                {props.title && &lt;title&gt;{props.title}&lt;/title&gt;}
+                &lt;meta name="description" content={props.description} /&gt;
+            &lt;/Helmet&gt;
+
+            &lt;Header /&gt;
+            &lt;main id="main" role="main"&gt;
+                {props.children}
+            &lt;/main&gt;
+            &lt;Footer /&gt;
+        &lt;/HelmetProvider&gt;
+    )
+}
+
+export default Main
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li><i>HelmetProvider</i> : react-helmet-async의 HelmetProvider 컴포넌트를 사용하여 Helmet 컴포넌트를 초기화합니다. Helmet은 페이지의 헤드 태그에 메타 데이터와 타이틀을 동적으로 추가하거나 변경하는 데 사용됩니다.</li>
+                                <li><i>Helmet</i> : Helmet 컴포넌트를 사용하여 페이지의 메타 데이터와 타이틀을 설정합니다. 이 컴포넌트를 사용하면 서버 사이드 렌더링(SSR) 및 동적 페이지 제목 설정과 같은 작업을 쉽게 수행할 수 있습니다. 주로 title, meta, link, script 등의 태그를 동적으로 조작하는 데 사용됩니다.</li>
+                                <li><i>titleTemplate</i> : 페이지 타이틀의 템플릿을 설정합니다. %s는 나중에 실제 타이틀로 대체됩니다.</li>
+                                <li><i>defaultTitle</i> : 기본 타이틀을 설정합니다. 페이지 타이틀이 없는 경우 사용됩니다.</li>
+                                <li><i>defer</i> : true로 설정하면 렌더링 전까지 &lt;Helmet&gt; 컴포넌트가 기다립니다.</li>
+                                <li><i>&lt;title&gt;과 &lt;meta&gt; 태그</i> : props로 전달된 title과 description 값을 사용하여 페이지의 타이틀과 메타 설명을 설정합니다. props.title과 props.description이 없는 경우, 기본값으로 "Webs Youtube"가 타이틀로 설정됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>9_2. 모든 페이지 SEO 설정하기</h4>
+                        <p>
+                            이제 나머지 페이지도 <code>main</code> 컴퍼넌트를 불러오고 페이지 별로 타이틀과 설명을 추가하면 됩니다.
+                            그럼 페이지가 변경되면 타이틀이 변경되는 것을 확인할 수 있습니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Channel = () =&gt; {
+    return (
+        &lt;Main 
+            title = "유튜브 채널"
+            description="유튜브 채널페이지입니다."&gt;
+            Channel
+        &lt;/Main&gt;
+    )
+}
+
+export default Channel
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Developer = () =&gt; {
+    return (
+        &lt;Main 
+            title = "추천 개발자"
+            description="오늘의 추천 개발자 유튜버입니다."&gt;
+            Developer
+        &lt;/Main&gt;
+    )
+}
+
+export default Developer
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Gsap = () =&gt; {
+    return (
+        &lt;Main 
+            title = "GSAP 사이트"
+            description="GSAP 사이트 튜토리얼 강의입니다."&gt;
+            Gsap
+        &lt;/Main&gt;
+    )
+}
+
+export default Gsap
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Home = () =&gt; {
+    return (
+        &lt;Main 
+            title = "웹스토리보이 유튜브"
+            description="웹스토리보이 유튜버 사이트에 오신 것을 환영합니다."&gt;
+            Home
+        &lt;/Main&gt;
+    )
+}
+
+export default Home
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Not = () =&gt; {
+    return (
+        &lt;Main 
+            title = "잘못된 페이지"
+            description="접근이 잘못된 페이지입니다."&gt;
+            Not
+        &lt;/Main&gt;
+    )
+}
+
+export default Not
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Port = () =&gt; {
+    return (
+        &lt;Main 
+            title = "포트폴리오 사이트"
+            description="포트폴리오 사이트 튜토리얼 강의입니다."&gt;
+            Port
+        &lt;/Main&gt;
+    )
+}
+
+export default Port
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Search = () =&gt; {
+    return (
+        &lt;Main 
+            title = "유투브 검색"
+            description="유튜브 검색 결과 페이지입니다."&gt;
+            Search
+        &lt;/Main&gt;
+    )
+}
+
+export default Search
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Today = () =&gt; {
+    return (
+        &lt;Main 
+            title = "추천 영상"
+            description="오늘의 추천 유튜브 영상입니다."&gt;
+            Today
+        &lt;/Main&gt;
+    )
+}
+
+export default Today
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Video = () =&gt; {
+    return (
+        &lt;Main 
+            title = "유튜브 비디오 영상"
+            description="유튜브 비디오 영상을 볼 수 있습니다."&gt;
+            Video
+        &lt;/Main&gt;
+    )
+}
+
+export default Video
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Webd = () =&gt; {
+    return (
+        &lt;Main 
+            title = "웹디자인 기능사"
+            description="웹디자인 기능사 튜토리얼 강의입니다."&gt;
+            Webd
+        &lt;/Main&gt;
+    )
+}
+
+export default Webd
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Website = () =&gt; {
+    return (
+        &lt;Main 
+            title = "웹표준 사이트"
+            description="웹표준 사이트 튜토리얼 강의입니다."&gt;
+            Website
+        &lt;/Main&gt;
+    )
+}
+
+export default Website
+</code></pre>
+
+<pre><code class="language-js">import React from 'react'
+import Main from '../components/section/Main'
+
+const Youtube = () =&gt; {
+    return (
+        &lt;Main 
+            title = "유튜브 사이트"
+            description="유튜브 사이트 튜토리얼 강의입니다."&gt;
+            Youtube
+        &lt;/Main&gt;
+    )
+}
+
+export default Youtube
+</code></pre>
+                        <p>
+                            페이지 이동 할 때마다 타이틀이 변경되는 것을 확인할 수 있습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-12.png" alt="youtube2023" />
+                        </div>
+                    </div>
+                        
+
+
+                    <div>
+                        <h3>마무리</h3>
+                        <h4>git 올리기</h4>
+                        <p>
+                            터미널에서 다음과 같이 작성하겠습니다.
+                            새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
+                        </p>
+<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+    (use "git restore --staged &lt;file&gt;..." to unstage)
+        modified:   src/components/section/Main.jsx
+        modified:   src/pages/Channel.jsx
+        modified:   src/pages/Developer.jsx
+        modified:   src/pages/Gsap.jsx
+        modified:   src/pages/Home.jsx
+        modified:   src/pages/Not.jsx
+        modified:   src/pages/Port.jsx
+        modified:   src/pages/Search.jsx
+        modified:   src/pages/Today.jsx
+        modified:   src/pages/Video.jsx
+        modified:   src/pages/Webd.jsx
+        modified:   src/pages/Website.jsx
+        modified:   src/pages/Youtube.jsx
+
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "페이지 SEO 작업"
+[main 4276736] 페이지 SEO 작업
+    13 files changed, 54 insertions(+), 19 deletions(-)
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
+Enumerating objects: 37, done.
+Counting objects: 100% (37/37), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (19/19), 2.32 KiB | 2.32 MiB/s, done.
+Total 19 (delta 13), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (13/13), completed with 3 local objects.
+To https://github.com/webstoryboy/webs-youtube.git
+    813080f..4276736  main -> main
+branch 'main' set up to track 'origin/main'.
+</code></pre>
+                        <p>
+                            라이브러리 소스를 이용하여 모든 페이지에 타이틀 작업 및 설명 부분을 완성하였습니다. 
+                            이렇게 한다고 해도 검색에 잘 노출될지는 의문이지만 그래도 안하는 것보단 낫겠죠!
+                            수고하셨습니다 🤩
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1964">1. 나만의 유튜브 사이트 만들기 : 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : 라이브러리 설치하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">3. 나만의 유튜브 사이트 만들기 : Git 연동하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">4. 나만의 유튜브 사이트 만들기 : SCSS 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">5. 나만의 유튜브 사이트 만들기 : 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">6. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 구조화하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">7. 나만의 유튜브 사이트 만들기 : 헤더 영역 완성하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">8. 나만의 유튜브 사이트 만들기 : 컴퍼넌트 비동기 작업</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">9. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+

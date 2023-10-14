@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 유튜브 사이트 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left"> 
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">나만의 유튜브 사이트 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 09. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">01</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 셋팅하기</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/webs-youtube" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 강의는 <i>React</i> 프레임워크와 <i>YouTube API</i>를 이용하여 자신만의 간단한 영상 사이트를 만들어보겠습니다.
+                        React의 기본 개념을 이해하고, 컴포넌트를 구조화하고 상태를 관리하는 방법을 학습하게 될 것입니다. 
+                        또한 YouTube Data API를 활용하여 외부 데이터를 가져오는 방법을 익히고, 
+                        API 응답을 처리하여 사용자에게 의미 있는 정보를 제공하는 방법을 이해하게 됩니다.
+                        이로써 자신만의 유튜브 사이트를 만들고, 활용해보는 것을 목표로 합니다.
+                        그럼 한번 시작해볼까요? 🥳
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index3">
+                        <ul>
+                            <li>1. 셋팅하기
+                                <ul>
+                                    <li>1_1. Node.js 설치</li>
+                                    <li>1_2. Vscode 설치</li>
+                                    <li>1_3. React.js 설치</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <h3>1. 셋팅하기</h3>
+                    <div id="a11">
+                        <h4>1_1. Node.js 설치</h4>
+                        <p>
+                            우선 개발환경부터 셋팅을 하겠습니다. 
+                            리액트라는 프레임워크를 사용하기 위해서는 <code>Node.js</code>가 설치되어 있어야 합니다. 
+                            <a class="sampleLine" href="https://nodejs.org/ko" target="_blank">https://nodejs.org/ko</a> 여기에서 다운을 받습니다. 
+                            현재 버전보다는 안정적인 버전을 다운 받는게 좋습니다. 
+                        </p>
+                        <div class="sampleImg">
+                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube01.png" alt="youtube2023" />
+                        </div>
+                        <div class="sampleBasic">
+                            <p>
+                                <i>Node.js는 서버 사이드에서 JavaScript 코드를 실행할 수 있는 오픈 소스 런타임 환경입니다. </i>
+                                기존에는 브라우저 내에서만 실행되는 JavaScript를 서버에서 실행할 수 있도록 만든 것으로, 
+                                이를 통해 웹 애플리케이션 개발에서 서버 측 작업을 효율적으로 수행할 수 있게 되었습니다.
+                            </p>
+                            <p>
+                                조금 더 쉽게 설명하면, Node.js는 컴퓨터에서 실행되는 프로그램 중 하나로, 
+                                JavaScript를 사용하여 이 프로그램을 만들고 실행할 수 있게 해줍니다. 
+                                JavaScript는 주로 웹 브라우저에서 사용되지만, 
+                                <i>Node.js를 통해 이제는 컴퓨터 자체에서도 사용할 수 있게 되었습니다.</i>
+                            </p>
+                            <p>
+                                결국 Node.js는 JavaScript를 이용해서 컴퓨터에서 다양한 일을 처리할 수 있게 해주는 도구입니다.
+                                리액트를 사용하기 위해서는 node.js가 설치되어 있어야 합니다. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="a12" class="mt80">
+                        <h4>1_2. Vscode 설치</h4>
+                        <p>
+                            Visual Studio Code는 개발자들이 코드를 작성하고 프로젝트를 관리하는 데에 사용되는 무료 개발 도구입니다.
+                            이번에는 VSCode를 설치하겠습니다. 
+                            <a class="sampleLine" href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a> 여기에서 다운을 받습니다. 
+                            다운로드 버튼을 누르고 설치합니다. 
+                        </p>
+
+                        <div class="sampleImg">
+                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube02.png" alt="youtube2023" />
+                        </div>
+                    </div>
+
+                    <div id="a13" class="mt80">
+                        <h4>1_3. React.js 설치</h4>
+                        <p>
+                            이번에는 바탕화면에 <code>webs-youtube</code> 폴더를 만들고 vscode에 드래그해서 열겠습니다. 
+                            여러분들도 편한 이름을 만들어주세요!
+                            왼쪽 메뉴에 webs-youtube 타이틀이 보입니다. 
+                            메뉴에서 <i>Terminal</i> > <i>New Terminal</i>을 선택하면 
+                            오른쪽 화면에 터미널이 열립니다. 
+                        </p>
+                        <p>
+                            다음과 같은 명령어를 입력하면 리액트가 설치됩니다. <code>.</code> 대신에 이름을 넣어야 하지만
+                            현재 이미 폴더 이름을 만들었기 때문에 생략하기 위함입니다.
+                            $ 표시는 터미널을 표시하기 위함입니다. $는 명령어에 입력하지 않습니다.
+                        </p>
+<pre><code class="language-js">$ npx create-react-app .</code></pre>
+                        <div class="sampleImg">
+                            <img src="img/youtube03.png" alt="youtube2023" />
+                        </div>
+                        <p>
+                            설치가 완료되면 다음과 같음 메세지를 볼 수 있습니다. 
+                            그리고 왼쪽 영역에는 여러가기 파일이 생성된 것을 확인 할 수 있습니다. 
+                        </p>
+<pre><code class="language-js">Success! Created webs-youtube at /Users/webstoryboyhwang/Desktop/webs-youtube
+Inside that directory, you can run several commands:
+
+    npm start
+    Starts the development server.
+
+    npm run build
+    Bundles the app into static files for production.
+
+    npm test
+    Starts the test runner.
+
+    npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+    cd /Users/webstoryboyhwang/Desktop/webs-youtube
+    npm start
+
+Happy hacking!
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % </code></pre>
+                        <div class="sampleImg">
+                            <img src="img/youtube04.png" alt="youtube2023" />
+                        </div>
+                        <p>
+                            터미널에 <code>npm start</code>라고 작성하면 새로운 브라우저가 열리고 다음과 같은 화면이 나옵니다.
+                            설치는 생각보다 간단합니다. 
+                            하지만 처음 설치하는 분들은 안될 수도 있고, 이전에 설치 했던 분들도 안될 수 있습니다. 
+                            처음 설치하는 분들은 컴퓨터를 재시동 한 후 다시 한번 해보세요! 
+                            기존에 설치했던 분들은 버전을 최신버전으로 업그레이드 후 작업을 해보시기 바랍니다. 
+                            그래도 안되면 문의주세요!
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-1.png" alt="youtube2023" />
+                        </div>
+                    </div>
+
+                    <h3>마무리</h3>
+                    <div>
+                        <p>
+                            잘 하셨나요? 리액트 설치는 생각보다 간단합니다. 
+                            안되시는 분들은 최대한 서치하고 확인 후 다시 한번 설치해보세요! 
+                            그래도 안되시면 댓글 달아주세요! 
+                            그럼 셋팅이 완료됐으니 이제 본격적으로 시작해보겠습니다. 
+                            수고하셨습니다. 😁
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/1964">1. 나만의 유튜브 사이트 만들기 : 셋팅하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+</html>
+
