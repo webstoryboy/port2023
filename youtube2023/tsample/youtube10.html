@@ -72,13 +72,13 @@
                     <div class="desc">
                         <div class="left">
                             <span class="num">10</span>
-                            <div class="title">나만의 유튜브 사이트 만들기 : 서치 페이지 만들기</div>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 메인 콘텐츠 작업</div>
                             <span class="difficulty">난이도 <span>중간</span></span>
                         </div>
                         <div class="right">
                             <div class="btn">소스 다운로드</div>
-                            <a href="https://youtube2023.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
-                            <a href="https://github.com/webstoryboy/youtube2023" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/webs-youtube" target="_blank" class="sampleBtn">완성 코드</a>
                             <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
@@ -89,9 +89,12 @@
                     <h2>소개</h2>
                     <p>
                         안녕하세요! 웹스토리보이입니다.
-                        이번에는 메인페이지의 메인 컨텐츠를 만들어 보겠습니다. 
-                        메인에는 오늘의 추천영상, 개발자 소개 및 영상 소개를 보여주는 부분입니다. 
-                        그럼 한번 시작해보겠습니다.😝
+                        이 강의는 <i>React</i> 프레임워크와 <i>YouTube API</i>를 이용하여 자신만의 간단한 영상 사이트를 만들어보겠습니다.
+                        React의 기본 개념을 이해하고, 컴포넌트를 구조화하고 상태를 관리하는 방법을 학습하게 될 것입니다. 
+                        또한 YouTube Data API를 활용하여 외부 데이터를 가져오는 방법을 익히고, 
+                        API 응답을 처리하여 사용자에게 의미 있는 정보를 제공하는 방법을 이해하게 됩니다.
+                        이로써 자신만의 유튜브 사이트를 만들고, 활용해보는 것을 목표로 합니다.
+                        그럼 한번 시작해볼까요? 🥳
                     </p>
 
                     <h3>인덱스</h3>
@@ -103,117 +106,143 @@
                                         <li>1_1. Node.js 설치</li>
                                         <li>1_2. Vscode 설치</li>
                                         <li>1_3. React.js 설치</li>
-                                        <li>1_4. 폴더 정리하기</li>
-                                        <li>1_5. 필요한 파일 설치하기</li>
                                     </ul>
                                 </li>
-                                <li>2. CSS 셋팅하기
+                                <li>2. 라이브러리 설치하기
                                     <ul>
-                                        <li>2_1. SCSS 설정하기</li>
-                                        <li>2_2. style.scss 설정하기</li>
-                                        <li>2_3. fonts.scss 설정하기</li>
-                                        <li>2_4. vars.scss 설정하기</li>
-                                        <li>2_5. reset.scss 설정하기</li>
-                                        <li>2_6. mixin.scss 설정하기</li>
-                                        <li>2_7. common.scss 설정하기</li>
+                                        <li>2_1. 폴더 정리하기</li>
+                                        <li>2_2. 라이브러리 설치하기</li>
                                     </ul>
                                 </li>
-                                <li>3. 페이지 및 컴퍼넌트 만들기
+                                <li>3. Git 연동하기
                                     <ul>
-                                        <li>3_1. 페이지 만들기</li>
-                                        <li>3_2. 컴퍼넌트 만들기</li>
+                                        <li>3_1. 저장소 만들기</li>
+                                        <li>3_2. 모든 파일 올리기</li>
+                                        <li>3_3. 깃 상태 확인하기</li>
                                     </ul>
                                 </li>
-                                <li>4. 섹션 컴퍼넌트 만들기
+                                <li>4. SCSS 셋팅하기
                                     <ul>
-                                        <li>4_1. Main 컨퍼넌트 만들기</li>
-                                        <li>4_2. Header 컨퍼넌트 만들기</li>
-                                        <li>4_3. Header 컨퍼넌트 데이터화 하기</li>
-                                        <li>4_4. Footer 컨퍼넌트 만들기</li>
+                                        <li>4_1. SCSS 설정하기</li>
+                                        <li>4_2. style.scss 설정하기</li>
+                                        <li>4_3. fonts.scss 설정하기</li>
+                                        <li>4_4. vars.scss 설정하기</li>
+                                        <li>4_5. reset.scss 설정하기</li>
+                                        <li>4_6. mixin.scss 설정하기</li>
+                                        <li>4_7. common.scss 설정하기</li>
                                     </ul>
                                 </li>
-                                <li>5. 페이지 SEO 작업 
+                                <li>5. 페이지 만들기
                                     <ul>
-                                        <li>5_1. App.js 재구성</li>
-                                        <li>5_2. main 컴퍼넌트 재구성</li>
-                                        <li>5_3. 모든 페이지 재구성</li>
+                                        <li>5_1. 페이지 만들기</li>
+                                        <li>5_2. 페이지 컴퍼넌트 만들기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 섹션 컴퍼넌트 구조화하기
+                                    <ul>
+                                        <li>6_1. 전체 레이아웃 만들기</li>
+                                        <li>6_2. 섹션 컴퍼넌트 만들기</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                         <div>
                             <ul>
-                                <li>6. 메인 콘텐츠 만들기
+                                <li>7. 헤더 영역 완성하기
                                     <ul>
-                                        <li>6_1. 검색 컴퍼넌트 작업</li>
-                                        <li>6_2. 오늘의 영상 컴퍼넌트 작업</li>
-                                        <li>6_3. 오늘의 영상 페이지 작업</li>
+                                        <li>7_1. 헤더 영역 코딩하기</li>
+                                        <li>7_2. 헤더 영역 데이터 작업</li>
+                                        <li>7_3. 반복문과 map()</li>
+                                        <li>7_4. 메뉴 활성화하기</li>
                                     </ul>
                                 </li>
-                                <li>7. 추천 개발자 콘텐츠 만들기
+                                <li>8. 컴퍼넌트 비동기 작업
                                     <ul>
-                                        <li>7_1. 메인 추천 개발자 섹션 작업</li>
-                                        <li>7_2. 추천 개발자 페이지 작업</li>    
-                                        <li>7_3. 추천 개발자 섹션 슬라이드 작업</li>    
+                                        <li>8_1. 컴퍼넌트 props 사용하기</li>
+                                        <li>8_2. React.Suspense 사용하기</li>
                                     </ul>
                                 </li>
-                                <li>8. 나머지 페이지 콘텐츠 만들기
+                                <li>9. 페이지 SEO 작업
                                     <ul>
-                                        <li>8_1. 나머지 페이지 작업</li>  
-                                        <li>8_2. VideoSlide 컴퍼넌트 작업</li>  
-                                        <li>8_3. 페이지 간소화하기</li>  
-                                        <li>8_4. 이미지 슬라이드 작업하기</li>  
-                                        <li>8_5. 각 페이지 데이터 로드 작업</li>  
+                                        <li>9_1. 메인 페이지 SEO 설정하기</li>
+                                        <li>9_2. 모든 페이지 SEO 설정하기</li>
                                     </ul>
                                 </li>
-                                <li>9. 페이지 로딩 작업 만들기
+                                <li>10. 메인 콘텐츠 작업
                                     <ul>
-                                        <li>9_1. 페이지 로딩 작업 만들기</li>  
-                                        <li>9_2. scrollTo 만들기</li>  
-                                    </ul>
-                                </li>
-                                <li>10. 서치 페이지 만들기
-                                    <ul>
-                                        <li>10_1. 검색 영역 설정하기</li>  
-                                        <li>10_2. 유튜브 API 설정하기</li>  
-                                        <li>10_3. 유튜브 API 데이터 가져오기</li>  
-                                        <li>10_4. Rapid API 설정하기</li>  
-                                        <li>10_5. Rapid API 데이터 가져오기</li>  
-                                        <li>10_6. 검색 데이터 더보기 기능 설정하기</li>  
-                                        <li>10_7. Loading 소스 설정하기</li>  
+                                        <li>10_1. 검색 컴퍼넌트 작업하기</li>
+                                        <li>10_2. 메인 컴퍼넌트 작업하기</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
 
-                    <h3>10. 서치 페이지 만들기</h3>
+                    <h3>10. 메인 콘텐츠 작업</h3>
                     <div>
-                        <h4>10_1. 검색 영역 설정하기</h4>
+                        <h4>10_1. 검색 컴퍼넌트 작업하기</h4>
                         <p>
-                            <code>App.js</code>에 검색 페이지를 설정한 적이 있습니다. 
-                            search 키워드 뒤에 문자열이 오면 ID로 인식합니다. 
-                            우선 검색 input 박스부터 설정을 하겠습니다. 
+                            메인 페이지에 검색 영역을 작업해보겠습니다. 
+                            <code>components</code> > <code>section</code> > <code>Main.jsx</code> 수정하겠습니다.
+                            검색 영역 역시 모든 페이지에 들어가기 때문에 <code>main</code> 컴퍼넌트에 넣어주겠습니다.
+                            <code>main</code> 태그 안에 추가 하였습니다.
+                            import를 추가하여 연동까지 완료했습니다.
                         </p>
+<pre><code class="language-js">import React from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+
+import Header from './Header'
+import Footer from './Footer'
+import Search from './Search'  // 추가
+
+const Main = ( props ) =&gt; {
+    return (
+        &lt;HelmetProvider&gt;
+            &lt;Helmet 
+                titleTemplate="%s | Webs Youtube" 
+                defaultTitle="Webs Youtube" 
+                defer={false}
+            &gt;
+                {props.title && &lt;title&gt;{props.title}&lt;/title&gt;}
+                &lt;meta name="description" content={props.description} /&gt;
+            &lt;/Helmet&gt;
+
+            &lt;Header /&gt;
+            &lt;main id="main" role="main"&gt;
+                &lt;Search /&gt;   
+                {props.children}
+            &lt;/main&gt;
+            &lt;Footer /&gt;
+        &lt;/HelmetProvider&gt;
+    )
+}
+
+export default Main
+</code></pre>
+                        
                         <p>
-                            우선 <code>components</code> 폴더 <code>contents</code> 폴더 <code>section</code> 폴더에 <code>search.jsx</code> 파일을 수정하겠습니다.
+                            <code>Search.jsx</code> 컴퍼넌트를 추가하고 다음과 같이 작업하겠습니다.
                         </p>
-<pre><code class="language-js">import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">components
+                                    <ul>
+                                        <li class="icon1">section
+                                            <ul>
+                                                <li class="icon2 m0">Footer.jsx</li>
+                                                <li class="icon2 m0">Header.jsx</li>
+                                                <li class="icon2 m0">Main.jsx</li>
+                                                <li class="icon2 m0">Search.jsx</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+<pre><code class="language-js">import React from 'react'
 
 const Search = () =&gt; {
-    const [searchKeyword, setSearchKeyword] = useState('');
-    const navigate = useNavigate();
-
-    const handleSearch = () =&gt; {
-        console.log(searchKeyword)
-        if (searchKeyword) {
-            navigate(`/search/${searchKeyword}`);
-            setSearchKeyword('');
-        }
-    };
-
     return (
         &lt;div id='search'&gt;
             &lt;div className='search__inner'&gt;
@@ -226,490 +255,636 @@ const Search = () =&gt; {
                     placeholder='검색어를 입력해주세요' 
                     autoComplete='off' 
                     className='search__input' 
-                    onChange={e =&gt; setSearchKeyword(e.target.value)}
-                    onKeyDown={e =&gt; {
-                        if (e.key === 'Enter') {
-                            handleSearch();
-                        }
-                    }}
                 /&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     )
 }
-
 export default Search</code></pre>
-                        
-                        <div class="sampleBasic">
-                            <ul class="list">
-                                <li>useState를 사용하여 searchKeyword라는 상태 변수를 생성하고 초기값을 빈 문자열로 설정합니다. 이 변수는 사용자가 입력한 검색어를 저장합니다.</li>
-                                <li>useNavigate 훅을 사용하여 navigate 함수를 가져옵니다. 이 함수는 React Router의 내비게이션을 처리하는데 사용됩니다.</li>
-                                <li>handleSearch 함수는 검색 버튼을 클릭하거나 Enter 키를 눌렀을 때 호출됩니다. 먼저, 현재 검색어를 콘솔에 출력합니다(console.log(searchKeyword)). 그런 다음, 검색어가 비어 있지 않은 경우에만 내비게이션을 수행하고 검색어를 초기화합니다.</li>
-                                <li>JSX에서는 검색 UI를 렌더링합니다. &lt;input&gt; 엘리먼트를 통해 검색어를 입력할 수 있으며, onChange 이벤트 핸들러를 사용하여 입력된 검색어를 searchKeyword 상태에 업데이트합니다. 또한, Enter 키를 눌렀을 때 검색을 실행하도록 onKeyDown 이벤트 핸들러를 설정합니다.</li>
-                                <li>label 엘리먼트는 스크린 리더 사용자를 위한 접근성을 향상시키기 위해 사용되며, 레이블에는 "검색" 아이콘이 포함됩니다.</li>
-                                <li>검색 버튼을 클릭하거나 Enter 키를 누르면 handleSearch 함수가 호출되어 검색을 수행하고, 검색어는 초기화됩니다.</li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    <div class="mt80">
-                        <h4>10_2. 유튜브 API 설정하기</h4>
-                        <p>
-                            youtube api라고 검색을 하고 다음 페이지로 이동하겠습니다.
-                            <a class="sampleLine" href="https://developers.google.com/youtube/v3?hl=ko" target="_blank">https://developers.google.com/youtube/v3?hl=ko</a> 여기로 이동합니다.
-                        </p>
-                        <div class="sampleImg">
-                            <img src="img/youtube08.png" alt="youtube2023" />
-                        </div>
 
                         <p>
-                            Developer Console에 클릭합니다. 
-                        </p>
-                        <div class="sampleImg">
-                            <img src="img/youtube09.png" alt="youtube2023" />
-                        </div>
-
-                        <p>
-                            API 및 서비스 사용 설정 버튼을 클릭합니다.
-                        </p>
-                        <div class="sampleImg">
-                            <img src="img/youtube10.png" alt="youtube2023" />
-                        </div>
-
-                        <p>
-                            YOUTUBE Data API v3를 클릭합니다.
-                        </p>
-                        <div class="sampleImg">
-                            <img src="img/youtube11.png" alt="youtube2023" />
-                        </div>
-
-                        <p>
-                            사용해보기를 누르고 API 키를 받으면 됩니다. 
-                        </p>
-                        <div class="sampleImg">
-                            <img src="img/youtube12.png" alt="youtube2023" />
-                        </div>
-
-                        <p>
-                            사용자 인증 정보 탭을 클릭하고 인증 정보 만들기 버튼을 클릭합니다. 
-                            이렇게 하면 API 키를 만들 수 있습니다. 
-                        </p>
-                        <div class="sampleImg">
-                            <img src="img/youtube13.png" alt="youtube2023" />
-                        </div>
-
-                        <p>
-                            <code>.env</code> 환경 변수 파일을 만듭니다. 
-                            여기에 API 키를 보관하겠습니다. 이 키는 중요하기 때문에 함부로 공유하시면 됩니다. 
-                            그렇기 때문에 깃에도 올라가면 안됩니다. 
-                            <code>.gitignore</code> 파일에 .env 파일을 추가하여 올리는 것을 방지할 것입니다. 
+                            <code>_search.scss</code> 파일도 추가하고 <code>style.scss</code> 에도 추가해야 합니다.
                         </p>
                         <div class="sampleFolder">
                             <ul>
-                                <li class="icon1">node_modules</li>
-                                <li class="icon1">public</li>
-                                <li class="icon1">src</li>
-                                <li class="icon2 m0">.env</li>
-                                <li class="icon2 m0">.gitignore</li>
-                                <li class="icon2 m0">package-lock.josn</li>
-                                <li class="icon2 m0">package.josn</li>
-                                <li class="icon2 m0">README.md</li>
+                                <li class="icon1">assets
+                                    <ul>
+                                        <li class="icon1">fonts</li>
+                                        <li class="icon1">img</li>
+                                        <li class="icon1">scss
+                                            <ul>
+                                                <li class="icon1">section
+                                                    <ul>
+                                                        <li class="icon2 m0">_layout.scss</li>
+                                                        <li class="icon2 m0">_header.scss</li>
+                                                        <li class="icon2 m0">_search.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon1">setting
+                                                    <ul>
+                                                        <li class="icon2 m0">_common.scss</li>
+                                                        <li class="icon2 m0">_fonts.scss</li>
+                                                        <li class="icon2 m0">_mixin.scss</li>
+                                                        <li class="icon2 m0">_reset.scss</li>
+                                                        <li class="icon2 m0">_vars.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon2 m0">style.scss</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
-                        <p>
-                            .env 파일에는 다음과 같이 작업합니다.
-                        </p>
-<pre><code class="language-js">REACT_APP_YOUTUBE_API_KEY=여기에 Youtube API 키를 넣습니다.</code></pre>
-                        <p>
-                            .gitignore 파일에는 .env을 추가합니다.
-                        </p>
-<pre><code class="language-js"># See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+<pre><code class="language-scss">@charset "UTF-8";
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+// setting
+@import "setting/fonts";
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+@import "setting/common";
 
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+// section
+@import "section/layout";
+@import "section/header";
+@import "section/search";   // 추가
 </code></pre>
+<pre><code class="language-scss">.search__inner {
+    padding: 17px 40px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #161616;
+    height: 81px;
+
+    label {
+        position: absolute;
+        left: 53px; 
+        top: 28px;
+        width: 24px;
+        height: 24px;
+        background-image: url(../../img/icon/search.svg);
+        background-size: cover;
+    }
+    input {
+        background-color: #111;
+        border: 1px solid #161616;
+        border-radius: 40px;
+        font-size: 16px;
+        padding: 14px 45px;
+        width: 100%;
+        color: #fff;
+    }
+}</code></pre>
+
+                        <p>
+                            나머지 기타 부분도 수정하겠습니다. 
+                            <code>scss</code> > <code>section</code> > <code>_layout.scss</code>를 수정하겠습니다.
+                        </p>
+<pre><code class="language-scss">#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    z-index: 10000;
+    border-right: 1px solid var(--black200);
+}
+#main {
+    max-width: 2000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: 260px;
+}
+#footer {
+    margin-top: 100px;
+    background-color: var(--black200);
+    border-top: 1px solid var(--black200);
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--black400);
+    padding: 20px;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+
+    a {
+        padding: 10px 20px;
+    }
+}
+</code></pre>
+                        <p> 
+                            푸터 부분은 간단하기 때문에 바로 처리하겠습니다.
+                            <code>components</code> > <code>section</code> > <code>Footer.jsx</code>에서 수정하겠습니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+
+const Footer = () =&gt; {
+    return (
+        &lt;footer id='footer' role="contentinfo"&gt; 
+            &lt;a href="mailto:webstoryboy@naver.com" rel="noopener noreferrer"&gt;
+                webstoryboy@naver.com
+            &lt;/a&gt;
+        &lt;/footer&gt;
+    )
+}
+
+export default Footer
+</code></pre>   
+                        <p>
+                            완성된 화면입니다. 푸터까지 확인해주세요!
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-13.png" alt="youtube2023" />
+                        </div>
+
+                        
                     </div>
                     
                     <div class="mt80">
-                        <h4>10_3. 유튜브 API 데이터 가져오기</h4>
+                        <h4>10_2. 메인 컴퍼넌트 작업하기</h4>
                         <p>
-                            유튜브 API를 통해 데이터를 불러오겠습니다. <code>pages</code> 폴더에 <code>Search.jsx</code> 파일을 수정하겠습니다.
+                            메인 콘텐츠에는 추천 영상, 추천 개발자, 웹디자인 기능사, 웹표준 사이트, GSAP, 포트폴리오, 유튜브 코딩 등 7가지 컴퍼넌트로 구성되어 있습니다. 
+                            이 컴퍼넌트들을 클릭하면 해당 페이지도 이동되는 구조입니다. 
+                            그럼 하나씩 작업해보겠습니다. 
                         </p>
-<pre><code class="language-js">import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import Main from '../components/section/Main'
-
-import VideoSearch from '../components/videos/VideoSearch'
-
-const Search = () =&gt; {
-    const { searchId } = useParams();
-    const [ videos, setVideos ] = useState([]);
-    
-    useEffect(() =&gt; {
-        fetch(
-            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=48&q=${searchId}&type=video&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
-        )
-        .then(response =&gt; response.json())
-        .then(result =&gt; {
-            console.log(result);
-            setVideos(result.items)
-        })
-        .catch(error =&gt; console.log(error));
-        }, [searchId]);
-
-    return (
-        &lt;Main 
-            title = "유투브 검색"
-            description="유튜브 검색 결과 페이지입니다."&gt;
-            
-            &lt;section id='searchPage'&gt;
-                &lt;div className="video__inner search"&gt;
-                    &lt;VideoSearch videos={videos} /&gt;
-                &lt;/div&gt;
-            &lt;/section&gt;
-        &lt;/Main&gt;
-    )
-}
-
-export default Search</code></pre>
-                        <div class="sampleBasic">
-                            <ul class="list">
-                                <li>useParams 훅을 사용하여 현재 경로에서 searchId 파라미터를 가져옵니다. 이 파라미터는 사용자가 입력한 검색어를 나타냅니다.</li>
-                                <li>useState를 사용하여 videos라는 상태 변수를 생성하고 초기값을 빈 배열로 설정합니다. 이 변수는 검색 결과로 받아온 비디오 목록을 저장합니다.</li>
-                                <li>useEffect 훅을 사용하여 컴포넌트가 마운트되거나 searchId가 변경될 때마다 유튜브 API를 호출하여 검색 결과를 가져옵니다. API 호출에는 fetch 함수를 사용하며, 검색어와 API 키를 쿼리 파라미터로 전달합니다. API 응답을 JSON으로 파싱하고, 결과를 setVideos 함수를 사용하여 videos 상태 변수에 저장합니다. API 호출 중에 발생할 수 있는 오류도 처리합니다.</li>
-                                <li>JSX에서는 Main 컴포넌트를 사용하여 페이지의 제목과 설명을 설정합니다. 그리고 검색 결과를 표시하기 위해 VideoSearch 컴포넌트를 렌더링합니다. VideoSearch 컴포넌트에는 검색 결과로 받아온 비디오 목록이 전달됩니다.</li>
-                            </ul>
-                        </div>
-
                         <p>
-                            <code>VideoSearch.jsx</code> 컴퍼넌트는 다음과 같이 작업합니다.
+                            <code>components</code> > <code>pages</code> > <code>Home.jsx</code> 페이지를 수정하겠습니다.
                         </p>
 <pre><code class="language-js">import React from 'react'
-import { Link } from 'react-router-dom'
-
-const VideoSearch = ({ videos }) =&gt; {
-    return (
-        &lt;&gt;
-            {videos.map((video, index) =&gt; (
-                &lt;div className="video" key={index}&gt;
-                    &lt;div className="video__thumb play__icon"&gt;
-                        &lt;Link 
-                            to={`/video/${video.id.videoId}`} 
-                            style={{ backgroundImage: `url(${video.snippet.thumbnails.high.url})` }}&gt;
-                        &lt;/Link&gt;
-                    &lt;/div&gt;
-                    &lt;div className="video__info"&gt;
-                        &lt;div className="title"&gt;
-                            &lt;Link to={`/video/${video.id.videoId}`}&gt;{video.snippet.title}&lt;/Link&gt;
-                        &lt;/div&gt;
-                        &lt;div className="info"&gt;
-                            &lt;span className="author"&gt;
-                                &lt;Link to={`/channel/${video.snippet.channelId}`}&gt;{video.snippet.channelTitle}&lt;/Link&gt;
-                            &lt;/span&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            ))}
-        &lt;/&gt;
-    )
-}
-
-export default VideoSearch
-</code></pre>
-
-
-                        <p>
-                            특별한 이상이 없다면 다음과 같이 화면이 구성되고 
-                            카테고리 밑에 키워드를 누르면 페이지가 검색 영역이 완성됩니다.
-                        </p>
-                        <div class="sampleImg">
-                            <img src="img/youtube14.png" alt="youtube2023" />
-                        </div>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>10_4. Rapid API 설정하기</h4>
-                        <p>
-                            이번에는 Youtube API가 아닌 rapid에서 제공하는 API로 작업하겠습니다. 
-                            Youtube API 작업하다보면 트래픽이나 사용제한으로 오래동안 사용 못할 수 있습니다. 
-                            제한이 걸려 있기 때문에 만약을 위해서 Rapid API도 사용해보도록 하겠습니다. 
-                            <a class="sampleLine" href="https://rapidapi.com/" target="_blank">https://rapidapi.com/</a> 여기에서 회원가입을 하고 youtube v3를 검색합니다.
-                        </p>
-                        <div class="sampleImg">
-                            <img src="img/youtube15.png" alt="youtube2023" />
-                        </div>
-
-                        <p>
-                            테스트도 바로 할 수 있으며,
-                            axios를 선택하여 소스도 확인할 수 있습니다. 
-                        </p>
-                        <div class="sampleImg">
-                            <img src="img/youtube16.png" alt="youtube2023" />
-                        </div>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>10_5. Rapid API 데이터 가져오기</h4>
-                        <p>
-                            이번에는 axios를 통해 가져오겠습니다. 
-                            파일을 <code>utils</code> 폴더에 <code>api.js</code> 파일을 만들어서 다음과 같이 작업하겠습니다.
-                            만약 데이터가 불러오지 않는다면 <code>npm start</code>를 다시 한번해주세요!
-                        </p>
-<pre><code class="language-js">import axios from 'axios';
-
-export const BASE_URL = 'https://youtube-v31.p.rapidapi.com';
-
-const options = {
-    params: {
-        maxResults: 48,
-    },
-    headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
-        'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com',
-    },
-};
-
-export const fetchFromAPI = async (url) => {
-    const { data } = await axios.get(`${BASE_URL}/${url}`, options);
-    console.log(data)
-    return data;
-};
-</code></pre>
-                        <p>
-                            <code>pages</code> 폴더에 <code>Search.jsx</code> 페이지는 다음과 같이 수정하겠습니다. 
-                        </p>
-<pre><code class="language-js">import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import Main from '../components/section/Main'
+import Today from '../components/contents/Today'
+import Developer from '../components/contents/Developer'
+import Webd from '../components/contents/Webd'
+import Website from '../components/contents/Website'
+import Gsap from '../components/contents/Gsap'
+import Portfolio from '../components/contents/Portfolio'
+import Youtube from '../components/contents/Youtube'
 
-import VideoSearch from '../components/videos/VideoSearch'
-import { fetchFromAPI } from '../utils/api'
-
-const Search = () =&gt; {
-    const { searchId } = useParams();
-    const [ videos, setVideos ] = useState([]);
-    
-    useEffect(() =&gt; {
-        fetchFromAPI(`search?part=snippet&q=${searchId}`)
-            .then((data) =&gt; setVideos(data.items))
-    }, [searchId]);
-
+const Home = () => {
     return (
         &lt;Main 
-            title = "유투브 검색"
-            description="유튜브 검색 결과 페이지입니다."&gt;
+            title = "웹스토리보이 유튜브"
+            description="웹스토리보이 유튜버 사이트에 오신 것을 환영합니다."&gt;
             
-            &lt;section id='searchPage'&gt;
-                &lt;div className="video__inner search"&gt;
-                    &lt;VideoSearch videos={videos} /&gt;
-                &lt;/div&gt;
-            &lt;/section&gt;
+            &lt;Today /&gt;
+            &lt;Developer /&gt;
+            &lt;Webd /&gt;
+            &lt;Website /&gt;
+            &lt;Gsap /&gt;
+            &lt;Portfolio /&gt;
+            &lt;Youtube /&gt;
         &lt;/Main&gt;
     )
 }
 
-export default Search</code></pre>    
-
-                        <p>
-                            .env 파일에는 다음 파일을 추가하겠습니다.
-                        </p>
-<pre><code class="language-js">REACT_APP_RAPID_API_KEY=여기에 Rapid API 키를 넣습니다.</code></pre>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>10_6. 검색 데이터 더보기 기능 설정하기</h4>
-                        <p>
-                            검색 데이터가 많이 때문에 더 보기 버튼을 추가하여 버튼을 누르면 내용물을 더 보여주겠습니다.
-                            <code>pages</code> 폴더에 <code>search.jsx</code> 페이지를 다시 수정하겠습니다. 
-                        </p>
-<pre><code class="language-js">import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import Main from '../components/section/Main'
-
-import VideoSearch from '../components/videos/VideoSearch'
-import { fetchFromAPI } from '../utils/api'
-
-const Search = () =&gt; {
-    const { searchId } = useParams();
-    const [ videos, setVideos ] = useState([]);
-    const [ nextPageToken, setNextPageToken ] = useState(null);
-    
-    useEffect(() =&gt; {
-        setVideos([]);
-        fetchVideos(searchId);
-    }, [searchId]);
-
-    const fetchVideos = (query, pageToken = '') =&gt; {
-        fetchFromAPI(`search?part=snippet&q=${query}&pageToken=${pageToken}`)
-            .then((data) =&gt; {
-                setNextPageToken(data.nextPageToken);
-                setVideos((prevVideos) =&gt; [...prevVideos, ...data.items]);
-            });
-    };
-
-    const handleLoadMore = () =&gt; {
-        if (nextPageToken) {
-            fetchVideos(searchId, nextPageToken);
-        }
-    };
-
-    return (
-        &lt;Main 
-            title = "유투브 검색"
-            description="유튜브 검색 결과 페이지입니다."&gt;
-            
-            &lt;section id='searchPage'&gt;
-                &lt;div className="video__inner search"&gt;
-                    &lt;VideoSearch videos={videos} /&gt;
-                &lt;/div&gt;
-                &lt;div className="video__more"&gt;
-                    {nextPageToken && (
-                        &lt;button onClick={handleLoadMore}&gt;더 보기&lt;/button&gt;
-                    )}
-                &lt;/div&gt;
-            &lt;/section&gt;
-        &lt;/Main&gt;
-    )
-}
-
-export default Search
-
+export default Home
 </code></pre>
-
-                        <div class="sampleBasic">
-                            <ul class="list">
-                                <li>nextPageToken 상태 변수: nextPageToken은 다음 페이지의 토큰을 저장합니다. 이를 사용하여 API 호출 시 다음 페이지의 결과를 가져옵니다. 초기값은 null로 설정됩니다.</li>
-                                <li>useEffect로 초기 검색 결과 초기화: 검색어(searchId)가 변경될 때마다 videos 상태와 nextPageToken 상태를 초기화합니다. 이렇게 함으로써 새로운 검색어로 검색 결과를 다시 불러옵니다.</li>
-                                <li>fetchVideos 함수: 검색 결과를 가져오는 로직을 함수로 추상화합니다. 함수에는 query (검색어)와 pageToken (다음 페이지 토큰)을 인자로 받습니다.</li>
-                                <li>handleLoadMore 함수: "더 보기" 버튼 클릭 시 호출되는 함수로, nextPageToken이 있을 때만 추가 데이터를 로드합니다.</li>
-                                <li>JSX에서 "더 보기" 버튼 추가: 검색 결과 아래에 "더 보기" 버튼을 추가하고, nextPageToken이 존재할 때만 이 버튼을 렌더링합니다. 버튼을 클릭하면 handleLoadMore 함수가 실행되어 추가 데이터를 가져옵니다.</li>
+                        <p>
+                            컴퍼넌트를 만들었기 때문에 폴더도 만들고 각 컴퍼넌트도 만들어 주겠습니다. 
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">components
+                                    <ul>
+                                        <li class="icon1">contents
+                                            <ul>
+                                                <li class="icon2 m0">Developer.jsx</li>
+                                                <li class="icon2 m0">Gsap.jsx</li>
+                                                <li class="icon2 m0">Portfolio.jsx</li>
+                                                <li class="icon2 m0">Today.jsx</li>
+                                                <li class="icon2 m0">Webd.jsx</li>
+                                                <li class="icon2 m0">Website.jsx</li>
+                                                <li class="icon2 m0">Youtube.jsx</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
-                    </div>
+<pre><code class="language-js">import React from 'react'
 
-                    <div class="mt80">
-                        <h4>10_7. Loading 소스 설정하기</h4>
-                        <p>
-                            기존 페이지처럼 로딩 소스를 추가하여 조금 더 부드럽게 작업하겠습니다. 
-                            <code>pages</code> 폴더 <code>Search.jsx</code> 페이지를 다음과 같이 수정하겠습니다.
-                        </p>
-<pre><code class="language-js">import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import Main from '../components/section/Main'
-
-import VideoSearch from '../components/videos/VideoSearch'
-import { fetchFromAPI } from '../utils/api'
-
-const Search = () =&gt; {
-    const { searchId } = useParams();
-    const [ videos, setVideos ] = useState([]);
-    const [ nextPageToken, setNextPageToken ] = useState(null);
-    const [ loading, setLoading ] = useState(true); 
-    
-    useEffect(() =&gt; {
-        setVideos([]);
-        fetchVideos(searchId);
-        setLoading(true);
-    }, [searchId]);
-
-    const fetchVideos = (query, pageToken = '') =&gt; {
-        fetchFromAPI(`search?part=snippet&q=${query}&pageToken=${pageToken}`)
-            .then((data) =&gt; {
-                setNextPageToken(data.nextPageToken);
-                setVideos((prevVideos) =&gt; [...prevVideos, ...data.items]);
-                setLoading(false); // 데이터 로딩 완료
-            })
-            .catch((error) =&gt; {
-                console.error('Error fetching data:', error);
-                setLoading(false); // 데이터 로딩 실패
-            });
-    };
-
-    const handleLoadMore = () =&gt; {
-        if (nextPageToken) {
-            setLoading(true);
-            fetchVideos(searchId, nextPageToken);
-        }
-    };
-
-    const searchPageClass = loading ? 'isLoading' : '';
-
+const Developer = () => {
     return (
-        &lt;Main 
-            title = "유투브 검색"
-            description="유튜브 검색 결과 페이지입니다."&gt;
-            
-            &lt;section id='searchPage' className={searchPageClass}&gt;
-                &lt;h2&gt;🤠 &lt;em&gt;{searchId}&lt;/em&gt; 검색 결과입니다.&lt;/h2&gt;
-                &lt;div className="video__inner search"&gt;
-                    &lt;VideoSearch videos={videos} /&gt;
-                &lt;/div&gt;
-                &lt;div className="video__more"&gt;
-                    {nextPageToken && (
-                        &lt;button onClick={handleLoadMore}&gt;더 보기&lt;/button&gt;
-                    )}
-                &lt;/div&gt;
-            &lt;/section&gt;
-        &lt;/Main&gt;
+        &lt;div&gt;Developer&lt;/div&gt;
     )
 }
 
-export default Search
+export default Developer
 </code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Gsap = () => {
+    return (
+        &lt;div&gt;Gsap&lt;/div&gt;
+    )
+}
+
+export default Gsap
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Portfolio = () => {
+    return (
+        &lt;div&gt;Portfolio&lt;/div&gt;
+    )
+}
+
+export default Portfolio
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Today = () => {
+    return (
+        &lt;div&gt;Today&lt;/div&gt;
+    )
+}
+
+export default Today
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Webd = () => {
+    return (
+        &lt;div&gt;Webd&lt;/div&gt;
+    )
+}
+
+export default Webd
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Website = () => {
+    return (
+        &lt;div&gt;Webd&lt;/div&gt;
+    )
+}
+
+export default Website
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Youtube = () => {
+    return (
+        &lt;div&gt;Webd&lt;/div&gt;
+    )
+}
+
+export default Youtube
+</code></pre>
+
                     </div>
+
+
 
                     <div>
                         <h3>마무리</h3>
+                        <h4>git 올리기</h4>
                         <p>
-                            이렇게 하여 검색페이지도 완성하였습니다. 
+                            터미널에서 다음과 같이 작성하겠습니다.
+                            새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
+                        </p>
+<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+        new file:   src/assets/img/gsap/gsap01.jpg
+        new file:   src/assets/img/gsap/gsap02.jpg
+        new file:   src/assets/img/gsap/gsap03.jpg
+        new file:   src/assets/img/gsap/gsap04.jpg
+        new file:   src/assets/img/gsap/gsap05.jpg
+        new file:   src/assets/img/gsap/gsap06.jpg
+        new file:   src/assets/img/gsap/gsap07.jpg
+        new file:   src/assets/img/gsap/gsap08.jpg
+        new file:   src/assets/img/gsap/gsap09.jpg
+        new file:   src/assets/img/gsap/gsap10.jpg
+        new file:   src/assets/img/gsap/gsap11.jpg
+        new file:   src/assets/img/gsap/gsap12.jpg
+        new file:   src/assets/img/gsap/gsap13.jpg
+        new file:   src/assets/img/gsap/gsap14.jpg
+        new file:   src/assets/img/gsap/gsap15.jpg
+        new file:   src/assets/img/icon/play.svg
+        new file:   src/assets/img/icon/search.svg
+        new file:   src/assets/img/port/port-next01.jpg
+        new file:   src/assets/img/port/port-next02.jpg
+        new file:   src/assets/img/port/port-next03.jpg
+        new file:   src/assets/img/port/port-next04.jpg
+        new file:   src/assets/img/port/port-next05.jpg
+        new file:   src/assets/img/port/port-next06.jpg
+        new file:   src/assets/img/port/port-next07.jpg
+        new file:   src/assets/img/port/port-next08.jpg
+        new file:   src/assets/img/port/port-next09.jpg
+        new file:   src/assets/img/port/port-next10.jpg
+        new file:   src/assets/img/port/port-react01.jpg
+        new file:   src/assets/img/port/port-react02.jpg
+        new file:   src/assets/img/port/port-react03.jpg
+        new file:   src/assets/img/port/port-react04.jpg
+        new file:   src/assets/img/port/port-react05.jpg
+        new file:   src/assets/img/port/port-react06.jpg
+        new file:   src/assets/img/port/port-react07.jpg
+        new file:   src/assets/img/port/port-react08.jpg
+        new file:   src/assets/img/port/port-react09.jpg
+        new file:   src/assets/img/port/port-react10.jpg
+        new file:   src/assets/img/port/port-vite01.jpg
+        new file:   src/assets/img/port/port-vite02.jpg
+        new file:   src/assets/img/port/port-vite03.jpg
+        new file:   src/assets/img/port/port-vite04.jpg
+        new file:   src/assets/img/port/port-vite05.jpg
+        new file:   src/assets/img/port/port-vite06.jpg
+        new file:   src/assets/img/port/port-vite07.jpg
+        new file:   src/assets/img/port/port-vite08.jpg
+        new file:   src/assets/img/port/port-vite09.jpg
+        new file:   src/assets/img/port/port-vite10.jpg
+        new file:   src/assets/img/port/port-vue01.jpg
+        new file:   src/assets/img/port/port-vue02.jpg
+        new file:   src/assets/img/port/port-vue03.jpg
+        new file:   src/assets/img/port/port-vue04.jpg
+        new file:   src/assets/img/port/port-vue05.jpg
+        new file:   src/assets/img/port/port-vue06.jpg
+        new file:   src/assets/img/port/port-vue07.jpg
+        new file:   src/assets/img/port/port-vue08.jpg
+        new file:   src/assets/img/port/port-vue09.jpg
+        new file:   src/assets/img/port/port-vue10.jpg
+        new file:   src/assets/img/site/site01.jpg
+        new file:   src/assets/img/site/site02.jpg
+        new file:   src/assets/img/site/site03.jpg
+        new file:   src/assets/img/site/site04.jpg
+        new file:   src/assets/img/site/site05.jpg
+        new file:   src/assets/img/site/site06.jpg
+        new file:   src/assets/img/site/site07.jpg
+        new file:   src/assets/img/site/site08.jpg
+        new file:   src/assets/img/site/site09.jpg
+        new file:   src/assets/img/site/site10.jpg
+        new file:   src/assets/img/site/site11.jpg
+        new file:   src/assets/img/site/site12.jpg
+        new file:   src/assets/img/site/site13.jpg
+        new file:   src/assets/img/site/site14.jpg
+        new file:   src/assets/img/site/site15.jpg
+        new file:   src/assets/img/site/site16.jpg
+        new file:   src/assets/img/site/site17.jpg
+        new file:   src/assets/img/site/site18.jpg
+        new file:   src/assets/img/site/site19.jpg
+        new file:   src/assets/img/site/site20.jpg
+        new file:   src/assets/img/site/site21.jpg
+        new file:   src/assets/img/site/site22.jpg
+        new file:   src/assets/img/site/site23.jpg
+        new file:   src/assets/img/site/site24.jpg
+        new file:   src/assets/img/site/site25.jpg
+        new file:   src/assets/img/today/todayView01.jpg
+        new file:   src/assets/img/today/todayView02.jpg
+        new file:   src/assets/img/today/todayView03.jpg
+        new file:   src/assets/img/today/todayView04.jpg
+        new file:   src/assets/img/today/todayView05.jpg
+        new file:   src/assets/img/today/todayView06.jpg
+        new file:   src/assets/img/today/todayView07.jpg
+        new file:   src/assets/img/today/todayView08.jpg
+        new file:   src/assets/img/webd/webd01.jpg
+        new file:   src/assets/img/webd/webd02.jpg
+        new file:   src/assets/img/webd/webd03.jpg
+        new file:   src/assets/img/webd/webd04.jpg
+        new file:   src/assets/img/webd/webd05.jpg
+        new file:   src/assets/img/webd/webd06.jpg
+        new file:   src/assets/img/webd/webd07.jpg
+        new file:   src/assets/img/webd/webd08.jpg
+        new file:   src/assets/img/webd/webd09.jpg
+        new file:   src/assets/img/webd/webd10.jpg
+        new file:   src/assets/img/webd/webd11.jpg
+        new file:   src/assets/img/webd/webd12.jpg
+        new file:   src/assets/img/webd/webd13.jpg
+        new file:   src/assets/img/webd/webd14.jpg
+        new file:   src/assets/img/webd/webd15.jpg
+        new file:   src/assets/img/webd/webd16.jpg
+        new file:   src/assets/img/webd/webd17.jpg
+        new file:   src/assets/img/webd/webd18.jpg
+        new file:   src/assets/img/webd/webd19.jpg
+        new file:   src/assets/img/webd/webd20.jpg
+        new file:   src/assets/img/webd/webd21.jpg
+        new file:   src/assets/img/webd/webd22.jpg
+        new file:   src/assets/img/webd/webd23.jpg
+        new file:   src/assets/img/webd/webd24.jpg
+        new file:   src/assets/img/webd/webd25.jpg
+        new file:   src/assets/img/webd/webd26.jpg
+        new file:   src/assets/img/webd/webd27.jpg
+        new file:   src/assets/img/webd/webd28.jpg
+        new file:   src/assets/img/webd/webd29.jpg
+        new file:   src/assets/img/webd/webd30.jpg
+        new file:   src/assets/img/webd/webd31.jpg
+        new file:   src/assets/img/webd/webd32.jpg
+        new file:   src/assets/img/webd/webd33.jpg
+        new file:   src/assets/img/webd/webd34.jpg
+        new file:   src/assets/img/webd/webd35.jpg
+        new file:   src/assets/img/webd/webd36.jpg
+        new file:   src/assets/img/webd/webd37.jpg
+        new file:   src/assets/img/webd/webd38.jpg
+        new file:   src/assets/img/webd/webd39.jpg
+        new file:   src/assets/img/youtube/youtube01.jpg
+        new file:   src/assets/img/youtube/youtube02.jpg
+        new file:   src/assets/img/youtube/youtube03.jpg
+        new file:   src/assets/img/youtube/youtube04.jpg
+        new file:   src/assets/img/youtube/youtube05.jpg
+        modified:   src/assets/scss/section/_layout.scss
+        new file:   src/assets/scss/section/_search.scss
+        modified:   src/assets/scss/setting/_vars.scss
+        modified:   src/assets/scss/style.scss
+        new file:   src/components/contents/Developer.jsx
+        new file:   src/components/contents/Gsap.jsx
+        new file:   src/components/contents/Portfolio.jsx
+        new file:   src/components/contents/Today.jsx
+        new file:   src/components/contents/Webd.jsx
+        new file:   src/components/contents/Website.jsx
+        new file:   src/components/contents/Youtube.jsx
+        modified:   src/components/section/Footer.jsx
+        modified:   src/components/section/Main.jsx
+        new file:   src/components/section/Search.jsx
+        modified:   src/pages/Home.jsx
+
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "메인 콘텐츠 작업"
+[main 0126fe6] 메인 콘텐츠 작업
+    149 files changed, 153 insertions(+), 9 deletions(-)
+    create mode 100644 src/assets/img/gsap/gsap01.jpg
+    create mode 100644 src/assets/img/gsap/gsap02.jpg
+    create mode 100644 src/assets/img/gsap/gsap03.jpg
+    create mode 100644 src/assets/img/gsap/gsap04.jpg
+    create mode 100644 src/assets/img/gsap/gsap05.jpg
+    create mode 100644 src/assets/img/gsap/gsap06.jpg
+    create mode 100644 src/assets/img/gsap/gsap07.jpg
+    create mode 100644 src/assets/img/gsap/gsap08.jpg
+    create mode 100644 src/assets/img/gsap/gsap09.jpg
+    create mode 100644 src/assets/img/gsap/gsap10.jpg
+    create mode 100644 src/assets/img/gsap/gsap11.jpg
+    create mode 100644 src/assets/img/gsap/gsap12.jpg
+    create mode 100644 src/assets/img/gsap/gsap13.jpg
+    create mode 100644 src/assets/img/gsap/gsap14.jpg
+    create mode 100644 src/assets/img/gsap/gsap15.jpg
+    create mode 100644 src/assets/img/icon/play.svg
+    create mode 100644 src/assets/img/icon/search.svg
+    create mode 100644 src/assets/img/port/port-next01.jpg
+    create mode 100644 src/assets/img/port/port-next02.jpg
+    create mode 100644 src/assets/img/port/port-next03.jpg
+    create mode 100644 src/assets/img/port/port-next04.jpg
+    create mode 100644 src/assets/img/port/port-next05.jpg
+    create mode 100644 src/assets/img/port/port-next06.jpg
+    create mode 100644 src/assets/img/port/port-next07.jpg
+    create mode 100644 src/assets/img/port/port-next08.jpg
+    create mode 100644 src/assets/img/port/port-next09.jpg
+    create mode 100644 src/assets/img/port/port-next10.jpg
+    create mode 100644 src/assets/img/port/port-react01.jpg
+    create mode 100644 src/assets/img/port/port-react02.jpg
+    create mode 100644 src/assets/img/port/port-react03.jpg
+    create mode 100644 src/assets/img/port/port-react04.jpg
+    create mode 100644 src/assets/img/port/port-react05.jpg
+    create mode 100644 src/assets/img/port/port-react06.jpg
+    create mode 100644 src/assets/img/port/port-react07.jpg
+    create mode 100644 src/assets/img/port/port-react08.jpg
+    create mode 100644 src/assets/img/port/port-react09.jpg
+    create mode 100644 src/assets/img/port/port-react10.jpg
+    create mode 100644 src/assets/img/port/port-vite01.jpg
+    create mode 100644 src/assets/img/port/port-vite02.jpg
+    create mode 100644 src/assets/img/port/port-vite03.jpg
+    create mode 100644 src/assets/img/port/port-vite04.jpg
+    create mode 100644 src/assets/img/port/port-vite05.jpg
+    create mode 100644 src/assets/img/port/port-vite06.jpg
+    create mode 100644 src/assets/img/port/port-vite07.jpg
+    create mode 100644 src/assets/img/port/port-vite08.jpg
+    create mode 100644 src/assets/img/port/port-vite09.jpg
+    create mode 100644 src/assets/img/port/port-vite10.jpg
+    create mode 100644 src/assets/img/port/port-vue01.jpg
+    create mode 100644 src/assets/img/port/port-vue02.jpg
+    create mode 100644 src/assets/img/port/port-vue03.jpg
+    create mode 100644 src/assets/img/port/port-vue04.jpg
+    create mode 100644 src/assets/img/port/port-vue05.jpg
+    create mode 100644 src/assets/img/port/port-vue06.jpg
+    create mode 100644 src/assets/img/port/port-vue07.jpg
+    create mode 100644 src/assets/img/port/port-vue08.jpg
+    create mode 100644 src/assets/img/port/port-vue09.jpg
+    create mode 100644 src/assets/img/port/port-vue10.jpg
+    create mode 100644 src/assets/img/site/site01.jpg
+    create mode 100644 src/assets/img/site/site02.jpg
+    create mode 100644 src/assets/img/site/site03.jpg
+    create mode 100644 src/assets/img/site/site04.jpg
+    create mode 100644 src/assets/img/site/site05.jpg
+    create mode 100644 src/assets/img/site/site06.jpg
+    create mode 100644 src/assets/img/site/site07.jpg
+    create mode 100644 src/assets/img/site/site08.jpg
+    create mode 100644 src/assets/img/site/site09.jpg
+    create mode 100644 src/assets/img/site/site10.jpg
+    create mode 100644 src/assets/img/site/site11.jpg
+    create mode 100644 src/assets/img/site/site12.jpg
+    create mode 100644 src/assets/img/site/site13.jpg
+    create mode 100644 src/assets/img/site/site14.jpg
+    create mode 100644 src/assets/img/site/site15.jpg
+    create mode 100644 src/assets/img/site/site16.jpg
+    create mode 100644 src/assets/img/site/site17.jpg
+    create mode 100644 src/assets/img/site/site18.jpg
+    create mode 100644 src/assets/img/site/site19.jpg
+    create mode 100644 src/assets/img/site/site20.jpg
+    create mode 100644 src/assets/img/site/site21.jpg
+    create mode 100644 src/assets/img/site/site22.jpg
+    create mode 100644 src/assets/img/site/site23.jpg
+    create mode 100644 src/assets/img/site/site24.jpg
+    create mode 100644 src/assets/img/site/site25.jpg
+    create mode 100644 src/assets/img/today/todayView01.jpg
+    create mode 100644 src/assets/img/today/todayView02.jpg
+    create mode 100644 src/assets/img/today/todayView03.jpg
+    create mode 100644 src/assets/img/today/todayView04.jpg
+    create mode 100644 src/assets/img/today/todayView05.jpg
+    create mode 100644 src/assets/img/today/todayView06.jpg
+    create mode 100644 src/assets/img/today/todayView07.jpg
+    create mode 100644 src/assets/img/today/todayView08.jpg
+    create mode 100644 src/assets/img/webd/webd01.jpg
+    create mode 100644 src/assets/img/webd/webd02.jpg
+    create mode 100644 src/assets/img/webd/webd03.jpg
+    create mode 100644 src/assets/img/webd/webd04.jpg
+    create mode 100644 src/assets/img/webd/webd05.jpg
+    create mode 100644 src/assets/img/webd/webd06.jpg
+    create mode 100644 src/assets/img/webd/webd07.jpg
+    create mode 100644 src/assets/img/webd/webd08.jpg
+    create mode 100644 src/assets/img/webd/webd09.jpg
+    create mode 100644 src/assets/img/webd/webd10.jpg
+    create mode 100644 src/assets/img/webd/webd11.jpg
+    create mode 100644 src/assets/img/webd/webd12.jpg
+    create mode 100644 src/assets/img/webd/webd13.jpg
+    create mode 100644 src/assets/img/webd/webd14.jpg
+    create mode 100644 src/assets/img/webd/webd15.jpg
+    create mode 100644 src/assets/img/webd/webd16.jpg
+    create mode 100644 src/assets/img/webd/webd17.jpg
+    create mode 100644 src/assets/img/webd/webd18.jpg
+    create mode 100644 src/assets/img/webd/webd19.jpg
+    create mode 100644 src/assets/img/webd/webd20.jpg
+    create mode 100644 src/assets/img/webd/webd21.jpg
+    create mode 100644 src/assets/img/webd/webd22.jpg
+    create mode 100644 src/assets/img/webd/webd23.jpg
+    create mode 100644 src/assets/img/webd/webd24.jpg
+    create mode 100644 src/assets/img/webd/webd25.jpg
+    create mode 100644 src/assets/img/webd/webd26.jpg
+    create mode 100644 src/assets/img/webd/webd27.jpg
+    create mode 100644 src/assets/img/webd/webd28.jpg
+    create mode 100644 src/assets/img/webd/webd29.jpg
+    create mode 100644 src/assets/img/webd/webd30.jpg
+    create mode 100644 src/assets/img/webd/webd31.jpg
+    create mode 100644 src/assets/img/webd/webd32.jpg
+    create mode 100644 src/assets/img/webd/webd33.jpg
+    create mode 100644 src/assets/img/webd/webd34.jpg
+    create mode 100644 src/assets/img/webd/webd35.jpg
+    create mode 100644 src/assets/img/webd/webd36.jpg
+    create mode 100644 src/assets/img/webd/webd37.jpg
+    create mode 100644 src/assets/img/webd/webd38.jpg
+    create mode 100644 src/assets/img/webd/webd39.jpg
+    create mode 100644 src/assets/img/youtube/youtube01.jpg
+    create mode 100644 src/assets/img/youtube/youtube02.jpg
+    create mode 100644 src/assets/img/youtube/youtube03.jpg
+    create mode 100644 src/assets/img/youtube/youtube04.jpg
+    create mode 100644 src/assets/img/youtube/youtube05.jpg
+    create mode 100644 src/assets/scss/section/_search.scss
+    create mode 100644 src/components/contents/Developer.jsx
+    create mode 100644 src/components/contents/Gsap.jsx
+    create mode 100644 src/components/contents/Portfolio.jsx
+    create mode 100644 src/components/contents/Today.jsx
+    create mode 100644 src/components/contents/Webd.jsx
+    create mode 100644 src/components/contents/Website.jsx
+    create mode 100644 src/components/contents/Youtube.jsx
+    create mode 100644 src/components/section/Search.jsx
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
+Enumerating objects: 177, done.
+Counting objects: 100% (177/177), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (162/162), done.
+Writing objects: 100% (162/162), 20.82 MiB | 9.92 MiB/s, done.
+Total 162 (delta 62), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (62/62), completed with 6 local objects.
+To https://github.com/webstoryboy/webs-youtube.git
+    4276736..0126fe6  main -> main
+</code></pre>
+                        <p>
+                           메인 콘텐츠 및 페이지 작업을 위한 셋팅이 완료되었습니다. 
+                           이미지도 다운 받으셔서 업로드 해주면 다음에 작업할 때 편합니다. 
+                           오늘도 수고하셨습니다. 😘
                         </p>
                     </div>
 
                     <hr>
 
                     <div class="right_refer">
-                        <a href="https://port2023-react.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
                         <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                        <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
                     <div class="refer5_wrap">
                         <ul class="refer5">
                             <li><a href="https://webstoryboy.co.kr/1964">1. 나만의 유튜브 사이트 만들기 : 셋팅하기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : CSS 셋팅하기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1966">3. 나만의 유튜브 사이트 만들기 : 페이지 및 컴퍼넌트 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1967">4. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1968">5. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1969">6. 나만의 유튜브 사이트 만들기 : 메인 콘텐츠 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1970">7. 나만의 유튜브 사이트 만들기 : 추천 개발자 콘텐츠 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1971">8. 나만의 유튜브 사이트 만들기 : 나머지 페이지 콘텐츠 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1972">9. 나만의 유튜브 사이트 만들기 : 페이지 로딩 작업 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1973">10. 나만의 유튜브 사이트 만들기 : 서치 페이지 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1974">11. 나만의 유튜브 사이트 만들기 : 비디오 페이지 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1975">12. 나만의 유튜브 사이트 만들기 : 채널 페이지 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1976">13. 나만의 유튜브 사이트 만들기 : 마무리 및 배포하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : 라이브러리 설치하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">3. 나만의 유튜브 사이트 만들기 : Git 연동하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">4. 나만의 유튜브 사이트 만들기 : SCSS 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">5. 나만의 유튜브 사이트 만들기 : 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">6. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 구조화하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">7. 나만의 유튜브 사이트 만들기 : 헤더 영역 완성하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">8. 나만의 유튜브 사이트 만들기 : 컴퍼넌트 비동기 작업</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">9. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">10. 나만의 유튜브 사이트 만들기 : 메인 콘텐츠 작업</a></li>
                         </ul>
                     </div>
                 </div>

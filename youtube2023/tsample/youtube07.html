@@ -72,13 +72,13 @@
                     <div class="desc">
                         <div class="left">
                             <span class="num">07</span>
-                            <div class="title">나만의 유튜브 사이트 만들기 : 추천 개발자 콘텐츠 만들기</div>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 헤더 영역 완성하기</div>
                             <span class="difficulty">난이도 <span>중간</span></span>
                         </div>
                         <div class="right">
                             <div class="btn">소스 다운로드</div>
-                            <a href="https://youtube2023.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
-                            <a href="https://github.com/webstoryboy/youtube2023" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/webs-youtube" target="_blank" class="sampleBtn">완성 코드</a>
                             <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
@@ -89,9 +89,12 @@
                     <h2>소개</h2>
                     <p>
                         안녕하세요! 웹스토리보이입니다.
-                        이번에는 메인페이지의 메인 컨텐츠를 만들어 보겠습니다. 
-                        메인에는 오늘의 추천영상, 개발자 소개 및 영상 소개를 보여주는 부분입니다. 
-                        그럼 한번 시작해보겠습니다.😝
+                        이 강의는 <i>React</i> 프레임워크와 <i>YouTube API</i>를 이용하여 자신만의 간단한 영상 사이트를 만들어보겠습니다.
+                        React의 기본 개념을 이해하고, 컴포넌트를 구조화하고 상태를 관리하는 방법을 학습하게 될 것입니다. 
+                        또한 YouTube Data API를 활용하여 외부 데이터를 가져오는 방법을 익히고, 
+                        API 응답을 처리하여 사용자에게 의미 있는 정보를 제공하는 방법을 이해하게 됩니다.
+                        이로써 자신만의 유튜브 사이트를 만들고, 활용해보는 것을 목표로 합니다.
+                        그럼 한번 시작해볼까요? 🥳
                     </p>
 
                     <h3>인덱스</h3>
@@ -103,570 +106,811 @@
                                         <li>1_1. Node.js 설치</li>
                                         <li>1_2. Vscode 설치</li>
                                         <li>1_3. React.js 설치</li>
-                                        <li>1_4. 폴더 정리하기</li>
-                                        <li>1_5. 필요한 파일 설치하기</li>
                                     </ul>
                                 </li>
-                                <li>2. CSS 셋팅하기
+                                <li>2. 라이브러리 설치하기
                                     <ul>
-                                        <li>2_1. SCSS 설정하기</li>
-                                        <li>2_2. style.scss 설정하기</li>
-                                        <li>2_3. fonts.scss 설정하기</li>
-                                        <li>2_4. vars.scss 설정하기</li>
-                                        <li>2_5. reset.scss 설정하기</li>
-                                        <li>2_6. mixin.scss 설정하기</li>
-                                        <li>2_7. common.scss 설정하기</li>
+                                        <li>2_1. 폴더 정리하기</li>
+                                        <li>2_2. 라이브러리 설치하기</li>
                                     </ul>
                                 </li>
-                                <li>3. 페이지 및 컴퍼넌트 만들기
+                                <li>3. Git 연동하기
                                     <ul>
-                                        <li>3_1. 페이지 만들기</li>
-                                        <li>3_2. 컴퍼넌트 만들기</li>
+                                        <li>3_1. 저장소 만들기</li>
+                                        <li>3_2. 모든 파일 올리기</li>
+                                        <li>3_3. 깃 상태 확인하기</li>
                                     </ul>
                                 </li>
-                                <li>4. 섹션 컴퍼넌트 만들기
+                                <li>4. SCSS 셋팅하기
                                     <ul>
-                                        <li>4_1. Main 컨퍼넌트 만들기</li>
-                                        <li>4_2. Header 컨퍼넌트 만들기</li>
-                                        <li>4_3. Header 컨퍼넌트 데이터화 하기</li>
-                                        <li>4_4. Footer 컨퍼넌트 만들기</li>
+                                        <li>4_1. SCSS 설정하기</li>
+                                        <li>4_2. style.scss 설정하기</li>
+                                        <li>4_3. fonts.scss 설정하기</li>
+                                        <li>4_4. vars.scss 설정하기</li>
+                                        <li>4_5. reset.scss 설정하기</li>
+                                        <li>4_6. mixin.scss 설정하기</li>
+                                        <li>4_7. common.scss 설정하기</li>
                                     </ul>
                                 </li>
-                                <li>5. 페이지 SEO 작업 
+                                <li>5. 페이지 만들기
                                     <ul>
-                                        <li>5_1. App.js 재구성</li>
-                                        <li>5_2. main 컴퍼넌트 재구성</li>
-                                        <li>5_3. 모든 페이지 재구성</li>
+                                        <li>5_1. 페이지 만들기</li>
+                                        <li>5_2. 페이지 컴퍼넌트 만들기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 섹션 컴퍼넌트 구조화하기
+                                    <ul>
+                                        <li>6_1. 전체 레이아웃 만들기</li>
+                                        <li>6_2. 섹션 컴퍼넌트 만들기</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                         <div>
                             <ul>
-                                <li>6. 메인 콘텐츠 만들기
+                                <li>7. 헤더 영역 완성하기
                                     <ul>
-                                        <li>6_1. 검색 컴퍼넌트 작업</li>
-                                        <li>6_2. 오늘의 영상 컴퍼넌트 작업</li>
-                                        <li>6_3. 오늘의 영상 페이지 작업</li>
-                                    </ul>
-                                </li>
-                                <li>7. 추천 개발자 콘텐츠 만들기
-                                    <ul>
-                                        <li>7_1. 메인 추천 개발자 섹션 작업</li>
-                                        <li>7_2. 추천 개발자 페이지 작업</li>    
-                                        <li>7_3. 추천 개발자 섹션 슬라이드 작업</li>    
+                                        <li>7_1. 헤더 영역 코딩하기</li>
+                                        <li>7_2. 헤더 영역 데이터 작업</li>
+                                        <li>7_3. 반복문과 map()</li>
+                                        <li>7_4. 메뉴 활성화하기</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
 
-                    <h3>7. 추천 개발자 콘텐츠 만들기</h3>
+                    <h3>7. 헤더 영역 완성하기</h3>
                     <div>
-                        <h4>7_1. 메인 추천 개발자 섹션 작업</h4>
+                        <h4>7_1. 헤더 영역 코딩하기</h4>
                         <p>
-                            <code>Home.jsx</code> 페이지에서 <code>Developer</code> 컴퍼넌트를 추가하겠습니다. 
+                            header 영역은 로고, 메뉴, SNS로 구성되어 있습니다. 
+                            리액트에서는 class 대신에 <code>className</code>을 사용합니다. 
                         </p>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-import Today from '../components/contents/Today'
-import Developer from '../components/contents/Developer'
-
-const Home = () =&gt; {
-    return (
-        &lt;Main 
-            title = '웹스토리보이 유튜브'
-            description='웹스토리보이 유튜버에 오신 것을 환영합니다.'&gt;
-            
-            &lt;Today /&gt;
-            &lt;Developer /&gt;
-        &lt;/Main&gt;
-    )
-}
-
-export default Home
-</code></pre>
-
                         <p>
-                            <code>components</code> 폴더 <code>contents</code> 폴더에 <code>Developer</code> 컴퍼넌트를 만들겠습니다.
+                            <a href="https://react-icons.github.io/react-icons" class="sampleLine">https://react-icons.github.io/react-icons</a> 사이트에 아이콘을 이용하여 설정하였습니다.
+                            사용할 아이콘의 이름을 <code>import</code> 하고 해당 영역에 이름을 써주면 됩니다. 
                         </p>
 <pre><code class="language-js">import React from 'react'
 
-import { developerText } from '../../data/developer';
-import { Link } from 'react-router-dom';
+import { CiBaseball } from "react-icons/ci";
+import { CiCoins1 } from "react-icons/ci";
+import { CiBoxes } from "react-icons/ci";
+import { CiBullhorn } from "react-icons/ci";
+import { CiCoffeeCup } from "react-icons/ci";
+import { CiDumbbell } from "react-icons/ci";
+import { CiFries } from "react-icons/ci";
+import { CiMoneyBill } from "react-icons/ci";
 
-const Developer = () =&gt; {
+import { AiFillGithub } from "react-icons/ai";
+import { AiOutlineCodepen } from "react-icons/ai";
+import { AiFillYoutube } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
+
+const Header = () =&gt; {
     return (
-        &lt;section id='developer'&gt;
-            &lt;h2&gt;😪 추천 개발자를 소개합니다.&lt;/h2&gt;
-            &lt;div className="develpoer__inner overflow"&gt;
-                {developerText.map((developer, key) =&gt; (
-                    &lt;div className="develpoer" key={key}&gt;
-                        &lt;div className="develpoer__img play__icon"&gt;
-                            &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                &lt;img src={developer.img} alt={developer.name} /&gt;
-                            &lt;/Link&gt;
-                        &lt;/div&gt;
-                        &lt;div className="develpoer__info"&gt;
-                            &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                {developer.name}
-                            &lt;/Link&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                ))}
+        &lt;header id='header' role='banner'&gt;
+            &lt;h1 className='header__logo'&gt;
+                &lt;a href="/"&gt;
+                    &lt;em&gt;&lt;/em&gt;  
+                    &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h1&gt;
+            &lt;div className='header__menu'&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="/"&gt;
+                            &lt;CiBaseball /&gt; 웹스토리보이
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/today"&gt;
+                            &lt;CiMoneyBill /&gt; 추천 영상
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/developer"&gt;
+                            &lt;CiCoins1 /&gt; 추천 개발자
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/webd"&gt;
+                            &lt;CiBoxes /&gt; 웹디자인기능사
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/website"&gt;
+                            &lt;CiBullhorn /&gt; 웹표준 사이트
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/gsap"&gt;
+                            &lt;CiCoffeeCup /&gt; GSAP Parallax
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/port"&gt;
+                            &lt;CiDumbbell /&gt; 포트폴리오 사이트
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/youtube"&gt;
+                            &lt;CiFries /&gt; 유튜브 클론 사이트
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul className='keyword'&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/webstoryboy"&gt;webstoryboy&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/html"&gt;HTML&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/css"&gt;CSS&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/javascript"&gt;JavaScript&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/react.js"&gt;React.js&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/vue.js"&gt;Vue.js&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/next.js"&gt;Next.js&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/node.js"&gt;Node.js&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/sql"&gt;SQL&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/React Portfolio"&gt;portfolio&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="/search/NewJeans"&gt;music&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
             &lt;/div&gt;
-        &lt;/section&gt;
+            &lt;div className='header__sns'&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="https://github.com/webstoryboy" rel="noopener noreferrer"&gt;
+                            &lt;AiFillGithub /&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="https://www.youtube.com/webstoryboy" rel="noopener noreferrer"&gt;
+                            &lt;AiFillYoutube /&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="https://codepen.io/webstoryboy" rel="noopener noreferrer"&gt;
+                            &lt;AiOutlineCodepen /&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="https://www.instagram.com/webstoryboy" rel="noopener noreferrer"&gt;
+                            &lt;AiOutlineInstagram /&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
     )
 }
 
-export default Developer
+export default Header
 </code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                <i>rel="noopener noreferrer"</i>는 &lt;a&gt; 태그의 rel 속성에 사용되는 값들로, 
+                                웹 페이지의 보안 및 사용성을 향상시키기 위해 사용됩니다. 
+                                <i>rel="noopener noreferrer"</i>를 사용하면 새 탭/윈도우에서 링크를 열 때 보안 및 개인 정보 보호 측면에서 안전한 방식으로 열리게 됩니다.
+                            </p>
+                            <ul class="list">
+                                <li>noopener: 이 값을 사용하면 링크를 새 탭/윈도우에서 열 때, 새로 열리는 페이지가 부모 페이지의 window.opener 속성을 통해 부모 페이지를 제어하는 것을 방지합니다. 이렇게 함으로써 다른 사이트에서 자신의 페이지를 조작하는 보안 취약점을 방지할 수 있습니다.</li>
+                                <li>noreferrer: 이 값을 사용하면 링크를 클릭할 때 HTTP 리퍼러(Referer) 헤더가 전송되지 않습니다. 이는 사용자의 개인 정보를 보호하고 어떤 사이트로부터 연결되었는지 등을 감추는 데 도움이 됩니다.</li>
+                            </ul>
+                        </div>
 
                         <p>
-                            <code>data</code> 폴더에 <code>developer.js</code> 파일을 만들겠습니다.
+                            <code>scss</code> > <code>section</code> > <code>_header.scss</code>를 만들고 다음과 같이 작업합니다. 
+                            추가된 scss는 <code>style.scss</code>에 추가해야 합니다. 
                         </p>
-<pre><code class="language-js">export const developerText = [
-    {
-        img: "https://yt3.googleusercontent.com/JU6k565OVstxx_h_7TbzE1aNXKzcxKl33zjPV4p649pqsgS7E3vb0meX9DB1_D_KviDoc4xM=s176-c-k-c0x00ffffff-no-rj",
-        name: "webstoryboy",
-        channelAddress: "https://www.youtube.com/@webstoryboy",
-        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/JuRcVt9OFQgqh7UL1LjihpVLEbjdNXt3tGq-IQfqRMT8wVXgWg_tzyz0S_GVsgqkB3ucBC5fqeY=s176-c-k-c0x00ffffff-no-rj",
-        name: "조코딩 JoCoding",
-        channelAddress: "https://www.youtube.com/@jocoding",
-        channelId: "UCQNE2JmbasNYbjGAcuBiRRg"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaSNRWU5nI-gDyzEdtbhpLqWg8wXNs-FQHf35iMCOw=s176-c-k-c0x00ffffff-no-rj",
-        name: "생활코딩",
-        channelAddress: "https://www.youtube.com/@coohde",
-        channelId: "UCvc8kv-i5fvFTJBFAk6n1SA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaSn88PvVXWN_Wy5vSr-5Eo_NGDdw_apL6bM7QKfCw=s176-c-k-c0x00ffffff-no-rj",
-        name: "노마드 코더 Nomad Coders",
-        channelAddress: "https://www.youtube.com/@nomadcoders",
-        channelId: "UCUpJs89fSBXNolQGOYKn0YQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaSeGpiSPyozdunhf74J4oa2XWHPObm8bKTcbEU=s176-c-k-c0x00ffffff-no-rj",
-        name: "코딩하는거니",
-        channelAddress: "https://www.youtube.com/@gunnycoding",
-        channelId: "UCO7g158NWgLyn98z8v3zduA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/iofg4f6THo3jyeap1GC23g5qsKD-w62Lu4U9EJBmZe8YtM1NhbNWz4WiyICAXXmwrgbnUh-FNQ=s176-c-k-c0x00ffffff-no-rj",
-        name: "워니코딩",
-        channelAddress: "https://www.youtube.com/@WonieSong",
-        channelId: "UC0uDM1xZMNBAoW2xnzhAQ7g"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaRCkXnBnWEMfpo5c_TXB-tF0FxqiCfv5KoP_9IBC6A=s176-c-k-c0x00ffffff-no-rj",
-        name: "얄팍한 코딩사전",
-        channelAddress: "https://www.youtube.com/@yalco-coding",
-        channelId: "UC2nkWbaJt1KQDi2r2XclzTQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/oLi5jJ2AKs_aYpR9UpUpu052M84WIE2j9cpnNb1VnpBHZMHVrTRPwrUIncJGu6--PVR-x-22=s176-c-k-c0x00ffffff-no-rj",
-        name: "개발하는 정대리",
-        channelAddress: "https://www.youtube.com/@dev_jeongdaeri",
-        channelId: "UCutO2H_AVmWHbzvE92rpxjA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTw2ZRRi6UzhNeunJh03HOeAnKScgRJygpN7_MsVQ=s176-c-k-c0x00ffffff-no-rj",
-        name: "코딩애플",
-        channelAddress: "https://www.youtube.com/@codingapple",
-        channelId: "UCSLrpBAzr-ROVGHQ5EmxnUg"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaRfTsQsimyyMrWugbbogh_EdsCWWQsKVqh5Fdvq=s176-c-k-c0x00ffffff-no-rj",
-        name: "김왼손의 왼손코딩",
-        channelAddress: "https://www.youtube.com/@leftykhim",
-        channelId: "UC0h8NzL2vllvp3PjdoYSK4g"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaSXgyXVlJGDyr1IaQgHJlGvc4wcFcZJ4S35NATdrYA=s176-c-k-c0x00ffffff-no-rj",
-        name: "제주코딩베이스캠프",
-        channelAddress: "https://www.youtube.com/@jejucodingcamp",
-        channelId: "UC4GnvNKtuJ4cqWsYjxNxAEQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaQyV-QwNnxxLKCnfHZrfsGNx7fqFD9YSQ_lweIx6w=s176-c-k-c0x00ffffff-no-rj",
-        name: "나도코딩",
-        channelAddress: "https://www.youtube.com/@nadocoding",
-        channelId: "UC7iAOLiALt2rtMVAWWl4pnw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTiHU0ol325VdijS5AX4DQomGs6zlD_y_v0I0A6=s176-c-k-c0x00ffffff-no-rj",
-        name: "라매개발자",
-        channelAddress: "https://www.youtube.com/@lamedev",
-        channelId: "UCr3lkp7TJiJTCY4ffRQ1m2A"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaSnppVkSh38WlQrn-7FzBAqlJpMLdGq4jS2GGHzgQ=s176-c-k-c0x00ffffff-no-rj",
-        name: "드림코딩",
-        channelAddress: "https://www.youtube.com/@dream-coding",
-        channelId: "UC_4u-bXaba7yrRz_6x6kb_w"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTyIgb-N-SeFznHEn_RkJkF9IirgzvXtEoWOnNt=s176-c-k-c0x00ffffff-no-rj",
-        name: "ZeroCho TV",
-        channelAddress: "https://www.youtube.com/@ZeroChoTV",
-        channelId: "UCp-vBtwvBmDiGqjvLjChaJw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/x5DWPPquVbSkeJ-UCVuPfnd6nzbkSCkSaXuxRUnD1yGYWixNPErHqMQP4bhP6M86oQcH7pcm=s176-c-k-c0x00ffffff-no-rj",
-        name: "짐코딩 GYM CODING",
-        channelAddress: "https://www.youtube.com/@gymcoding",
-        channelId: "UCZ30aWiMw5C8mGcESlAGQbA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/PVbwh8OLmp3dTofJ7vmv6zfoRKiFgIvL9SsTYaermGxW3Ga6vONSfC7ymrgpO6gUCd9nKcZp0Sc=s176-c-k-c0x00ffffff-no-rj",
-        name: "프롱트",
-        channelAddress: "https://www.youtube.com/@frongt",
-        channelId: "UCku8mOp8y05Cm6sb9Rp0jMQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/1gLFRSPxZUYjlGG-Ap7B2bymZkdp4fFuSTAntouex6mdUQUZ2lA8kWMrzKOLHAdfkzjopcntU7E=s176-c-k-c0x00ffffff-no-rj",
-        name: "프로그래머 김플 스튜디오",
-        channelAddress: "https://www.youtube.com/@kimfl",
-        channelId: "UCdNSo3yB5-FRTFGbUNKNnwQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaToAOoB7zZaRe9kVmXGi6QWBBPrESpK8pcaWnBL=s176-c-k-c0x00ffffff-no-rj",
-        name: "Lama Dev",
-        channelAddress: "https://www.youtube.com/@LamaDev",
-        channelId: "UCOxWrX5MIdXIeRNaXC3sqIg"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/4RM7sEvMAp5QokwqBbcQh9_XD53E2PGrfwCClaqT_IAL2FnIzWqxyBN3JuPKMas-dL0do9t-=s176-c-k-c0x00ffffff-no-rj",
-        name: "JS Dev Hindi",
-        channelAddress: "https://www.youtube.com/@jsdevhindi",
-        channelId: "UCRJz8FP29yq_vA5h08dXMPw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaQneLC0nfXjK4QaNPSG1lZXCUZtuhoFdBtYz1hH=s176-c-k-c0x00ffffff-no-rj",
-        name: "코딩알려주는누나",
-        channelAddress: "https://www.youtube.com/@user-yu8so2ck1z",
-        channelId: "UCfBvs0ZJdTA43NQrnI9imGA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaQxJlRUxIrCv4zw_kfUsqKHAm1rN32SHAU8Iwla=s176-c-k-c0x00ffffff-no-rj",
-        name: "동빈나",
-        channelAddress: "https://www.youtube.com/@dongbinna",
-        channelId: "UChflhu32f5EUHlY7_SetNWw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaQZENEAuTWosc8r89GoegTvvjKzdEgBXMv7C4i4=s176-c-k-c0x00ffffff-no-rj",
-        name: "EdRoh",
-        channelAddress: "https://www.youtube.com/@EdRohDev",
-        channelId: "UCMoEx7gz7IbJHv733yEi2aA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s176-c-k-c0x00ffffff-no-rj",
-        name: "JavaScript Mastery",
-        channelAddress: "https://www.youtube.com/@javascriptmastery",
-        channelId: "UCmXmlB4-HJytD7wek0Uo97A"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTs1IEit9EUooQAJkWS4SkpUE7oMDXYrjIgnOk1Kw=s176-c-k-c0x00ffffff-no-rj",
-        name: "freeCodeCamp.org",
-        channelAddress: "https://www.youtube.com/@freecodecamp",
-        channelId: "UC8butISFwT-Wl7EV0hUK0BQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/kVYpCZYEfX0_b2_Y7SROJsLahriQfOf6rW4egbSxDGWHDLiqhFcPM8eL56EKYfgjzetQQRx7fA=s176-c-k-c0x00ffffff-no-rj",
-        name: "How to Become a Developer",
-        channelAddress: "https://www.youtube.com/@howtobecomeadeveloper",
-        channelId: "UCkXqOdpo5ul8BosGBFlDgmw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/O8iON5EAVx6HVKyOV5UMreLFI_0D3mJX373vTEGoNcVRpNP7Lq8swha7BSLWTiEWlZaF7a4ENW8=s176-c-k-c0x00ffffff-no-rj",
-        name: "Code With Antonio",
-        channelAddress: "https://www.youtube.com/@codewithantonio",
-        channelId: "UCW_4e6sUTMWHxlF06aErH9w"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/nwyG0ql8sxARogaFb3sgpjoNd86v7hL9W2eeEysP2LryigBtYtX-J2Mw9H1lpcB9D4sw0aCx9w=s176-c-k-c0x00ffffff-no-rj",
-        name: "EGATOR",
-        channelAddress: "https://www.youtube.com/@EGATORTUTORIALS",
-        channelId: "UCL8l_VxCAN0jOpaLaRAm8sQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/a3vK_ZCS_QUX19CV2Xx1RY-CgR7DQzpeWk14UFbKdDv0Ryjc_FPf6Uo4-8NPi34deUay87eusQ=s176-c-k-c0x00ffffff-no-rj",
-        name: "빔캠프 CSS",
-        channelAddress: "https://www.youtube.com/@veamcamp",
-        channelId: "UCvx57s_ZBt5VG4fvlStiq2g"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/wr8dNnJ8dSHjBsHKag3O6ZCKmxJvnxqhpPi-E6sWf83JYKxnevU2iSt3FzLxjzrZOCTRpbi53mg=s176-c-k-c0x00ffffff-no-rj",
-        name: "코딩카페1",
-        channelAddress: "https://www.youtube.com/@CodingCafe1",
-        channelId: "UCt76J5CYnXL-uoJmQPG2Azw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/AVa5OPep1y0E8bZMIyLDyzg1jTwApHaSCi2RUG0epuLFZe0e80yvYo7MNHd-ApnvOtDgT3A3=s176-c-k-c0x00ffffff-no-rj",
-        name: "Codegrid",
-        channelAddress: "https://www.youtube.com/@codegrid",
-        channelId: "UC7pVho4O31FyfQsZdXWejEw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/wgnEbc2Ec2JYkeyzUbiHzDlAFObI2Btwo2YRCEF1aCMBiRc5E_zWy8-URBQS3EMQ1yzzaGFR=s176-c-k-c0x00ffffff-no-rj",
-        name: "Kishan Sheth",
-        channelAddress: "https://www.youtube.com/@KishanSheth21",
-        channelId: "UCDT8sIFy3pW8LT6SAbe8xtQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTc-hNjbGDnft48nMktaKF87D8EmpZ9Oacc4XeTew=s176-c-k-c0x00ffffff-no-rj",
-        name: "Yuri Artiukh",
-        channelAddress: "https://www.youtube.com/@akella_",
-        channelId: "UCDo7RTzizoOdPjY8A-xDR7g"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaQOeqOOHYrdr9qaOxYqujnMoTvladljn12PeOdeVA=s176-c-k-c0x00ffffff-no-rj",
-        name: "디자인베이스",
-        channelAddress: "https://www.youtube.com/@designbase",
-        channelId: "UCvYnDMeL-PFZhfIz6oc_U-Q"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaRq6HIiAsf1pv1CHAlIIM6MdbnaX0jqpTCOyIM5TA=s176-c-k-c0x00ffffff-no-rj",
-        name: "야무",
-        channelAddress: "https://www.youtube.com/@yamoo9",
-        channelId: "UCTZRL_OwTjiXYoTjwWg4bww"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTtbptu4ao5lFu3ElFN61tMr1K0pvo8zd7qw7HeFw=s176-c-k-c0x00ffffff-no-rj",
-        name: "DesignCourse",
-        channelAddress: "https://www.youtube.com/@DesignCourse",
-        channelId: "UCVyRiMvfUNMA1UPlDPzG5Ow"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaR892c9LcaLOEfzAp80Nna198A4lte69Z80LV-2ug=s176-c-k-c0x00ffffff-no-rj",
-        name: "Code with Ania Kubów",
-        channelAddress: "https://www.youtube.com/@AniaKubow",
-        channelId: "UC5DNytAJ6_FISueUfzZCVsw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaR0SDrl59HyNkJotnB41HBsVLXDUaRMbKFRJIIoJQ=s176-c-k-c0x00ffffff-no-rj",
-        name: "Coding Artist",
-        channelAddress: "https://www.youtube.com/@CodingArtist",
-        channelId: "UC15exV5s79D_aYGADudlwpQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaRbhQtG_1StOoOn0z0pfDfAFoe86Gk_kkR1OPhYVg=s176-c-k-c0x00ffffff-no-rj",
-        name: "Rock's Easyweb",
-        channelAddress: "https://www.youtube.com/@Ezweb",
-        channelId: "UCax1DP6hqZowNWF2lquKk0w"
-    }
-]
+<pre><code class="language-scss">@charset "UTF-8";
+
+// setting
+@import "setting/fonts";
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+@import "setting/common";
+
+// section
+@import "section/layout";
+@import "section/header"; // 추가
 </code></pre>
-
                         <p>
-                            <code>scss</code> 폴더 <code>section</code> 폴더에 <code>_developer.scss</code>을 추가하고 작업하겠습니다.
+                            <code>_header.scss</code>도 추가합니다.
                         </p>
-<pre><code class="language-scss">.develpoer__inner {
-    display: flex;
-    color: #fff;
-    flex-wrap: wrap;
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">assets
+                                    <ul>
+                                        <li class="icon1">fonts</li>
+                                        <li class="icon1">img</li>
+                                        <li class="icon1">scss
+                                            <ul>
+                                                <li class="icon1">section
+                                                    <ul>
+                                                        <li class="icon2 m0">_layout.scss</li>
+                                                        <li class="icon2 m0">_header.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon1">setting
+                                                    <ul>
+                                                        <li class="icon2 m0">_common.scss</li>
+                                                        <li class="icon2 m0">_fonts.scss</li>
+                                                        <li class="icon2 m0">_mixin.scss</li>
+                                                        <li class="icon2 m0">_reset.scss</li>
+                                                        <li class="icon2 m0">_vars.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon2 m0">style.scss</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            <code>_header.scss</code>도 다음과 같이 작업합니다.
+                        </p>
+                        
+<pre><code class="language-scss">.header__logo {
+    text-align: center;
+    border-bottom: 1px solid var(--black200);
+    text-transform: uppercase;
 
-    .develpoer {
-        color: #fff;
-        text-align: center;
-        margin-right: 20px;
+    a {
+        display: flex;
+        padding: 10px;
+        margin: 10px;
 
-        .develpoer__img {
+        em {
+            width: 40px;
+            height: 40px;
             display: block;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 10px;
+            background-color: var(--red);
+            margin-right: 10px;
+            animation: ani 20s 20s ease-in-out infinite;
         }
-        .develpoer__info {
-            width: 150px;
-            text-align: center;
-            @include line-one;
-            padding-bottom: 40px;
+
+        span {
+            text-align: left;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 900;
         }
     }
 }
-</code></pre>
 
-                        <p>
-                            다음과 같이 개발자 섹션이 완성됩니다.
-                        </p>
+.header__menu {
+    padding: 10px 0;
+
+    .menu {
+        margin-bottom: 10px;
+        
+        li {
+            a {
+                color: var(--white100);
+                font-size: 1rem;
+                display: block;
+                position: relative;
+                padding: 0.9rem 2rem 0.9rem 50px;
+                line-height: 1;
+                margin: 0 0.625rem;
+                border-radius: 40px;
+                transition: background-color 0.3s;
+                
+                svg {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    position: absolute;
+                    left: 1.25rem;
+                    top: 0.75rem;
+                }
+                
+                &:hover {
+                    background-color: var(--black100);
+                    color: #fff;
+                }
+            }
+            
+            &.active a {
+                background-color: var(--black200);
+                color: var(--white);
+            }
+        }
+    }
+    .keyword {
+        border-top: 1px solid var(--black200);
+        padding: 1.25rem;
+        
+        li {
+            display: inline-block;
+            
+            a {
+                display: inline-block;
+                padding: 7px 15px;
+                margin: 3px 1px;
+                border: 1px solid var(--black100);
+                border-radius: 40px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+.header__sns {
+    border-top: 1px solid var(--black200);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 15px 0 10px;
+    background-color: var(--black);
+    backdrop-filter: blur(10px);
+
+    li {
+        display: inline-block;
+        
+        a {
+            padding: 5px 7px;
+            display: inline-block;
+        }
+    }
+}
+
+@keyframes ani {
+    0%   {transform: rotate(0) scale(1); border-radius: 0;}
+    50%  {transform: rotate(720deg) scale(0.9); border-radius: 50px;}
+    100% {transform: rotate(0) scale(1); border-radius: 0;}
+}
+
+</code></pre>
+                            <p>
+                                디자인을 확인해 보면 다음과 같이 나옵니다.
+                            </p>
                         <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube07.png" alt="youtube2023" />
+                            <img src="img/youtube04-9.png" alt="youtube2023" />
                         </div>
                     </div>
 
                     <div class="mt80">
-                        <h4>7_2. 추천 개발자 페이지 작업</h4>
+                        <h4>7_2. 헤더 영역 데이터 작업</h4>
                         <p>
-                            이번에는 페이지에서 데이터를 불러오도록 하겠습니다. 
-                            <code>pages</code> 폴더에 <code>Developer.jsx</code>를 다음과 같이 수정하겠습니다.
+                            이번에는 데이터를 따로 작업하겠습니다. 
+                            데이터를 따로 작업하면 수정하기 용이하고, 더 보기가 좋아집니다. 
+                            그전에 반복문과 map() 메서드에 대해서 먼저 이해를 해야 합니다. 
+                            우선 데이터화를 먼저 작업해 보겠습니다.
+                        </p>
+                        <p>
+                            <code>data</code>폴더를 만들고 <code>header.js</code> 파일을 만듭니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">src
+                                    <ul>
+                                        <li class="icon1">assets</li>
+                                        <li class="icon1">components</li>
+                                        <li class="icon1">data
+                                            <ul>
+                                                <li class="icon2 m0">header.js</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1">pages</li>
+                                        <li class="icon2 m0">App.js</li>
+                                        <li class="icon2 m0">index.js</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p>
+                            <code>header.js</code> 파일은 다음과 같이 정리합니다.
+                        </p>
+<pre><code class="language-js">import { CiBaseball } from "react-icons/ci";
+import { CiCoins1 } from "react-icons/ci";
+import { CiBoxes } from "react-icons/ci";
+import { CiBullhorn } from "react-icons/ci";
+import { CiCoffeeCup } from "react-icons/ci";
+import { CiDumbbell } from "react-icons/ci";
+import { CiFries } from "react-icons/ci";
+import { CiMoneyBill } from "react-icons/ci";
+
+import { AiFillGithub } from "react-icons/ai";
+import { AiOutlineCodepen } from "react-icons/ai";
+import { AiFillYoutube } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
+
+export const headerMenus = [
+    {
+        title: "웹스토리보이",
+        icon: &lt;CiBaseball /&gt;,
+        src: "/"
+    },
+    {
+        title: "추천 영상",
+        icon: &lt;CiMoneyBill /&gt;,
+        src: "/today"
+    },
+    {
+        title: "추천 개발자",
+        icon: &lt;CiCoins1 /&gt;,
+        src: "/developer"
+    },
+    {
+        title: "웹디자인기능사",
+        icon: &lt;CiBoxes /&gt;,
+        src: "/webd"
+    },
+    {
+        title: "웹표준 사이트",
+        icon: &lt;CiBullhorn /&gt;,
+        src: "/website"
+    },
+    {
+        title: "GSAP Parallax",
+        icon: &lt;CiCoffeeCup /&gt;,
+        src: "/gsap"
+    },
+    {
+        title: "포트폴리오 사이트",
+        icon: &lt;CiDumbbell /&gt;,
+        src: "/port"
+    },
+    {
+        title: "유튜브 클론 사이트",
+        icon: &lt;CiFries /&gt;,
+        src: "/youtube"
+    },
+];
+
+export const searchKeword = [
+    {
+        title: "webstoryboy",
+        src: "/search/webstoryboy"
+    },
+    {
+        title: "HTML",
+        src: "/search/html"
+    },
+    {
+        title: "CSS",
+        src: "/search/css"
+    },
+    {
+        title: "JavaScript",
+        src: "/search/javascript"
+    },
+    {
+        title: "React.js",
+        src: "/search/react.js"
+    },
+    {
+        title: "Vue.js",
+        src: "/search/vue.js"
+    },
+    {
+        title: "Next.js",
+        src: "/search/next.js"
+    },
+    {
+        title: "Node.js",
+        src: "/search/node.js"
+    },
+    {
+        title: "SQL",
+        src: "/search/sql"
+    },
+    {
+        title: "portfolio",
+        src: "/search/React Portfolio"
+    },
+    {
+        title: "music",
+        src: "/search/NewJeans"
+    }
+];
+
+export const snsLink = [
+    {
+        title: "github",
+        url: "https://github.com/webstoryboy",
+        icon: &lt;AiFillGithub /&gt;
+    },
+    {
+        title: "youtube",
+        url: "https://www.youtube.com/webstoryboy",
+        icon: &lt;AiFillYoutube /&gt;
+    },
+    {
+        title: "codepen",
+        url: "https://codepen.io/webstoryboy",
+        icon: &lt;AiOutlineCodepen /&gt;
+    },
+    {
+        title: "instagram",
+        url: "https://www.instagram.com/webstoryboy",
+        icon: &lt;AiOutlineInstagram /&gt;
+    },
+]
+</code></pre>
+
+                        <p>
+                            <code>Header.jsx</code> 파일은 다음과 같이 다시 정리하겠습니다.
+                            리액트에서 페이지 이동 할 때에는 <code>Link</code>를 사용합니다. 
+                            <code>Link</code>를 사용하기 위해서는 <code>import</code>를 하여야 합니다.
+                            이렇게 작업하면 소스가 더 간결해지고 보기 편해집니다.
                         </p>
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
-import { developerText } from '../data/developer'
-import { Link } from 'react-router-dom'
+import { headerMenus, searchKeword, snsLink } from "../../data/category";
+import { Link } from 'react-router-dom';
 
-const Developer = () =&gt; {
+const Header = () =&gt; {
     return (
-        &lt;Main 
-            title = "추천 개발자"
-            description="오늘의 추천 개발자 유튜버입니다."&gt;
-            
-            &lt;section id='developerPage'&gt;
-                &lt;h2&gt;🥰 오늘의 추천 개발자입니다.&lt;/h2&gt;
-                &lt;div className="develpoer__inner"&gt;
-                    {developerText.map((developer, key) =&gt; (
-                        &lt;div className="develpoer" key={key}&gt;
-                            &lt;div className="develpoer__img play__icon"&gt;
-                                &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                    &lt;img src={developer.img} alt={developer.name} /&gt;
-                                &lt;/Link&gt;
-                            &lt;/div&gt;
-                            &lt;div className="develpoer__info"&gt;
-                                &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                    {developer.name}
-                                &lt;/Link&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
+        &lt;header id='header' role='banner'&gt;
+            &lt;h1 className='header__logo'&gt;
+                &lt;a href="/"&gt;
+                    &lt;em&gt;&lt;/em&gt;  
+                    &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h1&gt;
+            &lt;div className='header__menu'&gt;
+                &lt;ul className='menu'&gt;
+                    {headerMenus.map((menu, key) =&gt; (
+                        &lt;li key={key}&gt;
+                            &lt;Link to={menu.src}&gt;
+                                {menu.icon}{menu.title}
+                            &lt;/Link&gt;
+                        &lt;/li&gt;
                     ))}
-                &lt;/div&gt;
-            &lt;/section&gt;
-        &lt;/Main&gt;
+                &lt;/ul&gt;
+                &lt;ul className='keyword'&gt;
+                    {searchKeword.map((keyword, key) =&gt; (
+                        &lt;li key={key}&gt;
+                            &lt;Link to={keyword.src}&gt;
+                                {keyword.title}
+                            &lt;/Link&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div className='header__sns'&gt;
+                &lt;ul&gt;
+                    {snsLink.map((sns, key) =&gt; (
+                        &lt;li key={key}&gt;
+                            &lt;a href={sns.url} target="_blank" rel="noopener noreferrer" aria-label={sns.title}&gt;
+                                &lt;span&gt;{sns.icon}&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
     )
 }
 
-export default Developer
+export default Header
+</code></pre>
+                    </div>
+                    
+                    <div class="mt80">
+                        <h4>7_3. 반복문과 map()</h4>
+                        <p>
+                            리액트 작업시 반복문과 map() 메서드는 사용 빈도가 매우 높습니다. 
+                            잠깐 개념을 파악하고 넘어가겠습니다. 
+                        </p>
+                        <p>
+                            배열안에 데이터가 들어있습니다.  
+                            <code>for 문</code>을 통해 데이터를 하나씩 호출합니다.
+                        </p>
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    for(let i=0; i&lt;arr.length; i++){
+        console.log(arr[i]);
+    }
+    // 100 200 300 400 500 600 700 800 900
+}   
+</code></pre>
+
+                        <p>
+                            이번에도 배열안에 데이터가 들어있습니다.  
+                            <code>map()</code> 메서드를 통해 데이터를 하나씩 호출하겠습니다.
+                        </p>
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    arr.map((element) => {
+        console.log(element);
+    });
+
+    // [100, 200, 300, 400, 500, 600, 700, 800, 900];
+}   
+</code></pre>   
+                        <p>
+                            for문과 map() 메서드는 데이터 값을 출력하지만 map() 메서드는 출력한 값을 배열로 반환해주는 것에 차이점이 있습니다.
+                            리액트에서 map() 메서드를 사용하는 이유는 출력한 데이터를 다시 배열 형태로 반환 받아서 화면에 편하게 출력하기 위함입니다. 
+                            map() 메서는 인자 값으로 3가지 값을 출력할 수 있습니다. 
+                        </p>
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    arr.map((element, index) => {   
+        console.log(index);
+    });
+
+    // 0 1 2 3 4 5 6 7 8
+
+    arr.map((element, index, array) => {
+        console.log(array);
+    });
+
+    // [100, 200, 300, 400, 500, 600, 700, 800, 900] * 9
+}
 </code></pre>
                     </div>
 
                     <div class="mt80">
-                        <h4>7_3. 추천 개발자 섹션 슬라이드 작업</h4>
+                        <h4>7_4. 메뉴 활성화하기</h4>
                         <p>
-                            이번에는 Swiper를 이용하여 이미지 슬라이드를 구현하겠습니다.
-                            <code>contents</code> 폴더에 <code>Developer.jsx</code> 파일을 다음과 같이 변경하겠습니다.
+                            메뉴를 클릭하면 해당 페이지로 이동으로 하고 해당 메뉴에는 클래스 active를 추가해서 현재 있는 곳을 표시해주겠습니다. 
+                            즉 메뉴 active를 활성화하겠습니다.
                         </p>
+                        <p>
+                            해당 사이트의 주속 값을 가져오기 위해서 <code>useLocation()</code>를 사용하겠습니다. 
+                            주소값고 메뉴의 주소값이 있으면 active를 붙여주는 삼항 연산자를 사용하였습니다. 
+                            키워드 메뉴도 동일하게 작업하였습니다.
+                        </p>
+                        <p>
+                            이 부분을 추가했습니다. 
+                            <code>location.pathname === menu.src</code> 이 부분이 일치하면 active가 추가되고, 아니면 빈문자열로 표현됩니다.
+                        </p>
+<pre><code class="language-js">className={location.pathname === menu.src ? 'active' : ''}</code></pre>
 <pre><code class="language-js">import React from 'react'
 
-import { developerText } from '../../data/developer';
-import { Link } from 'react-router-dom';
+import { headerMenus, searchKeword, snsLink } from "../../data/header";
+import { Link, useLocation } from 'react-router-dom';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+const Header = () =&gt; {
+    const location = useLocation();
 
-import { Navigation, Autoplay } from 'swiper/modules';
-
-const Developer = () =&gt; {
     return (
-        &lt;section id='developer'&gt;
-            &lt;h2&gt;😪 추천 개발자를 소개합니다.&lt;/h2&gt;
-            &lt;div className='develpoer__inner'&gt;
-                &lt;Swiper
-                    slidesPerView={4}
-                    spaceBetween={15}
-                    navigation={true}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }}
-                    breakpoints={{
-                        640: {
-                            slidesPerView: 5,
-                            spaceBetween: 15,
-                        },
-                        768: {
-                            slidesPerView: 6,
-                            spaceBetween: 15,
-                        },
-                        1024: {
-                            slidesPerView: 7,
-                            spaceBetween: 20,
-                        },
-                        1240: {
-                            slidesPerView: 8,
-                            spaceBetween: 20,
-                        },
-                        1640: {
-                            slidesPerView: 9,
-                            spaceBetween: 20,
-                        },
-                        2000: {
-                            slidesPerView: 10,
-                            spaceBetween: 20,
-                        },
-                    }}
-                    modules={[Navigation, Autoplay]}
-                    className='mySwiper'
-                &gt;
-                    {developerText.map((developer, key) =&gt; (
-                        &lt;SwiperSlide key={key}&gt;
-                            &lt;div className='develpoer' key={key}&gt;
-                                &lt;div className='develpoer__img play__icon'&gt;
-                                    &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                        &lt;img src={developer.img} alt={developer.name} /&gt;
-                                    &lt;/Link&gt;
-                                &lt;/div&gt;
-                                &lt;div className='develpoer__info'&gt;
-                                    &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                        {developer.name}
-                                    &lt;/Link&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/SwiperSlide&gt;
+        &lt;header id='header' role='banner'&gt;
+            &lt;h1 className='header__logo'&gt;
+                &lt;a href="/"&gt;
+                    &lt;em&gt;&lt;/em&gt;  
+                    &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h1&gt;
+            &lt;div className='header__menu'&gt;
+                &lt;ul className='menu'&gt;
+                    {headerMenus.map((menu, key) =&gt; (
+                        &lt;li key={key} className={location.pathname === menu.src ? 'active' : ''}&gt;
+                            &lt;Link to={menu.src}&gt;
+                                {menu.icon}{menu.title}
+                            &lt;/Link&gt;
+                        &lt;/li&gt;
                     ))}
-                &lt;/Swiper&gt;
+                &lt;/ul&gt;
+                &lt;ul className='keyword'&gt;
+                    {searchKeword.map((keyword, key) =&gt; (
+                        &lt;li key={key} className={location.pathname === keyword.src ? 'active' : ''}&gt;
+                            &lt;Link to={keyword.src}&gt;
+                                {keyword.title}
+                            &lt;/Link&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
             &lt;/div&gt;
-        &lt;/section&gt;
+            &lt;div className='header__sns'&gt;
+                &lt;ul&gt;
+                    {snsLink.map((sns, key) =&gt; (
+                        &lt;li key={key}&gt;
+                            &lt;a href={sns.url} target="_blank" rel="noopener noreferrer" aria-label={sns.title}&gt;
+                                &lt;span&gt;{sns.icon}&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
     )
 }
 
-export default Developer
+export default Header
 </code></pre>
+                        <p>
+                            이렇게 하면 주소값과 메뉴의 활성화가 일치하게 됩니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-10.png" alt="youtube2023" />
+                        </div>
                     </div>
 
                     <div>
                         <h3>마무리</h3>
+                        <h4>git 올리기</h4>
                         <p>
-                            swiper를 이용하여 자동 플레이도 설정하고 반응형도 완료하였습니다. 
-                            수고하셨습니다. 😲
+                            터미널에서 다음과 같이 작성하겠습니다.
+                            새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
+                        </p>
+<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+        new file:   src/assets/scss/section/_header.scss
+        modified:   src/assets/scss/setting/_vars.scss
+        modified:   src/assets/scss/style.scss
+        modified:   src/components/section/Header.jsx
+        new file:   src/data/header.js
+
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "헤더 영역 완성하기"
+[main 436eb77] 헤더 영역 완성하기
+    5 files changed, 293 insertions(+), 5 deletions(-)
+    create mode 100644 src/assets/scss/section/_header.scss
+    create mode 100644 src/data/header.js
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (15/15), 3.05 KiB | 3.05 MiB/s, done.
+Total 15 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/webstoryboy/webs-youtube.git
+    6734289..436eb77  main -> main
+branch 'main' set up to track 'origin/main'.
+</code></pre>
+                        <p>
+                            헤더 영역을 완성하였습니다. 
+                            메뉴를 데이터화여 불러오고 화면에 출력하는 부분은 앞으로도 자주 사용하게 될 것입니다. 
+                            아직은 어려울 수 있지만 익숙해지면 쉬업집니다. 
+                            익숙해지려면 반복적으로 작업하면 됩니다. 
+                            그럼 다음 시간에도 또 반복적으로 작업해볼까요? 
+                            수고하셨습니다 🤩
                         </p>
                     </div>
 
                     <hr>
 
                     <div class="right_refer">
-                        <a href="https://port2023-react.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
                         <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                        <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
                     <div class="refer5_wrap">
                         <ul class="refer5">
                             <li><a href="https://webstoryboy.co.kr/1964">1. 나만의 유튜브 사이트 만들기 : 셋팅하기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : CSS 셋팅하기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1966">3. 나만의 유튜브 사이트 만들기 : 페이지 및 컴퍼넌트 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1967">4. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1968">5. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1969">6. 나만의 유튜브 사이트 만들기 : 메인 콘텐츠 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1970">7. 나만의 유튜브 사이트 만들기 : 추천 개발자 콘텐츠 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1971">8. 나만의 유튜브 사이트 만들기 : 나머지 페이지 콘텐츠 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1972">9. 나만의 유튜브 사이트 만들기 : 페이지 로딩 작업 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1973">10. 나만의 유튜브 사이트 만들기 : 서치 페이지 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1974">11. 나만의 유튜브 사이트 만들기 : 비디오 페이지 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1975">12. 나만의 유튜브 사이트 만들기 : 채널 페이지 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1976">13. 나만의 유튜브 사이트 만들기 : 마무리 및 배포하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : 라이브러리 설치하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">3. 나만의 유튜브 사이트 만들기 : Git 연동하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">4. 나만의 유튜브 사이트 만들기 : SCSS 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">5. 나만의 유튜브 사이트 만들기 : 페이지 만들기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">6. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 구조화하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">7. 나만의 유튜브 사이트 만들기 : 헤더 영역 완성하기</a></li>
                         </ul>
                     </div>
                 </div>

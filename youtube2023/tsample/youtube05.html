@@ -72,13 +72,13 @@
                     <div class="desc">
                         <div class="left">
                             <span class="num">05</span>
-                            <div class="title">나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</div>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 페이지 만들기</div>
                             <span class="difficulty">난이도 <span>중간</span></span>
                         </div>
                         <div class="right">
                             <div class="btn">소스 다운로드</div>
-                            <a href="https://youtube2023.netlify.app" target="_blank" class="sampleBtn">완성 화면</a>
-                            <a href="https://github.com/webstoryboy/youtube2023" target="_blank" class="sampleBtn">완성 코드</a>
+                            <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                            <a href="https://github.com/webstoryboy/webs-youtube" target="_blank" class="sampleBtn">완성 코드</a>
                             <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
                         </div>
                     </div>
@@ -89,10 +89,12 @@
                     <h2>소개</h2>
                     <p>
                         안녕하세요! 웹스토리보이입니다.
-                        이번에는 페이지 별로 SEO 기능을 추가해보겠습니다. 
-                        리액트를 싱글 페이지를 기본으로 하기 때문에 페이지가 없습니다. 
-                        페이지가 있는 것첨럼 타이틀과 설명을 추가할 것입니다. 
-                        그럼 시작해볼까요? 🫡
+                        이 강의는 <i>React</i> 프레임워크와 <i>YouTube API</i>를 이용하여 자신만의 간단한 영상 사이트를 만들어보겠습니다.
+                        React의 기본 개념을 이해하고, 컴포넌트를 구조화하고 상태를 관리하는 방법을 학습하게 될 것입니다. 
+                        또한 YouTube Data API를 활용하여 외부 데이터를 가져오는 방법을 익히고, 
+                        API 응답을 처리하여 사용자에게 의미 있는 정보를 제공하는 방법을 이해하게 됩니다.
+                        이로써 자신만의 유튜브 사이트를 만들고, 활용해보는 것을 목표로 합니다.
+                        그럼 한번 시작해볼까요? 🥳
                     </p>
 
                     <h3>인덱스</h3>
@@ -103,105 +105,132 @@
                                     <li>1_1. Node.js 설치</li>
                                     <li>1_2. Vscode 설치</li>
                                     <li>1_3. React.js 설치</li>
-                                    <li>1_4. 폴더 정리하기</li>
-                                    <li>1_5. 필요한 파일 설치하기</li>
                                 </ul>
                             </li>
-                            <li>2. CSS 셋팅하기
+                            <li>2. 라이브러리 설치하기
                                 <ul>
-                                    <li>2_1. SCSS 설정하기</li>
-                                    <li>2_2. style.scss 설정하기</li>
-                                    <li>2_3. fonts.scss 설정하기</li>
-                                    <li>2_4. vars.scss 설정하기</li>
-                                    <li>2_5. reset.scss 설정하기</li>
-                                    <li>2_6. mixin.scss 설정하기</li>
-                                    <li>2_7. common.scss 설정하기</li>
+                                    <li>2_1. 폴더 정리하기</li>
+                                    <li>2_2. 라이브러리 설치하기</li>
                                 </ul>
                             </li>
-                            <li>3. 페이지 및 컴퍼넌트 만들기
+                            <li>3. Git 연동하기
                                 <ul>
-                                    <li>3_1. 페이지 만들기</li>
-                                    <li>3_2. 컴퍼넌트 만들기</li>
+                                    <li>3_1. 저장소 만들기</li>
+                                    <li>3_2. 모든 파일 올리기</li>
+                                    <li>3_3. 깃 상태 확인하기</li>
                                 </ul>
                             </li>
-                            <li>4. 섹션 컴퍼넌트 만들기
+                            <li>4. SCSS 셋팅하기
                                 <ul>
-                                    <li>4_1. Main 컨퍼넌트 만들기</li>
-                                    <li>4_2. Header 컨퍼넌트 만들기</li>
-                                    <li>4_3. Header 컨퍼넌트 데이터화 하기</li>
-                                    <li>4_4. Footer 컨퍼넌트 만들기</li>
+                                    <li>4_1. SCSS 설정하기</li>
+                                    <li>4_2. style.scss 설정하기</li>
+                                    <li>4_3. fonts.scss 설정하기</li>
+                                    <li>4_4. vars.scss 설정하기</li>
+                                    <li>4_5. reset.scss 설정하기</li>
+                                    <li>4_6. mixin.scss 설정하기</li>
+                                    <li>4_7. common.scss 설정하기</li>
                                 </ul>
                             </li>
-                            <li>5. 페이지 SEO 작업 
+                            <li>5. 페이지 만들기
                                 <ul>
-                                    <li>5_1. App.js 재구성</li>
-                                    <li>5_2. main 컴퍼넌트 재구성</li>
-                                    <li>5_3. 모든 페이지 재구성</li>
+                                    <li>5_1. 페이지 만들기</li>
+                                    <li>5_2. 페이지 컴퍼넌트 만들기</li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    
 
-                    <h3>5. 페이지 SEO 작업 </h3>
+                    <h3>5. 페이지 만들기</h3>
                     <div>
+                        <h4>5_1. 페이지 만들기</h4>
                         <p>
-                            리액트의 단점을 극복하기 위한 방법으로 페이지 별로 페이지에 대한 설명이나 타이틀을 다시 작업해주겠습니다. 
-                            모든 페이지가 왼쪽 메뉴를 기준으로 변하기 때문에 main 영역만 컴퍼넌트를 통해 테이터를 불러올 것입니다. 
+                            이번에는 페이지를 만들겠습니다. 
+                            사실 리액트는 SPA(싱글 페이지)로 되어 있기 때문에 페이지가 존재하지 않습니다. 
+                            그래서 가상의 페이지와 주소를 만들어서 작업합니다. 
+                            그럼 디테일하게 알아보겠습니다.
                         </p>
-                        <p>
-                            또한 React Suspense 기능을 사용하여 페이지 이동시에도 끊기지 않고, 비동기 데이터를 좀 더 효율적으로 관리해보겠습니다.
-                        </p>
-    
+
                         <div class="sampleBasic">
                             <p>
-                                React.Suspense는 React에서 비동기적으로 데이터나 컴포넌트를 불러오는 과정에서 대기 상태를 처리하기 위한 컴포넌트입니다. 이 컴포넌트를 사용하면 데이터나 컴포넌트가 로딩되기를 기다릴 수 있으며, 로딩 중에는 대체 컨텐츠(로딩 스피너 또는 로딩 메시지)를 표시할 수 있습니다. React.Suspense를 사용하면 코드 스플리팅, 데이터 로딩, 서버 사이드 렌더링과 같은 시나리오에서 사용자 경험을 향상시키는 데 도움이 됩니다.
+                                <i>SPA(단일 페이지 애플리케이션)는</i> 전통적인 웹 애플리케이션과는 다르게, 
+                                페이지 전환 없이 동적으로 콘텐츠를 업데이트하여 사용자 경험을 향상시키는 웹 애플리케이션 형태를 말합니다.
                             </p>
+                            <p>
+                                리액트 SPA는 이 두 가지 개념을 결합한 것으로, 리액트를 사용하여 단일 페이지 애플리케이션을 개발하는 것을 의미합니다. 
+                                리액트는 가상 DOM (Virtual DOM) 기술을 통해 효율적으로 UI를 관리하고 업데이트합니다. 
+                                이는 사용자가 상호 작용하는 동안 필요한 부분만 업데이트하여 전체 페이지를 다시 렌더링하지 않고도 부드러운 경험을 제공합니다.
+                            </p>
+                            <ul class="list">
+                                <li>가상 DOM: 리액트는 가상 DOM을 사용하여 실제 DOM과 상호 작용하며, UI 변경 사항을 미리 계산한 다음 효율적으로 업데이트합니다. 이로 인해 성능 향상을 이룰 수 있습니다.</li>
+                                <li>컴포넌트 기반 아키텍처: 리액트 애플리케이션은 작은 컴포넌트로 구성됩니다. 각 컴포넌트는 자체적으로 상태(state)와 속성(props)을 가질 수 있으며, 이러한 컴포넌트들이 조합되어 전체 UI를 형성합니다.</li>
+                                <li>라우팅: 리액트 SPA에서는 일반적으로 브라우저의 URL을 사용하여 다른 뷰나 페이지 간에 전환할 수 있습니다. 이를 위해 리액트 라우팅 라이브러리를 사용하거나, React Router와 같은 도구를 활용합니다.</li>
+                                <li>비동기 데이터 로딩: SPA는 사용자 경험을 개선하기 위해 비동기적으로 데이터를 로드하고 UI를 업데이트할 수 있습니다. 리액트는 이를 위해 axios, fetch와 같은 API 호출을 지원하며, 상태 관리 라이브러리인 Redux나 MobX와 함께 사용할 수도 있습니다.</li>
+                                <li>상태 관리: 복잡한 SPA에서는 여러 컴포넌트 간에 상태를 효율적으로 관리해야 합니다. 리액트에서는 컴포넌트 내부 상태뿐만 아니라, 전역 상태를 관리하기 위해 Redux, MobX와 같은 상태 관리 라이브러리를 사용할 수 있습니다.</li>
+                                <li>Webpack 등 빌드 도구와의 통합: 리액트 프로젝트는 보통 Babel, Webpack과 같은 도구를 사용하여 번들링하고 최적화합니다. 이를 통해 코드의 크기를 줄이고 성능을 향상시킬 수 있습니다.</li>
+                            </ul>
                         </div>
-                    </div>
+                        <div class="sampleBasic">
+                            <p>DOM (Document Object Model)과 Virtual DOM에 대해서 알아보겠습니다.</p>
+                            <h5>DOM (Document Object Model)</h5>
+                            <ul class="list">
+                                <li>DOM은 웹 페이지의 구조를 표현하는 트리 구조입니다. HTML, XML, 또는 다른 마크업 언어로 작성된 문서를 구조적으로 표현합니다.</li>
+                                <li>DOM은 웹 페이지의 모든 요소와 요소 간의 관계를 표현합니다. 각 HTML 요소(태그), 속성, 텍스트 내용 등이 DOM의 노드로 표현됩니다.</li>
+                                <li>실제 DOM은 웹 브라우저의 메모리에 생성되고 관리됩니다. 이는 웹 페이지의 현재 상태를 표현하는 데 사용되며, JavaScript를 통해 동적으로 조작할 수 있습니다.</li>
+                                <li>DOM은 브라우저의 성능과 관련하여 주요한 역할을 합니다. DOM 조작은 비용이 높을 수 있으며, 변경 사항을 즉시 실제 DOM에 반영하는 것은 효율적이지 않을 수 있습니다.</li>
+                            </ul>
+                            <h5>Virtual DOM</h5>
+                            <ul class="list">
+                                <li>Virtual DOM은 메모리에 존재하는 실제 DOM의 가상 표현입니다. 즉, 가상 DOM은 실제 DOM의 복제입니다.</li>
+                                <li>React와 같은 라이브러리 및 프레임워크에서 Virtual DOM을 사용하여 성능을 최적화합니다. 가상 DOM을 사용하여 UI 업데이트를 관리하며, 변경 사항을 효율적으로 처리합니다.</li>
+                                <li>Virtual DOM은 업데이트 비용을 최소화하고 성능을 향상시킵니다. 가상 DOM을 사용하면 실제 DOM을 직접 조작하는 대신 변경 사항을 비교하고 최소한의 DOM 조작만을 수행하여 업데이트를 효율적으로 처리합니다.</li>
+                                <li>React와 같은 라이브러리와 프레임워크에서 Virtual DOM을 사용하여 UI 업데이트를 관리하고 성능을 최적화하는 데 활용됩니다.</li>
+                            </ul>
+                        </div>
 
-                    <div class="mt80">
-                        <h4>5_1. App.js 재구성</h4>
                         <p>
-                            기존에 파일을 다음과 같이 재구성합니다. 
-                            컴포넌트를 비동기적으로 로드하고 Suspense 컴포넌트를 사용하여 로딩 중에 대기 상태를 처리하고 있습니다.
+                            리액트 SPA는 사용자 인터페이스를 개선하고 웹 애플리케이션의 성능을 향상시키기 위해 리액트를 사용하여 구축한 단일 페이지 애플리케이션입니다. 
+                            이러한 SPA 접근 방식은 사용자 경험을 향상시키고, 웹 애플리케이션의 성능과 유지 관리성을 향상시키는 데 도움이 됩니다.
+                            그렇기 때문에 가상의 페이지를 만들기 위해서 초반에 <code>react-router-dom</code>을 설치한 적이 있습니다. 
+                            이것을 통해 가상의 주소를 만들어 보겠습니다. 
                         </p>
-<pre><code class="language-js">import React, { Suspense, lazy } from 'react'
+                        <p>
+                            <code>App.js</code> 파일을 다음과 같이 작성합니다. 
+                            가상의 주소를 만들면 컨텐츠를 불러와야 합니다. 컨텐츠는 컴퍼넌트를 통해 불러옵니다. 
+                            저는 총 12개의 페이지를 제작할 것입니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './components/section/Main';
 
-const Home = lazy(() =&gt; import('./pages/Home'));
-const Today = lazy(() =&gt; import('./pages/Today'));
-const Developer = lazy(() =&gt; import('./pages/Developer'));
-const Webd = lazy(() =&gt; import('./pages/Webd'));
-const Website = lazy(() =&gt; import('./pages/Website'));
-const Gsap = lazy(() =&gt; import('./pages/Gsap'));
-const Port = lazy(() =&gt; import('./pages/Port'));
-const Youtube = lazy(() =&gt; import('./pages/Youtube'));
-const Channel = lazy(() =&gt; import('./pages/Channel'));
-const Video = lazy(() =&gt; import('./pages/Video'));
-const Search = lazy(() =&gt; import('./pages/Search'));
-const Not = lazy(() =&gt; import('./pages/Not'));
+import Home from './pages/Home'
+import Today from './pages/Today'
+import Developer from './pages/Developer'
+import Webd from './pages/Webd'
+import Website from './pages/Website'
+import Gsap from './pages/Gsap'
+import Port from './pages/Port'
+import Youtube from './pages/Youtube'
+import Channel from './pages/Channel'
+import Video from './pages/Video'
+import Search from './pages/Search'
+import Not from './pages/Not'
 
 const App = () =&gt; {
     return (
         &lt;BrowserRouter&gt;
-            &lt;Suspense fallback={&lt;Main /&gt;}&gt;
-                &lt;Routes&gt;
-                    &lt;Route path='/' element={&lt;Home /&gt;} /&gt;
-                    &lt;Route path="/today" element={&lt;Today /&gt;} /&gt;
-                    &lt;Route path="/developer" element={&lt;Developer /&gt;} /&gt;
-                    &lt;Route path="/webd" element={&lt;Webd /&gt;} /&gt;
-                    &lt;Route path="/website" element={&lt;Website /&gt;} /&gt;
-                    &lt;Route path="/gsap" element={&lt;Gsap /&gt;} /&gt;
-                    &lt;Route path="/port" element={&lt;Port /&gt;} /&gt;
-                    &lt;Route path="/youtube" element={&lt;Youtube /&gt;} /&gt;
-                    &lt;Route path='/channel/:channelId' element={&lt;Channel /&gt;} /&gt;
-                    &lt;Route path='/video/:videoId' element={&lt;Video /&gt;} /&gt;
-                    &lt;Route path='/search/:searchId' element={&lt;Search /&gt;} /&gt;
-                    &lt;Route path="*" element={&lt;Not /&gt;} /&gt;
-                &lt;/Routes&gt;
-            &lt;/Suspense&gt;
+            &lt;Routes&gt;
+                &lt;Route path='/' element={&lt;Home /&gt;} /&gt;
+                &lt;Route path='/today' element={&lt;Today /&gt;} /&gt;
+                &lt;Route path='/developer' element={&lt;Developer /&gt;} /&gt;
+                &lt;Route path='/webd' element={&lt;Webd /&gt;} /&gt;
+                &lt;Route path='/website' element={&lt;Website /&gt;} /&gt;
+                &lt;Route path='/gsap' element={&lt;Gsap /&gt;} /&gt;
+                &lt;Route path='/port' element={&lt;Port /&gt;} /&gt;
+                &lt;Route path='/youtube' element={&lt;Youtube /&gt;} /&gt;
+                &lt;Route path='/channel/:channelId' element={&lt;Channel /&gt;} /&gt;
+                &lt;Route path='/video/:videoId' element={&lt;Video /&gt;} /&gt;
+                &lt;Route path='/search/:searchId' element={&lt;Search /&gt;} /&gt;
+                &lt;Route path='*' element={&lt;Not /&gt;} /&gt;
+            &lt;/Routes&gt;
         &lt;/BrowserRouter&gt;
     );
 }
@@ -209,299 +238,296 @@ const App = () =&gt; {
 export default App;
 </code></pre>
                         <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                React 애플리케이션의 라우팅을 설정하고 관리하기 위해 React Router의 BrowserRouter, Routes, 및 Route 구성 요소를 사용하는 기본 애플리케이션 구조를 정의합니다.
+                            </p>
                             <ul class="list">
-                                <li>BrowserRouter: React Router에서 사용되는 브라우저 라우터 컴포넌트입니다. 브라우저 히스토리 API를 사용하여 라우팅을 처리합니다.</li>
-                                <li>Suspense: Suspense 컴포넌트는 비동기적으로 로드되는 컴포넌트의 로딩 상태를 관리하는 데 사용됩니다. 여기서는 fallback 속성을 사용하여 로딩 중에 &lt;Main /&gt; 컴포넌트를 표시합니다.</li>
-                                <li>Routes: Routes 컴포넌트는 각 경로에 대한 라우트를 정의하고, 해당 경로에 접근할 때 렌더링될 컴포넌트를 결정합니다.</li>
-                                <li>Route: Route 컴포넌트는 특정 경로에 대한 라우팅 규칙을 설정하며, element 속성을 통해 해당 경로에 접근할 때 렌더링될 컴포넌트를 지정합니다.</li>
-                                <li>lazy(): lazy() 함수는 코드 스플리팅을 위해 사용되며, 비동기적으로 컴포넌트를 로드합니다. 컴포넌트가 필요할 때 비동기적으로 불러와서 번들 크기를 줄일 수 있습니다.</li>
-                                <li>fallback: fallback 속성은 Suspense 컴포넌트에서 로딩 중에 표시할 컴포넌트를 지정합니다. 여기서는 &lt;Main /&gt; 컴포넌트가 로딩 중에 보여집니다.</li>
+                                <li><i>import React from 'react';</i> : 리액트 라이브러리를 불러옵니다.</li>
+                                <li><i>import { BrowserRouter, Routes, Route } from 'react-router-dom';</i> : React Router에서 BrowserRouter, Routes, Route 컴포넌트를 불러옵니다. 이 컴포넌트들은 브라우저 라우팅을 설정하고 경로별로 컴포넌트를 매핑하는 데 사용됩니다.</li>
+                                <li><i>라우팅 경로 및 컴포넌트 임포트</i> : 다양한 뷰 컴포넌트들을 해당 경로에 연결하고, 이를 위해 각 컴포넌트들을 임포트합니다.</li>
+                                <li><i>const App = () =&gt; (</i> : App이라는 이름의 함수형 컴포넌트를 정의합니다. 이 컴포넌트는 라우팅 구성을 담당하고 있습니다.</li>
+                                <li><i>&lt;BrowserRouter&gt;</i> : 리액트 라우터의 BrowserRouter 컴포넌트로 감싸여 있습니다. 이 컴포넌트는 브라우저의 주소 히스토리 API를 사용하여 라우팅을 관리합니다.</li>
+                                <li><i>&lt;Routes&gt;</i> : BrowserRouter 내에서 사용되며, 다양한 경로에 대한 라우트 정보를 정의합니다.</li>
+                                <li><i>&lt;Route path='/' element={&lt;Home /&gt;} /&gt;</i> : 경로가 '/'인 경우, Home 컴포넌트를 렌더링합니다. element prop을 사용하여 해당 경로에 대한 컴포넌트를 지정합니다.</li>
+                                <li>나머지 &lt;Route&gt; 컴포넌트도 동일한 방식으로 설정됩니다. 예를 들어, /video/:videoId 경로는 Video 컴포넌트를, /channel/:channelId 경로는 Channel 컴포넌트를, 그리고 /search/:searchId 경로는 Search 컴포넌트를 렌더링합니다. :videoId, :channelId, :searchId는 경로 파라미터를 나타내며, 실제로 해당 변수에 따라 다른 콘텐츠를 렌더링할 수 있습니다.</li>
+                                <li><i>&lt;/Routes&gt;</i> : Routes 컴포넌트의 닫는 태그로, 라우트 설정을 마무리합니다.</li>
+                                <li><i>&lt;/BrowserRouter&gt;</i> : BrowserRouter 컴포넌트의 닫는 태그로, 라우터 설정을 마무리합니다.</li>
+                                <li><i>export default App;</i> : App 컴포넌트를 외부로 내보냅니다. 이는 애플리케이션의 진입점이 됩니다.</li>
                             </ul>
-                        </div>
+                        </div> 
                     </div>
 
                     <div class="mt80">
-                        <h4>5_2. main 컴퍼넌트 재구성</h4>
+                        <h4>5_2. 페이지 컴퍼넌트 만들기</h4>
                         <p>
-                            <code>main</code>이라는 컴퍼넌트를 모든 페이지에서 사용하기 때문에 여기에 타이틀과 설명을 추가하는 SEO 잡업을 하였습니다.
+                            페이지를 구성했다면 그 페이지에 보여줄 컴퍼넌트를 만들어 보겠습니다.
                         </p>
-<pre><code class="language-js">import React from 'react'
-import { Helmet, HelmetProvider } from 'react-helmet-async'
-
-import Header from './Header'
-import Footer from './Footer'
-
-const Main = ( props ) =&gt; {
-    return (
-        &lt;HelmetProvider&gt;
-            &lt;Helmet 
-                titleTemplate="%s | Webs Youtube" 
-                defaultTitle="Webs Youtube" 
-                defer={false}
-            &gt;
-                {props.title && &lt;title&gt;{props.title}&lt;/title&gt;}
-                &lt;meta name="description" content={props.description} /&gt;
-            &lt;/Helmet&gt;
-
-            &lt;Header /&gt;
-            &lt;main id="main" role="main"&gt;
-                {props.children}
-            &lt;/main&gt;
-            &lt;Footer /&gt;
-        &lt;/HelmetProvider&gt;
-    )
-}
-
-export default Main
-</code></pre>
                         <div class="sampleBasic">
+                            <p>
+                                리액트 컴포넌트는 리액트 애플리케이션의 구성 요소로, <i>UI를 작은 단위로 분리하여 재사용 가능하고 모듈화된 코드로</i> 관리할 수 있도록 도와주는 개념입니다. 
+                                컴포넌트는 화면의 여러 부분을 독립적으로 생성하고 관리할 수 있도록 해주며, 각각의 컴포넌트는 자체적인 상태(state)와 속성(props)을 가질 수 있습니다.
+                            </p>
                             <ul class="list">
-                                <li>HelmetProvider: react-helmet-async의 HelmetProvider 컴포넌트를 사용하여 Helmet 컴포넌트를 초기화합니다. Helmet은 페이지의 헤드 태그에 메타 데이터와 타이틀을 동적으로 추가하거나 변경하는 데 사용됩니다.</li>
-                                <li>Helmet: Helmet 컴포넌트를 사용하여 페이지의 메타 데이터와 타이틀을 설정합니다. 이 컴포넌트를 사용하면 서버 사이드 렌더링(SSR) 및 동적 페이지 제목 설정과 같은 작업을 쉽게 수행할 수 있습니다. 주로 title, meta, link, script 등의 태그를 동적으로 조작하는 데 사용됩니다.</li>
-                                <li>titleTemplate: 페이지 타이틀의 템플릿을 설정합니다. %s는 나중에 실제 타이틀로 대체됩니다.</li>
-                                <li>defaultTitle: 기본 타이틀을 설정합니다. 페이지 타이틀이 없는 경우 사용됩니다.</li>
-                                <li>defer: true로 설정하면 렌더링 전까지 &lt;Helmet&gt; 컴포넌트가 기다립니다.</li>
-                                <li>&lt;title&gt;과 &lt;meta&gt; 태그: props로 전달된 title과 description 값을 사용하여 페이지의 타이틀과 메타 설명을 설정합니다. props.title과 props.description이 없는 경우, 기본값으로 "Webs Youtube"가 타이틀로 설정됩니다.</li>
+                                <li>클래스 컴포넌트 (Class Components): ES6 클래스를 확장하여 만든 컴포넌트입니다. 클래스 컴포넌트는 라이프사이클 메서드를 사용할 수 있어서 컴포넌트의 생명 주기 동안 다양한 동작을 처리할 수 있습니다. 클래스 컴포넌트는 주로 상태 관리와 라이프사이클 이벤트 처리를 위해 사용됩니다.</li>
+                                <li>함수형 컴포넌트 (Functional Components): 함수로 작성된 컴포넌트로, 리액트의 최신 기능을 활용하여 간결하게 컴포넌트를 작성할 수 있습니다. 함수형 컴포넌트는 상태와 라이프사이클 메서드를 사용할 수 없었던 기존의 함수 컴포넌트와 달리, React Hooks를 통해 상태 관리와 라이프사이클 이벤트 처리를 할 수 있게 되었습니다.</li>
                             </ul>
                         </div>
+                        <div class="sampleBasic">
+                            <p>
+                                <i>JSX는 JavaScript XML의 약자로, 리액트에서 UI를 작성하기 위한 문법 확장</i>입니다. 
+                                JSX를 사용하면 JavaScript 코드 내부에서 HTML과 유사한 구문으로 UI 요소를 작성할 수 있어, 가독성을 높이고 개발자들이 리액트 컴포넌트를 작성하기 쉬워집니다.
+                            </p>
+                        </div>
 
-                    </div>
-
-                    <div class="mt80">
-                        <h4>5_3. 모든 페이지 재구성</h4>
+                        <p>폴더 정리는 다음과 같이 하겠습니다. <code>view</code> 폴더를 만들과 다음과 같이 jsx 페이지를 만들겠습니다.</p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">src
+                                    <ul>
+                                        <li class="icon1">assets</li>
+                                        <li class="icon1">pages
+                                            <ul>
+                                                <li class="icon2 m0">Channel.jsx</li>
+                                                <li class="icon2 m0">Developer.jsx</li>
+                                                <li class="icon2 m0">Gsap.jsx</li>
+                                                <li class="icon2 m0">Home.jsx</li>
+                                                <li class="icon2 m0">Not.jsx</li>
+                                                <li class="icon2 m0">Port.jsx</li>
+                                                <li class="icon2 m0">Search.jsx</li>
+                                                <li class="icon2 m0">Today.jsx</li>
+                                                <li class="icon2 m0">Video.jsx</li>
+                                                <li class="icon2 m0">Webd.jsx</li>
+                                                <li class="icon2 m0">Website.jsx</li>
+                                                <li class="icon2 m0">Youtube.jsx</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon2 m0">App.js</li>
+                                        <li class="icon2 m0">index.js</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                         <p>
-                            이제 나머지 페이지도 <code>main</code> 컴퍼넌트를 불러오고 페이지 별로 타이틀과 설명을 추가하면 됩니다.
-                            그럼 페이지가 변경되면 타이틀이 변경되는 것을 확인할 수 있습니다.
+                            각 페이지는 다음과 같이 작업합니다. 
                         </p>
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Channel = () =&gt; {
     return (
-        &lt;Main 
-            title = "유튜브 채널"
-            description="유튜브 채널페이지입니다."&gt;
-            Channel
-        &lt;/Main&gt;
+        &lt;div&gt;Channel&lt;/div&gt;
     )
 }
-
+    
 export default Channel
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Developer = () =&gt; {
     return (
-        &lt;Main 
-            title = "추천 개발자"
-            description="오늘의 추천 개발자 유튜버입니다."&gt;
-            Developer
-        &lt;/Main&gt;
+        &lt;div&gt;Developer&lt;/div&gt;
     )
 }
 
 export default Developer
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Gsap = () =&gt; {
     return (
-        &lt;Main 
-            title = "GSAP 사이트"
-            description="GSAP 사이트 튜토리얼 강의입니다."&gt;
-            Gsap
-        &lt;/Main&gt;
+        &lt;div&gt;Gsap&lt;/div&gt;
     )
 }
 
 export default Gsap
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Home = () =&gt; {
     return (
-        &lt;Main 
-            title = "웹스토리보이 유튜브"
-            description="웹스토리보이 유튜버에 오신 것을 환영합니다."&gt;
-            Home
-        &lt;/Main&gt;
+        &lt;div&gt;Home&lt;/div&gt;
     )
 }
 
 export default Home
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Not = () =&gt; {
     return (
-        &lt;Main 
-            title = "잘못된 페이지"
-            description="접근이 잘못된 페이지입니다."&gt;
-            Not
-        &lt;/Main&gt;
+        &lt;div&gt;Not&lt;/div&gt;
     )
 }
-
+    
 export default Not
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Port = () =&gt; {
     return (
-        &lt;Main 
-            title = "포트폴리오 사이트"
-            description="포트폴리오 사이트 튜토리얼 강의입니다."&gt;
-            Port
-        &lt;/Main&gt;
+        &lt;div&gt;Port&lt;/div&gt;
     )
 }
-
+    
 export default Port
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Search = () =&gt; {
     return (
-        &lt;Main 
-            title = "유투브 검색"
-            description="유튜브 검색 결과 페이지입니다."&gt;
-            Search
-        &lt;/Main&gt;
+        &lt;div&gt;Search&lt;/div&gt;
     )
 }
-
+    
 export default Search
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Today = () =&gt; {
     return (
-        &lt;Main 
-            title = "추천 영상"
-            description="오늘의 추천 유튜브 영상입니다."&gt;
-            Today
-        &lt;/Main&gt;
+        &lt;div&gt;Today&lt;/div&gt;
     )
 }
-
+    
 export default Today
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Video = () =&gt; {
     return (
-        &lt;Main 
-            title = "유튜브 비디오 영상"
-            description="유튜브 비디오 영상을 볼 수 있습니다."&gt;
-            Video
-        &lt;/Main&gt;
+        &lt;div&gt;Video&lt;/div&gt;
     )
 }
-
+    
 export default Video
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Webd = () =&gt; {
     return (
-        &lt;Main 
-            title = "웹디자인 기능사"
-            description="웹디자인 기능사 튜토리얼 강의입니다."&gt;
-            Webd
-        &lt;/Main&gt;
+        &lt;div&gt;Webd&lt;/div&gt;
     )
 }
-
+    
 export default Webd
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Website = () =&gt; {
     return (
-        &lt;Main 
-            title = "웹표준 사이트"
-            description="웹표준 사이트 튜토리얼 강의입니다."&gt;
-            Website
-        &lt;/Main&gt;
+        &lt;div&gt;Website&lt;/div&gt;
     )
 }
-
+    
 export default Website
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
 
 const Youtube = () =&gt; {
     return (
-        &lt;Main 
-            title = "유튜브 사이트"
-            description="유튜브 사이트 튜토리얼 강의입니다."&gt;
-            Youtube
-        &lt;/Main&gt;
+        &lt;div&gt;Youtube&lt;/div&gt;
     )
 }
-
+    
 export default Youtube
 </code></pre>
+                        <p>
+                            여기까지 잘 따라 했다면 터미널을 통해 <code>npm start</code> 라고 작성합니다. 
+                            브라우저가 열리고 Home라고 나타나면 성공한 것입니다. 
+                            주소창에 <code>/gsap</code>를 치면 gsap 텍스트가 나타납니다. 
+                            주소창에 <code>/webd</code>를 치면 webd 텍스트가 나타납니다. 
+                            주소창에 <code>/search/랜덤알파벳</code>을 치면 Search가 나타납니다. 
+                            이렇게 하면 페이지가 다 만들어 진것입니다. 
+                            만약에 <code>/webdd</code>와 같이 없는 주소를 넣으면 Not이라는 텍스트가 나타나야 합니다. 
+                            <code>/search</code>도 마찬가지로 뒤에 아이디와 같은 텍스트가 없다면 없는 페이지로 이동합니다.
+                        </p>
+
+                        <p>
+                            이렇게 나오면 성공한 것입니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube04-7.png" alt="youtube2023" />
+                        </div>
                     </div>
 
-                   
                     <div>
                         <h3>마무리</h3>
+                        <h4>git 올리기</h4>
                         <p>
-                            리액트의 단점이라고 꼽히는 SEO에 대해 약간의 대처를 하였습니다. 
-                            모든 페이지에 대해 메타 태그를 동적으로 설정하였고,
-                            main 컴퍼넌트와 비동기 방식으로 불러오기 위해 리액트 Suspense 기능을 사용하였습니다. 
-                            이 부분을 이용하여 화면 전환간 끊김 현상을 줄일 수 있고 ux를 조금 더 개선할 수 있습니다. 
-                            그럼 오늘도 수고하셨습니다. 🤭
+                            터미널에서 다음과 같이 작성하겠습니다.
+                            새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
+                        </p>
+<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+        modified:   src/App.js
+        new file:   src/pages/Channel.jsx
+        new file:   src/pages/Developer.jsx
+        new file:   src/pages/Gsap.jsx
+        new file:   src/pages/Home.jsx
+        new file:   src/pages/Not.jsx
+        new file:   src/pages/Port.jsx
+        new file:   src/pages/Search.jsx
+        new file:   src/pages/Today.jsx
+        new file:   src/pages/Video.jsx
+        new file:   src/pages/Webd.jsx
+        new file:   src/pages/Website.jsx
+        new file:   src/pages/Youtube.jsx
+
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "페이지 완성"
+[main c2d2a3e] 페이지 완성
+    13 files changed, 140 insertions(+), 3 deletions(-)
+    create mode 100644 src/pages/Channel.jsx
+    create mode 100644 src/pages/Developer.jsx
+    create mode 100644 src/pages/Gsap.jsx
+    create mode 100644 src/pages/Home.jsx
+    create mode 100644 src/pages/Not.jsx
+    create mode 100644 src/pages/Port.jsx
+    create mode 100644 src/pages/Search.jsx
+    create mode 100644 src/pages/Today.jsx
+    create mode 100644 src/pages/Video.jsx
+    create mode 100644 src/pages/Webd.jsx
+    create mode 100644 src/pages/Website.jsx
+    create mode 100644 src/pages/Youtube.jsx
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 2.35 KiB | 2.35 MiB/s, done.
+Total 17 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/webstoryboy/webs-youtube.git
+    7eaa67f..c2d2a3e  main -> main
+branch 'main' set up to track 'origin/main'.
+</code></pre>
+                        <p>
+                            리액트에서 가상의 페이지를 만들어 봤습니다. 
+                            실제 페이지가 아닌 가상의 주소를 만들었습니다. 
+                            리액트는 기본적인 구조가 Virtual DOM이기 때문에 이런 현상이 생기는거 이제는 이해가 가시죠?
+                            오늘도 수고하셨습니다. 🥹
                         </p>
                     </div>
 
                     <hr>
 
                     <div class="right_refer">
-                        <a href="https://port2023-react.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
                         <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLabEb4ygOmKDWCnsSKq2uP" target="_blank" class="sampleBtn">영상 보기</a>
+                        <a href="#" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
                     <div class="refer5_wrap">
                         <ul class="refer5">
                             <li><a href="https://webstoryboy.co.kr/1964">1. 나만의 유튜브 사이트 만들기 : 셋팅하기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : CSS 셋팅하기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1966">3. 나만의 유튜브 사이트 만들기 : 페이지 및 컴퍼넌트 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1967">4. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1968">5. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1969">6. 나만의 유튜브 사이트 만들기 : 메인 콘텐츠 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1970">7. 나만의 유튜브 사이트 만들기 : 추천 개발자 콘텐츠 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1971">8. 나만의 유튜브 사이트 만들기 : 나머지 페이지 콘텐츠 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1972">9. 나만의 유튜브 사이트 만들기 : 페이지 로딩 작업 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1973">10. 나만의 유튜브 사이트 만들기 : 서치 페이지 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1974">11. 나만의 유튜브 사이트 만들기 : 비디오 페이지 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1975">12. 나만의 유튜브 사이트 만들기 : 채널 페이지 만들기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1976">13. 나만의 유튜브 사이트 만들기 : 마무리 및 배포하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">2. 나만의 유튜브 사이트 만들기 : 라이브러리 설치하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">3. 나만의 유튜브 사이트 만들기 : Git 연동하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">4. 나만의 유튜브 사이트 만들기 : SCSS 셋팅하기</a></li>
+                            <li><a href="https://webstoryboy.co.kr/1965">5. 나만의 유튜브 사이트 만들기 : 페이지 만들기</a></li>
                         </ul>
                     </div>
                 </div>
