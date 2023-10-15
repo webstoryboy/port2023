@@ -72,7 +72,7 @@
                     <div class="desc">
                         <div class="left">
                             <span class="num">11</span>
-                            <div class="title">나만의 유튜브 사이트 만들기 : 추천 영상 작업</div>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 메인 콘텐츠 작업</div>
                             <span class="difficulty">난이도 <span>중간</span></span>
                         </div>
                         <div class="right">
@@ -150,455 +150,393 @@
                             <ul>
                                 <li>7. 헤더 영역 완성하기
                                     <ul>
-                                        <li>7_1. 헤더 영역 코딩하기</li>
-                                        <li>7_2. 헤더 영역 데이터 작업</li>
-                                        <li>7_3. 반복문과 map()</li>
-                                        <li>7_4. 메뉴 활성화하기</li>
+                                        <li>7_1. 헤더 영역 구조 잡기</li>
+                                        <li>7_2. 헤더 영역 디자인 작업</li>
                                     </ul>
                                 </li>
-                                <li>8. 컴퍼넌트 비동기 작업
+                                <li>8. 헤더 영역 데이터 작업
+                                    <ul>
+                                        <li>8_1. 헤더 영역 데이터 작업</li>
+                                        <li>8_2. 반복문과 map()</li>
+                                        <li>8_3. 메뉴 활성화하기</li>
+                                        <li>8_4. 컴퍼넌트 세부화 시키기</li>
+                                    </ul>
+                                </li>
+                                <li>9. 컴퍼넌트 비동기 작업
                                     <ul>
                                         <li>8_1. 컴퍼넌트 props 사용하기</li>
                                         <li>8_2. React.Suspense 사용하기</li>
                                     </ul>
                                 </li>
-                                <li>9. 페이지 SEO 작업
+                                <li>10. 페이지 SEO 작업
                                     <ul>
-                                        <li>9_1. 메인 페이지 SEO 설정하기</li>
-                                        <li>9_2. 모든 페이지 SEO 설정하기</li>
+                                        <li>10_1. 메인 페이지 SEO 설정하기</li>
+                                        <li>10_2. 모든 페이지 SEO 설정하기</li>
                                     </ul>
                                 </li>
-                                <li>10. 메인 콘텐츠 작업
+                                <li>11. 메인 콘텐츠 작업
                                     <ul>
-                                        <li>10_1. 검색 컴퍼넌트 작업하기</li>
-                                        <li>10_2. 메인 컴퍼넌트 작업하기</li>
-                                    </ul>
-                                </li>
-                                <li>11. 추천 영상 작업
-                                    <ul>
-                                        <li>11_1. 메인 추천 영상 작업</li>
-                                        <li>11_2. 추천 영상 반응형 작업</li>
-                                        <li>11_3. 추천 영상 페이지 작업</li>
+                                        <li>11_1. 검색 컴퍼넌트 작업하기</li>
+                                        <li>11_2. 메인 컴퍼넌트 작업하기</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <h3>11. 추천 영상 작업</h3>
+                    <h3>11. 메인 콘텐츠 작업</h3>
                     <div>
-                        <h4>11_1. 메인 추천 영상 작업</h4>
+                        <h4>11_1. 검색 컴퍼넌트 작업하기</h4>
                         <p>
-                            메인 페이지의 오늘의 추천 영상 섹션을 작업하겠습니다. 
-                            데이터는 다 만들어 놨기 때문에 복사해서 사용하시면 될 거 같습니다. 
-                            이미지는 상단 소스 받기에서 다운 받으시면 됩니다.
-                        </p>
-                        <p>
-                            우선 데이터를 추가하겠습니다. 
-                            <code>data</code> > <code>today.js</code> 파일을 만들겠습니다.
-                        </p>
-<pre><code class="language-js">import todayView01 from "../assets/img/today/todayView01.jpg";
-import todayView02 from "../assets/img/today/todayView02.jpg";
-import todayView03 from "../assets/img/today/todayView03.jpg";
-import todayView04 from "../assets/img/today/todayView04.jpg";
-import todayView05 from "../assets/img/today/todayView05.jpg";
-import todayView06 from "../assets/img/today/todayView06.jpg";
-import todayView07 from "../assets/img/today/todayView07.jpg";
-import todayView08 from "../assets/img/today/todayView08.jpg";
-
-export const todayText = [
-    {
-        img: todayView01,
-        title: "나만의 코딩 유튜브 사이트 만들기 프로젝트",
-        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
-        author : "webstoryboy",
-        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-        date: "2023.07.07",
-        page: "/youtube"
-    },{
-        img: todayView02,
-        title: "Vite를 이용하여 포트폴리오 사이트 만들기",
-        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
-        author : "webstoryboy",
-        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-        date: "2023.07.07",
-        page: "/port"
-    },{
-        img: todayView03,
-        title: "React.js를 이용하여 포트폴리오 사이트 만들기",
-        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
-        author : "webstoryboy",
-        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-        date: "2023.07.07",
-        page: "/port"
-    },{
-        img: todayView04,
-        title: "Vue.js를 이용하여 포트폴리오 사이트 만들기",
-        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
-        author : "webstoryboy",
-        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-        date: "2023.07.07",
-        page: "/port"
-    },{
-        img: todayView05,
-        title: "Next.js를 이용하여 포트폴리오 사이트 만들기",
-        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
-        author : "webstoryboy",
-        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-        date: "2023.07.07",
-        page: "/port"
-    },{
-        img: todayView06,
-        title: "GSAP를 이용하여 창의적인 사이트 만들기",
-        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
-        author : "webstoryboy",
-        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-        date: "2023.07.07",
-        page: "/gsap"
-    },{
-        img: todayView07,
-        title: "웹디자인 기능사는 이 영상으로 준비 끝",
-        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
-        author : "webstoryboy",
-        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-        date: "2023.07.07",
-        page: "/webd"
-    },{
-        img: todayView08,
-        title: "디자인 부터 코딩까지 준비 완료",
-        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
-        author : "webstoryboy",
-        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-        date: "2023.07.07",
-        page: "/website"
-    },
-]
-</code></pre>            
-                        <p>
-                            <code>components</code> > <code>contents</code> > <code>Today.jsx</code> 파일을 수정하겠습니다. 
+                            메인 페이지에 검색 영역을 작업해보겠습니다. 
+                            <code>components</code> > <code>section</code> > <code>Main.jsx</code> 수정하겠습니다.
+                            검색 영역 역시 모든 페이지에 들어가기 때문에 <code>main</code> 컴퍼넌트에 넣어주겠습니다.
+                            <code>main</code> 태그 안에 추가 하였습니다.
+                            import를 추가하여 연동까지 완료했습니다.
                         </p>
 <pre><code class="language-js">import React from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
-import { todayText } from '../../data/today'
-import { Link } from 'react-router-dom'
+import Header from './Header'
+import Footer from './Footer'
+import Search from './Search'  // 추가
 
-const Today = () =&gt; {
+const Main = ( props ) =&gt; {
     return (
-        &lt;section id='today'&gt;
-            &lt;div className='today__inner'&gt;
-                &lt;div className='today__thumb play__icon'&gt;
-                    &lt;Link to={todayText[0].page}&gt;
-                        &lt;img src={todayText[0].img} alt={todayText[0].title} /&gt;
-                    &lt;/Link&gt;
-                &lt;/div&gt;
-                &lt;div className='today__text'&gt;
-                    &lt;span className='today'&gt;today!&lt;/span&gt;
-                    &lt;h3 className='title'&gt;
-                        &lt;Link to={todayText[0].page}&gt;{todayText[0].title}&lt;/Link&gt;
-                    &lt;/h3&gt;
-                    &lt;p className='desc'&gt;{todayText[0].desc}&lt;/p&gt;
-                    &lt;div className='info'&gt;
-                        &lt;span className='author'&gt;
-                            &lt;Link to={`/channel/${todayText[0].channelId}`}&gt;{todayText[0].author}&lt;/Link&gt;
-                        &lt;/span&gt;
-                        &lt;span className='date'&gt;{todayText[0].date}&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/section&gt;
+        &lt;HelmetProvider&gt;
+            &lt;Helmet 
+                titleTemplate="%s | Webs Youtube" 
+                defaultTitle="Webs Youtube" 
+                defer={false}
+            &gt;
+                {props.title && &lt;title&gt;{props.title}&lt;/title&gt;}
+                &lt;meta name="description" content={props.description} /&gt;
+            &lt;/Helmet&gt;
+
+            &lt;Header /&gt;
+            &lt;main id="main" role="main"&gt;
+                &lt;Search /&gt;   
+                {props.children}
+            &lt;/main&gt;
+            &lt;Footer /&gt;
+        &lt;/HelmetProvider&gt;
     )
 }
 
-export default Today</code></pre>
+export default Main
+</code></pre>
+                        
+                        <p>
+                            <code>Search.jsx</code> 컴퍼넌트를 추가하고 다음과 같이 작업하겠습니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">components
+                                    <ul>
+                                        <li class="icon1">section
+                                            <ul>
+                                                <li class="icon2 m0">Footer.jsx</li>
+                                                <li class="icon2 m0">Header.jsx</li>
+                                                <li class="icon2 m0">Main.jsx</li>
+                                                <li class="icon2 m0">Search.jsx</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+<pre><code class="language-js">import React from 'react'
+
+const Search = () =&gt; {
+    return (
+        &lt;div id='search'&gt;
+            &lt;div className='search__inner'&gt;
+                &lt;label htmlFor='searchInput'&gt;
+                    &lt;span className='ir'&gt;검색&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;input 
+                    type='search' 
+                    id='searchInput' 
+                    placeholder='검색어를 입력해주세요' 
+                    autoComplete='off' 
+                    className='search__input' 
+                /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    )
+}
+export default Search</code></pre>
 
                         <p>
-                            <code>scss</code> > <code>section</code> > <code>_today.scss</code> 파일을 수정하겠습니다. 
-                            SCSS 파일을 추가하면 <code>style.scss</code>에 추가하여야 연동이 됩니다.
+                            <code>_search.scss</code> 파일도 추가하고 <code>style.scss</code> 에도 추가해야 합니다.
                         </p>
-<pre><code class="language-scss">.today__inner {
-    display: flex;
-    color: #fff;
-    overflow: hidden;
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">assets
+                                    <ul>
+                                        <li class="icon1">fonts</li>
+                                        <li class="icon1">img</li>
+                                        <li class="icon1">scss
+                                            <ul>
+                                                <li class="icon1">section
+                                                    <ul>
+                                                        <li class="icon2 m0">_layout.scss</li>
+                                                        <li class="icon2 m0">_header.scss</li>
+                                                        <li class="icon2 m0">_search.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon1">setting
+                                                    <ul>
+                                                        <li class="icon2 m0">_common.scss</li>
+                                                        <li class="icon2 m0">_fonts.scss</li>
+                                                        <li class="icon2 m0">_mixin.scss</li>
+                                                        <li class="icon2 m0">_reset.scss</li>
+                                                        <li class="icon2 m0">_vars.scss</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon2 m0">style.scss</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+<pre><code class="language-scss">@charset "UTF-8";
+
+// setting
+@import "setting/fonts";
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+@import "setting/common";
+
+// section
+@import "section/layout";
+@import "section/header";
+@import "section/search";   // 추가
+</code></pre>
+<pre><code class="language-scss">.search__inner {
     position: relative;
-    margin-bottom: 50px;
-    background-color: #111;
+    width: 100%;
+    height: 80px;
+    padding: 17px 40px;
+    border-bottom: 1px solid var(--black100);
 
-    .today__thumb {
-        width: 40%;
+    label {
+        width: 24px;
+        height: 24px;
+        background-image: url(../../img/icon/search.svg);
+        position: absolute;
+        left: 53px;
+        top: 28px;
+        background-size: cover;
     }
-    .today__text {
-        width: 60%;
-        padding: 2rem;
 
-        .today {
-            background-color: #b70208;
-            padding: 2px 50px;
-            display: inline-block;
-            border-radius: 40px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-        .title {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            @include line-one;
-        }
-        .desc {
-            margin-bottom: 1rem;
-            @include line(4);
-        }
-        .info {
-            .author {
-                font-size: 1rem;
-                margin-right: 10px;
-                font-weight: 900;
-                text-decoration: underline;
-                text-underline-position: under;
-                text-transform: uppercase;
-            }
-            .date {
-                font-size: 14px;
-            }
-        }
-    }
-}
-@media (max-width: 1700px){
-    .today__inner {
-        .today__thumb {
-            width: 500px;
-        }
-        .today__text {
-            width: calc(100% - 500px);
-    
-            .desc {
-                margin-bottom: 1rem;
-                @include line(2);
-            }
-        }
-    }
-}
-@media (max-width: 1200px){
-    .today__inner {
-        flex-direction: column;
-
-        .today__thumb {
-            width: 100%;
-        }
-        .today__text { 
-            width: 100%;
-
-            .title {
-                font-size: 24px;
-            }
-
-            .desc {
-                display: none;
-            }
-        }
+    input {
+        background-color: var(--black100);
+        border: 1px solid var(--black200);
+        width: 100%;
+        padding: 14px 45px;
+        border-radius: 40px;
+        font-size: 16px;
+        color: var(--white);
     }
 }</code></pre>
 
                         <p>
-                            <code>scss</code> > <code>setting</code> > <code>_mixin.scss</code> 파일에 수정하겠습니다.
+                            나머지 기타 부분도 수정하겠습니다. 
+                            <code>scss</code> > <code>section</code> > <code>_layout.scss</code>를 수정하겠습니다.
                         </p>
-<pre><code class="language-scss">// 가운데 정렬
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-    
-// 양쪽 정렬
-@mixin flex-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-// 중앙 정렬
-@mixin position-center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-// 상단 고정
-@mixin position-fixed {
+<pre><code class="language-scss">#header {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-}   
+    width: 260px;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 10000;
+    border-right: 1px solid var(--black100);
+}
+#main {
+    max-width: 2000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: 260px;
+}
+#footer {
+    text-align: center;
+    background-color: var(--black100);
+    border-top: 1px solid (var--black100);
+    padding: 20px;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    color: var(--black400);
+    font-size: 0.8rem;
+}</code></pre>
+                        <p> 
+                            푸터 부분은 간단하기 때문에 바로 처리하겠습니다.
+                            <code>components</code> > <code>section</code> > <code>Footer.jsx</code>에서 수정하겠습니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
 
-// 한줄 효과
-@mixin line-one {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+const Footer = () =&gt; {
+    return (
+        &lt;footer id='footer' role="contentinfo"&gt; 
+            &lt;a href="mailto:webstoryboy@naver.com" rel="noopener noreferrer"&gt;
+                webstoryboy@naver.com
+            &lt;/a&gt;
+        &lt;/footer&gt;
+    )
 }
 
-// 두줄 효과
-@mixin line-two {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; 
-    -webkit-box-orient: vertical;
-}
+export default Footer
+</code></pre>   
+                        <p>
+                            완성된 화면입니다. 푸터까지 확인해주세요!
+                        </p>
+                        <div class="sampleImg">
+                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-13.png" alt="youtube2023" />
+                        </div>
 
-// 두줄 이상
-@mixin line($line) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: $line; 
-    -webkit-box-orient: vertical;
-}
-</code></pre>
+                        
                     </div>
-
+                    
                     <div class="mt80">
-                        <h4>11_2. 추천 영상 반응형 작업</h4>
+                        <h4>11_2. 메인 컴퍼넌트 작업하기</h4>
                         <p>
-                            반응형 작업을 위해 다음을 수정하겠습니다. 
-                            <code>scss</code> > <code>setting</code> > <code>_common.scss</code>를 수정하겠습니다.
-                        </p>
-<pre><code class="language-scss">body {
-    background-color: var(--black);
-    color: var(--white);
-}
-
-// 각 섹션 공통 요소
-section {
-    padding: 40px;
-
-    @media (max-width: 800px){
-        padding: 20px;
-    }
-}
-</code></pre>
-                        <p>
-                            <code>scss</code> > <code>section</code> > <code>_search.scss</code>를 수정하겠습니다.
-                        </p>
-<pre><code class="language-scss">.search__inner {
-    padding: 17px 40px;
-    width: 100%;
-    position: relative;
-    border-bottom: 1px solid #161616;
-    height: 81px;
-
-    label {
-        position: absolute;
-        left: 53px; 
-        top: 28px;
-        width: 24px;
-        height: 24px;
-        background-image: url(../../img/icon/search.svg);
-        background-size: cover;
-    }
-    input {
-        background-color: #111;
-        border: 1px solid #161616;
-        border-radius: 40px;
-        font-size: 16px;
-        padding: 14px 45px;
-        width: 100%;
-        color: #fff;
-    }
-}
-
-@media (max-width: 800px){
-    #today {
-        margin-top: 60px;
-    }
-    .search__inner {
-        position: fixed;
-        left: 0; 
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        background-color: rgba(0,0,0,0.9);
-        padding: 17px 20px 17px 200px;
-
-        label {
-            left: 213px;
-        }
-        input {
-            padding: 14px 14px 14px 45px;
-        }
-    }
-}
-</code></pre>
-                        <p>
-                            추천 영상 메인 페이지 결과물입니다.
-                        </p>
-<div class="sampleImg">
-    <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-15.png" alt="youtube2023" />
-</div>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>11_3. 추천 영상 페이지 작업</h4>
-                        <p>
-                            이번에는 추천 영상 페이지 작업을 하겠습니다. 
-                            여기에서는 모든 추천 영상을 다 보여주도록 하겠습니다. 
-                            작동 방식은 메인과 동일합니다. 
+                            메인 콘텐츠에는 추천 영상, 추천 개발자, 웹디자인 기능사, 웹표준 사이트, GSAP, 포트폴리오, 유튜브 코딩 등 7가지 컴퍼넌트로 구성되어 있습니다. 
+                            이 컴퍼넌트들을 클릭하면 해당 페이지도 이동되는 구조입니다. 
+                            그럼 하나씩 작업해보겠습니다. 
                         </p>
                         <p>
-                            <code>pages</code> > <code>Today.jsx</code> 페이지를 수정하겠습니다. 
+                            <code>components</code> > <code>pages</code> > <code>Home.jsx</code> 페이지를 수정하겠습니다.
                         </p>
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
+import Today from '../components/contents/Today'
+import Developer from '../components/contents/Developer'
+import Webd from '../components/contents/Webd'
+import Website from '../components/contents/Website'
+import Gsap from '../components/contents/Gsap'
+import Portfolio from '../components/contents/Portfolio'
+import Youtube from '../components/contents/Youtube'
 
-import { todayText } from '../data/today'
-import { Link } from 'react-router-dom'
-
-const Today = () =&gt; {
+const Home = () => {
     return (
         &lt;Main 
-            title = "추천 영상"
-            description="오늘의 추천 유튜브 영상입니다."&gt;
+            title = "웹스토리보이 유튜브"
+            description="웹스토리보이 유튜버 사이트에 오신 것을 환영합니다."&gt;
             
-            &lt;section id='todayPage'&gt;
-                &lt;h2&gt;🥰 오늘의 추천 영상입니다.&lt;/h2&gt;
-
-                {todayText.map((today, key) =&gt; (
-                    &lt;div className='today__inner' key={key}&gt;
-                        &lt;div className='today__thumb play__icon'&gt;
-                            &lt;Link to={today.page}&gt;
-                                &lt;img src={today.img} alt={today.title} /&gt;
-                            &lt;/Link&gt;
-                        &lt;/div&gt;
-                        &lt;div className='today__text'&gt;
-                            &lt;span className='today'&gt;today!&lt;/span&gt;
-                            &lt;h3 className='title'&gt;
-                                &lt;Link to={today.page}&gt;{today.title}&lt;/Link&gt;
-                            &lt;/h3&gt;
-                            &lt;p className='desc'&gt;{today.desc}&lt;/p&gt;
-                            &lt;div className='info'&gt;
-                                &lt;span className='author'&gt;
-                                    &lt;Link to={`/channel/${today.channelId}`}&gt;{today.author}&lt;/Link&gt;
-                                &lt;/span&gt;
-                                &lt;span className='date'&gt;{today.date}&lt;/span&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                ))}
-            &lt;/section&gt;
+            &lt;Today /&gt;
+            &lt;Developer /&gt;
+            &lt;Webd /&gt;
+            &lt;Website /&gt;
+            &lt;Gsap /&gt;
+            &lt;Portfolio /&gt;
+            &lt;Youtube /&gt;
         &lt;/Main&gt;
+    )
+}
+
+export default Home
+</code></pre>
+                        <p>
+                            컴퍼넌트를 만들었기 때문에 폴더도 만들고 각 컴퍼넌트도 만들어 주겠습니다. 
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">components
+                                    <ul>
+                                        <li class="icon1">contents
+                                            <ul>
+                                                <li class="icon2 m0">Developer.jsx</li>
+                                                <li class="icon2 m0">Gsap.jsx</li>
+                                                <li class="icon2 m0">Portfolio.jsx</li>
+                                                <li class="icon2 m0">Today.jsx</li>
+                                                <li class="icon2 m0">Webd.jsx</li>
+                                                <li class="icon2 m0">Website.jsx</li>
+                                                <li class="icon2 m0">Youtube.jsx</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+<pre><code class="language-js">import React from 'react'
+
+const Developer = () => {
+    return (
+        &lt;div&gt;Developer&lt;/div&gt;
+    )
+}
+
+export default Developer
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Gsap = () => {
+    return (
+        &lt;div&gt;Gsap&lt;/div&gt;
+    )
+}
+
+export default Gsap
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Portfolio = () => {
+    return (
+        &lt;div&gt;Portfolio&lt;/div&gt;
+    )
+}
+
+export default Portfolio
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Today = () => {
+    return (
+        &lt;div&gt;Today&lt;/div&gt;
     )
 }
 
 export default Today
 </code></pre>
-                        <p>
-                            추천 영상 페이지 결과물입니다.
-                        </p>
-                        <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-14.png" alt="youtube2023" />
-                        </div>
+<pre><code class="language-js">import React from 'react'
+
+const Webd = () => {
+    return (
+        &lt;div&gt;Webd&lt;/div&gt;
+    )
+}
+
+export default Webd
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Website = () => {
+    return (
+        &lt;div&gt;Webd&lt;/div&gt;
+    )
+}
+
+export default Website
+</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+const Youtube = () => {
+    return (
+        &lt;div&gt;Webd&lt;/div&gt;
+    )
+}
+
+export default Youtube
+</code></pre>
+
                     </div>
+
+
 
                     <div>
                         <h3>마무리</h3>
@@ -607,43 +545,324 @@ export default Today
                             터미널에서 다음과 같이 작성하겠습니다.
                             새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
                         </p>
-<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+<pre><code class="language-js">webstoryboy@Webstoryboyui-iMac webs-youtube % git add .
+webstoryboy@Webstoryboyui-iMac webs-youtube % git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
     (use "git restore --staged <file>..." to unstage)
+        new file:   src/assets/img/gsap/gsap01.jpg
+        new file:   src/assets/img/gsap/gsap02.jpg
+        new file:   src/assets/img/gsap/gsap03.jpg
+        new file:   src/assets/img/gsap/gsap04.jpg
+        new file:   src/assets/img/gsap/gsap05.jpg
+        new file:   src/assets/img/gsap/gsap06.jpg
+        new file:   src/assets/img/gsap/gsap07.jpg
+        new file:   src/assets/img/gsap/gsap08.jpg
+        new file:   src/assets/img/gsap/gsap09.jpg
+        new file:   src/assets/img/gsap/gsap10.jpg
+        new file:   src/assets/img/gsap/gsap11.jpg
+        new file:   src/assets/img/gsap/gsap12.jpg
+        new file:   src/assets/img/gsap/gsap13.jpg
+        new file:   src/assets/img/gsap/gsap14.jpg
+        new file:   src/assets/img/gsap/gsap15.jpg
+        new file:   src/assets/img/icon/play.svg
+        new file:   src/assets/img/icon/search.svg
+        new file:   src/assets/img/port/port-next01.jpg
+        new file:   src/assets/img/port/port-next02.jpg
+        new file:   src/assets/img/port/port-next03.jpg
+        new file:   src/assets/img/port/port-next04.jpg
+        new file:   src/assets/img/port/port-next05.jpg
+        new file:   src/assets/img/port/port-next06.jpg
+        new file:   src/assets/img/port/port-next07.jpg
+        new file:   src/assets/img/port/port-next08.jpg
+        new file:   src/assets/img/port/port-next09.jpg
+        new file:   src/assets/img/port/port-next10.jpg
+        new file:   src/assets/img/port/port-react01.jpg
+        new file:   src/assets/img/port/port-react02.jpg
+        new file:   src/assets/img/port/port-react03.jpg
+        new file:   src/assets/img/port/port-react04.jpg
+        new file:   src/assets/img/port/port-react05.jpg
+        new file:   src/assets/img/port/port-react06.jpg
+        new file:   src/assets/img/port/port-react07.jpg
+        new file:   src/assets/img/port/port-react08.jpg
+        new file:   src/assets/img/port/port-react09.jpg
+        new file:   src/assets/img/port/port-react10.jpg
+        new file:   src/assets/img/port/port-vite01.jpg
+        new file:   src/assets/img/port/port-vite02.jpg
+        new file:   src/assets/img/port/port-vite03.jpg
+        new file:   src/assets/img/port/port-vite04.jpg
+        new file:   src/assets/img/port/port-vite05.jpg
+        new file:   src/assets/img/port/port-vite06.jpg
+        new file:   src/assets/img/port/port-vite07.jpg
+        new file:   src/assets/img/port/port-vite08.jpg
+        new file:   src/assets/img/port/port-vite09.jpg
+        new file:   src/assets/img/port/port-vite10.jpg
+        new file:   src/assets/img/port/port-vue01.jpg
+        new file:   src/assets/img/port/port-vue02.jpg
+        new file:   src/assets/img/port/port-vue03.jpg
+        new file:   src/assets/img/port/port-vue04.jpg
+        new file:   src/assets/img/port/port-vue05.jpg
+        new file:   src/assets/img/port/port-vue06.jpg
+        new file:   src/assets/img/port/port-vue07.jpg
+        new file:   src/assets/img/port/port-vue08.jpg
+        new file:   src/assets/img/port/port-vue09.jpg
+        new file:   src/assets/img/port/port-vue10.jpg
+        new file:   src/assets/img/site/site01.jpg
+        new file:   src/assets/img/site/site02.jpg
+        new file:   src/assets/img/site/site03.jpg
+        new file:   src/assets/img/site/site04.jpg
+        new file:   src/assets/img/site/site05.jpg
+        new file:   src/assets/img/site/site06.jpg
+        new file:   src/assets/img/site/site07.jpg
+        new file:   src/assets/img/site/site08.jpg
+        new file:   src/assets/img/site/site09.jpg
+        new file:   src/assets/img/site/site10.jpg
+        new file:   src/assets/img/site/site11.jpg
+        new file:   src/assets/img/site/site12.jpg
+        new file:   src/assets/img/site/site13.jpg
+        new file:   src/assets/img/site/site14.jpg
+        new file:   src/assets/img/site/site15.jpg
+        new file:   src/assets/img/site/site16.jpg
+        new file:   src/assets/img/site/site17.jpg
+        new file:   src/assets/img/site/site18.jpg
+        new file:   src/assets/img/site/site19.jpg
+        new file:   src/assets/img/site/site20.jpg
+        new file:   src/assets/img/site/site21.jpg
+        new file:   src/assets/img/site/site22.jpg
+        new file:   src/assets/img/site/site23.jpg
+        new file:   src/assets/img/site/site24.jpg
+        new file:   src/assets/img/site/site25.jpg
+        new file:   src/assets/img/today/todayView01.jpg
+        new file:   src/assets/img/today/todayView02.jpg
+        new file:   src/assets/img/today/todayView03.jpg
+        new file:   src/assets/img/today/todayView04.jpg
+        new file:   src/assets/img/today/todayView05.jpg
+        new file:   src/assets/img/today/todayView06.jpg
+        new file:   src/assets/img/today/todayView07.jpg
+        new file:   src/assets/img/today/todayView08.jpg
+        new file:   src/assets/img/webd/webd01.jpg
+        new file:   src/assets/img/webd/webd02.jpg
+        new file:   src/assets/img/webd/webd03.jpg
+        new file:   src/assets/img/webd/webd04.jpg
+        new file:   src/assets/img/webd/webd05.jpg
+        new file:   src/assets/img/webd/webd06.jpg
+        new file:   src/assets/img/webd/webd07.jpg
+        new file:   src/assets/img/webd/webd08.jpg
+        new file:   src/assets/img/webd/webd09.jpg
+        new file:   src/assets/img/webd/webd10.jpg
+        new file:   src/assets/img/webd/webd11.jpg
+        new file:   src/assets/img/webd/webd12.jpg
+        new file:   src/assets/img/webd/webd13.jpg
+        new file:   src/assets/img/webd/webd14.jpg
+        new file:   src/assets/img/webd/webd15.jpg
+        new file:   src/assets/img/webd/webd16.jpg
+        new file:   src/assets/img/webd/webd17.jpg
+        new file:   src/assets/img/webd/webd18.jpg
+        new file:   src/assets/img/webd/webd19.jpg
+        new file:   src/assets/img/webd/webd20.jpg
+        new file:   src/assets/img/webd/webd21.jpg
+        new file:   src/assets/img/webd/webd22.jpg
+        new file:   src/assets/img/webd/webd23.jpg
+        new file:   src/assets/img/webd/webd24.jpg
+        new file:   src/assets/img/webd/webd25.jpg
+        new file:   src/assets/img/webd/webd26.jpg
+        new file:   src/assets/img/webd/webd27.jpg
+        new file:   src/assets/img/webd/webd28.jpg
+        new file:   src/assets/img/webd/webd29.jpg
+        new file:   src/assets/img/webd/webd30.jpg
+        new file:   src/assets/img/webd/webd31.jpg
+        new file:   src/assets/img/webd/webd32.jpg
+        new file:   src/assets/img/webd/webd33.jpg
+        new file:   src/assets/img/webd/webd34.jpg
+        new file:   src/assets/img/webd/webd35.jpg
+        new file:   src/assets/img/webd/webd36.jpg
+        new file:   src/assets/img/webd/webd37.jpg
+        new file:   src/assets/img/webd/webd38.jpg
+        new file:   src/assets/img/webd/webd39.jpg
+        new file:   src/assets/img/youtube/youtube01.jpg
+        new file:   src/assets/img/youtube/youtube02.jpg
+        new file:   src/assets/img/youtube/youtube03.jpg
+        new file:   src/assets/img/youtube/youtube04.jpg
+        new file:   src/assets/img/youtube/youtube05.jpg
         modified:   src/assets/scss/section/_layout.scss
-        modified:   src/assets/scss/section/_search.scss
-        new file:   src/assets/scss/section/_today.scss
-        modified:   src/assets/scss/setting/_common.scss
-        modified:   src/assets/scss/setting/_mixin.scss
+        new file:   src/assets/scss/section/_search.scss
+        modified:   src/assets/scss/setting/_vars.scss
         modified:   src/assets/scss/style.scss
-        modified:   src/components/contents/Today.jsx
-        new file:   src/data/today.js
-        modified:   src/pages/Today.jsx
+        new file:   src/components/contents/Developer.jsx
+        new file:   src/components/contents/Gsap.jsx
+        new file:   src/components/contents/Portfolio.jsx
+        new file:   src/components/contents/Today.jsx
+        new file:   src/components/contents/Webd.jsx
+        new file:   src/components/contents/Website.jsx
+        new file:   src/components/contents/Youtube.jsx
+        modified:   src/components/section/Footer.jsx
+        modified:   src/components/section/Main.jsx
+        new file:   src/components/section/Search.jsx
+        modified:   src/pages/Home.jsx
 
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "추천 영상 작업"
-[main 290dfc3] 추천 영상 작업
-    9 files changed, 341 insertions(+), 3 deletions(-)
-    create mode 100644 src/assets/scss/section/_today.scss
-    create mode 100644 src/data/today.js
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
-Enumerating objects: 37, done.
-Counting objects: 100% (37/37), done.
-Delta compression using up to 10 threads
-Compressing objects: 100% (20/20), done.
-Writing objects: 100% (20/20), 4.56 KiB | 4.56 MiB/s, done.
-Total 20 (delta 9), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (9/9), completed with 8 local objects.
+webstoryboy@Webstoryboyui-iMac webs-youtube % git commit -m "메인 콘텐츠 작업"
+[main 7412436] 메인 콘텐츠 작업
+    149 files changed, 153 insertions(+), 11 deletions(-)
+    create mode 100644 src/assets/img/gsap/gsap01.jpg
+    create mode 100644 src/assets/img/gsap/gsap02.jpg
+    create mode 100644 src/assets/img/gsap/gsap03.jpg
+    create mode 100644 src/assets/img/gsap/gsap04.jpg
+    create mode 100644 src/assets/img/gsap/gsap05.jpg
+    create mode 100644 src/assets/img/gsap/gsap06.jpg
+    create mode 100644 src/assets/img/gsap/gsap07.jpg
+    create mode 100644 src/assets/img/gsap/gsap08.jpg
+    create mode 100644 src/assets/img/gsap/gsap09.jpg
+    create mode 100644 src/assets/img/gsap/gsap10.jpg
+    create mode 100644 src/assets/img/gsap/gsap11.jpg
+    create mode 100644 src/assets/img/gsap/gsap12.jpg
+    create mode 100644 src/assets/img/gsap/gsap13.jpg
+    create mode 100644 src/assets/img/gsap/gsap14.jpg
+    create mode 100644 src/assets/img/gsap/gsap15.jpg
+    create mode 100644 src/assets/img/icon/play.svg
+    create mode 100644 src/assets/img/icon/search.svg
+    create mode 100644 src/assets/img/port/port-next01.jpg
+    create mode 100644 src/assets/img/port/port-next02.jpg
+    create mode 100644 src/assets/img/port/port-next03.jpg
+    create mode 100644 src/assets/img/port/port-next04.jpg
+    create mode 100644 src/assets/img/port/port-next05.jpg
+    create mode 100644 src/assets/img/port/port-next06.jpg
+    create mode 100644 src/assets/img/port/port-next07.jpg
+    create mode 100644 src/assets/img/port/port-next08.jpg
+    create mode 100644 src/assets/img/port/port-next09.jpg
+    create mode 100644 src/assets/img/port/port-next10.jpg
+    create mode 100644 src/assets/img/port/port-react01.jpg
+    create mode 100644 src/assets/img/port/port-react02.jpg
+    create mode 100644 src/assets/img/port/port-react03.jpg
+    create mode 100644 src/assets/img/port/port-react04.jpg
+    create mode 100644 src/assets/img/port/port-react05.jpg
+    create mode 100644 src/assets/img/port/port-react06.jpg
+    create mode 100644 src/assets/img/port/port-react07.jpg
+    create mode 100644 src/assets/img/port/port-react08.jpg
+    create mode 100644 src/assets/img/port/port-react09.jpg
+    create mode 100644 src/assets/img/port/port-react10.jpg
+    create mode 100644 src/assets/img/port/port-vite01.jpg
+    create mode 100644 src/assets/img/port/port-vite02.jpg
+    create mode 100644 src/assets/img/port/port-vite03.jpg
+    create mode 100644 src/assets/img/port/port-vite04.jpg
+    create mode 100644 src/assets/img/port/port-vite05.jpg
+    create mode 100644 src/assets/img/port/port-vite06.jpg
+    create mode 100644 src/assets/img/port/port-vite07.jpg
+    create mode 100644 src/assets/img/port/port-vite08.jpg
+    create mode 100644 src/assets/img/port/port-vite09.jpg
+    create mode 100644 src/assets/img/port/port-vite10.jpg
+    create mode 100644 src/assets/img/port/port-vue01.jpg
+    create mode 100644 src/assets/img/port/port-vue02.jpg
+    create mode 100644 src/assets/img/port/port-vue03.jpg
+    create mode 100644 src/assets/img/port/port-vue04.jpg
+    create mode 100644 src/assets/img/port/port-vue05.jpg
+    create mode 100644 src/assets/img/port/port-vue06.jpg
+    create mode 100644 src/assets/img/port/port-vue07.jpg
+    create mode 100644 src/assets/img/port/port-vue08.jpg
+    create mode 100644 src/assets/img/port/port-vue09.jpg
+    create mode 100644 src/assets/img/port/port-vue10.jpg
+    create mode 100644 src/assets/img/site/site01.jpg
+    create mode 100644 src/assets/img/site/site02.jpg
+    create mode 100644 src/assets/img/site/site03.jpg
+    create mode 100644 src/assets/img/site/site04.jpg
+    create mode 100644 src/assets/img/site/site05.jpg
+    create mode 100644 src/assets/img/site/site06.jpg
+    create mode 100644 src/assets/img/site/site07.jpg
+    create mode 100644 src/assets/img/site/site08.jpg
+    create mode 100644 src/assets/img/site/site09.jpg
+    create mode 100644 src/assets/img/site/site10.jpg
+    create mode 100644 src/assets/img/site/site11.jpg
+    create mode 100644 src/assets/img/site/site12.jpg
+    create mode 100644 src/assets/img/site/site13.jpg
+    create mode 100644 src/assets/img/site/site14.jpg
+    create mode 100644 src/assets/img/site/site15.jpg
+    create mode 100644 src/assets/img/site/site16.jpg
+    create mode 100644 src/assets/img/site/site17.jpg
+    create mode 100644 src/assets/img/site/site18.jpg
+    create mode 100644 src/assets/img/site/site19.jpg
+    create mode 100644 src/assets/img/site/site20.jpg
+    create mode 100644 src/assets/img/site/site21.jpg
+    create mode 100644 src/assets/img/site/site22.jpg
+    create mode 100644 src/assets/img/site/site23.jpg
+    create mode 100644 src/assets/img/site/site24.jpg
+    create mode 100644 src/assets/img/site/site25.jpg
+    create mode 100644 src/assets/img/today/todayView01.jpg
+    create mode 100644 src/assets/img/today/todayView02.jpg
+    create mode 100644 src/assets/img/today/todayView03.jpg
+    create mode 100644 src/assets/img/today/todayView04.jpg
+    create mode 100644 src/assets/img/today/todayView05.jpg
+    create mode 100644 src/assets/img/today/todayView06.jpg
+    create mode 100644 src/assets/img/today/todayView07.jpg
+    create mode 100644 src/assets/img/today/todayView08.jpg
+    create mode 100644 src/assets/img/webd/webd01.jpg
+    create mode 100644 src/assets/img/webd/webd02.jpg
+    create mode 100644 src/assets/img/webd/webd03.jpg
+    create mode 100644 src/assets/img/webd/webd04.jpg
+    create mode 100644 src/assets/img/webd/webd05.jpg
+    create mode 100644 src/assets/img/webd/webd06.jpg
+    create mode 100644 src/assets/img/webd/webd07.jpg
+    create mode 100644 src/assets/img/webd/webd08.jpg
+    create mode 100644 src/assets/img/webd/webd09.jpg
+    create mode 100644 src/assets/img/webd/webd10.jpg
+    create mode 100644 src/assets/img/webd/webd11.jpg
+    create mode 100644 src/assets/img/webd/webd12.jpg
+    create mode 100644 src/assets/img/webd/webd13.jpg
+    create mode 100644 src/assets/img/webd/webd14.jpg
+    create mode 100644 src/assets/img/webd/webd15.jpg
+    create mode 100644 src/assets/img/webd/webd16.jpg
+    create mode 100644 src/assets/img/webd/webd17.jpg
+    create mode 100644 src/assets/img/webd/webd18.jpg
+    create mode 100644 src/assets/img/webd/webd19.jpg
+    create mode 100644 src/assets/img/webd/webd20.jpg
+    create mode 100644 src/assets/img/webd/webd21.jpg
+    create mode 100644 src/assets/img/webd/webd22.jpg
+    create mode 100644 src/assets/img/webd/webd23.jpg
+    create mode 100644 src/assets/img/webd/webd24.jpg
+    create mode 100644 src/assets/img/webd/webd25.jpg
+    create mode 100644 src/assets/img/webd/webd26.jpg
+    create mode 100644 src/assets/img/webd/webd27.jpg
+    create mode 100644 src/assets/img/webd/webd28.jpg
+    create mode 100644 src/assets/img/webd/webd29.jpg
+    create mode 100644 src/assets/img/webd/webd30.jpg
+    create mode 100644 src/assets/img/webd/webd31.jpg
+    create mode 100644 src/assets/img/webd/webd32.jpg
+    create mode 100644 src/assets/img/webd/webd33.jpg
+    create mode 100644 src/assets/img/webd/webd34.jpg
+    create mode 100644 src/assets/img/webd/webd35.jpg
+    create mode 100644 src/assets/img/webd/webd36.jpg
+    create mode 100644 src/assets/img/webd/webd37.jpg
+    create mode 100644 src/assets/img/webd/webd38.jpg
+    create mode 100644 src/assets/img/webd/webd39.jpg
+    create mode 100644 src/assets/img/youtube/youtube01.jpg
+    create mode 100644 src/assets/img/youtube/youtube02.jpg
+    create mode 100644 src/assets/img/youtube/youtube03.jpg
+    create mode 100644 src/assets/img/youtube/youtube04.jpg
+    create mode 100644 src/assets/img/youtube/youtube05.jpg
+    create mode 100644 src/assets/scss/section/_search.scss
+    create mode 100644 src/components/contents/Developer.jsx
+    create mode 100644 src/components/contents/Gsap.jsx
+    create mode 100644 src/components/contents/Portfolio.jsx
+    create mode 100644 src/components/contents/Today.jsx
+    create mode 100644 src/components/contents/Webd.jsx
+    create mode 100644 src/components/contents/Website.jsx
+    create mode 100644 src/components/contents/Youtube.jsx
+    create mode 100644 src/components/section/Search.jsx
+webstoryboy@Webstoryboyui-iMac webs-youtube % git push -u origin main
+Enumerating objects: 177, done.
+Counting objects: 100% (177/177), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (162/162), done.
+Writing objects: 100% (162/162), 20.82 MiB | 3.73 MiB/s, done.
+Total 162 (delta 59), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (59/59), completed with 7 local objects.
 To https://github.com/webstoryboy/webs-youtube.git
-    0126fe6..290dfc3  main -> main
+    ebf550b..7412436  main -> main
+branch 'main' set up to track 'origin/main'.
 </code></pre>
                         <p>
-                           추천 영상 섹션과 페이지를 완성하였습니다. 
-                           리액트보다는 반응형 CSS가 조금 더 고생스러웠네요! 
-                           나머지 페이지도 거의 동일하기 때문에 이제는 조금 더 쉽게 작업할 수 있습니다.
+                           메인 콘텐츠 및 페이지 작업을 위한 셋팅이 완료되었습니다. 
+                           이미지도 다운 받으셔서 업로드 해주면 다음에 작업할 때 편합니다. 
                            오늘도 수고하셨습니다. 😘
                         </p>
                     </div>
@@ -669,7 +888,6 @@ To https://github.com/webstoryboy/webs-youtube.git
                             <li><a href="https://webstoryboy.co.kr/1965">8. 나만의 유튜브 사이트 만들기 : 컴퍼넌트 비동기 작업</a></li>
                             <li><a href="https://webstoryboy.co.kr/1965">9. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
                             <li><a href="https://webstoryboy.co.kr/1965">10. 나만의 유튜브 사이트 만들기 : 메인 콘텐츠 작업</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1965">11. 나만의 유튜브 사이트 만들기 : 추천 영상 작업</a></li>
                         </ul>
                     </div>
                 </div>

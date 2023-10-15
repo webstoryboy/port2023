@@ -72,7 +72,7 @@
                     <div class="desc">
                         <div class="left">
                             <span class="num">09</span>
-                            <div class="title">나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</div>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 컴퍼넌트 비동기 작업</div>
                             <span class="difficulty">난이도 <span>중간</span></span>
                         </div>
                         <div class="right">
@@ -150,97 +150,171 @@
                             <ul>
                                 <li>7. 헤더 영역 완성하기
                                     <ul>
-                                        <li>7_1. 헤더 영역 코딩하기</li>
-                                        <li>7_2. 헤더 영역 데이터 작업</li>
-                                        <li>7_3. 반복문과 map()</li>
-                                        <li>7_4. 메뉴 활성화하기</li>
+                                        <li>7_1. 헤더 영역 구조 잡기</li>
+                                        <li>7_2. 헤더 영역 디자인 작업</li>
                                     </ul>
                                 </li>
-                                <li>8. 컴퍼넌트 비동기 작업
+                                <li>8. 헤더 영역 데이터 작업
+                                    <ul>
+                                        <li>8_1. 헤더 영역 데이터 작업</li>
+                                        <li>8_2. 반복문과 map()</li>
+                                        <li>8_3. 메뉴 활성화하기</li>
+                                        <li>8_4. 컴퍼넌트 세부화 시키기</li>
+                                    </ul>
+                                </li>
+                                <li>9. 컴퍼넌트 비동기 작업
                                     <ul>
                                         <li>8_1. 컴퍼넌트 props 사용하기</li>
                                         <li>8_2. React.Suspense 사용하기</li>
-                                    </ul>
-                                </li>
-                                <li>9. 페이지 SEO 작업
-                                    <ul>
-                                        <li>9_1. 메인 페이지 SEO 설정하기</li>
-                                        <li>9_2. 모든 페이지 SEO 설정하기</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <h3>9. 페이지 SEO 작업</h3>
+                    <h3>9. 컴퍼넌트 비동기 작업</h3>
                     <div>
-                        <h4>9_1. 메인 페이지 SEO 설정하기</h4>
+                        <h4>9_1. 컴퍼넌트 props 사용하기</h4>
+
                         <p>
-                            리액트는 싱글 페이지로 구성되어 있기 때문에 SEO에 대한 노출이 약한 편입니다. 
-                            그래서 리액트의 단점을 극복하기 위한 방법으로 페이지 별로 페이지에 대한 설명이나 타이틀을 작업해주겠습니다. 
-                            이 작업을 하기 위해서는 <code>react-helmet-async</code> 라이브러리가 설치되어 있어야 합니다. 
+                            메인 페이지의 props를 이용하여 메뉴를 클릭할 때마다 해당 콘텐츠가 보이도록 하겠습니다. 
+                            이럴 때 props를 이용하여 데이터를 전달하고 컨트롤 할 수 있습니다.
                         </p>
+                       
+<pre><code class="language-js">import React from 'react'
+
+const Main = ( props ) =&gt; {
+    return (
+        &lt;main id="main" role="main"&gt;
+            {props.children}
+        &lt;/main&gt;
+    )
+}
+
+export default Main</code></pre>
+    
                         <div class="sampleBasic">
-                            <p>SEO는 "Search Engine Optimization"의 약어로, <i>검색 엔진 최적화</i>를 의미합니다. SEO는 웹사이트나 웹 페이지를 검색 엔진(예: Google, Bing, Yahoo)에서 높은 순위로 표시되도록 최적화하는 프로세스와 전략을 나타냅니다. 이를 통해 웹사이트가 검색 결과 페이지(SERP)에서 더 높은 순위에 나타나고, 더 많은 유기적(자연적) 트래픽을 확보하려는 목적으로 사용됩니다</p>
+                            <p>
+                                React에서 "props"는 "properties"의 줄임말로, 컴포넌트 간에 데이터를 전달하고 컴포넌트를 구성하는 데 사용되는 매개변수와 같은 역할을 합니다. 
+                                Props는 React 컴포넌트 간에 데이터를 전달하거나 컴포넌트의 동작을 제어하기 위해 사용됩니다.
+                            </p>
+                            <p>
+                                <i>props.children</i>을 사용하면 부모 컴포넌트가 자식 요소를 포함한 컴포넌트를 작성할 때 렌더링 구조를 더 유연하게 만들 수 있습니다. 이를 통해 동적으로 자식 요소를 추가하거나 조작할 수 있으며, 컴포넌트 간에 재사용 가능한 레이아웃 및 컨테이너 컴포넌트를 작성할 때 유용합니다.
+                            </p>
+                        </div>
+
+                        <p>
+                            이렇게 하면 메뉴를 누를 때마다 메인 영역이 변경되는 것을 확인할 수 있습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-11.png" alt="youtube2023" />
+                        </div>
+                    </div>
+                    
+                    <div class="mt80">
+                        <h4>9_2. React.Suspense 사용하기</h4>
+                        <div class="sampleBasic">
+                            <p>
+                                React.Suspense는 React에서 <i>비동기적으로 데이터나 컴포넌트를 불러오는 과정에서 대기 상태를 처리하기 위한 컴포넌트</i>입니다. 이 컴포넌트를 사용하면 데이터나 컴포넌트가 로딩되기를 기다릴 수 있으며, 로딩 중에는 대체 컨텐츠(로딩 스피너 또는 로딩 메시지)를 표시할 수 있습니다. React.Suspense를 사용하면 코드 스플리팅, 데이터 로딩, 서버 사이드 렌더링과 같은 시나리오에서 사용자 경험을 향상시키는 데 도움이 됩니다.
+                            </p>
                         </div>
                         <p>
-                            <code>main</code>이라는 컴퍼넌트를 모든 페이지에서 사용하기 때문에 여기에 타이틀과 설명을 추가하는 SEO 잡업을 하였습니다.
+                            우리 사이트의 모든 페이지는 왼쪽에 메뉴가 있고 오른쪽에 데이터가 로딩되기 때문에 이 방식을 사용할 것입니다. 
+                            이 방법을 사용하기 위해서는 <code>app.js</code>를 다시 재 작업 해주겠습니다.
+                            기존 컴퍼넌트 방법이 변경되고 <code>header</code>와 <code>footer</code>는 <code>Main</code> 컴퍼넌트로 넘겨주겠습니다.
+                        </p>
+<pre><code class="language-js">import React, { Suspense, lazy } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from './components/section/Main';
+
+const Home = lazy(() =&gt; import('./pages/Home'));
+const Today = lazy(() =&gt; import('./pages/Today'));
+const Developer = lazy(() =&gt; import('./pages/Developer'));
+const Webd = lazy(() =&gt; import('./pages/Webd'));
+const Website = lazy(() =&gt; import('./pages/Website'));
+const Gsap = lazy(() =&gt; import('./pages/Gsap'));
+const Port = lazy(() =&gt; import('./pages/Port'));
+const Youtube = lazy(() =&gt; import('./pages/Youtube'));
+const Channel = lazy(() =&gt; import('./pages/Channel'));
+const Video = lazy(() =&gt; import('./pages/Video'));
+const Search = lazy(() =&gt; import('./pages/Search'));
+const Not = lazy(() =&gt; import('./pages/Not'));
+
+const App = () =&gt; {
+    return (
+        &lt;BrowserRouter&gt;
+            &lt;Suspense fallback={&lt;Main /&gt;}&gt;
+                &lt;Routes&gt;
+                    &lt;Route path='/' element={&lt;Home /&gt;} /&gt;
+                    &lt;Route path="/today" element={&lt;Today /&gt;} /&gt;
+                    &lt;Route path="/developer" element={&lt;Developer /&gt;} /&gt;
+                    &lt;Route path="/webd" element={&lt;Webd /&gt;} /&gt;
+                    &lt;Route path="/website" element={&lt;Website /&gt;} /&gt;
+                    &lt;Route path="/gsap" element={&lt;Gsap /&gt;} /&gt;
+                    &lt;Route path="/port" element={&lt;Port /&gt;} /&gt;
+                    &lt;Route path="/youtube" element={&lt;Youtube /&gt;} /&gt;
+                    &lt;Route path='/channel/:channelId' element={&lt;Channel /&gt;} /&gt;
+                    &lt;Route path='/video/:videoId' element={&lt;Video /&gt;} /&gt;
+                    &lt;Route path='/search/:searchId' element={&lt;Search /&gt;} /&gt;
+                    &lt;Route path="*" element={&lt;Not /&gt;} /&gt;
+                &lt;/Routes&gt;
+            &lt;/Suspense&gt;
+        &lt;/BrowserRouter&gt;
+    );
+}
+
+export default App;
+</code></pre>
+                        <div class="sampleBasic">
+                            <ul class="list">
+                                <li><i>BrowserRouter</i> : React Router에서 사용되는 브라우저 라우터 컴포넌트입니다. 브라우저 히스토리 API를 사용하여 라우팅을 처리합니다.</li>
+                                <li><i>Suspense</i> : Suspense 컴포넌트는 비동기적으로 로드되는 컴포넌트의 로딩 상태를 관리하는 데 사용됩니다. 여기서는 fallback 속성을 사용하여 로딩 중에 &lt;Main /&gt; 컴포넌트를 표시합니다.</li>
+                                <li><i>Routes</i> : Routes 컴포넌트는 각 경로에 대한 라우트를 정의하고, 해당 경로에 접근할 때 렌더링될 컴포넌트를 결정합니다.</li>
+                                <li><i>Route</i> : Route 컴포넌트는 특정 경로에 대한 라우팅 규칙을 설정하며, element 속성을 통해 해당 경로에 접근할 때 렌더링될 컴포넌트를 지정합니다.</li>
+                                <li><i>lazy()</i> : lazy() 함수는 코드 스플리팅을 위해 사용되며, 비동기적으로 컴포넌트를 로드합니다. 컴포넌트가 필요할 때 비동기적으로 불러와서 번들 크기를 줄일 수 있습니다.</li>
+                                <li><i>fallback</i> : fallback 속성은 Suspense 컴포넌트에서 로딩 중에 표시할 컴포넌트를 지정합니다. 여기서는 &lt;Main /&gt; 컴포넌트가 로딩 중에 보여집니다.</li>
+                            </ul>
+                        </div>
+
+                        <p>
+                            <code>Main.js</code>를 수정하겠습니다.
                         </p>
 <pre><code class="language-js">import React from 'react'
-import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 import Header from './Header'
 import Footer from './Footer'
 
 const Main = ( props ) =&gt; {
     return (
-        &lt;HelmetProvider&gt;
-            &lt;Helmet 
-                titleTemplate="%s | Webs Youtube" 
-                defaultTitle="Webs Youtube" 
-                defer={false}
-            &gt;
-                {props.title && &lt;title&gt;{props.title}&lt;/title&gt;}
-                &lt;meta name="description" content={props.description} /&gt;
-            &lt;/Helmet&gt;
-
+        &lt;&gt;
             &lt;Header /&gt;
             &lt;main id="main" role="main"&gt;
                 {props.children}
             &lt;/main&gt;
             &lt;Footer /&gt;
-        &lt;/HelmetProvider&gt;
+        &lt;/&gt;
     )
 }
 
 export default Main
 </code></pre>
                         <div class="sampleBasic">
-                            <ul class="list">
-                                <li><i>HelmetProvider</i> : react-helmet-async의 HelmetProvider 컴포넌트를 사용하여 Helmet 컴포넌트를 초기화합니다. Helmet은 페이지의 헤드 태그에 메타 데이터와 타이틀을 동적으로 추가하거나 변경하는 데 사용됩니다.</li>
-                                <li><i>Helmet</i> : Helmet 컴포넌트를 사용하여 페이지의 메타 데이터와 타이틀을 설정합니다. 이 컴포넌트를 사용하면 서버 사이드 렌더링(SSR) 및 동적 페이지 제목 설정과 같은 작업을 쉽게 수행할 수 있습니다. 주로 title, meta, link, script 등의 태그를 동적으로 조작하는 데 사용됩니다.</li>
-                                <li><i>titleTemplate</i> : 페이지 타이틀의 템플릿을 설정합니다. %s는 나중에 실제 타이틀로 대체됩니다.</li>
-                                <li><i>defaultTitle</i> : 기본 타이틀을 설정합니다. 페이지 타이틀이 없는 경우 사용됩니다.</li>
-                                <li><i>defer</i> : true로 설정하면 렌더링 전까지 &lt;Helmet&gt; 컴포넌트가 기다립니다.</li>
-                                <li><i>&lt;title&gt;과 &lt;meta&gt; 태그</i> : props로 전달된 title과 description 값을 사용하여 페이지의 타이틀과 메타 설명을 설정합니다. props.title과 props.description이 없는 경우, 기본값으로 "Webs Youtube"가 타이틀로 설정됩니다.</li>
-                            </ul>
+                            <p>
+                                <code>&lt;></code> 및 <code>&lt;/></code>는 React에서 Fragments(프래그먼트)를 생성하기 위한 단축 구문입니다. 
+                                Fragment는 React 컴포넌트의 반환 값으로 여러 요소를 래핑하고, 이러한 요소가 부모 요소 하나로 묶이지 않도록 허용하는 데 사용됩니다.
+                                React 컴포넌트는 루트 요소에서 시작해야 하기 때문에 여러 요소를 반환하려면 불필요한 부모 요소를 추가하게 됩니다. 
+                                이러한 상황에서 Fragment를 사용하면 불필요한 부모 요소 없이 여러 요소를 그룹화할 수 있습니다.
+                            </p>
                         </div>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>9_2. 모든 페이지 SEO 설정하기</h4>
                         <p>
-                            이제 나머지 페이지도 <code>main</code> 컴퍼넌트를 불러오고 페이지 별로 타이틀과 설명을 추가하면 됩니다.
-                            그럼 페이지가 변경되면 타이틀이 변경되는 것을 확인할 수 있습니다.
+                            이제 모든 페이지도 다 변경해주어야 합니다.
                         </p>
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Channel = () =&gt; {
+const Channel = () => {
     return (
-        &lt;Main 
-            title = "유튜브 채널"
-            description="유튜브 채널페이지입니다."&gt;
+        &lt;Main&gt;
             Channel
         &lt;/Main&gt;
     )
@@ -248,15 +322,12 @@ const Channel = () =&gt; {
 
 export default Channel
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Developer = () =&gt; {
+const Developer = () => {
     return (
-        &lt;Main 
-            title = "추천 개발자"
-            description="오늘의 추천 개발자 유튜버입니다."&gt;
+        &lt;Main&gt;
             Developer
         &lt;/Main&gt;
     )
@@ -264,15 +335,12 @@ const Developer = () =&gt; {
 
 export default Developer
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Gsap = () =&gt; {
+const Gsap = () => {
     return (
-        &lt;Main 
-            title = "GSAP 사이트"
-            description="GSAP 사이트 튜토리얼 강의입니다."&gt;
+        &lt;Main&gt;
             Gsap
         &lt;/Main&gt;
     )
@@ -280,15 +348,12 @@ const Gsap = () =&gt; {
 
 export default Gsap
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Home = () =&gt; {
+const Home = () => {
     return (
-        &lt;Main 
-            title = "웹스토리보이 유튜브"
-            description="웹스토리보이 유튜버 사이트에 오신 것을 환영합니다."&gt;
+        &lt;Main&gt;
             Home
         &lt;/Main&gt;
     )
@@ -296,15 +361,12 @@ const Home = () =&gt; {
 
 export default Home
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Not = () =&gt; {
+const Not = () => {
     return (
-        &lt;Main 
-            title = "잘못된 페이지"
-            description="접근이 잘못된 페이지입니다."&gt;
+        &lt;Main&gt;
             Not
         &lt;/Main&gt;
     )
@@ -312,15 +374,12 @@ const Not = () =&gt; {
 
 export default Not
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Port = () =&gt; {
+const Port = () => {
     return (
-        &lt;Main 
-            title = "포트폴리오 사이트"
-            description="포트폴리오 사이트 튜토리얼 강의입니다."&gt;
+        &lt;Main&gt;
             Port
         &lt;/Main&gt;
     )
@@ -328,15 +387,12 @@ const Port = () =&gt; {
 
 export default Port
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Search = () =&gt; {
+const Search = () => {
     return (
-        &lt;Main 
-            title = "유투브 검색"
-            description="유튜브 검색 결과 페이지입니다."&gt;
+        &lt;Main&gt;
             Search
         &lt;/Main&gt;
     )
@@ -344,15 +400,12 @@ const Search = () =&gt; {
 
 export default Search
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Today = () =&gt; {
+const Today = () => {
     return (
-        &lt;Main 
-            title = "추천 영상"
-            description="오늘의 추천 유튜브 영상입니다."&gt;
+        &lt;Main&gt;
             Today
         &lt;/Main&gt;
     )
@@ -360,15 +413,12 @@ const Today = () =&gt; {
 
 export default Today
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Video = () =&gt; {
+const Video = () => {
     return (
-        &lt;Main 
-            title = "유튜브 비디오 영상"
-            description="유튜브 비디오 영상을 볼 수 있습니다."&gt;
+        &lt;Main&gt;
             Video
         &lt;/Main&gt;
     )
@@ -376,31 +426,25 @@ const Video = () =&gt; {
 
 export default Video
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Webd = () =&gt; {
+const Wedd = () => {
     return (
-        &lt;Main 
-            title = "웹디자인 기능사"
-            description="웹디자인 기능사 튜토리얼 강의입니다."&gt;
-            Webd
+        &lt;Main&gt;
+            Wedd
         &lt;/Main&gt;
     )
 }
 
-export default Webd
+export default Wedd
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Website = () =&gt; {
+const Website = () => {
     return (
-        &lt;Main 
-            title = "웹표준 사이트"
-            description="웹표준 사이트 튜토리얼 강의입니다."&gt;
+        &lt;Main&gt;
             Website
         &lt;/Main&gt;
     )
@@ -408,15 +452,12 @@ const Website = () =&gt; {
 
 export default Website
 </code></pre>
-
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-const Youtube = () =&gt; {
+const Youtube = () => {
     return (
-        &lt;Main 
-            title = "유튜브 사이트"
-            description="유튜브 사이트 튜토리얼 강의입니다."&gt;
+        &lt;Main&gt;
             Youtube
         &lt;/Main&gt;
     )
@@ -424,15 +465,8 @@ const Youtube = () =&gt; {
 
 export default Youtube
 </code></pre>
-                        <p>
-                            페이지 이동 할 때마다 타이틀이 변경되는 것을 확인할 수 있습니다.
-                        </p>
-                        <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-12.png" alt="youtube2023" />
-                        </div>
-                    </div>
-                        
 
+                    </div>
 
                     <div>
                         <h3>마무리</h3>
@@ -441,13 +475,14 @@ export default Youtube
                             터미널에서 다음과 같이 작성하겠습니다.
                             새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
                         </p>
-<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+<pre><code class="language-js">webstoryboy@Webstoryboyui-iMac webs-youtube % git add .
+webstoryboy@Webstoryboyui-iMac webs-youtube % git status 
 On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
-    (use "git restore --staged &lt;file&gt;..." to unstage)
+    (use "git restore --staged <file>..." to unstage)
+        modified:   src/App.js
         modified:   src/components/section/Main.jsx
         modified:   src/pages/Channel.jsx
         modified:   src/pages/Developer.jsx
@@ -462,24 +497,25 @@ Changes to be committed:
         modified:   src/pages/Website.jsx
         modified:   src/pages/Youtube.jsx
 
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "페이지 SEO 작업"
-[main 4276736] 페이지 SEO 작업
-    13 files changed, 54 insertions(+), 19 deletions(-)
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
-Enumerating objects: 37, done.
-Counting objects: 100% (37/37), done.
-Delta compression using up to 10 threads
-Compressing objects: 100% (18/18), done.
-Writing objects: 100% (19/19), 2.32 KiB | 2.32 MiB/s, done.
-Total 19 (delta 13), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (13/13), completed with 3 local objects.
+webstoryboy@Webstoryboyui-iMac webs-youtube % git commit -m "컴퍼넌트 비동기 작업"
+[main 0aa59a8] 컴퍼넌트 비동기 작업
+    14 files changed, 103 insertions(+), 62 deletions(-)
+webstoryboy@Webstoryboyui-iMac webs-youtube % git push -u origin main
+Enumerating objects: 39, done.
+Counting objects: 100% (39/39), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (20/20), 1.91 KiB | 1.91 MiB/s, done.
+Total 20 (delta 14), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (14/14), completed with 3 local objects.
 To https://github.com/webstoryboy/webs-youtube.git
-    813080f..4276736  main -> main
+    1f73d2f..0aa59a8  main -> main
 branch 'main' set up to track 'origin/main'.
 </code></pre>
                         <p>
-                            라이브러리 소스를 이용하여 모든 페이지에 타이틀 작업 및 설명 부분을 완성하였습니다. 
-                            이렇게 한다고 해도 검색에 잘 노출될지는 의문이지만 그래도 안하는 것보단 낫겠죠!
+                            모든 페이지 구성이 비슷하기 때문에 메인 콘텐츠만 비동기 방식을 사용하여 데이터를 로드할 수 있도록 설정했습니다. 
+                            이렇게 하면 사이트 전환시 또는 메뉴 선택시 깜박임이나 전체 소스를 다시 다운 받는 경우를 막을 수 있습니다. 
+                            표면적으로 티는 잘 나지 않지만 사이트 규모가 커지고, 데이터 전송이 많을 때 조금 더 효율적으로 쓰기 위함입니다.
                             수고하셨습니다 🤩
                         </p>
                     </div>
@@ -503,7 +539,6 @@ branch 'main' set up to track 'origin/main'.
                             <li><a href="https://webstoryboy.co.kr/1965">6. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 구조화하기</a></li>
                             <li><a href="https://webstoryboy.co.kr/1965">7. 나만의 유튜브 사이트 만들기 : 헤더 영역 완성하기</a></li>
                             <li><a href="https://webstoryboy.co.kr/1965">8. 나만의 유튜브 사이트 만들기 : 컴퍼넌트 비동기 작업</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1965">9. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
                         </ul>
                     </div>
                 </div>

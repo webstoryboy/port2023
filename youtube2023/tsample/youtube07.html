@@ -150,10 +150,8 @@
                             <ul>
                                 <li>7. 헤더 영역 완성하기
                                     <ul>
-                                        <li>7_1. 헤더 영역 코딩하기</li>
-                                        <li>7_2. 헤더 영역 데이터 작업</li>
-                                        <li>7_3. 반복문과 map()</li>
-                                        <li>7_4. 메뉴 활성화하기</li>
+                                        <li>7_1. 헤더 영역 구조 잡기</li>
+                                        <li>7_2. 헤더 영역 디자인 작업</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -162,7 +160,7 @@
 
                     <h3>7. 헤더 영역 완성하기</h3>
                     <div>
-                        <h4>7_1. 헤더 영역 코딩하기</h4>
+                        <h4>7_1. 헤더 영역 구조 잡기</h4>
                         <p>
                             header 영역은 로고, 메뉴, SNS로 구성되어 있습니다. 
                             리액트에서는 class 대신에 <code>className</code>을 사용합니다. 
@@ -191,109 +189,111 @@ const Header = () =&gt; {
     return (
         &lt;header id='header' role='banner'&gt;
             &lt;h1 className='header__logo'&gt;
-                &lt;a href="/"&gt;
-                    &lt;em&gt;&lt;/em&gt;  
+                &lt;a href='/'&gt;
+                    &lt;em aria-hidden='true'&gt;&lt;/em&gt;
                     &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
                 &lt;/a&gt;
             &lt;/h1&gt;
-            &lt;div className='header__menu'&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;
-                        &lt;a href="/"&gt;
+
+            &lt;nav className='header__menu'&gt;
+                &lt;ul className='menu'&gt;
+                    &lt;li className='active'&gt;
+                        &lt;a href='/'&gt;
                             &lt;CiBaseball /&gt; 웹스토리보이
                         &lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/today"&gt;
+                        &lt;a href='/today'&gt;
                             &lt;CiMoneyBill /&gt; 추천 영상
                         &lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/developer"&gt;
+                        &lt;a href='/developer'&gt;
                             &lt;CiCoins1 /&gt; 추천 개발자
                         &lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/webd"&gt;
+                        &lt;a href='/webd'&gt;
                             &lt;CiBoxes /&gt; 웹디자인기능사
                         &lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/website"&gt;
+                        &lt;a href='/website'&gt;
                             &lt;CiBullhorn /&gt; 웹표준 사이트
                         &lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/gsap"&gt;
+                        &lt;a href='/gsap'&gt;
                             &lt;CiCoffeeCup /&gt; GSAP Parallax
                         &lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/port"&gt;
+                        &lt;a href='/port'&gt;
                             &lt;CiDumbbell /&gt; 포트폴리오 사이트
                         &lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/youtube"&gt;
+                        &lt;a href='/youtube'&gt;
                             &lt;CiFries /&gt; 유튜브 클론 사이트
                         &lt;/a&gt;
                     &lt;/li&gt;
                 &lt;/ul&gt;
                 &lt;ul className='keyword'&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/webstoryboy"&gt;webstoryboy&lt;/a&gt;
+                        &lt;a href='/search/webstoryboy'&gt;webstoryboy&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/html"&gt;HTML&lt;/a&gt;
+                        &lt;a href='/search/html'&gt;HTML&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/css"&gt;CSS&lt;/a&gt;
+                        &lt;a href='/search/css'&gt;CSS&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/javascript"&gt;JavaScript&lt;/a&gt;
+                        &lt;a href='/search/javascript'&gt;JavaScript&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/react.js"&gt;React.js&lt;/a&gt;
+                        &lt;a href='/search/react.js'&gt;React.js&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/vue.js"&gt;Vue.js&lt;/a&gt;
+                        &lt;a href='/search/vue.js'&gt;Vue.js&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/next.js"&gt;Next.js&lt;/a&gt;
+                        &lt;a href='/search/next.js'&gt;Next.js&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/node.js"&gt;Node.js&lt;/a&gt;
+                        &lt;a href='/search/node.js'&gt;Node.js&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/sql"&gt;SQL&lt;/a&gt;
+                        &lt;a href='/search/sql'&gt;SQL&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/React Portfolio"&gt;portfolio&lt;/a&gt;
+                        &lt;a href='/search/React Portfolio'&gt;portfolio&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="/search/NewJeans"&gt;music&lt;/a&gt;
+                        &lt;a href='/search/NewJeans'&gt;music&lt;/a&gt;
                     &lt;/li&gt;
                 &lt;/ul&gt;
-            &lt;/div&gt;
+            &lt;/nav&gt;
+            
             &lt;div className='header__sns'&gt;
                 &lt;ul&gt;
                     &lt;li&gt;
-                        &lt;a href="https://github.com/webstoryboy" rel="noopener noreferrer"&gt;
+                        &lt;a href='https://github.com/webstoryboy' rel='noopener noreferrer'&gt;
                             &lt;AiFillGithub /&gt;
                         &lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="https://www.youtube.com/webstoryboy" rel="noopener noreferrer"&gt;
+                        &lt;a href='https://www.youtube.com/webstoryboy' rel='noopener noreferrer'&gt;
                             &lt;AiFillYoutube /&gt;
                         &lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="https://codepen.io/webstoryboy" rel="noopener noreferrer"&gt;
+                        &lt;a href='https://codepen.io/webstoryboy' rel='noopener noreferrer'&gt;
                             &lt;AiOutlineCodepen /&gt;
                         &lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a href="https://www.instagram.com/webstoryboy" rel="noopener noreferrer"&gt;
+                        &lt;a href='https://www.instagram.com/webstoryboy' rel='noopener noreferrer'&gt;
                             &lt;AiOutlineInstagram /&gt;
                         &lt;/a&gt;
                     &lt;/li&gt;
@@ -316,7 +316,10 @@ export default Header
                                 <li>noreferrer: 이 값을 사용하면 링크를 클릭할 때 HTTP 리퍼러(Referer) 헤더가 전송되지 않습니다. 이는 사용자의 개인 정보를 보호하고 어떤 사이트로부터 연결되었는지 등을 감추는 데 도움이 됩니다.</li>
                             </ul>
                         </div>
+                    </div>
 
+                    <div class="mt80">
+                        <h4>7_2. 헤더 영역 디자인 작업</h4>
                         <p>
                             <code>scss</code> > <code>section</code> > <code>_header.scss</code>를 만들고 다음과 같이 작업합니다. 
                             추가된 scss는 <code>style.scss</code>에 추가해야 합니다. 
@@ -372,9 +375,7 @@ export default Header
                         </p>
                         
 <pre><code class="language-scss">.header__logo {
-    text-align: center;
-    border-bottom: 1px solid var(--black200);
-    text-transform: uppercase;
+    border-bottom: 1px solid var(--black100);
 
     a {
         display: flex;
@@ -391,10 +392,10 @@ export default Header
         }
 
         span {
-            text-align: left;
             font-size: 20px;
             line-height: 1;
             font-weight: 900;
+            text-transform: uppercase;
         }
     }
 }
@@ -403,20 +404,22 @@ export default Header
     padding: 10px 0;
 
     .menu {
-        margin-bottom: 10px;
-        
+        border-bottom: 1px solid var(--black100);
+
         li {
+            margin-bottom: 5px;
+
             a {
-                color: var(--white100);
                 font-size: 1rem;
                 display: block;
-                position: relative;
-                padding: 0.9rem 2rem 0.9rem 50px;
-                line-height: 1;
+                padding: 0.9rem 2rem 0.9rem 3.125rem;
                 margin: 0 0.625rem;
                 border-radius: 40px;
-                transition: background-color 0.3s;
-                
+                position: relative;
+                line-height: 1;
+                color: var(--white200);
+                transition: all 0.3s;
+
                 svg {
                     width: 1.25rem;
                     height: 1.25rem;
@@ -424,52 +427,63 @@ export default Header
                     left: 1.25rem;
                     top: 0.75rem;
                 }
-                
+
                 &:hover {
                     background-color: var(--black100);
-                    color: #fff;
+                    color: var(--white);
                 }
             }
-            
+
             &.active a {
-                background-color: var(--black200);
+                background-color: var(--black100);
                 color: var(--white);
             }
         }
     }
+
     .keyword {
-        border-top: 1px solid var(--black200);
         padding: 1.25rem;
-        
+
         li {
             display: inline-block;
-            
+
             a {
                 display: inline-block;
-                padding: 7px 15px;
-                margin: 3px 1px;
-                border: 1px solid var(--black100);
-                border-radius: 40px;
+                padding: 5px 15px;
+                border: 1px solid var(--black200);
                 font-size: 0.8rem;
+                border-radius: 40px;
+                margin: 3px 1px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: var(--black100);
+                    color: var(--white);
+                }
+            }
+
+            &.active a {
+                background-color: var(--black100);
+                color: var(--white);
             }
         }
     }
 }
 
 .header__sns {
-    border-top: 1px solid var(--black200);
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    width: 260px;
     text-align: center;
     padding: 15px 0 10px;
-    background-color: var(--black);
+    background-color: var(--blackAlpha100);
     backdrop-filter: blur(10px);
 
     li {
         display: inline-block;
-        
+
         a {
             padding: 5px 7px;
             display: inline-block;
@@ -478,373 +492,56 @@ export default Header
 }
 
 @keyframes ani {
-    0%   {transform: rotate(0) scale(1); border-radius: 0;}
-    50%  {transform: rotate(720deg) scale(0.9); border-radius: 50px;}
-    100% {transform: rotate(0) scale(1); border-radius: 0;}
+    0% {
+        transform: rotate(0) scale(1);
+        border-radius: 0;
+    }
+    50% {
+        transform: rotate(720deg) scale(0.5);
+        border-radius: 20px;
+    }
+    100% {
+        transform: rotate(0) scale(1);
+        border-radius: 0;
+    }
 }
-
 </code></pre>
-                            <p>
-                                디자인을 확인해 보면 다음과 같이 나옵니다.
-                            </p>
+
+                        <p>
+                            <code>_layout.scss</code>도 다음과 같이 수정합니다.
+                        </p>
+
+<pre><code class="language-scss">#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 10000;
+    background-color: #000;
+}
+#main {
+    max-width: 2000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: 260px;
+    background-color: #111;
+}
+#footer {
+    text-align: center;
+    background-color: #333;
+    padding: 20px 20px 20px 260px;
+}
+</code></pre>
+
+                        <p>
+                            디자인을 확인해 보면 다음과 같이 나옵니다.
+                        </p>
                         <div class="sampleImg">
                             <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-9.png" alt="youtube2023" />
                         </div>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>7_2. 헤더 영역 데이터 작업</h4>
-                        <p>
-                            이번에는 데이터를 따로 작업하겠습니다. 
-                            데이터를 따로 작업하면 수정하기 용이하고, 더 보기가 좋아집니다. 
-                            그전에 반복문과 map() 메서드에 대해서 먼저 이해를 해야 합니다. 
-                            우선 데이터화를 먼저 작업해 보겠습니다.
-                        </p>
-                        <p>
-                            <code>data</code>폴더를 만들고 <code>header.js</code> 파일을 만듭니다.
-                        </p>
-                        <div class="sampleFolder">
-                            <ul>
-                                <li class="icon1">src
-                                    <ul>
-                                        <li class="icon1">assets</li>
-                                        <li class="icon1">components</li>
-                                        <li class="icon1">data
-                                            <ul>
-                                                <li class="icon2 m0">header.js</li>
-                                            </ul>
-                                        </li>
-                                        <li class="icon1">pages</li>
-                                        <li class="icon2 m0">App.js</li>
-                                        <li class="icon2 m0">index.js</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <p>
-                            <code>header.js</code> 파일은 다음과 같이 정리합니다.
-                        </p>
-<pre><code class="language-js">import { CiBaseball } from "react-icons/ci";
-import { CiCoins1 } from "react-icons/ci";
-import { CiBoxes } from "react-icons/ci";
-import { CiBullhorn } from "react-icons/ci";
-import { CiCoffeeCup } from "react-icons/ci";
-import { CiDumbbell } from "react-icons/ci";
-import { CiFries } from "react-icons/ci";
-import { CiMoneyBill } from "react-icons/ci";
-
-import { AiFillGithub } from "react-icons/ai";
-import { AiOutlineCodepen } from "react-icons/ai";
-import { AiFillYoutube } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
-
-export const headerMenus = [
-    {
-        title: "웹스토리보이",
-        icon: &lt;CiBaseball /&gt;,
-        src: "/"
-    },
-    {
-        title: "추천 영상",
-        icon: &lt;CiMoneyBill /&gt;,
-        src: "/today"
-    },
-    {
-        title: "추천 개발자",
-        icon: &lt;CiCoins1 /&gt;,
-        src: "/developer"
-    },
-    {
-        title: "웹디자인기능사",
-        icon: &lt;CiBoxes /&gt;,
-        src: "/webd"
-    },
-    {
-        title: "웹표준 사이트",
-        icon: &lt;CiBullhorn /&gt;,
-        src: "/website"
-    },
-    {
-        title: "GSAP Parallax",
-        icon: &lt;CiCoffeeCup /&gt;,
-        src: "/gsap"
-    },
-    {
-        title: "포트폴리오 사이트",
-        icon: &lt;CiDumbbell /&gt;,
-        src: "/port"
-    },
-    {
-        title: "유튜브 클론 사이트",
-        icon: &lt;CiFries /&gt;,
-        src: "/youtube"
-    },
-];
-
-export const searchKeword = [
-    {
-        title: "webstoryboy",
-        src: "/search/webstoryboy"
-    },
-    {
-        title: "HTML",
-        src: "/search/html"
-    },
-    {
-        title: "CSS",
-        src: "/search/css"
-    },
-    {
-        title: "JavaScript",
-        src: "/search/javascript"
-    },
-    {
-        title: "React.js",
-        src: "/search/react.js"
-    },
-    {
-        title: "Vue.js",
-        src: "/search/vue.js"
-    },
-    {
-        title: "Next.js",
-        src: "/search/next.js"
-    },
-    {
-        title: "Node.js",
-        src: "/search/node.js"
-    },
-    {
-        title: "SQL",
-        src: "/search/sql"
-    },
-    {
-        title: "portfolio",
-        src: "/search/React Portfolio"
-    },
-    {
-        title: "music",
-        src: "/search/NewJeans"
-    }
-];
-
-export const snsLink = [
-    {
-        title: "github",
-        url: "https://github.com/webstoryboy",
-        icon: &lt;AiFillGithub /&gt;
-    },
-    {
-        title: "youtube",
-        url: "https://www.youtube.com/webstoryboy",
-        icon: &lt;AiFillYoutube /&gt;
-    },
-    {
-        title: "codepen",
-        url: "https://codepen.io/webstoryboy",
-        icon: &lt;AiOutlineCodepen /&gt;
-    },
-    {
-        title: "instagram",
-        url: "https://www.instagram.com/webstoryboy",
-        icon: &lt;AiOutlineInstagram /&gt;
-    },
-]
-</code></pre>
-
-                        <p>
-                            <code>Header.jsx</code> 파일은 다음과 같이 다시 정리하겠습니다.
-                            리액트에서 페이지 이동 할 때에는 <code>Link</code>를 사용합니다. 
-                            <code>Link</code>를 사용하기 위해서는 <code>import</code>를 하여야 합니다.
-                            이렇게 작업하면 소스가 더 간결해지고 보기 편해집니다.
-                        </p>
-<pre><code class="language-js">import React from 'react'
-
-import { headerMenus, searchKeword, snsLink } from "../../data/category";
-import { Link } from 'react-router-dom';
-
-const Header = () =&gt; {
-    return (
-        &lt;header id='header' role='banner'&gt;
-            &lt;h1 className='header__logo'&gt;
-                &lt;a href="/"&gt;
-                    &lt;em&gt;&lt;/em&gt;  
-                    &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h1&gt;
-            &lt;div className='header__menu'&gt;
-                &lt;ul className='menu'&gt;
-                    {headerMenus.map((menu, key) =&gt; (
-                        &lt;li key={key}&gt;
-                            &lt;Link to={menu.src}&gt;
-                                {menu.icon}{menu.title}
-                            &lt;/Link&gt;
-                        &lt;/li&gt;
-                    ))}
-                &lt;/ul&gt;
-                &lt;ul className='keyword'&gt;
-                    {searchKeword.map((keyword, key) =&gt; (
-                        &lt;li key={key}&gt;
-                            &lt;Link to={keyword.src}&gt;
-                                {keyword.title}
-                            &lt;/Link&gt;
-                        &lt;/li&gt;
-                    ))}
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div className='header__sns'&gt;
-                &lt;ul&gt;
-                    {snsLink.map((sns, key) =&gt; (
-                        &lt;li key={key}&gt;
-                            &lt;a href={sns.url} target="_blank" rel="noopener noreferrer" aria-label={sns.title}&gt;
-                                &lt;span&gt;{sns.icon}&lt;/span&gt;
-                            &lt;/a&gt;
-                        &lt;/li&gt;
-                    ))}
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/header&gt;
-    )
-}
-
-export default Header
-</code></pre>
-                    </div>
-                    
-                    <div class="mt80">
-                        <h4>7_3. 반복문과 map()</h4>
-                        <p>
-                            리액트 작업시 반복문과 map() 메서드는 사용 빈도가 매우 높습니다. 
-                            잠깐 개념을 파악하고 넘어가겠습니다. 
-                        </p>
-                        <p>
-                            배열안에 데이터가 들어있습니다.  
-                            <code>for 문</code>을 통해 데이터를 하나씩 호출합니다.
-                        </p>
-<pre><code class="language-js">{
-    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-    for(let i=0; i&lt;arr.length; i++){
-        console.log(arr[i]);
-    }
-    // 100 200 300 400 500 600 700 800 900
-}   
-</code></pre>
-
-                        <p>
-                            이번에도 배열안에 데이터가 들어있습니다.  
-                            <code>map()</code> 메서드를 통해 데이터를 하나씩 호출하겠습니다.
-                        </p>
-<pre><code class="language-js">{
-    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-    arr.map((element) => {
-        console.log(element);
-    });
-
-    // [100, 200, 300, 400, 500, 600, 700, 800, 900];
-}   
-</code></pre>   
-                        <p>
-                            for문과 map() 메서드는 데이터 값을 출력하지만 map() 메서드는 출력한 값을 배열로 반환해주는 것에 차이점이 있습니다.
-                            리액트에서 map() 메서드를 사용하는 이유는 출력한 데이터를 다시 배열 형태로 반환 받아서 화면에 편하게 출력하기 위함입니다. 
-                            map() 메서는 인자 값으로 3가지 값을 출력할 수 있습니다. 
-                        </p>
-<pre><code class="language-js">{
-    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-    arr.map((element, index) => {   
-        console.log(index);
-    });
-
-    // 0 1 2 3 4 5 6 7 8
-
-    arr.map((element, index, array) => {
-        console.log(array);
-    });
-
-    // [100, 200, 300, 400, 500, 600, 700, 800, 900] * 9
-}
-</code></pre>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>7_4. 메뉴 활성화하기</h4>
-                        <p>
-                            메뉴를 클릭하면 해당 페이지로 이동으로 하고 해당 메뉴에는 클래스 active를 추가해서 현재 있는 곳을 표시해주겠습니다. 
-                            즉 메뉴 active를 활성화하겠습니다.
-                        </p>
-                        <p>
-                            해당 사이트의 주속 값을 가져오기 위해서 <code>useLocation()</code>를 사용하겠습니다. 
-                            주소값고 메뉴의 주소값이 있으면 active를 붙여주는 삼항 연산자를 사용하였습니다. 
-                            키워드 메뉴도 동일하게 작업하였습니다.
-                        </p>
-                        <p>
-                            이 부분을 추가했습니다. 
-                            <code>location.pathname === menu.src</code> 이 부분이 일치하면 active가 추가되고, 아니면 빈문자열로 표현됩니다.
-                        </p>
-<pre><code class="language-js">className={location.pathname === menu.src ? 'active' : ''}</code></pre>
-<pre><code class="language-js">import React from 'react'
-
-import { headerMenus, searchKeword, snsLink } from "../../data/header";
-import { Link, useLocation } from 'react-router-dom';
-
-const Header = () =&gt; {
-    const location = useLocation();
-
-    return (
-        &lt;header id='header' role='banner'&gt;
-            &lt;h1 className='header__logo'&gt;
-                &lt;a href="/"&gt;
-                    &lt;em&gt;&lt;/em&gt;  
-                    &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h1&gt;
-            &lt;div className='header__menu'&gt;
-                &lt;ul className='menu'&gt;
-                    {headerMenus.map((menu, key) =&gt; (
-                        &lt;li key={key} className={location.pathname === menu.src ? 'active' : ''}&gt;
-                            &lt;Link to={menu.src}&gt;
-                                {menu.icon}{menu.title}
-                            &lt;/Link&gt;
-                        &lt;/li&gt;
-                    ))}
-                &lt;/ul&gt;
-                &lt;ul className='keyword'&gt;
-                    {searchKeword.map((keyword, key) =&gt; (
-                        &lt;li key={key} className={location.pathname === keyword.src ? 'active' : ''}&gt;
-                            &lt;Link to={keyword.src}&gt;
-                                {keyword.title}
-                            &lt;/Link&gt;
-                        &lt;/li&gt;
-                    ))}
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div className='header__sns'&gt;
-                &lt;ul&gt;
-                    {snsLink.map((sns, key) =&gt; (
-                        &lt;li key={key}&gt;
-                            &lt;a href={sns.url} target="_blank" rel="noopener noreferrer" aria-label={sns.title}&gt;
-                                &lt;span&gt;{sns.icon}&lt;/span&gt;
-                            &lt;/a&gt;
-                        &lt;/li&gt;
-                    ))}
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/header&gt;
-    )
-}
-
-export default Header
-</code></pre>
-                        <p>
-                            이렇게 하면 주소값과 메뉴의 활성화가 일치하게 됩니다.
-                        </p>
-                        <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-10.png" alt="youtube2023" />
-                        </div>
-                    </div>
+                    </div> 
 
                     <div>
                         <h3>마무리</h3>

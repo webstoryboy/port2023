@@ -71,8 +71,8 @@
                 <div id="youtube" class="blog__contents__intro">
                     <div class="desc">
                         <div class="left">
-                            <span class="num">08</span>
-                            <div class="title">나만의 유튜브 사이트 만들기 : 컴퍼넌트 비동기 작업</div>
+                            <span class="num">07</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 헤더 영역 완성하기</div>
                             <span class="difficulty">난이도 <span>중간</span></span>
                         </div>
                         <div class="right">
@@ -150,315 +150,489 @@
                             <ul>
                                 <li>7. 헤더 영역 완성하기
                                     <ul>
-                                        <li>7_1. 헤더 영역 코딩하기</li>
-                                        <li>7_2. 헤더 영역 데이터 작업</li>
-                                        <li>7_3. 반복문과 map()</li>
-                                        <li>7_4. 메뉴 활성화하기</li>
+                                        <li>7_1. 헤더 영역 구조 잡기</li>
+                                        <li>7_2. 헤더 영역 디자인 작업</li>
                                     </ul>
                                 </li>
-                                <li>8. 컴퍼넌트 비동기 작업
+                                <li>8. 헤더 영역 데이터 작업
                                     <ul>
-                                        <li>8_1. 컴퍼넌트 props 사용하기</li>
-                                        <li>8_2. React.Suspense 사용하기</li>
+                                        <li>8_1. 헤더 영역 데이터 작업</li>
+                                        <li>8_2. 반복문과 map()</li>
+                                        <li>8_3. 메뉴 활성화하기</li>
+                                        <li>8_4. 컴퍼넌트 세부화 시키기</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <h3>8. 컴퍼넌트 비동기 작업</h3>
+                    <h3>8. 헤더 영역 데이터 작업</h3>
                     <div>
-                        <h4>8_1. 컴퍼넌트 props 사용하기</h4>
+                        <h4>8_1. 헤더 영역 데이터 작업</h4>
+                        <p>
+                            이번에는 데이터를 따로 작업하겠습니다. 
+                            데이터를 따로 작업하면 수정하기 용이하고, 더 보기가 좋아집니다. 
+                            그전에 반복문과 map() 메서드에 대해서 먼저 이해를 해야 합니다. 
+                            우선 데이터화를 먼저 작업해 보겠습니다.
+                        </p>
+                        <p>
+                            <code>data</code>폴더를 만들고 <code>header.js</code> 파일을 만듭니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">src
+                                    <ul>
+                                        <li class="icon1">assets</li>
+                                        <li class="icon1">components</li>
+                                        <li class="icon1">data
+                                            <ul>
+                                                <li class="icon2 m0">header.js</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1">pages</li>
+                                        <li class="icon2 m0">App.js</li>
+                                        <li class="icon2 m0">index.js</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
 
                         <p>
-                            메인 페이지의 props를 이용하여 메뉴를 클릭할 때마다 해당 콘텐츠가 보이도록 하겠습니다. 
-                            이럴 때 props를 이용하여 데이터를 전달하고 컨트롤 할 수 있습니다.
+                            <code>header.js</code> 파일은 다음과 같이 정리합니다.
                         </p>
-                       
+<pre><code class="language-js">import { CiBaseball } from "react-icons/ci";
+import { CiCoins1 } from "react-icons/ci";
+import { CiBoxes } from "react-icons/ci";
+import { CiBullhorn } from "react-icons/ci";
+import { CiCoffeeCup } from "react-icons/ci";
+import { CiDumbbell } from "react-icons/ci";
+import { CiFries } from "react-icons/ci";
+import { CiMoneyBill } from "react-icons/ci";
+
+import { AiFillGithub } from "react-icons/ai";
+import { AiOutlineCodepen } from "react-icons/ai";
+import { AiFillYoutube } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
+
+export const headerMenus = [
+    {
+        title: "웹스토리보이",
+        icon: &lt;CiBaseball /&gt;,
+        src: "/"
+    },
+    {
+        title: "추천 영상",
+        icon: &lt;CiMoneyBill /&gt;,
+        src: "/today"
+    },
+    {
+        title: "추천 개발자",
+        icon: &lt;CiCoins1 /&gt;,
+        src: "/developer"
+    },
+    {
+        title: "웹디자인기능사",
+        icon: &lt;CiBoxes /&gt;,
+        src: "/webd"
+    },
+    {
+        title: "웹표준 사이트",
+        icon: &lt;CiBullhorn /&gt;,
+        src: "/website"
+    },
+    {
+        title: "GSAP Parallax",
+        icon: &lt;CiCoffeeCup /&gt;,
+        src: "/gsap"
+    },
+    {
+        title: "포트폴리오 사이트",
+        icon: &lt;CiDumbbell /&gt;,
+        src: "/port"
+    },
+    {
+        title: "유튜브 클론 사이트",
+        icon: &lt;CiFries /&gt;,
+        src: "/youtube"
+    },
+];
+
+export const searchKeyword = [
+    {
+        title: "webstoryboy",
+        src: "/search/webstoryboy"
+    },
+    {
+        title: "HTML",
+        src: "/search/html"
+    },
+    {
+        title: "CSS",
+        src: "/search/css"
+    },
+    {
+        title: "JavaScript",
+        src: "/search/javascript"
+    },
+    {
+        title: "React.js",
+        src: "/search/react.js"
+    },
+    {
+        title: "Vue.js",
+        src: "/search/vue.js"
+    },
+    {
+        title: "Next.js",
+        src: "/search/next.js"
+    },
+    {
+        title: "Node.js",
+        src: "/search/node.js"
+    },
+    {
+        title: "SQL",
+        src: "/search/sql"
+    },
+    {
+        title: "portfolio",
+        src: "/search/React Portfolio"
+    },
+    {
+        title: "music",
+        src: "/search/NewJeans"
+    }
+];
+
+export const snsLink = [
+    {
+        title: "github",
+        url: "https://github.com/webstoryboy",
+        icon: &lt;AiFillGithub /&gt;
+    },
+    {
+        title: "youtube",
+        url: "https://www.youtube.com/webstoryboy",
+        icon: &lt;AiFillYoutube /&gt;
+    },
+    {
+        title: "codepen",
+        url: "https://codepen.io/webstoryboy",
+        icon: &lt;AiOutlineCodepen /&gt;
+    },
+    {
+        title: "instagram",
+        url: "https://www.instagram.com/webstoryboy",
+        icon: &lt;AiOutlineInstagram /&gt;
+    },
+]
+</code></pre>
+
+                        <p>
+                            <code>Header.jsx</code> 파일은 다음과 같이 다시 정리하겠습니다.
+                            리액트에서 페이지 이동 할 때에는 <code>Link</code>를 사용합니다. 
+                            <code>Link</code>를 사용하기 위해서는 <code>import</code>를 하여야 합니다.
+                            이렇게 작업하면 소스가 더 간결해지고 보기 편해집니다.
+                        </p>
 <pre><code class="language-js">import React from 'react'
 
-const Main = ( props ) =&gt; {
+import { headerMenus, searchKeyword, snsLink } from "../../data/category";
+import { Link } from 'react-router-dom';
+
+const Header = () =&gt; {
     return (
-        &lt;main id="main" role="main"&gt;
-            {props.children}
-        &lt;/main&gt;
+        &lt;header id='header' role='banner'&gt;
+            &lt;h1 className='header__logo'&gt;
+                &lt;a href="/"&gt;
+                    &lt;em&gt;&lt;/em&gt;  
+                    &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h1&gt;
+            &lt;div className='header__menu'&gt;
+                &lt;ul className='menu'&gt;
+                    {headerMenus.map((menu, key) =&gt; (
+                        &lt;li key={key}&gt;
+                            &lt;Link to={menu.src}&gt;
+                                {menu.icon}{menu.title}
+                            &lt;/Link&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+                &lt;ul className='keyword'&gt;
+                    {searchKeyword.map((keyword, key) =&gt; (
+                        &lt;li key={key}&gt;
+                            &lt;Link to={keyword.src}&gt;
+                                {keyword.title}
+                            &lt;/Link&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div className='header__sns'&gt;
+                &lt;ul&gt;
+                    {snsLink.map((sns, key) =&gt; (
+                        &lt;li key={key}&gt;
+                            &lt;a href={sns.url} target="_blank" rel="noopener noreferrer" aria-label={sns.title}&gt;
+                                &lt;span&gt;{sns.icon}&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
     )
 }
 
-export default Main</code></pre>
-    
-                        <div class="sampleBasic">
-                            <p>
-                                React에서 "props"는 "properties"의 줄임말로, 컴포넌트 간에 데이터를 전달하고 컴포넌트를 구성하는 데 사용되는 매개변수와 같은 역할을 합니다. 
-                                Props는 React 컴포넌트 간에 데이터를 전달하거나 컴포넌트의 동작을 제어하기 위해 사용됩니다.
-                            </p>
-                            <p>
-                                <i>props.children</i>을 사용하면 부모 컴포넌트가 자식 요소를 포함한 컴포넌트를 작성할 때 렌더링 구조를 더 유연하게 만들 수 있습니다. 이를 통해 동적으로 자식 요소를 추가하거나 조작할 수 있으며, 컴포넌트 간에 재사용 가능한 레이아웃 및 컨테이너 컴포넌트를 작성할 때 유용합니다.
-                            </p>
-                        </div>
-
-                        <p>
-                            이렇게 하면 메뉴를 누를 때마다 메인 영역이 변경되는 것을 확인할 수 있습니다.
-                        </p>
-                        <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-11.png" alt="youtube2023" />
-                        </div>
+export default Header
+</code></pre>
                     </div>
                     
                     <div class="mt80">
-                        <h4>8_2. React.Suspense 사용하기</h4>
-                        <div class="sampleBasic">
-                            <p>
-                                React.Suspense는 React에서 <i>비동기적으로 데이터나 컴포넌트를 불러오는 과정에서 대기 상태를 처리하기 위한 컴포넌트</i>입니다. 이 컴포넌트를 사용하면 데이터나 컴포넌트가 로딩되기를 기다릴 수 있으며, 로딩 중에는 대체 컨텐츠(로딩 스피너 또는 로딩 메시지)를 표시할 수 있습니다. React.Suspense를 사용하면 코드 스플리팅, 데이터 로딩, 서버 사이드 렌더링과 같은 시나리오에서 사용자 경험을 향상시키는 데 도움이 됩니다.
-                            </p>
-                        </div>
+                        <h4>8_2. 반복문과 map()</h4>
                         <p>
-                            우리 사이트의 모든 페이지는 왼쪽에 메뉴가 있고 오른쪽에 데이터가 로딩되기 때문에 이 방식을 사용할 것입니다. 
-                            이 방법을 사용하기 위해서는 <code>app.js</code>를 다시 재 작업 해주겠습니다.
-                            기존 컴퍼넌트 방법이 변경되고 <code>header</code>와 <code>footer</code>는 <code>Main</code> 컴퍼넌트로 넘겨주겠습니다.
+                            리액트 작업시 반복문과 map() 메서드는 사용 빈도가 매우 높습니다. 
+                            잠깐 개념을 파악하고 넘어가겠습니다. 
                         </p>
-<pre><code class="language-js">import React, { Suspense, lazy } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './components/section/Main';
+                        <p>
+                            배열안에 데이터가 들어있습니다.  
+                            <code>for 문</code>을 통해 데이터를 하나씩 호출합니다.
+                        </p>
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-const Home = lazy(() =&gt; import('./pages/Home'));
-const Today = lazy(() =&gt; import('./pages/Today'));
-const Developer = lazy(() =&gt; import('./pages/Developer'));
-const Webd = lazy(() =&gt; import('./pages/Webd'));
-const Website = lazy(() =&gt; import('./pages/Website'));
-const Gsap = lazy(() =&gt; import('./pages/Gsap'));
-const Port = lazy(() =&gt; import('./pages/Port'));
-const Youtube = lazy(() =&gt; import('./pages/Youtube'));
-const Channel = lazy(() =&gt; import('./pages/Channel'));
-const Video = lazy(() =&gt; import('./pages/Video'));
-const Search = lazy(() =&gt; import('./pages/Search'));
-const Not = lazy(() =&gt; import('./pages/Not'));
+    for(let i=0; i&lt;arr.length; i++){
+        console.log(arr[i]);
+    }
+    // 100 200 300 400 500 600 700 800 900
+}   
+</code></pre>
 
-const App = () =&gt; {
+                        <p>
+                            이번에도 배열안에 데이터가 들어있습니다.  
+                            <code>map()</code> 메서드를 통해 데이터를 하나씩 호출하겠습니다.
+                        </p>
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    arr.map((element) => {
+        console.log(element);
+    });
+
+    // [100, 200, 300, 400, 500, 600, 700, 800, 900];
+}   
+</code></pre>   
+                        <p>
+                            for문과 map() 메서드는 데이터 값을 출력하지만 map() 메서드는 출력한 값을 배열로 반환해주는 것에 차이점이 있습니다.
+                            리액트에서 map() 메서드를 사용하는 이유는 출력한 데이터를 다시 배열 형태로 반환 받아서 화면에 편하게 출력하기 위함입니다. 
+                            map() 메서는 인자 값으로 3가지 값을 출력할 수 있습니다. 
+                        </p>
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    arr.map((element, index) => {   
+        console.log(index);
+    });
+
+    // 0 1 2 3 4 5 6 7 8
+
+    arr.map((element, index, array) => {
+        console.log(array);
+    });
+
+    // [100, 200, 300, 400, 500, 600, 700, 800, 900] * 9
+}
+</code></pre>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>8_3. 메뉴 활성화하기</h4>
+                        <p>
+                            메뉴를 클릭하면 해당 페이지로 이동으로 하고 해당 메뉴에는 클래스 active를 추가해서 현재 있는 곳을 표시해주겠습니다. 
+                            즉 메뉴 active를 활성화하겠습니다.
+                        </p>
+                        <p>
+                            해당 사이트의 주속 값을 가져오기 위해서 <code>useLocation()</code>를 사용하겠습니다. 
+                            주소값고 메뉴의 주소값이 있으면 active를 붙여주는 삼항 연산자를 사용하였습니다. 
+                            키워드 메뉴도 동일하게 작업하였습니다.
+                        </p>
+                        <p>
+                            이 부분을 추가했습니다. 
+                            <code>location.pathname === menu.src</code> 이 부분이 일치하면 active가 추가되고, 아니면 빈문자열로 표현됩니다.
+                        </p>
+<pre><code class="language-js">className={location.pathname === menu.src ? 'active' : ''}</code></pre>
+<pre><code class="language-js">import React from 'react'
+
+import { headerMenus, searchKeword, snsLink } from "../../data/header";
+import { Link, useLocation } from 'react-router-dom';
+
+const Header = () =&gt; {
+    const location = useLocation();
+
     return (
-        &lt;BrowserRouter&gt;
-            &lt;Suspense fallback={&lt;Main /&gt;}&gt;
-                &lt;Routes&gt;
-                    &lt;Route path='/' element={&lt;Home /&gt;} /&gt;
-                    &lt;Route path="/today" element={&lt;Today /&gt;} /&gt;
-                    &lt;Route path="/developer" element={&lt;Developer /&gt;} /&gt;
-                    &lt;Route path="/webd" element={&lt;Webd /&gt;} /&gt;
-                    &lt;Route path="/website" element={&lt;Website /&gt;} /&gt;
-                    &lt;Route path="/gsap" element={&lt;Gsap /&gt;} /&gt;
-                    &lt;Route path="/port" element={&lt;Port /&gt;} /&gt;
-                    &lt;Route path="/youtube" element={&lt;Youtube /&gt;} /&gt;
-                    &lt;Route path='/channel/:channelId' element={&lt;Channel /&gt;} /&gt;
-                    &lt;Route path='/video/:videoId' element={&lt;Video /&gt;} /&gt;
-                    &lt;Route path='/search/:searchId' element={&lt;Search /&gt;} /&gt;
-                    &lt;Route path="*" element={&lt;Not /&gt;} /&gt;
-                &lt;/Routes&gt;
-            &lt;/Suspense&gt;
-        &lt;/BrowserRouter&gt;
-    );
+        &lt;header id='header' role='banner'&gt;
+            &lt;h1 className='header__logo'&gt;
+                &lt;a href="/"&gt;
+                    &lt;em&gt;&lt;/em&gt;  
+                    &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h1&gt;
+            &lt;div className='header__menu'&gt;
+                &lt;ul className='menu'&gt;
+                    {headerMenus.map((menu, key) =&gt; (
+                        &lt;li key={key} className={location.pathname === menu.src ? 'active' : ''}&gt;
+                            &lt;Link to={menu.src}&gt;
+                                {menu.icon}{menu.title}
+                            &lt;/Link&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+                &lt;ul className='keyword'&gt;
+                    {searchKeyword.map((keyword, key) =&gt; (
+                        &lt;li key={key} className={location.pathname === keyword.src ? 'active' : ''}&gt;
+                            &lt;Link to={keyword.src}&gt;
+                                {keyword.title}
+                            &lt;/Link&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div className='header__sns'&gt;
+                &lt;ul&gt;
+                    {snsLink.map((sns, key) =&gt; (
+                        &lt;li key={key}&gt;
+                            &lt;a href={sns.url} target="_blank" rel="noopener noreferrer" aria-label={sns.title}&gt;
+                                &lt;span&gt;{sns.icon}&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+    )
 }
 
-export default App;
+export default Header
 </code></pre>
-                        <div class="sampleBasic">
-                            <ul class="list">
-                                <li><i>BrowserRouter</i> : React Router에서 사용되는 브라우저 라우터 컴포넌트입니다. 브라우저 히스토리 API를 사용하여 라우팅을 처리합니다.</li>
-                                <li><i>Suspense</i> : Suspense 컴포넌트는 비동기적으로 로드되는 컴포넌트의 로딩 상태를 관리하는 데 사용됩니다. 여기서는 fallback 속성을 사용하여 로딩 중에 &lt;Main /&gt; 컴포넌트를 표시합니다.</li>
-                                <li><i>Routes</i> : Routes 컴포넌트는 각 경로에 대한 라우트를 정의하고, 해당 경로에 접근할 때 렌더링될 컴포넌트를 결정합니다.</li>
-                                <li><i>Route</i> : Route 컴포넌트는 특정 경로에 대한 라우팅 규칙을 설정하며, element 속성을 통해 해당 경로에 접근할 때 렌더링될 컴포넌트를 지정합니다.</li>
-                                <li><i>lazy()</i> : lazy() 함수는 코드 스플리팅을 위해 사용되며, 비동기적으로 컴포넌트를 로드합니다. 컴포넌트가 필요할 때 비동기적으로 불러와서 번들 크기를 줄일 수 있습니다.</li>
-                                <li><i>fallback</i> : fallback 속성은 Suspense 컴포넌트에서 로딩 중에 표시할 컴포넌트를 지정합니다. 여기서는 &lt;Main /&gt; 컴포넌트가 로딩 중에 보여집니다.</li>
+                        <p>
+                            이렇게 하면 주소값과 메뉴의 활성화가 일치하게 됩니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-10.png" alt="youtube2023" />
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>8_4. 컴퍼넌트 세부화 시키기</h4>
+                        <p>
+                            헤더 컴퍼넌트를 세부화 시키겠습니다.
+                        </p>
+                        <p>
+                            <code>components</code> > <code>header</code> 폴더를 만들고,
+                            <code>Logo.jsx</code>, <code>Menu.jsx</code>, <code>Sns.js</code> 파일을 만들겠습니다. 
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">src
+                                    <ul>
+                                        <li class="icon1">assets</li>
+                                        <li class="icon1">components
+                                            <ul>
+                                                <li class="icon1">header
+                                                    <ul>
+                                                        <li class="icon2 m0">Logo.jsx</li>
+                                                        <li class="icon2 m0">Menu.jsx</li>
+                                                        <li class="icon2 m0">Sns.jsx</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon1">section</li>
+                                            </ul>
+                                        </li>
+                                        <li class="icon1">data</li>
+                                        <li class="icon1">pages</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
-
                         <p>
-                            <code>Main.js</code>를 수정하겠습니다.
+                            <code>Logo.jsx</code> 파일을 작성하겠습니다.
                         </p>
 <pre><code class="language-js">import React from 'react'
 
-import Header from './Header'
-import Footer from './Footer'
-
-const Main = ( props ) =&gt; {
+const Logo = () =&gt; {
     return (
-        &lt;&gt;
-            &lt;Header /&gt;
-            &lt;main id="main" role="main"&gt;
-                {props.children}
-            &lt;/main&gt;
-            &lt;Footer /&gt;
-        &lt;/&gt;
+        &lt;h1 className='header__logo'&gt;
+            &lt;a href='/'&gt;
+                &lt;em aria-hidden='true'&gt;&lt;/em&gt;
+                &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/h1&gt;
     )
 }
 
-export default Main
-</code></pre>
-                        <div class="sampleBasic">
-                            <p>
-                                <code>&lt;></code> 및 <code>&lt;/></code>는 React에서 Fragments(프래그먼트)를 생성하기 위한 단축 구문입니다. 
-                                Fragment는 React 컴포넌트의 반환 값으로 여러 요소를 래핑하고, 이러한 요소가 부모 요소 하나로 묶이지 않도록 허용하는 데 사용됩니다.
-                                React 컴포넌트는 루트 요소에서 시작해야 하기 때문에 여러 요소를 반환하려면 불필요한 부모 요소를 추가하게 됩니다. 
-                                이러한 상황에서 Fragment를 사용하면 불필요한 부모 요소 없이 여러 요소를 그룹화할 수 있습니다.
-                            </p>
-                        </div>
+export default Logo</code></pre>
                         <p>
-                            이제 모든 페이지도 다 변경해주어야 합니다.
+                            <code>Menu.jsx</code> 파일을 작성하겠습니다.
                         </p>
 <pre><code class="language-js">import React from 'react'
 
-const Channel = () => {
+import { headerMenus, searchKeyword } from '../../data/header'
+import { Link, useLocation } from 'react-router-dom'
+
+const Menu = () =&gt; {
+    const location = useLocation();
+
     return (
-        &lt;main&gt;
-            Channel
-        &lt;/main&gt;
+        &lt;nav className='header__menu'&gt;
+            &lt;ul className='menu'&gt;
+                {headerMenus.map((menu, key) =&gt; (
+                    &lt;li key={key} className={location.pathname === menu.src ? 'active' : ''}&gt;
+                        &lt;Link to={menu.src}&gt;
+                            {menu.icon}{menu.title}
+                        &lt;/Link&gt;
+                    &lt;/li&gt;
+                ))}
+            &lt;/ul&gt;
+            &lt;ul className='keyword'&gt;
+                {searchKeyword.map((keyword, key) =&gt; (
+                    &lt;li key={key} className={location.pathname === keyword.src ? 'active' : ''}&gt;
+                        &lt;Link to={keyword.src}&gt;
+                            {keyword.title}
+                        &lt;/Link&gt;
+                    &lt;/li&gt;
+                ))}
+            &lt;/ul&gt;
+        &lt;/nav&gt;
     )
 }
 
-export default Channel
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
+export default Menu</code></pre>
+                        <p>
+                            <code>Sns.js</code> 파일을 작성하겠습니다.
+                        </p>
+<pre><code class="language-js">import { snsLink } from '../../data/header'
 
-const Developer = () => {
+const Sns = () =&gt; {
     return (
-        &lt;main&gt;
-            Developer
-        &lt;/main&gt;
+        &lt;div className='header__sns'&gt;
+            &lt;ul&gt;
+                {snsLink.map((sns, key) =&gt; (
+                    &lt;li key={key}&gt;
+                        &lt;a 
+                            href={sns.url} 
+                            target='_black' 
+                            rel='noopener noreferrer' 
+                            aria-label={sns.title}
+                        &gt;
+                            &lt;span&gt;{sns.icon}&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                ))}
+            &lt;/ul&gt;
+        &lt;/div&gt;
     )
 }
 
-export default Developer
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-const Gsap = () => {
-    return (
-        &lt;main&gt;
-            Gsap
-        &lt;/main&gt;
-    )
-}
-
-export default Gsap
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-const Home = () => {
-    return (
-        &lt;main&gt;
-            Home
-        &lt;/main&gt;
-    )
-}
-
-export default Home
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-const Not = () => {
-    return (
-        &lt;main&gt;
-            Not
-        &lt;/main&gt;
-    )
-}
-
-export default Not
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-const Port = () => {
-    return (
-        &lt;main&gt;
-            Port
-        &lt;/main&gt;
-    )
-}
-
-export default Port
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-const Search = () => {
-    return (
-        &lt;main&gt;
-            Search
-        &lt;/main&gt;
-    )
-}
-
-export default Search
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-const Today = () => {
-    return (
-        &lt;main&gt;
-            Today
-        &lt;/main&gt;
-    )
-}
-
-export default Today
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-const Video = () => {
-    return (
-        &lt;main&gt;
-            Video
-        &lt;/main&gt;
-    )
-}
-
-export default Video
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-const Wedd = () => {
-    return (
-        &lt;main&gt;
-            Wedd
-        &lt;/main&gt;
-    )
-}
-
-export default Wedd
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-const Website = () => {
-    return (
-        &lt;main&gt;
-            Website
-        &lt;/main&gt;
-    )
-}
-
-export default Website
-</code></pre>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-
-const Youtube = () => {
-    return (
-        &lt;main&gt;
-            Youtube
-        &lt;/main&gt;
-    )
-}
-
-export default Youtube
-</code></pre>
-
+export default Sns</code></pre>
                     </div>
 
                     <div>
@@ -468,47 +642,44 @@ export default Youtube
                             터미널에서 다음과 같이 작성하겠습니다.
                             새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
                         </p>
-<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+<pre><code class="language-js">webstoryboy@Webstoryboyui-iMac webs-youtube % git add .
+webstoryboy@Webstoryboyui-iMac webs-youtube % git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
     (use "git restore --staged <file>..." to unstage)
-        modified:   src/App.js
-        modified:   src/components/section/Main.jsx
-        modified:   src/pages/Channel.jsx
-        modified:   src/pages/Developer.jsx
-        modified:   src/pages/Gsap.jsx
-        modified:   src/pages/Home.jsx
-        modified:   src/pages/Not.jsx
-        modified:   src/pages/Port.jsx
-        modified:   src/pages/Search.jsx
-        modified:   src/pages/Today.jsx
-        modified:   src/pages/Video.jsx
-        modified:   src/pages/Webd.jsx
-        modified:   src/pages/Website.jsx
-        modified:   src/pages/Youtube.jsx
+        new file:   src/components/header/Logo.jsx
+        new file:   src/components/header/Menu.jsx
+        new file:   src/components/header/Sns.jsx
+        modified:   src/components/section/Header.jsx
+        new file:   src/data/header.js
 
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "컴퍼넌트 비동기 작업"
-[main 813080f] 컴퍼넌트 비동기 작업
-    14 files changed, 108 insertions(+), 71 deletions(-)
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
-Enumerating objects: 39, done.
-Counting objects: 100% (39/39), done.
-Delta compression using up to 10 threads
-Compressing objects: 100% (19/19), done.
-Writing objects: 100% (20/20), 2.05 KiB | 2.05 MiB/s, done.
-Total 20 (delta 13), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (13/13), completed with 3 local objects.
+webstoryboy@Webstoryboyui-iMac webs-youtube % git commit -m "헤더 영역 데이터 작업"
+[main 1f73d2f] 헤더 영역 데이터 작업
+    5 files changed, 205 insertions(+), 125 deletions(-)
+    create mode 100644 src/components/header/Logo.jsx
+    create mode 100644 src/components/header/Menu.jsx
+    create mode 100644 src/components/header/Sns.jsx
+    create mode 100644 src/data/header.js
+webstoryboy@Webstoryboyui-iMac webs-youtube % git push -u origin main
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (12/12), 2.35 KiB | 2.35 MiB/s, done.
+Total 12 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/webstoryboy/webs-youtube.git
-    436eb77..813080f  main -> main
+    cc0f081..1f73d2f  main -> main
 branch 'main' set up to track 'origin/main'.
 </code></pre>
                         <p>
-                            모든 페이지 구성이 비슷하기 때문에 메인 콘텐츠만 비동기 방식을 사용하여 데이터를 로드할 수 있도록 설정했습니다. 
-                            이렇게 하면 사이트 전환시 또는 메뉴 선택시 깜박임이나 전체 소스를 다시 다운 받는 경우를 막을 수 있습니다. 
-                            표면적으로 티는 잘 나지 않지만 사이트 규모가 커지고, 데이터 전송이 많을 때 조금 더 효율적으로 쓰기 위함입니다.
+                            헤더 영역을 완성하였습니다. 
+                            메뉴를 데이터화여 불러오고 화면에 출력하는 부분은 앞으로도 자주 사용하게 될 것입니다. 
+                            아직은 어려울 수 있지만 익숙해지면 쉬업집니다. 
+                            익숙해지려면 반복적으로 작업하면 됩니다. 
+                            그럼 다음 시간에도 또 반복적으로 작업해볼까요? 
                             수고하셨습니다 🤩
                         </p>
                     </div>
@@ -531,7 +702,6 @@ branch 'main' set up to track 'origin/main'.
                             <li><a href="https://webstoryboy.co.kr/1965">5. 나만의 유튜브 사이트 만들기 : 페이지 만들기</a></li>
                             <li><a href="https://webstoryboy.co.kr/1965">6. 나만의 유튜브 사이트 만들기 : 섹션 컴퍼넌트 구조화하기</a></li>
                             <li><a href="https://webstoryboy.co.kr/1965">7. 나만의 유튜브 사이트 만들기 : 헤더 영역 완성하기</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1965">8. 나만의 유튜브 사이트 만들기 : 컴퍼넌트 비동기 작업</a></li>
                         </ul>
                     </div>
                 </div>

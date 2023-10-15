@@ -72,7 +72,7 @@
                     <div class="desc">
                         <div class="left">
                             <span class="num">12</span>
-                            <div class="title">나만의 유튜브 사이트 만들기 : 추천 개발자 작업</div>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 추천 영상 작업</div>
                             <span class="difficulty">난이도 <span>중간</span></span>
                         </div>
                         <div class="right">
@@ -150,452 +150,354 @@
                             <ul>
                                 <li>7. 헤더 영역 완성하기
                                     <ul>
-                                        <li>7_1. 헤더 영역 코딩하기</li>
-                                        <li>7_2. 헤더 영역 데이터 작업</li>
-                                        <li>7_3. 반복문과 map()</li>
-                                        <li>7_4. 메뉴 활성화하기</li>
+                                        <li>7_1. 헤더 영역 구조 잡기</li>
+                                        <li>7_2. 헤더 영역 디자인 작업</li>
                                     </ul>
                                 </li>
-                                <li>8. 컴퍼넌트 비동기 작업
+                                <li>8. 헤더 영역 데이터 작업
+                                    <ul>
+                                        <li>8_1. 헤더 영역 데이터 작업</li>
+                                        <li>8_2. 반복문과 map()</li>
+                                        <li>8_3. 메뉴 활성화하기</li>
+                                        <li>8_4. 컴퍼넌트 세부화 시키기</li>
+                                    </ul>
+                                </li>
+                                <li>9. 컴퍼넌트 비동기 작업
                                     <ul>
                                         <li>8_1. 컴퍼넌트 props 사용하기</li>
                                         <li>8_2. React.Suspense 사용하기</li>
                                     </ul>
                                 </li>
-                                <li>9. 페이지 SEO 작업
+                                <li>10. 페이지 SEO 작업
                                     <ul>
-                                        <li>9_1. 메인 페이지 SEO 설정하기</li>
-                                        <li>9_2. 모든 페이지 SEO 설정하기</li>
+                                        <li>10_1. 메인 페이지 SEO 설정하기</li>
+                                        <li>10_2. 모든 페이지 SEO 설정하기</li>
                                     </ul>
                                 </li>
-                                <li>10. 메인 콘텐츠 작업
+                                <li>11. 메인 콘텐츠 작업
                                     <ul>
-                                        <li>10_1. 검색 컴퍼넌트 작업하기</li>
-                                        <li>10_2. 메인 컴퍼넌트 작업하기</li>
+                                        <li>11_1. 검색 컴퍼넌트 작업하기</li>
+                                        <li>11_2. 메인 컴퍼넌트 작업하기</li>
                                     </ul>
                                 </li>
-                                <li>11. 추천 영상 작업
+                                <li>12. 추천 영상 작업
                                     <ul>
-                                        <li>11_1. 메인 추천 영상 작업</li>
-                                        <li>11_2. 추천 영상 반응형 작업</li>
-                                        <li>11_3. 추천 영상 페이지 작업</li>
-                                    </ul>
-                                </li>
-                                <li>12. 추천 개발자 작업
-                                    <ul>
-                                        <li>12_1. 메인 추천 개발자 작업</li>
-                                        <li>12_2. 추천 개발자 페이지 작업</li>
+                                        <li>12_1. 메인 추천 영상 작업</li>
+                                        <li>12_2. 추천 영상 반응형 작업</li>
+                                        <li>12_3. 추천 영상 페이지 작업</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <h3>12. 추천 개발자 작업</h3>
+                    <h3>12. 추천 영상 작업</h3>
                     <div>
-                        <h4>12_1. 메인 추천 개발자 작업</h4>
+                        <h4>12_1. 메인 추천 영상 작업</h4>
                         <p>
-                            메인 페이지의 오늘의 추천 개발자 섹션을 작업하겠습니다. 
+                            메인 페이지의 오늘의 추천 영상 섹션을 작업하겠습니다. 
                             데이터는 다 만들어 놨기 때문에 복사해서 사용하시면 될 거 같습니다. 
                             이미지는 상단 소스 받기에서 다운 받으시면 됩니다.
                         </p>
                         <p>
                             우선 데이터를 추가하겠습니다. 
-                            <code>data</code> > <code>developer.js</code> 파일을 만들겠습니다.
+                            <code>data</code> > <code>today.js</code> 파일을 만들겠습니다.
                         </p>
-<pre><code class="language-js">export const developerText = [
+<pre><code class="language-js">import todayView01 from "../assets/img/today/todayView01.jpg";
+import todayView02 from "../assets/img/today/todayView02.jpg";
+import todayView03 from "../assets/img/today/todayView03.jpg";
+import todayView04 from "../assets/img/today/todayView04.jpg";
+import todayView05 from "../assets/img/today/todayView05.jpg";
+import todayView06 from "../assets/img/today/todayView06.jpg";
+import todayView07 from "../assets/img/today/todayView07.jpg";
+import todayView08 from "../assets/img/today/todayView08.jpg";
+
+export const todayText = [
     {
-        img: "https://yt3.googleusercontent.com/JU6k565OVstxx_h_7TbzE1aNXKzcxKl33zjPV4p649pqsgS7E3vb0meX9DB1_D_KviDoc4xM=s176-c-k-c0x00ffffff-no-rj",
-        name: "webstoryboy",
-        channelAddress: "https://www.youtube.com/@webstoryboy",
-        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw"
+        img: todayView01,
+        title: "나만의 코딩 유튜브 사이트 만들기 프로젝트",
+        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
+        author : "webstoryboy",
+        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
+        date: "2023.07.07",
+        page: "/youtube"
+    },{
+        img: todayView02,
+        title: "Vite를 이용하여 포트폴리오 사이트 만들기",
+        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
+        author : "webstoryboy",
+        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
+        date: "2023.07.07",
+        page: "/port"
+    },{
+        img: todayView03,
+        title: "React.js를 이용하여 포트폴리오 사이트 만들기",
+        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
+        author : "webstoryboy",
+        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
+        date: "2023.07.07",
+        page: "/port"
+    },{
+        img: todayView04,
+        title: "Vue.js를 이용하여 포트폴리오 사이트 만들기",
+        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
+        author : "webstoryboy",
+        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
+        date: "2023.07.07",
+        page: "/port"
+    },{
+        img: todayView05,
+        title: "Next.js를 이용하여 포트폴리오 사이트 만들기",
+        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
+        author : "webstoryboy",
+        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
+        date: "2023.07.07",
+        page: "/port"
+    },{
+        img: todayView06,
+        title: "GSAP를 이용하여 창의적인 사이트 만들기",
+        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
+        author : "webstoryboy",
+        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
+        date: "2023.07.07",
+        page: "/gsap"
+    },{
+        img: todayView07,
+        title: "웹디자인 기능사는 이 영상으로 준비 끝",
+        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
+        author : "webstoryboy",
+        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
+        date: "2023.07.07",
+        page: "/webd"
+    },{
+        img: todayView08,
+        title: "디자인 부터 코딩까지 준비 완료",
+        desc : "안녕하세요, 여러분! 오늘은 특별한 프로젝트를 소개해드리려고 합니다. 제가 '나만의 코딩 유튜브 사이트 만들기'라는 주제로 프로젝트를 진행하게 되었는데요, 이 프로젝트는 저의 열정인 코딩과 온라인 교육을 결합한 결과물입니다. 이 프로젝트의 주요 목표는 누구나 쉽게 접근하고 배울 수 있는 공간을 만드는 것입니다. 제가 여러 해 동안 프로그래밍을 공부하면서 느낀 점은 양질의 학습 자료와 개인의 진도에 맞는 커리큘럼이 얼마나 중요한지입니다. 그래서 이 사이트에서는 초보자부터 고급 수준까지 다양한 난이도와 주제의 온라인 강의를 제공할 계획입니다.",
+        author : "webstoryboy",
+        channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
+        date: "2023.07.07",
+        page: "/website"
     },
-    {
-        img: "https://yt3.googleusercontent.com/JuRcVt9OFQgqh7UL1LjihpVLEbjdNXt3tGq-IQfqRMT8wVXgWg_tzyz0S_GVsgqkB3ucBC5fqeY=s176-c-k-c0x00ffffff-no-rj",
-        name: "조코딩 JoCoding",
-        channelAddress: "https://www.youtube.com/@jocoding",
-        channelId: "UCQNE2JmbasNYbjGAcuBiRRg"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaSNRWU5nI-gDyzEdtbhpLqWg8wXNs-FQHf35iMCOw=s176-c-k-c0x00ffffff-no-rj",
-        name: "생활코딩",
-        channelAddress: "https://www.youtube.com/@coohde",
-        channelId: "UCvc8kv-i5fvFTJBFAk6n1SA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaSn88PvVXWN_Wy5vSr-5Eo_NGDdw_apL6bM7QKfCw=s176-c-k-c0x00ffffff-no-rj",
-        name: "노마드 코더 Nomad Coders",
-        channelAddress: "https://www.youtube.com/@nomadcoders",
-        channelId: "UCUpJs89fSBXNolQGOYKn0YQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaSeGpiSPyozdunhf74J4oa2XWHPObm8bKTcbEU=s176-c-k-c0x00ffffff-no-rj",
-        name: "코딩하는거니",
-        channelAddress: "https://www.youtube.com/@gunnycoding",
-        channelId: "UCO7g158NWgLyn98z8v3zduA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/iofg4f6THo3jyeap1GC23g5qsKD-w62Lu4U9EJBmZe8YtM1NhbNWz4WiyICAXXmwrgbnUh-FNQ=s176-c-k-c0x00ffffff-no-rj",
-        name: "워니코딩",
-        channelAddress: "https://www.youtube.com/@WonieSong",
-        channelId: "UC0uDM1xZMNBAoW2xnzhAQ7g"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaRCkXnBnWEMfpo5c_TXB-tF0FxqiCfv5KoP_9IBC6A=s176-c-k-c0x00ffffff-no-rj",
-        name: "얄팍한 코딩사전",
-        channelAddress: "https://www.youtube.com/@yalco-coding",
-        channelId: "UC2nkWbaJt1KQDi2r2XclzTQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/oLi5jJ2AKs_aYpR9UpUpu052M84WIE2j9cpnNb1VnpBHZMHVrTRPwrUIncJGu6--PVR-x-22=s176-c-k-c0x00ffffff-no-rj",
-        name: "개발하는 정대리",
-        channelAddress: "https://www.youtube.com/@dev_jeongdaeri",
-        channelId: "UCutO2H_AVmWHbzvE92rpxjA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTw2ZRRi6UzhNeunJh03HOeAnKScgRJygpN7_MsVQ=s176-c-k-c0x00ffffff-no-rj",
-        name: "코딩애플",
-        channelAddress: "https://www.youtube.com/@codingapple",
-        channelId: "UCSLrpBAzr-ROVGHQ5EmxnUg"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaRfTsQsimyyMrWugbbogh_EdsCWWQsKVqh5Fdvq=s176-c-k-c0x00ffffff-no-rj",
-        name: "김왼손의 왼손코딩",
-        channelAddress: "https://www.youtube.com/@leftykhim",
-        channelId: "UC0h8NzL2vllvp3PjdoYSK4g"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaSXgyXVlJGDyr1IaQgHJlGvc4wcFcZJ4S35NATdrYA=s176-c-k-c0x00ffffff-no-rj",
-        name: "제주코딩베이스캠프",
-        channelAddress: "https://www.youtube.com/@jejucodingcamp",
-        channelId: "UC4GnvNKtuJ4cqWsYjxNxAEQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaQyV-QwNnxxLKCnfHZrfsGNx7fqFD9YSQ_lweIx6w=s176-c-k-c0x00ffffff-no-rj",
-        name: "나도코딩",
-        channelAddress: "https://www.youtube.com/@nadocoding",
-        channelId: "UC7iAOLiALt2rtMVAWWl4pnw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTiHU0ol325VdijS5AX4DQomGs6zlD_y_v0I0A6=s176-c-k-c0x00ffffff-no-rj",
-        name: "라매개발자",
-        channelAddress: "https://www.youtube.com/@lamedev",
-        channelId: "UCr3lkp7TJiJTCY4ffRQ1m2A"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaSnppVkSh38WlQrn-7FzBAqlJpMLdGq4jS2GGHzgQ=s176-c-k-c0x00ffffff-no-rj",
-        name: "드림코딩",
-        channelAddress: "https://www.youtube.com/@dream-coding",
-        channelId: "UC_4u-bXaba7yrRz_6x6kb_w"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTyIgb-N-SeFznHEn_RkJkF9IirgzvXtEoWOnNt=s176-c-k-c0x00ffffff-no-rj",
-        name: "ZeroCho TV",
-        channelAddress: "https://www.youtube.com/@ZeroChoTV",
-        channelId: "UCp-vBtwvBmDiGqjvLjChaJw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/x5DWPPquVbSkeJ-UCVuPfnd6nzbkSCkSaXuxRUnD1yGYWixNPErHqMQP4bhP6M86oQcH7pcm=s176-c-k-c0x00ffffff-no-rj",
-        name: "짐코딩 GYM CODING",
-        channelAddress: "https://www.youtube.com/@gymcoding",
-        channelId: "UCZ30aWiMw5C8mGcESlAGQbA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/PVbwh8OLmp3dTofJ7vmv6zfoRKiFgIvL9SsTYaermGxW3Ga6vONSfC7ymrgpO6gUCd9nKcZp0Sc=s176-c-k-c0x00ffffff-no-rj",
-        name: "프롱트",
-        channelAddress: "https://www.youtube.com/@frongt",
-        channelId: "UCku8mOp8y05Cm6sb9Rp0jMQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/1gLFRSPxZUYjlGG-Ap7B2bymZkdp4fFuSTAntouex6mdUQUZ2lA8kWMrzKOLHAdfkzjopcntU7E=s176-c-k-c0x00ffffff-no-rj",
-        name: "프로그래머 김플 스튜디오",
-        channelAddress: "https://www.youtube.com/@kimfl",
-        channelId: "UCdNSo3yB5-FRTFGbUNKNnwQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaToAOoB7zZaRe9kVmXGi6QWBBPrESpK8pcaWnBL=s176-c-k-c0x00ffffff-no-rj",
-        name: "Lama Dev",
-        channelAddress: "https://www.youtube.com/@LamaDev",
-        channelId: "UCOxWrX5MIdXIeRNaXC3sqIg"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/4RM7sEvMAp5QokwqBbcQh9_XD53E2PGrfwCClaqT_IAL2FnIzWqxyBN3JuPKMas-dL0do9t-=s176-c-k-c0x00ffffff-no-rj",
-        name: "JS Dev Hindi",
-        channelAddress: "https://www.youtube.com/@jsdevhindi",
-        channelId: "UCRJz8FP29yq_vA5h08dXMPw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaQneLC0nfXjK4QaNPSG1lZXCUZtuhoFdBtYz1hH=s176-c-k-c0x00ffffff-no-rj",
-        name: "코딩알려주는누나",
-        channelAddress: "https://www.youtube.com/@user-yu8so2ck1z",
-        channelId: "UCfBvs0ZJdTA43NQrnI9imGA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaQxJlRUxIrCv4zw_kfUsqKHAm1rN32SHAU8Iwla=s176-c-k-c0x00ffffff-no-rj",
-        name: "동빈나",
-        channelAddress: "https://www.youtube.com/@dongbinna",
-        channelId: "UChflhu32f5EUHlY7_SetNWw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaQZENEAuTWosc8r89GoegTvvjKzdEgBXMv7C4i4=s176-c-k-c0x00ffffff-no-rj",
-        name: "EdRoh",
-        channelAddress: "https://www.youtube.com/@EdRohDev",
-        channelId: "UCMoEx7gz7IbJHv733yEi2aA"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s176-c-k-c0x00ffffff-no-rj",
-        name: "JavaScript Mastery",
-        channelAddress: "https://www.youtube.com/@javascriptmastery",
-        channelId: "UCmXmlB4-HJytD7wek0Uo97A"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTs1IEit9EUooQAJkWS4SkpUE7oMDXYrjIgnOk1Kw=s176-c-k-c0x00ffffff-no-rj",
-        name: "freeCodeCamp.org",
-        channelAddress: "https://www.youtube.com/@freecodecamp",
-        channelId: "UC8butISFwT-Wl7EV0hUK0BQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/kVYpCZYEfX0_b2_Y7SROJsLahriQfOf6rW4egbSxDGWHDLiqhFcPM8eL56EKYfgjzetQQRx7fA=s176-c-k-c0x00ffffff-no-rj",
-        name: "How to Become a Developer",
-        channelAddress: "https://www.youtube.com/@howtobecomeadeveloper",
-        channelId: "UCkXqOdpo5ul8BosGBFlDgmw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/O8iON5EAVx6HVKyOV5UMreLFI_0D3mJX373vTEGoNcVRpNP7Lq8swha7BSLWTiEWlZaF7a4ENW8=s176-c-k-c0x00ffffff-no-rj",
-        name: "Code With Antonio",
-        channelAddress: "https://www.youtube.com/@codewithantonio",
-        channelId: "UCW_4e6sUTMWHxlF06aErH9w"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/nwyG0ql8sxARogaFb3sgpjoNd86v7hL9W2eeEysP2LryigBtYtX-J2Mw9H1lpcB9D4sw0aCx9w=s176-c-k-c0x00ffffff-no-rj",
-        name: "EGATOR",
-        channelAddress: "https://www.youtube.com/@EGATORTUTORIALS",
-        channelId: "UCL8l_VxCAN0jOpaLaRAm8sQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/a3vK_ZCS_QUX19CV2Xx1RY-CgR7DQzpeWk14UFbKdDv0Ryjc_FPf6Uo4-8NPi34deUay87eusQ=s176-c-k-c0x00ffffff-no-rj",
-        name: "빔캠프 CSS",
-        channelAddress: "https://www.youtube.com/@veamcamp",
-        channelId: "UCvx57s_ZBt5VG4fvlStiq2g"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/wr8dNnJ8dSHjBsHKag3O6ZCKmxJvnxqhpPi-E6sWf83JYKxnevU2iSt3FzLxjzrZOCTRpbi53mg=s176-c-k-c0x00ffffff-no-rj",
-        name: "코딩카페1",
-        channelAddress: "https://www.youtube.com/@CodingCafe1",
-        channelId: "UCt76J5CYnXL-uoJmQPG2Azw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/AVa5OPep1y0E8bZMIyLDyzg1jTwApHaSCi2RUG0epuLFZe0e80yvYo7MNHd-ApnvOtDgT3A3=s176-c-k-c0x00ffffff-no-rj",
-        name: "Codegrid",
-        channelAddress: "https://www.youtube.com/@codegrid",
-        channelId: "UC7pVho4O31FyfQsZdXWejEw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/wgnEbc2Ec2JYkeyzUbiHzDlAFObI2Btwo2YRCEF1aCMBiRc5E_zWy8-URBQS3EMQ1yzzaGFR=s176-c-k-c0x00ffffff-no-rj",
-        name: "Kishan Sheth",
-        channelAddress: "https://www.youtube.com/@KishanSheth21",
-        channelId: "UCDT8sIFy3pW8LT6SAbe8xtQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTc-hNjbGDnft48nMktaKF87D8EmpZ9Oacc4XeTew=s176-c-k-c0x00ffffff-no-rj",
-        name: "Yuri Artiukh",
-        channelAddress: "https://www.youtube.com/@akella_",
-        channelId: "UCDo7RTzizoOdPjY8A-xDR7g"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaQOeqOOHYrdr9qaOxYqujnMoTvladljn12PeOdeVA=s176-c-k-c0x00ffffff-no-rj",
-        name: "디자인베이스",
-        channelAddress: "https://www.youtube.com/@designbase",
-        channelId: "UCvYnDMeL-PFZhfIz6oc_U-Q"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaRq6HIiAsf1pv1CHAlIIM6MdbnaX0jqpTCOyIM5TA=s176-c-k-c0x00ffffff-no-rj",
-        name: "야무",
-        channelAddress: "https://www.youtube.com/@yamoo9",
-        channelId: "UCTZRL_OwTjiXYoTjwWg4bww"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaTtbptu4ao5lFu3ElFN61tMr1K0pvo8zd7qw7HeFw=s176-c-k-c0x00ffffff-no-rj",
-        name: "DesignCourse",
-        channelAddress: "https://www.youtube.com/@DesignCourse",
-        channelId: "UCVyRiMvfUNMA1UPlDPzG5Ow"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaR892c9LcaLOEfzAp80Nna198A4lte69Z80LV-2ug=s176-c-k-c0x00ffffff-no-rj",
-        name: "Code with Ania Kubów",
-        channelAddress: "https://www.youtube.com/@AniaKubow",
-        channelId: "UC5DNytAJ6_FISueUfzZCVsw"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaR0SDrl59HyNkJotnB41HBsVLXDUaRMbKFRJIIoJQ=s176-c-k-c0x00ffffff-no-rj",
-        name: "Coding Artist",
-        channelAddress: "https://www.youtube.com/@CodingArtist",
-        channelId: "UC15exV5s79D_aYGADudlwpQ"
-    },
-    {
-        img: "https://yt3.googleusercontent.com/ytc/AOPolaRbhQtG_1StOoOn0z0pfDfAFoe86Gk_kkR1OPhYVg=s176-c-k-c0x00ffffff-no-rj",
-        name: "Rock's Easyweb",
-        channelAddress: "https://www.youtube.com/@Ezweb",
-        channelId: "UCax1DP6hqZowNWF2lquKk0w"
-    }
 ]
 </code></pre>            
                         <p>
-                            <code>components</code> > <code>contents</code> > <code>Developer.jsx</code> 파일을 수정하겠습니다. 
+                            <code>components</code> > <code>contents</code> > <code>Today.jsx</code> 파일을 수정하겠습니다. 
                         </p>
 <pre><code class="language-js">import React from 'react'
 
-import { developerText } from '../../data/developer';
-import { Link } from 'react-router-dom';
+import { todayText } from '../../data/today'
+import { Link } from 'react-router-dom'
 
-const Developer = () =&gt; {
+const Today = () =&gt; {
     return (
-        &lt;section id='developer'&gt;
-            &lt;h2&gt;😪 추천 개발자를 소개합니다.&lt;/h2&gt;
-            &lt;div className="develpoer__inner overflow"&gt;
-                {developerText.map((developer, key) =&gt; (
-                    &lt;div className="develpoer" key={key}&gt;
-                        &lt;div className="develpoer__img play__icon"&gt;
-                            &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                &lt;img src={developer.img} alt={developer.name} /&gt;
-                            &lt;/Link&gt;
-                        &lt;/div&gt;
-                        &lt;div className="develpoer__info"&gt;
-                            &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                {developer.name}
-                            &lt;/Link&gt;
-                        &lt;/div&gt;
+        &lt;section id='today'&gt;
+            &lt;div className='today__inner'&gt;
+                &lt;div className='today__thumb play__icon'&gt;
+                    &lt;Link to={todayText[0].page}&gt;
+                        &lt;img src={todayText[0].img} alt={todayText[0].title} /&gt;
+                    &lt;/Link&gt;
+                &lt;/div&gt;
+                &lt;div className='today__text'&gt;
+                    &lt;span className='today'&gt;today!&lt;/span&gt;
+                    &lt;h3 className='title'&gt;
+                        &lt;Link to={todayText[0].page}&gt;{todayText[0].title}&lt;/Link&gt;
+                    &lt;/h3&gt;
+                    &lt;p className='desc'&gt;{todayText[0].desc}&lt;/p&gt;
+                    &lt;div className='info'&gt;
+                        &lt;span className='author'&gt;
+                            &lt;Link to={`/channel/${todayText[0].channelId}`}&gt;{todayText[0].author}&lt;/Link&gt;
+                        &lt;/span&gt;
+                        &lt;span className='date'&gt;{todayText[0].date}&lt;/span&gt;
                     &lt;/div&gt;
-                ))}
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/section&gt;
     )
 }
 
-export default Developer</code></pre>
+export default Today</code></pre>
 
                         <p>
-                            <code>scss</code> > <code>section</code> > <code>_developer.scss</code> 파일을 수정하겠습니다. 
+                            <code>scss</code> > <code>section</code> > <code>_today.scss</code> 파일을 수정하겠습니다. 
                             SCSS 파일을 추가하면 <code>style.scss</code>에 추가하여야 연동이 됩니다.
                         </p>
-<pre><code class="language-scss">.develpoer__inner {
+<pre><code class="language-scss">.today__inner {
     display: flex;
-    color: var(--white);
-    flex-wrap: wrap;
+    background-color: var(--black100);
+    margin-bottom: 3.125rem;
+}
 
-    &.overflow {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
+.today__thumb {
+    width: 40%;
+}
+
+.today__text {
+    width: 60%;
+    padding: 2rem;
+
+    .today {
+        background-color: #f00;
+        padding: 2px 50px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: inline-block;
     }
-
-    .develpoer {
-        color: var(--white);
-        text-align: center;
-        margin-right: 20px;
-
-        .develpoer__img {
-            display: block;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
-        .develpoer__info {
-            width: 150px;
-            text-align: center;
-            @include line-one;
-            padding-bottom: 40px;
-        }
+    .title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        @include line-one;
     }
-
-    @media (max-width: 800px) {
-        justify-content: center;
-        margin-top: 70px;
+    .desc {
+        margin-bottom: 1rem;
+        color: var(--white200);
+        @include line(4)
     }
-    @media (max-width: 600px) {
-        .develpoer {
-            margin-right: 10px;
-
-            .develpoer__img {
-                width: 100px;
-                height: 100px;
-            }
-            .develpoer__info {
-                width: 100px;
-            }
-        }
         
+    .info {
+        .author {
+            font-size: 1rem;
+            margin-right: 10px;
+            font-weight: 900;
+            text-decoration: underline;
+            text-underline-position: under;
+            text-transform: uppercase;
+        }
+        .date {
+            font-style: 0.8rem;
+            color: var(--white200);
+        }
     }
-}</code></pre>
+} 
+
+@media (max-width: 1700px){
+    .today__inner {
+        .today__thumb {
+            width: 500px;
+        }
+        .today__text {
+            width: calc(100% - 500px);
+
+            .desc {
+                @include line(2);
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .today__inner {
+        flex-direction: column;
+
+        .today__thumb {
+            width: 100%;
+        }
+        .today__text {
+            width: 100%;
+
+            .title {
+                font-size: 24px;
+            }
+
+            .desc {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px){
+    #todayPage,
+    #today {
+        margin-top: 80px;
+    }
+}
+</code></pre>
 
                         <p>
-                            <code>scss</code> > <code>setting</code> > <code>_common.scss</code> 파일을 수정하겠습니다. 
+                            <code>scss</code> > <code>setting</code> > <code>_mixin.scss</code> 파일에 수정하겠습니다.
+                        </p>
+<pre><code class="language-scss">// 한줄 효과 
+@mixin line-one {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// 두줄 효과
+@mixin line-two {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+// 두줄 이상
+@mixin line($num){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+}
+    
+</code></pre>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>12_2. 추천 영상 반응형 작업</h4>
+                        <p>
+                            반응형 작업을 위해 다음을 수정하겠습니다. 
+                            <code>scss</code> > <code>setting</code> > <code>_common.scss</code>를 수정하겠습니다.
                         </p>
 <pre><code class="language-scss">body {
     background-color: var(--black);
     color: var(--white);
 }
 
-// 각 섹션 공통 요소
+// 섹션 공통 요소
 section {
     padding: 40px;
-
-    h2 {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
-
-        em {
-            position: relative;
-           
-            &::after {
-                content: '';
-                width: 100%;
-                height: 50%;
-                background-color: rgba(255, 0, 0, 0.747);
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                z-index: -1;
-                border-radius: 30px;
-            }
-        }
-    }
 
     @media (max-width: 800px){
         padding: 20px;
     }
+
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
 }
 
-// 마우스 오버 효과
+// 마우스 오버 아이콘
 .play__icon {
     a {
         position: relative;
         display: block;
         cursor: pointer;
         width: 100%;
-        // padding-bottom: 56.25%;
-        position: relative;
-
+        
         &::before {
             content: '';
             width: 100%;
             height: 100%;
-            background-color: #0000002e;
+            background-color: var(--blackAlpha200);
             position: absolute;
-            left: 0; 
+            left: 0;
             top: 0;
             transition: background-color 0.3s;
         }
+
         &:hover::before {
-            background-color: #00000000;
+            background-color: var(--blackAlpha);
         }
+
         &::after {
-            content: '';
+            content: "";
             width: 80px;
             height: 80px;
-            background: #00000096 url(../../img/icon/play.svg) no-repeat center;
+            background: var(--blackAlpha400) url(../../img/icon/play.svg) no-repeat center;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -604,6 +506,7 @@ section {
             opacity: 0;
             transition: opacity 0.3s;
         }
+
         &:hover::after {
             opacity: 1;
         }
@@ -611,66 +514,367 @@ section {
 }
 </code></pre>
                         <p>
-                            추천 개발자 메인 페이지 결과물입니다.
+                            <code>scss</code> > <code>section</code> > <code>_search.scss</code>를 수정하겠습니다.
+                        </p>
+<pre><code class="language-scss">.search__inner {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    padding: 17px 40px;
+    border-bottom: 1px solid var(--black100);
+
+    label {
+        width: 24px;
+        height: 24px;
+        background-image: url(../../img/icon/search.svg);
+        position: absolute;
+        left: 53px;
+        top: 28px;
+        background-size: cover;
+    }
+
+    input {
+        background-color: var(--black100);
+        border: 1px solid var(--black200);
+        width: 100%;
+        padding: 14px 45px;
+        border-radius: 40px;
+        font-size: 16px;
+        color: var(--white);
+    }
+}
+
+@media (max-width: 800px){
+    .search__inner {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--blackAlpha400);
+        backdrop-filter: blur(10px);
+        padding: 17px 20px 17px 200px;
+
+        label {
+            left: 213px;
+        }
+        input {
+            padding: 14px 14px 14px 45px;
+        }
+    }
+}
+</code></pre>
+
+                        <p>
+                            <code>scss</code> > <code>section</code> > <code>_header.scss</code>를 수정하겠습니다.
+                        </p>
+<pre><code class="language-scss">.header__logo {
+    border-bottom: 1px solid var(--black100);
+
+    @media (max-width: 800px){
+        border-bottom: 0;
+    }
+
+    a {
+        display: flex;
+        padding: 10px;
+        margin: 10px;
+
+        em {
+            width: 40px;
+            height: 40px;
+            display: block;
+            background-color: var(--red);
+            margin-right: 10px;
+            animation: ani 20s 20s ease-in-out infinite;
+        }
+
+        span {
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.header__menu {
+    padding: 10px 0;
+
+    .menu {
+        border-bottom: 1px solid var(--black100);
+
+        li {
+            margin-bottom: 5px;
+
+            a {
+                font-size: 1rem;
+                display: block;
+                padding: 0.9rem 2rem 0.9rem 3.125rem;
+                margin: 0 0.625rem;
+                border-radius: 40px;
+                position: relative;
+                line-height: 1;
+                color: var(--white200);
+                transition: all 0.3s;
+
+                svg {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    position: absolute;
+                    left: 1.25rem;
+                    top: 0.75rem;
+                }
+
+                &:hover {
+                    background-color: var(--black100);
+                    color: var(--white);
+                }
+            }
+
+            &.active a {
+                background-color: var(--black100);
+                color: var(--white);
+            }
+        }
+    }
+
+    .keyword {
+        padding: 1.25rem;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: inline-block;
+                padding: 5px 15px;
+                border: 1px solid var(--black200);
+                font-size: 0.8rem;
+                border-radius: 40px;
+                margin: 3px 1px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: var(--black100);
+                    color: var(--white);
+                }
+            }
+
+            &.active a {
+                background-color: var(--black100);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+.header__sns {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 260px;
+    text-align: center;
+    padding: 15px 0 10px;
+    background-color: var(--blackAlpha100);
+    backdrop-filter: blur(10px);
+
+    @media (max-width: 800px){
+        display: none;
+    }
+
+    li {
+        display: inline-block;
+
+        a {
+            padding: 5px 7px;
+            display: inline-block;
+        }
+    }
+}
+
+@keyframes ani {
+    0% {
+        transform: rotate(0) scale(1);
+        border-radius: 0;
+    }
+    50% {
+        transform: rotate(720deg) scale(0.5);
+        border-radius: 20px;
+    }
+    100% {
+        transform: rotate(0) scale(1);
+        border-radius: 0;
+    }
+}
+</code></pre>
+
+                        <p>
+                            <code>scss</code> > <code>section</code> > <code>_layout.scss</code>를 수정하겠습니다.
+                        </p>
+<pre><code class="language-scss">#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 10000;
+    border-right: 1px solid var(--black100);
+}
+#main {
+    max-width: 2000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: 260px;
+}
+#footer {
+    text-align: center;
+    background-color: var(--black100);
+    border-top: 1px solid (var--black100);
+    padding: 20px;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    color: var(--black400);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 800px){
+    #header {
+        left: -260px;
+
+        h1 {
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+    }
+    #main {
+        padding-left: 0;
+    }
+    #footer {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+</code></pre>
+
+                        <p>
+                            <code>scss</code> > <code>section</code> > <code>_vars.scss</code>를 수정하겠습니다.
+                        </p>
+<pre><code class="language-scss">:root {
+    --mainfont-nanum: "nanumSquareNeo";
+    --mainfont-nexon: "nexonLv1";
+  
+    --black: #000;
+    --black100: #161616;
+    --black200: #222;
+    --black300: #333;
+    --black400: #444;
+    --black500: #000;
+
+    --blackAlpha: #00000000;
+    --blackAlpha100: #00000025;
+    --blackAlpha200: #0000004d;
+    --blackAlpha300: #00000091;
+    --blackAlpha400: #000000c3;
+    --blackAlpha500: #000000eb;
+    
+    --white: #fff;
+    --white100: #efefef;
+    --white200: #d9d9d9;
+    --white300: #fff;
+    --white400: #fff;
+    --white500: #fff;
+
+    --red: #f00;
+    
+    // 폰트 셋팅
+    font-family: var(--mainfont-nanum), var(--mainfont-nexon);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    
+    // 폰트 최적화
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  
+    @media (max-width: 800px) {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+</code></pre>
+                        <p>
+                            추천 영상 메인 페이지 결과물입니다.
                         </p>
                         <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-17.png" alt="youtube2023" />
+                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-15.png" alt="youtube2023" />
                         </div>
                     </div>
 
-
                     <div class="mt80">
-                        <h4>12_2. 추천 개발자 페이지 작업</h4>
+                        <h4>12_3. 추천 영상 페이지 작업</h4>
                         <p>
-                            이번에는 추천 개발자 영상 페이지 작업을 하겠습니다. 
-                            여기에서는 모든 개발자 영상을 다 보여주도록 하겠습니다. 
+                            이번에는 추천 영상 페이지 작업을 하겠습니다. 
+                            여기에서는 모든 추천 영상을 다 보여주도록 하겠습니다. 
                             작동 방식은 메인과 동일합니다. 
                         </p>
                         <p>
-                            <code>pages</code> > <code>Developer.jsx</code> 페이지를 수정하겠습니다. 
+                            <code>pages</code> > <code>Today.jsx</code> 페이지를 수정하겠습니다. 
                         </p>
 <pre><code class="language-js">import React from 'react'
 import Main from '../components/section/Main'
 
-import { developerText } from '../data/developer'
+import { todayText } from '../data/today'
 import { Link } from 'react-router-dom'
 
-const Developer = () =&gt; {
+const Today = () =&gt; {
     return (
         &lt;Main 
-            title = "추천 개발자"
-            description="오늘의 추천 개발자 유튜버입니다."&gt;
+            title = "추천 영상"
+            description="오늘의 추천 유튜브 영상입니다."&gt;
             
-            &lt;section id='developerPage'&gt;
-                &lt;h2&gt;🥰 오늘의 추천 개발자입니다.&lt;/h2&gt;
-                &lt;div className="develpoer__inner"&gt;
-                    {developerText.map((developer, key) =&gt; (
-                        &lt;div className="develpoer" key={key}&gt;
-                            &lt;div className="develpoer__img play__icon"&gt;
-                                &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                    &lt;img src={developer.img} alt={developer.name} /&gt;
-                                &lt;/Link&gt;
-                            &lt;/div&gt;
-                            &lt;div className="develpoer__info"&gt;
-                                &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                    {developer.name}
-                                &lt;/Link&gt;
+            &lt;section id='todayPage'&gt;
+                &lt;h2&gt;🥰 오늘의 추천 영상입니다.&lt;/h2&gt;
+
+                {todayText.map((today, key) =&gt; (
+                    &lt;div className='today__inner' key={key}&gt;
+                        &lt;div className='today__thumb play__icon'&gt;
+                            &lt;Link to={today.page}&gt;
+                                &lt;img src={today.img} alt={today.title} /&gt;
+                            &lt;/Link&gt;
+                        &lt;/div&gt;
+                        &lt;div className='today__text'&gt;
+                            &lt;span className='today'&gt;today!&lt;/span&gt;
+                            &lt;h3 className='title'&gt;
+                                &lt;Link to={today.page}&gt;{today.title}&lt;/Link&gt;
+                            &lt;/h3&gt;
+                            &lt;p className='desc'&gt;{today.desc}&lt;/p&gt;
+                            &lt;div className='info'&gt;
+                                &lt;span className='author'&gt;
+                                    &lt;Link to={`/channel/${today.channelId}`}&gt;{today.author}&lt;/Link&gt;
+                                &lt;/span&gt;
+                                &lt;span className='date'&gt;{today.date}&lt;/span&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
-                    ))}
-                &lt;/div&gt;
+                    &lt;/div&gt;
+                ))}
             &lt;/section&gt;
         &lt;/Main&gt;
     )
 }
 
-export default Developer
+export default Today
 </code></pre>
                         <p>
-                            추천 개발자 페이지 결과물입니다.
+                            추천 영상 페이지 결과물입니다.
                         </p>
                         <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-16.png" alt="youtube2023" />
+                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-14.png" alt="youtube2023" />
                         </div>
                     </div>
 
@@ -688,34 +892,37 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
     (use "git restore --staged <file>..." to unstage)
-        new file:   src/assets/scss/section/_developer.scss
+        modified:   src/assets/scss/section/_layout.scss
+        modified:   src/assets/scss/section/_search.scss
+        new file:   src/assets/scss/section/_today.scss
         modified:   src/assets/scss/setting/_common.scss
+        modified:   src/assets/scss/setting/_mixin.scss
         modified:   src/assets/scss/style.scss
-        modified:   src/components/contents/Developer.jsx
-        new file:   src/data/developer.js
-        modified:   src/pages/Developer.jsx
+        modified:   src/components/contents/Today.jsx
+        new file:   src/data/today.js
+        modified:   src/pages/Today.jsx
 
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "추천 개발자 작업"
-[main 36b400d] 추천 개발자 작업
-    6 files changed, 376 insertions(+), 3 deletions(-)
-    create mode 100644 src/assets/scss/section/_developer.scss
-    create mode 100644 src/data/developer.js
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main 
-Enumerating objects: 30, done.
-Counting objects: 100% (30/30), done.
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "추천 영상 작업"
+[main 290dfc3] 추천 영상 작업
+    9 files changed, 341 insertions(+), 3 deletions(-)
+    create mode 100644 src/assets/scss/section/_today.scss
+    create mode 100644 src/data/today.js
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
+Enumerating objects: 37, done.
+Counting objects: 100% (37/37), done.
 Delta compression using up to 10 threads
-Compressing objects: 100% (17/17), done.
-Writing objects: 100% (17/17), 6.21 KiB | 6.21 MiB/s, done.
-Total 17 (delta 8), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (8/8), completed with 7 local objects.
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (20/20), 4.56 KiB | 4.56 MiB/s, done.
+Total 20 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 8 local objects.
 To https://github.com/webstoryboy/webs-youtube.git
-    290dfc3..36b400d  main -> main
-branch 'main' set up to track 'origin/main'.
+    0126fe6..290dfc3  main -> main
 </code></pre>
                         <p>
-                            추천 개발자 섹션과 페이지를 완성하였습니다. 
-                            이 부분은 나중에 이미지 슬라이드를 구현하기 때문에 반응형은 페이지에만 작업을 하였습니다.
-                            오늘도 수고하셨습니다. 😘
+                           추천 영상 섹션과 페이지를 완성하였습니다. 
+                           리액트보다는 반응형 CSS가 조금 더 고생스러웠네요! 
+                           나머지 페이지도 거의 동일하기 때문에 이제는 조금 더 쉽게 작업할 수 있습니다.
+                           오늘도 수고하셨습니다. 😘
                         </p>
                     </div>
 
@@ -741,7 +948,6 @@ branch 'main' set up to track 'origin/main'.
                             <li><a href="https://webstoryboy.co.kr/1965">9. 나만의 유튜브 사이트 만들기 : 페이지 SEO 작업</a></li>
                             <li><a href="https://webstoryboy.co.kr/1965">10. 나만의 유튜브 사이트 만들기 : 메인 콘텐츠 작업</a></li>
                             <li><a href="https://webstoryboy.co.kr/1965">11. 나만의 유튜브 사이트 만들기 : 추천 영상 작업</a></li>
-                            <li><a href="https://webstoryboy.co.kr/1965">12. 나만의 유튜브 사이트 만들기 : 추천 개발자 작업</a></li>
                         </ul>
                     </div>
                 </div>
