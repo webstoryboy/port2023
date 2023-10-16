@@ -71,8 +71,8 @@
                 <div id="youtube" class="blog__contents__intro">
                     <div class="desc">
                         <div class="left">
-                            <span class="num">20</span>
-                            <div class="title">나만의 유튜브 사이트 만들기 : 비디오 상세 페이지 만들기</div>
+                            <span class="num">21</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 채널 상세 페이지 만들기</div>
                             <span class="difficulty">난이도 <span>중간</span></span>
                         </div>
                         <div class="right">
@@ -257,79 +257,230 @@
                                         <li>20_2. 비디오 페이지 반응형 작업</li>
                                     </ul>
                                 </li>
+                                <li>21. 채널 상세 페이지 만들기
+                                    <ul>
+                                        <li>21_1. 채널 데이터 불러오기</li>
+                                        <li>21_2. 채널 페이지 반응형 작업</li>
+                                        <li>21_3. 로딩 기능 추가하기</li>
+                                        <li>21_4. 채널 영상 추가하기</li>
+                                        <li>21_5. 채널 영상 더보기 구현하기</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
                    
-
-                    <h3>20. 비디오 상세 페이지 만들기</h3>
+                    <h3>21. 채널 상세 페이지 만들기</h3>
                     <div>
-                        <h4>20_1. 비디오 데이터 불러오기</h4>
+                        <h4>21_1. 채널 데이터 불러오기</h4>
                         <p>
-                            모든 영상에는 videoID 값이 존재합니다. 
-                            비디오 페이지에서는 videoID 값을 가져오면 영상을 보여줍니다. 
-                            서치와 같은 원리입니다.
-                            우선 해보겠습니다.
+                            이번에는 채널 페이지를 작업하겠습니다. 
+                            해당 작가의 채널 id 값을 클릭하면 channel 페이지로 channelId 값을 넘겨주게 되어 있습니다.
+                            그 채널 아이디 값을 API를 통해 데이터를 불러오면 됩니다.
                         </p>
                         <p>
-                            <code>pages</code> > <code>Video.jsx</code> 수정하겠습니다.
+                            <code>pages</code> 폴더 <code>channel.jsx</code> 파일을 수정하겠습니다.
                         </p>
 <pre><code class="language-js">import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { fetchFromAPI } from '../utils/api'
 
 import Main from '../components/section/Main';
-import ReactPlayer from 'react-player';
 
-import { CiChat1 } from "react-icons/ci";
-import { CiStar } from "react-icons/ci";
+import { CiBadgeDollar } from "react-icons/ci";
+import { CiMedal } from "react-icons/ci";
 import { CiRead } from "react-icons/ci";
 
-const Video = () =&gt; {
-    const { videoId } = useParams();
-    const [ videoDetail, setVideoDetail ] = useState(null);
+const Channel = () =&gt; {
+    const { channelId } = useParams();
+    const [ channelDetail, setChannelDetail ] = useState();
 
     useEffect(() =&gt; {
-        fetchFromAPI(`videos?part=snippet,statistics&id=${videoId}`)
-        .then((data) =&gt; {
-            console.log(data);
-            setVideoDetail(data.items[0])
-        })
-    }, [videoId]);
+        const fetchResults = async () =&gt; {
+            const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
+            setChannelDetail(data.items[0]);
+        };
+        fetchResults();
+    }, [channelId]);
 
     return (
         &lt;Main 
-            title = "유튜브 비디오 영상"
-            description="유튜브 비디오 영상을 볼 수 있습니다."&gt;
+            title = "유튜브 채널"
+            description="유튜브 채널페이지입니다."&gt;
             
-            &lt;section id='videoViewPage'&gt;
-                {videoDetail && (
-                    &lt;div className='video__view'&gt;
-                        &lt;div className='video__play'&gt;
-                            &lt;ReactPlayer 
-                                playing={true}
-                                url={`https://www.youtube.com/watch?v=${videoId}`} 
-                                width='100%' 
-                                height='100%' 
-                                style={{ position: 'absolute', top: 0, left: 0 }}
-                            /&gt;
+            {channelDetail && (
+                &lt;section id='channel'&gt;
+                    &lt;div className='channel__header' style={{ backgroundImage: `url(${channelDetail.brandingSettings.image.bannerExternalUrl})` }}&gt;
+                        &lt;div className='circle'&gt;
+                            &lt;img src={channelDetail.snippet.thumbnails.high.url} alt={channelDetail.snippet.title} /&gt;
                         &lt;/div&gt;
-                        &lt;div className='video__info'&gt;
-                            &lt;h2 className='video__title'&gt;
-                                {videoDetail.snippet.title}
-                            &lt;/h2&gt;
-                            &lt;div className='video__channel'&gt;
-                                &lt;div className='id'&gt;
-                                    &lt;Link to='/channel/'&gt;{videoDetail.snippet.channelTitle}&lt;/Link&gt;
-                                &lt;/div&gt;
-                                &lt;div className='count'&gt;
-                                    &lt;span className='view'&gt;&lt;CiRead /&gt;{videoDetail.statistics.viewCount}&lt;/span&gt;
-                                    &lt;span className='like'&gt;&lt;CiStar /&gt;{videoDetail.statistics.likeCount}&lt;/span&gt;
-                                    &lt;span className='comment'&gt;&lt;CiChat1 /&gt;{videoDetail.statistics.commentCount}&lt;/span&gt;
-                                &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div className='channel__info'&gt;
+                        &lt;h3 className='title'&gt;{channelDetail.snippet.title}&lt;/h3&gt;
+                        &lt;p className='desc'&gt;{channelDetail.snippet.description}&lt;/p&gt;
+                        &lt;div className='info'&gt;
+                            &lt;span&gt;&lt;CiBadgeDollar /&gt;{channelDetail.statistics.subscriberCount}&lt;/span&gt;
+                            &lt;span&gt;&lt;CiMedal /&gt;{channelDetail.statistics.videoCount}&lt;/span&gt;
+                            &lt;span&gt;&lt;CiRead /&gt;{channelDetail.statistics.viewCount}&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/section&gt;
+            )}
+        &lt;/Main&gt;
+    )
+}
+
+export default Channel</code></pre>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>21_2. 채널 페이지 반응형 작업</h4>
+                        <p>
+                            <code>scss</code> > <code>section</code> > <code>_channel.scss</code> 파일을 만들고 소스를 추가하겠습니다.
+                        </p>
+<pre><code class="language-scss">#channel {
+    padding: 0;
+}
+.channel__header {
+    width: 100%;
+    height: 300px;
+    background-color: #969696;
+    padding-top: 100px;
+    background-position: center center;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #00000064;
+        position: absolute;
+        left: 0; 
+        top: 0;
+    }
+    .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 150px;
+        transform: translateX(-50%);
+        z-index: 100;
+    }
+}
+
+.channel__info {
+    margin-top: 100px;
+    color: #fff;
+    text-align: center;
+
+    .title {
+        margin-bottom: 10px;
+    }
+    .desc {
+        color: #adadad;
+        padding: 0 10vw;
+        margin-bottom: 30px;
+        overflow-wrap: anywhere;
+    }
+    .info span {
+        background-color: #a6a6a631;
+        padding: 10px 20px;
+        border-radius: 40px;
+        margin: 4px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            vertical-align: -5px;
+            margin-right: 5px;
+        }
+    }
+}
+
+.channel__video {
+    padding: 40px;
+    margin-top: 50px;
+}
+.channel__more {
+    padding: 40px;
+
+    button {
+        width: 100%;
+        border: 0;
+        padding: 20px;
+        background-color: #1a1a1a;
+        color: #fff;
+        transition: all 0.3s;
+        margin-bottom: 20px;
+        cursor: pointer;
+        border-radius: 40px;
+
+        &:hover {
+            background-color: #111010;
+        }
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>21_3. 로딩 기능 추가하기</h4>
+                        <p>
+                            기존에 로딩 소스는 임의적으로 settimeout을 설정하였지만, 이번에는 API 소스를 다 다운 받으면, 
+                            데이터가 출력하도록 설정했습니다.
+                        </p>
+
+<pre><code class="language-js">import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchFromAPI } from '../utils/api'
+
+import Main from '../components/section/Main';
+
+import { CiBadgeDollar } from "react-icons/ci";
+import { CiMedal } from "react-icons/ci";
+import { CiRead } from "react-icons/ci";
+
+const Channel = () =&gt; {
+    const { channelId } = useParams();
+    const [ channelDetail, setChannelDetail ] = useState();
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() =&gt; {
+        const fetchResults = async () =&gt; {
+            try {
+                const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
+                setChannelDetail(data.items[0]);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchResults();
+    }, [channelId]);
+
+    return (
+        &lt;Main 
+            title = "유튜브 채널"
+            description="유튜브 채널페이지입니다."&gt;
+            
+            &lt;section id='channel' className={`channel-content ${loading ? 'isLoading' : 'isLoaded'}`}&gt;
+                {channelDetail && (
+                    &lt;div className='channel__inner'&gt;
+                        &lt;div className='channel__header' style={{ backgroundImage: `url(${channelDetail.brandingSettings.image.bannerExternalUrl})` }}&gt;
+                            &lt;div className='circle'&gt;
+                                &lt;img src={channelDetail.snippet.thumbnails.high.url} alt={channelDetail.snippet.title} /&gt;
                             &lt;/div&gt;
-                            &lt;div className='video__desc'&gt;
-                                {videoDetail.snippet.description}
+                        &lt;/div&gt;
+                        &lt;div className='channel__info'&gt;
+                            &lt;h3 className='title'&gt;{channelDetail.snippet.title}&lt;/h3&gt;
+                            &lt;p className='desc'&gt;{channelDetail.snippet.description}&lt;/p&gt;
+                            &lt;div className='info'&gt;
+                                &lt;span&gt;&lt;CiBadgeDollar /&gt;{channelDetail.statistics.subscriberCount}&lt;/span&gt;
+                                &lt;span&gt;&lt;CiMedal /&gt;{channelDetail.statistics.videoCount}&lt;/span&gt;
+                                &lt;span&gt;&lt;CiRead /&gt;{channelDetail.statistics.viewCount}&lt;/span&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
@@ -339,70 +490,178 @@ const Video = () =&gt; {
     )
 }
 
-export default Video
+export default Channel
 </code></pre>
                     </div>
-                    
-                    <div>
-                        <h4>20_2. 비디오 페이지 반응형 작업</h4>
+
+                    <div class="mt80">
+                        <h4>21_4. 채널 영상 추가하기</h4>
                         <p>
-                            CSS도 추가하겠습니다. 
-                            <code>scss</code> > <code>section</code> > <code>_video.scss</code> 파일을 추가하겠습니다. 
+                            채널장이 올린 영상을 볼 수 있도록 설정하겠습니다.
                         </p>
-<pre><code class="language-scss">// 비디오 페이지 
-#videoViewPage {
-    padding: 0;
+<pre><code class="language-js">import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchFromAPI } from '../utils/api'
 
-    @media (max-width: 800px){
-        margin-top: 80px;
-    }
+import Main from '../components/section/Main';
+import VideoSearch from '../components/videos/VideoSearch';
+
+import { CiBadgeDollar } from "react-icons/ci";
+import { CiMedal } from "react-icons/ci";
+import { CiRead } from "react-icons/ci";
+
+const Channel = () =&gt; {
+    const { channelId } = useParams();
+    const [ channelDetail, setChannelDetail ] = useState();
+    const [ channelVideo, setChannelVideo ] = useState([]);
+    const [ loading, setLoading ] = useState(true);
+
+    useEffect(() =&gt; {
+        const fetchResults = async () =&gt; {
+            try {
+                const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
+                setChannelDetail(data.items[0]);
+
+                const videosData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet%2Cid&order=date`);
+                setChannelVideo(videosData?.items);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchResults();
+    }, [channelId]);
+
+    return (
+        &lt;Main 
+            title = "유튜브 채널"
+            description="유튜브 채널페이지입니다."&gt;
+            
+            &lt;section id='channel' className={`channel-content ${loading ? 'isLoading' : 'isLoaded'}`}&gt;
+                {channelDetail && (
+                    &lt;div className='channel__inner'&gt;
+                        &lt;div className='channel__header' style={{ backgroundImage: `url(${channelDetail.brandingSettings.image.bannerExternalUrl})` }}&gt;
+                            &lt;div className='circle'&gt;
+                                &lt;img src={channelDetail.snippet.thumbnails.high.url} alt={channelDetail.snippet.title} /&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div className='channel__info'&gt;
+                            &lt;h3 className='title'&gt;{channelDetail.snippet.title}&lt;/h3&gt;
+                            &lt;p className='desc'&gt;{channelDetail.snippet.description}&lt;/p&gt;
+                            &lt;div className='info'&gt;
+                                &lt;span&gt;&lt;CiBadgeDollar /&gt;{channelDetail.statistics.subscriberCount}&lt;/span&gt;
+                                &lt;span&gt;&lt;CiMedal /&gt;{channelDetail.statistics.videoCount}&lt;/span&gt;
+                                &lt;span&gt;&lt;CiRead /&gt;{channelDetail.statistics.viewCount}&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div className='channel__video video__inner search'&gt;
+                            &lt;VideoSearch videos={channelVideo} /&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                )}
+            &lt;/section&gt;
+        &lt;/Main&gt;
+    )
 }
-.video__view {
 
-    .video__play {
-        width: 100%;
-        padding-bottom: 56.2%;
-        position: relative;
-    }
-
-    .video__info {
-        padding: 40px;
-
-        .video__channel {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-            background-color: #111;
-            padding: 10px 30px;
-            border-radius: 40px;
-
-            .id {
-                font-weight: 800;
-            }
-
-            .count {
-
-                span {
-                    border-radius: 40px;
-                    font-size: 14px;
-                    margin-left: 10px;
-
-                    svg {
-                        width: 20px;
-                        height: 20px;
-                        vertical-align: -5px;
-                        margin-right: 5px;
-                    }
-                }
-            }
-        }
-        .video__desc {
-            white-space: pre-line;
-        }
-    } 
-}</code></pre>
+export default Channel
+</code></pre>
                     </div>
 
+                    <div class="mt80">
+                        <h4>21_5. 채널 영상 더보기 구현하기</h4>
+                        <p>
+                            더 보기 기능을 구현하겠습니다.
+                        </p>
+<pre><code class="language-js">import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchFromAPI } from '../utils/api'
+
+import Main from '../components/section/Main';
+import VideoSearch from '../components/videos/VideoSearch';
+
+import { CiBadgeDollar } from "react-icons/ci";
+import { CiMedal } from "react-icons/ci";
+import { CiRead } from "react-icons/ci";
+
+const Channel = () =&gt; {
+    const { channelId } = useParams();
+    const [ channelDetail, setChannelDetail ] = useState();
+    const [ channelVideo, setChannelVideo ] = useState([]);
+    const [ loading, setLoading ] = useState(true);
+    const [ nextPageToken, setNextPageToken ] = useState(null); 
+
+    useEffect(() =&gt; {
+        const fetchResults = async () =&gt; {
+            try {
+                const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
+                setChannelDetail(data.items[0]);
+
+                const videosData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet%2Cid&order=date`);
+                setChannelVideo(videosData?.items);
+                setNextPageToken(videosData?.nextPageToken);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchResults();
+    }, [channelId]);
+
+    const loadMoreVideos = async () =&gt; {
+        if (nextPageToken) {
+            const videosData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet%2Cid&order=date&pageToken=${nextPageToken}`);
+            setChannelVideo(prevVideos =&gt; [...prevVideos, ...videosData.items]);
+            setNextPageToken(videosData?.nextPageToken);
+        }
+    };
+
+    return (
+        &lt;Main 
+            title = "유튜브 채널"
+            description="유튜브 채널페이지입니다."&gt;
+            
+            &lt;section id='channel' className={`channel-content ${loading ? 'isLoading' : 'isLoaded'}`}&gt;
+                {channelDetail && (
+                    &lt;div className='channel__inner'&gt;
+                        &lt;div className='channel__header' style={{ backgroundImage: `url(${channelDetail.brandingSettings.image.bannerExternalUrl})` }}&gt;
+                            &lt;div className='circle'&gt;
+                                &lt;img src={channelDetail.snippet.thumbnails.high.url} alt={channelDetail.snippet.title} /&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div className='channel__info'&gt;
+                            &lt;h3 className='title'&gt;{channelDetail.snippet.title}&lt;/h3&gt;
+                            &lt;p className='desc'&gt;{channelDetail.snippet.description}&lt;/p&gt;
+                            &lt;div className='info'&gt;
+                                &lt;span&gt;&lt;CiBadgeDollar /&gt;{channelDetail.statistics.subscriberCount}&lt;/span&gt;
+                                &lt;span&gt;&lt;CiMedal /&gt;{channelDetail.statistics.videoCount}&lt;/span&gt;
+                                &lt;span&gt;&lt;CiRead /&gt;{channelDetail.statistics.viewCount}&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div className='channel__video video__inner search'&gt;
+                            &lt;VideoSearch videos={channelVideo} /&gt;
+                        &lt;/div&gt;
+                        &lt;div className='channel__more'&gt;
+                            {nextPageToken && &lt;button onClick={loadMoreVideos}&gt;더 보기&lt;/button&gt;}
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                )}
+            &lt;/section&gt;
+        &lt;/Main&gt;
+    )
+}
+
+export default Channel
+</code></pre>
+                    </div>
+
+
+
+
+
+                    
                     <div>
                         <h3>마무리</h3>
                         <h4>git 올리기</h4>
