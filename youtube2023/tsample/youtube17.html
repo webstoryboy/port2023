@@ -229,7 +229,6 @@
                                         <li>17_5. 유튜브 페이지 작업</li>
                                         <li>17_6. 추천 개발자 페이지 작업</li>
                                         <li>17_7. 추천 영상 페이지 작업</li>
-                                        <li>17_8. scrollTo 만들기</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -587,76 +586,6 @@ export default Today
 </code></pre>
                     </div>
 
-                    <div class="mt80">
-                        <h4>17_8. scrollTo 만들기</h4>
-                        <p>
-                            페이지를 이동하다 보면 페이지가 하단에 있을 때가 있습니다. 
-                            부분적으로 로딩이 되기 때문에 생기는 현상입니다. 
-                            이 부분을 고치도록 하겠습니다. 
-                            <code>utils</code> 폴더를 만들고 <code>scrollTo.js</code> 파일을 만들겠습니다.
-                        </p>
-<pre><code class="language-js">import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
-const ScrollTo = () => {
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
-
-    return null;
-};
-
-export default ScrollTo;
-</code></pre>
-                        <div class="sampleBasic">
-                            <ul class="list">
-                                <li>useLocation 훅을 사용하여 현재 경로 정보를 가져옵니다. pathname 변수에 현재 경로가 저장됩니다.</li>
-                                <li>useEffect 훅은 컴포넌트가 렌더링될 때 실행되며, pathname이 변경될 때마다 다시 실행됩니다.</li>
-                                <li>window.scrollTo(0, 0)은 브라우저의 스크롤 위치를 가로축(x)과 세로축(y) 모두 0으로 이동시킵니다. 즉, 페이지가 맨 위로 스크롤됩니다.</li>
-                                <li>return null은 실제로 화면에 아무것도 렌더링하지 않음을 나타냅니다. 이 컴포넌트는 스크롤 관련 동작을 처리하기 위한 목적으로 사용되며 화면에는 아무 내용도 표시하지 않습니다.</li>
-                            </ul>
-                        </div>
-
-                        <p>
-                            <code>components</code> > <code>sectioin</code> > <code>Main.jsx</code>는 다음 소스를 추가합니다.
-                        </p>
-<pre><code class="language-js">import React from 'react'
-import { Helmet, HelmetProvider } from 'react-helmet-async'
-
-import Header from './Header'
-import Footer from './Footer'
-import Search from './Search'  
-import ScrollTo from '../../utils/scrollTo'     // 추가
-
-const Main = ( props ) =&gt; {
-    return (
-        &lt;HelmetProvider&gt;
-            &lt;ScrollTo /&gt;  // 추가
-            &lt;Helmet 
-                titleTemplate="%s | Webs Youtube" 
-                defaultTitle="Webs Youtube" 
-                defer={false}
-            &gt;
-                {props.title && &lt;title&gt;{props.title}&lt;/title&gt;}
-                &lt;meta name="description" content={props.description} /&gt;
-            &lt;/Helmet&gt;
-
-            &lt;Header /&gt;
-            &lt;main id="main" role="main"&gt;
-                &lt;Search /&gt;   
-                {props.children}
-            &lt;/main&gt;
-            &lt;Footer /&gt;
-        &lt;/HelmetProvider&gt;
-    )
-}
-
-export default Main</code></pre>
-
-                    </div>
-
                     <div>
                         <h3>마무리</h3>
                         <h4>git 올리기</h4>
@@ -664,17 +593,14 @@ export default Main</code></pre>
                             터미널에서 다음과 같이 작성하겠습니다.
                             새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
                         </p>
-<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+<pre><code class="language-js">webstoryboy@Webstoryboyui-iMac webs-youtube % git add .
+webstoryboy@Webstoryboyui-iMac webs-youtube % git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
     (use "git restore --staged <file>..." to unstage)
-        modified:   src/assets/scss/section/_developer.scss
-        modified:   src/assets/scss/setting/_common.scss
-        modified:   src/components/section/Main.jsx
-        new file:   src/components/videos/VideoCards.jsx
+        new file:   src/components/video/VideoCard.jsx
         modified:   src/pages/Developer.jsx
         modified:   src/pages/Gsap.jsx
         modified:   src/pages/Port.jsx
@@ -682,23 +608,21 @@ Changes to be committed:
         modified:   src/pages/Webd.jsx
         modified:   src/pages/Website.jsx
         modified:   src/pages/Youtube.jsx
-        new file:   src/utils/scrollTo.js
 
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "나머지 페이지 작업"
-[main c7b9e42] 나머지 페이지 작업
-    12 files changed, 184 insertions(+), 15 deletions(-)
-    create mode 100644 src/components/videos/VideoCards.jsx
-    create mode 100644 src/utils/scrollTo.js
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
-Enumerating objects: 44, done.
-Counting objects: 100% (44/44), done.
-Delta compression using up to 10 threads
-Compressing objects: 100% (23/23), done.
-Writing objects: 100% (24/24), 3.53 KiB | 3.53 MiB/s, done.
-Total 24 (delta 15), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (15/15), completed with 10 local objects.
+webstoryboy@Webstoryboyui-iMac webs-youtube % git commit -m " 나머지 페이지 작업"
+[main 021c227]  나머지 페이지 작업
+    8 files changed, 151 insertions(+), 20 deletions(-)
+    create mode 100644 src/components/video/VideoCard.jsx
+webstoryboy@Webstoryboyui-iMac webs-youtube % git push -u origin main
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 2.46 KiB | 2.46 MiB/s, done.
+Total 14 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), completed with 5 local objects.
 To https://github.com/webstoryboy/webs-youtube.git
-    0381881..c7b9e42  main -> main
+    ea3313d..021c227  main -> main
 branch 'main' set up to track 'origin/main'.
 </code></pre>
                         <p>

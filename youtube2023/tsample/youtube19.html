@@ -229,7 +229,6 @@
                                         <li>17_5. 유튜브 페이지 작업</li>
                                         <li>17_6. 추천 개발자 페이지 작업</li>
                                         <li>17_7. 추천 영상 페이지 작업</li>
-                                        <li>17_8. scrollTo 만들기</li>
                                     </ul>
                                 </li>
                                 <li>18. 검색 및 유튜브 API 설정하기
@@ -388,12 +387,10 @@ const Search = () =&gt; {
     const { searchId } = useParams();
     const [ videos, setVideos ] = useState([]);
     const [ nextPageToken, setNextPageToken ] = useState(null);
-    const [ loading, setLoading ] = useState(true); 
     
     useEffect(() =&gt; {
         setVideos([]);
         fetchVideos(searchId);
-        setLoading(true);
     }, [searchId]);
 
     const fetchVideos = (query, pageToken = '') =&gt; {
@@ -401,11 +398,9 @@ const Search = () =&gt; {
             .then((data) =&gt; {
                 setNextPageToken(data.nextPageToken);
                 setVideos((prevVideos) =&gt; [...prevVideos, ...data.items]);
-                setLoading(false);
             })
             .catch((error) =&gt; {
                 console.error('Error fetching data:', error);
-                setLoading(false); 
             });
     };
 
@@ -415,14 +410,12 @@ const Search = () =&gt; {
         }
     };
 
-    const searchPageClass = loading ? 'isLoading' : 'isLoaded';
-
     return (
         &lt;Main 
             title = "유투브 검색"
             description="유튜브 검색 결과 페이지입니다."&gt;
             
-            &lt;section id='searchPage' className={searchPageClass}&gt;
+            &lt;section id='searchPage'&gt;
                 &lt;h2&gt;🤠 &lt;em&gt;{searchId}&lt;/em&gt; 검색 결과입니다.&lt;/h2&gt;
                 &lt;div className="video__inner search"&gt;
                     &lt;VideoSearch videos={videos} /&gt;
@@ -462,15 +455,15 @@ export default Search
         width: 100%;
         border: 0;
         padding: 20px;
-        background-color: #1a1a1a;
-        color: #fff;
+        background-color: var(--black100);
+        color: var(--white);
         transition: all 0.3s;
         margin-bottom: 20px;
         cursor: pointer;
         border-radius: 40px;
 
         &:hover {
-            background-color: #111010;
+            background-color: var(--black200);
         }
     }
 }</code></pre>

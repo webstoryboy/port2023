@@ -229,7 +229,6 @@
                                         <li>17_5. 유튜브 페이지 작업</li>
                                         <li>17_6. 추천 개발자 페이지 작업</li>
                                         <li>17_7. 추천 영상 페이지 작업</li>
-                                        <li>17_8. scrollTo 만들기</li>
                                     </ul>
                                 </li>
                                 <li>18. 검색 및 유튜브 API 설정하기
@@ -410,29 +409,33 @@ export default Video
                             터미널에서 다음과 같이 작성하겠습니다.
                             새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
                         </p>
-<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
+<pre><code class="language-js">webstoryboy@Webstoryboyui-iMac webs-youtube % git add .
+webstoryboy@Webstoryboyui-iMac webs-youtube % git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
     (use "git restore --staged <file>..." to unstage)
         modified:   src/assets/scss/section/_video.scss
+        modified:   src/assets/scss/setting/_common.scss
+        modified:   src/assets/scss/setting/_vars.scss
+        modified:   src/components/video/VideoCard.jsx
+        modified:   src/pages/Search.jsx
         modified:   src/pages/Video.jsx
 
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "비디오 상세 페이지 만들기"
-[main 0c967e9] 비디오 상세 페이지 만들기
-    2 files changed, 108 insertions(+), 3 deletions(-)
-webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
-Enumerating objects: 17, done.
-Counting objects: 100% (17/17), done.
-Delta compression using up to 10 threads
-Compressing objects: 100% (9/9), done.
-Writing objects: 100% (9/9), 1.90 KiB | 1.90 MiB/s, done.
-Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+webstoryboy@Webstoryboyui-iMac webs-youtube % git commit -m "비디오 상세 페이지 만들기"
+[main 11725f3] 비디오 상세 페이지 만들기
+    6 files changed, 129 insertions(+), 6 deletions(-)
+webstoryboy@Webstoryboyui-iMac webs-youtube % git push -u origin main
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 2.63 KiB | 2.63 MiB/s, done.
+Total 16 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), completed with 11 local objects.
 To https://github.com/webstoryboy/webs-youtube.git
-    f818a8a..0c967e9  main -> main
+    cf6ad24..11725f3  main -> main
 branch 'main' set up to track 'origin/main'.
 </code></pre>
                         <p>
