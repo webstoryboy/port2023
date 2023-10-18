@@ -71,8 +71,8 @@
                 <div id="youtube" class="blog__contents__intro">
                     <div class="desc">
                         <div class="left">
-                            <span class="num">16</span>
-                            <div class="title">나만의 유튜브 사이트 만들기 : Swiper 이미지 슬라이드 작업</div>
+                            <span class="num">23</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 빌드 및 배포하기</div>
                             <span class="difficulty">난이도 <span>중간</span></span>
                         </div>
                         <div class="right">
@@ -220,400 +220,78 @@
                                         <li>16_3. 추천 영상 로딩 및 데이터 작업</li>
                                     </ul>
                                 </li>
+                                <li>17. 나머지 페이지 작업
+                                    <ul>
+                                        <li>17_1. 웹디자인 기능사 페이지 작업</li>
+                                        <li>17_2. 웹표준 사이트 페이지 작업</li>
+                                        <li>17_3. GSAP 페이지 작업</li>
+                                        <li>17_4. 포트폴리오 페이지 작업</li>
+                                        <li>17_5. 유튜브 페이지 작업</li>
+                                        <li>17_6. 추천 개발자 페이지 작업</li>
+                                        <li>17_7. 추천 영상 페이지 작업</li>
+                                        <li>17_8. scrollTo 만들기</li>
+                                    </ul>
+                                </li>
+                                <li>18. 검색 및 유튜브 API 설정하기
+                                    <ul>
+                                        <li>18_1. 검색 영역 설정하기</li>
+                                        <li>18_2. 유튜브 API 설정하기</li>
+                                        <li>18_3. 유튜브 API 데이터 가져오기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>19. Rapid API 및 더보기 설정하기
+                                    <ul>
+                                        <li>19_1. Rapid API 설정하기</li>
+                                        <li>19_2. Rapid API 데이터 가져오기</li>
+                                        <li>19_3. 검색 데이터 더보기 기능 설정하기</li>
+                                        <li>19_4. Loading 소스 설정하기</li>
+                                    </ul>
+                                </li>
+                                <li>20. 비디오 상세 페이지 만들기
+                                    <ul>
+                                        <li>20_1. 비디오 데이터 불러오기</li>
+                                        <li>20_2. 비디오 페이지 반응형 작업</li>
+                                    </ul>
+                                </li>
+                                <li>21. 채널 상세 페이지 만들기
+                                    <ul>
+                                        <li>21_1. 채널 데이터 불러오기</li>
+                                        <li>21_2. 채널 페이지 반응형 작업</li>
+                                        <li>21_3. 로딩 기능 추가하기</li>
+                                        <li>21_4. 채널 영상 추가하기</li>
+                                        <li>21_5. 채널 영상 더보기 구현하기</li>
+                                    </ul>
+                                </li>
+                                <li>22. 버그 고치기
+                                    <ul>
+                                        <li>22_1. scrollTo 작업하기</li>
+                                        <li>22_2. undefined 문제 해결하기</li>
+                                    </ul>
+                                </li>
+                                <li>23. 빌드 및 배포하기
+                                    <ul>
+                                        <li>23_1. 빌드하기</li>
+                                        <li>23_2. netlify 배포하기</li>
+                                        <li>23_3. vercel 배포하기</li>
+                                        <li>23_4. firebase 배포하기</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
+                   
+                    <h3>23. 빌드 및 배포하기</h3>
+                    <p>
+                        지금까지 작업한 작업물을 모두가 볼 수 있도록 빌드를 하고 배포까지 해보겠습니다. 
+                        배포는 3가지 방식이 있는데 한가지만 하셔도 됩니다. 
+                        안되는 분들도 있어서 여러가기 방식으로 해봤습니다. 
+                    </p>
 
-                    <h3>16. Swiper 이미지 슬라이드 작업</h3>
-                    <div>
-                        <h4>16_1. 추천 개발자 이미지 슬라이드 작업</h4>
-                        <p>
-                            추천 개발자 부분도 이미지 슬라이드로 변경하겠습니다. 
-                            swiper를 동일하게 사용하겠습니다.
-                        </p>
-                        <p>
-                            <code>components</code> > <code>contents</code> > <code>Developer.jsx</code>를 수정하겠습니다.
-                        </p>
-<pre><code class="language-js">import React from 'react'
-import { developerText } from '../../data/developer';
-import { Link } from 'react-router-dom';
-
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
-
-const Developer = () =&gt; {
-    return (
-        &lt;section id='developer'&gt;
-            &lt;h2&gt;😪 추천 개발자를 소개합니다.&lt;/h2&gt;
-            &lt;div className='develpoer__inner'&gt;
-                &lt;Swiper
-                    slidesPerView={4}
-                    spaceBetween={15}
-                    navigation={true}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }}
-                    breakpoints={{
-                        640: {
-                            slidesPerView: 5,
-                            spaceBetween: 15,
-                        },
-                        768: {
-                            slidesPerView: 6,
-                            spaceBetween: 15,
-                        },
-                        1024: {
-                            slidesPerView: 7,
-                            spaceBetween: 20,
-                        },
-                        1240: {
-                            slidesPerView: 8,
-                            spaceBetween: 20,
-                        },
-                        1640: {
-                            slidesPerView: 9,
-                            spaceBetween: 20,
-                        },
-                        2000: {
-                            slidesPerView: 10,
-                            spaceBetween: 20,
-                        },
-                    }}
-                    modules={[Navigation, Autoplay]}
-                    className='mySwiper'
-                &gt;
-                    {developerText.map((developer, key) =&gt; (
-                        &lt;SwiperSlide key={key}&gt;
-                            &lt;div className='develpoer' key={key}&gt;
-                                &lt;div className='develpoer__img play__icon'&gt;
-                                    &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                        &lt;img src={developer.img} alt={developer.name} /&gt;
-                                    &lt;/Link&gt;
-                                &lt;/div&gt;
-                                &lt;div className='develpoer__info'&gt;
-                                    &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                        {developer.name}
-                                    &lt;/Link&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/SwiperSlide&gt;
-                    ))}
-                &lt;/Swiper&gt;
-            &lt;/div&gt;
-        &lt;/section&gt;
-    )
-}
-
-export default Developer</code></pre>
-
-                        <p>
-                            CSS도 수정하겠습니다. 
-                            <code>scss</code> > <code>section</code> > <code>_developer.scss</code>를 수정하겠습니다. 
-                        </p>
-<pre><code class="language-scss">.developer__inner {
-    display: flex;
-    flex-wrap: wrap;
-
-    &.overflow {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-    }
-
-    .developer {
-        // margin-right: 20px;
-
-        .developer__img {
-            // width: 150px;
-            // height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
-        .developer__info {
-            // width: 150px;
-            text-align: center;
-            @include line-one;
-            // padding-bottom: 40px;
-        }
-    }
-}
-
-
-#developerPage {
-    .developer__inner {
-        .developer {
-            margin-right: 20px;
-        }
-        .developer__img {
-            width: 150px;
-            height: 150px;
-        }
-        .developer__info {
-            width: 150px;
-            padding-bottom: 40px;
-        }
-    }
-}
-
-@media (max-width: 1200px){
-    #developerPage {
-        .developer__inner {
-            justify-content: center;
-    
-            .developer {
-                margin-right: 0;
-                
-                .developer__img {
-                    width: 130px;
-                    height: 130px;
-                    margin: 10px auto;
-                }
-            }   
-        }
-    }
-    
-}
-@media (max-width: 800px){
-    #developerPage {
-        .developer__inner {
-            margin-top: 70px;
-        }
-    }
-}</code></pre>
-                        <p>
-                            추천 개발자 부분도 이미지 슬라이드가 완성되었습니다. 
-                            이번에는 자동 슬라이드 기능을 추가했습니다.
-                        </p>
-                        <div class="sampleImg">
-                            <img src="https://webstoryboy.github.io/port2023/youtube2023/tsample/img/youtube04-24.png" alt="youtube2023" />
-                        </div>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>16_2. 추천 개발자 로딩 효과 넣기</h4>
-                        <p>
-                            기존과 동일하게 로딩 효과를 넣어주고 props릍 통해 데이를 전달해주겠습니다.
-                        </p>
-                        <p>
-                            <code>components</code> > <code>contents</code> > <code>Developer.jsx</code> 파일을 수정하겠습니다.
-                        </p>
-<pre><code class="language-js">import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
-
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
-
-const Developer = ({ videos, title, id }) =&gt; {
-    const [loading, setLoading] = useState(true); 
-
-    useEffect(() =&gt; {
-        setTimeout(() =&gt; {
-            setLoading(false);
-        }, 500);
-    }, []);
-
-    const developerClass = loading ? 'isLoading' : 'isLoaded';
-
-    return (
-        &lt;section id={id} className={developerClass}&gt;
-            &lt;h2&gt;{title}&lt;/h2&gt;
-
-            &lt;div className='develpoer__inner'&gt;
-                &lt;Swiper
-                    slidesPerView={4}
-                    spaceBetween={15}
-                    navigation={true}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }}
-                    breakpoints={{
-                        640: {
-                            slidesPerView: 5,
-                            spaceBetween: 15,
-                        },
-                        768: {
-                            slidesPerView: 6,
-                            spaceBetween: 15,
-                        },
-                        1024: {
-                            slidesPerView: 7,
-                            spaceBetween: 20,
-                        },
-                        1240: {
-                            slidesPerView: 8,
-                            spaceBetween: 20,
-                        },
-                        1640: {
-                            slidesPerView: 9,
-                            spaceBetween: 20,
-                        },
-                        2000: {
-                            slidesPerView: 10,
-                            spaceBetween: 20,
-                        },
-                    }}
-                    modules={[Navigation, Autoplay]}
-                    className='mySwiper'
-                &gt;
-                    {videos.map((developer, key) =&gt; (
-                        &lt;SwiperSlide key={key}&gt;
-                            &lt;div className='develpoer' key={key}&gt;
-                                &lt;div className='develpoer__img play__icon'&gt;
-                                    &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                        &lt;img src={developer.img} alt={developer.name} /&gt;
-                                    &lt;/Link&gt;
-                                &lt;/div&gt;
-                                &lt;div className='develpoer__info'&gt;
-                                    &lt;Link to={`/channel/${developer.channelId}`}&gt;
-                                        {developer.name}
-                                    &lt;/Link&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/SwiperSlide&gt;
-                    ))}
-                &lt;/Swiper&gt;
-            &lt;/div&gt;
-        &lt;/section&gt;
-    )
-}
-
-export default Developer</code></pre>
-
-                        <p>
-                            <code>pages</code> > <code>Home.jsx</code> 수정하겠습니다.
-                        </p>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-import Today from '../components/contents/Today'
-import Developer from '../components/contents/Developer'
-import VideoSlider from '../components/videos/VideoSlider'
-
-import { webdText } from '../data/webd'
-import { websiteText } from '../data/website'
-import { gsapText } from '../data/gsap'
-import { portfolioText } from '../data/portfolio'
-import { youtubeText } from '../data/youtube'
-import { developerText } from '../data/developer';
-
-const Home = () =&gt; {
-    return (
-        &lt;Main 
-            title = "웹스토리보이 유튜브"
-            description="웹스토리보이 유튜버 사이트에 오신 것을 환영합니다."&gt;
-            
-            &lt;Today /&gt;
-            &lt;Developer videos={developerText} title="😪 추천 개발자를 소개합니다." id="developer" /&gt;
-            &lt;VideoSlider videos={webdText} title="😮 웹디자인기능사 준비는 이걸로!" id="webd" /&gt;
-            &lt;VideoSlider videos={websiteText} title="😛 웹표준 사이트 만들기 기초 다지기" id="website" /&gt;
-            &lt;VideoSlider videos={gsapText} title="🤓 GSAP 패럴랙스 효과를 하고 싶다면!" id="gsap" /&gt;
-            &lt;VideoSlider videos={portfolioText} title="🤗 포트폴리오 만드는 방법을 공유합니다." id="portfolio" /&gt;
-            &lt;VideoSlider videos={youtubeText} title="😱 지금 이 코딩을 영상으로" id="youtube" /&gt;
-        &lt;/Main&gt;
-    )
-}
-
-export default Home
-</code></pre>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>16_3. 추천 영상 로딩 및 데이터 작업</h4>
-                        <p>
-                            추천 영상 섹션도 동일하게 작업해주겠습니다.
-                        </p>
-                        <p>
-                            <code>components</code> > <code>contents</code> > <code>Today.jsx</code> 파일을 수정하겠습니다.
-                        </p>
-<pre><code class="language-js">import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-
-const Today = ({ videos , id }) =&gt; {
-    const [loading, setLoading] = useState(true); 
-
-    useEffect(() =&gt; {
-        setTimeout(() =&gt; {
-            setLoading(false);
-        }, 300);
-    }, []);
-
-    const todayClass = loading ? 'isLoading' : 'isLoaded';
-
-    return (
-        &lt;section id={id} className={todayClass}&gt;
-            &lt;div className='today__inner'&gt;
-                &lt;div className='today__thumb play__icon'&gt;
-                    &lt;Link to={videos[0].page}&gt;
-                        &lt;img src={videos[0].img} alt={videos[0].title} /&gt;
-                    &lt;/Link&gt;
-                &lt;/div&gt;
-                &lt;div className='today__text'&gt;
-                    &lt;span className='today'&gt;today!&lt;/span&gt;
-                    &lt;h3 className='title'&gt;
-                        &lt;Link to={videos[0].page}&gt;{videos[0].title}&lt;/Link&gt;
-                    &lt;/h3&gt;
-                    &lt;p className='desc'&gt;{videos[0].desc}&lt;/p&gt;
-                    &lt;div className='info'&gt;
-                        &lt;span className='author'&gt;
-                            &lt;Link to={`/channel/${videos[0].channelId}`}&gt;{videos[0].author}&lt;/Link&gt;
-                        &lt;/span&gt;
-                        &lt;span className='date'&gt;{videos[0].date}&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/section&gt;
-    )
-}
-
-export default Today</code></pre>
-
-                        <p>
-                            <code>pages</code> > <code>Home.jsx</code> 파일을 수정하겠습니다.
-                        </p>
-<pre><code class="language-js">import React from 'react'
-import Main from '../components/section/Main'
-import Today from '../components/contents/Today'
-import Developer from '../components/contents/Developer'
-import VideoSlider from '../components/videos/VideoSlider'
-
-import { webdText } from '../data/webd'
-import { websiteText } from '../data/website'
-import { gsapText } from '../data/gsap'
-import { portfolioText } from '../data/portfolio'
-import { youtubeText } from '../data/youtube'
-import { developerText } from '../data/developer';
-import { todayText } from '../data/today'
-
-const Home = () =&gt; {
-    return (
-        &lt;Main 
-            title = "웹스토리보이 유튜브"
-            description="웹스토리보이 유튜버 사이트에 오신 것을 환영합니다."&gt;
-            
-            &lt;Today videos={todayText} id="today"/&gt;
-            &lt;Developer videos={developerText} title="😪 추천 개발자를 소개합니다." id="developer" /&gt;
-            &lt;VideoSlider videos={webdText} title="😮 웹디자인기능사 준비는 이걸로!" id="webd" /&gt;
-            &lt;VideoSlider videos={websiteText} title="😛 웹표준 사이트 만들기 기초 다지기" id="website" /&gt;
-            &lt;VideoSlider videos={gsapText} title="🤓 GSAP 패럴랙스 효과를 하고 싶다면!" id="gsap" /&gt;
-            &lt;VideoSlider videos={portfolioText} title="🤗 포트폴리오 만드는 방법을 공유합니다." id="portfolio" /&gt;
-            &lt;VideoSlider videos={youtubeText} title="😱 지금 이 코딩을 영상으로" id="youtube" /&gt;
-        &lt;/Main&gt;
-    )
-}
-
-export default Home</code></pre>
-                    </div>
-
+                    
                     <div>
                         <h3>마무리</h3>
                         <h4>git 올리기</h4>
@@ -621,38 +299,35 @@ export default Home</code></pre>
                             터미널에서 다음과 같이 작성하겠습니다.
                             새로운 페이지가 올라오는 것을 확인 할 수 있습니다.
                         </p>
-<pre><code class="language-js">webstoryboy@Webstoryboyui-iMac webs-youtube % git add .
-webstoryboy@Webstoryboyui-iMac webs-youtube % git status
+<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git add .
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
     (use "git restore --staged <file>..." to unstage)
-        modified:   src/assets/scss/section/_developer.scss
-        modified:   src/components/contents/Developer.jsx
-        modified:   src/components/contents/Today.jsx
-        modified:   src/pages/Home.jsx
+        modified:   src/assets/scss/section/_video.scss
+        modified:   src/pages/Video.jsx
 
-webstoryboy@Webstoryboyui-iMac webs-youtube % gis commit -m "Swiper 이미지 슬라이드 작업"
-zsh: command not found: gis
-webstoryboy@Webstoryboyui-iMac webs-youtube % git commit -m "Swiper 이미지 슬라이드 작업"
-[main ea3313d] Swiper 이미지 슬라이드 작업
-    4 files changed, 142 insertions(+), 53 deletions(-)
-webstoryboy@Webstoryboyui-iMac webs-youtube % git push -u origin main
-Enumerating objects: 25, done.
-Counting objects: 100% (25/25), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (13/13), done.
-Writing objects: 100% (13/13), 2.38 KiB | 2.38 MiB/s, done.
-Total 13 (delta 8), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git commit -m "비디오 상세 페이지 만들기"
+[main 0c967e9] 비디오 상세 페이지 만들기
+    2 files changed, 108 insertions(+), 3 deletions(-)
+webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % git push -u origin main
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.90 KiB | 1.90 MiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
 To https://github.com/webstoryboy/webs-youtube.git
-    322bb7a..ea3313d  main -> main
+    f818a8a..0c967e9  main -> main
 branch 'main' set up to track 'origin/main'.
 </code></pre>
                         <p>
-                            이제 메인 페이지는 마무리 되었습니다. 
-                            다음 시간에는 페이지를 마무리 하겠습니다.
+                            비디오 상세 페이지에는 이 데이터 뿐만 아니라 댓글이나 연관 영상들도 만들 수 있습니다. 
+                            같이 해보지는 않겠지만 혼자서 도전하는 습관도 중요합니다. 
+                            한번 도전해보세요!
                             오늘도 수고하셨습니다. 😘
                         </p>
                     </div>

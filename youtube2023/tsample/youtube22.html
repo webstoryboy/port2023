@@ -71,8 +71,8 @@
                 <div id="youtube" class="blog__contents__intro">
                     <div class="desc">
                         <div class="left">
-                            <span class="num">21</span>
-                            <div class="title">나만의 유튜브 사이트 만들기 : 채널 상세 페이지 만들기</div>
+                            <span class="num">22</span>
+                            <div class="title">나만의 유튜브 사이트 만들기 : 버그 고치기</div>
                             <span class="difficulty">난이도 <span>중간</span></span>
                         </div>
                         <div class="right">
@@ -266,400 +266,85 @@
                                         <li>21_5. 채널 영상 더보기 구현하기</li>
                                     </ul>
                                 </li>
+                                <li>22. 버그 고치기
+                                    <ul>
+                                        <li>22_1. scrollTo 작업하기</li>
+                                        <li>22_2. undefined 문제 해결하기</li>
+                                        <li>22_3. 모바일 햄버거 메뉴 만들기</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
                    
-                    <h3>21. 채널 상세 페이지 만들기</h3>
+                    <h3>22. 버그 고치기</h3>
                     <div>
-                        <h4>21_1. 채널 데이터 불러오기</h4>
+                        <h4>22_1. scrollTo 작업하기</h4>
                         <p>
-                            이번에는 채널 페이지를 작업하겠습니다. 
-                            해당 작가의 채널 id 값을 클릭하면 channel 페이지로 channelId 값을 넘겨주게 되어 있습니다.
-                            그 채널 아이디 값을 API를 통해 데이터를 불러오면 됩니다.
+                            사이트를 보다보면 다음 페이지로 넘어갈 때 사이트가 중간에서 바뀔 때가 있습니다. 
+                            새로운 페이지가 열리면 제일 위부터 보여야 하는데 이런 부분이 미흡합니다. 
+                            그래서 다음 부분을 추가하겠습니다.
                         </p>
                         <p>
-                            <code>pages</code> 폴더 <code>channel.jsx</code> 파일을 수정하겠습니다.
+                            <code>utils</code> > <code>scrollTo.js</code> 파일을 만들겠습니다.
                         </p>
-<pre><code class="language-js">import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { fetchFromAPI } from '../utils/api'
+<pre><code class="language-js">import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-import Main from '../components/section/Main';
+const ScrollTo = () => {
+    const { pathname } = useLocation();
 
-import { CiBadgeDollar } from "react-icons/ci";
-import { CiMedal } from "react-icons/ci";
-import { CiRead } from "react-icons/ci";
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
-const Channel = () =&gt; {
-    const { channelId } = useParams();
-    const [ channelDetail, setChannelDetail ] = useState();
+    return null;
+};
 
-    useEffect(() =&gt; {
-        const fetchResults = async () =&gt; {
-            const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
-            setChannelDetail(data.items[0]);
-        };
-        fetchResults();
-    }, [channelId]);
+export default ScrollTo;</code></pre>
 
-    return (
-        &lt;Main 
-            title = "유튜브 채널"
-            description="유튜브 채널페이지입니다."&gt;
-            
-            {channelDetail && (
-                &lt;section id='channel'&gt;
-                    &lt;div className='channel__header' style={{ backgroundImage: `url(${channelDetail.brandingSettings.image.bannerExternalUrl})` }}&gt;
-                        &lt;div className='circle'&gt;
-                            &lt;img src={channelDetail.snippet.thumbnails.high.url} alt={channelDetail.snippet.title} /&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div className='channel__info'&gt;
-                        &lt;h3 className='title'&gt;{channelDetail.snippet.title}&lt;/h3&gt;
-                        &lt;p className='desc'&gt;{channelDetail.snippet.description}&lt;/p&gt;
-                        &lt;div className='info'&gt;
-                            &lt;span&gt;&lt;CiBadgeDollar /&gt;{channelDetail.statistics.subscriberCount}&lt;/span&gt;
-                            &lt;span&gt;&lt;CiMedal /&gt;{channelDetail.statistics.videoCount}&lt;/span&gt;
-                            &lt;span&gt;&lt;CiRead /&gt;{channelDetail.statistics.viewCount}&lt;/span&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/section&gt;
-            )}
-        &lt;/Main&gt;
-    )
-}
-
-export default Channel</code></pre>
+                        <div class="sampleBasic">
+                            <p class="sampleIcon">
+                                이 코드는 React 애플리케이션에서 라우팅 변경 시 페이지가 맨 위로 스크롤되도록 하는 React 컴포넌트를 구현한 것입니다. 이 코드는 React와 React Router를 사용하여 작성되었으며, 페이지 경로가 변경될 때마다 useEffect를 사용하여 스크롤 위치를 맨 위로 이동시킵니다
+                            </p>
+                            <ul>
+                                <li><i>import 문</i> : 코드 상단에 React의 useEffect와 useLocation 훅을, 그리고 React Router의 useLocation 훅을 가져옵니다.</li>
+                                <li><i>ScrollTo 컴포넌트</i> : 함수형 컴포넌트로 선언되며, 페이지 내의 다른 곳에서 이 컴포넌트를 사용할 수 있습니다.</li>
+                                <li>useLocation 훅을 사용하여 현재 페이지의 경로를 가져옵니다. 이 pathname 변수는 현재 페이지의 경로를 나타냅니다.</li>
+                                <li><i>useEffect 훅</i> : 페이지의 컴포넌트가 렌더링될 때마다 실행되는 부수 효과 함수를 정의합니다. 이 부수 효과 함수는 pathname이 변경될 때마다 실행됩니다.</li>
+                                <li><i>window.scrollTo(0, 0)</i> : useEffect 함수 내에서, window.scrollTo 함수를 호출하여 페이지의 스크롤 위치를 (0, 0)으로 이동시킵니다. 이렇게 하면 페이지의 맨 위로 스크롤이 이동합니다.</li>
+                                <li><i>[pathname] 의존성 배열</i> : useEffect 함수가 pathname의 변경을 감지하고 그 때에만 실행되도록 하기 위해 의존성 배열에 pathname을 포함시킵니다.</li>
+                                <li><i>return null;</i> : 이 컴포넌트는 화면에 렌더링되는 것이 아니라 스크롤을 조작하는 용도로만 사용됩니다. 따라서 렌더링되는 내용이 없으므로 null을 반환합니다.</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="mt80">
-                        <h4>21_2. 채널 페이지 반응형 작업</h4>
+                        <h4>22_2. undefined 문제 해결하기</h4>
                         <p>
-                            <code>scss</code> > <code>section</code> > <code>_channel.scss</code> 파일을 만들고 소스를 추가하겠습니다.
+                            서치를 통해 유튜브 영상을 카드 형식으로 보면 채널 소개가 나오면서 비디오 페이지가 없는 <code>undefined</code> 주소가 나오게 됩니다. 
+                            그러면 없는 페이지로 이동하게됩니다. 
+                            이부부은 데이터를 불러올 때 채널 페이지를 불러오지 않게 하면 됩니다.
                         </p>
-<pre><code class="language-scss">#channel {
-    padding: 0;
-}
-.channel__header {
-    width: 100%;
-    height: 300px;
-    background-color: #969696;
-    padding-top: 100px;
-    background-position: center center;
-    position: relative;
-
-    &::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-color: #00000064;
-        position: absolute;
-        left: 0; 
-        top: 0;
-    }
-    .circle {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        position: absolute;
-        left: 50%;
-        top: 150px;
-        transform: translateX(-50%);
-        z-index: 100;
-    }
-}
-
-.channel__info {
-    margin-top: 100px;
-    color: #fff;
-    text-align: center;
-
-    .title {
-        margin-bottom: 10px;
-    }
-    .desc {
-        color: #adadad;
-        padding: 0 10vw;
-        margin-bottom: 30px;
-        overflow-wrap: anywhere;
-    }
-    .info span {
-        background-color: #a6a6a631;
-        padding: 10px 20px;
-        border-radius: 40px;
-        margin: 4px;
-
-        svg {
-            width: 20px;
-            height: 20px;
-            vertical-align: -5px;
-            margin-right: 5px;
-        }
-    }
-}
-
-.channel__video {
-    padding: 40px;
-    margin-top: 50px;
-}
-.channel__more {
-    padding: 40px;
-
-    button {
-        width: 100%;
-        border: 0;
-        padding: 20px;
-        background-color: #1a1a1a;
-        color: #fff;
-        transition: all 0.3s;
-        margin-bottom: 20px;
-        cursor: pointer;
-        border-radius: 40px;
-
-        &:hover {
-            background-color: #111010;
-        }
-    }
-}</code></pre>
+                        <p>
+                            <code>pages</code> > <code>Search.jsx</code> 파일에 수정하겠습니다.
+                            데이터 불러올 때 <code>type=video</code>를 추가해서 해결했습니다.
+                        </p>
+<pre><code class="language-js">const fetchVideos = (query, pageToken = '') => {
+fetchFromAPI(`search?part=snippet&type=video&q=${query}&pageToken=${pageToken}`)
+    .then((data) => {
+        setNextPageToken(data.nextPageToken);
+        setVideos((prevVideos) => [...prevVideos, ...data.items]);
+        setLoading(false);
+    })
+    .catch((error) => {
+        console.error('Error fetching data:', error);
+        setLoading(false); 
+    });
+};</code></pre>
                     </div>
 
-                    <div class="mt80">
-                        <h4>21_3. 로딩 기능 추가하기</h4>
-                        <p>
-                            기존에 로딩 소스는 임의적으로 settimeout을 설정하였지만, 이번에는 API 소스를 다 다운 받으면, 
-                            데이터가 출력하도록 설정했습니다.
-                        </p>
-
-<pre><code class="language-js">import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { fetchFromAPI } from '../utils/api'
-
-import Main from '../components/section/Main';
-
-import { CiBadgeDollar } from "react-icons/ci";
-import { CiMedal } from "react-icons/ci";
-import { CiRead } from "react-icons/ci";
-
-const Channel = () =&gt; {
-    const { channelId } = useParams();
-    const [ channelDetail, setChannelDetail ] = useState();
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() =&gt; {
-        const fetchResults = async () =&gt; {
-            try {
-                const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
-                setChannelDetail(data.items[0]);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchResults();
-    }, [channelId]);
-
-    return (
-        &lt;Main 
-            title = "유튜브 채널"
-            description="유튜브 채널페이지입니다."&gt;
-            
-            &lt;section id='channel' className={`channel-content ${loading ? 'isLoading' : 'isLoaded'}`}&gt;
-                {channelDetail && (
-                    &lt;div className='channel__inner'&gt;
-                        &lt;div className='channel__header' style={{ backgroundImage: `url(${channelDetail.brandingSettings.image.bannerExternalUrl})` }}&gt;
-                            &lt;div className='circle'&gt;
-                                &lt;img src={channelDetail.snippet.thumbnails.high.url} alt={channelDetail.snippet.title} /&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div className='channel__info'&gt;
-                            &lt;h3 className='title'&gt;{channelDetail.snippet.title}&lt;/h3&gt;
-                            &lt;p className='desc'&gt;{channelDetail.snippet.description}&lt;/p&gt;
-                            &lt;div className='info'&gt;
-                                &lt;span&gt;&lt;CiBadgeDollar /&gt;{channelDetail.statistics.subscriberCount}&lt;/span&gt;
-                                &lt;span&gt;&lt;CiMedal /&gt;{channelDetail.statistics.videoCount}&lt;/span&gt;
-                                &lt;span&gt;&lt;CiRead /&gt;{channelDetail.statistics.viewCount}&lt;/span&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                )}
-            &lt;/section&gt;
-        &lt;/Main&gt;
-    )
-}
-
-export default Channel
-</code></pre>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>21_4. 채널 영상 추가하기</h4>
-                        <p>
-                            채널장이 올린 영상을 볼 수 있도록 설정하겠습니다.
-                        </p>
-<pre><code class="language-js">import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { fetchFromAPI } from '../utils/api'
-
-import Main from '../components/section/Main';
-import VideoSearch from '../components/videos/VideoSearch';
-
-import { CiBadgeDollar } from "react-icons/ci";
-import { CiMedal } from "react-icons/ci";
-import { CiRead } from "react-icons/ci";
-
-const Channel = () =&gt; {
-    const { channelId } = useParams();
-    const [ channelDetail, setChannelDetail ] = useState();
-    const [ channelVideo, setChannelVideo ] = useState([]);
-    const [ loading, setLoading ] = useState(true);
-
-    useEffect(() =&gt; {
-        const fetchResults = async () =&gt; {
-            try {
-                const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
-                setChannelDetail(data.items[0]);
-
-                const videosData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet%2Cid&order=date`);
-                setChannelVideo(videosData?.items);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchResults();
-    }, [channelId]);
-
-    return (
-        &lt;Main 
-            title = "유튜브 채널"
-            description="유튜브 채널페이지입니다."&gt;
-            
-            &lt;section id='channel' className={`channel-content ${loading ? 'isLoading' : 'isLoaded'}`}&gt;
-                {channelDetail && (
-                    &lt;div className='channel__inner'&gt;
-                        &lt;div className='channel__header' style={{ backgroundImage: `url(${channelDetail.brandingSettings.image.bannerExternalUrl})` }}&gt;
-                            &lt;div className='circle'&gt;
-                                &lt;img src={channelDetail.snippet.thumbnails.high.url} alt={channelDetail.snippet.title} /&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div className='channel__info'&gt;
-                            &lt;h3 className='title'&gt;{channelDetail.snippet.title}&lt;/h3&gt;
-                            &lt;p className='desc'&gt;{channelDetail.snippet.description}&lt;/p&gt;
-                            &lt;div className='info'&gt;
-                                &lt;span&gt;&lt;CiBadgeDollar /&gt;{channelDetail.statistics.subscriberCount}&lt;/span&gt;
-                                &lt;span&gt;&lt;CiMedal /&gt;{channelDetail.statistics.videoCount}&lt;/span&gt;
-                                &lt;span&gt;&lt;CiRead /&gt;{channelDetail.statistics.viewCount}&lt;/span&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div className='channel__video video__inner search'&gt;
-                            &lt;VideoSearch videos={channelVideo} /&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                )}
-            &lt;/section&gt;
-        &lt;/Main&gt;
-    )
-}
-
-export default Channel
-</code></pre>
-                    </div>
-
-                    <div class="mt80">
-                        <h4>21_5. 채널 영상 더보기 구현하기</h4>
-                        <p>
-                            더 보기 기능을 구현하겠습니다.
-                        </p>
-<pre><code class="language-js">import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { fetchFromAPI } from '../utils/api'
-
-import Main from '../components/section/Main';
-import VideoSearch from '../components/videos/VideoSearch';
-
-import { CiBadgeDollar } from "react-icons/ci";
-import { CiMedal } from "react-icons/ci";
-import { CiRead } from "react-icons/ci";
-
-const Channel = () =&gt; {
-    const { channelId } = useParams();
-    const [ channelDetail, setChannelDetail ] = useState();
-    const [ channelVideo, setChannelVideo ] = useState([]);
-    const [ loading, setLoading ] = useState(true);
-    const [ nextPageToken, setNextPageToken ] = useState(null); 
-
-    useEffect(() =&gt; {
-        const fetchResults = async () =&gt; {
-            try {
-                const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
-                setChannelDetail(data.items[0]);
-
-                const videosData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet%2Cid&order=date`);
-                setChannelVideo(videosData?.items);
-                setNextPageToken(videosData?.nextPageToken);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchResults();
-    }, [channelId]);
-
-    const loadMoreVideos = async () =&gt; {
-        if (nextPageToken) {
-            const videosData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet%2Cid&order=date&pageToken=${nextPageToken}`);
-            setChannelVideo(prevVideos =&gt; [...prevVideos, ...videosData.items]);
-            setNextPageToken(videosData?.nextPageToken);
-        }
-    };
-
-    return (
-        &lt;Main 
-            title = "유튜브 채널"
-            description="유튜브 채널페이지입니다."&gt;
-            
-            &lt;section id='channel' className={`channel-content ${loading ? 'isLoading' : 'isLoaded'}`}&gt;
-                {channelDetail && (
-                    &lt;div className='channel__inner'&gt;
-                        &lt;div className='channel__header' style={{ backgroundImage: `url(${channelDetail.brandingSettings.image.bannerExternalUrl})` }}&gt;
-                            &lt;div className='circle'&gt;
-                                &lt;img src={channelDetail.snippet.thumbnails.high.url} alt={channelDetail.snippet.title} /&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div className='channel__info'&gt;
-                            &lt;h3 className='title'&gt;{channelDetail.snippet.title}&lt;/h3&gt;
-                            &lt;p className='desc'&gt;{channelDetail.snippet.description}&lt;/p&gt;
-                            &lt;div className='info'&gt;
-                                &lt;span&gt;&lt;CiBadgeDollar /&gt;{channelDetail.statistics.subscriberCount}&lt;/span&gt;
-                                &lt;span&gt;&lt;CiMedal /&gt;{channelDetail.statistics.videoCount}&lt;/span&gt;
-                                &lt;span&gt;&lt;CiRead /&gt;{channelDetail.statistics.viewCount}&lt;/span&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div className='channel__video video__inner search'&gt;
-                            &lt;VideoSearch videos={channelVideo} /&gt;
-                        &lt;/div&gt;
-                        &lt;div className='channel__more'&gt;
-                            {nextPageToken && &lt;button onClick={loadMoreVideos}&gt;더 보기&lt;/button&gt;}
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                )}
-            &lt;/section&gt;
-        &lt;/Main&gt;
-    )
-}
-
-export default Channel
-</code></pre>
-                    </div>
-
-
-
-
+          
 
                     
                     <div>
@@ -707,7 +392,7 @@ branch 'main' set up to track 'origin/main'.
                     <div class="right_refer">
                         <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
                         <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
-                        <a href="https://www.youtube.com/playlist?list=PL4UVBBIc6giLDflw5zDXA-FpYZLwGaY0a" target="_blank" class="sampleBtn">영상 보기</a>
+                        <a href="https://www.inflearn.com/courses?s=webstoryboy" target="_blank" class="sampleBtn">영상 보기</a>
                     </div>
 
                     <h3>예제 목록</h3>
