@@ -270,6 +270,7 @@
                                     <ul>
                                         <li>22_1. scrollTo 작업하기</li>
                                         <li>22_2. undefined 문제 해결하기</li>
+                                        <li>22_3. 모바일 햄버거 메뉴 만들기</li>
                                     </ul>
                                 </li>
                                 <li>23. 빌드 및 배포하기
@@ -277,7 +278,6 @@
                                         <li>23_1. 빌드하기</li>
                                         <li>23_2. netlify 배포하기</li>
                                         <li>23_3. vercel 배포하기</li>
-                                        <li>23_4. firebase 배포하기</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -291,6 +291,186 @@
                         안되는 분들도 있어서 여러가기 방식으로 해봤습니다. 
                     </p>
 
+                    <div class="mt80">
+                        <h4>23_1. 빌드하기</h4>
+                        <p>
+                            빌드하는 것은 개발 중에 작성한 코드와 리소스를 최적화된 형태로 번들링하고 준비된 프로덕션 환경에 배포할 수 있도록 하는 프로세스입니다
+                        </p>
+                        <p>
+                            터미널에 다음과 같이 작성하겠습니다.
+                        </p>
+<pre><code class="language-js">$ npm run build</code></pre>
+<pre><code class="language-js">webstoryboyhwang@Webstoryboyui-MacBookPro webs-youtube % npm run build
+
+> webs-youtube@0.1.0 build
+> react-scripts build
+    
+Compiled successfully.
+
+File sizes after gzip:
+
+    71.03 kB  build/static/js/main.88e1b7e0.js
+    25.28 kB  build/static/js/677.64ca6eab.chunk.js
+    18.62 kB  build/static/js/710.509a187a.chunk.js
+    13.94 kB  build/static/js/384.774a03f5.chunk.js
+    11.7 kB   build/static/js/378.f8c0a6f7.chunk.js
+    4.22 kB   build/static/css/378.ef7b5efd.chunk.css
+    4.07 kB   build/static/js/470.28b575f0.chunk.js
+    3.8 kB    build/static/css/main.12b589d7.css
+    2.61 kB   build/static/js/92.97e2bff5.chunk.js
+    2.5 kB    build/static/js/199.2f0efe8c.chunk.js
+    2.03 kB   build/static/js/762.b32f7596.chunk.js
+    1.69 kB   build/static/js/771.4313ccda.chunk.js
+    1.65 kB   build/static/js/273.e35dfe06.chunk.js
+    1.61 kB   build/static/js/140.02e5e41f.chunk.js
+    1.3 kB    build/static/js/565.054ee145.chunk.js
+    1.06 kB   build/static/js/534.f62a50b7.chunk.js
+    971 B     build/static/js/802.ba5df3c8.chunk.js
+    285 B     build/static/js/609.a1086edb.chunk.js
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+    npm install -g serve
+    serve -s build
+
+Find out more about deployment here:
+
+    https://cra.link/deployment</code></pre>
+
+                        <p>
+                            <code>build</code> 폴더가 생성된 것을 확인 할 수 있습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube17-1.png" alt="youtube2023" />
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>23_2. netlify 배포하기</h4>
+                        <p>
+                            netlify 서버에 배포를 해보겠습니다. 
+                            배포하기 전에 모든 파일은 git에 업로드 되어 있어야 합니다.
+                            <a class="sampleLine" href="https://www.netlify.com/" target="_blank">https://www.netlify.com/</a> 여기에서 회원가입을 하겠습니다. 
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube19.png" alt="youtube2023" />
+                        </div>
+                        
+                        <p>
+                            github을 선택합니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube20.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            github에 있는 작업한 폴더 이름을 검색합니다. 
+                            참고로 우리는 webs-youtube라고 작업을 했습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube21.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            빌드했던 폴더 이름이 build로 되어 있습니다. 
+                            이 부분은 수정하지 않습니다. 
+                            바로 <code>Deploy webs-youtube</code>을 누르겠습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube22.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            성공했다면 이번에는 환경 변수를 설정해야 합니다. 
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube22-1.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            <code>.env</code> 파일에 작업했던 API키를 적어주셔야 합니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube22-2.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            주소도 너무 길기 때문에 주소 변경해주겠습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube23.png" alt="youtube2023" />
+                        </div>
+                        <p>
+                            webs-youtube는 사용하고 있기 때문에 다른 이름을 입력해주셔야 합니다. 
+                            이렇게 화면 배포까지 완성입니다.
+                            만약 안되면 다시 한번 빌드 해주시고 시간이 조금 지난다음에 다시 한번 확인해보세요!
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube24.png" alt="youtube2023" />
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>23_3. vercel 배포하기</h4>
+                        <p>
+                            이번에는 vercel에 배포해보겠습니다. 
+                            방식은 netlify와 거의 동일합니다. 
+                            <a class="sampleLine" href="https://www.netlify.com/" target="_blank">https://www.netlify.com/</a> 여기에서 회원가입을 하겠습니다. 
+
+                        </p>
+                        <p>
+                            github을 선택합니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube24-1.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            우리가 작업한 <code>webs-youtuber</code>를 선택합니다. 
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube24-2.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            특별한게 없으니 <code>deploy</code> 버튼을 클릭합니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube24-3.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            성공했습니다. 
+                            이번에는 도메인과 환경변수를 설정하겠습니다.
+                            대시보드 버튼을 클릭하겠습니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube24-4.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            성공했습니다. 
+                            이번에는 도메인과 환경변수를 설정하겠습니다.
+                            저 같은 경우는 도메인 변경이 필요 없을거 같습니다. 
+                            변경을 원하는 분은 edit를 클릭하면 됩니다.
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube24-5.png" alt="youtube2023" />
+                        </div>
+
+                        <p>
+                            환경변수 버튼을 클릭하고 내용을 수정하겠습니다.
+                            이렇게 하면 배포도 마무리가 됩니다. 
+                            완성하신 분들은 다 같이 공유해요! 
+                        </p>
+                        <div class="sampleImg">
+                            <img src="img/youtube24-6.png" alt="youtube2023" />
+                        </div>
+                    </div>
                     
                     <div>
                         <h3>마무리</h3>

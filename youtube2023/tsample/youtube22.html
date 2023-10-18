@@ -344,6 +344,90 @@ fetchFromAPI(`search?part=snippet&type=video&q=${query}&pageToken=${pageToken}`)
 };</code></pre>
                     </div>
 
+                    <div class="mt80">
+                        <h4>22_3. 모바일 햄버거 메뉴 만들기</h4>
+                        <p>
+                            반응형을 구현하기 위해서 토글 메뉴를 만들어보겠습니다.
+                        </p>
+                        <p>
+                            <code>components</code> > <code>section</code> > <code>Header.jsx</code>를 수정하겠습니다.
+                        </p>
+<pre><code class="language-js">import React, {useState, useEffect} from 'react'
+
+import { headerMenus, searchKeword, snsLink } from "../../data/header";
+import { Link, useLocation } from 'react-router-dom';
+
+const Header = () =&gt; {
+    const location = useLocation();
+    const [menuActive, setMenuActive] = useState(false);
+
+    const handleLogoClick = (e) =&gt; {
+        e.preventDefault();
+        setMenuActive(!menuActive);
+    };
+
+    useEffect(() =&gt; {
+        const headerMenu = document.getElementById('header')
+
+        if (menuActive) {
+            headerMenu.classList.add('active');
+        } else {
+            headerMenu.classList.remove('active');
+        }
+        }, [menuActive]);
+
+    return (
+        &lt;header id='header' role='banner'&gt;
+            &lt;h1 className='header__logo' onClick={handleLogoClick}&gt;
+                &lt;a href="/"&gt;
+                    &lt;em&gt;&lt;/em&gt;  
+                    &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h1&gt;
+            &lt;div className='header__menu'&gt;
+                &lt;ul className='menu'&gt;
+                    {headerMenus.map((menu, key) =&gt; (
+                        &lt;li key={key} className={location.pathname === menu.src ? 'active' : ''}&gt;
+                            &lt;Link to={menu.src}&gt;
+                                {menu.icon}{menu.title}
+                            &lt;/Link&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+                &lt;ul className='keyword'&gt;
+                    {searchKeword.map((keyword, key) =&gt; (
+                        &lt;li key={key} className={location.pathname === keyword.src ? 'active' : ''}&gt;
+                            &lt;Link to={keyword.src}&gt;
+                                {keyword.title}
+                            &lt;/Link&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div className='header__sns'&gt;
+                &lt;ul&gt;
+                    {snsLink.map((sns, key) =&gt; (
+                        &lt;li key={key}&gt;
+                            &lt;a href={sns.url} target="_blank" rel="noopener noreferrer" aria-label={sns.title}&gt;
+                                &lt;span&gt;{sns.icon}&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    ))}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+    )
+}
+
+export default Header
+</code></pre>   
+                        <p>
+                            조금더 간단하게 구현하려면 header 부분을 저렇게 수정할 수 있습니다.
+                        </p>
+<pre><code class="language-js">&lt;header id='header' role='banner' className={menuActive ? 'active' : ''}&gt;
+</code></pre>
+                    </div>
+
           
 
                     
