@@ -303,11 +303,48 @@ const ScrollTo = () => {
 
 export default ScrollTo;</code></pre>
 
+                        <p>
+                            <code>components</code> > <code>section</code> > <code>Main.jsx</code> 에 추가합니다.
+                        </p>
+<pre><code class="language-js">import React from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+
+import Header from './Header'
+import Footer from './Footer'
+import Search from './Search'  
+import ScrollTo from '../../utils/scrollTo' // 추가
+
+const Main = ( props ) =&gt; {
+    return (
+        &lt;HelmetProvider&gt;
+            &lt;ScrollTo /&gt; // 추가
+            &lt;Helmet 
+                titleTemplate="%s | Webs Youtube" 
+                defaultTitle="Webs Youtube" 
+                defer={false}
+            &gt;
+                {props.title && &lt;title&gt;{props.title}&lt;/title&gt;}
+                &lt;meta name="description" content={props.description} /&gt;
+            &lt;/Helmet&gt;
+
+            &lt;Header /&gt;
+            &lt;main id="main" role="main"&gt;
+                &lt;Search /&gt;   
+                {props.children}
+            &lt;/main&gt;
+            &lt;Footer /&gt;
+        &lt;/HelmetProvider&gt;
+    )
+}
+
+export default Main
+</code></pre>
+
                         <div class="sampleBasic">
                             <p class="sampleIcon">
                                 이 코드는 React 애플리케이션에서 라우팅 변경 시 페이지가 맨 위로 스크롤되도록 하는 React 컴포넌트를 구현한 것입니다. 이 코드는 React와 React Router를 사용하여 작성되었으며, 페이지 경로가 변경될 때마다 useEffect를 사용하여 스크롤 위치를 맨 위로 이동시킵니다
                             </p>
-                            <ul>
+                            <ul class="list">
                                 <li><i>import 문</i> : 코드 상단에 React의 useEffect와 useLocation 훅을, 그리고 React Router의 useLocation 훅을 가져옵니다.</li>
                                 <li><i>ScrollTo 컴포넌트</i> : 함수형 컴포넌트로 선언되며, 페이지 내의 다른 곳에서 이 컴포넌트를 사용할 수 있습니다.</li>
                                 <li>useLocation 훅을 사용하여 현재 페이지의 경로를 가져옵니다. 이 pathname 변수는 현재 페이지의 경로를 나타냅니다.</li>
@@ -342,6 +379,7 @@ fetchFromAPI(`search?part=snippet&type=video&q=${query}&pageToken=${pageToken}`)
         setLoading(false); 
     });
 };</code></pre>
+                        
                     </div>
 
                     <div class="mt80">
@@ -352,69 +390,24 @@ fetchFromAPI(`search?part=snippet&type=video&q=${query}&pageToken=${pageToken}`)
                         <p>
                             <code>components</code> > <code>section</code> > <code>Header.jsx</code>를 수정하겠습니다.
                         </p>
-<pre><code class="language-js">import React, {useState, useEffect} from 'react'
+<pre><code class="language-js">import React, { useState } from 'react'
 
-import { headerMenus, searchKeword, snsLink } from "../../data/header";
-import { Link, useLocation } from 'react-router-dom';
+import Logo from '../header/Logo';
+import Menu from '../header/Menu';
+import Sns from '../header/Sns';
 
 const Header = () =&gt; {
-    const location = useLocation();
-    const [menuActive, setMenuActive] = useState(false);
+    const [ isMenuActive, setIsMenuActive ] = useState(false);
 
-    const handleLogoClick = (e) =&gt; {
-        e.preventDefault();
-        setMenuActive(!menuActive);
-    };
-
-    useEffect(() =&gt; {
-        const headerMenu = document.getElementById('header')
-
-        if (menuActive) {
-            headerMenu.classList.add('active');
-        } else {
-            headerMenu.classList.remove('active');
-        }
-        }, [menuActive]);
+    const toggleMenu = () =&gt; {
+        setIsMenuActive(!isMenuActive);
+    }
 
     return (
-        &lt;header id='header' role='banner'&gt;
-            &lt;h1 className='header__logo' onClick={handleLogoClick}&gt;
-                &lt;a href="/"&gt;
-                    &lt;em&gt;&lt;/em&gt;  
-                    &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h1&gt;
-            &lt;div className='header__menu'&gt;
-                &lt;ul className='menu'&gt;
-                    {headerMenus.map((menu, key) =&gt; (
-                        &lt;li key={key} className={location.pathname === menu.src ? 'active' : ''}&gt;
-                            &lt;Link to={menu.src}&gt;
-                                {menu.icon}{menu.title}
-                            &lt;/Link&gt;
-                        &lt;/li&gt;
-                    ))}
-                &lt;/ul&gt;
-                &lt;ul className='keyword'&gt;
-                    {searchKeword.map((keyword, key) =&gt; (
-                        &lt;li key={key} className={location.pathname === keyword.src ? 'active' : ''}&gt;
-                            &lt;Link to={keyword.src}&gt;
-                                {keyword.title}
-                            &lt;/Link&gt;
-                        &lt;/li&gt;
-                    ))}
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div className='header__sns'&gt;
-                &lt;ul&gt;
-                    {snsLink.map((sns, key) =&gt; (
-                        &lt;li key={key}&gt;
-                            &lt;a href={sns.url} target="_blank" rel="noopener noreferrer" aria-label={sns.title}&gt;
-                                &lt;span&gt;{sns.icon}&lt;/span&gt;
-                            &lt;/a&gt;
-                        &lt;/li&gt;
-                    ))}
-                &lt;/ul&gt;
-            &lt;/div&gt;
+        &lt;header id='header' role='banner' className={isMenuActive ? 'active' : ''}&gt;
+            &lt;Logo toggleMenu={toggleMenu} /&gt;
+            &lt;Menu /&gt;
+            &lt;Sns /&gt;
         &lt;/header&gt;
     )
 }
@@ -422,9 +415,53 @@ const Header = () =&gt; {
 export default Header
 </code></pre>   
                         <p>
-                            조금더 간단하게 구현하려면 header 부분을 저렇게 수정할 수 있습니다.
+                            <code>header</code> > <code>Logo.jsx</code> 는 다음과 같이 수정합니다.
                         </p>
-<pre><code class="language-js">&lt;header id='header' role='banner' className={menuActive ? 'active' : ''}&gt;
+<pre><code class="language-js">import React from 'react'
+import { Link } from 'react-router-dom'
+
+const Logo = ({ toggleMenu }) =&gt; {
+    return (
+        &lt;h1 className='header__logo'&gt;
+            &lt;Link to='/'&gt;
+                &lt;em aria-hidden='true' onClick={toggleMenu}&gt;&lt;/em&gt;
+                &lt;span&gt;webs&lt;br /&gt;youtube&lt;/span&gt;
+            &lt;/Link&gt;
+        &lt;/h1&gt;
+    )
+}
+
+export default Logo
+</code></pre>
+                        <p>
+                            <code>assets</code> > <code>scss</code> > <code>_layout.scss</code>를 수정합니다.
+                        </p>
+<pre><code class="language-scss">@media (max-width: 800px){
+    #header {
+        left: -260px;
+        background-color: var(--black);
+        transition: left 0.3s;
+
+        h1 {
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        .header__menu {
+            margin-top: 90px;
+        };
+        &.active {
+            left: 0;
+        }
+    }
+    #main {
+        padding-left: 0;
+    }
+    #footer {
+        width: 100%;
+        margin-left: 0;
+    }
+}
 </code></pre>
                     </div>
 
