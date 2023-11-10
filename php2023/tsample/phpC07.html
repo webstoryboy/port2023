@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀스택 도전! PHP로 나만의 블로그 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left">
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">풀스택 도전! PHP로 나만의 블로그 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 11. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">코딩 02</span>
+                            <div class="title">PHP로 나만의 블로그 만들기 : CSS 셋팅하기</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="#" target="_blank" class="sampleBtn">인덱스 보기</a>
+                            <a href="#" target="_blank" class="sampleBtn">코드 보기</a>
+                            <a href="https://www.inflearn.com/courses?s=webstoryboy" target="_blank"
+                                class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 강의는 디자인, 코딩, 및 개발을 한번에 경험할 수 있는 풀스택 도전 튜토리얼을 제공합니다.
+                        개인이 디자인부터 코딩, 그리고 개발까지 진행하며 전체적인 웹사이트 구조와 흐름을 이해할 수 있도록 도와줍니다.
+                        디자인 작업은 피그마를 활용하며, 코딩은 HTML5/CSS3를 사용하고, 개발은 PHP를 활용합니다.
+                        이 프로세스를 통해 풀스택 개발에 도전하며 전체적인 웹사이트 제작 과정을 이해할 수 있습니다.
+                        또한 PHP를 사용하여 게시판 및 로그인을 구현함으로써 웹사이트의 활용성을 높일 수 있습니다.
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index22">
+                        <div>
+                            <h4>디자인</h4>
+                            <ul>
+                                <li>1. 메인 디자인
+                                    <ul>
+                                        <li>1.1 카드 유형 디자인</li>
+                                    </ul>
+                                </li>
+                                <li>2. 블로그 디자인
+                                    <ul>
+                                        <li>2.1 블로그 메인</li>
+                                        <li>2.2 블로그 카테고리 영역</li>
+                                        <li>2.3 블로그 뷰 영역</li>
+                                    </ul>
+                                </li>
+                                <li>3. 게시판 디자인
+                                    <ul>
+                                        <li>3.1 게시판 메인</li>
+                                        <li>3.2 게시판 글쓰기</li>
+                                        <li>3.3 게시판 수정하기</li>
+                                        <li>3.4 게시판 보기</li>
+                                        <li>3.5 게시판 검색</li>
+                                    </ul>
+                                </li>
+                                <li>4. 로그인 디자인
+                                    <ul>
+                                        <li>4.1 로그인</li>
+                                        <li>4.2 아이디 찾기</li>
+                                        <li>4.3 비밀번호 찾기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 회원가입 디자인
+                                    <ul>
+                                        <li>5.1 이용 약관</li>
+                                        <li>5.2 정보 입력</li>
+                                        <li>5.3 가입 완료</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>코딩</h4>
+                            <ul>
+                                <li>1. 기본 셋팅하기
+                                    <ul>
+                                        <li>1.1 vscode 셋팅하기</li>
+                                        <li>1.2. 호스팅 셋팅하기</li>
+                                        <li>1.3. 파일질라 셋팅하기</li>
+                                        <li>1.4. ftp-simple 셋팅하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. CSS 셋팅하기
+                                    <ul>
+                                        <li>2.1 style.css 만들기</li>
+                                        <li>2.2 fonts.css 만들기</li>
+                                        <li>2.3 vars.css 만들기</li>
+                                        <li>2.4 resets.css 만들기</li>
+                                        <li>2.5 commons.css 만들기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>개발</h4>
+                            <ul>
+                                <li>1. 기본 셋팅하기</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>2. CSS 셋팅하기</h3>
+                    <div>
+                        <h4>2.1 style.css 만들기</h4>
+                        <p>
+                            사이트 코딩에 들어가기 전에 css 셋팅부터 완료하겠습니다.
+                            <code>style.css</code>을 만들고 다음과 같이 셋팅하겠습니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">assets
+                                    <ul>
+                                        <li class="icon2 m0">style.css</li>
+                                    </ul>
+                                </li>
+                                <li class="icon1">index.html</li>
+                            </ul>
+                        </div>
+                        <pre><code class="language-css">@charset "UTF-8";
+
+/* 기본 설정 */
+@import "fonts.css";
+@import "resets.css";
+@import "vars.css";
+@import "commons.css";
+</code></pre>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>2.2 fonts.css 만들기</h4>
+                        <p>
+                            사이트에 사용할 웹 폰트를 설정하겠습니다.
+                            웹 폰트를 설정하면 사용자 컴퓨터에 폰트가 없어도 다운받아 사용할 수 있습니다.
+                            <a class="sampleLine" href="https://wess.tistory.com/"
+                                target="_blank">https://wess.tistory.com/</a> 여기에서 다운받아 사용할 수 있습니다.
+                            저 같은 경우는 지마켓 폰트와 나눔스퀘어네오체를 사용하겠습니다.
+
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">assets
+                                    <ul>
+                                        <li class="icon2 m0">style.css</li>
+                                        <li class="icon2 m0">fonts.css</li>
+                                    </ul>
+                                </li>
+                                <li class="icon1">index.html</li>
+                            </ul>
+                        </div>
+                        <pre><code class="language-css">@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+            url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+            url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+            url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+            url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+            url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+            url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+            url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+            url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+            url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot?#iefix') format('embedded-opentype'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff2') format('woff2'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff') format('woff'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot?#iefix') format('embedded-opentype'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff2') format('woff2'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff') format('woff'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot?#iefix') format('embedded-opentype'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff2') format('woff2'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff') format('woff'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot?#iefix') format('embedded-opentype'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff2') format('woff2'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff') format('woff'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot?#iefix') format('embedded-opentype'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff2') format('woff2'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff') format('woff'),
+            url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.ttf') format("truetype");
+    font-display: swap;
+} 
+</code></pre>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>2.3 vars.css 만들기</h4>
+                        <p>
+                            이번에는 사이트 필요한 기본적인 변수를 설정하겠습니다.
+                            변수를 사용하면 조금 더 CSS를 편하게 사용할 수 있습니다.
+                            CSS 변수는 사용자가 임의로 지정한 값을 저장하고 재사용할 수 있는 값을 의미합니다.
+                            JavaScript의 변수와 비슷하게 사용할 수 있습니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">assets
+                                    <ul>
+                                        <li class="icon2 m0">style.css</li>
+                                        <li class="icon2 m0">fonts.css</li>
+                                        <li class="icon2 m0">vars.css</li>
+                                    </ul>
+                                </li>
+                                <li class="icon1">index.html</li>
+                            </ul>
+                        </div>
+                        <pre><code class="language-css">:root {
+    --namumFont: "NanumSquareNeo";
+    --gmarketFont: "GmarketSans";
+
+    --mainColor: #EEEEEE;
+
+    --black: #000;
+    --white: #fff;
+    --red: #f00;
+    --green: #099b31;
+
+    --white100: #eaeaea;
+    --white200: #e7e7e7;
+    --white300: #dbdbdb;
+    --white400: #cacaca;
+    --white500: #bdbdbd;
+    --white600: #b3b3b3;
+    --white700: #a7a7a7;
+
+    --black100: #333;
+    --black200: #555;
+    --black300: #777;
+    --black400: #999;
+    --black500: #d7d7d7;
+    --black600: #e8e8e8;
+
+    --blackA100: #000000d9;
+    --blackA200: #000000cb;
+    --blackA300: #000000a5;
+    --blackA400: #00000081;
+    --blackA500: #0000004d;
+    --blackA600: #00000021;
+    --blackA700: #0000000d;
+
+    /* 기본 폰트 설정 */
+    font-family: var(--namumFont);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    /* 폰트를 부드럽게 렌더링하기 위한 속성  */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* 아이폰 가로 모드에서 글씨 확대 금지 */
+    -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 14px;
+    }
+}
+</code></pre>
+                        <div class="sampleBasic">
+                            <p>
+                                <code>:root</code> 셀렉터를 사용하여 CSS 변수를 선언하면 전체 문서에서 사용할 수 있는 전역적인 변수를 설정할 수 있습니다. 일반적으로
+                                이러한 변수들은 미리 정의된
+                                색상, 글꼴, 여백 등의 값들을 저장하고 재사용할 때 유용합니다.
+                            </p>
+                            <p>
+                                <code>@media</code>는 CSS에서 사용되는 규칙으로, 특정 미디어 유형 또는 장치 특성에 따라 스타일을 지정하는 데 사용됩니다. 이를 통해
+                                반응형 디자인을 구현하거나
+                                특정 장치나 미디어에 맞게 스타일을 조정할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>2.4 resets.css 만들기</h4>
+                        <p>
+                            이번에는 사이트 제작시 필요한 기본 리셋 css에 대해서 설정하겠습니다.
+                            코딩을 하다보면 여러가지 태그를 사용하게 됩니다.
+                            이 여러가지 태그들은 고유의 값을 기본값으로 가지고 있습니다.
+                            이런 기본 값이 코딩을 할 때는 불편할 때가 많습니다.
+                            그래서 기본값을 0으로 초기하거니 기본 세팅값을 부여하여 조금 더 코딩을 편하게 하기 위함입니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">assets
+                                    <ul>
+                                        <li class="icon2 m0">style.css</li>
+                                        <li class="icon2 m0">fonts.css</li>
+                                        <li class="icon2 m0">vars.css</li>
+                                        <li class="icon2 m0">resets.css</li>
+                                    </ul>
+                                </li>
+                                <li class="icon1">index.html</li>
+                            </ul>
+                        </div>
+                        <pre><code class="language-css">/* 여백 초기화 */
+body,
+div,
+dl,
+dd,
+dt,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+p,
+table,
+th,
+td,
+input,
+figure,
+figcaption,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* box-sizing 초기화 */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-family: var(--namumFont), var(--gmarketFont), 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', 'dotum', '돋움';
+}
+
+/* 링크 초기화 */
+a {
+    text-decoration: none;
+    color: var(--black200);
+}
+
+/* 목록 초기화 */
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+/* 제목 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/* 폰트 스타일 */
+em,
+address {
+    font-style: normal;
+}
+
+/* 이미지 초기화 */
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* 보더 초기화 */
+img,
+fieldset,
+button {
+    border: 0;
+}
+
+/* 테이블 초기화 */
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+/* 블라인드 효과 */
+.blind {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* ir 효과 */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+</code></pre>
+                        <div class="sampleBasic">
+                            <p>
+                                <i>블라인드 효과</i> : 웹 접근성을 고려하여 스크린 리더 등의 보조 기술을 사용하는 사용자를 위해 텍스트를 화면에 표시하지 않으면서도 접근성을 유지하는
+                                기술 중
+                                하나입니다.
+                                해당 클래스에 사용된 스타일들은 일반적으로 화면에는 보이지 않지만, 스크린 리더나 다른 보조 기술을 사용하는 경우 텍스트가 숨겨지지 않고 읽히도록 만드는 데
+                                사용됩니다.
+                            </p>
+
+                            <p>
+                                <i>ir(Image Replacement) 효과</i> : 이미지 리플레이스먼트는 텍스트를 이미지로 대체하여 페이지의 시각적인 디자인을 향상시키고, 동시에
+                                웹 접근성을 향상시키는 데 사용됩니다.
+                                이 클래스는 텍스트를 화면 밖으로 이동하여 화면에는 보이지 않지만, 스크린 리더와 같은 보조 기기에서는 해당 텍스트를 읽을 수 있도록 합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>2.5 commons.css 만들기</h4>
+                        <p>
+                            이번에는 사이트에서 공통적으로 사용하는 부분만 모아두는 CSS를 만들겠습니다.
+                            여기에는 사이트 기본 컬러와 스킵 메뉴만 설정하고 작업을 하면서 추가를 하겠습니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">assets
+                                    <ul>
+                                        <li class="icon2 m0">style.css</li>
+                                        <li class="icon2 m0">fonts.css</li>
+                                        <li class="icon2 m0">vars.css</li>
+                                        <li class="icon2 m0">resets.css</li>
+                                        <li class="icon2 m0">commons.css</li>
+                                    </ul>
+                                </li>
+                                <li class="icon1">index.html</li>
+                            </ul>
+                        </div>
+                        <pre><code class="language-css">/* body */
+body {
+    background-color: var(--mainColor);
+}
+
+/* skip */
+#skip {
+    position: relative;
+    z-index: 1000000;
+}
+
+#skip a {
+    background-color: var(--black);
+    color: var(--white);
+    position: absolute;
+    left: -400px;
+    top: 0;
+    padding: 20px 40px;
+}
+
+#skip a:active,
+#skip a:focus {
+    left: 0;
+}
+</code></pre>
+                        <div class="sampleBasic">
+                            <p>
+                                <i>스킵 메뉴</i>는 웹 접근성을 높이기 위해 키보드로 웹 페이지를 사용하는 사용자들이 본문 콘텐츠로 바로 건너뛸 수 있도록 하는데 사용됩니다. 일반적으로
+                                스크린 리더
+                                사용자나 키보드만을 이용해 페이지를 탐색하는 사용자들을 위해 도움이 됩니다.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.inflearn.com/courses?s=webstoryboy" target="_blank" class="sampleBtn">영상
+                            보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/">1. PHP로 나만의 블로그 만들기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+
+</html>

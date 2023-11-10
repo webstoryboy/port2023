@@ -278,12 +278,6 @@
   margin-bottom: 10px;
   color: #666;
 }
-.blog__contents h5 {
-  font-size: 16px;
-  line-height: 1;
-  margin-bottom: 10px;
-  color: #666;
-}
 
 /* .blog__contents ul {
   padding-left: 20px;
@@ -672,9 +666,7 @@
   border-radius: 5px;
   margin-bottom: 15px;
 }
-.blog__contents.tutorial a {
-  color: #666;
-}
+
 .blog__contents.tutorial p {
   position: relative;
 }
@@ -687,11 +679,11 @@
   border-radius: 5px;
   font-family: "NEXONLv1Gothic";
 }
-.blog__contents.tutorial i {
+.blog__contents.tutorial p i {
   position: relative;
   font-style: normal;
 }
-.blog__contents.tutorial i::before {
+.blog__contents.tutorial p i::before {
   content: "";
   position: absolute;
   left: 0;
@@ -702,11 +694,11 @@
   border-radius: 20px;
   z-index: -1;
 }
-.blog__contents.tutorial b {
+.blog__contents.tutorial p b {
   font-weight: normal;
   cursor: help;
 }
-.blog__contents.tutorial b:hover {
+.blog__contents.tutorial p b:hover {
   text-decoration: underline;
   text-underline-position: under;
 }
@@ -740,6 +732,9 @@
 }
 
 /* aside */
+/* .blog__aside {
+
+} */
 
 .blog__aside {
   margin-bottom: 500px;
@@ -800,32 +795,31 @@
       vertical-align: 2px;
       border-radius: 5px;
   } */
-.blog__contents .folder {
+.tutor .blog__contents .folder {
   background-color: #282936;
   display: block;
   padding: 20px 25px 20px 20px;
   border-radius: 5px;
   margin-bottom: 0px;
   color: #fff;
-  margin-bottom: 20px;
 }
 
-.blog__contents .folder ul li {
+.tutor .blog__contents .folder ul li {
   list-style: none;
   padding-left: 27px;
   position: relative;
   color: #fff;
 }
 
-.blog__contents .folder ul li ul li {
+.tutor .blog__contents .folder ul li ul li {
   position: relative;
 }
 
-.blog__contents .folder .icon1 {
+.tutor .blog__contents .folder .icon1 {
   display: block;
 }
 
-.blog__contents .folder .icon1:before {
+.tutor .blog__contents .folder .icon1:before {
   content: "";
   width: 20px;
   height: 15px;
@@ -836,7 +830,7 @@
   border-radius: 0px 3px 3px 3px;
 }
 
-.blog__contents .folder .icon1:after {
+.tutor .blog__contents .folder .icon1:after {
   content: "";
   width: 10px;
   height: 4px;
@@ -847,14 +841,12 @@
   border-radius: 3px 3px 0px 0px;
 }
 
-.blog__contents .folder .icon2 {
+.tutor .blog__contents .folder .icon2 {
   display: block;
   margin-left: 24px;
 }
-.blog__contents .folder .icon2.m0 {
-  margin-left: 0;
-}
-.blog__contents .folder .icon2:before {
+
+.tutor .blog__contents .folder .icon2:before {
   content: "";
   width: 16px;
   height: 20px;
@@ -864,7 +856,8 @@
   top: 4px;
   border-radius: 3px 3px 3px 3px;
 }
-.blog__contents .folder .icon2:after {
+
+.tutor .blog__contents .folder .icon2:after {
   content: "";
   width: 20px;
   height: 4px;
@@ -1296,20 +1289,7 @@ code.hljs {
 .refer4 li:hover a {
   color: #fff;
 }
-.refer5_wrap {
-  display: flex;
-}
-.refer5_wrap > ul {
-  width: 50%;
-}
-@media (max-width: 800px){
-  .refer5_wrap {
-    flex-direction: column;
-  }
-  .refer5_wrap > ul {
-    width: 100%;
-  }
-}
+
 .refer5 {
   padding-left: 0 !important;
 }
@@ -1342,213 +1322,4 @@ code.hljs {
 #footer {
   text-align: center;
   padding: 10vh;
-}
-
-.nanumSquareNeo .blog__contents h3 {
-  padding-bottom: 4px;
-}
-.nanumSquareNeo .blog__contents.tutorial p code {
-  vertical-align: 0;
-}
-.nanumSquareNeo pre code.hljs {
-  font-family: "nanumSquareNeo";
-}
-.index > ul > li {
-  padding-left: 15px;
-}
-.index > ul > li > ul {
-  padding-left: 20px;
-}
-.index2 {
-  display: flex;
-  flex-wrap: wrap;
-}
-.index2 > h3 {
-  width: 100%;
-}
-.index2 > div {
-  width: 25%;
-}
-.index2 > div h4 {
-  color: #000;
-  margin-top: 5px;
-  text-decoration: underline;
-  text-underline-position: under;
-}
-.index2 > div > ul > li {
-  padding-left: 0px;
-  margin-bottom: 5px;
-}
-.index2 > div > ul > li > ul {
-  padding-left: 20px;
-}
-
-.index22 {
-  display: flex;
-  flex-wrap: wrap;
-}
-.index22 > h3 {
-  width: 100%;
-}
-.index22 > div {
-  width: 33%;
-}
-.index22 > div h4 {
-  color: #000;
-  margin-top: 5px;
-  text-decoration: underline;
-  text-underline-position: under;
-}
-.index22 > div > ul > li {
-  padding-left: 0px;
-  margin-bottom: 5px;
-}
-.index22 > div > ul > li > ul {
-  padding-left: 20px;
-}
-
-.index3 > ul > li {
-  padding-left: 0px;
-  margin-bottom: 5px;
-}
-.index3 > ul > li > ul {
-  padding-left: 20px;
-}
-.index3 > ul > li > ul > li > ul {
-  padding-left: 20px;
-}
-.index3 > ul > li > ul > li strong {
-  position: relative;
-  padding: 0 5px;
-}
-.index3 > ul > li > ul > li strong::before {
-  content: '';
-  background: #0242f141;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 50%;
-  z-index: -1;
-  border-radius: 20px;
-  transition: all 0.3s;
-}
-.index3 > ul > li > ul > li:hover strong::before {
-  height: 100%;
-} 
-.index3 > ul > li > ul > li:hover a {
-  text-decoration: none;
-}
-
-
-.sampleLine {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-.sampleLine:hover {
-  background-color: #e2e2e2;
-}
-
-
-.sampleImg {
-  border: 5px solid #ccc;
-  margin-bottom: 20px;
-  border-radius: 5px;
-}
-.sampleBasic {
-  background-color: #f2f2f2;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  z-index: -10;
-}
-.sampleBasic p {
-  margin-bottom: 3px;
-}
-.sampleBasic h5 {
-  text-decoration: underline;
-  text-underline-position: under;
-  margin-top: 10px;
-}
-.sampleIcon::before {
-  content: '🥳 : ';
-}
-.sampleFolder {
-  background-color: #282936;
-  display: block;
-  padding: 20px 25px 20px 20px;
-  border-radius: 5px;
-  margin-bottom: 0px;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.sampleFolder ul li {
-  list-style: none;
-  padding-left: 27px;
-  position: relative;
-  color: #fff;
-}
-
-.sampleFolder ul li ul li {
-  position: relative;
-}
-
-.sampleFolder .icon1 {
-  display: block;
-}
-
-.sampleFolder .icon1:before {
-  content: "";
-  width: 20px;
-  height: 15px;
-  background-color: #5c43f5;
-  position: absolute;
-  left: 0;
-  top: 7px;
-  border-radius: 0px 3px 3px 3px;
-}
-
-.sampleFolder .icon1:after {
-  content: "";
-  width: 10px;
-  height: 4px;
-  background-color: #5c43f5;
-  position: absolute;
-  left: 0;
-  top: 4px;
-  border-radius: 3px 3px 0px 0px;
-}
-
-.sampleFolder .icon2 {
-  display: block;
-  margin-left: 24px;
-}
-.sampleFolder .icon2.m0 {
-  margin-left: 0;
-}
-.sampleFolder .icon2:before {
-  content: "";
-  width: 16px;
-  height: 20px;
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-  top: 4px;
-  border-radius: 3px 3px 3px 3px;
-}
-.sampleFolder .icon2:after {
-  content: "";
-  width: 20px;
-  height: 4px;
-  position: absolute;
-  left: -3px;
-  top: 4px;
-  border-right: 7px solid #282936;
-  border-bottom: 7px solid transparent;
-  border-top: 0px solid transparent;
-}
-
-.mt80 {
-  margin-top: 80px;
 }

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀스택 도전! PHP로 나만의 블로그 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left">
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">풀스택 도전! PHP로 나만의 블로그 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 11. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">코딩 09</span>
+                            <div class="title">PHP로 나만의 블로그 만들기 : 회원가입 페이지 코딩하기</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="#" target="_blank" class="sampleBtn">인덱스 보기</a>
+                            <a href="#" target="_blank" class="sampleBtn">코드 보기</a>
+                            <a href="https://www.inflearn.com/courses?s=webstoryboy" target="_blank"
+                                class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 강의는 디자인, 코딩, 및 개발을 한번에 경험할 수 있는 풀스택 도전 튜토리얼을 제공합니다.
+                        개인이 디자인부터 코딩, 그리고 개발까지 진행하며 전체적인 웹사이트 구조와 흐름을 이해할 수 있도록 도와줍니다.
+                        디자인 작업은 피그마를 활용하며, 코딩은 HTML5/CSS3를 사용하고, 개발은 PHP를 활용합니다.
+                        이 프로세스를 통해 풀스택 개발에 도전하며 전체적인 웹사이트 제작 과정을 이해할 수 있습니다.
+                        또한 PHP를 사용하여 게시판 및 로그인을 구현함으로써 웹사이트의 활용성을 높일 수 있습니다.
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index22">
+                        <div>
+                            <h4>디자인</h4>
+                            <ul>
+                                <li>1. 메인 디자인
+                                    <ul>
+                                        <li>1.1 카드 유형 디자인</li>
+                                    </ul>
+                                </li>
+                                <li>2. 블로그 디자인
+                                    <ul>
+                                        <li>2.1 블로그 메인</li>
+                                        <li>2.2 블로그 카테고리 영역</li>
+                                        <li>2.3 블로그 뷰 영역</li>
+                                    </ul>
+                                </li>
+                                <li>3. 게시판 디자인
+                                    <ul>
+                                        <li>3.1 게시판 메인</li>
+                                        <li>3.2 게시판 글쓰기</li>
+                                        <li>3.3 게시판 수정하기</li>
+                                        <li>3.4 게시판 보기</li>
+                                        <li>3.5 게시판 검색</li>
+                                    </ul>
+                                </li>
+                                <li>4. 로그인 디자인
+                                    <ul>
+                                        <li>4.1 로그인</li>
+                                        <li>4.2 아이디 찾기</li>
+                                        <li>4.3 비밀번호 찾기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 회원가입 디자인
+                                    <ul>
+                                        <li>5.1 이용 약관</li>
+                                        <li>5.2 정보 입력</li>
+                                        <li>5.3 가입 완료</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>코딩</h4>
+                            <ul>
+                                <li>1. 기본 셋팅하기
+                                    <ul>
+                                        <li>1.1 vscode 셋팅하기</li>
+                                        <li>1.2. 호스팅 셋팅하기</li>
+                                        <li>1.3. 파일질라 셋팅하기</li>
+                                        <li>1.4. ftp-simple 셋팅하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. CSS 셋팅하기
+                                    <ul>
+                                        <li>2.1 style.css 만들기</li>
+                                        <li>2.2 fonts.css 만들기</li>
+                                        <li>2.3 vars.css 만들기</li>
+                                        <li>2.4 resets.css 만들기</li>
+                                        <li>2.5 commons.css 만들기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 기본 섹션 코딩하기
+                                    <ul>
+                                        <li>3.1 기본 레이아웃 잡기</li>
+                                        <li>3.2 헤더 영역 코딩하기</li>
+                                        <li>3.3 푸터 영역 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 유형 코딩하기
+                                    <ul>
+                                        <li>4.1 메인 인트로 코딩하기</li>
+                                        <li>4.2 블로그 인트로 코딩하기</li>
+                                        <li>4.3 회원가입 인트로 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 카드 유형 코딩하기
+                                    <ul>
+                                        <li>5.1 메인 카드 유형1 코딩하기</li>
+                                        <li>5.2 메인 카드 유형2 코딩하기</li>
+                                        <li>5.3 메인 카드 유형3 코딩하기</li>
+                                        <li>5.4 블로그 카드 유형1 코딩하기</li>
+                                        <li>5.5 블로그 카드 유형2 코딩하기</li>
+                                        <li>5.6 블로그 카드 유형3 코딩하기</li>
+                                        <li>5.7 카드 유형 반응형 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이드 영역 코딩하기
+                                    <ul>
+                                        <li>6.1 인트로 영역 코딩하기</li>
+                                        <li>6.2 카테고리 코딩하기</li>
+                                        <li>6.3 인기 포스트 코딩하기</li>
+                                        <li>6.4 최신 댓글 코딩하기</li>
+                                        <li>6.5 게시판 코딩하기</li>
+                                        <li>6.6 메인 공지사항, 댓글 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>7. 블로그 뷰 페이지 코딩하기
+                                    <ul>
+                                        <li>7.1 블로그 뷰 영역 코딩하기</li>
+                                        <li>7.2 블로그 인덱스 영역 코딩하기</li>
+                                        <li>7.3 블로그 관련글 영역 코딩하기</li>
+                                        <li>7.4 블로그 댓글 영역 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>8. 게시판 페이지 코딩하기
+                                    <ul>
+                                        <li>8.1 게시판 코딩하기</li>
+                                        <li>8.2 게시판 글쓰기 코딩하기</li>
+                                        <li>8.3 게시판 글보기 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>9. 회원가입 페이지 코딩하기
+                                    <ul>
+                                        <li>9.1 기본 회원가입 코딩하기</li>
+                                        <li>9.2 회원가입 이용약관 코딩하기</li>
+                                        <li>9.3 회원가입 정보입력 코딩하기</li>
+                                        <li>9.4 회원가입 가입완료 코딩하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>개발</h4>
+                            <ul>
+                                <li>1. 기본 셋팅하기</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>9. 회원가입 페이지 코딩하기</h3>
+                    <div>
+                        <h4>9.1 기본 회원가입 코딩하기</h4>
+                        <p>
+                            회원가입은 두가지 스타일로 작업하겠습니다.
+                            가장 기본 스타일로 필요한 것만 넣겠습니다.
+                        </p>
+                        <pre><code class="language-html">&lt;main id="main" role="main"&gt;
+&lt;div class="container"&gt;
+    &lt;section class="intro__wrap joinStyle borderBomStyle"&gt;
+        &lt;div class="intro__inner"&gt;
+            &lt;div class="intro__img"&gt;&lt;/div&gt;
+            &lt;div class="intro__text"&gt;
+                안녕하세요! &lt;em&gt;회원가입&lt;/em&gt; 정보 입력 페이지입니다.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //intro__inner joinStyle --&gt;
+
+    &lt;section class="join__inner"&gt;
+        &lt;h2&gt;회원 가입&lt;/h2&gt;
+
+        &lt;div class="join__basic"&gt;
+            &lt;form action="#" name="#" method="post"&gt;
+                &lt;fieldset&gt;
+                    &lt;legend class="blind"&gt;회원가입 영역&lt;/legend&gt;
+                    &lt;div&gt;
+                        &lt;label for="youId" class="required"&gt;아이디&lt;/label&gt;
+                        &lt;input type="text" id="youId" name="youId" placeholder="아이디을 적어주세요!"
+                            class="input__style"&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;label for="youName" class="required"&gt;이름&lt;/label&gt;
+                        &lt;input type="text" id="youName" name="youName" placeholder="이름을 적어주세요!"
+                            class="input__style"&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;label for="youEmail" class="required"&gt;이메일&lt;/label&gt;
+                        &lt;input type="email" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!"
+                            class="input__style"&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;label for="youPass" class="required"&gt;비밀번호&lt;/label&gt;
+                        &lt;input type="text" id="youPass" name="youPass" placeholder="비밀번호를 적어주세요!"
+                            autocomplete="off" class="input__style"&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;label for="youPassC" class="required"&gt;비밀번호 확인&lt;/label&gt;
+                        &lt;input type="text" id="youPassC" name="youPassC" placeholder="다시 한번 비밀번호를 적어주세요!"
+                            autocomplete="off" class="input__style"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="center"&gt;
+                        &lt;button type="submit" id="submitBtn" class="btn__style"&gt;회원가입&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //join__inner --&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;</code></pre>
+                        <pre><code class="language-css">.join__basic {
+    padding: 80px 200px 0;
+}
+
+.join__basic div {
+    margin-bottom: 50px;
+}
+
+.join__basic .center {
+    margin-bottom: 0
+}
+
+.join__basic div label {
+    margin-bottom: 5px;
+    display: block;
+}</code></pre>
+                        <div class="sampleImg">
+                            <img src="img/php26.png" alt="PHP로 나만의 블로그 만들기" />
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>9.2 회원가입 이용약관 코딩하기</h4>
+                        <pre><code class="language-html">&lt;main id="main" role="main"&gt;
+&lt;div class="container"&gt;
+    &lt;section class="intro__wrap joinStyle borderBomStyle"&gt;
+        &lt;div class="intro__inner"&gt;
+            &lt;div class="intro__img"&gt;&lt;/div&gt;
+            &lt;div class="intro__text"&gt;
+                &lt;em&gt;회원가입&lt;/em&gt;을 해주시면 다양한 정보를 자유롭게 볼 수 있습니다.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //intro__inner joinStyle --&gt;
+
+    &lt;section class="join__inner"&gt;
+        &lt;h2&gt;이용약관&lt;/h2&gt;
+
+        &lt;div class="join__index"&gt;
+            &lt;ul&gt;
+                &lt;li class="active"&gt;1&lt;/li&gt;
+                &lt;li&gt;2&lt;/li&gt;
+                &lt;li&gt;3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class="join__agree"&gt;
+            &lt;div class="agree__box"&gt;
+                &lt;h3 class="blind"&gt;웹쓰 블로그 이용약관&lt;/h3&gt;
+                &lt;div class="scroll scroll__style"&gt;1. 서론
+                    1.1 이 이용약관은 [블로그 이름] ("블로그" 또는 "저희")를 이용하는 모든 사용자(이하 "사용자" 또는 "회원")에게 적용됩니다. 이용약관을 읽고 이해하신
+                    후, 본 블로그를 이용하시기 전에 본 이용약관을 주의 깊게 살펴보시기를 권장합니다.
+
+                    2. 이용자 권리와 책임
+                    2.1 회원은 본 블로그를 사용함으로써 다음을 동의합니다:
+                    2.1.1 다른 회원의 개인 정보를 존중하며 개인 정보 보호 정책을 준수합니다.
+                    2.1.2 불법 콘텐츠의 게시, 공유, 또는 홍보를 하지 않으며 타인의 저작권 및 상표권을 존중합니다.
+                    2.1.3 사용자들 간의 존중과 상호 작용을 촉진하기 위해 다른 회원에 대한 비방, 괴롭힘, 혐오 발언 등을 허용하지 않습니다.
+
+                    3. 콘텐츠 관리
+                    3.1 블로그 관리자는 회원이 게시한 콘텐츠를 심사하고 필요한 경우 수정, 삭제 또는 거부할 권리가 있습니다.
+                    3.2 회원은 자신의 콘텐츠가 법률, 규정 또는 이용약관을 위반하지 않도록 주의하여야 합니다.
+
+                    4. 저작권
+                    4.1 회원이 게시한 콘텐츠의 권리는 해당 회원에게 속하며, 블로그는 회원의 콘텐츠를 상업적으로 이용하지 않습니다.
+
+                    5. 책임 제한
+                    5.1 블로그는 회원 간의 상호 작용 및 제3자 웹사이트나 서비스와의 연결에 대한 책임을 지지 않습니다.
+                    5.2 블로그는 시스템 장애 또는 서비스 일시 중단으로 인한 손해에 대한 책임을 부인합니다.
+
+                    6. 이용약관 변경
+                    6.1 블로그는 언제든 이용약관을 변경하거나 수정할 권리를 보유하며, 변경된 약관은 블로그 내에서 공지됩니다.
+
+                    7. 종료
+                    7.1 회원은 언제든지 본 블로그 이용을 중단할 수 있으며, 블로그 또한 회원에 대한 액세스를 종료할 권리를 보유합니다.
+
+                    8. 연락처 정보
+                    8.1 본 블로그와 관련된 문의 사항 또는 불만 사항은 다음 연락처를 통해 문의할 수 있습니다:
+
+                    이메일 주소: [이메일 주소]
+                    주소: [주소]
+                &lt;/div&gt;
+                &lt;div class="check"&gt;
+                    &lt;label for="agreeCheck1"&gt;
+                        블로그 이용약관에 동의합니다.
+                        &lt;input type="checkbox" name="agreeCheck1" id="agreeCheck1"&gt;
+                        &lt;span class="indicator"&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="agree__box"&gt;
+                &lt;h3 class="blind"&gt;웹쓰 블로그 개인정보취급방침&lt;/h3&gt;
+                &lt;div class="scroll scroll__style"&gt;1. 개인 정보 수집
+                    1.1 본 블로그는 회원 가입 및 콘텐츠 작성을 위해 필요한 개인 정보를 수집할 수 있습니다. 수집되는 정보는 다음과 같을 수 있습니다:
+                    - 이름, 이메일 주소, 프로필 사진, 기타 선택적 정보
+
+                    1.2 개인 정보는 회원의 동의 하에 수집되며, 회원은 언제든지 개인 정보를 제공하지 않을 권리가 있습니다. 그러나 일부 정보는 블로그를 이용하기 위해 필요할 수
+                    있습니다.
+
+                    2. 개인 정보 사용
+                    2.1 블로그는 수집한 개인 정보를 다음 목적으로 사용할 수 있습니다:
+                    - 회원 가입 및 로그인 관리, 콘텐츠 작성 및 수정, 연락과 응답, 블로그 서비스의 향상, 법적 요구 사항 준수
+
+                    3. 개인 정보 보호
+                    3.1 블로그는 회원의 개인 정보를 안전하게 보호하기 위해 적절한 보안 조치를 취하며, 무단 액세스, 유출, 변경 또는 파괴를 방지하기 위해 최선을 다합니다.
+
+                    4. 개인 정보 공유
+                    4.1 블로그는 회원의 개인 정보를 본 방침에 명시된 목적 외에는 공유하지 않으며, 법적 요구 사항이나 다른 합법적인 사유에 따라 정보를 공유할 수 있습니다.
+
+                    5. 쿠키와 추적 기술
+                    5.1 블로그는 쿠키와 유사한 기술을 사용하여 사용자의 활동을 추적하고 분석하는 목적으로 정보를 수집할 수 있습니다. 이 정보는 사용자 경험을 향상시키기 위해
+                    사용됩니다.
+
+                    6. 개인 정보 열람 및 수정
+                    6.1 회원은 언제든지 자신의 개인 정보를 열람하고 수정할 권리가 있습니다. 개인 정보 열람 및 수정은 회원의 프로필 설정을 통해 가능합니다.
+
+                    7. 개인 정보 보유 기간
+                    7.1 블로그는 회원의 개인 정보를 더 이상 필요하지 않은 경우에만 보관하며, 법률적인 의무 또는 다른 합법적인 이유로 인해 정보를 보관할 수 있습니다.
+
+                    8. 연락처 정보
+                    8.1 본 블로그와 관련된 개인 정보 취급 방침과 관련된 문의 사항은 다음 연락처를 통해 문의할 수 있습니다:
+
+                    이메일 주소: [이메일 주소]
+                    주소: [주소]
+                &lt;/div&gt;
+                &lt;div class="check"&gt;
+                    &lt;label for="agreeCheck2"&gt;
+                        블로그 개인정보 수집 및 이용에 동의합니다.
+                        &lt;input type="checkbox" name="agreeCheck2" id="agreeCheck2"&gt;
+                        &lt;span class="indicator"&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="agree__btn"&gt;
+                &lt;a href="#" id="agreeButton" class="btn__style"&gt;동의하기&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //join__inner --&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;</code></pre>
+                        <pre><code class="language-css">/* join__agree */
+.join__agree {
+    padding: 0 200px;
+}
+
+.join__agree .agree__box {
+    margin-bottom: 50px;
+}
+
+.join__agree .agree__box .scroll {
+    height: 400px;
+    background-color: var(--black600);
+    padding: 30px;
+    white-space: pre-line;
+    overflow-y: auto;
+    line-height: 1.6;
+}
+
+.join__agree .agree__box .check {
+    margin-top: 10px;
+}
+
+.join__agree .agree__box .check label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.join__agree .agree__box .check input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.join__agree .agree__box .check .indicator {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background: #fff;
+}
+
+.join__agree .agree__box .check .indicator::after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.join__agree .agree__box .check input:checked~.indicator {
+    background: var(--green);
+}
+
+.join__agree .agree__box .check input:checked~.indicator::after {
+    display: block;
+}
+
+.join__agree .agree__btn {
+    text-align: center;
+}
+
+
+@media (max-width: 1000px) {
+    .join__agree {
+        padding: 0;
+    }
+}</code></pre>
+                        <div class="sampleImg">
+                            <img src="img/php27.jpg" alt="PHP로 나만의 블로그 만들기" />
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>9.3 회원가입 정보입력 코딩하기</h4>
+                        <pre><code class="language-html">&lt;main id="main" role="main"&gt;
+&lt;div class="container"&gt;
+    &lt;section class="intro__wrap joinStyle borderBomStyle"&gt;
+        &lt;div class="intro__inner"&gt;
+            &lt;div class="intro__img"&gt;&lt;/div&gt;
+            &lt;div class="intro__text"&gt;
+                안녕하세요! &lt;em&gt;회원가입&lt;/em&gt; 정보 입력 페이지입니다.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //intro__inner joinStyle --&gt;
+
+    &lt;section class="join__inner"&gt;
+        &lt;h2&gt;정보 입력&lt;/h2&gt;
+
+        &lt;div class="join__index"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;1&lt;/li&gt;
+                &lt;li class="active"&gt;2&lt;/li&gt;
+                &lt;li&gt;3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class="join__insert"&gt;
+            &lt;form action="#" name="#" method="post"&gt;
+                &lt;fieldset&gt;
+                    &lt;legend class="blind"&gt;회원가입 영역&lt;/legend&gt;
+                    &lt;div&gt;
+                        &lt;label for="youId" class="required"&gt;아이디&lt;/label&gt;
+                        &lt;div class="check"&gt;
+                            &lt;input type="text" id="youId" name="youId" placeholder="아이디을 적어주세요!"
+                                class="input__style"&gt;
+                            &lt;div class="btn"&gt;아이디 중복 검사&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;p class="msg" id="youIdComment"&gt;➟ 아이디는 영어와 숫자를 포함하여 4~20글자 이내로 작성이 가능합니다.&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;label for="youName" class="required"&gt;이름&lt;/label&gt;
+                        &lt;input type="text" id="youName" name="youName" placeholder="이름을 적어주세요!"
+                            class="input__style"&gt;
+                        &lt;p class="msg" id="youNameComment"&gt;➟ 이름은 한글(3~5글자)만 사용할 수 있습니다.&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;label for="youEmail" class="required"&gt;이메일&lt;/label&gt;
+                        &lt;div class="check"&gt;
+                            &lt;input type="email" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!"
+                                class="input__style"&gt;
+                            &lt;div class="btn"&gt;이메일 중복 검사&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;p class="msg" id="youEmailComment"&gt;➟ 올바른 이메일 주소를 입력해주세요&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;label for="youPass" class="required"&gt;비밀번호&lt;/label&gt;
+                        &lt;input type="text" id="youPass" name="youPass" placeholder="비밀번호를 적어주세요!"
+                            autocomplete="off" class="input__style"&gt;
+                        &lt;p class="msg" id="youPassComment"&gt;➟ 비밀번호는 숫자, 특수문자를 혼합하여 작성하여야 합니다.&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;label for="youPassC" class="required"&gt;비밀번호 확인&lt;/label&gt;
+                        &lt;input type="text" id="youPassC" name="youPassC" placeholder="다시 한번 비밀번호를 적어주세요!"
+                            autocomplete="off" class="input__style"&gt;
+                        &lt;p class="msg" id="youPassCComment"&gt;➟ 비밀번호가 일치하지 않습니다.&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;label for="youAddress1"&gt;주소&lt;/label&gt;
+                        &lt;div class="check"&gt;
+                            &lt;input type="text" id="youAddress1" name="youAddress1" placeholder="우편번호"
+                                class="input__style"&gt;
+                            &lt;div class="btn" id="addressCheck"&gt;주소 찾기&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;label for="youAddress2" class="required blind"&gt;주소&lt;/label&gt;
+                        &lt;input type="text" id="youAddress2" name="youAddress2" placeholder="주소"
+                            class="input__style"&gt;
+                        &lt;label for="youAddress3" class="required blind"&gt;상세 주소&lt;/label&gt;
+                        &lt;input type="text" id="youAddress3" name="youAddress3" placeholder="상세 주소"
+                            class="input__style"&gt;
+                        &lt;p class="msg" id="youAddressComment"&gt;➟ 상세주소를 입력해주세요.&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;label for="youPhone"&gt;연락처&lt;/label&gt;
+                        &lt;input type="text" id="youPhone" name="youPhone" placeholder="연락처는 하이픈 없이 숫자만 적어주세요!"
+                            class="input__style"&gt;
+                        &lt;p class="msg" id="youPhoneComment"&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="center"&gt;
+                        &lt;button type="submit" id="submitBtn" class="btn__style"&gt;회원가입 완료&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //join__inner --&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;</code></pre>
+                        <pre><code class="language-css">/* join__insert */
+.join__insert {
+    padding: 0 200px;
+}
+
+.join__insert .join {
+    margin-top: 50px;
+}
+
+.join__insert div label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.join__insert div input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.join__insert div .msg {
+    color: var(--red);
+    margin-bottom: 3rem;
+}
+
+.join__insert .check {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.join__insert .check label {
+    width: 100%;
+}
+
+.join__insert .check input {
+    width: 69%;
+    height: 54px;
+}
+
+.join__insert .check .btn {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+    padding: 0 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 54px;
+}
+
+.join__btn {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.join__btn a {
+    display: inline-block;
+}</code></pre>
+                        <div class="sampleImg">
+                            <img src="img/php28.jpg" alt="PHP로 나만의 블로그 만들기" />
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>9.4 회원가입 가입완료 코딩하기</h4>
+                        <pre><code class="language-html">&lt;main id="main" role="main"&gt;
+&lt;div class="container"&gt;
+    &lt;section class="intro__wrap joinStyle borderBomStyle"&gt;
+        &lt;div class="intro__inner"&gt;
+            &lt;div class="intro__img"&gt;&lt;/div&gt;
+            &lt;div class="intro__text"&gt;
+                축하합니다. &lt;em&gt;회원가입&lt;/em&gt;이 완료되었습니다.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //intro__inner joinStyle --&gt;
+
+    &lt;section class="join__inner"&gt;
+        &lt;h2&gt;가입 완료&lt;/h2&gt;
+
+        &lt;div class="join__index"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;1&lt;/li&gt;
+                &lt;li&gt;2&lt;/li&gt;
+                &lt;li class="active"&gt;3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class="join__result"&gt;
+            &lt;span class="span pumping" data-text="축하합니다."&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //join__inner --&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;</code></pre>
+                        <pre><code class="language-css">/* join__result */
+.join__result {
+    width: 100%;
+    display: flex;
+    margin-top: 500px;
+}
+
+.join__result span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.join__result span::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    background-color: #FC4F4F;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    padding: 0.8rem 3.8rem;
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
+    box-shadow: 0 7px 15px -1px #ccc;
+    transition: transform 100ms ease-in;
+}
+
+.join__result span:active::after {
+    transform: scale(0.9);
+}
+
+.join__result .pumping::after {
+    animation: pumping 100ms ease-in-out infinite;
+}
+
+@keyframes pumping {
+    50% {
+        transform: scale(0.95);
+    }
+}
+
+.join__result .shape {
+    --size: 8px;
+    position: absolute;
+    top: calc(50% - var(--size));
+    left: calc(50% - var(--size));
+    width: calc(var(--size) * 2);
+    height: calc(var(--size) * 2);
+    animation: popup var(--d) cubic-bezier(.08, .56, .53, .98) forwards;
+}
+
+.heart {
+    --size: 6px;
+    background-color: var(--c);
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c);
+    border-radius: 50%;
+}
+
+.heart::before {
+    left: -50%;
+}
+
+.heart::after {
+    top: -50%;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) rotate(var(--r));
+    }
+}</code></pre>
+                        <div class="sampleImg">
+                            <img src="img/php29.jpg" alt="PHP로 나만의 블로그 만들기" />
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.inflearn.com/courses?s=webstoryboy" target="_blank" class="sampleBtn">영상
+                            보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/">1. PHP로 나만의 블로그 만들기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+
+</html>

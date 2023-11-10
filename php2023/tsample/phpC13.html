@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀스택 도전! PHP로 나만의 블로그 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left">
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">풀스택 도전! PHP로 나만의 블로그 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 11. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">코딩 08</span>
+                            <div class="title">PHP로 나만의 블로그 만들기 : 회원가입 페이지 코딩하기</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="#" target="_blank" class="sampleBtn">인덱스 보기</a>
+                            <a href="#" target="_blank" class="sampleBtn">코드 보기</a>
+                            <a href="https://www.inflearn.com/courses?s=webstoryboy" target="_blank"
+                                class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 강의는 디자인, 코딩, 및 개발을 한번에 경험할 수 있는 풀스택 도전 튜토리얼을 제공합니다.
+                        개인이 디자인부터 코딩, 그리고 개발까지 진행하며 전체적인 웹사이트 구조와 흐름을 이해할 수 있도록 도와줍니다.
+                        디자인 작업은 피그마를 활용하며, 코딩은 HTML5/CSS3를 사용하고, 개발은 PHP를 활용합니다.
+                        이 프로세스를 통해 풀스택 개발에 도전하며 전체적인 웹사이트 제작 과정을 이해할 수 있습니다.
+                        또한 PHP를 사용하여 게시판 및 로그인을 구현함으로써 웹사이트의 활용성을 높일 수 있습니다.
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index22">
+                        <div>
+                            <h4>디자인</h4>
+                            <ul>
+                                <li>1. 메인 디자인
+                                    <ul>
+                                        <li>1.1 카드 유형 디자인</li>
+                                    </ul>
+                                </li>
+                                <li>2. 블로그 디자인
+                                    <ul>
+                                        <li>2.1 블로그 메인</li>
+                                        <li>2.2 블로그 카테고리 영역</li>
+                                        <li>2.3 블로그 뷰 영역</li>
+                                    </ul>
+                                </li>
+                                <li>3. 게시판 디자인
+                                    <ul>
+                                        <li>3.1 게시판 메인</li>
+                                        <li>3.2 게시판 글쓰기</li>
+                                        <li>3.3 게시판 수정하기</li>
+                                        <li>3.4 게시판 보기</li>
+                                        <li>3.5 게시판 검색</li>
+                                    </ul>
+                                </li>
+                                <li>4. 로그인 디자인
+                                    <ul>
+                                        <li>4.1 로그인</li>
+                                        <li>4.2 아이디 찾기</li>
+                                        <li>4.3 비밀번호 찾기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 회원가입 디자인
+                                    <ul>
+                                        <li>5.1 이용 약관</li>
+                                        <li>5.2 정보 입력</li>
+                                        <li>5.3 가입 완료</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>코딩</h4>
+                            <ul>
+                                <li>1. 기본 셋팅하기
+                                    <ul>
+                                        <li>1.1 vscode 셋팅하기</li>
+                                        <li>1.2. 호스팅 셋팅하기</li>
+                                        <li>1.3. 파일질라 셋팅하기</li>
+                                        <li>1.4. ftp-simple 셋팅하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. CSS 셋팅하기
+                                    <ul>
+                                        <li>2.1 style.css 만들기</li>
+                                        <li>2.2 fonts.css 만들기</li>
+                                        <li>2.3 vars.css 만들기</li>
+                                        <li>2.4 resets.css 만들기</li>
+                                        <li>2.5 commons.css 만들기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 기본 섹션 코딩하기
+                                    <ul>
+                                        <li>3.1 기본 레이아웃 잡기</li>
+                                        <li>3.2 헤더 영역 코딩하기</li>
+                                        <li>3.3 푸터 영역 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>4. 인트로 유형 코딩하기
+                                    <ul>
+                                        <li>4.1 메인 인트로 코딩하기</li>
+                                        <li>4.2 블로그 인트로 코딩하기</li>
+                                        <li>4.3 회원가입 인트로 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 카드 유형 코딩하기
+                                    <ul>
+                                        <li>5.1 메인 카드 유형1 코딩하기</li>
+                                        <li>5.2 메인 카드 유형2 코딩하기</li>
+                                        <li>5.3 메인 카드 유형3 코딩하기</li>
+                                        <li>5.4 블로그 카드 유형1 코딩하기</li>
+                                        <li>5.5 블로그 카드 유형2 코딩하기</li>
+                                        <li>5.6 블로그 카드 유형3 코딩하기</li>
+                                        <li>5.7 카드 유형 반응형 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>6. 사이드 영역 코딩하기
+                                    <ul>
+                                        <li>6.1 인트로 영역 코딩하기</li>
+                                        <li>6.2 카테고리 코딩하기</li>
+                                        <li>6.3 인기 포스트 코딩하기</li>
+                                        <li>6.4 최신 댓글 코딩하기</li>
+                                        <li>6.5 게시판 코딩하기</li>
+                                        <li>6.6 메인 공지사항, 댓글 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>7. 블로그 뷰 페이지 코딩하기
+                                    <ul>
+                                        <li>7.1 블로그 뷰 영역 코딩하기</li>
+                                        <li>7.2 블로그 인덱스 영역 코딩하기</li>
+                                        <li>7.3 블로그 관련글 영역 코딩하기</li>
+                                        <li>7.4 블로그 댓글 영역 코딩하기</li>
+                                    </ul>
+                                </li>
+                                <li>8. 게시판 페이지 코딩하기
+                                    <ul>
+                                        <li>8.1 게시판 코딩하기</li>
+                                        <li>8.2 게시판 글쓰기 코딩하기</li>
+                                        <li>8.3 게시판 글보기 코딩하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>개발</h4>
+                            <ul>
+                                <li>1. 기본 셋팅하기</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>8. 게시판 페이지 코딩하기</h3>
+                    <div>
+                        <h4>8.1 게시판 코딩하기</h4>
+                        <pre><code class="language-html">&lt;main id="main" role="main"&gt;
+&lt;div class="container"&gt;
+    &lt;section class="intro__wrap blogStyle borderBomStyle"&gt;
+        &lt;h2 class="blind"&gt;웹스로퍼 블로그에 오신 것을 환영합니다.&lt;/h2&gt;
+        &lt;div class="intro__inner"&gt;
+            &lt;div class="intro__img"&gt;&lt;/div&gt;
+            &lt;h2 class="intro__title"&gt;공지 사항&lt;/h2&gt;
+            &lt;div class="intro__text"&gt;
+                최신 웹 &lt;em&gt;개발 기술&lt;/em&gt;과 &lt;em&gt;트렌드&lt;/em&gt;!&lt;br&gt;
+                웹 개발에 필요한 다양한 지식을 한눈에 확인해보세요!&lt;br&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //intro__wrap joinStyle --&gt;
+
+    &lt;section class="board__wrap"&gt;
+        &lt;h2 class="blind"&gt;공지사항&lt;/h2&gt;
+        &lt;div class="board__inner"&gt;
+            &lt;div class="board__search"&gt;
+                &lt;div class="left"&gt;
+                    * 총 &lt;em&gt;100&lt;/em&gt;건의 게시물이 등록되어 있습니다.
+                &lt;/div&gt;
+                &lt;div class="right"&gt;
+                    &lt;form action="#" name="#" method="get"&gt;
+                        &lt;fieldset&gt;
+                            &lt;legend class="blind"&gt;게시판 검색 영역&lt;/legend&gt;
+                            &lt;input type="search" name="searchKeyword" id="searchKeyword"
+                                placeholder="검색어를 입력하세요!" required&gt;
+                            &lt;select name="searchOption" id="searchOption"&gt;
+                                &lt;option value="title"&gt;제목&lt;/option&gt;
+                                &lt;option value="content"&gt;내용&lt;/option&gt;
+                                &lt;option value="name"&gt;등록자&lt;/option&gt;
+                            &lt;/select&gt;
+                            &lt;button type="submit" class="btn__style"&gt;검색&lt;/button&gt;
+                        &lt;/fieldset&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- //board__search --&gt;
+
+            &lt;div class="board__table"&gt;
+                &lt;table&gt;
+                    &lt;colgroup&gt;
+                        &lt;col style="width: 5%;"&gt;
+                        &lt;col style="width: 63%;"&gt;
+                        &lt;col style="width: 10%;"&gt;
+                        &lt;col style="width: 15%;"&gt;
+                        &lt;col style="width: 7%;"&gt;
+                    &lt;/colgroup&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;번호&lt;/th&gt;
+                            &lt;th&gt;제목&lt;/th&gt;
+                            &lt;th&gt;등록자&lt;/th&gt;
+                            &lt;th&gt;등록일&lt;/th&gt;
+                            &lt;th&gt;조회수&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;1&lt;/td&gt;
+                            &lt;td&gt;&lt;a href="boardView.html"&gt;회원가입 안내&lt;/a&gt;&lt;/td&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                            &lt;td&gt;2023-04-04&lt;/td&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;2&lt;/td&gt;
+                            &lt;td&gt;&lt;a href="#"&gt;블로그 작성 및 내용 확인 방법&lt;/a&gt;&lt;/td&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                            &lt;td&gt;2023-04-04&lt;/td&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;3&lt;/td&gt;
+                            &lt;td&gt;&lt;a href="#"&gt;게시판 제목&lt;/a&gt;&lt;/td&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                            &lt;td&gt;2023-04-04&lt;/td&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;4&lt;/td&gt;
+                            &lt;td&gt;&lt;a href="#"&gt;게시판 제목&lt;/a&gt;&lt;/td&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                            &lt;td&gt;2023-04-04&lt;/td&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;5&lt;/td&gt;
+                            &lt;td&gt;&lt;a href="#"&gt;게시판 제목&lt;/a&gt;&lt;/td&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                            &lt;td&gt;2023-04-04&lt;/td&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;6&lt;/td&gt;
+                            &lt;td&gt;&lt;a href="#"&gt;게시판 제목&lt;/a&gt;&lt;/td&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                            &lt;td&gt;2023-04-04&lt;/td&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;7&lt;/td&gt;
+                            &lt;td&gt;&lt;a href="#"&gt;게시판 제목&lt;/a&gt;&lt;/td&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                            &lt;td&gt;2023-04-04&lt;/td&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;8&lt;/td&gt;
+                            &lt;td&gt;&lt;a href="#"&gt;게시판 제목&lt;/a&gt;&lt;/td&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                            &lt;td&gt;2023-04-04&lt;/td&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;9&lt;/td&gt;
+                            &lt;td&gt;&lt;a href="#"&gt;게시판 제목&lt;/a&gt;&lt;/td&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                            &lt;td&gt;2023-04-04&lt;/td&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;10&lt;/td&gt;
+                            &lt;td&gt;&lt;a href="#"&gt;게시판 제목&lt;/a&gt;&lt;/td&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                            &lt;td&gt;2023-04-04&lt;/td&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+            &lt;!-- //board__table --&gt;
+
+            &lt;div class="board__pages"&gt;
+                &lt;ul&gt;
+                    &lt;li class="first"&gt;&lt;a href="#"&gt;처음으로&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="prev"&gt;&lt;a href="#"&gt;이전&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;7&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="next"&gt;&lt;a href="#"&gt;다음&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="last"&gt;&lt;a href="#"&gt;마지막으로&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;!-- //board__pages --&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;</code></pre>
+                        <pre><code class="language-css">.board__inner {
+    padding: 100px 0;
+}
+
+/* board__search */
+.board__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.board__search .left em {
+    color: var(--red);
+}
+
+.board__search .right input {
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 5px;
+    width: 270px;
+    font-size: 1rem;
+}
+
+.board__search .right select {
+    width: 100px;
+    padding: 11px;
+    border: 0;
+    border-radius: 5px;
+    color: var(--black300);
+    font-size: 1rem;
+}
+
+.board__search .right button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.7rem 2rem;
+    border-radius: 5px;
+}
+
+.board__search .right a {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+}
+
+/* board__table */
+.board__table {
+    margin-top: 15px;
+    border-top: 2px solid var(--black);
+    border-bottom: 1px solid var(--black);
+}
+
+.board__table th {
+    background-color: var(--black500);
+}
+
+.board__table td,
+.board__table th {
+    padding: 15px 5px;
+    border-bottom: 1px solid var(--black300);
+    text-align: center;
+}
+
+.board__table tr:hover {
+    background-color: var(--black600);
+}
+
+/* board__pages */
+.board__pages {
+    margin-top: 60px;
+}
+
+.board__pages ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board__pages li a {
+    display: inline-block;
+    border: 1px solid var(--black500);
+    padding: 10px 12px;
+    margin-left: -1px;
+}
+
+.board__pages li a:hover,
+.board__pages li.active a {
+    background-color: var(--black);
+    color: var(--white);
+}</code></pre>
+                        <div class="sampleImg">
+                            <img src="img/php30.jpg" alt="PHP로 나만의 블로그 만들기" />
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>8.2 게시판 글쓰기 코딩하기</h4>
+                        <pre><code class="language-html">&lt;main id="main" role="main"&gt;
+&lt;div class="container"&gt;
+    &lt;section class="intro__wrap blogStyle borderBomStyle"&gt;
+        &lt;h2 class="blind"&gt;웹스로퍼 블로그에 오신 것을 환영합니다.&lt;/h2&gt;
+        &lt;div class="intro__inner"&gt;
+            &lt;div class="intro__img"&gt;&lt;/div&gt;
+            &lt;h2 class="intro__title"&gt;공지 사항 수정하기&lt;/h2&gt;
+            &lt;div class="intro__text"&gt;
+                최신 웹 &lt;em&gt;개발 기술&lt;/em&gt;과 &lt;em&gt;트렌드&lt;/em&gt;!&lt;br&gt;
+                웹 개발에 필요한 다양한 지식을 한눈에 확인해보세요!&lt;br&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //intro__wrap joinStyle --&gt;
+
+    &lt;section class="board__wrap"&gt;
+        &lt;h2 class="blind"&gt;공지 사항 수정하기&lt;/h2&gt;
+        &lt;div class="board__inner"&gt;
+            &lt;div class="board__write"&gt;
+                &lt;form action="#" name="#" method="post"&gt;
+                    &lt;fieldset&gt;
+                        &lt;legend class="blind"&gt;게시글 작성하기&lt;/legend&gt;
+                        &lt;div&gt;
+                            &lt;label for="boardTitle"&gt;제목&lt;/label&gt;
+                            &lt;input type="text" id="boardTitle" name="boardTitle" class="input__style"&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;label for="boardContents"&gt;내용&lt;/label&gt;
+                            &lt;textarea id="boardContents" name="boardContents" rows="40"
+                                class="input__style"&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;div class="board__btns"&gt;
+                            &lt;button type="submit" class="btn__style2"&gt;저장하기&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/fieldset&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;</code></pre>
+                        <pre><code class="language-css">/* board__write */
+.board__write label {
+    width: 100%;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.board__write input {
+    margin-bottom: 50px;
+}
+
+.board__write textarea {
+    resize: none;
+}
+
+.board__write .board__btn {
+    text-align: right;
+    padding-top: 10px;
+}</code></pre>
+                        <div class="sampleImg">
+                            <img src="img/php31.jpg" alt="PHP로 나만의 블로그 만들기" />
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>8.3 게시판 글보기 코딩하기</h4>
+                        <pre><code class="language-html">&lt;main id="main" role="main"&gt;
+&lt;div class="container"&gt;
+    &lt;section class="intro__wrap blogStyle borderBomStyle"&gt;
+        &lt;h2 class="blind"&gt;웹스로퍼 블로그에 오신 것을 환영합니다.&lt;/h2&gt;
+        &lt;div class="intro__inner"&gt;
+            &lt;div class="intro__img"&gt;&lt;/div&gt;
+            &lt;h2 class="intro__title"&gt;공지 사항 글 보기&lt;/h2&gt;
+            &lt;div class="intro__text"&gt;
+                최신 웹 &lt;em&gt;개발 기술&lt;/em&gt;과 &lt;em&gt;트렌드&lt;/em&gt;!&lt;br&gt;
+                웹 개발에 필요한 다양한 지식을 한눈에 확인해보세요!&lt;br&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //intro__wrap joinStyle --&gt;
+
+    &lt;section class="board__wrap"&gt;
+        &lt;h2 class="blind"&gt;공지 사항 보기&lt;/h2&gt;
+        &lt;div class="board__inner"&gt;
+            &lt;div class="board__view"&gt;
+                &lt;table&gt;
+                    &lt;colgroup&gt;
+                        &lt;col style="width: 20%"&gt;
+                        &lt;col style="width: 80%"&gt;
+                    &lt;/colgroup&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;제목&lt;/th&gt;
+                            &lt;td&gt;프론트 앤드 개발자 취업 노하우&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;등록자&lt;/th&gt;
+                            &lt;td&gt;웹쓰&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;등록일&lt;/th&gt;
+                            &lt;td&gt;2023-10-30&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;조회수&lt;/th&gt;
+                            &lt;td&gt;100&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;내용&lt;/th&gt;
+                            &lt;td&gt;
+                                프론트 앤드 개발자 취업 노하우
+
+                                프론트엔드 개발자로 취업을 준비하는 분들에게는 다음과 같은 노하우가 도움이 될 수 있습니다.
+                                기본기를 탄탄하게 다지기 HTML, CSS, JavaScript 등의 기본 기술을 제대로 이해하고 활용할 수 있어야 합니다.
+                                특히 HTML과CSS는 디자인을 구현하는 핵심 기술이기 때문에 충분히 연습해보는 것이 좋습니다.
+                                또한, 최신 기술 동향에 대한 관심과 학습도 중요합니다.
+
+                                프로젝트를 경험해보기 개인 프로젝트나 오픈 소스 프로젝트에 참여하면서 프론트엔드 개발의 전반적인 경험을 쌓아보는 것이 좋습니다.
+                                이를 통해 실제 개발 과정을 경험하고, 자신의 역량을 향상시킬 수 있습니다.
+                                포트폴리오 작성하기 자신이 진행한 프로젝트나 작업물을 체계적으로 정리하여 포트폴리오를 작성하는 것이 좋습니다.
+                                이를 통해 자신의 역량과 경험을 보여줄 수 있으며, 면접에서도 도움이 됩니다.
+                                적극적인 커뮤니케이션 프론트엔드 개발자는 디자이너나 백엔드 개발자와 긴밀하게 협업해야 합니다.
+                                따라서, 소통과 협력 능력이 중요합니다.
+                                특히, 어려움이나 문제점을 발견했을 때 적극적으로 의견을 제시하고 해결책을 모색하는 자세가 도움이 됩니다.
+
+                                지속적인 학습과 성장 프론트엔드 개발 분야는 기술의 변화가 빠르기 때문에 지속적인 학습과 성장이 필요합니다.
+                                새로운 기술이나 프레임워크를 학습하고, 개발자
+                                커뮤니티에 참여하여 정보를 공유하는 것도 좋은 방법입니다.
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+            &lt;div class="board__btns"&gt;
+                &lt;a href="#" class="btn__style2"&gt;수정하기&lt;/a&gt;
+                &lt;a href="#" class="btn__style2"&gt;삭제하기&lt;/a&gt;
+                &lt;a href="#" class="btn__style2"&gt;목록보기&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;</code></pre>
+                        <pre><code class="language-css">/* board__view */
+.board__view {
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+}
+
+.board__view table th {
+    background-color: var(--black500);
+}
+
+.board__view table th,
+.board__view table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--black400);
+    white-space: pre-line;
+}
+
+.board__view table tr:last-child td {
+    height: 500px;
+    vertical-align: top;
+}
+
+.board__btns {
+    text-align: right;
+    padding-top: 10px;
+}</code></pre>
+                        <div class="sampleImg">
+                            <img src="img/php32.jpg" alt="PHP로 나만의 블로그 만들기" />
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.inflearn.com/courses?s=webstoryboy" target="_blank" class="sampleBtn">영상
+                            보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/">1. PHP로 나만의 블로그 만들기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+
+</html>

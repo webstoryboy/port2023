@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀스택 도전! PHP로 나만의 블로그 만들기 😇</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/webs.css">
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon.png" sizes="128x128">
+
+    <meta name="acthor" content="웹스토리보이">
+    <meta name="description" content="한가지 사이트를 다양한 프레임워크를 통해 만들어 보는 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="포트폴리오, portfolio, 리액트, react.js, 뷰, vue.js, 넥스트, next.js, 웹스토리보이, webstoryboy">
+    <meta name="robots" content="all">
+</head>
+
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <div class="left">
+                <a href="../index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="../index.html">WEBSTORYBOY</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="#">검색</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><span>레퍼런스</span></a></li>
+                    <li><a href="#"><span>튜토리얼</span></a></li>
+                    <li><a href="#"><span>게시판</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="nanumSquareNeo">
+            <div class="blog__title">
+                <span class="cate">Tutorial/Portfolio</span>
+                <h1 class="title">풀스택 도전! PHP로 나만의 블로그 만들기</h1>
+                <div class="meta">
+                    <span class="author">by @webs</span>
+                    <span class="date">2023. 11. 01.</span>
+                </div>
+            </div>
+            <div class="blog__inner container">
+                <div id="youtube" class="blog__contents__intro">
+                    <div class="desc">
+                        <div class="left">
+                            <span class="num">코딩 03</span>
+                            <div class="title">PHP로 나만의 블로그 만들기 : 기본 섹션 코딩하기</div>
+                            <span class="difficulty">난이도 <span>중간</span></span>
+                        </div>
+                        <div class="right">
+                            <div class="btn">소스 다운로드</div>
+                            <a href="#" target="_blank" class="sampleBtn">인덱스 보기</a>
+                            <a href="#" target="_blank" class="sampleBtn">코드 보기</a>
+                            <a href="https://www.inflearn.com/courses?s=webstoryboy" target="_blank"
+                                class="sampleBtn">영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog__contents__intro -->
+
+                <div class="blog__contents tutorial">
+                    <h2>소개</h2>
+                    <p>
+                        안녕하세요! 웹스토리보이입니다.
+                        이 강의는 디자인, 코딩, 및 개발을 한번에 경험할 수 있는 풀스택 도전 튜토리얼을 제공합니다.
+                        개인이 디자인부터 코딩, 그리고 개발까지 진행하며 전체적인 웹사이트 구조와 흐름을 이해할 수 있도록 도와줍니다.
+                        디자인 작업은 피그마를 활용하며, 코딩은 HTML5/CSS3를 사용하고, 개발은 PHP를 활용합니다.
+                        이 프로세스를 통해 풀스택 개발에 도전하며 전체적인 웹사이트 제작 과정을 이해할 수 있습니다.
+                        또한 PHP를 사용하여 게시판 및 로그인을 구현함으로써 웹사이트의 활용성을 높일 수 있습니다.
+                    </p>
+
+                    <h3>인덱스</h3>
+                    <div class="index22">
+                        <div>
+                            <h4>디자인</h4>
+                            <ul>
+                                <li>1. 메인 디자인
+                                    <ul>
+                                        <li>1.1 카드 유형 디자인</li>
+                                    </ul>
+                                </li>
+                                <li>2. 블로그 디자인
+                                    <ul>
+                                        <li>2.1 블로그 메인</li>
+                                        <li>2.2 블로그 카테고리 영역</li>
+                                        <li>2.3 블로그 뷰 영역</li>
+                                    </ul>
+                                </li>
+                                <li>3. 게시판 디자인
+                                    <ul>
+                                        <li>3.1 게시판 메인</li>
+                                        <li>3.2 게시판 글쓰기</li>
+                                        <li>3.3 게시판 수정하기</li>
+                                        <li>3.4 게시판 보기</li>
+                                        <li>3.5 게시판 검색</li>
+                                    </ul>
+                                </li>
+                                <li>4. 로그인 디자인
+                                    <ul>
+                                        <li>4.1 로그인</li>
+                                        <li>4.2 아이디 찾기</li>
+                                        <li>4.3 비밀번호 찾기</li>
+                                    </ul>
+                                </li>
+                                <li>5. 회원가입 디자인
+                                    <ul>
+                                        <li>5.1 이용 약관</li>
+                                        <li>5.2 정보 입력</li>
+                                        <li>5.3 가입 완료</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>코딩</h4>
+                            <ul>
+                                <li>1. 기본 셋팅하기
+                                    <ul>
+                                        <li>1.1 vscode 셋팅하기</li>
+                                        <li>1.2. 호스팅 셋팅하기</li>
+                                        <li>1.3. 파일질라 셋팅하기</li>
+                                        <li>1.4. ftp-simple 셋팅하기</li>
+                                    </ul>
+                                </li>
+                                <li>2. CSS 셋팅하기
+                                    <ul>
+                                        <li>2.1 style.css 만들기</li>
+                                        <li>2.2 fonts.css 만들기</li>
+                                        <li>2.3 vars.css 만들기</li>
+                                        <li>2.4 resets.css 만들기</li>
+                                        <li>2.5 commons.css 만들기</li>
+                                    </ul>
+                                </li>
+                                <li>3. 기본 섹션 코딩하기
+                                    <ul>
+                                        <li>3.1 기본 레이아웃 잡기</li>
+                                        <li>3.2 헤더 영역 코딩하기</li>
+                                        <li>3.3 푸터 영역 코딩하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>개발</h4>
+                            <ul>
+                                <li>1. 기본 셋팅하기</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>3. 기본 섹션 코딩하기</h3>
+                    <div>
+                        <h4>3.1 기본 레이아웃 잡기</h4>
+                        <p>
+                            메인 페이지부터 작업을 시작하겠습니다.
+                            우선 기본 구조를 잡는 것이 중요합니다.
+                            디자인 작업을 하고 오셨다면 전체적인 구조는 어떻게 됐는지 알 수 있을겁니다.
+                            코딩으로 바로 들어오신 분은 피그마로 전체적인 디자인을 살펴보시면 됩니다.
+                            모든 페이지는 기본 <code>header</code>, <code>main</code>, <code>footer</code>로 나누어져 있습니다.
+                            블로그 페이지는 사이드 메뉴가 추가되었지만 전체적인 구조는 동일합니다.
+                        </p>
+                        <p>
+                            <code>html</code> 폴더를 만들고 <code>main.html</code>파일을 만들겠습니다.
+                        </p>
+                        <div class="sampleFolder">
+                            <ul>
+                                <li class="icon1">assets</li>
+                                <li class="icon1">html
+                                    <ul>
+                                        <li class="icon2 m0">main.html</li>
+                                    </ul>
+                                </li>
+                                <li class="icon1">index.html</li>
+                            </ul>
+                        </div>
+                        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="디자인, 코딩, 개발을 이용하여 나만의 블로그 사이트를 만드는 강의입니다." /&gt;
+    &lt;meta name="keyword" content="포트폴리오, PHP, 디자인, 풀스택, 코딩, 블로그, 웹표준, 피그마, Figma, 웹스토리보이" /&gt;
+    &lt;title&gt;풀스택 도전! PHP로 나만의 블로그 만들기 🤨&lt;/title&gt;
+
+    &lt;link rel="icon" type="image/svg+xml" href="../assets/face/Driven.svg" /&gt;
+    &lt;link rel="stylesheet" href="../assets/css/style.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="skip"&gt;
+        &lt;a href="#header"&gt;헤더 영역 바로가기&lt;/a&gt;
+        &lt;a href="#main"&gt;콘텐츠 영역 바로가기&lt;/a&gt;
+        &lt;a href="#footer"&gt;푸터 영역 바로가기&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!-- //skip --&gt;
+
+    &lt;header id="header" role="banner"&gt;
+        header
+    &lt;/header&gt;
+    &lt;!-- //header --&gt;
+
+    &lt;main id="main" role="main"&gt;
+        main
+    &lt;/main&gt;
+    &lt;!-- //main --&gt;
+
+    &lt;footer id="footer" role="contentinfo"&gt;
+        footer
+    &lt;/footer&gt;
+    &lt;!-- //footer --&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <div class="sampleBasic">
+                            <p>
+                                기본적인 웹 페이지 구조를 나타냅니다
+                            </p>
+                            <ul class="list">
+                                <li><i>&lt;!DOCTYPE html&gt;</i> : 이 코드는 HTML5 문서임을 정의합니다.
+                                <li><i>&lt;html lang="ko"&gt;</i> : 언어 속성을 가진 HTML 요소로, 여기서는 한국어를 사용한다는 것을 명시합니다.
+                                <li><i>&lt;head&gt;</i>: 문서에 대한 메타데이터와 외부 리소스에 대한 참조를 포함하는 영역입니다.</li>
+                                <li><i>meta 태그</i> : 페이지의 문자 인코딩, 뷰포트 설정, 페이지 설명, 키워드 등을 정의합니다.</li>
+                                <li><i>title 태그</i> : 페이지의 제목을 정의합니다.</li>
+                                <li><i>link 태그</i> : 외부 리소스(아이콘 및 CSS 파일)를 참조합니다.</li>
+                                <li><i>&lt;body&gt;</i> : 페이지의 실제 콘텐츠를 포함합니다.</li>
+                                <li><i>#skip(스킵 메뉴)</i> : 웹 접근성을 위해 키보드 사용자가 주요 콘텐츠로 즉시 이동할 수 있도록 돕는 역할을 합니다.</li>
+                                <li><i>&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</i> : 각각 페이지의 헤더, 본문 내용, 그리고 페이지 하단의
+                                    푸터를 나타냅니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>3.2 헤더 영역 코딩하기</h4>
+                        <p>
+                            이번에는 헤더 영역을 작업해보겠습니다.
+                        </p>
+                        <pre><code class="language-html">&lt;header id="header" role="banner"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="header__inner"&gt;
+            &lt;div class="left"&gt;
+                &lt;a href="main.html"&gt;
+                    &lt;span class="blind"&gt;메인으로&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;h1 class="logo"&gt;
+                &lt;a href="main.html"&gt;Websloper Blog&lt;/a&gt;
+            &lt;/h1&gt;
+            &lt;div class="right"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;로그인&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;회원가입&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;nav class="nav__inner"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;최신 기술 동향&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;코딩 팁&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;문제 해결 방법&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;공지 사항&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+&lt;!-- //header --&gt;</code></pre>
+                        <p>
+                            <code>css</code> > <code>common.css</code>에 추가하겠습니다.
+                            가운데 영역을 설정했습니다.
+                        </p>
+                        <pre><code class="language-css">/* container */
+.container {
+    max-width: 1260px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+}</code></pre>
+                        <p>
+                            <code>css</code> > <code>header.css</code>에 추가하겠습니다.
+                        </p>
+                        <pre><code class="language-css">#header {
+    position: relative;
+}
+
+.header__inner {
+    border-bottom: 3px solid var(--black);
+    position: relative;
+}
+
+.header__inner::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    top: 49%;
+    z-index: 1;
+}
+
+.header__inner .left {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    z-index: 10;
+}
+
+.header__inner .left a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid var(--black);
+    border-radius: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L7.34708 4.1459H11.7063L8.17963 6.7082L9.52671 10.8541L6 8.2918L2.47329 10.8541L3.82037 6.7082L0.293661 4.1459H4.65292L6 0Z' fill='black'/%3E%3C/svg%3E");
+    background-position: center;
+    background-color: var(--mainColor);
+    transition: transform 1s;
+}
+
+.header__inner .left a:hover {
+    transform: rotate(400deg);
+}
+
+.header__inner .logo {
+    text-align: center;
+}
+
+.header__inner .logo a {
+    font-size: 1.25rem;
+    font-weight: 900;
+    background-color: var(--mainColor);
+    padding: 1rem;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.header__inner .right {
+    position: absolute;
+    right: 0;
+    top: 1.2rem;
+    z-index: 10;
+}
+
+.header__inner .right li {
+    display: inline-block;
+}
+
+.header__inner .right li a {
+    font-size: 0.875rem;
+    border: 1px solid var(--black);
+    padding: 4px 12px;
+    border-radius: 30px;
+    background-color: var(--mainColor);
+    font-weight: 600;
+}
+
+.header__inner .right li a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.nav__inner {
+    position: absolute;
+    left: 50%;
+    top: 3.25rem;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+}
+
+.nav__inner li {
+    display: inline-block;
+}
+
+.nav__inner li a {
+    background-color: var(--mainColor);
+    padding: 2px 4px;
+    border: 1px solid var(--black);
+    font-weight: 600;
+}
+
+.nav__inner li a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+@media (max-width: 600px) {
+    .header__inner .right {
+        display: none;
+    }
+
+    .nav__inner {
+        display: none;
+    }
+}</code></pre>
+
+                        <p>
+                            <code>css</code> > <code>style.css</code>에 추가하겠습니다.
+                        </p>
+                        <pre><code class="language-css">@charset "UTF-8";
+
+/* 기본 설정 */
+@import "fonts.css";
+@import "vars.css";
+@import "resets.css";
+@import "common.css";
+
+/* 섹션 설정 */
+@import "header.css";</code></pre>
+                    </div>
+
+                    <div class="mt80">
+                        <h4>3.3 푸터 영역 코딩하기</h4>
+                        <p>
+                            이번에는 푸터 영역을 작업하겠습니다.
+                            푸터 영역도 모든 페이지에 동일하게 들어갑니다.
+                        </p>
+                        <pre><code class="language-html">&lt;footer id="footer" role="contentinfo"&gt;
+&lt;div class="container"&gt;
+    &lt;div class="footer__inner borderTopStyle"&gt;
+        &lt;div class="left"&gt;
+            &lt;h6&gt;Websloper Blog&lt;/h6&gt;
+            &lt;p&gt;
+                열심히 만들었습니다.&lt;br&gt;
+                꼭 끝까지 완성해주세요. 화이팅 👏&lt;br&gt;
+                문의사항은 언제든지 &lt;a href="mailto:webstoryboy@naver.com"&gt;webstoryboy@naver.com&lt;/a&gt;&lt;br&gt;
+                항상 감사합니다.(꾸벅)
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="right"&gt;
+            &lt;p&gt;Copyright © WEBS Corp. All Rights Reserved.&lt;/p&gt;
+            &lt;div class="sns"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="ir"&gt;인스타그램&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="ir"&gt;깃헙&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="ir"&gt;유튜브&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="ir"&gt;웹스토리보이&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/footer&gt;
+&lt;!-- //footer --&gt;</code></pre>
+                        <p>
+                            <code>css</code> > <code>footer.css</code>에 작업을 하겠습니다.
+                            style.css에 footer.css도 추가해야 연동이 됩니다.
+                        </p>
+                        <pre><code class="language-css">.footer__inner {
+    display: flex;
+    margin-top: 100px;
+    padding: 40px 0 80px;
+}
+
+.footer__inner .left {
+    width: 50%;
+}
+
+.footer__inner .left h6 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer__inner .left p {
+    font-size: 14px;
+    color: var(--black300);
+}
+
+.footer__inner .right {
+    width: 50%;
+    text-align: right;
+}
+
+.footer__inner .right p {
+    font-size: 14px;
+    color: var(--black300);
+}
+
+.footer__inner .right .sns li {
+    display: inline;
+}
+
+.footer__inner .right .sns li a {
+    width: 25px;
+    height: 25px;
+    background-color: var(--black);
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.31365 3.0748C4.52242 3.0748 3.07761 4.51961 3.07761 6.31083C3.07761 8.10206 4.52242 9.54687 6.31365 9.54687C8.10487 9.54687 9.54968 8.10206 9.54968 6.31083C9.54968 4.51961 8.10487 3.0748 6.31365 3.0748ZM6.31365 8.41468C5.15611 8.41468 4.2098 7.47118 4.2098 6.31083C4.2098 5.15048 5.15329 4.20699 6.31365 4.20699C7.474 4.20699 8.41749 5.15048 8.41749 6.31083C8.41749 7.47118 7.47118 8.41468 6.31365 8.41468ZM10.4368 2.94243C10.4368 3.36207 10.0989 3.69722 9.68205 3.69722C9.26241 3.69722 8.92726 3.35925 8.92726 2.94243C8.92726 2.5256 9.26523 2.18763 9.68205 2.18763C10.0989 2.18763 10.4368 2.5256 10.4368 2.94243ZM12.5801 3.70848C12.5322 2.6974 12.3013 1.80179 11.5606 1.06389C10.8227 0.325997 9.92708 0.0950532 8.91599 0.0443582C7.87393 -0.0147861 4.75055 -0.0147861 3.70848 0.0443582C2.70022 0.0922368 1.8046 0.323181 1.06389 1.06108C0.323181 1.79897 0.0950532 2.69458 0.0443582 3.70567C-0.0147861 4.74773 -0.0147861 7.87111 0.0443582 8.91318C0.0922368 9.92426 0.323181 10.8199 1.06389 11.5578C1.8046 12.2957 2.6974 12.5266 3.70848 12.5773C4.75055 12.6364 7.87393 12.6364 8.91599 12.5773C9.92708 12.5294 10.8227 12.2985 11.5606 11.5578C12.2985 10.8199 12.5294 9.92426 12.5801 8.91318C12.6393 7.87111 12.6393 4.75055 12.5801 3.70848ZM11.2339 10.0313C11.0142 10.5833 10.5889 11.0086 10.0341 11.2311C9.20327 11.5606 7.23179 11.4845 6.31365 11.4845C5.3955 11.4845 3.42121 11.5578 2.59319 11.2311C2.04118 11.0114 1.61591 10.5861 1.39341 10.0313C1.06389 9.20045 1.13993 7.22897 1.13993 6.31083C1.13993 5.39269 1.06671 3.4184 1.39341 2.59038C1.61309 2.03836 2.03836 1.61309 2.59319 1.39059C3.42403 1.06108 5.3955 1.13712 6.31365 1.13712C7.23179 1.13712 9.20608 1.06389 10.0341 1.39059C10.5861 1.61027 11.0114 2.03555 11.2339 2.59038C11.5634 3.42121 11.4874 5.39269 11.4874 6.31083C11.4874 7.22897 11.5634 9.20327 11.2339 10.0313Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.footer__inner .right .sns li:nth-child(2) a {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.01714 11.7762C5.01714 11.8367 4.94758 11.8851 4.85988 11.8851C4.76008 11.8942 4.69052 11.8458 4.69052 11.7762C4.69052 11.7157 4.76008 11.6673 4.84778 11.6673C4.93851 11.6583 5.01714 11.7067 5.01714 11.7762ZM4.07661 11.6401C4.05544 11.7006 4.11593 11.7702 4.20665 11.7883C4.28528 11.8185 4.37601 11.7883 4.39415 11.7278C4.4123 11.6673 4.35484 11.5978 4.26411 11.5706C4.18548 11.5494 4.09778 11.5796 4.07661 11.6401ZM5.41331 11.5887C5.3256 11.6099 5.26512 11.6673 5.27419 11.7369C5.28327 11.7974 5.3619 11.8367 5.45262 11.8155C5.54032 11.7944 5.60081 11.7369 5.59173 11.6764C5.58266 11.619 5.50101 11.5796 5.41331 11.5887ZM7.40323 0C3.20867 0 0 3.18448 0 7.37903C0 10.7329 2.11089 13.6028 5.12601 14.6129C5.5131 14.6825 5.64919 14.4435 5.64919 14.247C5.64919 14.0595 5.64012 13.0252 5.64012 12.3901C5.64012 12.3901 3.52319 12.8437 3.07863 11.4889C3.07863 11.4889 2.73387 10.6089 2.2379 10.3821C2.2379 10.3821 1.54536 9.90726 2.28629 9.91633C2.28629 9.91633 3.03931 9.97681 3.45363 10.6966C4.11593 11.8639 5.22581 11.5282 5.65827 11.3286C5.72782 10.8448 5.9244 10.5091 6.14214 10.3095C4.45161 10.122 2.74597 9.87701 2.74597 6.96774C2.74597 6.13609 2.97581 5.71875 3.45968 5.18649C3.38105 4.98992 3.12399 4.17943 3.53831 3.13306C4.17036 2.93649 5.625 3.9496 5.625 3.9496C6.22984 3.78024 6.88004 3.69254 7.52419 3.69254C8.16835 3.69254 8.81855 3.78024 9.42339 3.9496C9.42339 3.9496 10.878 2.93347 11.5101 3.13306C11.9244 4.18246 11.6673 4.98992 11.5887 5.18649C12.0726 5.72177 12.369 6.13911 12.369 6.96774C12.369 9.88609 10.5877 10.1189 8.89718 10.3095C9.1754 10.5484 9.41129 11.002 9.41129 11.7127C9.41129 12.7319 9.40222 13.9929 9.40222 14.2409C9.40222 14.4375 9.54133 14.6764 9.9254 14.6069C12.9496 13.6028 15 10.7329 15 7.37903C15 3.18448 11.5978 0 7.40323 0ZM2.93952 10.4304C2.9002 10.4607 2.90927 10.5302 2.96069 10.5877C3.00907 10.6361 3.07863 10.6573 3.11794 10.6179C3.15726 10.5877 3.14819 10.5181 3.09677 10.4607C3.04839 10.4123 2.97883 10.3911 2.93952 10.4304ZM2.6129 10.1855C2.59173 10.2248 2.62198 10.2732 2.68246 10.3034C2.73085 10.3337 2.79133 10.3246 2.8125 10.2823C2.83367 10.2429 2.80343 10.1946 2.74294 10.1643C2.68246 10.1462 2.63407 10.1552 2.6129 10.1855ZM3.59274 11.2621C3.54435 11.3014 3.5625 11.3921 3.63206 11.4496C3.70161 11.5192 3.78931 11.5282 3.82863 11.4798C3.86794 11.4405 3.8498 11.3498 3.78931 11.2923C3.72278 11.2228 3.63206 11.2137 3.59274 11.2621ZM3.24798 10.8175C3.1996 10.8478 3.1996 10.9264 3.24798 10.996C3.29637 11.0655 3.37802 11.0958 3.41734 11.0655C3.46573 11.0262 3.46573 10.9476 3.41734 10.878C3.375 10.8085 3.29637 10.7782 3.24798 10.8175Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+.footer__inner .right .sns li:nth-child(3) a {
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.7284 1.4302C12.5788 0.86724 12.1383 0.423872 11.579 0.273409C10.5652 0 6.5 0 6.5 0C6.5 0 2.43481 0 1.42098 0.273409C0.861669 0.423896 0.421159 0.86724 0.271648 1.4302C0 2.45059 0 4.57954 0 4.57954C0 4.57954 0 6.7085 0.271648 7.72889C0.421159 8.29185 0.861669 8.71674 1.42098 8.8672C2.43481 9.14061 6.5 9.14061 6.5 9.14061C6.5 9.14061 10.5652 9.14061 11.579 8.8672C12.1383 8.71674 12.5788 8.29185 12.7284 7.72889C13 6.7085 13 4.57954 13 4.57954C13 4.57954 13 2.45059 12.7284 1.4302ZM5.17045 6.51247V2.64661L8.56816 4.57959L5.17045 6.51247Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+.footer__inner .right .sns li:nth-child(4) a {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 0C3.35685 0 0 3.35685 0 7.5C0 11.6431 3.35685 15 7.5 15C11.6431 15 15 11.6431 15 7.5C15 3.35685 11.6431 0 7.5 0ZM7.5 13.5484C4.16431 13.5484 1.45161 10.8357 1.45161 7.5C1.45161 4.16431 4.16431 1.45161 7.5 1.45161C10.8357 1.45161 13.5484 4.16431 13.5484 7.5C13.5484 10.8357 10.8357 13.5484 7.5 13.5484ZM10.6935 8.96976C9.91028 9.22077 8.74597 9.36593 7.5 9.36593C6.25403 9.36593 5.09274 9.22077 4.30645 8.96976C4.00706 8.87601 3.71976 9.13306 3.77117 9.43246C4.01008 10.8569 5.92742 11.8518 7.5 11.8518C9.07258 11.8518 10.9869 10.8569 11.2288 9.43246C11.2772 9.13609 10.996 8.87601 10.6935 8.96976ZM5.08065 7.01613C5.61593 7.01613 6.04839 6.58367 6.04839 6.04839C6.04839 5.5131 5.61593 5.08065 5.08065 5.08065C4.54536 5.08065 4.1129 5.5131 4.1129 6.04839C4.1129 6.58367 4.54536 7.01613 5.08065 7.01613ZM9.91935 7.01613C10.4546 7.01613 10.8871 6.58367 10.8871 6.04839C10.8871 5.5131 10.4546 5.08065 9.91935 5.08065C9.38407 5.08065 8.95161 5.5131 8.95161 6.04839C8.95161 6.58367 9.38407 7.01613 9.91935 7.01613Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+@media (max-width: 800px) {
+    .footer__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__inner .left {
+        width: 100%;
+    }
+
+    .footer__inner .right {
+        width: 100%;
+        text-align: center;
+    }
+}</code></pre>
+
+                        <p>
+                            <code>css</code> > <code>common.css</code>에 추가하겠습니다.
+                            보더를 주는 효과도 class만 붙이면 쉽게 사용할 수 있도록 common.css에 추가하겠습니다.
+                        </p>
+                        <pre><code class="language-css">/* borderStyle */
+.borderTopStyle {
+    border-top: 3px solid var(--black);
+    position: relative;
+}
+
+.borderTopStyle::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    background-color: var(--black);
+}
+
+.borderBomStyle {
+    border-bottom: 3px solid var(--black);
+    position: relative;
+}
+
+.borderBomStyle::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background-color: var(--black);
+}</code></pre>
+                    </div>
+
+                    <hr>
+
+                    <div class="right_refer">
+                        <a href="https://webs-youtube.netlify.app/" target="_blank" class="sampleBtn">완성 화면</a>
+                        <a href="https://github.com/webstoryboy" target="_blank" class="sampleBtn">소스 보기</a>
+                        <a href="https://www.inflearn.com/courses?s=webstoryboy" target="_blank" class="sampleBtn">영상
+                            보기</a>
+                    </div>
+
+                    <h3>예제 목록</h3>
+                    <div class="refer5_wrap">
+                        <ul class="refer5">
+                            <li><a href="https://webstoryboy.co.kr/">1. PHP로 나만의 블로그 만들기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //blog__contents -->
+
+                <aside class="blog__aside">
+                    <button class="blog__aside__btn"><span></span></button>
+                    <div class="blog__aside__chapter">
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- //blog -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/webs.js"></script>
+</body>
+
+</html>
